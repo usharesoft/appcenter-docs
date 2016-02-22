@@ -6,7 +6,7 @@ This directory contains the source for UForge AppCenter online documentation.  T
 
 Install [Sphinx](http://sphinx-doc.org)
 
-    $ easy_install -U Sphinx
+    $ pip install sphinx
 
 Install [read the docs theme](https://github.com/snide/sphinx_rtd_theme):
 

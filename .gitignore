@@ -1,5 +1,5 @@
-_static
-_build
+static
+build
 
 .DS_Store
 

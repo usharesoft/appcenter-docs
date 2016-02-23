@@ -1,9 +1,13 @@
 .. Copyright (c) 2007-2016 UShareSoft, All rights reserved
 
+.. _appliance-configuration:
+
 Managing Configuration
 ----------------------
 
 When you create your appliance, you can include boot scripts to configure the appliance after provisioning or to configure the appliance to communicate with a DevOps platform for further communication steps.
+
+.. _appliance-configuration-bootscripts:
 
 Adding Boot Script
 ~~~~~~~~~~~~~~~~~~
@@ -38,6 +42,8 @@ If you are uploading an existing boot script:
 	2. Select the boot order.
 	3. Click ``choose`` to locate your file and click ``open``.
 	4. Click ``save``.
+
+.. _appliance-configuration-studio:
 
 Adding an UForge Studio Package
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

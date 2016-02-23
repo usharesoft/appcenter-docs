@@ -1,6 +1,6 @@
 ## UForge AppCenter Documentation
 
-This directory contains the source for UForge AppCenter online documentation.  This uses sphinx to build static html files from these source files.
+This directory contains the source for UForge AppCenter online documentation.  This uses [Sphinx](http://sphinx-doc.org) to build static html files from these source files.
 
 ### Building locally
 

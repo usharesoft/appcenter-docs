@@ -1,22 +1,26 @@
 .. Copyright (c) 2007-2016 UShareSoft, All rights reserved
 
+.. _uforge-appcenter-getting-started:
+
 Getting Started
 ===============
+
+.. _uforge-signup:
 
 Signing Up for an Account
 -------------------------
 
-If you are not using an onsite version of UForge AppCenter, then you can get started by signing up for a free account on UForgeNow.  Go to the registration page on the UShareSoft website at::
+If you are not using an onsite version of UForge AppCenter, then you can get started by signing up for a free account on UForgeNow.  Go to the registration page on the UShareSoft website at:
 
-	https://www.usharesoft.com/signup/signup.html
+	`https://www.usharesoft.com/signup/signup.html <https://www.usharesoft.com/signup/signup.html>`_
 
 Only your name and email are required. When the account has been activated, you will receive an email with your account credential information.
 
 .. warning:: If you are using an onsite version, then your sign up process may be different.
 
-To sign in, go to the UForgeNow sign in page::
+To sign in, go to the UForgeNow sign in page:
 
-	https://uforge.usharesoft.com/signin
+	`https://uforge.usharesoft.com/signin <https://uforge.usharesoft.com/signin>`_
 
 The UForgeNow portal is layed out in with the following main tabs:
 
@@ -26,15 +30,18 @@ The UForgeNow portal is layed out in with the following main tabs:
 * ``Collaboration``: This is a private area where you can share appliances with other users who are part of your workspace. These users must be invited and join your workspace. They can be part of your organization or part or another organization.
 * ``Migration``: This is where you can launch a scan of a live system, view the results, or compare scans.
 * ``My Account``: This is your UForge account information.
-* ``Administration``: (only for administrators of platform). This shows statistics on usage and image generations, for example. You can also manage Operating Systems. Information on the Administration tab is described in the Administration Guide // TODO ADD LINK.
+* ``Administration``: (only for administrators of platform).  Provides administration tasks including operating system and formats management.
 
 .. warning:: Depending upon your access rights one or more of these tabs may not be visible.
 
 .. image:: /images/uforge-ui-tabs.jpg
 
+.. _uforge-basic-concepts:
 
 Basic Concepts
 --------------
+
+.. _uforge-basic-concepts-org:
 
 Organization
 ~~~~~~~~~~~~
@@ -48,6 +55,8 @@ UForge AppCenter is a multi-tenant platform which can serve multiple users.  All
 * A "Marketplace" where users can publically share their Appliances with other users in the organization
 
 .. image:: /images/uforge-organization.jpg
+
+.. _uforge-basic-concepts-user:
 
 User
 ~~~~
@@ -65,6 +74,8 @@ Users also have access to shared spaces:
 * **Marketplace**: a space shared with other members of the same organization, to share appliances
 * **Collaboration Workspace**: a space where users can invite the users they wish to share appliance templates with.
 
+.. _uforge-basic-concepts-appliance:
+
 Appliance Templates
 ~~~~~~~~~~~~~~~~~~~
 
@@ -79,6 +90,8 @@ An Appliance Template is meta-data describing a software stack.   It consists of
 Depending on the user´s roles and privileges, the user may only have access to a restricted number of operating systems, projects and image formats the organization has to offer.
 
 Using an appliance template, the user can generate machine images in different formats. For some formats, the user can publish and register machine images to a target cloud or virtualization platform. Each appliance template stores meta-data regarding each machine image generated and published.
+
+.. _uforge-basic-concepts-workspace:
 
 Workspaces
 ~~~~~~~~~~
@@ -97,6 +110,7 @@ Members of a workspace are either:
 * ``Collaborator``. The collaborator has the same basic rights as the Guest, but can also share templates.
 * ``Guest``. They can read and post to the activity stream, and import templates into their private appliance library.
 
+.. _uforge-supported-os-formats:
 
 Supported Machine Image Types
 -----------------------------

@@ -1,7 +1,11 @@
 .. Copyright (c) 2007-2016 UShareSoft, All rights reserved
 
+.. _appliance-os-profile:
+
 Managing the OS Profile
 -----------------------
+
+.. _appliance-os-profile-new:
 
 Adding a new OS Profile
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -18,6 +22,8 @@ To add an OS profile to your appliance:
 	4. From the drop-down menu, select the ``OS profile`` template you wish to use.  The operating system packages are added automatically and your appliance revision number is increased.
 
 .. image:: /images/os-profile.jpg
+
+.. _appliance-os-profile-add-pkgs:
 
 Adding Packages to the OS Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -40,3 +46,4 @@ You may want to add packages that are provided as part of the operating system d
 	8. Select the packages you want to add.
 	9. Click the ``save`` button to add the packages to the OS profile.
 
+Once you have added packages to an OS profile, any available updates are tracked by the platform.  For more information on package updates, see :ref: `appliance-pkg-updates`.

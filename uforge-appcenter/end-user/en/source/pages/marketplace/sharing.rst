@@ -1,5 +1,7 @@
 .. Copyright (c) 2007-2016 UShareSoft, All rights reserved
 
+.. _marketplace-share-appliance-template:
+
 Sharing an Appliance Template to the Marketplace
 ------------------------------------------------
 

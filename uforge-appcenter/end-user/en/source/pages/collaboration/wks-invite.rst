@@ -1,7 +1,11 @@
 .. Copyright (c) 2007-2016 UShareSoft, All rights reserved
 
+.. _workspace-manage-members:
+
 Managing Workspace Members
 --------------------------
+
+.. _workspace-members-invite:
 
 Inviting Members to Your Workspace
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -19,6 +23,7 @@ To invite users to your workspace:
 	4. You can modify the invitation message. This message will be included in the email inviting members to join your workspace.
 	5. Click ``invite``.
 
+.. _workspace-members-access-rights:
 
 Managing Member Access Rights
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -31,6 +36,7 @@ Members of a workspace are either:
 	* ``Collaborator``. The collaborator has the same basic rights as the Guest, but can also share appliances.
 	* ``Administrator``. This is generally the user who has created the workspace. There can be several administrators in a workspace. The administrator can invite or delete members and is able to delete a workspace. The administrator has all the same basic rights as the collaborator.
 
+.. _workspace-member-delete:
 
 Deleting a Member
 ~~~~~~~~~~~~~~~~~

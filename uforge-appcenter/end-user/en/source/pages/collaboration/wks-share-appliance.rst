@@ -1,5 +1,7 @@
 .. Copyright (c) 2007-2016 UShareSoft, All rights reserved
 
+.. _workspace-sharing-appliances:
+
 Sharing an Appliance Template in a Workspace
 --------------------------------------------
 
@@ -20,6 +22,8 @@ To share an appliance template:
 Once an appliance template has been shared, other users in the workspace can import it into their private appliance library.  They can then modify, use and share the appliance as they wish.
 
 .. warning:: Any changes you make to your original appliance will NOT be propagated to the shared copy in the collaboration workspace. You will need to share the new version again for members of your workspace to see the changes. The older version will be overwritten.  
+
+.. _workspace-appliance-comments:
 
 Adding a Comment to a Shared Appliance Template
 -----------------------------------------------

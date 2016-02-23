@@ -1,5 +1,7 @@
 .. Copyright (c) 2007-2016 UShareSoft, All rights reserved
 
+.. _account-user-profile:
+
 User Profile
 ------------
 
@@ -17,6 +19,7 @@ To add a photo to your profile or modify the existing one:
 	5. Click ``Open``.
 	6. Click ``Save``.
 
+.. _account-statistics:
 
 Viewing Your Statistics
 -----------------------

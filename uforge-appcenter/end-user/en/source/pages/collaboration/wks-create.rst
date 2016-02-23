@@ -1,5 +1,7 @@
 .. Copyright (c) 2007-2016 UShareSoft, All rights reserved
 
+.. _workspace-create:
+
 Creating a Workspace
 --------------------
 
@@ -14,6 +16,8 @@ To create a workspace:
 	.. image:: /images/workspace-create.jpg
 
 You can now invite users, share appliance templates, and post comments in the activity stream.
+
+.. _workspace-activity-stream:
 
 The Activity Stream
 -------------------

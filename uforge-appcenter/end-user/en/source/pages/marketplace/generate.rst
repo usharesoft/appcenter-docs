@@ -1,5 +1,7 @@
 .. Copyright (c) 2007-2016 UShareSoft, All rights reserved
 
+.. _marketplace-appliance-template-generate:
+
 Generating a Machine Image
 --------------------------
 

@@ -1,5 +1,7 @@
 .. Copyright (c) 2007-2016 UShareSoft, All rights reserved
 
+.. _marketplace-appliance-template-versions:
+
 Managing Appliance Template Versions
 ------------------------------------
 
@@ -10,6 +12,8 @@ To see older versions, click on the latest version to view the details of the ap
 .. note:: Two publishers can publish an appliance template with the same name. The two appliance templates will appear separately in this case.
 
 .. image:: /images/marketplace-related-versions.jpg
+
+.. _marketplace-appliance-template-follow:
 
 Tracking Changes to an Appliance Template
 -----------------------------------------

@@ -1,5 +1,7 @@
 .. Copyright (c) 2007-2016 UShareSoft, All rights reserved
 
+.. _migration-scan-import:
+
 Create an Appliance Template
 ----------------------------
 
@@ -20,6 +22,7 @@ You can now generate a machine image, share it to the Marketplace or to a worksp
 
 More importantly you can now change the contents of the original scanned system.  If you go to the ``VM Builder`` tab, the new appliance template will be listed in the ``imported templates`` section.  Double-click on it to view the details or modify it.
 
+.. _migration-scan-appliance-config-console:
 
 Changing a Configuration with "No-Console" Features
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -37,6 +40,8 @@ Access to the machine would typically be done via SSH.
 White box migration provides more flexibility.  As soon as you import a scan, which effectively creates an appliance template, you will have access to the Install Profile.  This allows you to reset and change many of the "installation"/first boot parameters including prompting the end user to provide the information (for example: ask the end user to set the root password).  Any prompt to the end user is normally displayed in the console.  However if the user logs into the machine for the first time via SSH, these prompts are displayed in the SSH terminal and not the console.
 
 .. warning:: Important:  If you decide to prompt the user for the root password, then an SSH key mechanism must already be determined (private key owned by the user and public key set in the Install Profile).  Otherwise the user will be effectively locked out of the system with no way to SSH into the machine as no password has been set yet.
+
+.. _migration-scan-appliance-config:
 
 Changing Configuration Information
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -58,6 +63,8 @@ In each case, you must import the scan as an appliance template (white box migra
 
 **Solution #4**: Integrate with a Configuration Management platform:  There are many 3rd party platforms including Puppet, Chef, Ansible and Saltstack that can be used to configure middleware and application layers.  Once a system has been migrated or a machine image generated from an appliance template, such configuration management platforms can be used for package update and configuration.  You may need to include a bootstrapping mechanism to register the instance to the configuration management platform of your choice.  This bootstrapping can be done using boot scripts (see solution #2).
 
+.. _migration-scan-appliance-os-profile:
+
 Adding Security Patches
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -66,6 +73,8 @@ When a scan is imported as an appliance template all the native packages detecte
 Of course this is not the only way to update a migrated system.  The administrator can update the live system using the standard operating system update mechanism. Depending on the operating system this will be yum, apt, yast etc.  The administrator can run this update manually, or add a boot script in the appliance template that carries out the update during first boot.
 
 This allows the administrator to decide to use other configuration management platforms (Puppet, Chef, Ansible, Saltstack, BMC Bladelogic to name a few) to manage such updates.  For some of these configuration platforms though, you will need to add a boot script as part of the appliance template to bootstrap the running instance with the configuration management platform.
+
+.. _migration-scan-appliance-os-version:
 
 Changing the OS Version of Middleware
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -88,6 +97,8 @@ This process can further be automated by using the command-line tool hammr (see 
 	6. Once the import is done, re-generate which would effectively migrate the system you scanned but with a major operating system upgrade.
 
 Qualification of any middleware and application software is strongly recommended.
+
+.. _migration-scan-appliance-overlay:
 
 Modifying the Scan Overlay
 ~~~~~~~~~~~~~~~~~~~~~~~~~~

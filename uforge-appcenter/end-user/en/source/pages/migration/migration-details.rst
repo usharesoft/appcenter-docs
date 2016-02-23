@@ -1,5 +1,7 @@
 .. Copyright (c) 2007-2016 UShareSoft, All rights reserved
 
+.. _migration-process-details:
+
 Migration Process In Detail
 ---------------------------
 
@@ -11,6 +13,8 @@ The entire migration process has 5 main steps.  These are:
 	4. The overlay archive is uncompressed, and the information is stored in the database as a ``Scan``
 	5. The scan can be used to generate machine images (black box migration) or imported to create a new appliance template (white box migration).  The generated machine image can then be published to the target environment and instances can be provisioned.
 
+.. _migration-process-scan-source:
+
 Scanning the Source Machine
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -21,6 +25,7 @@ On the scan target, the ``uforge-scan`` binary is copied and launched as root to
 	3. Analysis of the operating system native packages installed on the system. The ``uforge-scan`` binary checks which packages have been installed, the state of the files in these packages etc.  The scan process registers all the metadata (rights, user and groups, checksums).
 	4. Analysis of the files that are not part of any operating system native packages. The ``uforge-scan`` binary registers all the metadata (rights, user and groups, checksums).
 
+.. _migration-process-analysis:
 
 Analysis of Report
 ~~~~~~~~~~~~~~~~~~
@@ -35,6 +40,8 @@ UForge AppCenter stores all the report information.  This data is then processed
 
 The results of this analysis are then sent via HTTPS back to the ``uforge-scan`` binary on the source machine.  This is basically all the information that UForge AppCenter does not have already based on the initial report received.
 
+.. _migration-process-overlay:
+
 Build the Overlay Archive
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -48,6 +55,8 @@ At this stage in the process, the ``uforge-scan`` binary has finished its job an
 
 .. note:: No temporary files related to overlay remain on the scan target. 
 
+.. _migration-process-extract:
+
 Overlay Extraction
 ~~~~~~~~~~~~~~~~~~
 
@@ -55,6 +64,8 @@ UForge AppCenter retrieves and extracts the overlay sent by the uforge-scan bina
 The analysis and overlay processes are now finished. All the scan metadata remain in UForge AppCenter until the scan gets deleted.
 
 You can now carry out a black box or a white box migration.  For black box migration, you generate a new machine image from the scan.  For white box migration, you must first import the scan as an appliance template.
+
+.. _migration-process-generate:
 
 Generate an Image (Black Box Migration)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -73,6 +84,8 @@ At this stage, the scan report is used to generate a new machine image.  The gen
 In the case of a migration from a para-virtualized platform to a non para-virtualized platform, UForge AppCenter injects everything that is needed to make the machine work (the kernel and its tools). Based on the packages discovered on the scan target and on the underlying operating system, UForge AppCenter calculates the most accurate kernel version to inject for your machine.
 
 Once the image is generated, it is possible to push it to a remote environment. The image is then ready to be launched in the new environment and the migration is finished.
+
+.. _migration-process-import:
 
 Import to an Appliance Template (Whitebox Migration)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

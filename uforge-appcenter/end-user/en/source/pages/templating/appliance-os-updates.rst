@@ -1,5 +1,7 @@
 .. Copyright (c) 2007-2016 UShareSoft, All rights reserved
 
+.. _appliance-pkg-updates:
+
 Tracking OS Package Updates
 ---------------------------
 
@@ -28,6 +30,8 @@ To update the OS packages:
 	6. If you want to apply the changes listed, then click update.
 
 .. note:: M indicates a Milestone. For Centos, this is the versions (6.1, 6.2 etc). Milestones are customized by the UForge administrator.
+
+.. _appliance-pkg-updates-sticky:
 
 Making Packages "Sticky"
 ~~~~~~~~~~~~~~~~~~~~~~~~

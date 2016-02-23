@@ -1,5 +1,7 @@
 .. Copyright (c) 2007-2016 UShareSoft, All rights reserved
 
+.. _appliance-custom-software:
+
 Adding Custom Software Components
 ---------------------------------
 
@@ -8,6 +10,8 @@ There are two ways to add 3rd party software components or your own software to 
 The first way is through the ``Project Catalog``.  This catalog is public to all the users on UForge and is maintained by the privileged users and adminstrators.  
 
 If the catalog does not contain the software component you are looking for, then you can upload the software into the ``Software`` library.  This is your own private software library, allowing you to upload any software into UForge and be able to add it to any of your appliance templates.
+
+.. _appliance-projects:
 
 Adding Software from the Project Catalog
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -24,6 +28,7 @@ The following describes how to add MySQL and Apache to an appliance.
 
 	.. image:: /images/projects-added.jpg
 
+.. _appliance-mysoftware:
 
 Adding Software from Your Software Library
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

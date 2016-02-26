@@ -52,7 +52,7 @@ UForge AppCenter is a multi-tenant platform which can serve multiple users.  All
 * One or more operating systems
 * A project catalog containing software components that can be used by its users
 * One or more formats available to generate images
-* A "Marketplace" where users can publically share their Appliances with other users in the organization
+* A "Marketplace" where users can publicly share their Appliances with other users in the organization
 
 .. image:: /images/uforge-organization.jpg
 

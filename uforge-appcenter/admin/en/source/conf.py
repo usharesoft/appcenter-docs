@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
-# uforge documentation build configuration file, created by
-# sphinx-quickstart on Fri Feb 19 10:33:30 2016.
+# UForge AppCenter Admin Guide documentation build configuration file, created by
+# sphinx-quickstart on Mon Feb 22 22:25:08 2016.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -20,6 +20,7 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
 if not on_rtd:  # only import and set the theme if we're building docs locally
     import sphinx_rtd_theme
+
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -54,7 +55,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'UForge AppCenter User Documentation'
+project = u'UForge AppCenter Admin Documentation'
 copyright = u'2016, UShareSoft'
 author = u'UShareSoft'
 
@@ -116,7 +117,6 @@ todo_include_todos = True
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-
 if not on_rtd:  # only import and set the theme if we're building docs locally
     html_theme = 'sphinx_rtd_theme'
     html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
@@ -127,7 +127,7 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
 #html_theme_options = {}
 
 # Add any paths that contain custom themes here, relative to this directory.
-#html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+#html_theme_path = []
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -211,7 +211,7 @@ html_static_path = ['_static']
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'UForgeAppCenterUserDoc'
+htmlhelp_basename = 'UForgeAppCenterAdminDoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -233,7 +233,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'UForgeAppCenterUserDoc.tex', u'UForge AppCenter User Documentation',
+    (master_doc, 'UForgeAppCenterAdminDoc.tex', u'UForge AppCenter Admin Documentation',
      u'UShareSoft', 'manual'),
 ]
 
@@ -263,7 +263,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'uforgeappcenteruserdoc', u'UForge AppCenter User Documentation',
+    (master_doc, 'uforgeappcenteradmindoc', u'UForge AppCenter Admin Documentation',
      [author], 1)
 ]
 
@@ -277,8 +277,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'UForgeAppCenterUserDoc', u'UForge AppCenter User Documentation',
-     author, 'UForgeAppCenterUserDoc', 'This documentation is to help understand and use UForge AppCenter',
+    (master_doc, 'UForgeAppCenterAdminDoc', u'UForge AppCenter Admin Documentation',
+     author, 'UForgeAppCenterAdminDoc', 'This documentation is for UForge AppCenter administrators',
      'Miscellaneous'),
 ]
 
@@ -293,3 +293,7 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+
+# Example configuration for intersphinx: refer to the Python standard library.
+intersphinx_mapping = {'https://docs.python.org/': None}

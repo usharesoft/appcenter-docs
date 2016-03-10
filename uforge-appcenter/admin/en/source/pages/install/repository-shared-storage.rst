@@ -5,7 +5,7 @@
 UForge Repository on Shared Storage
 -----------------------------------
 
-When using shared storage NFS is used to share the information between the various UForge nodes.  To setup the NAS or SAN for the UForge Repository you must create two shared directories, one for the operating system data and the other for all the user data (“My Software” and images generated).
+When using shared storage NFS is used to share the information between the various UForge nodes.  To setup the NAS or SAN for the UForge Repository you must create two shared directories, one for the operating system data and the other for all the user data (``My Software`` and images generated).
 
 To setup the shared storage:
 

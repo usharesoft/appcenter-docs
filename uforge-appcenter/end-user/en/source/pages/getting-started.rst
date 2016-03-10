@@ -147,9 +147,11 @@ The following is a list of supported OSes that users can use as the guest operat
 | Windows          | Windows i386 Windows x86_64              | Windows i386 Windows x86_64              |
 +------------------+------------------------------------------+------------------------------------------+
 
+.. _note:: For Oracle Linux and RedHat you must provide the ISO images or access to a repository.
+
 The following machine image formats are supported:
 
-* Phyiscal: ISO
+* Physical: ISO
 * Virtual: KVM, Xen, XenServer, Hyper-V, VMware ESXi, VHD, QCOW2, Raw, VirtualBox, VMware Server/Fusion, Vagrant
 * Cloud: AWS, Microsoft Azure, GCE, OpenStack, VMware vSphere vCenter, VMware VCD, VMware VCAC, CloudStack, Flexiant, Eucalyptus, Nimbula
 

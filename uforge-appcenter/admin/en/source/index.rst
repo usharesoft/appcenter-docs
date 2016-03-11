@@ -24,12 +24,24 @@ Contents:
    pages/install/repository-local-storage
    pages/install/install-ISO
    pages/install/install-VM
+   pages/install/configure-uforge
+   pages/install/test-deployment
+   pages/install/configure-ssl-cert
 
+   pages/config/further-config-overview
+   pages/config/add-compute-node
+   pages/config/modify-ip
+   pages/config/config-smtp
+   pages/config/config-webservice
+   pages/config/config-database
+   pages/config/config-scheduler
+   pages/config/watchdog-services
+   pages/config/tuning-services
+   pages/config/email-notification
 
-
-   pages/config/overview
-   pages/upgrade/overview
-   pages/backup/overview
+   pages/upgrade/upgrade-overview
+   
+   pages/backup/backup-overview
    
    pages/manage-services/overview
    pages/manage-resources/overview

@@ -27,7 +27,7 @@ Where:
 
 To view these cron jobs, log in to the oar scheduler node as root and view the cron jobs:
 
-.. code-block::
+.. code-block:: shell
 
 # crontab -l
 */5 * * * * /opt/UShareSoft/uforge/cron/reset_oar_resources.sh
@@ -37,9 +37,7 @@ To view these cron jobs, log in to the oar scheduler node as root and view the c
 05 * * * * /opt/UShareSoft/uforge/cron/update_repos_local_cache.sh
 1 8 * * * /opt/UShareSoft/uforge/cron/drop_caches.sh
 
-To update the crontab, log in to the oar scheduler node as root and edit the crontab: 
-
-.. code-block::
+To update the crontab, log in to the oar scheduler node as root and edit the crontab::
 
 # crontab -e
 
@@ -48,14 +46,14 @@ Cron Job Guidelines
 
 There is no specific order to be respected when running cron jobs. These jobs are not inter-dependent.
 
-*/5 * * * * /opt/UShareSoft/uforge/cron/reset_oar_resources.sh
+``*/5 * * * * /opt/UShareSoft/uforge/cron/reset_oar_resources.sh``
 
 This needs to be launched on a regular basis to avoid having issues with the OAR scheduler computation nodes. In fact, it happens, following network issue or other, that nodes move to state "Suspected". This job tries to fix that.
 
 This job executes very quickly and does not take resources on the machine.
 It is set by default to 5 minutes but this could be changed.
 
-10 2 * * * /opt/UShareSoft/uforge/cron/cleanup_tickets.sh
+``10 2 * * * /opt/UShareSoft/uforge/cron/cleanup_tickets.sh``
 
 When a user deletes a machine image persisted on the NAS, only the metadata is removed from the database to avoid using a webservice thread to delete the file. This could take time and should be done asynchronously. 
 
@@ -65,18 +63,18 @@ This job could potentially take a long time and be IO-intensive. It is highly re
 
 This script could be launched several times in a day depending on the size of the infrastructure. For example, if the NAS is not so big and if there are a lot of images created and deleted per day, it could be a good idea to launch it several times a day.
 
-10 3 * * * /opt/UShareSoft/uforge/cron/cleanup_scans.sh
+``10 3 * * * /opt/UShareSoft/uforge/cron/cleanup_scans.sh``
 
 Same as for /opt/UShareSoft/uforge/cron/cleanup_tickets.sh
 
-15 3 * * * /opt/UShareSoft/uforge/cron/update_uss_pkgs.sh
+``15 3 * * * /opt/UShareSoft/uforge/cron/update_uss_pkgs.sh``
 
 This updates the UShareSoft packages that are introduced in images like uforge-install-config.
 The schedule can be changed.
 
 Updating once a day or on demand is good enough updates are not provided frequently.
 
-42 * * * * /opt/UShareSoft/uforge/cron/update_repos_pkgs.sh
+``42 * * * * /opt/UShareSoft/uforge/cron/update_repos_pkgs.sh``
 
 This mechanism launches UForge Spider to crawl the packages from the registered repositories.
 
@@ -88,7 +86,7 @@ In all the cases, it is important to keep these repositories up to date so that:
 
 Also, if some repositories the platform is connected to deletes some packages (because of newer package version -- this is not the case of UShareSoft official repositories), having the latest packages information available is important.
 
-05 * * * * /opt/UShareSoft/uforge/cron/update_repos_local_cache.sh
+``05 * * * * /opt/UShareSoft/uforge/cron/update_repos_local_cache.sh``
 
 Since UForge 3.5.1, the UForge platform does not download all the packages from all the repositories listed. Instead, only the necessary packages are downloaded "on demand". 
 
@@ -102,7 +100,7 @@ On extremely large platforms, it could take time and be IO-intensive.
 
 If this command fails, usually it will only have an impact several days later (depending on the removing-package-repo policy with package removal). For example, if you generate a machine image with a stick package (version 1.2.3) on NTP. Let's consider ntp is on a repository that remove packages. You generate a machine image, ntp gets downloaded. update_repos_local_cache.sh. You generate the machine image again. No issue. Three days later, 1.2.4 version is released and 1.2.3 is removed from the remote repository. In that case, you will no longer be able to generate as the package in not in the remote repository, neither in the cache.
 
-1 8 * * * /opt/UShareSoft/uforge/cron/drop_caches.sh
+``1 8 * * * /opt/UShareSoft/uforge/cron/drop_caches.sh``
 
 This calls native Linux commands to free up some memory on the platform.
 

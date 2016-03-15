@@ -7,60 +7,43 @@ Updating the Java Version
 
 The following procedure should be run on the web service and generation nodes of a single-node machine in order to update the Java version.
 
-	1. Check that nothing is returned on web service node and gen nodes.
+	1. Check that nothing is returned on web service node and gen nodes.::
 
-	.. code-block::
+	oarstat
 
-	# oarstat
+	2. Check that nothing is returned on gen nodes only.::
 
-	2. Check that nothing is returned on gen nodes only
+	ps -ef | grep oar
 
-	.. code-block::
+	3. On the web service node, check the log to ensure that everything is out.::
 
-	# ps -ef | grep oar
+	tailf /var/log/glassfish/domain_uforge/uforge-web-service.log
 
+	4. Stop the web service.::
 
-	3. On the web service node, check the log to ensure that everything is out.
-
-	.. code-block::
-
-	# tailf /var/log/glassfish/domain_uforge/uforge-web-service.log
-
-	4. Stop the web service.
-
-	.. code-block::
-
-	# service glassfish stop ;
+	service glassfish stop ;
 
 	5. Now that nothing can happen on the web service side, you can shut down other services.
 
-		* On the UI node(s)
-
-		.. code-block::
+		* On the UI node(s)::
 
 		# service tomcat stop
 
-		* On the LDAP node
+		* On the LDAP node::
 
-		.. code-block::
+		service OpenDJ stop
 
-		# service OpenDJ stop
+	6. Check if the processes are stopped. Usually this is run on the DB node for the cron update_repos_pkgs.sh::
 
-	6. Check if the processes are stopped. Usually this is run on the DB node for the cron update_repos_pkgs.sh
+	ps -ef | egrep -i 'java|spider'
 
-	.. code-block::
+	7. Launch update.::
 
-	# ps -ef | egrep -i 'java|spider'
-
-	7. Launch update.
-
-	.. code-block::
-
-	# yum update jdk
+	yum update jdk
 
 	8. Restart the services.
 
-	.. code-block::
+	.. code-block:: shell
 
 	# service OpenDJ start
 	# service glassfish start

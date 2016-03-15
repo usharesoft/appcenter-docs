@@ -1,6 +1,6 @@
 .. Copyright (c) 2007-2016 UShareSoft, All rights reserved
 
-.. _update-java:
+.. _modify-ip:
 
 Modifying the UForge IP Address
 -------------------------------
@@ -25,22 +25,16 @@ To modify the UForge IP address or hostname, do the following.
 			- UFORGE_IAAS_DOWNLOAD_URL
 		* /etc/udev/rules.d/70-persistent-net.rules
 
-	4. Launch the following script:
-
-	.. code-block::
+	4. Launch the following script::
 
 	$ /opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh
 
-If you have a load balancer where rules have been entered for accessing the UForge web service make sure the URIs match the following parameter in uforge.conf:
-
-.. code-block::
+If you have a load balancer where rules have been entered for accessing the UForge web service make sure the URIs match the following parameter in uforge.conf::
 
 UFORGE_GF_WEBSVC_ROOT_CONTEXT=ufws-3.3
 
-For the UForge CLI you should have:
-
-.. code-block::
+For the UForge CLI you should have::
 
 UFORGE_GF_ADMIN_WEBSVC_ROOT_CONTEXT=ufadmws-3.3
 
-Note that some virtualization solutions (like VirtualBox) also add this info into ifcfg-XXX files as HWADDR=MAC
+.. note: Some virtualization solutions (like VirtualBox) also add this info into ifcfg-XXX files as HWADDR=MAC

@@ -13,66 +13,53 @@ To setup the shared storage:
 
 	2. Create the operating system directory, for example: /volume1/DISTROS
 
-		The following NFS options are required:
-
-		.. code-block::
+		The following NFS options are required::
 
 		*(rw,async,no_wdelay,no_root_squash,insecure_locks,anonuid=0,anongid=0)
 
 	3. Create the user data directory, for example: /volume1/USER_DATA
 
-		The following NFS options are required:
-
-		.. code-block::
+		The following NFS options are required::
 
 		*(rw,async,no_wdelay,no_root_squash,insecure_locks,anonuid=0,anongid=0)
 
 	4. Check the mount points: 
 
-		.. code-block::
+		.. code-block:: shell
 
 		mount 192.20.777.205:/appstore_qualif_data/ /mnt 
 		su - glassfish 
 		cd /mnt
 
-	5. Execute the command: 
-
-		.. code-block::
+	5. Execute the command::
 
 		touch test 
 
-	6. If it returns: 
-
-		.. code-block::
+	6. If it returns::
 
 		touch: cannot touch `test': Permission denied 
 
 		Then execute the following commands (as root) 
 
-		.. code-block::
+		.. code-block:: shell
 
 		cd /mnt 
 		chown -R glassfish:glassfish . 
 
-	7. Confirm you can create a file on /mnt as user glassfish 
-		Then perform the following:
+	7. Confirm you can create a file on /mnt as user glassfish. Then perform the following:
 
-		.. code-block::
+		.. code-block:: shell
 
 		cd ~ 
 		umount /mnt 
 
-	8. Once these directories have been exported, use the UForge Setup Disk to copy all the operating system information to the DISTROS sub-directory.  To mount the shared directory on the machine where the UForge Setup Disk is plugged to:
+	8. Once these directories have been exported, use the UForge Setup Disk to copy all the operating system information to the DISTROS sub-directory. To mount the shared directory on the machine where the UForge Setup Disk is plugged to::
 
-	.. code-block::
+	mount <nfs server ip address>:/volume1/DISTROS /mnt
 
-	# mount <nfs server ip address>:/volume1/DISTROS /mnt
+	Then copy the DISTROS information from the Setup Disk to the shared directory::
 
-	Then copy the DISTROS information from the Setup Disk to the shared directory
-
-	.. code-block::
-
-	# rsync -a –-progress <my disk>/DISTROS/ /mnt/DISTROS/
+	rsync -a –-progress <my disk>/DISTROS/ /mnt/DISTROS/
 
 .. note: It may take up to an hour to copy all of the data. 
 

@@ -37,7 +37,7 @@ Viewing Current Resources
 
 To view all the current resources in the scheduler, log in to the oar scheduler node as root and run the command oarnodes:
 
-.. code-block::
+.. code-block:: shell
 
 # ssh root@<ip address of the node>
 # oarnodes
@@ -65,7 +65,7 @@ To add or update a resource, first log in to the oar scheduler node as root.
 
 To add a resource to compute node “node1” allowing to generate an image:
 
-.. code-block::
+.. code-block:: shell
 
 # oarnodesetting -a -h node1 -p cpuset=0,nature=0;
 # oarnodes
@@ -74,9 +74,7 @@ resource_id : 92
 state : Alive
 properties : deploy=NO, besteffort=YES, cpuset=0, desktop_computing=NO, nature=0, network_address=vm, type=default, cm_availability=0
 
-To change a current resource (resource_id: 92) to a different job type (for example publish images):
-
-.. code-block::
+To change a current resource (resource_id: 92) to a different job type (for example publish images)::
 
 # oarnodesetting -h node1 -r 92 -p nature=1;
 
@@ -85,9 +83,7 @@ Deleting a Job
 
 In case of a problem, you may want to delete a job which is stuck in a waiting state.
 
-In this case, run:
-
-.. code-block::
+In this case, run::
 
 # oardel <job_id>
 

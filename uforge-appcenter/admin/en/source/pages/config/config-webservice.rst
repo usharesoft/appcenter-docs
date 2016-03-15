@@ -20,17 +20,13 @@ When installing UForge via the deployment wizard some of the configuration attri
 
 To view the uforge.conf file:
 
-	1. Log in to the web service node as root
+	1. Log in to the web service node as root::
 
-.. code-block::
+	# ssh root@<ip address of the node>
 
-# ssh root@<ip address of the node>
+	2. Open the uforge.conf file::
 
-	2. Open the uforge.conf file
-
-.. code-block::
-
-# vi /etc/UShareSoft/uforge/uforge.conf
+	# vi /etc/UShareSoft/uforge/uforge.conf
 
 
 For more information on Glassfish, see `http://glassfish.java.net <http://glassfish.java.net>`_

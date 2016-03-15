@@ -25,7 +25,7 @@ For each profile, you can modify the following parameters:
 
 The following is a basic example of a configuration profile, named ``profile1``. The parameters defined in ``profile1`` will be applied to the process specified by exec.
 
-.. code-block:: 
+.. code-block:: python
 
 "profile1": {
   "exec": "/opt/UShareSoft/uforge/tool/demo.sh",
@@ -59,8 +59,6 @@ This sets all the properties you have defined in the profile and forwards all th
 
 Command usage:
 
-.. code-block::
-
 /opt/UShareSoft/uforge/bin/runjob.py profile_name arg1 arg2
 
 where:
@@ -74,7 +72,7 @@ You can include a profile that will override a process in a profile.
 
 The following is an example of a profile that includes an override profile called ``low_prio``
 
-.. code-block::
+.. code-block:: python
 
 "my_process": {
   "exec": "/opt/UShareSoft/uforge/tools/demo.bin",

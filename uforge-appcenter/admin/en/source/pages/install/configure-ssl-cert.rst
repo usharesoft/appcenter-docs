@@ -18,21 +18,17 @@ To configure both servers to use an SSL certificate:
 		* SSLCACertificateFile: CA.crt.pem
 		* SSLCertificateChainFile: intermediate.CA.crt.pem (this one is optional)
 	
-	You need to build a self contained certificate as follows:
-
-	.. code-block::
+	You need to build a self contained certificate as follows::
 
 	# cat server.crt.pem CA.crt.pem > server_CA_chain.crt.pem
 
-	or 
-
-	.. code-block::
+	or:: 
 
 	# cat server.crt.pem intermediate.CA.crt.pem CA.crt.pem > server_CA_chain.crt.pem
 
-	Note that .pem files contain the following kind of data for certificate files:
+	Note that .pem files contain the following type of data for certificate files:
 
-	.. code-block::
+	.. code-block:: none
 
 	# cat server.crt.pem
 	-----BEGIN CERTIFICATE----- 
@@ -44,7 +40,7 @@ To configure both servers to use an SSL certificate:
 
 	And the following data for the key file:
 
-	.. code-block::
+	.. code-block:: none
 
 	# cat server.key.pem
 	-----BEGIN PRIVATE KEY----- 
@@ -65,27 +61,23 @@ To configure both servers to use an SSL certificate:
 
 	4. Verify the permissions and ownerships of these files
 
-	.. code-block::
+	.. code-block:: shell
 
-	# ll -d /etc/pki/tls/certs/server.crt.pem /etc/pki/tls/private/localhost.key /etc/pki/tls/private/ /etc/pki/tls/certs/ 
+	ll -d /etc/pki/tls/certs/server.crt.pem /etc/pki/tls/private/localhost.key /etc/pki/tls/private/ /etc/pki/tls/certs/ 
 	drwxr-xr-x. 2 root root 4096 Sep 25 12:05 /etc/pki/tls/certs/ 
 	-rw-------. 1 root root 1188 Sep 25 12:05 /etc/pki/tls/certs/server.crt.pem 
 	drwxr-xr-x. 2 root root 4096 Sep 25 12:05 /etc/pki/tls/private/ 
 	-rw-------. 1 root root  887 Sep 25 12:05 /etc/pki/tls/private/server.key.pem 
 
-	5. (Re)start the httpd server
+	5. (Re)start the httpd server::
 
-	.. code-block::
-
-	# service httpd restart
-	...
-	Starting httpd:                                            [  OK  ] 
+	service httpd restart
 
 	If the server does not start, this may be because of a bad certificate, key or CA certificate file. In this case, check the appropriate logs in /var/log/httpd.
 
 	6. Verify the validity of the certificates
 
-	.. code-block::
+	.. code-block:: shell
 
 	# openssl s_client -connect localhost:443
 	...
@@ -95,7 +87,7 @@ To configure both servers to use an SSL certificate:
 
 	If there is a problem with the certificate you might get outputs like
 
-	.. code-block::
+	.. code-block:: shell
 
 	# openssl s_client -connect localhost:443
 	...
@@ -104,79 +96,59 @@ To configure both servers to use an SSL certificate:
 
 	or
 
-	.. code-block::
+	.. code-block:: shell
 
 	# openssl s_client -connect localhost:443
 	...
     Verify return code: 21 (unable to verify the first certificate) 
 	---
 
-	7. Go to the glassfish configuration directory
+	7. Go to the glassfish configuration directory::
 
-	.. code-block::
+	cd /usr/glassfish-3.1/glassfish/domains/*/config/
 
-	# cd /usr/glassfish-3.1/glassfish/domains/*/config/
+	8. Save the original keystore with the correct permissions and groups::
 
-	8. Save the original keystore with the correct permissions and groups
+	rsync -a keystore.jks keystore.jks.ORIG
+
+	9. Delete the current certificate::
+
+	/usr/java/latest/bin/keytool -delete -alias s1as -keystore keystore.jks -storepass <admin password>
 	
-	.. code-block::
+	Note that the default admin password for a standard GlassFish installation is changeit. So the default command to run is::
 
-	# rsync -a keystore.jks keystore.jks.ORIG
+	/usr/java/latest/bin/keytool -delete -alias s1as -keystore keystore.jks -storepass changeit
 
-	9. Delete the current certificate
+	10. Convert your certificate pem files to one pkcs#12 file::
 
-	.. code-block::
+	openssl pkcs12 -export -in <SSLCertificateFile CA chain (pem) path> -inkey <SSLCertificateKeyFile (pem) path> -out keystore.pkcs12 -name s1as -passout pass:<admin password>
 
-	# /usr/java/latest/bin/keytool -delete -alias s1as -keystore keystore.jks -storepass <admin password>
-	
-	Note that the default admin password for a standard GlassFish installation is changeit. So the default command to run is:
+	So in our case::
 
-	.. code-block::
+	openssl pkcs12 -export -in server_CA_chain.crt.pem -inkey server.key.pem -out keystore.pkcs12 -name s1as -passout pass:changeit
 
-	# /usr/java/latest/bin/keytool -delete -alias s1as -keystore keystore.jks -storepass changeit
+	11. Import the newly generated pkcs12 file::
 
-	10. Convert your certificate pem files to one pkcs#12 file
-
-	.. code-block::
-
-	# openssl pkcs12 -export -in <SSLCertificateFile CA chain (pem) path> -inkey <SSLCertificateKeyFile (pem) path> -out keystore.pkcs12 -name s1as -passout pass:<admin password>
-
-	So in our case:
-
-	.. code-block::
-
-	# openssl pkcs12 -export -in server_CA_chain.crt.pem -inkey server.key.pem -out keystore.pkcs12 -name s1as -passout pass:changeit
-
-	11. Import the newly generated pkcs12 file
-
-	.. code-block::
-
-	# /usr/java/latest/bin/keytool -importkeystore -srckeystore keystore.pkcs12 -srcstoretype pkcs12 -srcstorepass <admin password> -deststoretype jks -destkeystore keystore.jks -deststorepass <admin password>
+	/usr/java/latest/bin/keytool -importkeystore -srckeystore keystore.pkcs12 -srcstoretype pkcs12 -srcstorepass <admin password> -deststoretype jks -destkeystore keystore.jks -deststorepass <admin password>
 
 	Giving:
 
-	.. code-block::
+	.. code-block:: shell
 
-	# /usr/java/latest/bin/keytool -importkeystore -srckeystore keystore.pkcs12 -srcstoretype pkcs12 -srcstorepass changeit -deststoretype jks -destkeystore keystore.jks -deststorepass changeit
+	/usr/java/latest/bin/keytool -importkeystore -srckeystore keystore.pkcs12 -srcstoretype pkcs12 -srcstorepass changeit -deststoretype jks -destkeystore keystore.jks -deststorepass changeit
 	Entry for alias s1as successfully imported. 
 	Import command completed:  1 entries successfully imported, 0 entries failed or cancelled
 
-	12. Restart the application service
+	12. Restart the application service::
 
-	.. code-block:: java
+	service glassfish restart
 
-	# service glassfish restart
+	13. Verify the certificate::
 
-	13. Verify the certificate
-
-	.. code-block::
-
-	# openssl s_client -showcerts -connect <ip-of-the-uforge-web-service-machine>:<port>
+	openssl s_client -showcerts -connect <ip-of-the-uforge-web-service-machine>:<port>
 
 	Or you can also use same openssl client command than for the Apache server used in step 6.
 
-	To verify that the new certificate is correct and if the GlassFish service is accessible from the outside, go to `http://www.digicert.com/help/ <http://www.digicert.com/help/>`_ and type the public name or IP address of your web service. Note that there is no way to specify another port than HTTPS (443) on this page therefore you might need to add a iptables redirection rule like: 
-
-	.. code-block::
+	To verify that the new certificate is correct and if the GlassFish service is accessible from the outside, go to `http://www.digicert.com/help/ <http://www.digicert.com/help/>`_ and type the public name or IP address of your web service. Note that there is no way to specify another port than HTTPS (443) on this page therefore you might need to add a iptables redirection rule like:: 
 
 	# iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 443 -j REDIRECT--to-port 9191

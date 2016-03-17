@@ -27,7 +27,7 @@ The following procedure should be run on the web service and generation nodes of
 
 		* On the UI node(s)::
 
-		# service tomcat stop
+		service tomcat stop
 
 		* On the LDAP node::
 

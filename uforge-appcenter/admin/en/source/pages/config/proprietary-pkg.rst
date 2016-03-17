@@ -12,12 +12,11 @@ Proprietary packages, such as RedHat are not delivered as part of the UForge rep
 For example, to add a RedHat repository:
 
 	1. Mount the iso into /mnt (on the works node)
-	2. Create the appropriate directory layout under /tmp/USER_DATA/repos/
-for example: /tmp/USER_DATA/repos/RHEL/6.5/x86_64/
+	2. Create the appropriate directory layout under /tmp/USER_DATA/repos/ for example: /tmp/USER_DATA/repos/RHEL/6.5/x86_64/
 	3. Copy all the contents of the DVD into /tmp/USER_DATA/repos/RHEL/6.5/x86_64/
 	4. If the repositories does not already contain a repodata folder, you must create it inside the package directory
 
-	.. code-block::
+	.. code-block:: shell
 
 	# cd /tmp/USER_DATA/repos/RHEL/6.5/x86_64/
 	# createrepo .

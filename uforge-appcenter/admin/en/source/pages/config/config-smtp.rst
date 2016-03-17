@@ -14,8 +14,6 @@ Once your UForge platform deployment has been done you can configure SMTP proxy 
 
 These can be empty
 
-Then run 
-
-.. code-block::
+Then run::
 
 /opt/UShareSoft/uforge/conf/postfix_configure.sh

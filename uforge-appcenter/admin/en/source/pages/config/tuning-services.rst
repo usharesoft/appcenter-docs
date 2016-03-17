@@ -30,22 +30,22 @@ The following is a basic example of a configuration profile, named ``profile1``.
 "profile1": {
   "exec": "/opt/UShareSoft/uforge/tool/demo.sh",
   "ionice": {
-    "class": 2,
-    "level": 7
+  "class": 2,
+  "level": 7
   },
 "jvm": {
   "options": [
-    "-Xmx2048m",
-    "-Xms768m",
-    "-XX:PermSize=256m",
-    "-XX:MaxPermSize=1024m"
-   ],
-   "sys-properties": {
-    "jna.library.path": "/opt/UShareSoft/uforge/lib"
+  "-Xmx2048m",
+  "-Xms768m",
+  "-XX:PermSize=256m",
+  "-XX:MaxPermSize=1024m"
+  ],
+  "sys-properties": {
+  "jna.library.path": "/opt/UShareSoft/uforge/lib"
   }
-},
+  },
 "nice": {
-  "niceness": 15
+"niceness": 15
 }
 }
 
@@ -78,4 +78,4 @@ The following is an example of a profile that includes an override profile calle
   "exec": "/opt/UShareSoft/uforge/tools/demo.bin",
   "include": "low_prio",
   "sudo": true
-},
+  },

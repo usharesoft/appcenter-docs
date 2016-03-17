@@ -23,8 +23,7 @@ Fill in the wizard, note that all the fields are mandatory.
 
 	5. Provide the UForge activation key and credential information to be able to receive UForge updates.  If you do not have this information, please contact UShareSoft.
 
-	6. Select the operating systems and formats you would like to install. 
-	When you select an OS, a default mirror location is indicated. This is used for synchronization of packages and distributions.  You can either accept the default values or modify the value to synchronize with another mirror.
+	6. Select the operating systems and formats you would like to install. When you select an OS, a default mirror location is indicated. This is used for synchronization of packages and distributions.  You can either accept the default values or modify the value to synchronize with another mirror.
 
 	7. Decide whether you would like to populate UForge with UShareSoft's default project list.  This list must already be copied to the UForge repository in the storage used for this deployment.
 
@@ -38,9 +37,9 @@ Fill in the wizard, note that all the fields are mandatory.
 
 	12. Select if OS and image storage should be local or remote. OS storage will be used for distributions, which image storage will include user data such as images, projects, mysoftware and other user data created with UForge Portal.
 
-	If you choose to use a remote storage, indicate the NFS server with mount point and you should enter the full path for the OS directory e.g. /DISTROS.
+		If you choose to use a remote storage, indicate the NFS server with mount point and you should enter the full path for the OS directory e.g. /DISTROS.
 
-	If you select remote storage for the image store, you have to make sure that the path USER_DATA exists, with the correct permissions i.e. glassfish:glassfish (see UForge Repository Using Shared Storage, step 4. Check mount points, for more detail).
+		If you select remote storage for the image store, you have to make sure that the path USER_DATA exists, with the correct permissions i.e. glassfish:glassfish (see UForge Repository Using Shared Storage, step 4. Check mount points, for more detail).
 
 	13. Indicate the generation cluster compute node hostnames. You can add additional compute nodes by clicking the add button.
 

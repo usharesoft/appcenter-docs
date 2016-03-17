@@ -13,13 +13,13 @@ Use the values in the uforge.conf to contact the web service and expect a 200 OK
 
 Get the values form the uforge.conf and add them to some environment variables (you could also just manually view the uforge.conf)
 
-.. code-block::
+.. code-block:: shell
 
 # eval `grep '^UFORGE_WEBSVC_\|^UFORGE_GF_INTERNAL_IP\|^UFORGE_GF_HTTP_PORT\|^UFORGE_GF_WEBSVC_ROOT_CONTEXT' /etc/UShareSoft/uforge/uforge.conf`
 
 Run a simple http request (using basic authentication) using curl
 
-.. code-block::
+.. code-block:: shell
 
 # curl http://$UFORGE_GF_INTERNAL_IP:$UFORGE_GF_HTTP_PORT/$UFORGE_GF_WEBSVC_ROOT_CONTEXT/users/$UFORGE_WEBSVC_LOGIN -H "Authorization:Basic $UFORGE_WEBSVC_LOGIN:$UFORGE_WEBSVC_PASSWORD" 
 --verbose
@@ -47,14 +47,14 @@ Run a simple http request (using basic authentication) using curl
 
 The database service should be running and available on the port 3306 and that the database table is present. The Percona Server instance should have “usharedb” and “oar”
 
-.. code-block::
+.. code-block:: shell
 
 # service mysql status
 MySQL running (22661)                                      [  OK  ]
 
 Get the values form the uforge.conf and add them to some environment variables (you could also just manually view the uforge.conf)
 
-.. code-block::
+.. code-block:: shell
 
 # eval `grep '^UFORGE_DB' /etc/UShareSoft/uforge/uforge.conf`
 # echo "show databases" | mysql -f -N -u $UFORGE_DB_LOGIN -p$UFORGE_DB_PASSWORD -h db
@@ -66,9 +66,7 @@ usharedb
 
 **Step 3:** Check that the generation cluster resources
 
-Check that all the cluster resources are available ('alive').  On each compute node:
-
-.. code-block::
+Check that all the cluster resources are available ('alive').  On each compute node::
 
 # oarnodes | awk '/resource_id/ {n=$NF} /state : Suspected/ {printf "oarnodesetting -s Alive -r %s\n",n}' | sh
 

@@ -14,6 +14,7 @@ Contents:
    pages/architecture/platform-overview
    pages/architecture/reliability
    pages/architecture/storage-sizing
+   pages/architecture/scalability-partitioning
    pages/architecture/image-generations
    pages/architecture/scan-size
    pages/architecture/deployment-example
@@ -27,6 +28,7 @@ Contents:
    pages/install/configure-uforge
    pages/install/test-deployment
    pages/install/configure-ssl-cert
+   pages/install/self-signed-cert
 
    pages/config/further-config-overview
    pages/config/add-compute-node
@@ -38,10 +40,19 @@ Contents:
    pages/config/watchdog-services
    pages/config/tuning-services
    pages/config/email-notification
+   pages/config/authentication-sso
+   pages/config/populate-db-OS
+   pages/config/proprietary-pkg
+   pages/config/populate-project-catalog
 
    pages/upgrade/upgrade-overview
+   pages/config/update-java
    
    pages/backup/backup-overview
+   pages/backup/backup-database
+   pages/backup/backup-user-data
+   pages/backup/backup-ldap
+   pages/backup/backup-idm
    
    pages/manage-services/overview
    pages/manage-resources/overview

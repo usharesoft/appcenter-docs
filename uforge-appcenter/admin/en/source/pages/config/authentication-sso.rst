@@ -15,7 +15,7 @@ So, in order to connect to the UForge Webservice you first have to pass through 
 
 By default there are two filters: 
 
-	* BasicAuthenticationFilter: the Basic method from `RFC2617 <http://tools.ietf.org/html/rfc2617">RFC2617>`_
+	* BasicAuthenticationFilter: the Basic method from `RFC2617 <http://tools.ietf.org/html/rfc2617>`_
 	* APIKeyAuthenticationFilter: the UForge internal APIKey authentication.
 
 You should create an implementation of the interface IAuthenticationFilter returning an object implementing IUserAuthentication if authentication is ok, an exception if the authentication is invalid and null if your filter can not handle the request authentication.
@@ -24,12 +24,6 @@ The following is a basic example of an implementation of the RFC.
 
 .. code-block:: java
 
-/**
- * com.usharesoft.authentication.BasicAuthenticationFilter.java
- *
- * Copyright (c) 2007-2014 UShareSoft SAS, All rights reserved
- * @author UShareSoft
- */
 package com.usharesoft.authentication;
 import com.sun.jersey.api.core.HttpRequestContext;
 import com.sun.jersey.core.util.Base64;
@@ -47,9 +41,7 @@ import java.net.URI;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-/**
- * RFC 2617 Basic Authentication
- */
+
 public class BasicAuthenticationFilter implements IAuthenticationFilter {
     private static final Logger logger = Logger.getLogger(BasicAuthenticationFilter.class);
     private static final Pattern CREDENTIALS = Pattern.compile("^basic\\s+(?.*)$", Pattern.CASE_INSENSITIVE);
@@ -61,33 +53,33 @@ public class BasicAuthenticationFilter implements IAuthenticationFilter {
     }
     protected IUserAuthentication getUserAuthentication(HttpRequestContext containerRequest) throws UForgeException {
         /*
-         * Get the authentication information from the HTTP header Return an
-         * empty string if no authorization information is found
-         */
+        * Get the authentication information from the HTTP header Return an
+        * empty string if no authorization information is found
+        */
         List authorizationList = containerRequest.getRequestHeaders().get("Authorization");
         if (authorizationList == null || authorizationList.isEmpty()) {
             return null;
         }
         /*
-         * Get the first value as there should only be one value here as we will
-         * only support Basic authentication for the moment Remove the Basic Tag
-         */
+        * Get the first value as there should only be one value here as we will
+        * only support Basic authentication for the moment Remove the Basic Tag
+        */
         String credentials = authorizationList.get(0);
         logger.trace("Credentials: " + credentials);
         /*
-         * Decode credentials
-         */
+        * Decode credentials
+        */
         Matcher matcher = CREDENTIALS.matcher(credentials);
         if (!matcher.matches()) {
             logger.debug("Not matched Authorization header: " + credentials);
             return null;
         }
         /*
-         * Consider that we match
-         */
+        * Consider that we match
+        */
         /*
-         * Decode base64 credentials
-         */
+        * Decode base64 credentials
+        */
         String base64basicCredentials = matcher.group("credential");
         if (!Base64.isBase64(base64basicCredentials)) {
             logger.warn("Invalid Base64 basic-credentials: " + base64basicCredentials);
@@ -95,16 +87,16 @@ public class BasicAuthenticationFilter implements IAuthenticationFilter {
         }
         String basicCredentials = Base64.base64Decode(base64basicCredentials);
         /*
-         * Decode user-pass
-         */
+        * Decode user-pass
+        */
         matcher = USER_PASS.matcher(basicCredentials);
         if (!matcher.matches()) {
             logger.warn("Invalid basic-credentials: " + basicCredentials);
             throw new UForgeException(UForgeException.UNAUTHORIZED, "ERROR.AUTHENTICATION.INVALID");
         }
         /*
-         * Compute fields
-         */
+        * Compute fields
+        */
         String userId = matcher.group("userId");
         String userName;
         String targetUserName = null;
@@ -116,8 +108,8 @@ public class BasicAuthenticationFilter implements IAuthenticationFilter {
         }
         String password = matcher.group("password");
         /*
-         * Sanity checks
-         */
+        * Sanity checks
+        */
         if (password == null) {
             logger.warn("Invalid password");
             throw new UForgeException(UForgeException.UNAUTHORIZED, "ERROR.AUTHENTICATION.INVALID");
@@ -130,12 +122,12 @@ public class BasicAuthenticationFilter implements IAuthenticationFilter {
     }
     protected IUserAuthentication getUserAuthentication(URI requestUri, String userName, String password, String targetUserName) throws UForgeException {
         /*
-         * Check with IDM
-         */
+        * Check with IDM
+        */
         ServicesContext.get().getService(IDMService.class).checkUserAuth(userName, password);
         /*
-         * Grab users
-         */
+        * Grab users
+        */
         User user;
         User targetUser = null;
         DbAccess db = ServicesContext.get().getService(DbAccess.class);
@@ -163,7 +155,7 @@ There are two ways to provide your authentication filter:
 
 You can add a filter, but you cannot remove the default authentication filters, nor choose the order. To add your filter, use the following Jersey annotation:
 
-.. code-block::
+.. code-block:: jersey
 
 package my.company.authentication
 

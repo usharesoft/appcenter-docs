@@ -16,4 +16,4 @@ These can be empty
 
 Then run::
 
-/opt/UShareSoft/uforge/conf/postfix_configure.sh
+	/opt/UShareSoft/uforge/conf/postfix_configure.sh

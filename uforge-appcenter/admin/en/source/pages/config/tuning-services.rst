@@ -25,29 +25,29 @@ For each profile, you can modify the following parameters:
 
 The following is a basic example of a configuration profile, named ``profile1``. The parameters defined in ``profile1`` will be applied to the process specified by exec.
 
-.. code-block:: python
+.. code-block:: javascript
 
-"profile1": {
-  "exec": "/opt/UShareSoft/uforge/tool/demo.sh",
-  "ionice": {
-  "class": 2,
-  "level": 7
+  "profile1": {
+    "exec": "/opt/UShareSoft/uforge/tool/demo.sh",
+    "ionice": {
+    "class": 2,
+    "level": 7
   },
-"jvm": {
-  "options": [
-  "-Xmx2048m",
-  "-Xms768m",
-  "-XX:PermSize=256m",
-  "-XX:MaxPermSize=1024m"
-  ],
-  "sys-properties": {
-  "jna.library.path": "/opt/UShareSoft/uforge/lib"
+  "jvm": {
+    "options": [
+      "-Xmx2048m",
+      "-Xms768m",
+      "-XX:PermSize=256m",
+      "-XX:MaxPermSize=1024m"
+    ],
+    "sys-properties": {
+      "jna.library.path": "/opt/UShareSoft/uforge/lib"
+    }
+  },
+    "nice": {
+      "niceness": 15
+    }
   }
-  },
-"nice": {
-"niceness": 15
-}
-}
 
 
 Launching a Configuration Profile
@@ -72,10 +72,10 @@ You can include a profile that will override a process in a profile.
 
 The following is an example of a profile that includes an override profile called ``low_prio``
 
-.. code-block:: python
+.. code-block:: javascript
 
-"my_process": {
-  "exec": "/opt/UShareSoft/uforge/tools/demo.bin",
-  "include": "low_prio",
-  "sudo": true
-  },
+  "my_process": {
+    "exec": "/opt/UShareSoft/uforge/tools/demo.bin",
+    "include": "low_prio",
+    "sudo": true
+    },

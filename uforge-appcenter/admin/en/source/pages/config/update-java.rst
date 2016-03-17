@@ -9,42 +9,42 @@ The following procedure should be run on the web service and generation nodes of
 
 	1. Check that nothing is returned on web service node and gen nodes.::
 
-	oarstat
+		oarstat
 
 	2. Check that nothing is returned on gen nodes only.::
 
-	ps -ef | grep oar
+		ps -ef | grep oar
 
 	3. On the web service node, check the log to ensure that everything is out.::
 
-	tailf /var/log/glassfish/domain_uforge/uforge-web-service.log
+		tailf /var/log/glassfish/domain_uforge/uforge-web-service.log
 
 	4. Stop the web service.::
 
-	service glassfish stop ;
+		service glassfish stop ;
 
 	5. Now that nothing can happen on the web service side, you can shut down other services.
 
 		* On the UI node(s)::
 
-		service tomcat stop
+			service tomcat stop
 
 		* On the LDAP node::
 
-		service OpenDJ stop
+			service OpenDJ stop
 
 	6. Check if the processes are stopped. Usually this is run on the DB node for the cron update_repos_pkgs.sh::
 
-	ps -ef | egrep -i 'java|spider'
+		ps -ef | egrep -i 'java|spider'
 
 	7. Launch update.::
 
-	yum update jdk
+		yum update jdk
 
 	8. Restart the services.
 
 	.. code-block:: shell
 
-	# service OpenDJ start
-	# service glassfish start
-	# service tomcat start
+		# service OpenDJ start
+		# service glassfish start
+		# service tomcat start

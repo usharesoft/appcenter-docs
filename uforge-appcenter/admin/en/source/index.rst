@@ -11,39 +11,10 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   pages/architecture/platform-overview
-   pages/architecture/reliability
-   pages/architecture/storage-sizing
-   pages/architecture/scalability-partitioning
-   pages/architecture/image-generations
-   pages/architecture/scan-size
-   pages/architecture/deployment-example
-
-   pages/install/install-overview
-   pages/install/repository-setup
-   pages/install/repository-shared-storage
-   pages/install/repository-local-storage
-   pages/install/install-ISO
-   pages/install/install-VM
-   pages/install/configure-uforge
-   pages/install/test-deployment
-   pages/install/configure-ssl-cert
-   pages/install/self-signed-cert
-
+   pages/architecture/overview
+   pages/install/overview
+   
    pages/config/further-config-overview
-   pages/config/add-compute-node
-   pages/config/modify-ip
-   pages/config/config-smtp
-   pages/config/config-webservice
-   pages/config/config-database
-   pages/config/config-scheduler
-   pages/config/watchdog-services
-   pages/config/tuning-services
-   pages/config/email-notification
-   pages/config/authentication-sso
-   pages/config/populate-db-OS
-   pages/config/proprietary-pkg
-   pages/config/populate-project-catalog
 
    pages/upgrade/upgrade-overview
    pages/config/update-java

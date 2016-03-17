@@ -39,18 +39,17 @@ To view all the current resources in the scheduler, log in to the oar scheduler 
 
 .. code-block:: shell
 
-# ssh root@<ip address of the node>
-# oarnodes
-network_address : compute1.example.com
-resource_id : 1
-state : Alive
-properties : deploy=NO, besteffort=YES, cpuset=0, desktop_computing=NO, nature=0, network_address=iso, type=default, cm_availability=0
+	# ssh root@<ip address of the node>
+	# oarnodes
+	network_address : compute1.example.com
+	resource_id : 1
+	state : Alive
+	properties : deploy=NO, besteffort=YES, cpuset=0, desktop_computing=NO, nature=0, network_address=iso, type=default, cm_availability=0
 
-network_address : compute1.example.com
-resource_id : 4
-state : Alive
-properties : deploy=NO, besteffort=YES, cpuset=0, desktop_computing=NO, nature=1, network_address=vm, type=default, cm_availability=0
-
+	network_address : compute1.example.com
+	resource_id : 4
+	state : Alive
+	properties : deploy=NO, besteffort=YES, cpuset=0, desktop_computing=NO, nature=1, network_address=vm, type=default, cm_availability=0
 
 This provides the basic information of each resource including:
 network_address: the compute node this resource is attached to
@@ -67,16 +66,16 @@ To add a resource to compute node “node1” allowing to generate an image:
 
 .. code-block:: shell
 
-# oarnodesetting -a -h node1 -p cpuset=0,nature=0;
-# oarnodes
-network_address : node1
-resource_id : 92
-state : Alive
-properties : deploy=NO, besteffort=YES, cpuset=0, desktop_computing=NO, nature=0, network_address=vm, type=default, cm_availability=0
+	# oarnodesetting -a -h node1 -p cpuset=0,nature=0;
+	# oarnodes
+	network_address : node1
+	resource_id : 92
+	state : Alive
+	properties : deploy=NO, besteffort=YES, cpuset=0, desktop_computing=NO, nature=0, network_address=vm, type=default, cm_availability=0
 
 To change a current resource (resource_id: 92) to a different job type (for example publish images)::
 
-# oarnodesetting -h node1 -r 92 -p nature=1;
+	# oarnodesetting -h node1 -r 92 -p nature=1;
 
 Deleting a Job
 ~~~~~~~~~~~~~~
@@ -85,5 +84,5 @@ In case of a problem, you may want to delete a job which is stuck in a waiting s
 
 In this case, run::
 
-# oardel <job_id>
+	# oardel <job_id>
 

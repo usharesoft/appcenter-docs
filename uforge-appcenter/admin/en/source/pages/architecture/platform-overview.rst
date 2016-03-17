@@ -14,7 +14,6 @@ UForge is a scalable multi-tenant platform.  UForge can be split into the follow
 * Generation Cluster – A grid engine for scheduling and executing image generations
 * Proxy cache - Squid
 
-
 The UForge platform can be deployed on physical machines or in a virtualized or cloud environment.
 
 .. image:: /images/UForge-architecture_2.jpg

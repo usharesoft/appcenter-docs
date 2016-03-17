@@ -26,28 +26,28 @@ The following is a concrete example to begin the population of CentOS 6.5 32bit:
 
 	1. In order for the following commands to be generic you can set some variables in your environment.
 
-	.. code-block:: java
+	.. code-block:: shell
 	
-	# . /etc/UShareSoft/uforge/uforge.conf
-	# ADMIN=$UFORGE_WEBSVC_LOGIN ; PASS=$UFORGE_WEBSVC_PASSWORD
+		# . /etc/UShareSoft/uforge/uforge.conf
+		# ADMIN=$UFORGE_WEBSVC_LOGIN ; PASS=$UFORGE_WEBSVC_PASSWORD
 
 	2. Run the following CLI command in order to create the distribution::
 
-	# uforge org os add --name CentOS --arch i386 --version 6.5 -u $ADMIN -p $PASS
+		uforge org os add --name CentOS --arch i386 --version 6.5 -u $ADMIN -p $PASS
 
 	3. Enable the new operating system for the organization. The following command enables CentOS 6.5 32bit in the default organization::
 
-	# uforge org os enable --name CentOS --version 6.5 --arch i386 -u $ADMIN -p $PASS
+		uforge org os enable --name CentOS --version 6.5 --arch i386 -u $ADMIN -p $PASS
 
 	4. Enable the user to use the operating system.  The user must be a member of the organization. This step can be done later.::
 
-	# uforge user os enable --account root --name CentOS --version 6.5 --arch i386 -u $ADMIN -p $PASS
+		uforge user os enable --account root --name CentOS --version 6.5 --arch i386 -u $ADMIN -p $PASS
 
 	5. Create the distribution repository. The following example shows the creation of an official Centos repository. However, you can also create a repository based on the UShareSoft official repository as shown later.
 
 	Centos 6.5 repository::
 
-	# uforge org repo create --name "CentOS 6.5 os" --repoUrl http://vault.centos.org/6.5/os/i386/ --type RPM --officiallySupported -u $ADMIN -p $PASS
+		uforge org repo create --name "CentOS 6.5 os" --repoUrl http://vault.centos.org/6.5/os/i386/ --type RPM --officiallySupported -u $ADMIN -p $PASS
 
 	Success: Created repository with url [http://vault.centos.org/6.5/os/i386/] to default organization
 
@@ -67,37 +67,37 @@ The following is a concrete example to begin the population of CentOS 6.5 32bit:
 
 	Users may also want to restrict per architecture. For example::
 
-	[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/ ...
+		[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/ ...
 
 	`http://distros-repository.usharesoft.com/ <http://distros-repository.usharesoft.com/>`_ is an official public repository that users can use to populate the distributions. Official repositories such as Ubuntu and Debian periodically delete some package versions. In the http://distros-repository.usharesoft.com/ repository, package versions are never deleted. This can facilitate investigations on older systems.
 
 	To populate the distribution using the official UShareSoft repository for Centos::
 
-	# uforge org repo create --name "CentOS 6.5 os" --repoUrl http://distros-repository.usharesoft.com/centos/6/os/x86_64 --type RPM --officiallySupported -u $ADMIN -p $PASS
+		uforge org repo create --name "CentOS 6.5 os" --repoUrl http://distros-repository.usharesoft.com/centos/6/os/x86_64 --type RPM --officiallySupported -u $ADMIN -p $PASS
 
 	The following is a list for all the other distributions:
 
 	``Ubuntu (exemple 10.04)``
 
-	http://distros-repository.usharesoft.com/ubuntu/lucid-security/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid multiverse restricted universe main 
-	http://distros-repository.usharesoft.com/ubuntu/lucid-security/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-security multiverse restricted universe main
-	http://distros-repository.usharesoft.com/ubuntu/lucid-proposed/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-proposed multiverse restricted universe main
-	http://distros-repository.usharesoft.com/ubuntu/lucid-backports/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-backports multiverse restricted universe main
-	http://distros-repository.usharesoft.com/ubuntu/lucid-updates/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-updates multiverse restricted universe main
+		* http://distros-repository.usharesoft.com/ubuntu/lucid-security/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid multiverse restricted universe main 
+		* http://distros-repository.usharesoft.com/ubuntu/lucid-security/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-security multiverse restricted universe main
+		* http://distros-repository.usharesoft.com/ubuntu/lucid-proposed/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-proposed multiverse restricted universe main
+		* http://distros-repository.usharesoft.com/ubuntu/lucid-backports/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-backports multiverse restricted universe main
+		* http://distros-repository.usharesoft.com/ubuntu/lucid-updates/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-updates multiverse restricted universe main
 
 
 	``Debian (exemple version 6)``
 
-	http://distros.repository.usharesoft.com/debian/squeeze/mirror/ftp.fr.debian.org/debian/ squeeze contrib non-free main
-	http://distros.repository.usharesoft.com/debian/squeeze-updates/mirror/ftp.fr.debian.org/debian/ squeeze-updates contrib non-free main 
-	http://distros.repository.usharesoft.com/debian/security/squeeze/updates/mirror/security.debian.org/ squeeze/updates main contrib non-free
-	http://distros.repository.usharesoft.com/debian/squeeze/mirror/ftp.fr.debian.org/debian/ squeeze contrib non-free main
+		* http://distros.repository.usharesoft.com/debian/squeeze/mirror/ftp.fr.debian.org/debian/ squeeze contrib non-free main
+		* http://distros.repository.usharesoft.com/debian/squeeze-updates/mirror/ftp.fr.debian.org/debian/ squeeze-updates contrib non-free main 
+		* http://distros.repository.usharesoft.com/debian/security/squeeze/updates/mirror/security.debian.org/ squeeze/updates main contrib non-free
+		* http://distros.repository.usharesoft.com/debian/squeeze/mirror/ftp.fr.debian.org/debian/ squeeze contrib non-free main
 
 	``CentOS (exemple centOS 6.7)``
 
-	http://distros.repository.usharesoft.com/centos/6.7/updates/x86_64
-	http://distros.repository.usharesoft.com/centos/6.7/extras/x86_64
-	http://distros.repository.usharesoft.com/centos/6.7/os/x86_64
+		* http://distros.repository.usharesoft.com/centos/6.7/updates/x86_64
+		* http://distros.repository.usharesoft.com/centos/6.7/extras/x86_64
+		* http://distros.repository.usharesoft.com/centos/6.7/os/x86_64
 
 	``OpenSUSE (exemple version 12.2)``
 
@@ -109,39 +109,41 @@ The following is a concrete example to begin the population of CentOS 6.5 32bit:
 
 	6. You must then add the specific UShareSoft tool repository. The repository to attach is one of the following:
 
-	* Centos (example version 6, arch x86_64): http://distros-repository.usharesoft.com/usharesoft/centos/6/x86_64
-	* Redhat: (example version 6.2, arch x86_64): http://distros-repository.usharesoft.com/usharesoft/rhel/6.2/x86_64
-	* OpenSUSE: (example version 12.1, arch x86_64): http://distros-repository.usharesoft.com/usharesoft/opensuse/12.1/x86_64
-	* Scientific Linux: (example version 6, arch x86_64): http://distros-repository.usharesoft.com/usharesoft/scientificlinux/6/x86_64
-	* Debian: (example version 8, arch x86_64) [arch=amd64] http://distros-repository.usharesoft.com/usharesoft/debian/ jessie main
-	* Ubuntu: (example version 14.04, arch x86_64) [arch=amd64] http://distros-repository.usharesoft.com/usharesoft/ubuntu/ trusty main
+		* Centos (example version 6, arch x86_64): http://distros-repository.usharesoft.com/usharesoft/centos/6/x86_64
+		* Redhat: (example version 6.2, arch x86_64): http://distros-repository.usharesoft.com/usharesoft/rhel/6.2/x86_64
+		* OpenSUSE: (example version 12.1, arch x86_64): http://distros-repository.usharesoft.com/usharesoft/opensuse/12.1/x86_64
+		* Scientific Linux: (example version 6, arch x86_64): http://distros-repository.usharesoft.com/usharesoft/scientificlinux/6/x86_64
+		* Debian: (example version 8, arch x86_64) [arch=amd64] http://distros-repository.usharesoft.com/usharesoft/debian/ jessie main
+		* Ubuntu: (example version 14.04, arch x86_64) [arch=amd64] http://distros-repository.usharesoft.com/usharesoft/ubuntu/ trusty main
 
 	For example::
 
-	# uforge org repo create --name "CentOS 6.5 os" --repoUrl hhttp://distros-repository.usharesoft.com/usharesoft/centos/6/x86_64 --type RPM -u $ADMIN -p $PASS
+		uforge org repo create --name "CentOS 6.5 os" --repoUrl hhttp://distros-repository.usharesoft.com/usharesoft/centos/6/x86_64 --type RPM -u $ADMIN -p $PASS
 
 	7. Attach repository to the distribution as follows::
 
-	# uforge org repo os attach --name CentOS --arch i386 --version 6.5 --repoIds 354 -u $ADMIN -p $PASS
+		uforge org repo os attach --name CentOS --arch i386 --version 6.5 --repoIds 354 -u $ADMIN -p $PASS
 
 	8. Populate repository packages::
 
-	/opt/UShareSoft/uforge/cron/update_repos_pkgs.sh
+		/opt/UShareSoft/uforge/cron/update_repos_pkgs.sh
 
 	.. note: This procedure may take a long time.
 
-	9. To verify if the procedure is terminated, run the following command::
+	9. To verify if the procedure is terminated, run the following command:
 
-	# tail -f /tmp/USER_DATA/FactoryContainer/logs/repos/spider/<directory name with date>/spider.stdout 
-	// the procedure is terminated when you'll see the line
-	// INFO  CheckForRepositoriesUpdates:275 - Entering CheckForRepositoriesUpdates->terminate()
+	.. code-block:: shell
+
+		# tail -f /tmp/USER_DATA/FactoryContainer/logs/repos/spider/<directory name with date>/spider.stdout 
+		
+	The procedure is terminated when you see the line: INFO  CheckForRepositoriesUpdates:275 - Entering CheckForRepositoriesUpdates->terminate()
 
 	10. Create OS profile based on packages (minimal, server, etc.)::
 
-	/opt/UShareSoft/uforge/bin/launch_distro_sorter.sh -a i386 -d CentOS -v 6.5
+		/opt/UShareSoft/uforge/bin/launch_distro_sorter.sh -a i386 -d CentOS -v 6.5
 
 	11. Populate the UShareSoft packages for the new operating system::
 
-	# ARCHS=i386 DEBUG=y COS_VERS=6.5 /opt/UShareSoft/uforge/bin/exec_uploads.sh -w UssPkgs -p <uforge port> -U $ADMIN -P $PASS /tmp/DISTROS/USS/usspkgs
+		ARCHS=i386 DEBUG=y COS_VERS=6.5 /opt/UShareSoft/uforge/bin/exec_uploads.sh -w UssPkgs -p <uforge port> -U $ADMIN -P $PASS /tmp/DISTROS/USS/usspkgs
 
 	

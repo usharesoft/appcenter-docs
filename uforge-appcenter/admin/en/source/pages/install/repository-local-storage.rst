@@ -11,6 +11,6 @@ When using local storage, UForge must already be installed, but not configured. 
 	2. Create the user data directory, for example: /space/USER_DATA
 	3. Now copy all the operating system information from the UForge Setup Disk to the DISTROS sub-directory::
 
-	//# rsync -a –-progress /<disk directory>/DISTROS/ /space/DISTROS/
+		//# rsync -a –-progress /<disk directory>/DISTROS/ /space/DISTROS/
 
 .. note:: It may take up to an hour to copy all of the data. 

@@ -27,14 +27,14 @@ To modify the UForge IP address or hostname, do the following.
 
 	4. Launch the following script::
 
-	$ /opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh
+		$ /opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh
 
 If you have a load balancer where rules have been entered for accessing the UForge web service make sure the URIs match the following parameter in uforge.conf::
 
-UFORGE_GF_WEBSVC_ROOT_CONTEXT=ufws-3.3
+	UFORGE_GF_WEBSVC_ROOT_CONTEXT=ufws-3.3
 
 For the UForge CLI you should have::
 
-UFORGE_GF_ADMIN_WEBSVC_ROOT_CONTEXT=ufadmws-3.3
+	UFORGE_GF_ADMIN_WEBSVC_ROOT_CONTEXT=ufadmws-3.3
 
 .. note: Some virtualization solutions (like VirtualBox) also add this info into ifcfg-XXX files as HWADDR=MAC

@@ -14,10 +14,10 @@ When installing UForge via the deployment wizard some of the configuration attri
 
 	1. Log in to the web service node as root::
 	
-	ssh root@<ip address of the node>
+		ssh root@<ip address of the node>
 
 	2. Open the uforge.conf file::
 
-	vi /etc/UShareSoft/uforge/uforge.conf
+		vi /etc/UShareSoft/uforge/uforge.conf
 
 For more information on PerconaDB, see `http://www.percona.com <http://www.percona.com>`_

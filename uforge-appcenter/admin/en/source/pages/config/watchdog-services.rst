@@ -29,17 +29,19 @@ To view these cron jobs, log in to the oar scheduler node as root and view the c
 
 .. code-block:: shell
 
-# crontab -l
-*/5 * * * * /opt/UShareSoft/uforge/cron/reset_oar_resources.sh
-10 2 * * * /opt/UShareSoft/uforge/cron/cleanup_tickets.sh
-10 3 * * * /opt/UShareSoft/uforge/cron/cleanup_scans.sh
-42 * * * * /opt/UShareSoft/uforge/cron/update_repos_pkgs.sh
-05 * * * * /opt/UShareSoft/uforge/cron/update_repos_local_cache.sh
-1 8 * * * /opt/UShareSoft/uforge/cron/drop_caches.sh
+	# crontab -l
+	*/5 * * * * /opt/UShareSoft/uforge/cron/reset_oar_resources.sh
+	10 2 * * * /opt/UShareSoft/uforge/cron/cleanup_tickets.sh
+	10 3 * * * /opt/UShareSoft/uforge/cron/cleanup_scans.sh
+	42 * * * * /opt/UShareSoft/uforge/cron/update_repos_pkgs.sh
+	05 * * * * /opt/UShareSoft/uforge/cron/update_repos_local_cache.sh
+	1 8 * * * /opt/UShareSoft/uforge/cron/drop_caches.sh
 
-To update the crontab, log in to the oar scheduler node as root and edit the crontab::
+To update the crontab, log in to the oar scheduler node as root and edit the crontab
 
-# crontab -e
+.. code-block:: shell
+
+	# crontab -e
 
 Cron Job Guidelines
 ~~~~~~~~~~~~~~~~~~~

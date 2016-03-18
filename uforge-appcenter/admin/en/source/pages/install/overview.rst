@@ -8,7 +8,7 @@ To install a fully functioning UForge platform, you must install and configure t
 This section covers:
 
 .. toctree::
-   :titlesonly:
+	:titlesonly:
 
 	install-overview
 	repository-setup
@@ -18,3 +18,4 @@ This section covers:
 	install-VM
 	configure-uforge
 	test-deployment
+	config-ssl-cert

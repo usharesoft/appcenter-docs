@@ -3,7 +3,7 @@
 .. _populate-db-OS:
 
 Populating Database with OS Packages
-------------------------------------
+====================================
 
 Open source operating system versions are taken from the official repository mirror or the UForge repositor cache. Proprietary operating systems such as RedHat are not; therefore it is the responsibility of the end customer (or reseller if they have correct agreements in place to re-distribute an operating system) to have the original ISO images of the operating system in questions. Refer to Hosting Proprietary Packages.
 

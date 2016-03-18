@@ -7,7 +7,7 @@ Backup Overview Guidelines
 
 .. warning: UShareSoft is not responsible for any customer data loss.  The database backup techniques highlighted in this document are standard best practices used by the industry.
 
-The goal of this section is to highlight some best practices on how to correctly backup the UForge data.   There are two zones of UForge data that should be backed up:
+There are two zones of UForge data that should be backed up:
 
 	* UForge database service.
 	* UForge user data (user uploaded software etc)

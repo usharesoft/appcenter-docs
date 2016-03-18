@@ -19,15 +19,13 @@ Contents:
    pages/upgrade/upgrade-overview
    pages/config/update-java
    
-   pages/backup/backup-overview
-   pages/backup/backup-database
-   pages/backup/backup-user-data
-   pages/backup/backup-ldap
-   pages/backup/backup-idm
+   pages/backup/overview
    
    pages/manage-services/overview
+   pages/monitoring/overview
    pages/manage-resources/overview
    pages/rbac/overview
    pages/manage-users/overview
+
 
    pages/rebranding/overview

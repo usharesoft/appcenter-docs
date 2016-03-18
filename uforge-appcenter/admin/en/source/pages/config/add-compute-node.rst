@@ -28,7 +28,7 @@ You can add a new OAR compute node which was instantiated from UForge but which 
 	.. code-block:: shell
 
 		IP=`/sbin/ip -o addr show $ITF 2>/dev/null| grep 'inet ' | awk '{print \$4}' |
-	sed -e 's?/.*??'`
+		sed -e 's?/.*??'`
 
 	6. Modify and copy /etc/hosts
 

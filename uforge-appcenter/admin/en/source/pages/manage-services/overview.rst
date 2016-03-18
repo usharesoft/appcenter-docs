@@ -1,8 +1,13 @@
 .. Copyright (c) 2007-2016 UShareSoft, All rights reserved
 
-.. _admin-architecture-considions:
+.. _manage-services:
 
-Architecture Considerations
-===========================
+Manage Services
+===============
 
-text here here here
+
+.. toctree::
+   :titlesonly:
+
+   start-webservice
+   start-database

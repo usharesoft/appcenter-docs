@@ -22,10 +22,9 @@ Contents:
    pages/backup/overview
    
    pages/manage-services/overview
-   pages/monitoring/overview
    pages/manage-resources/overview
-   pages/rbac/overview
    pages/manage-users/overview
-
+   pages/rbac/overview
+   pages/monitoring/overview
 
    pages/rebranding/overview

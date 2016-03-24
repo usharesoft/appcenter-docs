@@ -9,21 +9,21 @@ The database is registered as an operating system service. Each time a database 
 
   # ssh root@<ip address of the node>
 
-Stopping the database
+Stopping the Database
 ~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: shell
 
   # service mysql stop
 
-Starting the database
+Starting the Database
 ~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: shell
 
   # service mysql start
 
-Restarting the database
+Restarting the Database
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: shell

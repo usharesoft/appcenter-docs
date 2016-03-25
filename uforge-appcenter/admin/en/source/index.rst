@@ -24,7 +24,7 @@ Contents:
    pages/manage-services/overview
    pages/manage-resources/overview
    pages/manage-users/overview
-   pages/rbac/overview
+   
    pages/monitoring/overview
 
    pages/rebranding/overview

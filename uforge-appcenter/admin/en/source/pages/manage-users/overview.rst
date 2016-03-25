@@ -5,12 +5,15 @@
 Manage Users
 ============
 
-The following sections cover information regarding managing the UForge users.
+The following sections cover information regarding managing the UForge users. Managing users is intrinsically linked to role based access control. Please read the information on RBAC.
 
 .. toctree::
    :titlesonly:
 
    manage-users
-   rbac
+   pages/rbac/rbac-overview
+   admin-rights
    set-quotas
+   marketplace-share
+   api-access
  

@@ -5,7 +5,7 @@
 UForge Installation Overview
 ============================
 
-To install a fully functioning UForge platform, you must install and configure the UForge services as well as populate the UForge Repository with the operating systems you wish to build your server templates from.  To make the UForge installation process as easy as possible, UShareSoft provides an external hard drive, “UForge Setup Disk”, that contains:
+To install a fully functioning UForge platform, you must install and configure the UForge services as well as populate the UForge Repository with the operating systems you wish to build your server templates from.  To make the UForge installation process as easy as possible, UShareSoft provides an external hard drive ``UForge Setup Disk`` that contains:
 
 	* UForge Operating System Repository – all the packages and updates for each open source operating system distribution supported by UForge. For other operating systems including RedHat Enterprise Linux, you must have access rights to the operating system repositories
 	
@@ -44,8 +44,8 @@ Before you start deploying UForge, ensure that you have all the following:
 
 	* UForge Setup Disk
 	* Your activation credentials (ID and activation key) provided by UShareSoft
-	* Architecture of the deployment (number of nodes and networking topology. See “Architecture and Networking Topologies” for more information)
-	* The necessary system requirements (see “UForge Node Prerequisites” and “Storage Considerations”)
+	* Architecture of the deployment (number of nodes and networking topology. See :ref: `network-topology`)
+	* The necessary system requirements (see :ref: `storage-sizing`)
 	* Your SSL certificates, key and chaining certificates, and all files corresponding to the following entries in /etc/httpd/conf.d/ssl.conf:
 
 		- SSLCertificateFile

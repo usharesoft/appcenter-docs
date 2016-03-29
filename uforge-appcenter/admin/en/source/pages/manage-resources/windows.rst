@@ -167,7 +167,7 @@ The path is::
 
 	{Language}/{Edition}/{Type}/{generation date}(YYYY-MM-DD)/goldenImagePathCompressedInGz
 
-For instance, below is the a sample hierarchy: 
+For instance, below is a sample hierarchy: 
 
 Windows/
 Windows/releases
@@ -208,13 +208,15 @@ Adding a Golden Image to UForge
 -------------------------------
 
 Once you have your Golden Image, you need to add it to your Uforge platform in order to be able to use the Windows version to create appliance templates. Your golden image must be in one of the following formats:
-raw.gz 
-raw.zip 
-raw.bz2 
-raw.lrz
-vdi 
-vhd
-vmdk
+
+	* raw.gz 
+	* raw.zip 
+	* raw.bz2 
+	* raw.lrz
+	* vdi 
+	* vhd
+	* vmdk
+
 To add your Golden Image to UForge:
 
 	1. Copy the image to::
@@ -224,6 +226,7 @@ To add your Golden Image to UForge:
 	For example: /tmp/DISTROS/Windows/releases/Server2008R2/x86_64/English/MyProfile/Core/2014- 04-28/Windows_2008R2_English_Datacenter_Core_2014-04-28.raw.gz
 	
 	Note: 
+	
 		* File and directory ownership should be glassfish:glassfish.
 		* Permissions should be readable for all users
 		* Disk name must be unique in the /tmp/DISTORS/Windows file tree

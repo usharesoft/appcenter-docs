@@ -25,4 +25,4 @@ To install UForge from a VM template.
 
 	8. Choose ``Accept All and Continue``.
 
-The installation phase is complete, you are now ready to configure the UForge platform, see section “Configuring UForge”.
+The installation phase is complete, you are now ready to configure the UForge platform, see :ref:`configure-uforge`.

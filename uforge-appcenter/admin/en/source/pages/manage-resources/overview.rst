@@ -12,6 +12,7 @@ The following sections cover information regarding managing the UForge resources
 
    manage-os
    create-custom-os
+   windows
    manage-project-catalog
    manage-categories
    manage-milestone

@@ -39,12 +39,12 @@ Fill in the wizard, note that all the fields are mandatory.
 
 		If you choose to use a remote storage, indicate the NFS server with mount point and you should enter the full path for the OS directory e.g. /DISTROS.
 
-		If you select remote storage for the image store, you have to make sure that the path USER_DATA exists, with the correct permissions i.e. glassfish:glassfish (see UForge Repository Using Shared Storage, step 4. Check mount points, for more detail).
+		If you select remote storage for the image store, you have to make sure that the path USER_DATA exists, with the correct permissions i.e. glassfish:glassfish (see :ref: `repository-shared-storage`, step 4, Check mount points, for more detail).
 
 	13. Indicate the generation cluster compute node hostnames. You can add additional compute nodes by clicking the add button.
 
 	14. Once you have finished the configuration, click the ``Deploy`` button.
 
-	.. note: The deployment may take a few hours, depending on the number of operating systems you have chosen.
+		.. note:: The deployment may take a few hours, depending on the number of operating systems you have chosen.
 
 	15. Once the deployment is complete, click ``Finish``. 

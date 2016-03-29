@@ -61,7 +61,7 @@ To setup the shared storage:
 
 		rsync -a –-progress <my disk>/DISTROS/ /mnt/DISTROS/
 
-.. note: It may take up to an hour to copy all of the data. 
+.. note:: It may take up to an hour to copy all of the data. 
 
 
 

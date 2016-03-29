@@ -31,7 +31,7 @@ To disable API access simply remove the entitlement api_key_access::
 
 	uforge user role remove --name newrole --account kermit -u $ADMIN -p $PASS
 
-.. _supervisor-rights
+.. _supervisor-rights:
 
 Granting a User Supervisor Rights
 ---------------------------------

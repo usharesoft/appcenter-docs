@@ -5,11 +5,13 @@
 Allowing https Repositories with Self-Signed Certificate
 --------------------------------------------------------
 
-.. note: The use of self-signed certificate can comport security risks.
+.. note:: The use of self-signed certificate can comport security risks.
 
 The following command allows you to add self-signed certificates (exposed by your repositories) as trusted into the UForge server. 
 
-	1. Download the SSL self-signed certificate from the server (repository) you want to populate using the following command::
+	1. Download the SSL self-signed certificate from the server (repository) you want to populate using the following command:
+
+	.. code-block:: shell
 
 		echo -n | openssl s_client -connect localhost:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > /tmp/cert.crt
 
@@ -25,4 +27,4 @@ The following command allows you to add self-signed certificates (exposed by you
 
 		ln -s /etc/pki/java/cacerts /usr/java/latest/jre/lib/security/cacerts
 
-	The default password is "changeit"
+	The default password is ``changeit``.

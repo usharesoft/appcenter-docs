@@ -17,11 +17,7 @@ In order to interact with the UShareSoft package repository, you must already ha
 	UFORGE_PRODUCT_ACCESS_USER=username
 	UFORGE_PRODUCT_ACCESS_PASSWORD=password
 
-.. note: You should never update the following file
-
-.. code-block:: shell
-
-	# cat /etc/yum.repo.d/uforge-ee-repo
+.. note:: You should never update the following file: `# cat /etc/yum.repo.d/uforge-ee-repo`
 
 The request to update uses these credentials via HTTPS to UShareSoft who then determines whether you have the access rights to update the platform.
 
@@ -111,10 +107,10 @@ The RPM packages will be replaced and the services will be reconfigured to corre
 
 	.. code-block:: shell
 
-	# service squid status
-	squid is stopped
-	// if squid is stopped, run the following command-line
-	# service squid start	
+		# service squid status
+		squid is stopped
+		// if squid is stopped, run the following command-line
+		# service squid start	
 
 Retrieving Data from UShareSoft
 -------------------------------

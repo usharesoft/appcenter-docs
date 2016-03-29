@@ -43,7 +43,7 @@ Customizing the Email Templates
 
 You can modify or internationalize the information sent during an email notification. UForge provides a set of default templates for each email type sent by the system. The templates are stored in: /opt/UShareSoft/uforge/tmpl
 
-.. warning: When UForge is upgraded all the templates in the default directory will be overwritten.  To ensure that any custom templates are restored during an update, a copy must be made of the custom template. 
+.. warning:: When UForge is upgraded all the templates in the default directory will be overwritten.  To ensure that any custom templates are restored during an update, a copy must be made of the custom template. 
 
 User account management emails:
 
@@ -84,7 +84,7 @@ Specific keywords for Marketplace (App Store) email notifications:
 
 UForge uses the directory /var/opt/UShareSoft for custom files.  If this directory exists, as part of the upgrade process and custom files will be restored.
 
-.. warning: When UForge is upgraded all the templates in the default directory will be overwritten.  To ensure that any custom templates are restored during an update, a copy must be made of the custom template. 
+.. warning:: When UForge is upgraded all the templates in the default directory will be overwritten.  To ensure that any custom templates are restored during an update, a copy must be made of the custom template. 
 
 Therefore to change an email template: 
 

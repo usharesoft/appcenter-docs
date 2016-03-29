@@ -24,4 +24,4 @@ When installing UForge via the deployment wizard some of the configuration attri
 
 For more information on PerconaDB, see `http://www.percona.com <http://www.percona.com>`_
 
-..note : By default no mechanism is configured to backup the contents of the UForge database.  PerconaDB can be configured as a cluster or in master-slave mode to provide reliability and to have a replicate of the data.  Regular backups of the database should also be done.  Please refer to “Chapter 6: UForge Backup Guidelines” for more information.
+..note:: By default no mechanism is configured to backup the contents of the UForge database. PerconaDB can be configured as a cluster or in master-slave mode to provide reliability and to have a replicate of the data.  Regular backups of the database should also be done.

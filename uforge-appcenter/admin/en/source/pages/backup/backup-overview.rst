@@ -5,7 +5,7 @@
 Backup Overview Guidelines
 ==========================
 
-.. warning: UShareSoft is not responsible for any customer data loss.  The database backup techniques highlighted in this document are standard best practices used by the industry.
+.. warning:: UShareSoft is not responsible for any customer data loss.  The database backup techniques highlighted in this document are standard best practices used by the industry.
 
 There are two zones of UForge data that should be backed up:
 

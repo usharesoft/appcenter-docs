@@ -30,7 +30,7 @@ By copying this information, you are taking a snapshot of the entire database. T
 
 As the backup destination does not change, you are creating a replication of the entire database.  The rsync command only copies the incremental differences each time.  
 
-The danger here is that if during that time there is damaged data, when rsync is run then this corrupted data is copied and there is no possible way to recuperate the old data.  To overcome this, UShareSoft also creates archive backups of the entire database.
+The danger here is that if during that time there is damaged data, when rsync is run then this corrupted data is copied and there is no possible way to recuperate the old data. To overcome this, UShareSoft also creates archive backups of the entire database.
 
 .. code-block:: shell
 
@@ -59,7 +59,7 @@ Restoring the database is a simple copy using rsync back to the database directo
 Using Master-Slave Replication for Database Backup
 --------------------------------------------------
 
-To ensure consistent backups of the data and to limit the impact of the actual backup process on the service performance, a common approach is to use Master-Slave replication.  This is an easy way to provide a complete running copy of the data on another database instance (called the slave).  Consequently you can then stop the slave instance to do the backups while leaving the other instance (the master) to continue providing the database service.  Master-slave replication is also the first implementation of high-availability.
+To ensure consistent backups of the data and to limit the impact of the actual backup process on the service performance, a common approach is to use Master-Slave replication.  This is an easy way to provide a complete running copy of the data on another database instance (called the slave).  Consequently you can then stop the slave instanceto do the backups while leaving the other instance (the master) to continue providing the database service.  Master-slave replication is also the first implementation of high-availability.
 
 The configuration of master-slave replication is out of scope of this document, but we recommend the following reading:
 
@@ -70,5 +70,5 @@ The configuration of master-slave replication is out of scope of this document, 
 You can now safely run the same commands provided in section “Doing a Basic Backup” on the slave database instance.
 To automate the entire process, a script can be written and executed by a cron job at the frequency you wish to backup the database (nightly backups are recommended).
 
-If you want to add high-availability, then UShareSoft recommends using MySQL Cluster.  This is a separate MySQL product that is not distributed with UForge.
+If you want to add high-availability, then UShareSoft recommends using MySQL Cluster. This is a separate MySQL product that is not distributed with UForge.
 

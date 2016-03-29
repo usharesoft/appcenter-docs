@@ -1,6 +1,6 @@
 .. Copyright (c) 2007-2016 UShareSoft, All rights reserved
 
-.. _install-ISO:
+.. _install-iso:
 
 Installing from an ISO
 ----------------------
@@ -40,4 +40,4 @@ To install UForge from the ISO image:
 	10. Once the system reboots, accepts the EULA license agreement.
 	
 For a multi-node installation, repeat these steps for every physical or VM instance you wish to install.  
-The installation phase is complete, you are now ready to configure the UForge platform, see “Configuring UForge”.
+The installation phase is complete, you are now ready to configure the UForge platform, see :ref:`configure-uforge`.

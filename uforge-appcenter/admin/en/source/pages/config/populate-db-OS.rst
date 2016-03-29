@@ -5,15 +5,15 @@
 Populating Database with OS Packages
 ====================================
 
-Open source operating system versions are taken from the official repository mirror or the UForge repositor cache. Proprietary operating systems such as RedHat are not; therefore it is the responsibility of the end customer (or reseller if they have correct agreements in place to re-distribute an operating system) to have the original ISO images of the operating system in questions. Refer to Hosting Proprietary Packages.
+Open source operating system versions are taken from the official repository mirror or the UForge repositor cache. Proprietary operating systems such as RedHat are not; therefore it is the responsibility of the end customer (or reseller if they have correct agreements in place to re-distribute an operating system) to have the original ISO images of the operating system in questions. Refer to :ref:`proprietary-pkg`.
 
 To enable UForge to generate images based on the operating system it needs all the meta-data of the packages comprising the operating system. This meta-data includes the location in the storage of the package as well as dependency information that is used during generation. Furthermore, certain specific UShareSoft packages must be populated for this operating system.
 
-.. note: Custom repositories are supported in UForge. They are treated like other OS packages.
+.. note:: Custom repositories are supported in UForge. They are treated like other OS packages.
 
 For information specific about Windows, refer to First Installation of Windows.
 
-.. note: When installing a major version, all minor versions will be included. If you want to restrict to only a few minor versions, you will have to follow this procedure for each minor version you want to install.
+.. note:: When installing a major version, all minor versions will be included. If you want to restrict to only a few minor versions, you will have to follow this procedure for each minor version you want to install.
 
 In order to add an operation system in your UForge platform you must:
 
@@ -136,7 +136,7 @@ The following is a concrete example to begin the population of CentOS 6.5 32bit:
 
 		# tail -f /tmp/USER_DATA/FactoryContainer/logs/repos/spider/<directory name with date>/spider.stdout 
 		
-	The procedure is terminated when you see the line: INFO  CheckForRepositoriesUpdates:275 - Entering CheckForRepositoriesUpdates->terminate()
+		The procedure is terminated when you see the line: INFO  CheckForRepositoriesUpdates:275 - Entering CheckForRepositoriesUpdates->terminate()
 
 	10. Create OS profile based on packages (minimal, server, etc.)::
 

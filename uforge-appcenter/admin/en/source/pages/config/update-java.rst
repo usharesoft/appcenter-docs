@@ -7,19 +7,19 @@ Updating the Java Version
 
 The following procedure should be run on the web service and generation nodes of a single-node machine in order to update the Java version.
 
-	1. Check that nothing is returned on web service node and gen nodes.::
+	1. Check that nothing is returned on web service node and gen nodes::
 
 		oarstat
 
-	2. Check that nothing is returned on gen nodes only.::
+	2. Check that nothing is returned on gen nodes only::
 
 		ps -ef | grep oar
 
-	3. On the web service node, check the log to ensure that everything is out.::
+	3. On the web service node, check the log to ensure that everything is out::
 
 		tailf /var/log/glassfish/domain_uforge/uforge-web-service.log
 
-	4. Stop the web service.::
+	4. Stop the web service::
 
 		service glassfish stop ;
 
@@ -43,8 +43,8 @@ The following procedure should be run on the web service and generation nodes of
 
 	8. Restart the services.
 
-	.. code-block:: shell
+		.. code-block:: shell
 
-		# service OpenDJ start
-		# service glassfish start
-		# service tomcat start
+			# service OpenDJ start
+			# service glassfish start
+			# service tomcat start

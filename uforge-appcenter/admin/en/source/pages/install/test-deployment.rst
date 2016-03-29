@@ -7,7 +7,7 @@ Testing the Deployment
 
 Once the configuration phase is complete, you may wish to carry out some basic sanity tests to ensure that the UForge platform is running normally:
 
-**Step 1:** Checking the web service is operational
+**Step 1:** Check if the web service is operational
 
 Use the values in the uforge.conf to contact the web service and expect a 200 OK response.
 
@@ -15,7 +15,7 @@ Get the values form the uforge.conf and add them to some environment variables (
 
 .. code-block:: shell
 
-# eval `grep '^UFORGE_WEBSVC_\|^UFORGE_GF_INTERNAL_IP\|^UFORGE_GF_HTTP_PORT\|^UFORGE_GF_WEBSVC_ROOT_CONTEXT' /etc/UShareSoft/uforge/uforge.conf`
+	eval `grep '^UFORGE_WEBSVC_\|^UFORGE_GF_INTERNAL_IP\|^UFORGE_GF_HTTP_PORT\|^UFORGE_GF_WEBSVC_ROOT_CONTEXT' /etc/UShareSoft/uforge/uforge.conf`
 
 Run a simple http request (using basic authentication) using curl
 
@@ -43,7 +43,7 @@ Run a simple http request (using basic authentication) using curl
 	< Date: Thu, 03 May 2012 08:33:11 GMT
 	...<rest of the body removed>
 
-**Step 2:** Check to see the Database is running
+**Step 2:** Check to see if the Database is running
 
 The database service should be running and available on the port 3306 and that the database table is present. The Percona Server instance should have “usharedb” and “oar”
 
@@ -64,7 +64,7 @@ Get the values form the uforge.conf and add them to some environment variables (
 	performance_schema
 	usharedb
 
-**Step 3:** Check that the generation cluster resources
+**Step 3:** Check the generation cluster resources
 
 Check that all the cluster resources are available ('alive').  On each compute node
 

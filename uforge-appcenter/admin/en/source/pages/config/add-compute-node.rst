@@ -11,7 +11,7 @@ You can add a new OAR compute node which was instantiated from UForge but which 
 
 	2. Initial setup: oar-server and oarnode1 to oarnodeN already configured 
 
-	Name oarnodeX and IP-oarnodeX respectively the name and IP address of the new node to be added to the UForge "cluster". 
+		Name oarnodeX and IP-oarnodeX respectively the name and IP address of the new node to be added to the UForge "cluster". 
 
 	.. _note: The following commands are run on the first existing oarnode, for example oarnode1 until stated otherwise.
 

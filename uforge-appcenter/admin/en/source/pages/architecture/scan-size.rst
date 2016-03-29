@@ -7,7 +7,7 @@ Estimating Scan Size
 
 It is difficult to estimate sizing of scans. However, the following guidelines may be useful to plan your first scan:
 
-average scan size x number of scans
+	average scan size x number of scans
 
 Scan sizes vary from 100 KB to 12 GB
 

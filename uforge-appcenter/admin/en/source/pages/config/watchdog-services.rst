@@ -15,14 +15,14 @@ Each of these housekeeping tasks are registered as a cron job in the first datab
 
 To change the frequency of these housekeeping tasks, you need to update the crontab. Each line of a crontab file represents a job and is composed of a CRON expression, followed by a shell command to execute. The syntax is:
 
-dw month day hr min followed by the command to be executed
+``dw`` ``month`` ``day`` ``hr`` ``min`` followed by the command to be executed
 
 Where:
 
 	* dw is the day of the week (0 - 6) (0 is Sunday, or use names)
 	* month is 1 - 12
 	* day is day of the month (1 - 31)
-	* hour (0 - 23)
+	* hr is the hour (0 - 23) 
 	* min is minutes (0 - 59)
 
 To view these cron jobs, log in to the oar scheduler node as root and view the cron jobs:

@@ -23,21 +23,23 @@ You can add entitlements as part of the creation by using the --entitlements opt
 
 	uforge role create --name newrole --description “description of new role” --entitlements appliance_create studio_access -u $ADMIN -p $PASS
 
-..note: You cannot modify the “root” role.
+.. note:: You cannot modify the “root” role.
 
 
 Listing Roles Assigned to a User
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------
 
 To view the roles already assigned to a specific user, run the command::
 
 	uforge user role list --account <username> -u $ADMIN -p $PASS
 
 
-Adding a Role to a User
-~~~~~~~~~~~~~~~~~~~~~~~
+.. _add-roles:
 
-..note: Adding a specific role to a user (such as Administrator) is often only the first step in granting specific  rights. You must then specify the entity (for an Administrator this would be the organization) for which the user has the newly assigned rights. See the examples later in this section.
+Adding a Role to a User
+-----------------------
+
+.. note:: Adding a specific role to a user (such as Administrator) is often only the first step in granting specific  rights. You must then specify the entity (for an Administrator this would be the organization) for which the user has the newly assigned rights. See the examples later in this section.
 
 To add a role to a user::
 
@@ -47,12 +49,13 @@ To add several roles to the same user::
 
 	uforge user role add --account <username> --roles role1 role2 -u $ADMIN -p $PASS
 
+.. _delete-roles:
 
 Deleting a Role from a User
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------
 
 To delete a role from a user::
 
 	uforge role delete --account <username> --roles roleA -u $ADMIN -p $PASS
 
-..note: If this is the only role assigned to a user, once deleted, the user will no longer have any roles. With no roles the user will only be able to view the UForge account and dashboard.
+.. note:: If this is the only role assigned to a user, once deleted, the user will no longer have any roles. With no roles the user will only be able to view the UForge account and dashboard.

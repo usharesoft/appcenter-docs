@@ -13,7 +13,7 @@ Each organization within the UForge platform has a project catalog, and each mem
 	* update existing projects to the catalog
 	* delete a project. The project will no longer appear in the project catalog, however it is not permanently deleted. This ensures that any existing templates that use the project can still generate images correctly.
 
-You can also create custom OS profiles to include specific packages to an existing (standard) OS profile. See Creating Custom OS Profiles.
+You can also create custom OS profiles to include specific packages to an existing (standard) OS profile. See :ref:`create-custom-os`.
 
 .. image: /images/project-catalog.jpg
 
@@ -30,7 +30,7 @@ To add a new project:
 
 	3. Projects are associated with a specific version of operating system. Click on the operating system you want to create a project for.  This will provide the current list of projects this operating system has. 
 
-..note: If a project supports more than one version of operating system, then you must re-create a new project for each operating system version.  To automate the way projects are added and maintained, use the UForge APIs (for example to add the same project to multiple operating systems). 
+	.. note:: If a project supports more than one version of operating system, then you must re-create a new project for each operating system version. To automate the way projects are added and maintained, use the UForge APIs (for example to add the same project to multiple operating systems). 
 
 	4. Click the ``create`` button in the ``Projects`` section of the page.
 

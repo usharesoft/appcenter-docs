@@ -31,7 +31,7 @@ If you want to limit the list of categories users can see and use, you can delet
 	4. Click ``delete``.
 	5. Click confirm in the pop-up window.
 
-.. note: If you want to delete all category customizations, click on reset. This will delete all the custom categories you created; however, this will also add any other default categories you might have deleted.
+.. note:: If you want to delete all category customizations, click on reset. This will delete all the custom categories you created; however, this will also add any other default categories you might have deleted.
 
 Managing Categories with CLI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,4 +45,4 @@ The available commands are:
 	* category list
 	* category reset
 
-.. warning: If you reset the category list, all custom categories you created will be deleted.
+.. warning:: If you reset the category list, all custom categories you created will be deleted.

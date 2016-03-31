@@ -25,7 +25,7 @@ The subscription target has the following commands:
 		admin remove                   : Remove a user as a subscription profile administrator.
 		create                         : Create a new subscription profile within an organization.
 		delete                         : Delete a subscription profile from an organization.
-		disable                        : Disables a subscription profile within an organization                  (cannot be used to create users).
+		disable                        : Disables a subscription profile within an organization    (cannot be used to create users).
 		enable                         : Activates or enables a subscription profile within an organization.
 		format add                     : Add an image format to a subscription profile.
 		format remove                  : Remove an image format to a subscription profile.
@@ -63,7 +63,7 @@ When creating a subscription profile, you can also specify the following:
 
 If you specify any of the above when you create a subscription profile, then all users created using this subscription profile will have the formats, OSes, quotas and roles defined in the subscription profile.
 
-..note: Once you create a user with a specific subscription profile, even if you modify the subscription profile, the rights of the users already created will not be modified. For example, if profileA used to create UserA has quotas set to unlimited. Once UserA is created, you modify the profileA to set quota to 3 generations. UserA will still have quota set to unlimited, but UserB created with the updated profileA will have quota set to 3 generations.
+	.. note:: Once you create a user with a specific subscription profile, even if you modify the subscription profile, the rights of the users already created will not be modified. For example, if profileA used to create UserA has quotas set to unlimited. Once UserA is created, you modify the profileA to set quota to 3 generations. UserA will still have quota set to unlimited, but UserB created with the updated profileA will have quota set to 3 generations.
 
 	1. To create a subscription profile for an organization, run the command::
 

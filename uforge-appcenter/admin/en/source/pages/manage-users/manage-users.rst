@@ -7,12 +7,14 @@ Managing User Accounts
 
 When managing user accounts, the administrator must have administration privileges for the organization where the user account is part of or where the member will be created. 
 
+.. _create-user:
+
 Creating User Accounts with CLI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When a user account is created, the account is added to the specified organization. If no organization is specified, the UForge default organization is used.  When creating a user, the administrator must specify a subscription code. This subscription code defines the roles, OSes, formats the user has access to, in addition to any quotas. 
 
-.. note: Since a subscription code is required to create a user, the UForge administrator must first create these subscription profiles, and add the organization administrator (or another user) to the admin list.
+.. note:: Since a subscription code is required to create a user, the UForge administrator must first create these subscription profiles, and add the organization administrator (or another user) to the admin list.
 
 To create a user account:
 

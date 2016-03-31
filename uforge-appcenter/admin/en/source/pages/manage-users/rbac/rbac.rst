@@ -5,11 +5,11 @@
 Viewing Default Roles
 ---------------------
 
-A set of default roles are provided by UForge. To view these default roles, use the command:
+A set of default roles are provided by UForge. To view these default roles, use the command ``uforge role list``:
 
 .. code-block:: shell
 
-	uforge role –list -u $ADMIN -p $PASS
+	uforge role list -u $ADMIN -p $PASS
 	Getting all the roles for the default organization ...
 	+--------------------------+----------------------------------------------------------------------------------+
 	| Name                     | Description                                                                      |
@@ -29,14 +29,14 @@ A set of default roles are provided by UForge. To view these default roles, use 
 	+--------------------------+----------------------------------------------------------------------------------+
 	Found 15 role(s)
 	| apiuser                  | Allows the user to communicate with UForge via the APIs.                         |
-	+ Entitlements ------------------+----------------------------------------------------------------------------------+
+	+ Entitlements ------------+----------------------------------------------------------------------------------+
 	| api_key_access           | Access to UForge APIs.                                                           |.... rest omitted for clarity
 
-Organization administrators can create and manage roles as well as assign these roles to the members of the organization.  For a list of all the commands possible to manage RBAC, use::
+Organization administrators can create and manage roles as well as assign these roles to the members of the organization.  For a list of all the commands possible to manage RBAC, use ``uforge role --help``.
 
-	uforge role --help
+.. note:: Adding a specific role to a user (such as Administrator) is often only the first step in granting specific  rights. You must then specify the entity (for an Administrator this would be the organization) for which the user has the newly assigned rights. See the examples later in this section.
 
-..note: Adding a specific role to a user (such as Administrator) is often only the first step in granting specific  rights. You must then specify the entity (for an Administrator this would be the organization) for which the user has the newly assigned rights. See the examples later in this section.
+.. _list-entitlements:
 
 Listing Entitlements
 ~~~~~~~~~~~~~~~~~~~~
@@ -46,6 +46,8 @@ An entitlement describes the right to perform an action on the UForge platform. 
 To view all the entitlements provided by UForge, use the command::
 
 	uforge entitlement list -u $ADMIN -p $PASS
+
+.. _list-roles:
 
 Listing Roles for an Organization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

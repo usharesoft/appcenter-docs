@@ -13,7 +13,7 @@ A Golden Image can be between 5 to 10 Gb, depending on the selected version.
 
 This chapter describes how to create your own Windows Golden Images. Windows Golden Images need to be created in order to create Windows templates. If you want to incorporate a Windows update, then you need to create and install a new set of Golden Images. UShareSoft has a tool called the Golden Creator and can provide Golden Images. This chapter assumes you want to create the Golden Image yourself.
 
-..note: A good knowledge of Windows is required.
+..note:: A good knowledge of Windows is required.
 
 Supported Windows Versions
 --------------------------
@@ -70,7 +70,7 @@ To install Windows, follow the instructions below. This example is for Windows S
 		. /etc/UShareSoft/uforge/uforge.conf
 		ARCHS=x86_64 DEBUG=y WIN_VERS=Server2008R2 /opt/UShareSoft/uforge/bin/exec_uploads.sh -w UssPkgs -U "$UFORGE_WEBSVC_LOGIN" -P "$UFORGE_WEBSVC_PASSWORD" -s "$UFORGE_DEFAULT_ORG_NAME" /tmp/DISTROS/USS/usspkgs
 
-..note: UForge does not manage Windows updates as it does for Linux (crawling updates every night and populating the database). Instead, each time you want to have the updates for Windows, you will need to a new set of Golden Images.
+.. note:: UForge does not manage Windows updates as it does for Linux (crawling updates every night and populating the database). Instead, each time you want to have the updates for Windows, you will need to a new set of Golden Images.
 
 Listing Existing Golden Images
 ------------------------------
@@ -115,13 +115,13 @@ To create an new Golden Image, you will need to:
 		* NetFx3ServerFeatures
 		* NetFx3
 
-	To install these features, run the following Windows commands:
+		To install these features, run the following Windows commands:
 
-		* start /w dism /online /enable-feature /all /featurename:ServerCore-WOW64 
-		* start /w dism /online /enable-feature /all /featurename:NetFx2-ServerCore 
-		* start /w dism /online /enable-feature /all /featurename:NetFx2-ServerCore-WOW64 
-		* start /w dism /online /enable-feature /all /featurename:NetFx3ServerFeatures 
-		* start /w dism /online /enable-feature /all /featurename:NetFx3
+			* start /w dism /online /enable-feature /all /featurename:ServerCore-WOW64 
+			* start /w dism /online /enable-feature /all /featurename:NetFx2-ServerCore 
+			* start /w dism /online /enable-feature /all /featurename:NetFx2-ServerCore-WOW64 
+			* start /w dism /online /enable-feature /all /featurename:NetFx3ServerFeatures 
+			* start /w dism /online /enable-feature /all /featurename:NetFx3
 
 	4. Install gtk-sharp-2.12.10.win32.msi. 
 
@@ -140,8 +140,9 @@ To create an new Golden Image, you will need to:
 	7. Open a Command Prompt window as an administrator, and go to the WINDIR\system32\sysprep directory. Then run::
 
 		sysprep.exe /generalize /oobe /shutdown
+
 	
-..note: This will shutdown the machine. Do not boot the machine again !
+.. note:: This will shutdown the machine. Do not boot the machine again!
 
 
 Installing Updated Golden Images
@@ -239,4 +240,4 @@ To add your Golden Image to UForge:
 
 		org golden create --name Windows --arch x86_64 --version Server2008R2 --edition Standard --goldenDate 2014-04-28 --language French --type Full
 
-.. note: that the parameters set when running org golden create should correspond to the path on the NAS, that is: {Language}/{Edition}/{Type}/{generation date}(YYYY-MM-DD)/goldenImagePathCompressedInGz
+	.. note:: The parameters set when running ``org golden create`` should correspond to the path on the NAS, that is: {Language}/{Edition}/{Type}/{generation date}(YYYY-MM-DD)/goldenImagePathCompressedInGz

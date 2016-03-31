@@ -7,6 +7,8 @@ Creating Custom OS Profiles
 
 UShareSoft provides a set of OS profiles. If you want to create another OS profile, you can create one using UForge's graphical user interface. 
 
+.. note:: You can delete packages but UShareSoft does not guarantee that your OS profile will be functional.
+
 To create a new OS profile:
 
 	1. Under the ``Administration`` tab, click ``OS Profiles``.
@@ -14,14 +16,11 @@ To create a new OS profile:
 	3. Double-click on the operating system you want to administer.  This will provide the current list of profiles this operating system has.  
 	4. Select the profile which will serve as the base for your custom OS profile and click create.
 
-.. image: /images/create-os-profile.jpg
+		.. image: /images/create-os-profile.jpg
 
 	5. Enter your profile name and click create.
 	6. Enter a description (mandatory).
 	7. Select the package(s) you want to add to your OS profile and click ``save``. You can search for the package you want to add. The packages that you can add are listed in the top list. The bottom list is the list of packages that are currently part of the profile.
-
-.. note: You can delete packages but UShareSoft does not guarantee that your OS profile will be functional.
-	
 	8. Click ``Save``.
 
 Editing Custom OS Profiles

@@ -14,9 +14,10 @@ Setting quotas allows you to limit the user's access to UForge based on one (or 
 	* diskusage in bytes (includes storage of mysoftware uploads, bootscripts, image generations, scans)
 	* number of scans for migration (includes initial scan and incremental scans)
 
-.. note: You can set the size of the Scan Overlay. This is done not through the CLI but using the uforge.conf file.  This is described in Setting the Overlay Limit.
+.. note:: You can set the size of the Scan Overlay. This is done not through the CLI but using the uforge.conf file.  This is described in Setting the Overlay Limit.
 
 You can set the quotas to refresh once a month using the argument ``--frequency``. You can set the frequency to: 
+
 	* monthly: the quota counter will be reset every month. The day of the reset is based on the date of the user creation (and not the date when the limit is set). 
 	* none: once the quota is reached it will not be reset automatically (it can however be increased manually).
 
@@ -27,7 +28,7 @@ You can see the quotas set for a given user as follows::
 
 	uforge user quota list --user $ADMIN --account <username> --password $PASS
 
-In the example above, the argument --user is the account of the administrator. The argument --account is the  user name of the account you want to view the quotas for.
+In the example above, the argument ``--user`` is the account of the administrator. The argument ``--account`` is the  user name of the account you want to view the quotas for.
 
 Typically, when no limits are set, the results should be:
 
@@ -46,6 +47,8 @@ Typically, when no limits are set, the results should be:
 	+------------------+--------------+------------+------------+-------------------------------+
 	Found 4 formats
 
+.. _set-quota-appliance:
+
 Setting a Quota for Appliance
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -60,6 +63,8 @@ For example to set the quota of appliances to 10 per month::
 
 In the example above, the argument --user is the account of the administrator. The argument --account is the  user name of the account you want to view the quotas for.
 
+.. _set-quota-image:
+
 Setting a Quota for Image Generations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -71,6 +76,8 @@ The option ``--limit`` determines the quota.
 For example to set the quota of images a user can generate to 10 per month::
 
 	uforge user quota modify --user $ADMIN --password $PASS --account kermit --type generation --limit 10 --frequency monthly
+
+.. _set-quota-scan:
 
 Setting a Quota for Migration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -84,6 +91,8 @@ For example to set the number of scans the user can run to 5 per month::
 
 	uforge user quota modify --user $ADMIN --password $PASS --account kermit --type scan --limit 5 --frequency monthly
 
+.. _set-quota-overlay:
+
 Setting the Overlay Limit
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -95,13 +104,15 @@ For example, to set the limit de 10G (10 x 1024 x 1024 x 1024)::
 
 	UFORGE_SCAN_OVERLAY_MAX_SIZE=10737418240
 
+.. _set-quota-size:
+
 Setting a Quota for Disk Usage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can set a limit to the disk space a user can use. Disk space usage includes: mysoftware uploads, bootscripts, images generations, scans etc.
 
-The option --type must be set to diskusage
-The option --limit determines the quota in bytes. For disk usage, the quota is expressed in bytes. 
+The option ``--type`` must be set to diskusage
+The option ``--limit`` determines the quota in bytes. For disk usage, the quota is expressed in bytes. 
 For example to set the disk space quota a user can use to 10Gb per month::
 
 	uforge user quota modify --user $ADMIN --account user --type diskusage --limit 10737418240 --password $PASS
@@ -122,6 +133,8 @@ The results should be:
 	| scan             |            0 |  unlimited |            | -                             |
 	+------------------+--------------+------------+------------+-------------------------------+
 	Found 4 formats
+
+.. _reset-quota:
 
 Resetting Quotas
 ~~~~~~~~~~~~~~~~

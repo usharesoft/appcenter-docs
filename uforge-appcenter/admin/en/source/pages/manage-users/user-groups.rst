@@ -18,8 +18,8 @@ In the example above, the argument ``--user`` is the account of the administrato
 Adding Users to a Group
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-To add users to a group, use the command uforge usergrp user add.
-Note the users you want to add must already exist on UForge. To create a user, see Creating User Accounts. 
+To add users to a group, use the command ``uforge usergrp user add``.
+Note the users you want to add must already exist on UForge. To create a user, see :ref:`create-user`. 
 
 For example, run::
 
@@ -31,7 +31,7 @@ In the example above, the argument ``--user`` is the account of the administrato
 Listing User Groups
 ~~~~~~~~~~~~~~~~~~~
 
-To list the groups which a given user is part of, use the command uforge usergrp list::
+To list the groups which a given user is part of, use the command ``uforge usergrp list``::
 
 	uforge usergrp list --user $ADMIN --password $PASS
 

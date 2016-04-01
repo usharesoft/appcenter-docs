@@ -41,13 +41,13 @@ If you want to allow a user to login to UForge as another user, you must grant t
 	* add the entitlement to an existing role (note this will give supervisor rights to ALL the users with that role)
 	* create a new role with the supervisor access. 
 
-.. warning: Users with Supervisor Access will be able to log in as ANY of the users in the organization without entering a password. This right should be limited to support or managed services. Users with Supervisor Role needs to respect the privacy of the user data, according to current legislation.
+.. warning:: Users with Supervisor Access will be able to log in as ANY of the users in the organization without entering a password. This right should be limited to support or managed services. Users with Supervisor Role needs to respect the privacy of the user data, according to current legislation.
 
-Therefore, it is probably safer to create a new "supervisor” role and add the supervisor rights, to limit the number of users that can access all the user accounts in the organization. 
+It is probably safer to create a new "supervisor” role and add the supervisor rights, to limit the number of users that can access all the user accounts in the organization. 
 
-	1. To create a new role, refer to Creating and Updating User Roles. 
+	1. To create a new role, refer to :ref:`create-roles`. 
 
-	2. Add this new supervisor role to the user who will be acting as “supervisor”; see Adding a Role to a User.
+	2. Add this new supervisor role to the user who will be acting as “supervisor”; see :ref:`add-roles`.
 	3. If the user is not already an administrator, you will need to promote the user as an administrator of the organization for which supervisor rights are assigned::
 
 		uforge user admin promote --account kermit --org MyOrg -u $ADMIN -p $PASS 

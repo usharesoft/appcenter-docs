@@ -14,3 +14,5 @@ In order to publish a machine image to a cloud environment, you must already hav
 	5. Click ``publish``.
 
 	.. image:: /images/appliance-publish-image.jpg
+
+.. note:: Publishing an image to Amazon will launch an instance and therefore will be billed to the user account. Note that only full Azure accounts can be used. 

@@ -18,7 +18,7 @@ You can define the following as part of the install profile:
 * ``Licenses``: default is “accept licenses during installation”
 * ``Time Zone``: default is “set automatically to London”
 * ``Welcome Message``
-* ``Services``: Firewall is set to Off by default. This parameter allows you to activate or deactivate the firewall present in the filesystem when launching the appliance (regardless of whether the firewall is iptables or other).
+* ``Services``: Firewall is set to "Off" by default. This parameter allows you to activate or deactivate the firewall present in the filesystem when launching the appliance (regardless of whether the firewall is iptables or other).
 
 .. _appliance-install-profile-users-groups:
 
@@ -53,7 +53,7 @@ To add a group to an appliance install profile:
 	3. Select ``Users and Groups``.
 	4. Click on ``add`` next to Group table at the bottom. The ``Create Group`` page will be displayed.
 
-	.. image :: /images/install-profile-create-group.jpg
+	.. image:: /images/install-profile-create-group.jpg
 
 	5. Enter a group name.
 	6. Check if you want this group to be a system group.
@@ -85,7 +85,7 @@ To set advanced partitioning for an appliance template:
 	2. From the ``Stack`` page, click on ``Install Profile`` in the toolbox.
 	3. Select ``Partitioning``, then ``Advanced Partitioning``.
 
-	.. note: In order to view the information more easily, you can click on the enlarge button in the top right. This opens a separate window where you will see all the advanced partitioning.
+	.. note:: In order to view the information more easily, you can click on the enlarge button in the top right. This opens a separate window where you will see all the advanced partitioning.
 
 	4. Advanced partitioning works sequentially, from top to bottom. The three sections offered by the UI, which are ``Disks``, ``Logical Groups``, and ``Logical Volumes`` should be filled in order, sequentially:
 
@@ -95,7 +95,7 @@ To set advanced partitioning for an appliance template:
 
 	5. Click on the arrow in ``Disks`` next to sda. You will see the default disks.
 
-	.. image: /images/install-profile-partitioning-disks.jpg
+	.. image:: /images/install-profile-partitioning-disks.jpg
 
 	6. Delete the default ``linux swap`` partition by clicking the x at the end of the line with ``linux-swap``.
 	7. Click on the size of the ``MSDOS`` partition to set it to ``20000``.
@@ -105,7 +105,7 @@ To set advanced partitioning for an appliance template:
 	11. In the ``Logical Groups`` section, click on the + sign and set the name of the logical group. For this example: ``ROOTVG``.
 	12. Next to the newly created volume group, click on the + sign to create a new volume extent. A pop-up window will appear proposing a ``sda/2`` physical extend with size automatically set to ``18000 MB``. Click ``ok``.
 
-	.. image: /images/install-profile-partitioning-enlarge.jpg
+	.. image:: /images/install-profile-partitioning-enlarge.jpg
 
 	13. Create the logical volumes one by one, or create them all at once and then edit the respective specifications. For each logical volume to create, click on the + sign in the ``Logical Volumes`` section. For our example, you will need seven logical volumes.
 
@@ -134,7 +134,7 @@ You can set an advanced partioning table for a Windows based appliance template.
 	6. Check the box in the ``Grow`` column if you want the partition to be growable.
 	7. Click ``save``.
 
-	.. image: /images/install-profile-partitioning-windows.jpg
+	.. image:: /images/install-profile-partitioning-windows.jpg
 
 
 

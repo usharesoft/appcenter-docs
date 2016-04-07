@@ -9,8 +9,8 @@ When you create your appliance, you can include boot scripts to configure the ap
 
 .. _appliance-configuration-bootscripts:
 
-Adding Boot Script
-~~~~~~~~~~~~~~~~~~
+Adding a Boot Script
+~~~~~~~~~~~~~~~~~~~~
 
 You can add boot scripts that will be run either the first time the appliance is booted or every time the machine or virtual machine is started. The boot scripts will be run once all the software and appliance packages are installed, prior to launching the machine. The scripts are run in numeric and alphabetical order. The boot scripts will be executed as root.
 
@@ -45,8 +45,8 @@ If you are uploading an existing boot script:
 
 .. _appliance-configuration-studio:
 
-Adding an UForge Studio Package
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Adding a UForge Studio Package
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 UForge Studio allows you to fully automate the post-installation configuration of multi-tier software solutions. You can use Studio to model your configuration scenarios, then include these packages directly into your appliances, making them self-deployable out of the box.
 

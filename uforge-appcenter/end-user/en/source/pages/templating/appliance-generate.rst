@@ -26,7 +26,6 @@ Once the generation is complete, you can download the image locally, or for cert
 You will note that a package uforge-install-config is injected in the generated image. This file is responsible for: 
 
 	1. launching the dialog for the install profile configurations which are not automatic (keyboard, root password, licences, time zone, static IP)
-	
 	2. executing the installation bootscript of the template
 	If the template is configured to be fully automatic in the Install Profile and has no bootscript that is supposed to run at every boot, the uforge-install-config package and associated /etc/UShareSoft directory can be removed safely.
 

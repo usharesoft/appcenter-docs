@@ -5,7 +5,7 @@
 Cloning an Appliance Template
 -----------------------------
 
-Once you have created an appliance, you can clone it.  This clones all the meta-data of the original appliance template.
+Once you have created an appliance, you can clone it. This clones all the meta-data of the original appliance template.
 
 .. note:: Your clone will not include any machine image information that were generated or published for the original.
 

@@ -63,9 +63,12 @@ To add a group to an appliance install profile:
 .. _appliance-install-profile-partitioning:
 
 Configuring Advanced Partitioning
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------
 
-You can configure advanced partitioning as part of your appliance template in the Install Profile. This section is intended for Linux appliances. For Windows advanced partitioning see Creating a Windows Appliance.
+You can configure advanced partitioning as part of your appliance template in the Install Profile. The elements you can configure will depend if your template is Linux or Windows based. 
+
+Advanced Partitioning for Linux
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following example assumes that you want to build the following partitions, with a virtual hard drive of 20 GB.::
 

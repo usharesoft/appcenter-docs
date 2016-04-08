@@ -5,7 +5,7 @@
 Generating a Machine Image
 --------------------------
 
-Once an appliance template has been created, you can generate a machine image that packages the stack to run on a particualr virtual, cloud or physical environment.
+Once an appliance template has been created, you can generate a machine image that packages the stack to run on a particular virtual, cloud or physical environment.
 
 To generate a machine image:
 	1. Go to the ``VM Builder`` tab.
@@ -27,6 +27,7 @@ You will note that a package uforge-install-config is injected in the generated 
 
 	1. launching the dialog for the install profile configurations which are not automatic (keyboard, root password, licences, time zone, static IP)
 	2. executing the installation bootscript of the template
+
 	If the template is configured to be fully automatic in the Install Profile and has no bootscript that is supposed to run at every boot, the uforge-install-config package and associated /etc/UShareSoft directory can be removed safely.
 
 However, it is preferable to leave this file.

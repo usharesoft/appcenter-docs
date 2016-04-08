@@ -5,11 +5,11 @@
 Sharing an Appliance Template to the Marketplace
 ------------------------------------------------
 
-Once an appliance template is created in your ``Appliance Library``, you can share it with other users in the organization by publishing it to the Marketplace. You can only share to the Marketplace if you have been granted the rights to share appliances. 
+Once an appliance template is created in your ``Appliance Library``, you can share it with other users in the organization by publishing it to the Marketplace. You can only share to the Marketplace if you have been granted the rights to share appliances (check with your UForge administrator). 
 
 Once you have published the appliance to the Marketplace, other users can click on it, view the details of the appliance template, generate an image, or import it to their private appliance library.
 
-If you want to add images for immediate download from the Marketplace, you must generate the images first. See Generating an Image from an Appliance. 
+If you want to add images for immediate download from the Marketplace, you must generate the images first. See :ref:`appliance-generate-machine-image`. 
 
 If you want to share an image in Cloud format to the Marketplace, you MUST compress the image when generating.
 

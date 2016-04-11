@@ -23,10 +23,11 @@ To use the UForge AppCenter Java API, you need the jar files. You can either dow
 	        <layout>default</layout>
 	</repository>
 
-To use the API, you need to have:
-* The base URL of the UForge AppCenter platform you will be communicating with, for example: ``https://factory.usharesoft.com:443``
-* An account on the UForge AppCenter platform you will be communicating with
-* An API key pair (secret and public) for the account (or use Basic Authentication).
+To use the API, you must have:
+
+	* The base URL of the UForge AppCenter platform you will be communicating with, for example: ``https://factory.usharesoft.com:443``
+	* An account on the UForge AppCenter platform you will be communicating with
+	* An API key pair (secret and public) for the account (or use Basic Authentication)
 
 Communicating with UForge
 -------------------------
@@ -57,7 +58,7 @@ Creating an Appliance Template
 
 An Appliance Template contains the model of the software stack. The model includes all the operating system packages, middleware and application software for generating an image that can be provisioned on a virtual or cloud platform. To create an appliance template, you need to decide which operating system to contruct the template from, as well as the name and version.
 
-When creating an appliance or choosing an operating system, you must choose the organization where to create the appliance or to search an operating system. The user must be a member of the orgnizaton to have authorization to search the organization resources. By default a user will be a member of the of at least one organization.
+When creating an appliance or choosing an operating system, you must choose the organization where to create the appliance or to search an operating system. The user must be a member of the orgnizaton to have authorization to search the organization resources. By default a user will be a member of at least one organization.
 
 The following code provides an example of constructing an appliance template.
 
@@ -150,7 +151,7 @@ Extra packages can be added to the appliance template´s os profile.
 Generating a Machine Image
 --------------------------
 
-Once you are happy with the contents of an appliance template, you can then generate a machine image to practically any hypervizor or cloud environment. The following code generates a CloudStack VHD image (for Xen hypervizor). For some image types you can select the disk size and the RAM of the virtual machine to be created. These can be updated once provisioned in the cloud environment. If you have set advanced partitioning in the installation profile, then this will be used instead for the disk size. The generation is done asynchronously, by checking the generation status gives the progress of this generation.
+Once you are happy with the contents of an appliance template, you can then generate a machine image to practically any hypervizor or cloud environment. The following code generates a CloudStack VHD image (for Xen hypervizor). For some image types you can select the disk size and the RAM of the virtual machine to be created. These can be updated once provisioned in the cloud environment. If you have set advanced partitioning in the installation profile, then this will be used instead for the disk size. The generation is done asynchronously; the generation status gives the progress of this generation.
 
 .. code-block:: java
 
@@ -260,7 +261,7 @@ Each UForge organization provides a Project Catalog where commonly used software
 Uploading a Software Component
 ------------------------------
 
-You can upload your own software components to a private software library ("My Software Library"). This software can then be added to any of your appliance templates. This provides a mechanism to compliment the Project Catalog. The following code shows how to upload files, attach a license and then add it to an appliance template.
+You can upload your own software components to a private software library (``My Software Library``). This software can then be added to any of your appliance templates. This provides a mechanism to compliment the Project Catalog. The following code shows how to upload files, attach a license and then add it to an appliance template.
 
 .. code-block:: java
 

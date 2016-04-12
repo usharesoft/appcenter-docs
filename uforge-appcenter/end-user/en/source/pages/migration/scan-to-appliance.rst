@@ -7,6 +7,8 @@ Create an Appliance Template
 
 You can create an appliance template from a scan. Once you create an appliance template packages and files that are known will be listed under ``OS profile``, while "unknown" packages and files will be listed under ``MySoftware``.
 
+.. warning:: This is only supported for Linux based source instances.
+
 To create an appliance template from a scan:
 
 From the Migration tab:

@@ -16,5 +16,6 @@ An appliance template is a meta-data description of an entire software stack.  T
    appliance-os-updates
    appliance-software
    appliance-installprofile
+   appliance-advanced-partition
    appliance-config
    appliance-clone

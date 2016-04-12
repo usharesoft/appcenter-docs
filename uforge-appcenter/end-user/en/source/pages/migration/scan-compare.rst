@@ -7,6 +7,8 @@ Comparing Scans
 
 As scans are just meta-data, you can compare two scans to determine their differences.  This can be used to detect the differences between two live machines (for example between staging and production) or to detect changes of the live machine over time.
 
+.. warning:: This is only supported for Linux based source instances.
+
 From the ``Migration`` tab:
 
 	1. Click on the ``compare`` button at the top right hand side.

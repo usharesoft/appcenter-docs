@@ -25,7 +25,7 @@ Then run the command::
 
 	$ python get-pip.py
 
-For more information on installing pip, please refer to the official pip documentation:
+For more information on installing pip, refer to the official pip documentation:
 http://www.pip-installer.org/en/latest/installing.html
 
 Installing UForge Python API

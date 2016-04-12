@@ -5,43 +5,7 @@
 Using the REST API
 ==================
 
-The Basics
-----------
-
-UForge AppCenter is a multi-tenant platform which can serve multiple users.  All the resources of the platform is held within an Organization.  The organization contains:
-
-* One or more users
-* One or more operating systems
-* A project catalog containing software components that can be used by its users
-* One or more formats availabe to generate images
-
-.. image:: /images/uforge-organization.jpg
-
-Each user on the platform has:
-
-* an "Appliance Library" containing all the Appliances created by the User using UForge
-* a "Software Library" containing all the user´s software uploaded that can be used during the creation of an Appliance
-* a list of one or more cloud accounts to allow the User to publish and register generated images to various cloud and virtualization platforms
-
-.. image:: /images/user-private-space.jpg
-
-An Appliance is the object holding the image template. It consists of five layers, namely:
-
-* an Install Profile (mandatory) - specific information for the first time the image boots
-* an OS Profile (mandatory) - a list of operating system packages. Each operating system within the organization provides one or more standard OS Profiles to choose from when creating the OS profile of the appliance
-* Projects (optional) - a list of project software components chosen from the organization´s Project Catalog
-* My Software (optional) - a list of software components chosen from the user´s private "Software Library"
-* Configuration (optional) - configuration information including boot scripts and/or other software components to manage the image after provisioning
-
-.. image:: /images/appliance-layers.png
-
-Depending on the user´s roles and privileges, the user may only have access to a restricted number of operating systems, projects and formats the Organization has to offer.
-
-Using an appliance, the user can generate images in different formats. For some formats, the user can publish and register images to a target cloud or virtualization platform. Each appliance stores meta-data regarding each image generated and published.
-
-
-UForge API is a RESTful resource
---------------------------------
+UForge API is a RESTful resource.
 
 The UForge API follows the design principles of Representational State Transfer (REST). UForge platform provides a set of resources (the API), each of which is referenced with a global identifier (URI). In order to manipulate these resources, clients communicate via the standard HTTP(S) protocol and exchange representations of these resources in a specific format. The documentation notes which formats are available for each method. The API presently supports XML and JSON. To get the results in the format of your choice, the ``Accept-Type`` header attribute is used in the request.
 

@@ -19,7 +19,7 @@ To add an OS profile to your appliance:
 	1. Double click on the appliance you want to edit.
 	2. Go to the ``Stack`` page.
 	3. Click on ``OS Profile`` in the toolbox.
-	4. From the drop-down menu, select the ``OS profile`` template you wish to use.  The operating system packages are added automatically and your appliance revision number is increased.
+	4. From the drop-down menu, select the ``OS profile`` template you wish to use. The operating system packages are added automatically and your appliance revision number is increased.
 
 .. image:: /images/os-profile.jpg
 
@@ -28,7 +28,7 @@ To add an OS profile to your appliance:
 Adding Packages to the OS Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You may want to add packages that are provided as part of the operating system distribution.  To get a list of all the packages that correspond to your search criteria:
+You may want to add packages that are provided as part of the operating system distribution. To get a list of all the packages that correspond to your search criteria:
 	
 	1. Select the appliance to modify and go to the ``Stack`` page.
 	2. Click on ``OS Profile`` in the toolbox.
@@ -46,4 +46,4 @@ You may want to add packages that are provided as part of the operating system d
 	8. Select the packages you want to add.
 	9. Click the ``save`` button to add the packages to the OS profile.
 
-Once you have added packages to an OS profile, any available updates are tracked by the platform.  For more information on package updates, see :ref: `appliance-pkg-updates`.
+Once you have added packages to an OS profile, any available updates are tracked by the platform. For more information on package updates, see :ref:`appliance-pkg-updates`.

@@ -24,13 +24,13 @@ To sign in, go to the UForgeNow sign in page:
 
 The UForgeNow portal is layed out in with the following main tabs:
 
-* ``Dashboard``. It shows statistics on your UForge usage.
-* ``Marketplace``: This page is shown by default when you login. This is the area where you can see and share appliances with other users in your organization.
-* ``VM Builder``: This is where your appliances are created and listed. You also go to this page to add custom software, update packages in appliances, and create images, among other things.
-* ``Collaboration``: This is a private area where you can share appliances with other users who are part of your workspace. These users must be invited and join your workspace. They can be part of your organization or part or another organization.
-* ``Migration``: This is where you can launch a scan of a live system, view the results, or compare scans.
-* ``My Account``: This is your UForge account information.
-* ``Administration``: (only for administrators of platform).  Provides administration tasks including operating system and formats management.
+	* ``Dashboard``. It shows statistics on your UForge usage.
+	* ``Marketplace``: This page is shown by default when you login. This is the area where you can see and share appliances with other users in your organization.
+	* ``VM Builder``: This is where your appliances are created and listed. You also go to this page to add custom software, update packages in appliances, and create images, among other things.
+	* ``Collaboration``: This is a private area where you can share appliances with other users who are part of your workspace. These users must be invited and join your workspace. They can be part of your organization or part or another organization.
+	* ``Migration``: This is where you can launch a scan of a live system, view the results, or compare scans.
+	* ``My Account``: This is your UForge account information.
+	* ``Administration``: (only for administrators of platform).  Provides administration tasks including operating system and formats management.
 
 .. warning:: Depending upon your access rights one or more of these tabs may not be visible.
 
@@ -48,11 +48,11 @@ Organization
 
 UForge AppCenter is a multi-tenant platform which can serve multiple users.  All the resources of the platform is held within an Organization.  The organization contains:
 
-* One or more users
-* One or more operating systems
-* A project catalog containing software components that can be used by its users
-* One or more formats available to generate images
-* A "Marketplace" where users can publicly share their Appliances with other users in the organization
+	* One or more users
+	* One or more operating systems
+	* A project catalog containing software components that can be used by its users
+	* One or more formats available to generate images
+	* A "Marketplace" where users can publicly share their Appliances with other users in the organization
 
 .. image:: /images/uforge-organization.jpg
 
@@ -63,9 +63,9 @@ User
 
 Each user on the platform has:
 
-* an **Appliance Library** containing all the appliance templates created by the user
-* a **Software Library** (My Software) containing all the custom software uploaded by the user, which can be used in one ore more appliance templates
-* a list of one or more **Cloud Accounts** to allow the user to publish and register generated machine images to various cloud and virtualization platforms
+	* an **Appliance Library** containing all the appliance templates created by the user
+	* a **Software Library** (My Software) containing all the custom software uploaded by the user, which can be used in one ore more appliance templates
+	* a list of one or more **Cloud Accounts** to allow the user to publish and register generated machine images to various cloud and virtualization platforms
 
 .. image:: /images/user-private-space.jpg
 
@@ -81,11 +81,11 @@ Appliance Templates
 
 An Appliance Template is meta-data describing a software stack.   It consists of five layers, namely:
 
-* an ``Install Profile`` (mandatory) - specific information for the first time the image boots
-* an ``OS Profile`` (mandatory) - a list of operating system packages. Each operating system within the organization provides one or more standard OS profiles to choose from when creating the OS Profile of the appliance template. It is also possible to create custom OS profiles.
-* ``Projects`` (optional) - a list of Project software components chosen from the Organization´s Project Catalog
-* ``My Software`` (optional) - a list of software components chosen from the User´s private "Software Library"
-* ``Configuration`` (optional) - configuration information including boot scripts and/or other software components to manage the image after provisioning
+	* an ``Install Profile`` (mandatory) - specific information for the first time the image boots
+	* an ``OS Profile`` (mandatory) - a list of operating system packages. Each operating system within the organization provides one or more standard OS profiles to choose from when creating the OS Profile of the appliance template. It is also possible to create custom OS profiles.
+	* ``Projects`` (optional) - a list of Project software components chosen from the Organization´s Project Catalog
+	* ``My Software`` (optional) - a list of software components chosen from the User´s private "Software Library"
+	* ``Configuration`` (optional) - configuration information including boot scripts and/or other software components to manage the image after provisioning
 
 Depending on the user´s roles and privileges, the user may only have access to a restricted number of operating systems, projects and image formats the organization has to offer.
 
@@ -128,28 +128,29 @@ The following is a list of supported OSes that users can use as the guest operat
 +------------------+------------------------------------------+------------------------------------------+
 | Open SUSE        | 11.x, 12.x (32bit and 64bit)             | 11.x, 12.x (32bit and 64bit)             |
 +------------------+------------------------------------------+------------------------------------------+
-| Oracle Linux*    | 5.x, 6.x, 7.x (32bit and 64bit)          | 5.1, 6.x, 7.x (32bit and 64bit)          |
+| Oracle Linux*    | 5.x, 6.x, 7.x (32bit and 64bit)          | 5.2+, 6.x, 7.x (32bit and 64bit)         |
 +------------------+------------------------------------------+------------------------------------------+
 | Pidora           | 18 to 21                                 | Not Supported                            |
 +------------------+------------------------------------------+------------------------------------------+
 | Raspbian         | 7                                        | Not Supported                            |
 +------------------+------------------------------------------+------------------------------------------+
-| RedHat*          | 4.6, 5.x, 6.x, 7.x (32bit and 64bit)     | 5.2+, 6.x, 7.x (32bit and 64bit)         |
+| Red Hat          |                                          |                                          |
+| Enterprise Linux*| 5.x, 6.x, 7.x (32bit and 64bit)          | 5.2+, 6.x, 7.x (32bit and 64bit)         |
 +------------------+------------------------------------------+------------------------------------------+
 | Scientific Linux | 5.x, 6.x, 7.x (32bit and 64bit)          | 5.2+, 6.x, 7.x (32bit and 64bit)         |
 +------------------+------------------------------------------+------------------------------------------+
 | Ubuntu           | 9.x, 10.x, 11.x, 12, 12.04, 13.x, 14.x,  | 9.x, 10.x, 11.x, 12, 12.04, 13.x, 14.x,  |
-|                  | 15, 15.04 (32bit and 64bit)              | 15, 15.04 (32bit and 64bit)              |
+|                  | 15.04 (32bit and 64bit)                  | 15.04 (32bit and 64bit)                  |
 +------------------+------------------------------------------+------------------------------------------+
-| Windows Server   | Windows i386, Windows x86_64,            | 2008R2, 2012, 2012R2                     |
-|                  | 2008R2, 2012, 2012R2                     |                                          |
+| Microsoft        | 2008R2, 2012, 2012R2                     | 2008R2, 2012, 2012R2                     |
+| Windows Server   |                                          |                                          |
 +------------------+------------------------------------------+------------------------------------------+
-| Windows          | Windows i386 Windows x86_64              | Windows i386 Windows x86_64              |
-+------------------+------------------------------------------+------------------------------------------+
+
+.. note:: For Oracle Linux and Red Hat Enterprise Linux you must provide the ISO images or access to a repository.
 
 The following machine image formats are supported:
 
-* Phyiscal: ISO
-* Virtual: KVM, Xen, XenServer, Hyper-V, VMware ESXi, VHD, QCOW2, Raw, VirtualBox, VMware Server/Fusion, Vagrant
-* Cloud: AWS, Microsoft Azure, GCE, OpenStack, VMware vSphere vCenter, VMware VCD, VMware VCAC, CloudStack, Flexiant, Eucalyptus, Nimbula
+* Physical: ISO
+* Virtual: Hyper-V, KVM, LXC, OVF, QCOW2, Raw, tar.gz, Vagrant Base Box, VHD, VirtualBox, VMWare vCenter, VMware Server, Vagrant, Xen, Citrix XenServer
+* Cloud: Abiquo, Amazon AWS, CloudStack, Cloudwatt, Eucalyptus, Flexiant, Google Compute Engine, Microsoft Azure, Nimbula, OpenStack, SUSE Cloud, VMware vCloud Director
 

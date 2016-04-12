@@ -7,7 +7,7 @@ Viewing the Details of Scan
 
 You can view the details of the scan report that will display the packages that are present as well as the filesystem detecting on running source instance.
 
-.. warning:: This is only supported for Linux based source instances
+.. warning:: This is only supported for Linux based source instances.
 
 To view the details of a scan:
 

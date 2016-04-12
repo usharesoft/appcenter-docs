@@ -1,22 +1,14 @@
 .. Copyright (c) 2007-2016 UShareSoft, All rights reserved
 
-.. _admin-architecture-considerations:
+.. _manage-services:
 
-Architecture Considerations
-===========================
+Manage Services
+===============
 
-blah blah blah
+The following sections cover information regarding managing the UForge services/.
 
-.. _admin-subtitle:
+.. toctree::
+   :titlesonly:
 
-SubTitle
---------
-
-blah blah blah
-
-
-Sub-Sub Title
-~~~~~~~~~~~~~
-
-blah blah blah
-
+   start-webservice
+   start-database

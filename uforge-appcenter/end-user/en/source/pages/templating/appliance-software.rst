@@ -7,7 +7,7 @@ Adding Custom Software Components
 
 There are two ways to add 3rd party software components or your own software to an appliance template.
 
-The first way is through the ``Project Catalog``.  This catalog is public to all the users on UForge and is maintained by the privileged users and adminstrators.  
+The first way is through the ``Project Catalog``.  This catalog is public to all the users on UForge and is maintained by the privileged users and administrators.  
 
 If the catalog does not contain the software component you are looking for, then you can upload the software into the ``Software`` library.  This is your own private software library, allowing you to upload any software into UForge and be able to add it to any of your appliance templates.
 

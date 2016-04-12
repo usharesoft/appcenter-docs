@@ -1,22 +1,21 @@
 .. Copyright (c) 2007-2016 UShareSoft, All rights reserved
 
-.. _admin-architecture-considerations:
+UForge Installation
+===================
 
-Architecture Considerations
-===========================
+To install a fully functioning UForge platform, you must install and configure the UForge services as well as populate the UForge Repository with the operating systems you wish to build your server templates from.  
 
-blah blah blah
+This section covers:
 
-.. _admin-subtitle:
+.. toctree::
+	:titlesonly:
 
-SubTitle
---------
-
-blah blah blah
-
-
-Sub-Sub Title
-~~~~~~~~~~~~~
-
-blah blah blah
-
+	install-overview
+	repository-setup
+	repository-shared-storage
+	repository-local-storage
+	install-ISO
+	install-VM
+	configure-uforge
+	test-deployment
+	config-ssl-cert

@@ -34,7 +34,7 @@ To add a comment in a workspace, do the following:
 	4. Enter your comment in the square.
 	5. Click ``post``.
 
-You can also post comments on a specific appliance that is shared in the workspace. For more information, see Adding Comments to a Shared Appliance.
+You can also post comments on a specific appliance that is shared in the workspace. For more information, see :ref:`workspace-appliance-comments`.
 
 
 

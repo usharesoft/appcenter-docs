@@ -11,18 +11,20 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   pages/architecture/intro
-   pages/architecture/storage-sizing
-   pages/architecture/example
-   
+   pages/architecture/overview
    pages/install/overview
-   pages/config/overview
-   pages/upgrade/overview
+   
+   pages/config/further-config-overview
+
+   pages/upgrade/upgrade-overview
+   pages/config/update-java
+   
    pages/backup/overview
    
    pages/manage-services/overview
    pages/manage-resources/overview
-   pages/rbac/overview
    pages/manage-users/overview
+   
+   pages/monitoring/overview
 
    pages/rebranding/overview

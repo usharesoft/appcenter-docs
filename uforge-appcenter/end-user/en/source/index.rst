@@ -1,7 +1,7 @@
 .. Copyright (c) 2007-2016 UShareSoft, All rights reserved
 
-Welcome to the UForge AppCenter Documentation
-=============================================
+Welcome to the UForge AppCenter User Documentation
+==================================================
 
 Note: There are multiple options for reading this documentation - click on the link at the lower left hand corner for these options.
 

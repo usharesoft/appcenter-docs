@@ -14,3 +14,5 @@ In order to publish a machine image to a cloud environment, you must already hav
 	5. Click ``publish``.
 
 	.. image:: /images/appliance-publish-image.jpg
+
+.. note:: Publishing an image to Amazon will launch an instance and therefore will be billed to the user account. Azure trial accounts are not supported for publishing images from UForge. Only full Azure accounts can be used. 

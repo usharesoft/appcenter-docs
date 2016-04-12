@@ -5,7 +5,7 @@
 Hammr Command Line Tool
 =======================
 
-UForge AppCenter provides an open source command-line tool, called ``hammr`` to allow users to creating machine images for different environments from a single configuration file. 
+UForge AppCenter provides an open source command-line tool called ``hammr`` to allow users to create machine images for different environments from a single configuration file. 
 
 .. image:: /images/hammr-splash.png
 

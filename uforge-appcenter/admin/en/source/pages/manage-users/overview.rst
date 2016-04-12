@@ -1,22 +1,20 @@
 .. Copyright (c) 2007-2016 UShareSoft, All rights reserved
 
-.. _admin-architecture-considerations:
+.. _users-overview:
 
-Architecture Considerations
-===========================
+Manage Users
+============
 
-blah blah blah
+The following sections cover information regarding managing the UForge users. Managing users is intrinsically linked to role based access control. Please make sure to read the information on role-based access control in :ref:`rbac-overview`.
 
-.. _admin-subtitle:
+.. toctree::
+   :titlesonly:
 
-SubTitle
---------
-
-blah blah blah
-
-
-Sub-Sub Title
-~~~~~~~~~~~~~
-
-blah blah blah
-
+   manage-users
+   user-groups
+   rbac/rbac-overview
+   admin-rights
+   set-quotas
+   marketplace-share
+   api-access
+ 

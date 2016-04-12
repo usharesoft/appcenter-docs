@@ -1,22 +1,18 @@
 .. Copyright (c) 2007-2016 UShareSoft, All rights reserved
 
-.. _admin-architecture-considerations:
+.. _manage-resources:
 
-Architecture Considerations
-===========================
+Manage Resources
+================
 
-blah blah blah
+The following sections cover information regarding managing the UForge resources.
 
-.. _admin-subtitle:
+.. toctree::
+   :titlesonly:
 
-SubTitle
---------
-
-blah blah blah
-
-
-Sub-Sub Title
-~~~~~~~~~~~~~
-
-blah blah blah
-
+   manage-os
+   create-custom-os
+   windows
+   manage-project-catalog
+   manage-categories
+   manage-milestone

@@ -8,10 +8,10 @@ Migration Process In Detail
 The entire migration process has 5 main steps.  These are:
 
 	1. Scan the source machine
-	2. Report the scan results to UForge AppCenter, where the platform analyzes the report.  The results of this analysis are sent back to the source machine
-	3. The results are used to build an "overlay" archive, this overlay is sent back to the platform.
-	4. The overlay archive is uncompressed, and the information is stored in the database as a ``Scan``
-	5. The scan can be used to generate machine images (black box migration) or imported to create a new appliance template (white box migration).  The generated machine image can then be published to the target environment and instances can be provisioned.
+	2. Report the scan results to UForge AppCenter, where the platform analyzes the report. The results of this analysis are sent back to the source machine.
+	3. The results are used to build an "overlay" archive. This overlay is sent back to the platform.
+	4. The overlay archive is uncompressed, and the information is stored in the database as a ``Scan``.
+	5. The scan can be used to generate machine images (black box migration) or imported to create a new appliance template (white box migration). The generated machine image can then be published to the target environment and instances can be provisioned.
 
 .. _migration-process-scan-source:
 
@@ -30,11 +30,11 @@ On the scan target, the ``uforge-scan`` binary is copied and launched as root to
 Analysis of Report
 ~~~~~~~~~~~~~~~~~~
 
-A report is created by the ``uforge-scan`` binary based on all the information discovered.  This report is transferred via HTTPS to UForge AppCenter.
+A report is created by the ``uforge-scan`` binary based on all the information discovered. This report is transferred via HTTPS to UForge AppCenter.
 
-UForge AppCenter stores all the report information.  This data is then processed to know exactly the information missing by UForge AppCenter to rebuild the source machine.  The processing includes:
+UForge AppCenter stores all the report information. This data is then processed to identify what information is missing by UForge AppCenter to rebuild the source machine.  The processing includes:
 
-	* which operating system native packages UForge AppCenter does not have in its repository or in an incremental scan
+	* which operating system native packages UForge AppCenter does not have in its repository or in an incremental scan.
 	* which files from operating system native packages have been modified compared to the official native packages in the UForge AppCenter repositories.
 	* which files that are not part of any OS native packages and are not in any incremental scan of the same machine.
 
@@ -45,7 +45,7 @@ The results of this analysis are then sent via HTTPS back to the ``uforge-scan``
 Build the Overlay Archive
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The ``uforge-scan`` binary retrieves the analysis results from UForge AppCenter.  These results include a list of all the packages and files UForge requires.  The ``uforge-scan`` binary builds an overlay archive of all these packages and files.
+The ``uforge-scan`` binary retrieves the analysis results from UForge AppCenter. These results include a list of all the packages and files UForge requires.  The ``uforge-scan`` binary builds an overlay archive of all these packages and files.
 
 The overlay is all the things that are missing compared to a known state (a previous scan of a machine or the operating system native packages). This overlay is a standard tar archive. Once created, it is uploaded via HTTPS to the UForge AppCenter.
 
@@ -99,7 +99,7 @@ The process of importing:
 	3. Injects the overlay as a ``My Software`` component and is added to the appliance template.
 	4. Sets the scanned installation configuration information in the ``Install Profile``.
 
-It is then completely detached from the scan and you can do exactly the same things as with any other templates.
+It is then completely detached from the scan and you can do exactly the same things as with any other template.
 
 If you generate an image from this template, it will go through the same steps as a standard template generation:
 

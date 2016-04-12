@@ -5,7 +5,7 @@
 Managing Appliance Template Versions
 ------------------------------------
 
-If there is more than one appliance template with the same name and same publisher then only the latest version will be listed in the Marketplace.  For example, if you create two appliance emplates called "Wordpress" using your user login and modify the version, both versions will be stored in the Marketplace, however only the latest one will be displayed.
+If there is more than one appliance template with the same name and same publisher then only the latest version will be listed in the Marketplace.  For example, if you create two appliance templates called "Wordpress" using your user login and modify the version, both versions will be stored in the Marketplace, however only the latest one will be displayed.
 
 To see older versions, click on the latest version to view the details of the appliance. Then click on ``Related`` to see older versions.
 

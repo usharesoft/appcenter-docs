@@ -1,22 +1,27 @@
 .. Copyright (c) 2007-2016 UShareSoft, All rights reserved
 
-.. _admin-architecture-considerations:
+.. _rebrand-considerations:
 
-Architecture Considerations
-===========================
+Rebranding Your UForge GUI
+==========================
 
-blah blah blah
+The following sections cover information regarding rebranding elements of the UForge GUI. Most customizations are done using the config.xml file located in: /var/opt/UShareSoft/uforge-client/gwt/uforge/templates. This is a relative path.
+Once you have completed your changes, you will need to run the following command. This will stop Tomcat, integrate the changes and restart Tomcat::
 
-.. _admin-subtitle:
+	# /opt/UShareSoft/uforge-client/bin/uforge_ui_update.sh
 
-SubTitle
---------
-
-blah blah blah
+.. note:: Other than the sections indicated in this document, we recommend that you do not modify other elements of the configuration files, otherwise this may cause issues when using UForge Portal.
 
 
-Sub-Sub Title
-~~~~~~~~~~~~~
+.. toctree::
+   :titlesonly:
 
-blah blah blah
-
+   image-directory
+   custo-footer
+   custo-signin
+   custo-banner
+   custo-logo
+   restrict-usage
+   custo-css
+   custo-platform
+   custo-troubleshoot

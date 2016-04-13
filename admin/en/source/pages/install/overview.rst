@@ -18,4 +18,3 @@ This section covers:
 	install-VM
 	configure-uforge
 	test-deployment
-	config-ssl-cert

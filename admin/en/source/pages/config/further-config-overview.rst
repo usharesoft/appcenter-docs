@@ -12,6 +12,7 @@ This section assumes that you have completed the installation of your UForge pla
 
    add-compute-node
    modify-ip
+   configure-ssl-cert
    config-smtp
    config-webservice
    config-database

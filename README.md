@@ -12,9 +12,9 @@ Install [read the docs theme](https://github.com/snide/sphinx_rtd_theme):
 
     $ pip install sphinx_rtd_theme
     
-Build the docs and open them in your browser:
+Build the docs and open them in your browser.  For example for the UForge End User Guide:
 
-    $ cd documentation/uforge-appcenter/end-user/en
+    $ cd uforge-appcenter/end-user/en
     $ make html
     $ open build/html/index.html
 

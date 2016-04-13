@@ -39,3 +39,69 @@ Minimum Software Topology
 For the minimum software topology, use all services without security or fault tolerance.
 
 For each of these components we recommend the following minimal (hardware or virtual) specification:
+
++----------------+------------+------------+----------------+--------------------------------+
+| Component      | RAM        | CPU        | Hard Drive     | Comment                        |
++================+============+============+================+================================+
+| Web Front-End  | 3 GB       | 2          | 15 GB          |                                |
++----------------+------------+------------+----------------+--------------------------------+
+| Web Service    | 3 GB       | 2          | 15 GB          |                                |
++----------------+------------+------------+----------------+--------------------------------+
+| Generation     | 2 GB       | 2          | 15 GB          |                                |
+| Cluster        |            |            |                |                                |
++----------------+------------+------------+----------------+--------------------------------+
+| Compute Node   | 4 GB       | 2          | 100 GB         | If you have a good NAS/SAN you |
+|                |            |            |                | reduce the disk space to 15 GB |
+|                |            |            |                | if you map the directory       |
+|                |            |            |                | /space/REPOS with the NAS/SAN  |
++----------------+------------+------------+----------------+--------------------------------+
+| SYNCOPE        | 2 GB       | 2          | 15 GB          |                                |
+| Web Service    |            |            |                |                                |
++----------------+------------+------------+----------------+--------------------------------+
+| Database       | 4 GB       | 4          | 100 GB         | If you have a good NAS/SAN you |
+|                |            |            |                | reduce the disk space to 15 GB |
+|                |            |            |                | if you map the directory       |
+|                |            |            |                | /space/REPOS with the NAS/SAN  |
++----------------+------------+------------+----------------+--------------------------------+
+| LDAP           | 2 GB       | 2          | 15 GB          |                                |
++----------------+------------+------------+----------------+--------------------------------+
+| NAS/SAN        | 2 GB       | 2          |                |                                |
++----------------+------------+------------+----------------+--------------------------------+
+
+Security Options
+----------------
+
+To increase the security of the UForge service, you can add replication in master/slave of the database component and the LDAP component.
+
+The minimal requirement is 1 slave for the database and 1 slave for the LDAP service. Of course, you can add more slaves for each of these services.
+
+See the specification of these options:
+
++----------------+------------+------------+----------------+--------------------------------+
+| Component      | RAM        | CPU        | Hard Drive     | Comment                        |
++================+============+============+================+================================+
+| Database Slave | 2 GB       | 1          | 25 Go          | If you have a good NAS/SAN you |
+|                |            |            |                | reduce the disk space to 15 GB |
+|                |            |            |                | if you map the directory       |
+|                |            |            |                | /var/lib/mysql to the NAS/SAN  |
++----------------+------------+------------+----------------+--------------------------------+
+| LDAP Slave     | 1 GB       | 1          | 15 Go          |                                |
++----------------+------------+------------+----------------+--------------------------------+
+
+High Availability
+-----------------
+
+High Availability can be attained with the redundancy of all services. However, the database and the LDAP service have not yet been tested with the clustering mode.
+
+For the moment UShareSoft recommends using the “security options” for these services. This is a point of failure.
+
+All other services can be clustered. For clustering a service you will need a pool of load balancers (physical or virtual). 
+
++----------------+------------+------------+----------------+--------------------------------+
+| Component      | RAM        | CPU        | Hard Drive     | Comment                        |
++================+============+============+================+================================+
+| Load Balancer  | 2 GB       | 2          | 15 GB          |                                |
++----------------+------------+------------+----------------+--------------------------------+
+
+
+All other services keep the same configuration, as seen above.

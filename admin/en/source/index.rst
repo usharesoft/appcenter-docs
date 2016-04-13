@@ -1,7 +1,7 @@
 .. Copyright (c) 2007-2016 UShareSoft, All rights reserved
    
 
-Welcome to UForge AppCenter Admin Documentation
+Welcome to UForge AppCenter Admin Documentation: Master
 ===============================================
 
 This documentation is intented for Administrators of the UForge AppCenter. It covers an architecture presentation, installation instructions, as well as all the necessary steps to configure, manage and monitor your AppCenter once installed.

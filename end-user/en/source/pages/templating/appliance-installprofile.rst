@@ -12,7 +12,7 @@ You can define the following as part of the install profile:
 * ``Root User``: The root user password by default is prompted during the first boot of the machine image i.e. ``ask during installation``. However, you can pre-set a root  password. You can all enter an SSH key to allow users to login as root. If you select ``Disable root password login via SSH``, root will still be able to login from the console.
 * ``Users and Groups`` (optional): you can add operating system users and groups. See :ref:`appliance-install-profile-users-groups` for more information
 * ``Internet Settings``: default is “set automatically”
-* ``Partitioning``: default is “set automatically”. You can modify the disk and swap size for the automatic set up, ask during install, or set up ``Advanced Partitioning`` (for several disks). For more information see :ref:`appliance-install-profile-partitioning`.
+* ``Partitioning``: default is “set automatically”. You can modify the disk and swap size for the automatic set up, ask during install, or set up ``Advanced Partitioning`` (for several disks). Note that the swap size should not be set to zero. Rather, it should be deleted. For more information see :ref:`appliance-install-profile-partitioning`.
 * ``Kernel Parameters``. You can add kernel parameters by clicking add and save.
 * ``Keyboard``: default is “ask during installation”
 * ``Licenses``: default is “accept licenses during installation”

@@ -22,10 +22,9 @@ To sign in, go to the UForgeNow sign in page:
 
 	`https://uforge.usharesoft.com/signin <https://uforge.usharesoft.com/signin>`_
 
-The UForgeNow portal is layed out in with the following main tabs:
+The UForgeNow portal has the following main tabs:
 
 	* ``Dashboard``. It shows statistics on your UForge usage.
-	* ``Marketplace``: This page is shown by default when you login. This is the area where you can see and share appliances with other users in your organization.
 	* ``VM Builder``: This is where your appliances are created and listed. You also go to this page to add custom software, update packages in appliances, and create images, among other things.
 	* ``Collaboration``: This is a private area where you can share appliances with other users who are part of your workspace. These users must be invited and join your workspace. They can be part of your organization or part or another organization.
 	* ``Migration``: This is where you can launch a scan of a live system, view the results, or compare scans.
@@ -35,6 +34,8 @@ The UForgeNow portal is layed out in with the following main tabs:
 .. warning:: Depending upon your access rights one or more of these tabs may not be visible.
 
 .. image:: /images/uforge-ui-tabs.jpg
+
+Your UForge platform can be setup to interact with the UForge Marketplace. The Marketplace allows you to provide and sell products to the general public (not limited to your organization). For complete Marketplace documentation, refer to the UForge Marketplace documentation.
 
 .. _uforge-basic-concepts:
 
@@ -52,7 +53,6 @@ UForge AppCenter is a multi-tenant platform which can serve multiple users.  All
 	* One or more operating systems
 	* A project catalog containing software components that can be used by its users
 	* One or more formats available to generate images
-	* A "Marketplace" where users can publicly share their Appliances with other users in the organization
 
 .. image:: /images/uforge-organization.jpg
 
@@ -69,10 +69,6 @@ Each user on the platform has:
 
 .. image:: /images/user-private-space.jpg
 
-Users also have access to shared spaces:
-
-* **Marketplace**: a space shared with other members of the same organization, to share appliances
-* **Collaboration Workspace**: a space where users can invite the users they wish to share appliance templates with.
 
 .. _uforge-basic-concepts-appliance:
 

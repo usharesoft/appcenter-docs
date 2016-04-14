@@ -13,7 +13,6 @@ Contents:
    pages/getting-started
    pages/templating/overview
    pages/migration/overview
-   pages/marketplace/overview
    pages/collaboration/overview
    pages/myaccount/overview
    

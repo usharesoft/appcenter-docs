@@ -23,6 +23,8 @@ To create a new appliance in your private workspace:
 	6. An OS profile is mandatory. See :ref:`appliance-os-profile-new`. However, you can leave the appliance at this point and edit it later.
 	7. If you have made any modifications, click ``save``.
 
+.. note:: When you create an appliance, the packages are stored locally in the UForge cache repository. This ensures that the packages will always be available.
+
 Creating a Windows-based Appliance
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -34,11 +36,11 @@ To create a Windows Appliance:
 	4. Click ``Create``.
 	5. From the ``Stack`` page, select the OS Profile. Each version has a Core or Full release. Click ``Save``.
 
-.. note:: Once you have chosen the OS Profile, you cannot add any packages or run updates. The OS Profile is static. Once created, if you select OS Profile, you will only be able to view the details of the profile you selected.  
+		.. note:: Once you have chosen the OS Profile, you cannot add any packages or run updates. The OS Profile is static. Once created, if you select OS Profile, you will only be able to view the details of the profile you selected.  
 
 	6. Set the Install profile and click Save.
 
-.. note:: Unlike Linux, the following cannot be set for Windows appliances: Keyboard, Root user, User & Groups, Kernel Parameters and Firewall.  
+		.. note:: Unlike Linux, the following cannot be set for Windows appliances: Keyboard, Root user, User & Groups, Kernel Parameters and Firewall.  
 
 	.. image :: /images/windows-install.jpg
 

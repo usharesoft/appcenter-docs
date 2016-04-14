@@ -7,7 +7,7 @@ Managing the OS Profile
 
 .. _appliance-os-profile-new:
 
-Adding a new OS Profile
+Adding a New OS Profile
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Every appliance must have an OS profile, which contains all the operating system packages for the appliance.  UForge allows you to easily create an OS profile from a set of standard profiles. You can then add specific operating system packages.  
@@ -46,4 +46,4 @@ You may want to add packages that are provided as part of the operating system d
 	8. Select the packages you want to add.
 	9. Click the ``save`` button to add the packages to the OS profile.
 
-Once you have added packages to an OS profile, any available updates are tracked by the platform. For more information on package updates, see :ref:`appliance-pkg-updates`.
+.. note:: When you create an appliance, the packages are stored locally in the UForge cache repository. This ensures that the packages will always be available. However, UForge tracks all available updates. For more information on package updates, see :ref:`appliance-pkg-updates`.

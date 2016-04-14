@@ -41,7 +41,7 @@ To set advanced partitioning for an appliance template:
 
 	.. image:: /images/install-profile-partitioning-disks.jpg
 
-	6. Delete the default ``linux swap`` partition by clicking the x at the end of the line with ``linux-swap``.
+	6. Delete the default ``linux swap`` partition by clicking the x at the end of the line with ``linux-swap``. You must not set the swap size to 0.
 	7. Click on the size of the ``MSDOS`` partition to set it to ``20000``.
 	8. Click on the partition 1 information to modify the file system to ``ext4`` and the mount point to ``/boot``.
 	9. Click on the + sign to create a new partition with type ``lvm2`` and size set to ``18000 MB``.

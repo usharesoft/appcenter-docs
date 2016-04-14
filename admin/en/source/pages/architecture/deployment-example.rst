@@ -9,7 +9,6 @@ How to organize your UForge configuration depends on the specific customer needs
 
    * The number of users as well as the number of simultaneous connections to the platform
    * The number of simultaneous generations
-   * The number of operating systems offered by UForge
    * The number of projects in the project catalog
    * The SLA of UForge
    * Whether the service needs to be reached over multiple sites
@@ -47,10 +46,10 @@ For each of these components we recommend the following minimal (hardware or vir
 +----------------+------------+------------+----------------+--------------------------------+
 | Web Service    | 3 GB       | 2          | 15 GB          |                                |
 +----------------+------------+------------+----------------+--------------------------------+
-| Generation     | 2 GB       | 2          | 15 GB          |                                |
+| Generation     | 2 GB       | 1          | 15 GB          |                                |
 | Cluster        |            |            |                |                                |
 +----------------+------------+------------+----------------+--------------------------------+
-| Compute Node   | 4 GB       | 2          | 100 GB         | If you have a good NAS/SAN you |
+| Compute Node   | 4 GB       | 2          | 30 GB         | If you have a good NAS/SAN you |
 |                |            |            |                | reduce the disk space to 15 GB |
 |                |            |            |                | if you map the directory       |
 |                |            |            |                | /space/REPOS with the NAS/SAN  |

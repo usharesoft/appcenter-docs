@@ -34,6 +34,8 @@ A set of default roles are provided by UForge. To view these default roles, use 
 
 Organization administrators can create and manage roles as well as assign these roles to the members of the organization.  For a list of all the commands possible to manage RBAC, use ``uforge role --help``.
 
+To view the entitlements associated to a role run the command ``uforge role info --name <roleName>``.
+
 .. note:: Adding a specific role to a user (such as Administrator) is often only the first step in granting specific  rights. You must then specify the entity (for an Administrator this would be the organization) for which the user has the newly assigned rights. See the examples later in this section.
 
 .. _list-entitlements:

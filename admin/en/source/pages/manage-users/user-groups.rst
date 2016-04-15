@@ -13,7 +13,8 @@ For example, run::
 
 	uforge usergrp create --user $ADMIN --password $PASS --email kermit@usharesoft.com --name MyGroup
 
-In the example above, the argument ``--user`` is the account of the administrator. The argument ``--name`` is the  name of the user group you are creating.
+
+In the example above, the argument ``--name`` is the  name of the user group you are creating and ``-–usergrpPassword`` is the password for the group administrator.  If you want to add users when you create the group, use the argument ``--accounts``.
 
 Adding Users to a Group
 ~~~~~~~~~~~~~~~~~~~~~~~

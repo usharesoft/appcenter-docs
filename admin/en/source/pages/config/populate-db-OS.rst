@@ -5,7 +5,7 @@
 Populating Database with OS Packages
 ====================================
 
-Open source operating system versions are taken from the official repository mirror or the UForge repositor cache. Proprietary operating systems such as RedHat are not; therefore it is the responsibility of the end customer (or reseller if they have correct agreements in place to re-distribute an operating system) to have the original ISO images of the operating system in questions. Refer to :ref:`proprietary-pkg`.
+Open source operating system versions are taken from the official repository mirror or the UForge repository cache. Proprietary operating systems such as RedHat are not; therefore it is the responsibility of the end customer (or reseller if they have correct agreements in place to re-distribute an operating system) to have the original ISO images of the operating system in questions. Refer to :ref:`proprietary-pkg`.
 
 To enable UForge to generate images based on the operating system it needs all the meta-data of the packages comprising the operating system. This meta-data includes the location in the storage of the package as well as dependency information that is used during generation. Furthermore, certain specific UShareSoft packages must be populated for this operating system.
 
@@ -15,7 +15,7 @@ For information specific about Windows, refer to First Installation of Windows.
 
 .. note:: When installing a major version, all minor versions will be included. If you want to restrict to only a few minor versions, you will have to follow this procedure for each minor version you want to install.
 
-In order to add an operation system in your UForge platform you must:
+In order to add an operation system in your UForge AppCenter you must:
 
 	1. Create the OS in the organization.
 	2. Create the repository. This includes the official repository as well as the specific UShareSoft tool repository.
@@ -128,7 +128,7 @@ The following is a concrete example to begin the population of CentOS 6.5 32bit:
 
 		/opt/UShareSoft/uforge/cron/update_repos_pkgs.sh
 
-	.. note: This procedure may take a long time.
+	.. note:: This procedure may take a long time.
 
 	9. To verify if the procedure is terminated, run the following command:
 

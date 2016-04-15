@@ -2,8 +2,8 @@
 
 .. _config-smtp:
 
-Configuring SMTP Proxy
-----------------------
+Configuring UForge Behind Enterprise Proxy
+------------------------------------------
 
 Once your UForge platform deployment has been done you can configure SMTP proxy as follows. In /etc/UShareSoft/uforge/uforge.conf you can modify:
 
@@ -16,4 +16,4 @@ These can be empty
 
 Then run::
 
-	/opt/UShareSoft/uforge/conf/postfix_configure.sh
+	/opt/UShareSoft/uforge/conf/uforge_update.sh

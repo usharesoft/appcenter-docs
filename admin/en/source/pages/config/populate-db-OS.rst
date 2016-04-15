@@ -5,7 +5,7 @@
 Populating Database with OS Packages
 ====================================
 
-Open source operating system versions are taken from the official repository mirror or the UForge repositor cache. Proprietary operating systems such as RedHat are not; therefore it is the responsibility of the end customer (or reseller if they have correct agreements in place to re-distribute an operating system) to have the original ISO images of the operating system in questions. Refer to :ref:`proprietary-pkg`.
+Open source operating system versions are taken from the official repository mirror or the UForge repository cache. Proprietary operating systems such as RedHat are not; therefore it is the responsibility of the end customer (or reseller if they have correct agreements in place to re-distribute an operating system) to have the original ISO images of the operating system in questions. Refer to :ref:`proprietary-pkg`.
 
 To enable UForge to generate images based on the operating system it needs all the meta-data of the packages comprising the operating system. This meta-data includes the location in the storage of the package as well as dependency information that is used during generation. Furthermore, certain specific UShareSoft packages must be populated for this operating system.
 

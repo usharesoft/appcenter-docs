@@ -31,6 +31,22 @@ To update the OS packages:
 
 .. note:: M indicates a Milestone. For Centos, this is the versions (6.1, 6.2 etc). Milestones are customized by the UForge administrator.
 
+.. _windows-update:
+
+Modifying a Windows-based Appliance
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For Windows-based appliances UForge will indicate the number of updates available, however you cannot use this procedure to update the packages for an existing Windows appliance.
+
+In order to benefit from a newer version of Windows, you will have to:
+
+	1. Create or retrieve a new Golden Image. See your administrator.
+	2. Create a new appliance.
+	3. You can re-use the MySoftware components contained in the current appliance.
+	4. You can download from the current template the boot scripts and save them on your local hard drive. You can then upload them to the new appliance.
+	5. You must re-produce the configuration (Install Profile, Configuration).
+
+
 .. _appliance-pkg-updates-sticky:
 
 Making Packages "Sticky"

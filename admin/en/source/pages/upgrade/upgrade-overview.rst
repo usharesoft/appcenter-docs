@@ -150,29 +150,29 @@ The following is an example of a request sent to an UForge AppCenter with hostna
 
 .. code-block:: shell
 
- $ curl 'http://10.0.0.20:9090/ufws/users/myUser -H "Authorization: Basic myUser:password" -H "Accept: application/xml" -v | tidy -xml -indent -quiet
+	$ curl 'http://10.0.0.20:9090/ufws/users/myUser -H "Authorization: Basic myUser:password" -H "Accept: application/xml" -v | tidy -xml -indent -quiet
 
-	* About to connect() to 10.0.0.20 port 8080 (#0)
-	* Trying 10.0.0.20... connected
-	* Connected to 10.0.0.20 (10.0.0.20) port 8080 (#0)
-	> GET /ufws/users/myUser HTTP/1.1
-	> User-Agent: curl/7.19.7 (universal-apple-darwin10.0) libcurl/7.19.7 OpenSSL/0.9.8r zlib/1.2.3
-	> Host: 10.0.0.20:8080
-	> Accept: application/xml
-	>
+		* About to connect() to 10.0.0.20 port 8080 (#0)
+		* Trying 10.0.0.20... connected
+		* Connected to 10.0.0.20 (10.0.0.20) port 8080 (#0)
+		> GET /ufws/users/myUser HTTP/1.1
+		> User-Agent: curl/7.19.7 (universal-apple-darwin10.0) libcurl/7.19.7 OpenSSL/0.9.8r zlib/1.2.3
+		> Host: 10.0.0.20:8080
+		> Accept: application/xml
+		>
 
-	< HTTP/1.1 200 OK
-	< X-Powered-By: Servlet/2.5
-	< Server: Sun GlassFish Enterprise Server v3.1.2
-	< Last-Modified: Thu, 08 Aug 2013 19:52:13 GMT
-	< ETag: "80f76a81b033572861260548dd748bb3"
-	< Content-Type: application/xml
-	< Transfer-Encoding: chunked
-	< Date: Thu, 21 Jul 2011 17:02:10 GMT
-	<
+		< HTTP/1.1 200 OK
+		< X-Powered-By: Servlet/2.5
+		< Server: Sun GlassFish Enterprise Server v3.1.2
+		< Last-Modified: Thu, 08 Aug 2013 19:52:13 GMT
+		< ETag: "80f76a81b033572861260548dd748bb3"
+		< Content-Type: application/xml
+		< Transfer-Encoding: chunked
+		< Date: Thu, 21 Jul 2011 17:02:10 GMT
+		<
 
-	* Closing connection #0
-	<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-	<user>
-	...ommitted for clarity
-	</user>
+		* Closing connection #0
+		<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+		<user>
+		...ommitted for clarity
+		</user>

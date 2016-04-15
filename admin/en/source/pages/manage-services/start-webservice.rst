@@ -5,25 +5,25 @@
 Starting and Stopping the Application Server
 --------------------------------------------
 
-Glassfish is registered as an operating system service. Each time a web service node is rebooted, the application server is restarted automatically as part of the node boot sequence. To manually stop or start the web service you must be the unix root user of the node.
+Tomcat is registered as an operating system service. Each time a web service node is rebooted, the application server is restarted automatically as part of the node boot sequence. To manually stop or start the web service you must be the unix root user of the node.
 
 Stopping the web service
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: shell
 
-  # service glassfish stop
+  # service tomcat stop
 
 Starting the web service
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: shell
 
-  # service glassfish start
+  # service tomcat start
 
 Restarting the web service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: shell
 
-  # service glassfish restart
+  # service tomcat restart

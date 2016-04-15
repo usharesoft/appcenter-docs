@@ -5,7 +5,7 @@
 UForge Database Basic Backup
 ----------------------------
 
-UForge uses the PerconaDB database to store all its data. PerconaDB provides many different types of backup methods you can choose from, including:
+UForge uses the MariaDB database to store all its data. PerconaDB provides many different types of backup methods you can choose from, including:
 
 	* Doing a hot backup (for example with Percona XtraBackup)
 	* Copying Table files

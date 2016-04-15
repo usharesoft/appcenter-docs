@@ -5,23 +5,23 @@
 Email Notification Service
 --------------------------
 
-The UForge platform provides an email notification service to notify the super-user administrator and users via email for certain types of information. 
+The UForge AppCenter provides an email notification service using RabbitMQ to notify the super-user administrator and users via email for certain types of information. 
 
 Email notifications are triggered for the administrator when:
 
 	* There is a server template generation failure.
 	* A new user has been created on the platform (or in the case where this is manual, a request for a new user account to be created).
-	* A user has reported an abusive comment in the Marketplace (App Store) that requires moderation.
+	* A user has reported an abusive comment that requires moderation.
 
 Email notifications are triggered to the end users when:
 
 	* A new user account has been created using their email address.  This includes information on their credential information to access UForge.
-	* For all the templates the user is “watching” in the Marketplace (App Store), emails are sent when the template is updated or a new comment has been added to the template.
+	* For all the templates the user is “following”, emails are sent when the template is updated or a new comment has been added to the template.
 
 Changing Email Address for Notifications
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-During the initial install of the UForge platform, you must set the email address for the administrator.  If you need to change the administrator's email address then you must update the uforge.conf file for each node that comprises the UForge platform. UForge allows you to have a different email address for:
+During the initial install of the UForge AppCenter, you must set the email address for the administrator.  If you need to change the administrator's email address then you must update the uforge.conf file for each node that comprises the UForge AppCenter. UForge allows you to have a different email address for:
 
 	* new registrations (user account creations) to UForge
 	* all other administrator emails (generation failures etc)
@@ -57,6 +57,8 @@ Error emails:
 	* ``WebServiceErrorsMessage.tmpl`` (not used today)
 
 Marketplace notification emails:
+
+.. note:: These are only applicable if your Uforge AppCenter is connected to a Marketplace. Otherwise, disregard. 
 
 	* ``AppStoreNotificationNewComment.tmpl`` – email sent to the user watching the template where a new comment is added
 	* ``AppStoreNotificationTemplateNew.tmpl`` – email sent to the user watching the template where a new version of the current template is available
@@ -97,7 +99,7 @@ Therefore to change an email template:
 
 	2. Change the contents of the template and rename using the extension for the new language, if appropriate.
 
-	3. Copy the new template to all the other nodes of the UForge platform.
+	3. Copy the new template to all the other nodes of the UForge AppCenter.
 
 	4. Save a copy of the new template to protect against an upgrade overwriting the custom template:
 

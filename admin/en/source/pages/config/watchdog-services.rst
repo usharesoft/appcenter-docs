@@ -69,13 +69,6 @@ This script could be launched several times in a day depending on the size of th
 
 Same as for /opt/UShareSoft/uforge/cron/cleanup_tickets.sh
 
-``15 3 * * * /opt/UShareSoft/uforge/cron/update_uss_pkgs.sh``
-
-This updates the UShareSoft packages that are introduced in images like uforge-install-config.
-The schedule can be changed.
-
-Updating once a day or on demand is good enough updates are not provided frequently.
-
 ``42 * * * * /opt/UShareSoft/uforge/cron/update_repos_pkgs.sh``
 
 This mechanism launches UForge Spider to crawl the packages from the registered repositories.
@@ -106,5 +99,5 @@ If this command fails, usually it will only have an impact several days later (d
 
 This calls native Linux commands to free up some memory on the platform.
 
-If this commands fails, and as it is a basic Linux command, it means the platform (not UForge but the machine itself) is in bad shape. It has no direct consequence on the UForge platform (only side effects: usually, issue with memory)
+If this commands fails, and as it is a basic Linux command, it means the platform (not UForge but the machine itself) is in bad shape. It has no direct consequence on the UForge platform (only side effects: usually, issue with memory).
 

@@ -2,8 +2,8 @@
 
 .. _further-config-overview:
 
-Further Configuration Overview
-==============================
+Further AppCenter Configuration
+===============================
 
 This section assumes that you have completed the installation of your UForge platform. Once it is installed and configured, you can:
 
@@ -19,6 +19,7 @@ This section assumes that you have completed the installation of your UForge pla
    config-scheduler
    watchdog-services
    tuning-services
+   event-bus
    email-notification
    authentication-sso
    self-signed-cert

@@ -74,7 +74,7 @@ The directory will be:
 
   # cd <user data mount point>/FactoryContainer/images/4825
 
-Logs for jobs that publish an image to a specific cloud are stored in a sub-directory of the generated image directory.  So for example if a user generates an Amazon AMI image, then publishes the AMI image to Amazon, the directory structure created is:
+Logs for jobs that publish an image to a specific cloud are stored in a sub-directory of the generated image directory.  So for example if a user generates an Amazon image, then publishes the machine image to Amazon, the directory structure created is:
 
 .. code-block:: none
 

@@ -5,9 +5,9 @@
 Storage Considerations
 ======================
 
-The UForge platform requires a significant amount of storage.  During the configuration it is important to size the local storage, the various node instances of the deployment and, if any, the size of the shared remote storage.  You will need both a local and a remote file storage.
+The UForge AppCenter requires a variable amount of storage, depending, among other things, on the number of image generations and users.  During the configuration it is important to size the local storage the various node instances making up the deployment and, if any, the size of the shared remote storage.  
 
-Local storage is used for installing the UForge service software and free disk space for log files. 
+Local storage is used for installing the UForge service software and free disk space for log files.  
 
 .. warning:: Logs for UShareSoft, Glassfish, OpenDJ, Tomcat, and syncope are stored under /opt and NOT under /var. Under /var/log you will find a symlink to the /var location where the logs are stored. Therefore you should allow enough space under /var for these logs.
 
@@ -15,7 +15,7 @@ The SQL Store uses the local storage to store all the database meta-data. Finall
 
 A remote storage system (NAS or SAN) is used to store:
 
-	* Operating system repositories (this will be empty at the beginning and will grow as images are generated)
+	* Operating system cache repositories (this will be empty at the beginning and will grow as images are generated)
 	* Project catalog package binaries
 	* Binaries uploaded by users using UForge
 	* Generated images (copied from a compute node once the generation is complete)

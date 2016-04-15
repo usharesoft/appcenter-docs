@@ -5,7 +5,7 @@
 Configuring UForge
 ------------------
 
-Once the installation is complete on all the nodes you wish to use for the UForge platform, you are now ready to configure all the UForge platform services.  This is done via the UForge Deployment Wizard that helps guide you through the final steps of the installation process.
+Once the installation is complete on all the nodes you wish to use for the UForge AppCenter, you are now ready to configure all the UForge AppCenter services.  This is done via the UForge Deployment Wizard that helps guide you through the final steps of the installation process.
 
 To launch the UForge Deployment Wizard, use your browser and go to one of the nodes that have been installed:
 
@@ -35,7 +35,7 @@ Fill in the wizard, note that all the fields are mandatory.
 
 	11. Enter the Web Server IP address, external hostname and the database IP address. 
 
-	12. Select if OS and image storage should be local or remote. OS storage will be used for distributions, which image storage will include user data such as images, projects, mysoftware and other user data created with UForge Portal.
+	12. Select if OS and image storage should be local or remote. OS storage will be used for distributions, which image storage will include user data such as images, projects, mysoftware and other user data created with UForgeNow.
 
 		If you choose to use a remote storage, indicate the NFS server with mount point and you should enter the full path for the OS directory e.g. /DISTROS.
 
@@ -48,3 +48,21 @@ Fill in the wizard, note that all the fields are mandatory.
 		.. note:: The deployment may take a few hours, depending on the number of operating systems you have chosen.
 
 	15. Once the deployment is complete, click ``Finish``. 
+
+Configuring Ports
+~~~~~~~~~~~~~~~~~
+
+The following ports need to be configured for your UForge AppCenter.
+
+For outgoing:
+
+	* 20 and 21
+	* 22 for SSH
+	* 443 and 80
+
+For incoming:
+
+	* 80 and 443
+	* 22
+
+In addition, communication ports between UForge and IaaS to which you will publish the images have to be open and depend entirely on your IaaS configuration.

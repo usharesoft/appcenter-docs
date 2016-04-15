@@ -12,4 +12,9 @@ To log in as another user with supervisor mode:
   1. Click on ``supervisor mode`` in the top right of the UForge banner.
   2. In the login screen, enter the name of the user you want to log in as. You will note that you do not need to enter a password.
 
-  .. image: /images/supervisor-mode.jpg
+  .. image:: /images/supervisor-mode.jpg
+
+UForge REST API in Supervisor Mode
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The syntax for using basic authentication in supervisor mode is: "Authorization:Basic supervisorusername\supervisedusername:supervisorpassword".

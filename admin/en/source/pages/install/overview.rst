@@ -16,5 +16,6 @@ This section covers:
 	repository-local-storage
 	install-ISO
 	install-VM
+	install-live-system
 	configure-uforge
 	test-deployment

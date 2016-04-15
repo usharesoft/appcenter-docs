@@ -5,15 +5,15 @@
 Viewing the Web Service Logs
 ----------------------------
 
-All the web service logs can be found in the domain directory of the Glassfish application server. The web service uses the log4j logger.  You can change the log level of the web service resources for debugging purposes.  To view the logs:
+All the web service logs can be found in the domain directory of the Tomcat application server. The web service uses the log4j logger.  You can change the log level of the web service resources for debugging purposes.  To view the logs:
 
 Log in to the web service node as root:
 
 .. code-block:: shell
   
   ssh root@<ip address of the node>
-  cd /var/log/glassfish/
-  tail -f server.log
+  cd /var/log/tomcat/
+  tail -f catalina-daemon.out
 
 To change the log level of the web service:
 
@@ -23,20 +23,20 @@ To change the log level of the web service:
 
     ssh root@<ip address of the node>
 
-    cd /var/log/glassfish/
+    cd /opt/Tomcat/webapps/ufws/WEB-INF/classes
     vi log4j.properties
 
   2. Update the logging level for each resource you wish by using the following keywords: ``info|warn|debug``
 
-  3. Force glassfish to reload
+  3. Force Tomcat to reload
 
   .. code-block:: shell
 
-    touch /opt/GlassFish/glassfish/domains/uforge/applications/uForgeWebService .reload
+    touch /opt/Tomcat/webapps/ufws/ .reload
 
   4. Restart the Web Service
 
   .. code-block:: shell
 
-    service glassfish restart
+    service tomcat restart
 

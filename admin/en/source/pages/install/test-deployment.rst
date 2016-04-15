@@ -5,7 +5,7 @@
 Testing the Deployment
 ----------------------
 
-Once the configuration phase is complete, you may wish to carry out some basic sanity tests to ensure that the UForge platform is running normally:
+Once the configuration phase is complete, you may wish to carry out some basic sanity tests to ensure that the UForge AppCenter is running normally:
 
 **Step 1:** Check if the web service is operational
 

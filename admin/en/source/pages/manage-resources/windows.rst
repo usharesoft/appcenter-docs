@@ -11,9 +11,21 @@ Instead, UForge uses a Golden Image as a profile. A Golden Image is an image tha
 
 A Golden Image can be between 5 to 10 Gb, depending on the selected version.
 
-This chapter describes how to create your own Windows Golden Images. Windows Golden Images need to be created in order to create Windows templates. If you want to incorporate a Windows update, then you need to create and install a new set of Golden Images. UShareSoft has a tool called the Golden Creator and can provide Golden Images. This chapter assumes you want to create the Golden Image yourself.
+You will need Golden Images to create Windows appliance templates. If you want to incorporate a Windows update, then you need to create and install a new set of Golden Images. UShareSoft can provide Golden Images, or you can create them yourself.
 
-..note:: A good knowledge of Windows is required.
+..note:: A good knowledge of Windows is required to create your own Golden Images.
+
+To create a Golden Image UShareSoft has a tool called the Golden Image Creator. This tool can run only on top of a physical machine or as a KVM virtual machine.
+
+Generating all the profiles available (in one language) takes roughly 4 to 7 hours depending on the machine/network performance. You can regenerate Golden Images as often as you like, based on your individual needs. However, it is recommended that you regenerate only for specific updates—these updates will be in the Golden Image and you will not need to run package updates. When you generate a Golden Image the updates are the ones at the moment at which the Golden Image is generated. 
+
+Within UForge, the Golden Image used when you create appliances will be the last Golden Image created. In future releases, the different Golden Images will appear as Milestones. 
+
+Once the Golden Image is created, you will need to
+
+	1. Save it to the proper location (as described in :ref:`install-updated-golden`). 
+	2. Store the golden images (all profiles in one language) as described in :ref:`store-updated-golden`. You will need about 40Gb of disk space on the UForge NAS. 
+	3. Add the Golden Image to your UForge AppCenter, as described in :ref:`add-golden-toAppCenter`.
 
 Supported Windows Versions
 --------------------------
@@ -35,7 +47,7 @@ Restrictions
 
 The following UForge features are not supported with Windows Appliances: 
 
-	* Package selection at the OS level (however, users can add software via MySoftware or Projects. See the UForge User Guide.)
+	* Package selection at the OS level (however, users can add software via MySoftware or Projects)
 	* UForge Studio
 	* Windows migration possible as blackbox only
 
@@ -44,7 +56,7 @@ Workflow for Windows Golden Image
 
 The following graphic illustrates the workflow to obtain and install Windows Golden Images.
 
-.. image: /images/golden-image-workflow.jpg
+.. image:: /images/golden-image-workflow.jpg
 
 First Installation of Windows
 -----------------------------
@@ -60,17 +72,13 @@ To install Windows, follow the instructions below. This example is for Windows S
 		org os enable --name Windows --arch x86_64 --version Server2008R2
 
 	3.  Activate Windows Server2008R2 for root user (and potentially other preexisting users)
-	user os enable --name Windows --arch x86_64 --version Server2008R2 --account root
-	user os enable --name Windows --arch x86_64 --version Server2008R2 --account <OTHER_USER_NAME>
-
-	4.  Populate the packages for WindowsServer2008R2 (variable WIN_VERS must be changed accordingly for other versions of Windows).
 
 	.. code-block:: shell
 
-		. /etc/UShareSoft/uforge/uforge.conf
-		ARCHS=x86_64 DEBUG=y WIN_VERS=Server2008R2 /opt/UShareSoft/uforge/bin/exec_uploads.sh -w UssPkgs -U "$UFORGE_WEBSVC_LOGIN" -P "$UFORGE_WEBSVC_PASSWORD" -s "$UFORGE_DEFAULT_ORG_NAME" /tmp/DISTROS/USS/usspkgs
+		user os enable --name Windows --arch x86_64 --version Server2008R2 --account root
+		user os enable --name Windows --arch x86_64 --version Server2008R2 --account <OTHER_USER_NAME>
 
-.. note:: UForge does not manage Windows updates as it does for Linux (crawling updates every night and populating the database). Instead, each time you want to have the updates for Windows, you will need to a new set of Golden Images.
+.. note:: UForge does not manage Windows updates as it does for Linux. Each time you want to have an update for Windows, you will need to create and install a new set of Golden Images.
 
 Listing Existing Golden Images
 ------------------------------
@@ -84,14 +92,6 @@ In order to view a list of existing golden images installed on your UForge run::
 Creating a Golden Image
 -----------------------
 
-To create a Golden Image UShareSoft has a tool called the Golden Image Creator. This tool can run only on top of a physical machine or as a KVM virtual machine.
-
-Generating all the profiles available (in one language) takes roughly 4 to 7 hours depending on the machine/network performance. You can regenerate Golden Images as often as you like, based on your individual needs. However, it is recommended that you regenerate only for specific updates—these updates will be in the Golden Image and you will not need to run package updates. When you generate a Golden Image the updates are the ones at the moment at which the Golden Image is generated. 
-
-Within UForge, the Golden Image used when you create appliances will be the last Golden Image created. In future releases, the different Golden Images will appear as Milestones. 
-
-Once the Golden Image is created, you will need to save it to the proper location and follow the steps described Storing Golden Images on the NAS. To store the golden images (all profiles in one language) you will need about 40Gb of disk space on the UForge NAS. 
-
 To create an new Golden Image, you will need to:
 
 	1. Ensure the following two partitions exist. These partitions are created by default during a standard Windows installation. There must be no other partitions.
@@ -99,9 +99,9 @@ To create an new Golden Image, you will need to:
 		* System partition. This one is hidden, created automatically during installation of Windows Server.
 		* Drive C:
 
-	2. Ensure that uforge-install-config software is installed.
+	2. Ensure that ``uforge-install-config`` software is installed.
 
-		* Take the latest file uforge-install-config_<version>_all.zip. This file can be found on the UForge server machine filesystem under DISTROS/USS/usspkgs/uforge-install-config/win/windows/
+		* Take the latest file ``uforge-install-config_<version>_all.zip``. This file can be found on the UForge server machine filesystem under DISTROS/USS/usspkgs/uforge-install-config/win/windows/
 		* Uncompress it to C:\ using Windows explorer or the Windows expand command
 		* Execute the following command using regular Windows CMD prompt and not powershell::
 
@@ -123,7 +123,7 @@ To create an new Golden Image, you will need to:
 			* start /w dism /online /enable-feature /all /featurename:NetFx3ServerFeatures 
 			* start /w dism /online /enable-feature /all /featurename:NetFx3
 
-	4. Install gtk-sharp-2.12.10.win32.msi. 
+	4. Install ``gtk-sharp-2.12.10.win32.msi``. 
 
 		* You can download it from http://download.mono-project.com/gtk-sharp/gtk-sharp-2.12.10.win32.msi.old
 		* Rename gtk-sharp-2.12.10.win32.msi.old to gtk-sharp-2.12.10.win32.msi
@@ -144,6 +144,9 @@ To create an new Golden Image, you will need to:
 	
 .. note:: This will shutdown the machine. Do not boot the machine again!
 
+The disk format depends on the way you created the image. 
+
+.. _install-updated-golden:
 
 Installing Updated Golden Images
 --------------------------------
@@ -154,6 +157,7 @@ For example to install the golden image saved to the following path:  Windows/re
 
 	org golden create --name Windows --arch x86_64 --version Server2008R2 --language English --edition Standard --type Full --goldenDate 2012-10-19 –-goldenName Windows_2008R2_Standard_Full_2012-10-19.raw.gz
 
+.. _store-updated-golden:
 
 Storing Golden Images on the NAS
 --------------------------------
@@ -205,10 +209,12 @@ Windows/releases/Server2008R2/x86_64/English/Datacenter/Full/2012-10-19
 Windows/releases/Server2008R2/x86_64/English/Datacenter/Full/2012-10-19/Windows_2008R2_Datacenter_Full_2012-10-19.raw.gz
 
 
-Adding a Golden Image to UForge
--------------------------------
+.. _add-golden-toAppCenter:
 
-Once you have your Golden Image, you need to add it to your Uforge platform in order to be able to use the Windows version to create appliance templates. Your golden image must be in one of the following formats:
+Adding a Golden Image to UForge AppCenter
+-----------------------------------------
+
+Once you have your Golden Image, you need to add it to your UForge AppCenter in order to be able to use the Windows version to create appliance templates. Your golden image must be in one of the following formats:
 
 	* raw.gz 
 	* raw.zip 
@@ -228,11 +234,11 @@ To add your Golden Image to UForge:
 	
 	Note: 
 	
-		* File and directory ownership should be glassfish:glassfish.
+		* File and directory ownership should be tomcat:tomcat.
 		* Permissions should be readable for all users
 		* Disk name must be unique in the /tmp/DISTORS/Windows file tree
 
-	2. You must ensure that the Windows distribution exists on your UForge platform. If it does not, run::
+	2. You must ensure that the Windows distribution exists on your UForge AppCenter. If it does not, run::
 
 		uforge org os add --name Windows --arch x86_64 --version Server2008R2
 

@@ -69,8 +69,7 @@ To Restore the IDM Data
 		source /etc/UShareSoft/uforge/uforge.conf
 		curl --noproxy idm-server -u $UFORGE_IDM_ADMIN:$UFORGE_IDM_ADMIN_PWD -H "Content-Type: application/xml" -X POST http://idm-server:$UFORGE_IDM_PORT/$UFORGE_IDM_BASEURI/tasks/{100}/execute -D /tmp/headers
 
-7. When the reconciliation task has completed the service should be restored and functional.
-You can check the reconciliation task has completed successfully:
+7. When the reconciliation task has completed the service should be restored and functional. You can check the reconciliation task has completed successfully:
 
 	.. code-block:: shell
 

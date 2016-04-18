@@ -24,6 +24,15 @@ You can modify the page you are directed to when you click on “Need an account
 
 	<c:externalSignUpUrl>http://www.usharesoft.com/products/signup</c:externalSignUpUrl>
 
+To hide the text and link “Need an account? Sign up”, in the custo.css:
+
+.. code-block:: shell
+
+		#main .loginPanel .panelContent .signUpAnchor {
+	    display: none !important;
+	}
+
+
 .. _modify-title:
 
 Modifying the Title of the UForge GUI

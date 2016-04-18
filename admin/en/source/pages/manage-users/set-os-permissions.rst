@@ -3,7 +3,7 @@
 .. _set-oses:
 
 Managing User Access to Operating Systems
-----------------------------------------
+-----------------------------------------
 
 Each user account can be configured to have access to certain operating systems and image formats that are enabled in the organization.  When a user account is created, the organization's default operating systems and image formats are automatically added.  The administrator can then add or remove operating systems and image formats for a specific user account using the command-line interface.
 

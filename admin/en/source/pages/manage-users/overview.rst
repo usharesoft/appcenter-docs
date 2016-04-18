@@ -15,6 +15,8 @@ The following sections cover information regarding managing the UForge users. Ma
    rbac/rbac-overview
    admin-rights
    set-quotas
+   set-os-permissions
+   set-format-access
    marketplace-share
    api-access
  

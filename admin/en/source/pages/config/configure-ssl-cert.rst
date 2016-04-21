@@ -109,6 +109,6 @@ To configure both servers to use an SSL certificate:
 
 	Or you can also use same openssl client command than for the Apache server used in step 6.
 
-	To verify that the new certificate is correct and if the GlassFish service is accessible from the outside, go to `http://www.digicert.com/help/ <http://www.digicert.com/help/>`_ and type the public name or IP address of your web service. Note that there is no way to specify another port than HTTPS (443) on this page therefore you might need to add a iptables redirection rule like:: 
+	To verify that the new certificate is correct and if the Tomcat service is accessible from the outside, go to `http://www.digicert.com/help/ <http://www.digicert.com/help/>`_ and type the public name or IP address of your web service. Note that there is no way to specify another port than HTTPS (443) on this page therefore you might need to add a iptables redirection rule like:: 
 
 		# iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 443 -j REDIRECT--to-port 9191

@@ -17,11 +17,11 @@ The following procedure should be run on the web service and generation nodes of
 
 	3. On the web service node, check the log to ensure that everything is out::
 
-		tailf /var/log/glassfish/domain_uforge/uforge-web-service.log
+		tailf /var/log/tomcat/domain_uforge/uforge-web-service.log
 
 	4. Stop the web service::
 
-		service glassfish stop ;
+		service tomcat stop ;
 
 	5. Now that nothing can happen on the web service side, you can shut down other services.
 

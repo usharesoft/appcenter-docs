@@ -144,8 +144,4 @@ The following is a concrete example to begin the population of CentOS 6.5 32bit:
 
 		/opt/UShareSoft/uforge/bin/launch_distro_sorter.sh -a i386 -d CentOS -v 6.5
 
-	11. Populate the UShareSoft packages for the new operating system::
-
-		ARCHS=i386 DEBUG=y COS_VERS=6.5 /opt/UShareSoft/uforge/bin/exec_uploads.sh -w UssPkgs -p <uforge port> -U $ADMIN -P $PASS /tmp/DISTROS/USS/usspkgs
-
 	

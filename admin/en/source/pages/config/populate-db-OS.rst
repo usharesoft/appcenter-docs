@@ -11,7 +11,7 @@ To enable UForge to generate images based on the operating system it needs all t
 
 .. note:: Custom repositories are supported in UForge. They are treated like other OS packages.
 
-For information specific about Windows, refer to First Installation of Windows.
+For information specific about Windows, refer to :ref:`first-windows-install`.
 
 .. note:: When installing a major version, all minor versions will be included. If you want to restrict to only a few minor versions, you will have to follow this procedure for each minor version you want to install.
 
@@ -45,11 +45,13 @@ The following is a concrete example to begin the population of CentOS 6.5 32bit:
 
 	5. Create the distribution repository. The following example shows the creation of an official Centos repository. However, you can also create a repository based on the UShareSoft official repository as shown later.
 
-	Centos 6.5 repository::
+	Centos 6.5 repository:
+
+	..code-block:: shell
 
 		uforge org repo create --name "CentOS 6.5 os" --repoUrl http://vault.centos.org/6.5/os/i386/ --type RPM --officiallySupported -u $ADMIN -p $PASS
 
-	Success: Created repository with url [http://vault.centos.org/6.5/os/i386/] to default organization
+		Success: Created repository with url [http://vault.centos.org/6.5/os/i386/] to default organization
 
 	The ``–-name`` specified here is the “tagname” that will be shown in the UI when creating an appliance.
 	The ``--repoUrl`` can be either ``http://`` or ``file://``

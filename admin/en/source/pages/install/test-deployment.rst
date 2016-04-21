@@ -57,7 +57,7 @@ Get the values form the uforge.conf and add them to some environment variables (
 .. code-block:: shell
 
 	# eval `grep '^UFORGE_DB' /etc/UShareSoft/uforge/uforge.conf`
-	# echo "show databases" | mysql -f -N -u $UFORGE_DB_LOGIN -p$UFORGE_DB_PASSWORD -h db
+	# echo "show databases" | mysql -f -N -u $UFORGE_DB_ADMIN_LOGIN -p$UFORGE_DB_ADMIN_PASSWORD -h db
 	information_schema
 	mysql
 	oar

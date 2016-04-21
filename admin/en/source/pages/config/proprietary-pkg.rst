@@ -53,7 +53,3 @@ For example, to add a RedHat repository:
 
 		/opt/UShareSoft/uforge/bin/launch_distro_sorter.sh -a x86_64 -d RHEL -v 6.5
 
-	10. Populate the packages for the new repository::
-
-		ARCHS=x86_64 DEBUG=y COS_VERS=6.5 /opt/UShareSoft/uforge/bin/exec_uploads.sh -w UssPkgs -p <uforge port> -U $ADMIN -P $PASS /tmp/DISTROS/USS/usspkgs
-

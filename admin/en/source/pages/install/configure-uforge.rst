@@ -25,8 +25,6 @@ Fill in the wizard, note that all the fields are mandatory.
 
 	6. Select the operating systems and formats you would like to install. When you select an OS, a default mirror location is indicated. This is used for synchronization of packages and distributions.  You can either accept the default values or modify the value to synchronize with another mirror.
 
-	7. Decide whether you would like to populate UForge with UShareSoft's default project list.  This list must already be copied to the UForge repository in the storage used for this deployment.
-
 	8. Set the internet connection. By default, UForge expects to have a direct connection to the internet. If you de-select this option, you will need to enter the proxy hostname and port.
 
 	9. Set the SMTP Server to use for sending email notification messages created by UForge.  If you want to use a SMTP relay, then also indicate the relay hostname and port number.
@@ -39,7 +37,7 @@ Fill in the wizard, note that all the fields are mandatory.
 
 		If you choose to use a remote storage, indicate the NFS server with mount point and you should enter the full path for the OS directory e.g. /DISTROS.
 
-		If you select remote storage for the image store, you have to make sure that the path USER_DATA exists, with the correct permissions i.e. glassfish:glassfish (see :ref: `repository-shared-storage`, step 4, Check mount points, for more detail).
+		If you select remote storage for the image store, you have to make sure that the path USER_DATA exists, with the correct permissions i.e. tomcat:tomcat (see :ref:`repository-shared-storage`, step 4, Check mount points, for more detail).
 
 	13. Indicate the generation cluster compute node hostnames. You can add additional compute nodes by clicking the add button.
 

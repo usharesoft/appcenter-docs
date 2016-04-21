@@ -44,9 +44,9 @@ To setup the shared storage:
 		.. code-block:: shell
 
 			cd /mnt 
-			chown -R glassfish:glassfish . 
+			chown -R tomcat:tomcat . 
 
-	7. Confirm you can create a file on /mnt as user glassfish. Then perform the following:
+	7. Confirm you can create a file on /mnt as user tomcat. Then perform the following:
 
 		.. code-block:: shell
 

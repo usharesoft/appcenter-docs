@@ -13,7 +13,7 @@ A Golden Image can be between 5 to 10 Gb, depending on the selected version.
 
 You will need Golden Images to create Windows appliance templates. If you want to incorporate a Windows update, then you need to create and install a new set of Golden Images. UShareSoft can provide Golden Images, or you can create them yourself.
 
-..note:: A good knowledge of Windows is required to create your own Golden Images.
+.. note:: A good knowledge of Windows is required to create your own Golden Images.
 
 To create a Golden Image UShareSoft has a tool called the Golden Image Creator. This tool can run only on top of a physical machine or as a KVM virtual machine.
 
@@ -51,12 +51,20 @@ The following UForge features are not supported with Windows Appliances:
 	* UForge Studio
 	* Windows migration possible as blackbox only
 
+Using Windows Key Mechanism
+---------------------------
+
+Windows Operating System requires a key validation. UForge generates images without a key in it. Users have 30 days to enter their key once the Appliance is booted.
+
+
 Workflow for Windows Golden Image
 ---------------------------------
 
 The following graphic illustrates the workflow to obtain and install Windows Golden Images.
 
 .. image:: /images/golden-image-workflow.jpg
+
+.. _first-windows-install:
 
 First Installation of Windows
 -----------------------------
@@ -85,7 +93,7 @@ Listing Existing Golden Images
 
 In order to view a list of existing golden images installed on your UForge run::
 
-	org golden list --name Windows --arch x86_64 ---version Server2008R2 
+	org golden list --name Windows --arch x86_64 --version Server2008R2 
 
 .. _create-golden-image:
 

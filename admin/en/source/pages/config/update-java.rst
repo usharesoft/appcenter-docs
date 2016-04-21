@@ -46,5 +46,4 @@ The following procedure should be run on the web service and generation nodes of
 		.. code-block:: shell
 
 			# service OpenDJ start
-			# service glassfish start
 			# service tomcat start

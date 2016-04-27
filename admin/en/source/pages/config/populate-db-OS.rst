@@ -142,6 +142,6 @@ The following is a concrete example to begin the population of CentOS 6.5 32bit:
 
 	10. Create OS profile based on packages (minimal, server, etc.)::
 
-		/opt/UShareSoft/uforge/bin/launch_distro_sorter.sh -a i386 -d CentOS -v 6.5
+		/opt/UShareSoft/uforge/bin/runjob.py sorter_low_prio -d CentOS -v 6.5 -a i386
 
 	

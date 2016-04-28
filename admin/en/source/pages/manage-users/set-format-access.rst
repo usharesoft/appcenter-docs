@@ -68,23 +68,37 @@ To add access to a format for a specific user,  you must follow these steps:
 	4. Add the target format to the target platform using  ``uforge org targetplatform addTargetFormat``
 	5. Enable the format for the user using ``uforge user targetformat enable``
 
-You cannot give a user access to a format that is not included in the organization. For a list of formats that are part of the organization, use the command uforge org targetformat list.
+You cannot give a user access to a format that is not included in the organization. For a list of formats that are part of the organization, use the command ``uforge org targetformat list``.
+
+Enabling Access to a Format
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note:: When enabling or disabling a format, you must use the "name" of the format and not the "format". 
+
+For example, if you are trying to enable the following format:
+
+.. code-block:: shell
+
+	+----+---------------+--------------+----------+-------+-----------------+--------+
+	| Id |     Name      |    Format    | Category | Type  | CredAccountType | Access |
+	+====+===============+==============+==========+=======+=================+========+
+	| 34 | OpenStack VHD | openstackvhd | Cloud    | cloud | openstack       |        |
+	+----+---------------+--------------+----------+-------+-----------------+--------+
+
+
+You would use the following command:
+
+.. code-block:: shell
+
+	user targetformat disable --targetFormats "OpenStack VHD" --account kermit --url https://uforge.usharesoft.com:443 -u $ADMIN -p $PASS
+
 
 Disabling Access to Formats
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To disable access to one or more formats for a specific user  (in this example “kermit”):
+To disable access to one or more formats for a specific user  (in this example “kermit”), you must specify the format name with option ``--tragetFormats``, as follows:
 
 .. code-block:: shell
 
-	$ uforge user targetformat disable --targetFormats ovf qcow2 vbox --account kermit --url https://uforge.usharesoft.com:443 -u $ADMIN -p $PASS
-	Getting user [kermit] ...
-	Success: Disabled 3 image formats for user [kermit] 
-	Success: Disabled image formats: 
-	+------------------+--------+ 
-	| Format           | Access | 
-	+------------------+--------+ 
-	| ovf              |        | 
-	| qcow2            |        | 
-	| vbox             |        | 
-	+------------------+--------+ 
+	uforge user targetformat disable --targetFormats "OVF or OVA" QCOW2 VirtualBox --account kermit --url https://uforge.usharesoft.com:443 -u $ADMIN -p $PASS
+	

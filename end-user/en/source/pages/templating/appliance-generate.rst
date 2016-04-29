@@ -19,7 +19,11 @@ To generate a machine image:
 
 	.. note:: If you want to ignore dependency checking during image generation (for example because you have knowingly removed a package dependency that is not required in your environment), then you check the option ``ignore dependency checking warnings``. Note that this is an advanced option and should not be used systematically.
 
-	6. You can set the disk size, then click the ``Generate`` button to launch a generation in UForge for this appliance template. The generation will take a few minutes to complete (depending on the number of packages in the appliance template and the disk size chosen). The generation progress is shown.
+	6. You can set the disk size, then click the ``Generate`` button to launch a generation in UForge for this appliance template. 
+
+	.. note:: Depending on the packages you install and the size of your software, make sure that the disk size is large enough to accommodate the software to be installed.
+
+	The generation will take a few minutes to complete (depending on the number of packages in the appliance template and the disk size chosen). The generation progress is shown.
 
 Once the generation is complete, you can download the image locally, or for certain cloud formats register the machine image directly to the target environment using your cloud credentials.
 

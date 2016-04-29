@@ -2,14 +2,14 @@
 
 .. _config-ssl-cert:
 
-Configure Apache and GlassFish Web Services to use SSL Certificate
+Configure Apache and Tomcat Web Services to use SSL Certificate
 ------------------------------------------------------------------
 
-It is highly recommended that all communication with UForge is done via HTTPS.  After the initial installation of UForge, neither the HTTP server (Apache) nor the application server (GlassFish) have yet been configured to use a SSL certificate and allowing HTTPS.
+It is highly recommended that all communication with UForge is done via HTTPS.  After the initial installation of UForge, neither the HTTP server (Apache) nor the application server (Tomcat) have yet been configured to use a SSL certificate and allowing HTTPS.
 
 To configure both servers to use an SSL certificate:
 
-	1. Log in as root to the machine running the UForge Apache and GlassFish Web Services
+	1. Log in as root to the machine running the UForge Apache and Tomcat Web Services
 
 	2. Copy the SSL certificate files locally to the machine.  Note that you should have three to four files, for example: 
 
@@ -103,52 +103,12 @@ To configure both servers to use an SSL certificate:
 	    Verify return code: 21 (unable to verify the first certificate) 
 		---
 
-	7. Go to the glassfish configuration directory::
-
-		cd /usr/glassfish-3.1/glassfish/domains/*/config/
-
-	8. Save the original keystore with the correct permissions and groups::
-
-		rsync -a keystore.jks keystore.jks.ORIG
-
-	9. Delete the current certificate::
-
-		/usr/java/latest/bin/keytool -delete -alias s1as -keystore keystore.jks -storepass <admin password>
-	
-	Note that the default admin password for a standard GlassFish installation is changeit. So the default command to run is::
-
-		/usr/java/latest/bin/keytool -delete -alias s1as -keystore keystore.jks -storepass changeit
-
-	10. Convert your certificate pem files to one pkcs#12 file::
-
-		openssl pkcs12 -export -in <SSLCertificateFile CA chain (pem) path> -inkey <SSLCertificateKeyFile (pem) path> -out keystore.pkcs12 -name s1as -passout pass:<admin password>
-
-	So in our case::
-
-		openssl pkcs12 -export -in server_CA_chain.crt.pem -inkey server.key.pem -out keystore.pkcs12 -name s1as -passout pass:changeit
-
-	11. Import the newly generated pkcs12 file::
-
-		/usr/java/latest/bin/keytool -importkeystore -srckeystore keystore.pkcs12 -srcstoretype pkcs12 -srcstorepass <admin password> -deststoretype jks -destkeystore keystore.jks -deststorepass <admin password>
-
-	Giving:
-
-	.. code-block:: shell
-
-		/usr/java/latest/bin/keytool -importkeystore -srckeystore keystore.pkcs12 -srcstoretype pkcs12 -srcstorepass changeit -deststoretype jks -destkeystore keystore.jks -deststorepass changeit
-		Entry for alias s1as successfully imported. 
-		Import command completed:  1 entries successfully imported, 0 entries failed or cancelled
-
-	12. Restart the application service::
-
-		service glassfish restart
-
-	13. Verify the certificate::
+	7. Verify the certificate::
 
 		openssl s_client -showcerts -connect <ip-of-the-uforge-web-service-machine>:<port>
 
 	Or you can also use same openssl client command than for the Apache server used in step 6.
 
-	To verify that the new certificate is correct and if the GlassFish service is accessible from the outside, go to `http://www.digicert.com/help/ <http://www.digicert.com/help/>`_ and type the public name or IP address of your web service. Note that there is no way to specify another port than HTTPS (443) on this page therefore you might need to add a iptables redirection rule like:: 
+	To verify that the new certificate is correct and if the Tomcat service is accessible from the outside, go to `http://www.digicert.com/help/ <http://www.digicert.com/help/>`_ and type the public name or IP address of your web service. Note that there is no way to specify another port than HTTPS (443) on this page therefore you might need to add a iptables redirection rule like:: 
 
 		# iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 443 -j REDIRECT--to-port 9191

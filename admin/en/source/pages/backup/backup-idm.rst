@@ -46,9 +46,9 @@ To Restore the IDM Data
 
 	.. code-block:: shell
 
-		service glassfish stop
-		Running stop glassfish domain syncope:                     [  OK  ]
-		Running stop glassfish domain uforge:                      [  OK  ]
+		service tomcat stop
+		Running stop tomcat domain syncope:                     [  OK  ]
+		Running stop tomcat domain uforge:                      [  OK  ]
 
 4. Copy the backup to the restore path::
 
@@ -58,9 +58,9 @@ To Restore the IDM Data
 
 	.. code-block:: shell
 
-		service glassfish start
-		Running start glassfish domain syncope:                    [  OK  ]
-		Running start glassfish domain uforge:                     [  OK  ]
+		service tomcat start
+		Running start tomcat domain syncope:                    [  OK  ]
+		Running start tomcat domain uforge:                     [  OK  ]
 
 6. Send reconciliation task to synchronize the new Syncope database with the UForge LDAP database:
 
@@ -69,8 +69,7 @@ To Restore the IDM Data
 		source /etc/UShareSoft/uforge/uforge.conf
 		curl --noproxy idm-server -u $UFORGE_IDM_ADMIN:$UFORGE_IDM_ADMIN_PWD -H "Content-Type: application/xml" -X POST http://idm-server:$UFORGE_IDM_PORT/$UFORGE_IDM_BASEURI/tasks/{100}/execute -D /tmp/headers
 
-7. When the reconciliation task has completed the service should be restored and functional.
-You can check the reconciliation task has completed successfully:
+7. When the reconciliation task has completed the service should be restored and functional. You can check the reconciliation task has completed successfully:
 
 	.. code-block:: shell
 

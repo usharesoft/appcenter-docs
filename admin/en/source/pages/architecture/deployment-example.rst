@@ -49,7 +49,7 @@ For each of these components we recommend the following minimal (hardware or vir
 | Generation     | 2 GB       | 1          | 15 GB          |                                |
 | Cluster        |            |            |                |                                |
 +----------------+------------+------------+----------------+--------------------------------+
-| Compute Node   | 4 GB       | 2          | 30 GB         | If you have a good NAS/SAN you |
+| Compute Node   | 4 GB       | 2          | 30 GB          | If you have a good NAS/SAN you |
 |                |            |            |                | reduce the disk space to 15 GB |
 |                |            |            |                | if you map the directory       |
 |                |            |            |                | /space/REPOS with the NAS/SAN  |

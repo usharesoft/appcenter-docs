@@ -68,7 +68,7 @@ You can add a new OAR compute node which was instantiated from UForge but which 
 		cp /opt/UShareSoft/uforge/tmpl/nfs.tmpl /etc/sysconfig/nfs
 		cp /opt/UShareSoft/uforge/tmpl/mountisos_init /etc/init.d/mountisos; chkconfig
 		--add mountisos
-		for s in ntpd glassfish tomcat mysql httpd oar-server openstack-glance-api
+		for s in ntpd tomcat mysql httpd oar-server openstack-glance-api
 		openstack-glance-registry oas oas-deploy; do service $s stop; chkconfig --levels
 		0123456 $s off ; done >/dev/null 2>&1
 		ntpdate pool.ntp.org ; service ntpd start

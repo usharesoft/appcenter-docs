@@ -24,8 +24,3 @@ This is not possible for everyone, however, in extremely rare occasions where th
 **Consider Raid 10 SATA**
 
 Depending on the backup windows, multiple database servers may be writing backups to that same share simultaneously. Raid 10 gives better write performance than raid 5, (using fiber channel backup drives is even better but cost-prohibitive). Raid 10 on SATA gets a good balance of cost versus backup throughput.
-
-Getting Professional Services for Database Backup
--------------------------------------------------
-
-UShareSoft are partners with SkySQL who give professional advice on database high-availability and backup solutions. Contact UShareSoft if you wish to be introduced to SkySQL.

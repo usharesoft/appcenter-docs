@@ -9,8 +9,8 @@ You can set a number of quotas for a user account using the command: ``uforge us
 
 Setting quotas allows you to limit the user's access to UForge based on one (or several) of the following criteria:
 
-	* number of appliances created (includes import from marketplace, collaboration workspace and scans)
-	* number of images generated (includes image generation from a scan or from the marketplace)
+	* number of appliances (includes imports and scans)
+	* number of images generated (includes all image generations)
 	* diskusage in bytes (includes storage of mysoftware uploads, bootscripts, image generations, scans)
 	* number of scans for migration (includes initial scan and incremental scans)
 
@@ -26,7 +26,7 @@ Viewing the Quotas for a User
 
 You can see the quotas set for a given user as follows::
 
-	uforge user quota list --user $ADMIN --account <username> --password $PASS
+	uforge user quota list --account <user> -u $ADMIN -p $PASS 
 
 In the example above, the argument ``--user`` is the account of the administrator. The argument ``--account`` is the  user name of the account you want to view the quotas for.
 
@@ -34,18 +34,13 @@ Typically, when no limits are set, the results should be:
 
 .. code-block:: shell
 
-	$ uforge user quota list --user $ADMIN --account <username> --password $PASS
-	Getting user [user] ...
-
-	+------------------+--------------+------------+------------+-------------------------------+
-	| Type             |     Consumed |      Limit | Frequency  | Renewal date                  |
-	+------------------+--------------+------------+------------+-------------------------------+
-	| appliance        |            1 |  unlimited |            | -                             |
-	| diskusage        |          0.0 |  unlimited |            | -                             |
-	| generation       |            0 |  unlimited |            | -                             |
-	| scan             |            0 |  unlimited |            | -                             |
-	+------------------+--------------+------------+------------+-------------------------------+
-	Found 4 formats
+	$ uforge user quota list --account kermit -u $ADMIN -p $PASS
+	Getting quotas for [kermit] ...
+	List of quotas available for [kermit] :
+	Scan (0)        --------------------UNLIMITED---------------------
+	Template (0)    --------------------UNLIMITED---------------------
+	Generation (0)  --------------------UNLIMITED---------------------
+	Disk usage (0B) --------------------UNLIMITED---------------------
 
 .. _set-quota-appliance:
 

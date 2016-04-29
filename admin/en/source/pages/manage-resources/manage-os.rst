@@ -30,7 +30,9 @@ To get the complete list of the currently supported operating systems on the UFo
 	| CentOS         | 5.7             | i386         |   X    |    X    |    X    | 2011-08-29       |
 	.... rest omitted for clarity
 
-All the open source operating system versions are delivered as part of the UForge repository. Proprietary operating systems are not; therefore it is the responsibility of the end customer (or reseller if they have correct agreements in place to re-distribute an operating system) to have the original ISO images of the operating system in questions.
+All the open source operating system versions are delivered as part of the UForge repository. Proprietary operating systems such as RedHat Enterprise Linux or older operating system versions (that have been EOL'd) are not; therefore it is the responsibility of the end customer (or reseller if they have correct agreements in place to re-distribute an operating system) to have the original ISO images of the operating system in questions.
+
+.. note:: You can only add an operating system version that is officially supported by the UForge AppCenter and has been certified by UShareSoft.  
 
 .. _os-list:
 
@@ -38,8 +40,6 @@ Viewing the Enabled OSes
 ------------------------
 
 To get a list of the operating systems that are currently enabled on your UForge platform use the command ``uforge org os list``.
-
-.. note:: You can only add an operating system version that is officially supported by the UForge platform and has been certified by UShareSoft. 
 
 .. code-block :: shell
 
@@ -56,21 +56,23 @@ To get a list of the operating systems that are currently enabled on your UForge
 	| CentOS         | 6.4             | x86_64       |   X    |    X    |         | 2013-03-01       |
 	.... rest omitted for clarity
 
-Older operating system versions (that for example have been EOL'd) or proprietary operating systems such as RedHat Enterprise Linux are not automatically populated at the installation phase. Population of such operating system versions must be done manually after the initial installation of UForge is complete.
-
 .. _adding-os:
 
 Adding an OS to an Organization
 -------------------------------
 
+Older operating system versions (that for example have been EOL'd) or proprietary operating systems such as RedHat Enterprise Linux are not automatically populated at the installation phase. Population of such operating system versions must be done manually after the initial installation of UForge is complete.
+
+.. note:: You can only add an operating system version that is officially supported by the UForge platform and has been certified by UShareSoft. 
+
 Before adding an OS to the organization you must retrieve data from the UShareSoft repository. For more information refer to :ref:`populate-db-os`.
 
 In order to add an OS to an organization you must do the following:
 
-	1. Add the distribution to the organization.
+	1. Add the distribution to the organization. 
 	2. Create the repositories.
 	3. Attach the repository to the distribution.
-	4. You will then need to launch Spider to fill the repositories. 
+	4. Launch Spider to fill the repositories. 
 
 This must be done for each version of an OS. For example CentOS 6.5 i386. It is not possible to do this for all CentOS versions at once.
 

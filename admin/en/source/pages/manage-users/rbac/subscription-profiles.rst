@@ -67,7 +67,7 @@ If you specify any of the above when you create a subscription profile, then all
 
 	1. To create a subscription profile for an organization, run the command::
 
-		uforge subscription create --code <string> --name <string> --org usharesoft -u $ADMIN -p $PASS
+		uforge subscription create --code <string> --name <string> --org usharesoft --active -u $ADMIN -p $PASS
 
 	The code can be any alpha-numeric string, excluding spaces and special characters.
 

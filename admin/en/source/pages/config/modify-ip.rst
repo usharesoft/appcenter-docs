@@ -31,10 +31,10 @@ To modify the UForge IP address or hostname, do the following.
 
 If you have a load balancer where rules have been entered for accessing the UForge web service make sure the URIs match the following parameter in uforge.conf::
 
-	UFORGE_GF_WEBSVC_ROOT_CONTEXT=ufws-3.3
+	UFORGE_GF_WEBSVC_ROOT_CONTEXT=ufws
 
 For the UForge CLI you should have::
 
-	UFORGE_GF_ADMIN_WEBSVC_ROOT_CONTEXT=ufadmws-3.3
+	UFORGE_GF_ADMIN_WEBSVC_ROOT_CONTEXT=ufadmws
 
 .. note: Some virtualization solutions (like VirtualBox) also add this info into ifcfg-XXX files as HWADDR=MAC

@@ -21,7 +21,11 @@ As part of this transformation process, the scan information is mapped to one or
 	* Kernel parameters are added to the ``Install Profile``
 	* Users and groups are added to the ``Install Profile``
 
-.. warning:: In the current version of UForge AppCenter, SELinux settings are not provided as part of the ``Install Profile``.  Any SELinux settings are lost at this stage.  
+.. warning:: All other information found in the scan is not used (reset) and the Install Profile default information is used.  This includes:
+
+	* Networking information (IP address).  Furthermore, appliance templates do not support multiple NICs, therefore only the first NIC is taken into consideration.
+	* SELinux settings not taken into account – this information is lost
+	* SSH keys.  You will need to manually add the ssh keys to the install profile.  
 
 .. image:: /images/migration-whitebox-mapping.jpg
 

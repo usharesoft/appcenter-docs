@@ -5,7 +5,7 @@
 Installing from a VM Template
 ------------------------------
 
-A number of virtual machines have already been prepared by UShareSoft to make it easier to install quickly UForge on a virtualized or cloud environment.  If your environment does not support the proposed VM formats, then install UForge using the ISO image, as described in “Installing from an ISO”.
+A number of virtual machines have already been prepared by UShareSoft to make it easier to install quickly UForge on a virtualized or cloud environment.  If your environment does not support the proposed VM formats, then install UForge using the ISO image, as described in :ref:`install-iso`.
 
 To install UForge from a VM template.
 

@@ -67,3 +67,11 @@ For incoming:
 	* 22
 
 In addition, communication ports between UForge and the cloud platform to which you will publish the images have to be open and depend entirely on your cloud platform configuration, see :ref:`cloud-platform-default-ports` for more information.
+
+Configuring NTP
+~~~~~~~~~~~~~~~
+
+Some cloud platforms will reject uploading machine images, if the HTTP request date is in the future of the target cloud platform.  To ensure proper function of UForge, please edit 'server' directives in ``/etc/ntp.conf`` if UForge servers cannot connect to NTP servers on the internet.
+
+.. warning:: If you wish to contact NTP servers on the internet, then port 123 (UDP) should be opened on your firewall.
+

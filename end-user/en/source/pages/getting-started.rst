@@ -150,3 +150,19 @@ The following machine image formats are supported:
 * Virtual: Hyper-V, KVM, LXC, OVF, QCOW2, Raw, tar.gz, Vagrant Base Box, VHD, VirtualBox, VMWare vCenter, VMware Server, Vagrant, Xen, Citrix XenServer
 * Cloud: Abiquo, Amazon AWS, CloudStack, Cloudwatt, Eucalyptus, Flexiant, Google Compute Engine, Microsoft Azure, Nimbula, OpenStack, SUSE Cloud, VMware vCloud Director
 
+.. _uforge-supported-browsers:
+
+Supported Browsers for the UI
+-----------------------------
+
+The following browser versions are officially supported when using the user interface:
+
+	* Firefox v35 or later
+	* Chrome v29 or later
+	* Safari v9 or later
+	* Internet Explorer 11 or later
+	* Opera v15 or later
+
+
+
+

@@ -17,4 +17,5 @@ This section covers:
 	install-ISO
 	install-live-system
 	configure-uforge
+	cloud-platform-ports
 	test-deployment

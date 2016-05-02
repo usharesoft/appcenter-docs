@@ -66,4 +66,4 @@ For incoming:
 	* 80 and 443
 	* 22
 
-In addition, communication ports between UForge and IaaS to which you will publish the images have to be open and depend entirely on your IaaS configuration.
+In addition, communication ports between UForge and the cloud platform to which you will publish the images have to be open and depend entirely on your cloud platform configuration, see :ref:`cloud-platform-default-ports` for more information.

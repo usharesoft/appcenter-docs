@@ -31,7 +31,7 @@ To update the OS packages:
 
 	5. Click ``simulate`` to see the changes that will be applied. The changes will be listed in the bottom of the screen. Scroll to view the results.
 
-	.. image:: /images/os-profile-profile-updates.jpg
+	.. image:: /images/os-profile-updates.jpg
 
 	6. If you want to apply the changes listed, then click ``update``.
 
@@ -62,9 +62,9 @@ To make a specific package "sticky":
 
 	1. Select the appliance you want to modify.
 	2. Go to the ``Stack`` page.
-	3. From the ``OS profile``, click on ``sticky`` in the right hand side of the package info. The ``sticky`` button will only be visible when you scroll over this part the page.
+	3. From the ``OS profile``, click on ``sticky`` in the right hand side of the package info. The ``sticky`` button will only be visible when you scroll over this part the page. In the following image, the first package has ``sticky`` in blue because it has been applied. The second one in light blue has no yet been applied.
 
-	.. image:: /images/os-profile-sticky-pkg.jpg
+	.. image:: /images/os-profile-sticky.jpg
 
 	4. A pop-up window will list all of the versions of the package available, allowing you to select the version you want.
 

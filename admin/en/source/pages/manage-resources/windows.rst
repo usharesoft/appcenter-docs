@@ -77,7 +77,7 @@ Listing Existing Golden Images
 
 In order to view a list of existing golden images installed on your UForge run::
 
-	org golden list --name Windows --arch x86_64 ---version Server2008R2 
+	org golden list --name Windows --arch x86_64 --version Server2008R2 
 
 .. _create-golden-image:
 
@@ -92,7 +92,7 @@ Within UForge, the Golden Image used when you create appliances will be the last
 
 Once the Golden Image is created, you will need to save it to the proper location and follow the steps described Storing Golden Images on the NAS. To store the golden images (all profiles in one language) you will need about 40Gb of disk space on the UForge NAS. 
 
-To create an new Golden Image, you will need to:
+To create a new Golden Image, you will need to:
 
 	1. Ensure the following two partitions exist. These partitions are created by default during a standard Windows installation. There must be no other partitions.
 

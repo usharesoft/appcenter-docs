@@ -49,7 +49,7 @@ The following is a concrete example to begin the population of CentOS 6.5 32bit:
 
 	Centos 6.5 repository:
 
-	..code-block:: shell
+	.. code-block:: shell
 
 		uforge org repo create --name "CentOS 6.5 os" --repoUrl http://vault.centos.org/6.5/os/i386/ --type RPM --officiallySupported -u $ADMIN -p $PASS
 

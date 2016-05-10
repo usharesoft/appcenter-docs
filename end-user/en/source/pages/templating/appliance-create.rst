@@ -12,16 +12,17 @@ Creating a Linux-based Appliance
 
 To create a new appliance in your private workspace: 
 
-	1. Select the ``VM Builder`` tab and click on ``Create`` in the top right. 
-	2. Enter the ``Name`` and ``Version`` of the appliance.  
+	1. Select ``VM Builder`` icon on the left.
+	2. On the ``Appliance Library`` page, click on ``create`` in the top right. 
+	3. Enter the ``Name`` and ``Version`` of the appliance.  
 
 	.. image:: /images/create-appliance-centos.jpg
 
-	3. From the drop-down menus, select the operating system (distribution, release and architecture).
-	4. Click the ``Create`` button. This creates a skeleton of an appliance template in the platform which you can now customize with operating system packages, middleware and application software.
-	5. You should now see the appliance overview page. You can add a description to your appliance (optional) and a logo (optional). The logo format must be .jpg, .jpeg or .png.
-	6. An OS profile is mandatory. See :ref:`appliance-os-profile-new`. However, you can leave the appliance at this point and edit it later.
-	7. If you have made any modifications, click ``save``.
+	4. From the drop-down menus, select the operating system (distribution, release and architecture).
+	5. Click the ``create`` button. This creates a skeleton of an appliance template in the platform which you can now customize with operating system packages, middleware and application software.
+	6. You should now see the appliance overview page. You can add a description to your appliance (optional) and a logo (optional). The logo format must be .jpg, .jpeg or .png.
+	7. An OS profile is mandatory. See :ref:`appliance-os-profile-new`. However, you can leave the appliance at this point and edit it later.
+	8. If you have made any modifications, click the checkmark to save.
 
 .. note:: When you create an appliance, the packages are stored locally in the UForge cache repository. This ensures that the packages will always be available.
 
@@ -30,11 +31,11 @@ Creating a Windows-based Appliance
 
 To create a Windows Appliance:
 
-	1. From the VM Builder tab, select ``Create``.
+	1. From the VM Builder tab, select ``create``.
 	2. Enter the appliance name.
 	3. Choose ``Windows`` from the OS Distribution drop down menu.
-	4. Click ``Create``.
-	5. From the ``Stack`` page, select the OS Profile. Each version has a Core or Full release. Click ``Save``.
+	4. Click ``create``.
+	5. From the ``Stack`` page, select the OS Profile. Each version has a Core or Full release. Click ``save``.
 
 		.. note:: Once you have chosen the OS Profile, you cannot add any packages or run updates. The OS Profile is static. Once created, if you select OS Profile, you will only be able to view the details of the profile you selected.  
 

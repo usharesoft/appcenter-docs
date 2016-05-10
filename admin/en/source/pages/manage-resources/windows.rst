@@ -100,7 +100,7 @@ In order to view a list of existing golden images installed on your UForge run::
 Creating a Golden Image
 -----------------------
 
-To create an new Golden Image, you will need to:
+To create a new Golden Image, you will need to:
 
 	1. Ensure the following two partitions exist. These partitions are created by default during a standard Windows installation. There must be no other partitions.
 

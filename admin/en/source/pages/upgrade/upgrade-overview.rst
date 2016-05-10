@@ -108,8 +108,12 @@ The RPM packages will be replaced and the services will be reconfigured to corre
 	.. code-block:: shell
 
 		# service squid status
-		squid is stopped
-		// if squid is stopped, run the following command-line
+		
+	
+	If squid is stopped, run the following command-line
+	
+	.. code-block:: shell
+
 		# service squid start	
 
 .. _retrieve-data:
@@ -150,7 +154,7 @@ The following is an example of a request sent to an UForge AppCenter with hostna
 
 .. code-block:: shell
 
-	$ curl 'http://10.0.0.20:9090/ufws/users/myUser -H "Authorization: Basic myUser:password" -H "Accept: application/xml" -v | tidy -xml -indent -quiet
+	$ curl "http://10.0.0.20:9090/ufws/users/myUser" -H "Authorization: Basic myUser:password" -H "Accept: application/xml" -v | tidy -xml -indent -quiet
 
 		* About to connect() to 10.0.0.20 port 8080 (#0)
 		* Trying 10.0.0.20... connected

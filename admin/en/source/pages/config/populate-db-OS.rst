@@ -13,7 +13,9 @@ To enable UForge to generate images based on the operating system it needs all t
 
 For information specific about Windows, refer to :ref:`first-windows-install`.
 
-.. note:: When installing a major version, all minor versions will be included. If you want to restrict to only a few minor versions, you will have to follow this procedure for each minor version you want to install.
+.. note:: When installing a major version, all minor versions will be included. If you want to restrict to only a few minor versions, you will have to follow this procedure for each minor version you want to install.  
+
+.. warning:: If you are going to use the migration feature for RHEL or CentOS, then it is highly recommended to register the major version repositories.
 
 In order to add an operation system in your UForge AppCenter you must:
 

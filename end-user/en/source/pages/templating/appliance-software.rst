@@ -9,7 +9,7 @@ There are two ways to add 3rd party software components or your own software to 
 
 The first way is through the ``Project Catalog``.  This catalog is public to all the users on UForge and is maintained by the privileged users and administrators.  
 
-If the catalog does not contain the software component you are looking for, then you can upload the software into the ``Software`` library.  This is your own private software library, allowing you to upload any software into UForge and be able to add it to any of your appliance templates.
+If the catalog does not contain the software component you are looking for, then you can upload the software into the ``My Software`` library.  This is your own private software library, allowing you to upload any software into UForge and be able to add it to any of your appliance templates.
 
 .. _appliance-projects:
 
@@ -60,28 +60,29 @@ The following is a list of supported file formats:
 To add custom software components to an appliance:
 
 	1. From the ``VM Builder`` tab, click on ``Software Library`` in the top left hand side of the UI.  This opens your private Software Library.  
-	2. Click on the ``create`` button in the top right hand side.
+	2. Click on the ``add software`` in the top right hand side.
 	3. You are now prompted for the name and version of the software component you would like to add. For example ``Wordpress`` and the version ``3.9.1``.  Click ``create`` to complete.
 	4. The software ``Overview`` page will now open. You can modify the name and version, and add a description.
-	5. To upload the files, go to the ``Files`` page. Click ``upload`` to select the files you want to add. And click ``save``.
+	5. To upload the files, go to the ``Files`` page. Click ``upload`` to select the files you want to add and click ``open``. 
+	6. Click ``save``.
 
-	.. image:: /images/adding-mysoftware.jpg
+	.. image:: /images/adding-mysoftware2.jpg
 
-	6. Optionally, you can modify the ``default install path`` that will be used. If you have modified the name of your appliance, it may not be reflected in the install path.
-	7. By default ``.deb`` and ``.rpm`` files will be installed at generation time. Optionally you can edit the settings for those files. Click on the pencil on the right hand side of your uploaded file and un-select ``Install this native package as part of the generation``. Click save. In this case, the ``.deb`` or ``.rpm`` archive file will just be in the directory but will not be installed at generation time.
-	8. Optionally, you can select to unzip archives as part of the generation. To do so: 
+	7. Optionally, you can modify the ``default install path`` that will be used. If you have modified the name of your appliance, it may not be reflected in the install path.
+	8. By default ``.deb`` and ``.rpm`` files will be installed at generation time. Optionally you can edit the settings for those files. Click on the pencil on the right hand side of your uploaded file and un-select ``Install this native package as part of the generation``. Click save. In this case, the ``.deb`` or ``.rpm`` archive file will just be in the directory but will not be installed at generation time.
+	9. Optionally, you can select to unzip archives as part of the generation. To do so: 
 	    - Click on the pencil on the right hand side of your uploaded file. 
 	    - You can then edit the install path and select if it should be extracted. 
-	    - Click ``Save``.
+	    - Click the check mark to save.
 
 	.. image:: /images/extract-mysoftware.jpg
 
-	9. From the ``Licenses`` page, upload any licenses you want to add to this software. Click ``upload``, select your license and click ``save``.
-	10. Add the uploaded software component to the appliance.  Click on the ``Appliance Library`` to view your Appliance Library.  Double-click on the appliance template you want to add the software to.
-	11. Go to the ``Stack`` page and click on the ``My Software`` button in the toolbox.  
+	10. From the ``Licenses`` page, upload any licenses you want to add to this software. Click ``upload``, select your license and click ``save``.
+	11. Add the uploaded software component to the appliance.  Click on the ``Appliance Library`` to view your Appliance Library.  Double-click on the appliance template you want to add the software to.
+	12. Go to the ``Stack`` page and click on the ``My Software`` button in the toolbox.  
 
 	.. image:: /images/mysoftware.jpg
 
-	12. Select the software components you want to add and click the down arrow button. 
-	13. Click ``save`` to add this software component to your appliance template.
+	13. Select the software components you want to add and click the down arrow button. 
+	14. Click ``save`` to add this software component to your appliance template.
 

@@ -11,6 +11,9 @@ To launch the UForge Deployment Wizard, use your browser and go to one of the no
 
 http://<ip address of the node>:9998/deployments
 
+.. note:: The deployment wizard is still using Flex technology, therefore you will require to have flash player installed on your browser.  Steps are being taken to remove this dependency in future versions of the product.
+
+
 Fill in the wizard, note that all the fields are mandatory.
 
 	1. Enter the Organization name. This is the name of the default Organization.  The organization groups all the operating systems, formats and users for the platform. 
@@ -63,4 +66,12 @@ For incoming:
 	* 80 and 443
 	* 22
 
-In addition, communication ports between UForge and IaaS to which you will publish the images have to be open and depend entirely on your IaaS configuration.
+In addition, communication ports between UForge and the cloud platform to which you will publish the images have to be open and depend entirely on your cloud platform configuration, see :ref:`cloud-platform-default-ports` for more information.
+
+Configuring NTP
+~~~~~~~~~~~~~~~
+
+Some cloud platforms will reject uploading machine images, if the HTTP request date is in the future of the target cloud platform.  To ensure proper function of UForge, please edit 'server' directives in ``/etc/ntp.conf`` if UForge servers cannot connect to NTP servers on the internet.
+
+.. warning:: If you wish to contact NTP servers on the internet, then port 123 (UDP) should be opened on your firewall.
+

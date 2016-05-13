@@ -68,12 +68,29 @@ To add custom software components to an appliance:
 
 	.. image:: /images/adding-mysoftware2.jpg
 
+<<<<<<< HEAD
 	7. Optionally, you can modify the ``default install path`` that will be used. If you have modified the name of your appliance, it may not be reflected in the install path.
 	8. By default ``.deb`` and ``.rpm`` files will be installed at generation time. Optionally you can edit the settings for those files. Click on the pencil on the right hand side of your uploaded file and un-select ``Install this native package as part of the generation``. Click save. In this case, the ``.deb`` or ``.rpm`` archive file will just be in the directory but will not be installed at generation time.
 	9. Optionally, you can select to unzip archives as part of the generation. To do so: 
 	    - Click on the pencil on the right hand side of your uploaded file. 
 	    - You can then edit the install path and select if it should be extracted. 
 	    - Click the check mark to save.
+=======
+	6. Optionally, you can modify the ``default install path`` that will be used. If you have modified the name of your appliance, it may not be reflected in the install path.
+	7. By default ``.deb`` and ``.rpm`` files will be installed at generation time. Optionally you can edit the settings for those files: 
+		- Click on the pencil on the right hand side of your uploaded file.
+		- Un-select ``Install this native package as part of the generation``. 
+		- Click the check mark to save your changes. 
+	
+	In this case, the ``.deb`` or ``.rpm`` archive file will just be in the directory but will not be installed at generation time.
+
+	.. image:: /images/install-mysoftware-gen.jpg
+
+	8. Optionally, you can select to unzip archives as part of the generation. To do so: 
+	    - Click on the pencil on the right hand side of your uploaded file. 
+	    - You can then edit the install path and select if it should be extracted. 
+	    - Click the check mark to save your changes.
+>>>>>>> f885422... adding new screenshots for 3.6 for install profile
 
 	.. image:: /images/extract-mysoftware.jpg
 

@@ -32,7 +32,7 @@ To change the log level of the web service:
 
   .. code-block:: shell
 
-    touch /opt/Tomcat/webapps/ufws/ .reload
+    touch /opt/Tomcat/webapps/ufws/.reload
 
   4. Restart the Web Service
 

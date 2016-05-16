@@ -37,6 +37,7 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
 extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
+    'rst2pdf.pdfbuilder',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -281,6 +282,17 @@ texinfo_documents = [
      author, 'UForgeAppCenterUserDoc', 'This documentation is to help understand and use UForge AppCenter',
      'Miscellaneous'),
 ]
+
+# PDF documentation information
+pdf_documents = [
+    ('index', u'UForgeAppCenterUserDoc', u'UForge AppCenter User Documentation', u'UShareSoft'),
+]
+
+# A comma-separated list of custom stylesheets.
+pdf_stylesheets = ['sphinx', 'kerning', 'a4', 'ja']
+
+# Language to be used for hyphenation support
+pdf_language = "ja"
 
 # Documents to append as an appendix to all manuals.
 #texinfo_appendices = []

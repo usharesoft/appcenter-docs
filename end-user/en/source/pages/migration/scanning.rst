@@ -33,7 +33,7 @@ To carry out a scan, go to the ``Migration`` tab:
 	3. Select ``Linux`` from the drop-down menu.
 	4. If you want to exclude certain directories or files from the scan then click ``add`` and enter the directory path or full pathname of the file.
 
-	.. image:: /images/migration-create-scan.jpg
+	.. image:: /images/migration-create-scan2.jpg
 
 	5. Click ``Next``. Follow the instructions on the UForge AppCenter GUI.
 	6. Download binary locally by clicking ``Download``.

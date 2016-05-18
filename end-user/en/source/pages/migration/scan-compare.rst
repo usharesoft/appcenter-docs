@@ -11,7 +11,7 @@ As scans are just meta-data, you can compare two scans to determine their differ
 
 From the ``Migration`` tab:
 
-	1. Click on the ``compare`` button at the top right hand side.
+	1. Click on the ``compare`` button (balance icon) at the top right hand side of the ``My Scans`` page.
 	2. Select the source and target scan. 
 
 	.. image:: /images/scan-compare.jpg

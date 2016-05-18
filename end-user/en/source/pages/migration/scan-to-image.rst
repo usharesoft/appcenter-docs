@@ -9,7 +9,7 @@ Once you have scanned a source system, you can generate a machine image directly
 
 To create an image from a scan:
 
-	1. Go to the ``Migration`` tab > ``My Scans``
+	1. Go to the ``Migration`` tab.
 	2. Double click on the scan to view details.
 	3. Click on the ``generate`` icon in the top right.
 

@@ -72,3 +72,10 @@ To carry out a scan, go to the ``Migration`` tab:
 	6. Optionally you can select ``Use local storage``. This means that the scan will be not be done in streaming but in 2 phases. First the data will be stored on a temporary storage drive during the scan process. This temporary storage can be a local directory or a virtual space on the network. It must be at least half the size of the machine you want to scan.
 
 	If you are using local storage you will have to launch a script at the end to upload the archive to UForge AppCenter later.
+
+Viewing Scans
+~~~~~~~~~~~~~
+
+To view all the scans executed from your UForge account, go to the ``Migration`` tab. On the ``My Scans`` page you can view a list of the scans. To view the details of a scan, click on the scan and refer to :ref:`migration-scan-details`.
+
+	.. image:: /images/scan-list.jpg

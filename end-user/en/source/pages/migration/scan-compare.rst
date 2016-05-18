@@ -20,4 +20,6 @@ From the ``Migration`` tab:
 
 UForge lists all the differences between the two systems. The results show the changes you would need to make manually to get your source scan to the state of the target scan.
 
+	.. image:: /images/scan-compare-results.jpg
+
 For example, if you have source scan A and target scan B, in the list, any items that are listed mean they are in scan B but not in scan A. Items that are in strikethrough mean that they were in your source scan A but not in scan B.

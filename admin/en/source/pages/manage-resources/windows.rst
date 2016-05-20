@@ -163,7 +163,7 @@ Each time you have a new Golden Image, you need to put them in the right NAS loc
 
 For example to install the golden image saved to the following path:  Windows/releases/Server2008R2/x86_64/English/Standard/Full/2012-10-19/Windows_2008R2_Standard_Full_2012-10-19.raw.gz, you need to run:: 
 
-	org golden create --name Windows --arch x86_64 --version Server2008R2 --language English --edition Standard --type Full --goldenDate 2012-10-19 –-goldenName Windows_2008R2_Standard_Full_2012-10-19.raw.gz
+	org golden create --name Windows --arch x86_64 --version Server2008R2 --language English --edition Standard --type Full --goldenDate 2012-10-19 --goldenName Windows_2008R2_Standard_Full_2012-10-19.raw.gz
 
 .. _store-updated-golden:
 

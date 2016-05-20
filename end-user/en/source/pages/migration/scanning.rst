@@ -50,8 +50,8 @@ To carry out a scan, go to the ``Migration`` tab:
 
 .. _migration-scan-windows:
 
-Scanning a Windows Machine
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Scanning a Microsoft Windows Machine
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To carry out a scan, go to the ``Migration`` tab:
 

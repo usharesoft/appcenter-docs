@@ -20,6 +20,7 @@ Contents:
    pages/apis/using-java-sdk
    pages/apis/using-python-sdk
    pages/apis/hammr
+   pages/apis/python-cli
 
 .. _trademarks:
 

@@ -7,7 +7,10 @@ Changing Your Password
 
 To modify your password:
 
-	1. Click on the ``My Account`` tab and go to ``Change Password``.
-	2. Enter your current password and your new password.
-	3. Confirm your new password.
-	4. Click ``save``.
+	1. Click on the ``Profile`` tab.
+	2. In the top right, click on the key icon.
+
+	.. image:: /images/password-modify.jpg
+
+	3. Enter your current password and your new password.
+	4. Click ``ok``.

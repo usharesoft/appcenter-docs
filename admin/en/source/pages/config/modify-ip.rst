@@ -19,15 +19,19 @@ To modify the UForge IP address or hostname, do the following.
 		* /etc/hosts for all host definitions
 		* /etc/fstab for remote NFS mounts
 		* /etc/UShareSoft/uforge/uforge.conf for the following entries:
-			- UFORGE_GF_INTERNAL_IP
+			- UFORGE_PROXY_INFOS
 			- UFORGE_EXTERNAL_HOSTNAME
-			- UFORGE_NFS_*
 			- UFORGE_IAAS_DOWNLOAD_URL
+			- UFORGE_NOREPLY_EMAIL
+			- UFORGE_URL
 		* /etc/udev/rules.d/70-persistent-net.rules
 
-	4. Launch the following script::
+	4. Modify the header, footer, IP information in /var/opt/UShareSoft/uforge-client/gwt/uforge/templates/config.xml (except for <c:uForgeUrl>) with the EXTERNAL_URL variable. For more information on modifying the portal information, refer to :ref:`rebrand-considerations`.
+
+	5. Launch the following two scripts::
 
 		$ /opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh
+		$ /opt/UShareSoft/uforge-client/bin/uforge_ui_update.sh
 
 If you have a load balancer where rules have been entered for accessing the UForge web service make sure the URIs match the following parameter in uforge.conf::
 

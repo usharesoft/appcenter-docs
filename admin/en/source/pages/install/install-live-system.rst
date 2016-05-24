@@ -9,7 +9,7 @@ Installing on an Existing Operating System
 
 If you are unable to import or register an ISO image or VM image to your infrastructure, then it is possible to install UForge AppCenter manually on top of an existing running system.  UShareSoft offers official RPM package repositories for the following operating systems:
 
-	* RHEL 6
+	* Red Hat Enterprise Linux 6
 	* CentOS 6
 
 These packages can be installed via yum package command-line tool.

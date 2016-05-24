@@ -13,14 +13,15 @@ To create an appliance template from a scan:
 
 From the Migration tab:
 	1. Go to the ``Migration`` tab > ``My Scans``.
-	2. Select the orange circle image to create an appliance template from the scan.
+	2. Select the ``import`` button (downward arrow) to create an appliance template from the scan.
+
+	.. image:: /images/scan-import.jpg
+
 	3. Enter the appliance name and version.
 	4. Click ``import``.
 
-	.. image:: /images/migration-scan-import.jpg
 
-
-You can now generate a machine image, share it to the Marketplace or to a workspace.
+You can now generate a machine image and share it, as you would any other appliance template.
 
 More importantly you can now change the contents of the original scanned system.  If you go to the ``VM Builder`` tab, the new appliance template will be listed in the ``imported templates`` section.  Double-click on it to view the details or modify it.
 

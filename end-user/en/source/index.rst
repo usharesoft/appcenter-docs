@@ -20,6 +20,7 @@ Contents:
    pages/apis/using-java-sdk
    pages/apis/using-python-sdk
    pages/apis/hammr
+   pages/apis/python-cli
 
 .. _trademarks:
 
@@ -37,6 +38,10 @@ Oracle, GlassFish, Java, and all Java-based trademarks and logos are trademarks 
 Apache Ant, Ant, and Apache are trademarks of The Apache Software Foundation.
 
 UNIX is a registered trademark of the Open Group in the United States and in other countries.
+
+Red Hat Enterprise Linux is a trademark of Red Hat.
+
+MySQL and the MySQL logo are the servicemarks, trademarks, or registered trademarks owned by Oracle Corporation Inc.
 
 Other company names and product names are trademarks or registered trademarks of their respective owners.
 

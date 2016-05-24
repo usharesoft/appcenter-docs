@@ -13,5 +13,5 @@ The number of API key pairs that a user can create is set by the administrator. 
 
 To create a key pair: 
 
-	1. Click on the ``My Account`` tab and go to ``API Keys``. 
+	1. Click on the ``Credentials`` tab (key icon) and go to ``API Keys``. 
 	2. Click ``create``.

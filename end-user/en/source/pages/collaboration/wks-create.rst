@@ -8,12 +8,15 @@ Creating a Workspace
 To create a workspace:
 
 	1. Go to the ``Collaboration`` tab.
-	2. Click on the green plus (+) sign on the left hand, next to ``Workspaces``.
+	2. Click on the plus (+) sign on the top right hand, next to the workpace drop-down menu (in the example below ``MySpace``).
+
+	.. image:: /images/workspace-create-button.jpg
+
 	3. Enter the workspace name.
 	4. Select the organization from the drop-down menu.
-	5. Click ``Create``.
+	5. Click ``create workspace``.
 
-	.. image:: /images/workspace-create.jpg
+	.. image:: /images/workspace-create2.jpg
 
 You can now invite users, share appliance templates, and post comments in the activity stream.
 
@@ -29,10 +32,9 @@ Members can also add comments to the workspace for other members of the workspac
 To add a comment in a workspace, do the following:
 
 	1. Go to the ``Collaboration`` tab.
-	2. If you have several workspaces, select the workspace you want on the left.
-	3. Go to the ``Activity`` page.
-	4. Enter your comment in the square.
-	5. Click ``post``.
+	2. If you have several workspaces, select the workspace you want from the drop-down menu at the top right.
+	3. Enter your comment in the square.
+	4. Click ``post``.
 
 You can also post comments on a specific appliance that is shared in the workspace. For more information, see :ref:`workspace-appliance-comments`.
 

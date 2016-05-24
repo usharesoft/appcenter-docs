@@ -14,8 +14,8 @@ Debian
 	$ pip install uforge-python-sdk
 
 
-RedHat and CentOS
-~~~~~~~~~~~~~~~~~
+Red Hat and CentOS
+~~~~~~~~~~~~~~~~~~
 
 .. code-block:: sh
 

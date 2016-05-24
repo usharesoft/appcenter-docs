@@ -7,9 +7,9 @@ Hosting Proprietary Packages
 
 .. note:: The use of self-signed certificate can comport security risks.
 
-Proprietary packages, such as RedHat are not delivered as part of the UForge repository. You must have the original ISO images of the operating system in questions and follow the steps below.
+Proprietary packages, such as Red Hat Enterprise Linux are not delivered as part of the UForge repository. You must have the original ISO images of the operating system in questions and follow the steps below.
 
-For example, to add a RedHat repository:
+For example, to add a Red Hat repository:
 
 	1. Mount the iso into /mnt (on the works node)
 

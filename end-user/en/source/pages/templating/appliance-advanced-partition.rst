@@ -37,6 +37,8 @@ To set advanced partitioning for an appliance template:
 	    * logical group(s), assigning the associated physical extend (partition)
 	    * specify the logical volume specification for the created logical group(s)
 
+	    .. image:: /images/advanced-partitioning.jpg
+
 	5. Click on the arrow in ``Disks`` next to sda. You will see the default disks.
 
 	.. image:: /images/install-profile-partitioning-disks.jpg

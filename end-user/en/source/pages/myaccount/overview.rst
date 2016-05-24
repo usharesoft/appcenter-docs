@@ -3,7 +3,7 @@
 Managing Your Accounts
 ======================
 
-The ``My Account`` tab allows you to modify a large number of your personal details, including your Cloud Account information, API Keys and SSH keys.  
+The ``Profile`` tab and ``Crendentials`` tab allow you to modify a large number of your personal details, including your password, Cloud Account information, API Keys and SSH keys.  
 
 The following sub-sections go into detail on how to manage your account information:
 

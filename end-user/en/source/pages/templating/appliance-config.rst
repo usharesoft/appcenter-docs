@@ -24,7 +24,7 @@ To add a boot script to your appliance:
 	3. Select ``Boot Scripts``.
 	4. Click on ``new`` or ``upload`` button on the right hand side.
 
-	.. image:: /images/install-profile-add-bootscript.jpg
+	.. image:: /images/bootscript-add.jpg
 
 If you are creating a new boot script:
 
@@ -34,7 +34,7 @@ If you are creating a new boot script:
 	4. Enter the contents of the boot script.
 	5. Click ``save``.
 
-	.. image:: /images/install-profile-create-bootscript.jpg
+	.. image:: /images/bootscript-create.jpg
 
 If you are uploading an existing boot script:
 

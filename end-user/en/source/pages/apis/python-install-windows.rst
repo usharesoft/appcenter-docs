@@ -2,8 +2,8 @@
 
 .. _apis-python-install-windows:
 
-For Windows
------------
+For Microsoft Windows
+---------------------
 
 Run the following command::
 

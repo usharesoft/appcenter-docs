@@ -118,7 +118,7 @@ The following is a concrete example to begin the population of CentOS 6.5 32bit:
 
 	For example::
 
-		uforge org repo create --name "CentOS 6.5 os" --repoUrl hhttp://distros-repository.usharesoft.com/usharesoft/centos/6/x86_64 --type RPM -u $ADMIN -p $PASS
+		uforge org repo create --name "CentOS 6.5 os" --repoUrl http://distros-repository.usharesoft.com/usharesoft/centos/6/x86_64 --type RPM -u $ADMIN -p $PASS
 
 	7. Attach repository to the distribution as follows::
 

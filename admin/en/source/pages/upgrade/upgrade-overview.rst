@@ -103,7 +103,8 @@ The RPM packages will be replaced and the services will be reconfigured to corre
 	1. database node
 	2. compute node(s)
 	3. web service and Portal nodes
-	4. Run the following CLI command in order to know if Squid is running:
+
+Run the following CLI command in order to know if Squid is running:
 
 	.. code-block:: shell
 

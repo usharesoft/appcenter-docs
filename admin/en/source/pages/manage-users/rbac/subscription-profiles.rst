@@ -98,6 +98,6 @@ If you no longer want a subscription profile to be used when creating new users,
 
 To disable a subscription profile::
 
-	uforge user disable --name profileA -u $ADMIN -p $PASS
+	uforge subscription disable --name profileA -u $ADMIN -p $PASS
 
 If no org is specified, the default organization is used.

@@ -24,7 +24,7 @@ In order to add an operation system in your UForge AppCenter you must:
 	3. Link the distribution to the repository.
 	4. Launch spider to fill the repository with the packages.
 
-The following is a concrete example to begin the population of CentOS 6.5 32bit:
+The following is a concrete example to begin the population of CentOS 6.5 64bit:
 
 	1. In order for the following commands to be generic you can set some variables in your environment.
 
@@ -35,15 +35,15 @@ The following is a concrete example to begin the population of CentOS 6.5 32bit:
 
 	2. Run the following CLI command in order to create the distribution::
 
-		uforge org os add --name CentOS --arch i386 --version 6.5 -u $ADMIN -p $PASS
+		uforge org os add --name CentOS --arch x86_64 --version 6.5 -u $ADMIN -p $PASS
 
 	3. Enable the new operating system for the organization. The following command enables CentOS 6.5 32bit in the default organization::
 
-		uforge org os enable --name CentOS --version 6.5 --arch i386 -u $ADMIN -p $PASS
+		uforge org os enable --name CentOS --version 6.5 --arch x86_64 -u $ADMIN -p $PASS
 
 	4. Enable the user to use the operating system.  The user must be a member of the organization. This step can be done later.::
 
-		uforge user os enable --account root --name CentOS --version 6.5 --arch i386 -u $ADMIN -p $PASS
+		uforge user os enable --account root --name CentOS --version 6.5 --arch x86_64 -u $ADMIN -p $PASS
 
 	5. Create the distribution repository. The following example shows the creation of an official CentOS repository. However, you can also create a repository based on the UShareSoft official repository as shown later.
 
@@ -51,9 +51,9 @@ The following is a concrete example to begin the population of CentOS 6.5 32bit:
 
 		.. code-block:: shell
 
-			uforge org repo create --name "CentOS 6.5 os" --repoUrl http://vault.centos.org/6.5/os/i386/ --type RPM --officiallySupported -u $ADMIN -p $PASS
+			uforge org repo create --name "CentOS 6.5 os" --repoUrl http://vault.centos.org/6.5/os/x86_64/ --type RPM --officiallySupported -u $ADMIN -p $PASS
 
-			Success: Created repository with url [http://vault.centos.org/6.5/os/i386/] to default organization
+			Success: Created repository with url [http://vault.centos.org/6.5/os/x86_64/] to default organization
 
 	The ``–-name`` specified here is the “tagname” that will be shown in the UI when creating an appliance.
 	The ``--repoUrl`` can be either ``http://`` or ``file://``
@@ -126,7 +126,7 @@ The following is a concrete example to begin the population of CentOS 6.5 32bit:
 
 	7. Attach repository to the distribution as follows::
 
-		uforge org repo os attach --name CentOS --arch i386 --version 6.5 --repoIds 354 -u $ADMIN -p $PASS
+		uforge org repo os attach --name CentOS --arch x86_64 --version 6.5 --repoIds 354 -u $ADMIN -p $PASS
 	The ``–-repoIds`` specified here are the space-separated “id” of previously created repositories, shown by command ``uforge org repo list -u $ADMIN -p $PASS``.
 
 	8. Populate repository packages::
@@ -145,6 +145,6 @@ The following is a concrete example to begin the population of CentOS 6.5 32bit:
 
 	10. Create OS profile based on packages (minimal, server, etc.)::
 
-		/opt/UShareSoft/uforge/bin/runjob.py sorter_low_prio -d CentOS -v 6.5 -a i386
+		/opt/UShareSoft/uforge/bin/runjob.py sorter_low_prio -d CentOS -v 6.5 -a x86_64
 
 	

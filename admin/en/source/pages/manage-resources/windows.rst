@@ -13,7 +13,7 @@ A Golden Image can be between 5 to 10 Gb, depending on the selected version.
 
 This chapter describes how to create your own Windows Golden Images. Windows Golden Images need to be created in order to create Windows templates. If you want to incorporate a Windows update, then you need to create and install a new set of Golden Images. UShareSoft has a tool called the Golden Creator and can provide Golden Images. This chapter assumes you want to create the Golden Image yourself.
 
-..note:: A good knowledge of Windows is required.
+.. note:: A good knowledge of Windows is required.
 
 Supported Windows Versions
 --------------------------
@@ -38,6 +38,7 @@ The following UForge features are not supported with Windows Appliances:
 	* Package selection at the OS level (however, users can add software via MySoftware or Projects. See the UForge User Guide.)
 	* UForge Studio
 	* Windows migration possible as blackbox only
+	* Windows ISO format not supported
 
 Workflow for Windows Golden Image
 ---------------------------------

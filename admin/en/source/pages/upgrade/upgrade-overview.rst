@@ -29,7 +29,9 @@ You must also have set up the yum repo file to authorize UForge updates using co
 
 The (optional) parameter <uforge install type> can take the values uforge-ee or uforge-dev. By default uforge-ee is used.
 
-To update the platform, use the “yum” command-line tool:
+To update the platform, use the "yum" command-line tool as follows:
+
+.. note:: Running ``yum update`` may also update OS packages from CentOS official repository. You should accept all the updates because UForge is qualified based on the lasest packages.
 
 .. code-block:: shell
 

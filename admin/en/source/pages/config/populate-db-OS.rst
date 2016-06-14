@@ -95,7 +95,6 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 		* http://distros.repository.usharesoft.com/debian/squeeze/mirror/ftp.fr.debian.org/debian/ squeeze contrib non-free main
 		* http://distros.repository.usharesoft.com/debian/squeeze-updates/mirror/ftp.fr.debian.org/debian/ squeeze-updates contrib non-free main 
 		* http://distros.repository.usharesoft.com/debian/security/squeeze/updates/mirror/security.debian.org/ squeeze/updates main contrib non-free
-		* http://distros.repository.usharesoft.com/debian/squeeze/mirror/ftp.fr.debian.org/debian/ squeeze contrib non-free main
 
 	``CentOS (exemple CentOS 6.7)``
 

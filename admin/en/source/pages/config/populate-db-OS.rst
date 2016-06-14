@@ -92,15 +92,15 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 
 	``Debian (exemple version 6)``
 
-		* http://distros.repository.usharesoft.com/debian/squeeze/mirror/ftp.fr.debian.org/debian/ squeeze contrib non-free main
-		* http://distros.repository.usharesoft.com/debian/squeeze-updates/mirror/ftp.fr.debian.org/debian/ squeeze-updates contrib non-free main 
-		* http://distros.repository.usharesoft.com/debian/security/squeeze/updates/mirror/security.debian.org/ squeeze/updates main contrib non-free
+		* http://distros-repository.usharesoft.com/debian/squeeze/mirror/ftp.fr.debian.org/debian/ squeeze contrib non-free main
+		* http://distros-repository.usharesoft.com/debian/squeeze-updates/mirror/ftp.fr.debian.org/debian/ squeeze-updates contrib non-free main 
+		* http://distros-repository.usharesoft.com/debian/security/squeeze/updates/mirror/security.debian.org/ squeeze/updates main contrib non-free
 
 	``CentOS (exemple CentOS 6.7)``
 
-		* http://distros.repository.usharesoft.com/centos/6.7/updates/x86_64
-		* http://distros.repository.usharesoft.com/centos/6.7/extras/x86_64
-		* http://distros.repository.usharesoft.com/centos/6.7/os/x86_64
+		* http://distros-repository.usharesoft.com/centos/6.7/updates/x86_64
+		* http://distros-repository.usharesoft.com/centos/6.7/extras/x86_64
+		* http://distros-repository.usharesoft.com/centos/6.7/os/x86_64
 
 	``OpenSUSE (exemple version 12.2)``
 

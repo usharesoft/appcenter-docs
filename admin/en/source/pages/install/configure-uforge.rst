@@ -11,9 +11,6 @@ To launch the UForge Deployment Wizard, use your browser and go to one of the no
 
 http://<ip address of the node>:9998/deployments
 
-.. note:: The deployment wizard is still using Flex technology, therefore you will require to have flash player installed on your browser.  Steps are being taken to remove this dependency in future versions of the product.
-
-
 Fill in the wizard, note that all the fields are mandatory.
 
 	1. Enter the Organization name. This is the name of the default Organization.  The organization groups all the operating systems, formats and users for the platform. 
@@ -40,7 +37,7 @@ Fill in the wizard, note that all the fields are mandatory.
 
 		If you choose to use a remote storage, indicate the NFS server with mount point and you should enter the full path for the OS directory e.g. /DISTROS.
 
-		If you select remote storage for the image store, you have to make sure that the path USER_DATA exists, with the correct permissions i.e. tomcat:tomcat (see :ref:`repository-shared-storage`, step 4, Check mount points, for more detail).
+		If you select remote storage for the image store, you have to make sure that the path USER_DATA exists, with the correct permissions i.e. tomcat:tomcat. Refer to :ref:`repository-shared-storage`, step 4, Check mount points, for more details.
 
 	13. Indicate the generation cluster compute node hostnames. You can add additional compute nodes by clicking the add button.
 

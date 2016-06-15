@@ -19,33 +19,40 @@ For information specific to Microsoft Windows, refer to :ref:`first-windows-inst
 
 In order to add an operation system in your UForge AppCenter you must:
 
-	1. Create the OS in the organization.
-	2. Create the repository. This includes the official repository as well as the specific UShareSoft tool repository.
-	3. Link the distribution to the repository.
-	4. Launch spider to fill the repository with the packages.
+	1. Connect to one of your UForge platform instances
+	2. Create the OS in the organization.
+	3. Create the repository. This includes the official repository as well as the specific UShareSoft tool repository.
+	4. Link the distribution to the repository.
+	5. Launch spider to fill the repository with the packages.
 
 The following is a concrete example to begin the population of CentOS 6.5 64bit:
 
-	1. In order for the following commands to be generic you can set some variables in your environment.
+	1. Connect to UForge.
 
-	.. code-block:: shell
-	
+	   .. code-block:: shell
+
+		# ssh root@<your UForge instance>
+
+	2. In order for the following commands to be generic you can set some variables in your environment.
+
+	   .. code-block:: shell
+
 		# . /etc/UShareSoft/uforge/uforge.conf
 		# ADMIN=$UFORGE_WEBSVC_LOGIN ; PASS=$UFORGE_WEBSVC_PASSWORD
 
-	2. Run the following CLI command in order to create the distribution::
+	3. Run the following CLI command in order to create the distribution::
 
 		uforge org os add --name CentOS --arch x86_64 --version 6.5 -u $ADMIN -p $PASS
 
-	3. Enable the new operating system for the organization. The following command enables CentOS 6.5 32bit in the default organization::
+	4. Enable the new operating system for the organization. The following command enables CentOS 6.5 32bit in the default organization::
 
 		uforge org os enable --name CentOS --version 6.5 --arch x86_64 -u $ADMIN -p $PASS
 
-	4. Enable the user to use the operating system.  The user must be a member of the organization. This step can be done later.::
+	5. Enable the user to use the operating system.  The user must be a member of the organization. This step can be done later.::
 
 		uforge user os enable --account root --name CentOS --version 6.5 --arch x86_64 -u $ADMIN -p $PASS
 
-	5. Create the distribution repository. The following example shows the creation of an official CentOS repository. However, you can also create a repository based on the UShareSoft official repository as shown later.
+	6. Create the distribution repository. The following example shows the creation of an official CentOS repository. However, you can also create a repository based on the UShareSoft official repository as shown later.
 
 	CentOS 6.5 repository:
 
@@ -110,7 +117,7 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 
 	http://distros-repository.usharesoft.com/usharesoft/scientificlinux/6.6/x86_64
 
-	6. You must then add the specific UShareSoft tool repository. The repository to attach is one of the following:
+	7. You must then add the specific UShareSoft tool repository. The repository to attach is one of the following:
 
 		* CentOS (example version 6, arch x86_64): http://distros-repository.usharesoft.com/usharesoft/centos/6/x86_64
 		* Red Hat Enterprise Linux: (example version 6.2, arch x86_64): http://distros-repository.usharesoft.com/usharesoft/rhel/6.2/x86_64
@@ -119,22 +126,24 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 		* Debian: (example version 8, arch x86_64) [arch=amd64] http://distros-repository.usharesoft.com/usharesoft/debian/ jessie main
 		* Ubuntu: (example version 14.04, arch x86_64) [arch=amd64] http://distros-repository.usharesoft.com/usharesoft/ubuntu/ trusty main
 
-	For example::
+
+	    For example::
 
 		uforge org repo create --name "CentOS 6.5 os" --repoUrl http://distros-repository.usharesoft.com/usharesoft/centos/6/x86_64 --type RPM -u $ADMIN -p $PASS
 
-	7. Attach repository to the distribution as follows::
+	8. Attach repository to the distribution as follows::
 
 		uforge org repo os attach --name CentOS --arch x86_64 --version 6.5 --repoIds 354 -u $ADMIN -p $PASS
-	The ``–-repoIds`` specified here are the space-separated “id” of previously created repositories, shown by command ``uforge org repo list -u $ADMIN -p $PASS``.
+	
+	   The ``–-repoIds`` specified here are the space-separated “id” of previously created repositories, shown by command ``uforge org repo list -u $ADMIN -p $PASS``.
 
-	8. Populate repository packages::
+	9. Populate repository packages::
 
 		/opt/UShareSoft/uforge/cron/update_repos_pkgs.sh
 
 	.. note:: This procedure may take a long time.
 
-	9. To verify if the procedure is terminated, run the following command:
+	10. To verify if the procedure is terminated, run the following command:
 
 	.. code-block:: shell
 
@@ -142,7 +151,7 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 		
 		The procedure is terminated when you see the line: INFO  CheckForRepositoriesUpdates:275 - Entering CheckForRepositoriesUpdates->terminate()
 
-	10. Create OS profile based on packages (minimal, server, etc.)::
+	11. Create OS profile based on packages (minimal, server, etc.)::
 
 		/opt/UShareSoft/uforge/bin/runjob.py sorter_low_prio -d CentOS -v 6.5 -a x86_64
 

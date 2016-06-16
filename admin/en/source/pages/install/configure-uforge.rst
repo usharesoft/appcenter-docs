@@ -11,6 +11,8 @@ To launch the UForge Deployment Wizard, use your browser and go to one of the no
 
 http://<ip address of the node>:9998/deployments
 
+.. note:: The deployment wizard is still using Flex technology, therefore you will require to have flash player installed on your browser.  Steps are being taken to remove this dependency in future versions of the product.
+
 Fill in the wizard, note that all the fields are mandatory.
 
 	1. Enter the Organization name. This is the name of the default Organization.  The organization groups all the operating systems, formats and users for the platform. 

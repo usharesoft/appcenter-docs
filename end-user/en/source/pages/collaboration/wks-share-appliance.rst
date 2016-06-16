@@ -33,8 +33,8 @@ To add a comment to a specific appliance template in a workspace, do the followi
 	3. Go to the ``Shared Templates`` page.
 	4. Select the appliance template you want to comment on.
 	5. Click on ``Comments``.
-	7. Add your text. 
-	8. Click ``post``.
+	6. Add your text. 
+	7. Click ``post``.
 
 	.. image:: /images/workspace-comment2.jpg
 

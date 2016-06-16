@@ -18,27 +18,23 @@ The subscription target has the following commands:
 
 .. code-block:: shell
 
-	Usage: uforge subscription <command> [options] [args]
-
-	Commands:
-		admin add                      : Add a user as a subscription profile administrator.
-		admin remove                   : Remove a user as a subscription profile administrator.
-		create                         : Create a new subscription profile within an organization.
-		delete                         : Delete a subscription profile from an organization.
-		disable                        : Disables a subscription profile within an organization    (cannot be used to create users).
-		enable                         : Activates or enables a subscription profile within an organization.
-		format add                     : Add an image format to a subscription profile.
-		format remove                  : Remove an image format to a subscription profile.
-		info                           : Get detailed information on a subscription profile within an organization.
-		list                           : List all the subscription profiles for a given organization.  If no organization is provided the default organization is used.
-		os add                         : Add an operating system to a subscription profile.
-		os remove                      : Remove an operating system from a subscription profile.
-		quota update                   : Updates a subscription profile quota
-		role add                       : Add a role to a subscription profile
-		role remove                    : Remove a role to a subscription profile
-		update                         : Updates an existing subscription profile.
-
-	...removed options for clarity
+	========================================================================================================================
+	Subscription_Cmd help
+	========================================================================================================================
+	admin                         | Manage subscription profile admins                                                     
+	create                        | Create a new subscription profile within an organization.                              
+	delete                        | Delete a subscription profile from an organization.                                    
+	disable                       | Activates or enables a subscription profile within an organization.                    
+	enable                        | Activates or enables a subscription profile within an organization.                    
+	help                          | List available commands with "help" or detailed help with "help cmd".                  
+	info                          | Get detailed information on a subscription profile within an organization.             
+	list                          | List all the subscription profiles for a given organization. If no                     
+	os                            | Manage subscription profile formats                                                    
+	quota                         | Manage subscription profile quotas                                                     
+	role                          | Manage subscription profile roles                                                      
+	targetformat                  | Manage subscription profile target formats                                             
+	targetplatform                | Manage subscription profile target platforms                                           
+	update                        | Updates an existing subscription profile. 
 
 Creating and Enabling Subscription Profiles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -56,7 +52,7 @@ You can add the list of administrators that will be allowed to create users by u
 
 When creating a subscription profile, you can also specify the following:
 
-	* formats
+	* formats (using targetformat and targetplatform)
 	* OS
 	* quotas
 	* roles
@@ -90,6 +86,22 @@ When creating subscription profiles, the UForge administrator can add subscripti
 	uforge subscription admin add --admin kermit --name profileA --org usharesoft -u $ADMIN -p $PASS
 
 The argument admin is the login of the user you want to add as an administrator. This administrator will be able to create users with the subscription profile specified by the argument name.
+
+.. _formats-subscription:
+
+Adding Formats to a Group of Users
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To add access to a format to a group of users, you can add it as part of a subscription profile. This means that all the users that are created with this subscription profile will have access to the format. To add a format to a subscription profile use the command uforge subscription targetFormat add. You cannot add access to a format that is not included in the organization. For a list of formats that are part of the organization, use the command:
+
+	* ``org targetFormat list``
+	* ``org targetPlatform list``
+
+For example::
+
+	$ uforge subscription targetFormat add --targetFormat ovf qcow2 vbox --account kermit --url https://uforge.usharesoft.com:443 -u $ADMIN -p $PASS
+
+.. _disable-subscription:
 
 Disabling a Subscription Profile 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

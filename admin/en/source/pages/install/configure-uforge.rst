@@ -48,3 +48,13 @@ Fill in the wizard, note that all the fields are mandatory.
 		.. note:: The deployment may take a few hours, depending on the number of operating systems you have chosen.
 
 	15. Once the deployment is complete, click ``Finish``. 
+
+.. warning:: As part of the deployment phase, the wizard logs all the steps of the configuration.  These logs though include the administration passwords and other sensitive data you have used to configure this platform.  It is important that these logs do not remain on the machine once the deployment is over.  To do this:
+
+	.. code-block:: bash
+
+		# cd /var/log/UShareSoft
+		# /bin/rm -rf oas-deploy
+
+
+

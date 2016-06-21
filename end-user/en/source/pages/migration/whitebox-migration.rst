@@ -27,6 +27,8 @@ As part of this transformation process, the scan information is mapped to one or
 	* SELinux settings not taken into account – this information is lost
 	* SSH keys.  You will need to manually add the ssh keys to the install profile.  
 
+.. warning:: Currently, UForge is not able to migrate the Yum repository GPG keys. This means that the user will have to accept the repository GPG key when the user installs or updates a package. The user will have to do this only once per repository.
+
 .. image:: /images/migration-whitebox-mapping.jpg
 
 Once the scan report has been imported as an appliance template, you can update the content prior to generating a machine image.

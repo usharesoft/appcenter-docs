@@ -32,10 +32,10 @@ In order to list the formats available for a given `user`, use the command ``use
 
 .. _formats-org:
 
-Adding Formats to an Organization
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Adding Formats to an Organization Using the CLI
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To add access to a format to an organization, you must follow these steps:
+To add access to a format to an organization, you must:
 
 	1. Create a target format category using  ``uforge org category create``
 	2. Create target format using  ``uforge org targetformat create``
@@ -53,5 +53,52 @@ Once the format is created in a organisation, you can either:
 
 	* add it to a group of users by adding it to the subscription profile (refer to :ref:`formats-subscription`)
 	* add it to an individual user (refer to :ref:`set-formats-user`)
+
+Adding Image Formats from the GUI
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can create your own image formats from the UForge GUI. To do so:
+
+	1. Create a target platform.
+	2. Create a target format.
+
+`Create a Target Platform`
+
+To create a target platform:
+
+	1. From the ``Administration`` tab, click on ``Target Platforms``.
+	2. In the top right-hand, click on ``new target platform``.
+
+	.. image:: /images/target-platform-button.jpg
+
+	3. Enter the name of the target platform.
+	4. Select the type from the drop-down menu.
+	5. Optionally you can click on the plus (+) to add a logo.
+	6. If you do not want the target platform to be visible immediately, click on the check box next to ``Enable`` to deselect.
+	7. Click ``create`` in the top right to complete the creation.
+
+	.. image:: /images/target-platform-create.jpg
+
+
+`Create a Target Format`
+
+To create a target format:
+
+	1. From the ``Administration`` tab, click on ``Target Platforms``.
+	2. In the top right-hand, click on ``new target format``.
+
+	.. image:: /images/target-format-button.jpg
+
+	3. From the drop-down menu, choose the target format category and click the next arrow button.
+	4. Enter the name of the target format.
+	4. Select the type and the image format from the drop-down menus.
+	5. Optionally you can click on the plus (+) to add a logo.
+	6. If you do not want the target format to be visible immediately, click on the check box next to ``Enable`` to deselect.
+	7. On the ``Tooltips`` page enter the Credentials, image and publish information.
+	8. On the ``Target Platforms`` page you can attach your target format to a target platform. To add the target format to a target platform, select the target platfrom from the botton table and click the up arrow. Your target format will be attached to all the target platforms listed in the top table will be part of the part format you are creating.
+	9. Click next to complete.
+
+	.. image:: /images/target-format-create.jpg
+
 
 

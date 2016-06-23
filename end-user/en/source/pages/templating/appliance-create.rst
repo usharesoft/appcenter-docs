@@ -34,13 +34,13 @@ To create a Windows Appliance:
 	4. Click ``Create``.
 	5. From the ``Stack`` page, select the OS Profile. Each version has a Core or Full release. Click ``Save``.
 
-.. note:: Once you have chosen the OS Profile, you cannot add any packages or run updates. The OS Profile is static. Once created, if you select OS Profile, you will only be able to view the details of the profile you selected.  
+		.. note:: Once you have chosen the OS Profile, you cannot add any packages or run updates. The OS Profile is static. Once created, if you select OS Profile, you will only be able to view the details of the profile you selected.  
 
 	6. Set the Install profile and click Save.
 
-.. note:: Unlike Linux, the following cannot be set for Windows appliances: Keyboard, Root user, User & Groups, Kernel Parameters and Firewall.  
+		.. note:: The following cannot be set for Windows appliances: Keyboard, Root user, User & Groups, Kernel Parameters and Firewall.  
 
-	.. image :: /images/windows-install.jpg
+	.. image:: /images/windows-install.jpg
 
 	7. Optionally, you can set the Activation Key as part of the Install Profile. If it is not entered in the Install Profile, the default key will be used for a 30-day trial period once the appliance is booted.
 	8. Optionally you can add partitions.
@@ -52,7 +52,7 @@ To create a Windows Appliance:
 		f. Check the box in the Grow column if you want the partition to be growable.
 		g. Click save.
 
-	.. image :: /images/windows-adv-partitions.jpg
+	.. image:: /images/windows-adv-partitions.jpg
 
 	9. Add software bundles from the Project or MySoftware pages.
 

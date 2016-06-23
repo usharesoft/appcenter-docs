@@ -23,7 +23,7 @@ Network Topology
 
 In order to optimize scalability, you should use a dedicated network subnet for UForge service.
 
-If you want to deploy a public UForge service, you can use a public IP address for each component:
+If you want to deploy a public UForge service, you can use a public IP address for each component.
 
 UShareSoft recommends using a firewall with the NAT technology to map a public IP address to a private IP address. This allows you to use public IP addresses only for the Web Front-end and the Web Service. The other services stay hidden from the rest of the world.
 

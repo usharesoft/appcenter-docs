@@ -2,8 +2,6 @@
 
 .. _manage-formats:
 
-.. _set-formats:
-
 Allowing Access to Image Formats
 --------------------------------
 
@@ -87,18 +85,18 @@ To create a target format:
 	1. From the ``Administration`` tab, click on ``Target Platforms``.
 	2. In the top right-hand, click on ``new target format``.
 
-	.. image:: /images/target-format-button.jpg
+		.. image:: /images/target-format-button.jpg
 
 	3. From the drop-down menu, choose the target format category and click the next arrow button.
 	4. Enter the name of the target format.
-	4. Select the type and the image format from the drop-down menus.
-	5. Optionally you can click on the plus (+) to add a logo.
-	6. If you do not want the target format to be visible immediately, click on the check box next to ``Enable`` to deselect.
-	7. On the ``Tooltips`` page enter the Credentials, image and publish information.
-	8. On the ``Target Platforms`` page you can attach your target format to a target platform. To add the target format to a target platform, select the target platfrom from the botton table and click the up arrow. Your target format will be attached to all the target platforms listed in the top table will be part of the part format you are creating.
-	9. Click next to complete.
+	5. Select the type and the image format from the drop-down menus.
+	6. Optionally you can click on the plus (+) to add a logo.
+	7. If you do not want the target format to be visible immediately, click on the check box next to ``Enable`` to deselect.
+	8. On the ``Tooltips`` page enter the Credentials, image and publish information.
+	9. On the ``Target Platforms`` page you can attach your target format to a target platform. To add the target format to a target platform, select the target platfrom from the botton table and click the up arrow. Your target format will be attached to all the target platforms listed in the top table will be part of the part format you are creating.
+	10. Click next to complete.
 
-	.. image:: /images/target-format-create.jpg
+		.. image:: /images/target-format-create.jpg
 
 
 

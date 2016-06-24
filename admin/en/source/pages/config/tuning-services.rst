@@ -5,14 +5,14 @@
 Tuning the Services
 -------------------
 
-You can set the priority of tasks on the UForge platform in the file uforge_services.conf
+You can set the priority of tasks on the UForge platform in the file ``uforge_services.conf``.
 
 You can run COMMAND with an adjusted value for the nice value, which affects process scheduling. This allows you to fine tune the order in which services are treated by the platform and allows you to improve performances. 
 
 Modifying a Configuration Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-UForge includes a configuration file written in json that includes a set of profiles. These profiles contain a set of parameters to deals with resource priority (CPU, disk) and set different properties.
+UForge includes a configuration file written in json that includes a set of profiles. These profiles contain a set of parameters to deal with resource priority (CPU, disk) and set different properties.
 
 The configuration file is located at /etc/UShareSoft/uforge/services_conf.json
 

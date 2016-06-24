@@ -17,7 +17,7 @@ For example, to add a Red Hat repository:
 
 	3. Copy all the contents of the DVD into /tmp/USER_DATA/repos/RHEL/6.5/x86_64/
 	
-	4. If the repositories does not already contain a repodata folder, you must create it inside the package directory
+	4. If the repository does not already contain a repodata folder, you must create it inside the package directory:
 
 	.. code-block:: shell
 
@@ -31,11 +31,11 @@ For example, to add a Red Hat repository:
 		The –-name specified here is the “tagname” that will be shown in the UI when creating an appliance.
 		The --repoUrl can be either http:// 
 
-	6. Attach repository to the distribution as follows::
+	6. Attach the repository to the distribution as follows::
 
 		uforge org repo os attach --name RHEL --repoIds 954 -u $ADMIN -p $PASS
 
-	7. Populate repository packages::
+	7. Populate the repository packages::
 
 		/opt/UShareSoft/uforge/cron/update_repos_pkgs.sh
 
@@ -49,7 +49,7 @@ For example, to add a Red Hat repository:
 		
 		The procedure is terminated when you see the line: // INFO  CheckForRepositoriesUpdates:275 - Entering CheckForRepositoriesUpdates->terminate()
 
-	9. Create OS profile based on packages (minimal, server, etc.)::
+	9. Create a OS profile based on packages (minimal, server, etc.)::
 
 		/opt/UShareSoft/uforge/bin/launch_distro_sorter.sh -a x86_64 -d RHEL -v 6.5
 

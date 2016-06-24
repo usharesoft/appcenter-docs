@@ -150,7 +150,7 @@ The following is a basic example of an implementation of the RFC.
 
 There are two ways to provide your authentication filter:
 
-	* modifying the webservice ``web.xml``. You will need to modify the web.xml template by replacing the com.usharesoft.authentication.AuthenticationFilters value by your filter classname if you want only your authentication
+	* modifying the webservice ``web.xml``. You will need to modify the web.xml template by replacing the ``com.usharesoft.authentication.AuthenticationFilters`` value by your filter classname if you want only your authentication
 	* using the ``@Provider`` annotated class (the order can be important if the two authentication methods are used in the same request)
 
 You can add a filter, but you cannot remove the default authentication filters, nor choose the order. To add your filter, use the following Jersey annotation:

@@ -1,6 +1,6 @@
 .. Copyright (c) 2007-2016 UShareSoft, All rights reserved
 
-.. _set-formats:
+.. _set-format-access:
 
 Managing User Access to Formats
 -------------------------------

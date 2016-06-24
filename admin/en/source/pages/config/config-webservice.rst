@@ -5,7 +5,7 @@
 Configuring the Web Service
 ---------------------------
 
-Each UForge Web Service instance runs inside a Tomcat application server. The web service has the following basic configuration information that is stored in a central configuration file: uforge.conf. The main configuration attributes for the web service are:
+Each UForge Web Service instance runs inside a Tomcat application server. The web service has the following basic configuration information that is stored in a central configuration file: ``uforge.conf``. The main configuration attributes for the web service are:
 
 	* External hostname used for incoming user connections
 	* External hostname for downloading images (this uses port 80 allowing all cloud platforms to be able to communicate with UForge for publishing images)

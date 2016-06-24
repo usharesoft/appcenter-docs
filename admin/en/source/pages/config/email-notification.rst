@@ -30,11 +30,11 @@ You can also provide a no-reply email address when an email is sent.
 
 To change the email address: 
 
-	1.  Log in to the node as root and edit the uforge.conf file::
+	1.  Log in to the node as root and edit the ``uforge.conf`` file::
 
 		vi /etc/UShareSoft/uforge/uforge.conf
 
-	2.  Run the script to force UForge to use the new uforge.conf file, this will restart certain UForge services::
+	2.  Run the script to force UForge to use the new ``uforge.conf`` file, this will restart certain UForge services::
 
 		/opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh
 
@@ -58,7 +58,7 @@ Error emails:
 
 Marketplace notification emails:
 
-.. note:: These are only applicable if your Uforge AppCenter is connected to a Marketplace. Otherwise, disregard. 
+		.. note:: These are only applicable if your Uforge AppCenter is connected to a Marketplace. Otherwise, disregard. 
 
 	* ``AppStoreNotificationNewComment.tmpl`` – email sent to the user watching the template where a new comment is added
 	* ``AppStoreNotificationTemplateNew.tmpl`` – email sent to the user watching the template where a new version of the current template is available

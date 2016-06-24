@@ -22,7 +22,7 @@ A remote storage system (NAS or SAN) is used to store:
 
 For small deployments, the remote storage system can be on a local filesystem of the generation cluster.
 
-**Operating System Cache Repositories and Projects.**  The OS repositories are no longer stored in the UForge AppCenter. UForge AppCenter uses cache repositories in order to generate appliance templates.  Therefore its size will grow and is completely variable. What consumes space are the images generated and the binaries uploaded in MySoftware. You can limit the space used by setting user quotas.
+**Operating System Cache Repositories and Projects.**  The OS repositories are no longer stored in the UForge AppCenter. UForge AppCenter uses cache repositories in order to generate appliance templates.  Therefore its size will grow and is completely variable. What consumes space are the images generated and the binaries uploaded in MySoftware. You can limit the space used by setting user quotas (refer to :ref:`set-quotas`.
 
 The size of projects also vary, however are usually in the 10 to 100 MB range.  Consequently they take up a very small percentage of the entire disk space.
 

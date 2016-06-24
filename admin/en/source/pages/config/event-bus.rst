@@ -48,7 +48,7 @@ In order to install RabbitMQ you must:
 	yum -y install rabbitmq-server-3.5.3-1.noarch.rpm
 	chkconfig rabbitmq-server on
 
-2. Once you have install RabbitMQ you must update the information in uforge.conf in order to configure the uri, admin, and password
+2. Once you have installed RabbitMQ you must update the information in ``uforge.conf`` in order to configure the uri, admin, and password
 
 .. code-block:: shell
 
@@ -72,14 +72,12 @@ Prior to writing a custom plugin, it is important to understand the producer mes
 
 When creating a plugin, you will have access to all the attributes in a message.  The plugin will contain the custom business logic required.
 
-By default, this mechanism is used to send notification emails.  For examples, refer to the RabbitMQ tutorials.
-
-`https://www.rabbitmq.com/getstarted.html <https://www.rabbitmq.com/getstarted.html>`_  
+By default, this mechanism is used to send notification emails.  For examples, refer to the RabbitMQ tutorials: `https://www.rabbitmq.com/getstarted.html <https://www.rabbitmq.com/getstarted.html>`_  
 
 Registering a Custom Plugin to Event Bus
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To register a custom plugin, you require to provide:
+To register a custom plugin, you must provide:
 	* The event bus URI, can be found in the UForge configuration file: /etc/UShareSoft/uforge/uforge.conf
 	* The name of the queue
 
@@ -87,13 +85,13 @@ This information can be found in the RabbitMQ administration console.
 
 1. Login to the administration console
 
-..code-block:: shell
+	.. code-block:: shell
 
-	http://youripaddress:15672
-	Login: uss-admin
-	Password: administration password
+		http://youripaddress:15672
+		Login: uss-admin
+		Password: administration password
 
-2. Go to the Queues Tab, you will see the available queues.  The default queue is distrotools.
+2. Go to the Queues Tab, you will see the available queues.  The default queue is ``distrotools``.
 
 .. image:: /images/event-bus.jpg
 

@@ -9,7 +9,7 @@ When using local storage, UForge must already be installed, but not configured. 
 
 	1. Create the operating system directory, for example: /space/DISTROS
 	2. Create the user data directory, for example: /space/USER_DATA
-	3. Now copy all the operating system information from the UForge Setup Disk to the DISTROS sub-directory::
+	3. Copy the operating system information from the UForge setup ISO to the DISTROS sub-directory::
 
 		//# rsync -a –-progress /<disk directory>/DISTROS/ /space/DISTROS/
 

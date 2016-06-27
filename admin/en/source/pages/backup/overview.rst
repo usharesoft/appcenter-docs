@@ -7,7 +7,16 @@ Backup Overview Guidelines
 
 .. warning:: UShareSoft is not responsible for any customer data loss. The database backup techniques highlighted in this document are standard best practices used by the industry.
 
-The goal of this section is to highlight some best practices on how to correctly backup the UForge data.   The following zones of UForge data should be backed up:
+The goal of this section is to highlight some best practices on how to correctly backup the UForge data. Before you begin you might want to read:
+
+.. toctree::
+	:titlesonly:
+
+	backup-overview
+	backup-recommendations
+	master-slave-replication
+
+The following zones of UForge data should be backed up:
 
 .. toctree::
 	:titlesonly:
@@ -17,10 +26,3 @@ The goal of this section is to highlight some best practices on how to correctly
 	backup-ldap
 	backup-idm
 
-Before you begin you might want to read:
-
-.. toctree::
-	:titlesonly:
-
-	backup-overview
-	backup-recommendations

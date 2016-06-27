@@ -30,7 +30,7 @@ To Backup Syncope
 To Restore the IDM Data
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-1. Make sure you “drop” the syncope database (ensure that it is scrubbed clean)
+1. Make sure you “drop” the syncope database (ensure that it is scrubbed clean):
 
 
 	.. code-block:: shell
@@ -42,7 +42,7 @@ To Restore the IDM Data
 
 	echo "CREATE DATABASE syncope CHARACTER SET utf8 COLLATE utf8_bin;" | $MYSQLCMD
 
-3. Stop the webservice.
+3. Stop the webservice:
 
 	.. code-block:: shell
 
@@ -54,7 +54,7 @@ To Restore the IDM Data
 
 	scp /tmp/content.xml root@idm-server:/opt/GlassFish/glassfish/domains/syncope/applications/syncope/WEB-INF/classes/content.xml
 
-5. Start the Webservices (IDM & UForge)
+5. Start the Webservices (IDM & UForge):
 
 	.. code-block:: shell
 
@@ -79,13 +79,13 @@ To Restore the IDM Data
 		100  5312  100  5312    0 <latestExecStatus>SUCCESS</latestExecStatus> 0
 		  0   205k      0 --:--:-- --:--:-- --:--:--  235k
 
-8. Then run:
+8. Then run the following two commands:
 
 	.. code-block:: shell
 
 		curl --noproxy idm-server -u $UFORGE_IDM_ADMIN:$UFORGE_IDM_ADMIN_PWD -H "Content-Type: application/xml" -X POST http://idm-server:$UFORGE_IDM_PORT/$UFORGE_IDM_BASEURI/tasks/{250}/execute -D /tmp/headers
 
-9. Then run:
+	And then:
 
 	.. code-block:: shell
 

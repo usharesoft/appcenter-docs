@@ -16,7 +16,7 @@ Database replication and backup are sometimes confused as achieving the same goa
 
 Database replication is meant for high-availability of your service, in other words building a redundant database service.  If a problem occurs with one database instance, then having a second database with the data replicated, this instance can continue providing the database service (even if the service is degraded).  
 
-Database backups is used to take a snapshot of the database data (either a complete or incremental snapshot) and storing this information in an archive.
+Database backup is used to take a snapshot of the database data (either a complete or incremental snapshot) and storing this information in an archive.
 
 When thinking about your database strategy, you should consider the following goals:
 

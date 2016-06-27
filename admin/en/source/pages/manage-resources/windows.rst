@@ -135,8 +135,10 @@ To create a new Golden Image, you will need to:
 	4. Install ``gtk-sharp-2.12.10.win32.msi``. 
 
 		* You can download it from http://download.mono-project.com/gtk-sharp/gtk-sharp-2.12.10.win32.msi.old
-		* Rename gtk-sharp-2.12.10.win32.msi.old to gtk-sharp-2.12.10.win32.msi
-		* Run the following command: gtk-sharp-2.12.10.win32.msi
+		* Rename ``gtk-sharp-2.12.10.win32.msi.old`` to ``gtk-sharp-2.12.10.win32.msi``
+		* Run the following command::
+		
+			gtk-sharp-2.12.10.win32.msi
 
 	5. We recommend that you run Windows Update to ensure that the latest updates are pre-installed in the Golden Image.
 

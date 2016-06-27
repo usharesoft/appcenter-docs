@@ -33,7 +33,7 @@ The following procedure should be run on the web service and generation nodes of
 
 			service OpenDJ stop
 
-	6. Check if the processes are stopped. Usually this is run on the DB node for the cron update_repos_pkgs.sh::
+	6. Check if the processes are stopped. Usually this is run on the DB node for the cron ``update_repos_pkgs.sh``::
 
 		ps -ef | egrep -i 'java|spider'
 

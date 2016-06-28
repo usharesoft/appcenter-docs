@@ -9,7 +9,7 @@ UForge API is a RESTful resource.
 
 The UForge API follows the design principles of Representational State Transfer (REST). UForge platform provides a set of resources (the API), each of which is referenced with a global identifier (URI). In order to manipulate these resources, clients communicate via the standard HTTP(S) protocol and exchange representations of these resources in a specific format. The documentation notes which formats are available for each method. The API presently supports XML and JSON. To get the results in the format of your choice, the ``Accept-Type`` header attribute is used in the request.
 
-To make the UForge API even easier to use, UShareSoft has created a Java SDK and Python SDK.  You can create the API for other languages.
+To make the UForge API even easier to use, UForge has a Java SDK and Python SDK.  You can create the API for other languages.
 
 Communication with UForge is done via HTTP(S). For security reasons it is recommended to use HTTPS, however you may submit HTTP requests for debugging purposes. 
 

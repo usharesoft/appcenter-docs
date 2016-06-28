@@ -59,7 +59,7 @@ To create a Windows Appliance:
 
 	9. Add software bundles from the Project or MySoftware pages.
 
-	Software bundles included in MySoftware and Project will be put on the image disk but the UShareSoft generation tool WILL NOT install them even if these are executable/installers files (.exe, .msi, etc.). It is up to the end user to manually complete the installation of the software bundles.
+	Software bundles included in MySoftware and Project will be put on the image disk but the UForge generation tool WILL NOT install them even if these are executable/installers files (.exe, .msi, etc.). It is up to the end user to manually complete the installation of the software bundles.
 
 	For Windows, .exe or .msi files can be given extra parameters. The parameters depend on the .exe or .msi file, and can be used for example for silent installation, providing extra configuration values, etc.
 

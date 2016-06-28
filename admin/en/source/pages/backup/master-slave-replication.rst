@@ -17,5 +17,5 @@ You can now safely run the same commands provided in section :ref:`backup-databa
 
 To automate the entire process, a script can be written and executed by a cron job at the frequency you wish to backup the database (nightly backups are recommended).
 
-If you want to add high-availability, then UShareSoft recommends using MySQL Cluster. This is a separate MySQL product that is not distributed with UForge.
+If you want to add high-availability, then we recommends using MySQL Cluster. This is a separate MySQL product that is not distributed with UForge.
 

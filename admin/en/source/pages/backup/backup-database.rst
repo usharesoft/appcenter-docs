@@ -17,7 +17,7 @@ UForge uses the MariaDB database to store all its data. MariaDB provides many di
 
 For more details on all these back up strategies, refer to: `http://dev.mysql.com/doc/refman/5.5/en/backup-methods.html <http://dev.mysql.com/doc/refman/5.5/en/backup-methods.html>`_
 
-UShareSoft uses two methods for copying the database information. All the database information is located under:
+We use two methods for copying the database information. All the database information is located under:
 /var/lib/mysql
 
 By copying this information, you are taking a snapshot of the entire database. The first uses the rsync command to copy the current latest information of the database to another location.
@@ -30,7 +30,7 @@ By copying this information, you are taking a snapshot of the entire database. T
 
 As the backup destination does not change, you are creating a replication of the entire database.  The rsync command only copies the incremental differences each time.  
 
-The danger here is that if during that time there is damaged data, when rsync is run then this corrupted data is copied and there is no possible way to recuperate the old data. To overcome this, UShareSoft also creates archive backups of the entire database.
+The danger here is that if during that time there is damaged data, when rsync is run then this corrupted data is copied and there is no possible way to recuperate the old data. To overcome this, we also create archive backups of the entire database.
 
 .. code-block:: shell
 

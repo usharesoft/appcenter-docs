@@ -5,7 +5,7 @@
 Backup Recommendations
 ----------------------
 
-.. warning:: UShareSoft is not responsible for any customer data loss.  The database backup techniques highlighted in this document are standard best practices used by the industry.
+.. warning:: Fujitsu is not responsible for any customer data loss.  The database backup techniques highlighted in this document are standard best practices used by the industry.
 
 Here are some general recommendations and guidelines when doing database backup.
 

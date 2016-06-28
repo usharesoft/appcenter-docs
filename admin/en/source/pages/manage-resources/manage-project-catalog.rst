@@ -65,7 +65,7 @@ To add a new project:
 Updating a Project
 ~~~~~~~~~~~~~~~~~~
 
-UShareSoft provides the default projects for the OSes provided.
+UForge provides the default projects for the OSes provided.
 
 To modify the projects: 
 

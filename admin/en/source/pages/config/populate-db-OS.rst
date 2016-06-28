@@ -7,7 +7,7 @@ Populating Database with OS Packages
 
 Open source operating system versions are taken from the official repository mirror or the UForge repository cache. Proprietary operating systems such as Red Hat Enterprise Linux are not; therefore it is the responsibility of the end customer (or reseller if they have correct agreements in place to re-distribute an operating system) to have the original ISO images of the operating system in questions. Refer to :ref:`proprietary-pkg`.
 
-To enable UForge to generate images based on the operating system it needs all the meta-data of the packages comprising the operating system. This meta-data includes the location in the storage of the package as well as dependency information that is used during generation. Furthermore, certain specific UShareSoft packages must be populated for this operating system.
+To enable UForge to generate images based on the operating system it needs all the meta-data of the packages comprising the operating system. This meta-data includes the location in the storage of the package as well as dependency information that is used during generation. Furthermore, certain specific UForge packages must be populated for this operating system.
 
 .. note:: Custom repositories are supported in UForge. They are treated like other OS packages.
 
@@ -21,7 +21,7 @@ In order to add an operation system in your UForge AppCenter you must:
 
 	1. Connect to one of your UForge platform instances
 	2. Create the OS in the organization.
-	3. Create the repository. This includes the official repository as well as the specific UShareSoft tool repository.
+	3. Create the repository. This includes the official repository as well as the specific UForge tool repository.
 	4. Link the distribution to the repository.
 	5. Launch spider to fill the repository with the packages.
 
@@ -52,7 +52,7 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 
 		uforge user os enable --account root --name CentOS --version 6.5 --arch x86_64 -u $ADMIN -p $PASS
 
-	6. Create the distribution repository. The following example shows the creation of an official CentOS repository. However, you can also create a repository based on the UShareSoft official repository as shown later.
+	6. Create the distribution repository. The following example shows the creation of an official CentOS repository. However, you can also create a repository based on the UForge official repository as shown later.
 
 	CentOS 6.5 repository:
 
@@ -82,7 +82,7 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 
 	`http://distros-repository.usharesoft.com/ <http://distros-repository.usharesoft.com/>`_ is an official public repository that users can use to populate the distributions. Official repositories such as Ubuntu and Debian periodically delete some package versions. In the http://distros-repository.usharesoft.com/ repository, package versions are never deleted. This can facilitate investigations on older systems.
 
-	To populate the distribution using the official UShareSoft repository for CentOS::
+	To populate the distribution using the official UForge repository for CentOS::
 
 		uforge org repo create --name "CentOS 6.5 os" --repoUrl http://distros-repository.usharesoft.com/centos/6/os/x86_64 --type RPM --officiallySupported -u $ADMIN -p $PASS
 
@@ -117,7 +117,7 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 
 	http://distros-repository.usharesoft.com/usharesoft/scientificlinux/6.6/x86_64
 
-	7. You must then add the specific UShareSoft tool repository. The repository to attach is one of the following:
+	7. You must then add the specific UForge tool repository. The repository to attach is one of the following:
 
 		* CentOS (example version 6, arch x86_64): http://distros-repository.usharesoft.com/usharesoft/centos/6/x86_64
 		* Red Hat Enterprise Linux: (example version 6.2, arch x86_64): http://distros-repository.usharesoft.com/usharesoft/rhel/6.2/x86_64

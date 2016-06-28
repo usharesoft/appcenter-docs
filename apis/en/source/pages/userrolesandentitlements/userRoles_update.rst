@@ -1,4 +1,4 @@
-.. Copyright (c) 2007-2016 UShareSoft, All rights reserved
+.. Copyright 2016 FUJITSU LIMITED
 
 .. _userRoles-update:
 

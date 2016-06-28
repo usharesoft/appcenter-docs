@@ -23,7 +23,7 @@ Fill in the wizard, note that all the fields are mandatory.
 
 	4. Provide a username, email and password for an initial user account to be created.  This user account will have administration access rights for the default Organization.
 
-	5. Provide the UForge activation key and credential information to be able to receive UForge updates.  If you do not have this information, please contact UShareSoft.
+	5. Provide the UForge activation key and credential information to be able to receive UForge updates.  If you do not have this information, please contact your vendor.
 
 	6. Select the operating systems and formats you would like to install. When you select an OS, a default mirror location is indicated. This is used for synchronization of packages and distributions.  You can either accept the default values or modify the value to synchronize with another mirror.
 

@@ -32,7 +32,7 @@ To get the complete list of the currently supported operating systems on the UFo
 
 All the open source operating system versions are delivered as part of the UForge repository. Proprietary operating systems such as RedHat Enterprise Linux or older operating system versions (that have been EOL'd) are not; therefore it is the responsibility of the end customer (or reseller if they have correct agreements in place to re-distribute an operating system) to have the original ISO images of the operating system in questions.
 
-.. note:: You can only add an operating system version that is officially supported by the UForge AppCenter and has been certified by UShareSoft.  
+.. note:: You can only add an operating system version that is officially supported by the UForge AppCenter and has been certified by Fujitsu.  
 
 .. _os-list:
 
@@ -63,9 +63,9 @@ Adding an OS to an Organization
 
 Older operating system versions (that for example have been EOL'd) or proprietary operating systems such as RedHat Enterprise Linux are not automatically populated at the installation phase. Population of such operating system versions must be done manually after the initial installation of UForge is complete.
 
-.. note:: You can only add an operating system version that is officially supported by the UForge platform and has been certified by UShareSoft. 
+.. note:: You can only add an operating system version that is officially supported by the UForge platform and has been certified by Fujitsu. 
 
-Before adding an OS to the organization you must retrieve data from the UShareSoft repository. For more information refer to :ref:`populate-db-os`.
+Before adding an OS to the organization you must retrieve data from the Fujitsu repository. For more information refer to :ref:`populate-db-os`.
 
 In order to add an OS to an organization you must do the following:
 

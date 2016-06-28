@@ -14,10 +14,10 @@ If you are unable to import or register an ISO image or VM image to your infrast
 
 These packages can be installed via yum package command-line tool.
 
-Setting Up UShareSoft Repository
+Setting Up Official Repository
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To install the UForge AppCenter packages, the official repository must be registered.  These repositories have restricted access, requiring an access id and key.  Please contact UShareSoft if you do not have this ID and key.  
+To install the UForge AppCenter packages, the official repository must be registered.  These repositories have restricted access, requiring an access id and key.  Please contact your vendor if you do not have this ID and key.  
 
 To register a new repository, create a file in /etc/yum.repos.d/ directory with the following information:
 

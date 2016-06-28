@@ -5,7 +5,7 @@
 UForge Installation Overview
 ============================
 
-To install a fully functioning UForge platform, UShareSoft provides the following 2 ISOs:
+To install a fully functioning UForge platform, we provides the following 2 ISOs:
 
 	* ``UForge Setup ISO`` – this includes all the necessary elements to have a functioning "UForge in a Box"
 	
@@ -19,7 +19,7 @@ Installation Checklist
 Before you start deploying UForge, ensure that you have all the following:
 
 	* UForge Setup ISO
-	* Your activation credentials (ID and activation key) provided by UShareSoft
+	* Your activation credentials (ID and activation key) provided by your vendor
 	* Architecture of the deployment (number of nodes and networking topology. See :ref:`network-topology`)
 	* The necessary system requirements (see :ref:`storage-sizing`)
 	* Your SSL certificates, key and chaining certificates, and all files corresponding to the following entries in /etc/httpd/conf.d/ssl.conf:

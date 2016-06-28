@@ -61,7 +61,7 @@ When a user deletes a machine image persisted on the NAS, only the metadata is r
 
 This job goes through the NAS and the database and checks which directories could be removed. 
 
-This job could potentially take a long time and be IO-intensive. It is highly recommend to execute it when there is not a lot of activity on the platform. UShareSoft has set this at 2:10AM because there is not a lot of activity on our platform at that time of day.
+This job could potentially take a long time and be IO-intensive. It is highly recommend to execute it when there is not a lot of activity on the platform. We have set this at 2:10AM because there is not a lot of activity on our platform at that time of day.
 
 This script could be launched several times in a day depending on the size of the infrastructure. For example, if the NAS is not so big and if there are a lot of images created and deleted per day, it might be a good to launch it several times a day.
 

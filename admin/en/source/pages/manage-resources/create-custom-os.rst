@@ -5,9 +5,9 @@
 Creating Custom OS Profiles
 ---------------------------
 
-UShareSoft provides a set of OS profiles. If you want to create another OS profile, you can create one using UForge's graphical user interface. 
+UForge provides a set of OS profiles. If you want to create another OS profile, you can create one using UForge's graphical user interface. 
 
-.. note:: You can delete packages but UShareSoft does not guarantee that your OS profile will be functional.
+.. note:: You can delete packages but we do not guarantee that your OS profile will be functional.
 
 To create a new OS profile:
 
@@ -26,7 +26,7 @@ To create a new OS profile:
 Editing Custom OS Profiles
 --------------------------
 
-If you have created a custom OS profile, you can edit it at any time. You cannot modify a profile provided by UShareSoft. 
+If you have created a custom OS profile, you can edit it at any time. You cannot modify a profile provided by UForge. 
 
 To edit your OS profile:
 

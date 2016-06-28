@@ -25,7 +25,7 @@ In order to optimize scalability, you should use a dedicated network subnet for 
 
 If you want to deploy a public UForge service, you can use a public IP address for each component.
 
-We recommends using a firewall with the NAT technology to map a public IP address to a private IP address. This allows you to use public IP addresses only for the Web Front-end and the Web Service. The other services stay hidden from the rest of the world.
+We recommend using a firewall with the NAT technology to map a public IP address to a private IP address. This allows you to use public IP addresses only for the Web Front-end and the Web Service. The other services stay hidden from the rest of the world.
 
 For a private network, you can use a NAT translation, but it is better to use the firewall in gateway mode and filter the traffic. This way you can open ports on the different services.
 
@@ -92,7 +92,7 @@ High Availability
 
 High Availability can be attained with the redundancy of all services. However, the database and the LDAP service have not yet been tested with the clustering mode.
 
-For the moment we recommends using the “security options” for these services. This is a point of failure.
+For the moment we recommend using the “security options” for these services. This is a point of failure.
 
 All other services can be clustered. For clustering a service you will need a pool of load balancers (physical or virtual). 
 

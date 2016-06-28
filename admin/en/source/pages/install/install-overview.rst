@@ -5,7 +5,7 @@
 UForge Installation Overview
 ============================
 
-To install a fully functioning UForge platform, we provides the following 2 ISOs:
+To install a fully functioning UForge platform, we provide the following 2 ISOs:
 
 	* ``UForge Setup ISO`` – this includes all the necessary elements to have a functioning "UForge in a Box"
 	

@@ -17,7 +17,7 @@ UForge uses the MariaDB database to store all its data. PerconaDB provides many 
 
 For more details on all these back up strategies, refer to: `http://dev.mysql.com/doc/refman/5.5/en/backup-methods.html <http://dev.mysql.com/doc/refman/5.5/en/backup-methods.html>`_
 
-We uses two methods for copying the database information. All the database information is located under:
+We use two methods for copying the database information. All the database information is located under:
 /var/lib/mysql
 
 By copying this information, you are taking a snapshot of the entire database. The first uses the rsync command to copy the current latest information of the database to another location.
@@ -30,7 +30,7 @@ By copying this information, you are taking a snapshot of the entire database. T
 
 As the backup destination does not change, you are creating a replication of the entire database.  The rsync command only copies the incremental differences each time.  
 
-The danger here is that if during that time there is damaged data, when rsync is run then this corrupted data is copied and there is no possible way to recuperate the old data. To overcome this, we also creates archive backups of the entire database.
+The danger here is that if during that time there is damaged data, when rsync is run then this corrupted data is copied and there is no possible way to recuperate the old data. To overcome this, we also create archive backups of the entire database.
 
 .. code-block:: shell
 
@@ -70,5 +70,5 @@ The configuration of master-slave replication is out of scope of this document, 
 You can now safely run the same commands provided in section “Doing a Basic Backup” on the slave database instance.
 To automate the entire process, a script can be written and executed by a cron job at the frequency you wish to backup the database (nightly backups are recommended).
 
-If you want to add high-availability, then we recommends using MySQL Cluster. This is a separate MySQL product that is not distributed with UForge.
+If you want to add high-availability, then we recommend using MySQL Cluster. This is a separate MySQL product that is not distributed with UForge.
 

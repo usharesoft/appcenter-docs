@@ -1,0 +1,66 @@
+.. Copyright (c) 2007-2016 UShareSoft, All rights reserved
+
+.. _category-create:
+
+category_create
+---------------
+
+.. function:: POST /orgs/{oid}/categories
+
+.. sidebar:: Summary
+
+	* Method: ``POST``
+	* Response Code: ``201``
+	* Response Formats: ``application/xml`` ``application/json``
+	* Since: ``UForge 3.0``
+
+Creates a new category in an organization. 
+
+Refer to :ref:`category-object` for all the mandatory and optional attributes. 
+
+..warning:: Only administrators have the ability to create and manage categories
+
+Security Summary
+~~~~~~~~~~~~~~~~
+
+* Requires Authentication: ``true``
+* Entitlements Required: ``categories_administrate``
+
+URI Parameters
+~~~~~~~~~~~~~~
+
+* ``oid`` (required): the id of the :ref:`org-object`
+
+HTTP Request Body Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A :ref:`category-object` object
+
+Example Request
+~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+	curl "http://www.example.com/api/orgs/{oid}/categories" -X POST \
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
+
+Example of representation.xml content (the request body):
+
+.. code-block:: xml
+
+	<ns0:category>
+		<name>Category Example</name>
+		<type>PROJECT</type>
+	</ns0:category>
+
+
+.. seealso::
+
+	 * :ref:`org-object`
+	 * :ref:`category-object`
+	 * :ref:`categoryChild-create`
+	 * :ref:`category-delete`
+	 * :ref:`category-deleteAll`
+	 * :ref:`category-getAll`
+	 * :ref:`category-get`
+	 * :ref:`category-update`

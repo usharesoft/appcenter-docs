@@ -1,0 +1,80 @@
+.. Copyright (c) 2007-2016 UShareSoft, All rights reserved
+
+.. _project-create:
+
+project_create
+--------------
+
+.. function:: POST /orgs/{oid}/projects
+
+.. sidebar:: Summary
+
+	* Method: ``POST``
+	* Response Code: ``201``
+	* Response Formats: ``application/xml`` ``application/json``
+	* Since: ``UForge 1.0``
+
+Create a new project in the ``Project Catalog``. 
+
+Please refer to :ref:`project-object` for a complete list of all the ``project`` attributes.
+
+Security Summary
+~~~~~~~~~~~~~~~~
+
+* Requires Authentication: ``true``
+* Entitlements Required: ``org_projects_administrate``
+
+URI Parameters
+~~~~~~~~~~~~~~
+
+* ``oid`` (required): 
+
+HTTP Request Body Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A :ref:`project-object` object
+
+Example Request
+~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+	curl "http://www.example.com/api/orgs/{oid}/projects" -X POST \
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
+
+Example of representation.xml content (the request body):
+
+.. code-block:: xml
+
+	<ns0:project>
+		<category>Blogging</category>
+		<company>
+			<name>Maintainer Example</name>
+		</company>
+		<distributionUri>distributions/1</distributionUri>
+		<license>
+			<type>Custom</type>
+		</license>
+		<name>Project Example</name>
+		<version>1.0</version>
+		<shortTag>INTERNAL</shortTag>
+	</ns0:project>
+
+
+.. seealso::
+
+	 * :ref:`package-object`
+	 * :ref:`project-getAll`
+	 * :ref:`project-get`
+	 * :ref:`project-delete`
+	 * :ref:`project-update`
+	 * :ref:`projectPkg-create`
+	 * :ref:`projectPkg-get`
+	 * :ref:`projectPkg-getAll`
+	 * :ref:`projectPkg-delete`
+	 * :ref:`projectPkg-deleteAll`
+	 * :ref:`projectPkg-download`
+	 * :ref:`projectPkg-downloadFile`
+	 * :ref:`projectPkgs-update`
+	 * :ref:`projectPkg-update`
+	 * :ref:`projectPkg-upload`

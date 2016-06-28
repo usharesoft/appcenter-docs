@@ -1,0 +1,63 @@
+.. Copyright (c) 2007-2016 UShareSoft, All rights reserved
+
+.. _mySoftwarePkg-get:
+
+mySoftwarePkg_get
+-----------------
+
+.. function:: GET /users/{uid}/mysoftware/{msid}/pkgs/{mspackid}
+
+.. sidebar:: Summary
+
+	* Method: ``GET``
+	* Response Code: ``200 / 304``
+	* Response Formats: ``application/xml`` ``application/json``
+	* Since: ``UForge 1.0``
+
+Retrieves the information of a package contained in a software component. 
+
+This only retrieves the meta-data of the project.  If you wish to download the binaries, please use :ref:`mySoftwarePkg-download`.
+
+Security Summary
+~~~~~~~~~~~~~~~~
+
+* Requires Authentication: ``true``
+* Entitlements Required: ``appliance_create``
+
+URI Parameters
+~~~~~~~~~~~~~~
+
+* ``uid`` (required): the id of the :ref:`user-object`
+* ``msid`` (required): the id of the :ref:`mysoftware-object`
+* ``mspackid`` (required): the id of the package
+
+HTTP Request Body Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+None
+
+Example Request
+~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+	curl "/users/{uid}/mysoftware/{msid}/pkgs/{mspackid}" -X GET \
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
+
+.. seealso::
+
+	 * :ref:`mysoftware-object`
+	 * :ref:`mySoftware-create`
+	 * :ref:`mySoftware-getAll`
+	 * :ref:`mySoftware-get`
+	 * :ref:`mySoftware-update`
+	 * :ref:`mySoftware-delete`
+	 * :ref:`mySoftwareUsage-getAll`
+	 * :ref:`mySoftwarePkg-add`
+	 * :ref:`mySoftwarePkg-getAll`
+	 * :ref:`mySoftwarePkg-deleteAll`
+	 * :ref:`mySoftwarePkg-update`
+	 * :ref:`mySoftwarePkg-download`
+	 * :ref:`mySoftwarePkg-downloadFile`
+	 * :ref:`mySoftwarePkg-upload`
+	 * :ref:`mySoftwarePkg-delete`

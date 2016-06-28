@@ -1,0 +1,81 @@
+.. Copyright (c) 2007-2016 UShareSoft, All rights reserved
+
+.. _partitionTableDiskLogicalPartition-update:
+
+partitionTableDiskLogicalPartition_update
+-----------------------------------------
+
+.. function:: PUT users/{uid}/appliances/{aid}/installProfile/{ipid}/pt/{ptid}/disks/{did}/partitions/{pid}/lpartitions/{lpid}
+
+.. sidebar:: Summary
+
+	* Method: ``PUT``
+	* Response Code: ``200``
+	* Response Formats: ``application/xml`` ``application/json``
+	* Since: ``UForge 2.1``
+
+Updates a logical partition information in a physical partition. 
+
+Please refer to :ref:`partition-object` for a complete list of all the ``partition`` attributes.
+
+Security Summary
+~~~~~~~~~~~~~~~~
+
+* Requires Authentication: ``true``
+* Entitlements Required: ``appliance_create``
+
+URI Parameters
+~~~~~~~~~~~~~~
+
+* ``uid`` (required): the id of the :ref:`user-object` that has created the appliance
+* ``pid`` (required): the id of the :ref:`partition-object`
+* ``ptid`` (required): the id of the :ref:`partitiontable-object`
+* ``aid`` (required): the id of the :ref:`appliance-object`
+* ``lpid`` (required): the id of the logical :ref:`partition-object`
+* ``did`` (required): the id of the :ref:`disk-object`
+
+HTTP Request Body Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A :ref:`partition-object` object
+
+Example Request
+~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+	curl "users/{uid}/appliances/{aid}/installProfile/{ipid}/pt/{ptid}/disks/{did}/partitions/{pid}/lpartitions/{lpid}" -X PUT \
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
+
+Example of representation.xml content (the request body):
+
+.. code-block:: xml
+
+	<ns0:partition>
+		<name>logicalPartition1Updated</name>
+		<mpoint>/data</mpoint>
+		<size>2048</size>
+		<label>/data2</label>
+		<fstype>ext4</fstype>
+	</ns0:partition>
+
+
+.. seealso::
+
+	 * :ref:`appliancepartitiontablediskpartition-api-resources`
+	 * :ref:`appliancepartitiontablelogicalgroup-api-resources`
+	 * :ref:`appliancepartitiontablelogicalvolume-api-resources`
+	 * :ref:`partitiontable-object`
+	 * :ref:`appliance-object`
+	 * :ref:`partition-object`
+	 * :ref:`partitionTableDiskPartition-getAll`
+	 * :ref:`partitionTableDiskPartition-get`
+	 * :ref:`partitionTableDiskPartition-create`
+	 * :ref:`partitionTableDiskPartition-deleteAll`
+	 * :ref:`partitionTableDiskPartition-delete`
+	 * :ref:`partitionTableDiskPartition-update`
+	 * :ref:`partitionTableDiskLogicalPartition-getAll`
+	 * :ref:`partitionTableDiskLogicalPartition-get`
+	 * :ref:`partitionTableDiskLogicalPartition-create`
+	 * :ref:`partitionTableDiskLogicalPartition-deleteAll`
+	 * :ref:`partitionTableDiskLogicalPartition-delete`

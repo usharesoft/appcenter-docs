@@ -1,0 +1,52 @@
+.. Copyright (c) 2007-2016 UShareSoft, All rights reserved
+
+.. _osMilestone-get:
+
+osMilestone_get
+---------------
+
+.. function:: GET /distributions/{id}/milestones/{mid}
+
+.. sidebar:: Summary
+
+	* Method: ``GET``
+	* Response Code: ``200 / 304``
+	* Response Formats: ``application/xml`` ``application/json``
+	* Since: ``UForge 3.5``
+
+Retrieves the meta-data of a milestone.
+
+Security Summary
+~~~~~~~~~~~~~~~~
+
+* Requires Authentication: ``true``
+* Entitlements Required: ``appliance_create``
+
+URI Parameters
+~~~~~~~~~~~~~~
+
+* ``mid`` (required): 
+* ``id`` (required): the id of the :ref:`milestone-object` to remove
+
+HTTP Request Body Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+None
+
+Example Request
+~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+	curl "/distributions/{id}/milestones/{mid}" -X GET \
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
+
+.. seealso::
+
+	 * :ref:`milestone-object`
+	 * :ref:`distribprofile-object`
+	 * :ref:`osMilestone-create`
+	 * :ref:`osMilestone-delete`
+	 * :ref:`osMilestone-get`
+	 * :ref:`osMilestone-getAll`
+	 * :ref:`osMilestone-update`

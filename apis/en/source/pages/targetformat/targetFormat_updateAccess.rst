@@ -1,0 +1,84 @@
+.. Copyright (c) 2007-2016 UShareSoft, All rights reserved
+
+.. _targetFormat-updateAccess:
+
+targetFormat_updateAccess
+-------------------------
+
+.. function:: PUT /orgs/{oid}/targetformats
+
+.. sidebar:: Summary
+
+	* Method: ``PUT``
+	* Response Code: ``200``
+	* Response Formats: ``application/xml`` ``application/json``
+	* Since: ``UForge 3.6``
+
+Updates one or more target formats in an organization.  This can be either to enable or disable a target format; add or remove a target format or update the default target format list. If a target format has been flagged ``inactive`` globally then this target format will no longer be available in the organization. 
+
+.. note:: When a target format is flagged as ``default`` then any new user created or added to the organization will be automatically given access to this target format. 
+
+.. warning:: If you add a target format as ``default``, all existing users will NOT automatically be given access to this target format.  You will need to do this explicitly.
+
+Security Summary
+~~~~~~~~~~~~~~~~
+
+* Requires Authentication: ``true``
+* Entitlements Required: ``org_formats_administrate``
+
+URI Parameters
+~~~~~~~~~~~~~~
+
+* ``oid`` (required): the id of the :ref:`org-object`
+
+HTTP Request Body Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A :ref:`targetFormats-object` object
+
+Example Request
+~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+	curl "http://www.example.com/api/orgs/{oid}/targetformats" -X PUT \
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
+
+Example of representation.xml content (the request body):
+
+.. code-block:: xml
+
+	<ns0:targetFormats>
+		<targetFormats>
+			<targetFormat>
+				<access>true</access>
+				<active>true</active>
+				<uri>orgs/1/targetFormats/4</uri>
+			</targetFormat>
+			<targetFormat>
+				<access>false</access>
+				<active>false</active>
+				<uri>orgs/1/targetFormats/5</uri>
+			</targetFormat>
+		</targetFormats>
+	</ns0:targetFormats>
+
+
+.. seealso::
+
+	 * :ref:`targetplatform-api-resources`
+	 * :ref:`targetplatform-object`
+	 * :ref:`targetformat-object`
+	 * :ref:`imageformat-object`
+	 * :ref:`primitiveFormat-getAll`
+	 * :ref:`primitiveFormat-update`
+	 * :ref:`targetFormat-create`
+	 * :ref:`targetFormat-getAll`
+	 * :ref:`targetFormat-get`
+	 * :ref:`targetFormat-delete`
+	 * :ref:`targetFormat-update`
+	 * :ref:`targetFormatLogo-upload`
+	 * :ref:`targetFormatLogo-delete`
+	 * :ref:`targetFormatLogo-download`
+	 * :ref:`targetFormatLogo-downloadFile`
+	 * :ref:`targetFormat-getAllTargetPlatforms`

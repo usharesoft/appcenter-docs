@@ -1,0 +1,52 @@
+.. Copyright (c) 2007-2016 UShareSoft, All rights reserved
+
+.. _projectLicense-uploadChunk:
+
+projectLicense_uploadChunk
+--------------------------
+
+.. function:: POST /distributions/{id}/projects/{pid}/licenses/{lid}
+
+.. sidebar:: Summary
+
+	* Method: ``POST``
+	* Response Code: ``201``
+	* Response Formats: ``application/xml`` ``application/json``
+	* Since: ``UForge 1.0``
+
+Uploads a license file for a project. This request is similar to :ref:`projectLicense-upload`
+
+Security Summary
+~~~~~~~~~~~~~~~~
+
+* Requires Authentication: ``true``
+* Entitlements Required: ``org_projects_administrate``
+
+URI Parameters
+~~~~~~~~~~~~~~
+
+* ``lid`` (required): the id of the :ref:`license-object`
+* ``pid`` (required): the id of the :ref:`project-object`
+* ``id`` (required): the id of the :ref:`distribprofile-object`
+
+HTTP Request Body Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The file to upload.
+
+Example Request
+~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+	curl "http://www.example.com/api/distributions/{id}/projects/{pid}/licenses/{lid}" -X POST \
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"-H "Content-type: application/xml" --data-binary "@binaryFilePath"
+
+.. seealso::
+
+	 * :ref:`project-object`
+	 * :ref:`license-object`
+	 * :ref:`projectLicense-download`
+	 * :ref:`projectLicense-upload`
+	 * :ref:`projectLicense-uploadChunk`
+	 * :ref:`projectLicense-delete`

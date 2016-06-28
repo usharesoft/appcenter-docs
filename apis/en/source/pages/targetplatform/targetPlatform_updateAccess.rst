@@ -1,0 +1,84 @@
+.. Copyright (c) 2007-2016 UShareSoft, All rights reserved
+
+.. _targetPlatform-updateAccess:
+
+targetPlatform_updateAccess
+---------------------------
+
+.. function:: PUT /orgs/{oid}/targetplatforms
+
+.. sidebar:: Summary
+
+	* Method: ``PUT``
+	* Response Code: ``200``
+	* Response Formats: ``application/xml`` ``application/json``
+	* Since: ``UForge 3.6``
+
+Updates one or more target platforms in an organization.  This can be either to enable or disable a target platform; add or remove a target platform or update the default target platform list. If a target platform has been flagged ``inactive`` globally then this target platform will no longer be available in the organization. 
+
+.. note:: When a target platform is flagged as ``default`` then any new user created or added to the organization will be automatically given access to this target platform. 
+
+.. warning:: If you add a platform format as ``default``, all existing users will NOT automatically be given access to this target platform.  You will need to do this explicitly.
+
+Security Summary
+~~~~~~~~~~~~~~~~
+
+* Requires Authentication: ``true``
+* Entitlements Required: ``org_formats_administrate``
+
+URI Parameters
+~~~~~~~~~~~~~~
+
+* ``oid`` (required): the id of the :ref:`org-object`
+
+HTTP Request Body Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A :ref:`targetPlatforms-object` object
+
+Example Request
+~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+	curl "http://www.example.com/api/orgs/{oid}/targetplatforms" -X PUT \
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
+
+Example of representation.xml content (the request body):
+
+.. code-block:: xml
+
+	<ns0:targetPlatforms>
+		<targetPlatforms>
+			<targetPlatform>
+				<access>true</access>
+				<active>true</active>
+				<uri>orgs/1/targetPlatforms/4</uri>
+			</targetPlatform>
+			<targetPlatform>
+				<access>false</access>
+				<active>false</active>
+				<uri>orgs/1/targetPlatforms/5</uri>
+			</targetPlatform>
+		</targetPlatforms>
+	</ns0:targetPlatforms>
+
+
+.. seealso::
+
+	 * :ref:`targetformat-api-resources`
+	 * :ref:`targetplatform-object`
+	 * :ref:`targetformat-object`
+	 * :ref:`targetPlatform-create`
+	 * :ref:`targetPlatform-getAll`
+	 * :ref:`targetPlatform-get`
+	 * :ref:`targetPlatform-update`
+	 * :ref:`targetPlatform-updateAccess`
+	 * :ref:`targetPlatform-delete`
+	 * :ref:`targetPlatform-getAllFormats`
+	 * :ref:`targetPlatform-addFormat`
+	 * :ref:`targetPlatform-removeFormat`
+	 * :ref:`targetPlatformLogo-upload`
+	 * :ref:`targetPlatformLogo-delete`
+	 * :ref:`targetPlatformLogo-download`
+	 * :ref:`targetPlatformLogo-downloadFile`

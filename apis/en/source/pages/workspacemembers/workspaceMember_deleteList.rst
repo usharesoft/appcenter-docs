@@ -1,0 +1,56 @@
+.. Copyright (c) 2007-2016 UShareSoft, All rights reserved
+
+.. _workspaceMember-deleteList:
+
+workspaceMember_deleteList
+--------------------------
+
+.. function:: DELETE /orgs/{oid}/workspaces/{wid}/memberships
+
+.. sidebar:: Summary
+
+	* Method: ``DELETE``
+	* Response Code: ``204 / 200``
+	* Response Formats: 
+	* Since: ``UForge 3.3.2``
+
+Removes one or more users as members of a workspace. 
+
+The list of users can be a list of emails or login names.  This is specified as a set of ``query parameters``.
+
+Security Summary
+~~~~~~~~~~~~~~~~
+
+* Requires Authentication: ``true``
+* Entitlements Required: ``None``
+
+URI Parameters
+~~~~~~~~~~~~~~
+
+* ``wid`` (required): the id of the :ref:`workspace-object`
+* ``oid`` (required): the id of the :ref:`org-object`
+
+HTTP Request Body Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+None
+
+Example Request
+~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+	curl "http://www.example.com/api/orgs/{oid}/workspaces/{wid}/memberships" -X DELETE \
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
+
+.. seealso::
+
+	 * :ref:`workspace-api-resources`
+	 * :ref:`workspace-object`
+	 * :ref:`membership-object`
+	 * :ref:`workspaceMember-invite`
+	 * :ref:`workspaceMember-getAll`
+	 * :ref:`workspaceMember-deleteList`
+	 * :ref:`workspaceMember-delete`
+	 * :ref:`workspaceMember-update`
+	 * :ref:`workspaceMember-updateList`

@@ -1,0 +1,76 @@
+.. Copyright (c) 2007-2016 UShareSoft, All rights reserved
+
+.. _partitionTableDisk-create:
+
+partitionTableDisk_create
+-------------------------
+
+.. function:: POST users/{uid}/appliances/{aid}/installProfile/{ipid}/pt/{ptid}/disks
+
+.. sidebar:: Summary
+
+	* Method: ``POST``
+	* Response Code: ``201``
+	* Response Formats: ``application/xml`` ``application/json``
+	* Since: ``UForge 2.1``
+
+Creates a new physical disk to a partitioning table. 
+
+Please refer to :ref:`disk-object` for a complete list of all the ``partition table disk`` attributes.
+
+Security Summary
+~~~~~~~~~~~~~~~~
+
+* Requires Authentication: ``true``
+* Entitlements Required: ``appliance_create``
+
+URI Parameters
+~~~~~~~~~~~~~~
+
+* ``uid`` (required): the id of the :ref:`user-object` that has created the appliance
+* ``ptid`` (required): the id of the :ref:`partitiontable-object`
+* ``aid`` (required): the id of the :ref:`appliance-object`
+
+HTTP Request Body Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A :ref:`disk-object` object
+
+Example Request
+~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+	curl "http://www.example.com/apiusers/{uid}/appliances/{aid}/installProfile/{ipid}/pt/{ptid}/disks" -X POST \
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
+
+Example of representation.xml content (the request body):
+
+.. code-block:: xml
+
+	<disk>
+		<name>sda</name>
+		<partitionType>MSDOS</partitionType>
+		<partition>
+			<name>boot</name>
+			<mpoint>/boot</mpoint>
+			<size>256</size>
+			<label>/boot</label>
+			<fstype>ext3</fstype>
+		</partition>
+	</disk>
+
+
+.. seealso::
+
+	 * :ref:`appliancepartitiontabledisk-api-resources`
+	 * :ref:`appliancepartitiontablelogicalgroup-api-resources`
+	 * :ref:`appliancepartitiontablelogicalvolume-api-resources`
+	 * :ref:`partitiontable-object`
+	 * :ref:`appliance-object`
+	 * :ref:`disk-object`
+	 * :ref:`partitionTableDisk-getAll`
+	 * :ref:`partitionTableDisk-deleteAll`
+	 * :ref:`partitionTableDisk-get`
+	 * :ref:`partitionTableDisk-update`
+	 * :ref:`partitionTableDisk-delete`

@@ -1,0 +1,49 @@
+.. Copyright (c) 2007-2016 UShareSoft, All rights reserved
+
+.. _sshKey-delete:
+
+sshKey_delete
+-------------
+
+.. function:: DELETE /users/{uid}/sshkeys/{sshid}
+
+.. sidebar:: Summary
+
+	* Method: ``DELETE``
+	* Response Code: ``204 / 200``
+	* Response Formats: 
+	* Since: ``UForge 3.4``
+
+Removes an ssh key from an user.
+
+Security Summary
+~~~~~~~~~~~~~~~~
+
+* Requires Authentication: ``true``
+* Entitlements Required: ``None``
+
+URI Parameters
+~~~~~~~~~~~~~~
+
+* ``uid`` (required): the id of the :ref:`user-object`
+* ``sshid`` (required): the id of the :ref:`sshkey-object`
+
+HTTP Request Body Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+None
+
+Example Request
+~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+	curl "/users/{uid}/sshkeys/{sshid}" -X DELETE \
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
+
+.. seealso::
+
+	 * :ref:`sshkey-object`
+	 * :ref:`sshKey-get`
+	 * :ref:`sshKey-getAll`
+	 * :ref:`sshKey-create`

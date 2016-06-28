@@ -9,7 +9,7 @@ All the UForge components are delivered as native RPM packages. UShareSoft maint
 
 .. image:: /images/uforge-update-repo.jpg
 
-In order to interact with the UShareSoft package repository, you must already have an active UForge license (stored in UShareSoft's database) and corresponding authentication credentials, set during the initial install of the platform. The authentication credentials are stored in the uforge.conf file and used in the uforge-ee.repo file. To view these files:
+In order to interact with the UShareSoft package repository, you must already have an active UForge license (stored in UShareSoft's database) and corresponding authentication credentials, set during the initial install of the platform. The authentication credentials are stored in the ``uforge.conf`` file and used in the ``uforge-ee.repo`` file. To view these files:
 
 .. code-block:: shell
 
@@ -21,13 +21,13 @@ In order to interact with the UShareSoft package repository, you must already ha
 
 The request to update uses these credentials via HTTPS to UShareSoft who then determines whether you have the access rights to update the platform.
 
-You must also have set up the yum repo file to authorize UForge updates using configure_yum_repos.sh as follows:
+You must also have set up the yum repo file to authorize UForge updates using ``configure_yum_repos.sh`` as follows:
 
 .. code-block:: shell
 
 	/opt/UShareSoft/uforge/conf/configure_yum_repos.sh -u <uss account user> -p <uss account password> -t <uforge install type>
 
-The (optional) parameter <uforge install type> can take the values uforge-ee or uforge-dev. By default uforge-ee is used.
+The (optional) parameter <uforge install type> can take the values ``uforge-ee`` or ``uforge-dev``. By default ``uforge-ee`` is used.
 
 To update the platform, use the "yum" command-line tool as follows:
 
@@ -113,7 +113,7 @@ Run the following CLI command in order to know if Squid is running:
 		# service squid status
 		
 	
-	If squid is stopped, run the following command-line
+	If squid is stopped, run the following command:
 	
 	.. code-block:: shell
 
@@ -124,11 +124,11 @@ Run the following CLI command in order to know if Squid is running:
 Retrieving Data from UShareSoft
 -------------------------------
 
-Before retrieving data from resellers.usharesoft.com using the lftp command from a UForge instance verify the following:
+Before retrieving data from resellers.usharesoft.com using the lftp command from a UForge instance do the following:
 
-	1. If the UForge instance is running in a virtualized infrastructure with security rules by default (AWS, OpenStack, ...). Ports 20, 21 (as well as 22 for SSH) must be allowed for outgoing traffic.
+	1. Verify if the UForge instance is running in a virtualized infrastructure with security rules by default (AWS, OpenStack, ...). Ports 20, 21 (as well as 22 for SSH) must be allowed for outgoing traffic.
 	
-	2. Before launching the lftp command and due to the new proxy mechanism you must run::
+	2. Due to the new proxy mechanism you must run::
 
 		export ftp_proxy="" 
 
@@ -153,7 +153,7 @@ Even though UForge accepts HTTP requests, it is highly recommended for security 
 
 UForge expects certain headers containing authentication information to be present as part of the URL request. UForge also accepts other header information, for example, to specify response content type and caching.
 
-The following is an example of a request sent to an UForge AppCenter with hostname 10.0.0.20 using cURL to get the user myUser. Note that basic authentication is used for clarity.
+The following is an example of a request sent to a UForge AppCenter with hostname 10.0.0.20 using cURL to get the user ``myUser``. Note that basic authentication is used for clarity.
 
 .. code-block:: shell
 

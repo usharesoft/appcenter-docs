@@ -35,7 +35,7 @@ You can re-configure the scheduler to have different scheduling policies for dif
 Viewing Current Resources
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To view all the current resources in the scheduler, log in to the oar scheduler node as root and run the command oarnodes:
+To view all the current resources in the scheduler, log in to the oar scheduler node as root and run the command ``oarnodes``:
 
 .. code-block:: shell
 
@@ -53,15 +53,15 @@ To view all the current resources in the scheduler, log in to the oar scheduler 
 
 This provides the basic information of each resource including:
 
-	* network_address: the compute node this resource is attached to 
-	* resource_id is the ID of the node
-	* state: the current state of the resource
-	* properties: the main properties of the resource, including the nature ID that determines the job type this resource is providing
+	* ``network_address``: the compute node this resource is attached to 
+	* ``resource_id`` is the ID of the node
+	* ``state`` is the current state of the resource
+	* ``properties``: the main properties of the resource, including the nature ID that determines the job type this resource is providing
 
 Adding or Updating a Resource
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To add or update a resource, first log in to the oar scheduler node as root.
+To add or update a resource, first log in to the oar scheduler node as ``root``.
 
 To add a resource to compute node ``node1`` allowing to generate an image:
 

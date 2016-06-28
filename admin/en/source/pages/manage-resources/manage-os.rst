@@ -2,7 +2,7 @@
 
 .. _manage-os:
 
-Viewing The Supported OSes
+Viewing the Installed OSes
 --------------------------
 
 All the open source operating system versions are delivered as part of the UForge repository. Proprietary operating systems are not.

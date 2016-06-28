@@ -5,7 +5,7 @@
 Architecture Considerations
 ===========================
 
-The following sections describe in detail things to consider when deploying an UForge platform.
+The following sections describe in detail things to consider when deploying a UForge platform.
 
 .. toctree::
    :titlesonly:

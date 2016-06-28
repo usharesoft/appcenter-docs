@@ -44,7 +44,7 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 
 		uforge org os add --name CentOS --arch x86_64 --version 6.5 -u $ADMIN -p $PASS
 
-	4. Enable the new operating system for the organization. The following command enables CentOS 6.5 32bit in the default organization::
+	4. Enable the new operating system for the organization. The following command enables CentOS 6.5 in the default organization::
 
 		uforge org os enable --name CentOS --version 6.5 --arch x86_64 -u $ADMIN -p $PASS
 

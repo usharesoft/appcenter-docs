@@ -16,7 +16,7 @@ To create a new OS profile:
 	3. Double-click on the operating system you want to administer.  This will provide the current list of profiles this operating system has.  
 	4. Select the profile which will serve as the base for your custom OS profile and click create.
 
-		.. image: /images/create-os-profile.jpg
+		.. image:: /images/create-os-profile.jpg
 
 	5. Enter your profile name and click create.
 	6. Enter a description (mandatory).
@@ -35,5 +35,5 @@ To edit your OS profile:
 	3. Click on the operating system you want to administer.  This will provide the current list of profiles this operating system has.  
 	4. Click on the profile you want to edit.
 	5. You can edit the name and description from the Overview page.
-	6. To modify the packages included in your profile, click OS Packages. The packages that you can add are listed in the top list. The bottom list is the list of packages that are currently part of the profile. Select the package(s) you want to add or remove to your OS profile and click save. You can search for the package you want to add. 
+	6. To modify the packages included in your profile, click OS Packages. The packages that you can add are listed in the top list. The bottom list is the list of packages that are currently part of the profile. Select the package(s) you want to add or remove to your OS profile and click ``save``. You can search for the package you want to add. 
 	7. Click ``Save``.

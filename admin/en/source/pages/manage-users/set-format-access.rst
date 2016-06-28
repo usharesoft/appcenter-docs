@@ -1,13 +1,13 @@
 .. Copyright (c) 2007-2016 UShareSoft, All rights reserved
 
-.. _set-formats:
+.. _set-format-access:
 
 Managing User Access to Formats
 -------------------------------
 
 Image formats can be managed at the level of the organization or of the user.
 
-An administrator who wants to add format rights to several users within an organization should create the formats at the level of the organization (refer to :ref:`formats-org`) and then add them to a subscription profile (refer to :ref:`ormats-subscription`. In this case, all new users created with the given subscription profile will have access to the formats. 
+An administrator who wants to add format rights to several users within an organization should create the formats at the level of the organization (refer to :ref:`formats-org`) and then add them to a subscription profile (refer to :ref:`formats-subscription`. In this case, all new users created with the given subscription profile will have access to the formats. 
 
 The administrator can add or remove image formats for a specific user account using the command-line interface, as described here after.
 

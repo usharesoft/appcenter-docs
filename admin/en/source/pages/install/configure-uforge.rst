@@ -27,27 +27,34 @@ Fill in the wizard, note that all the fields are mandatory.
 
 	6. Select the operating systems and formats you would like to install. When you select an OS, a default mirror location is indicated. This is used for synchronization of packages and distributions.  You can either accept the default values or modify the value to synchronize with another mirror.
 
-	8. Set the internet connection. By default, UForge expects to have a direct connection to the internet. If you de-select this option, you will need to enter the proxy hostname and port.
+	7. Set the internet connection. By default, UForge expects to have a direct connection to the internet. If you de-select this option, you will need to enter the proxy hostname and port.
 
-	9. Set the SMTP Server to use for sending email notification messages created by UForge.  If you want to use a SMTP relay, then also indicate the relay hostname and port number.
+	8. Set the SMTP Server to use for sending email notification messages created by UForge.  If you want to use a SMTP relay, then also indicate the relay hostname and port number.
 
-	10. Click ``next`` to continue.
+	9. Click ``next`` to continue.
 
-	11. Enter the Web Server IP address, external hostname and the database IP address. 
+	10. Enter the Web Server IP address, external hostname and the database IP address. 
 
-	12. Select if OS and image storage should be local or remote. OS storage will be used for distributions, which image storage will include user data such as images, projects, mysoftware and other user data created with UForgeNow.
+	11. Select if OS and image storage should be local or remote. OS storage will be used for distributions, which image storage will include user data such as images, projects, mysoftware and other user data created with UForgeNow.
 
-		If you choose to use a remote storage, indicate the NFS server with mount point and you should enter the full path for the OS directory e.g. /DISTROS.
+		* If you choose to use a remote storage, indicate the NFS server with mount point and you should enter the full path for the OS directory e.g. /DISTROS.
+		* If you select remote storage for the image store, you have to make sure that the path USER_DATA exists, with the correct permissions i.e. tomcat:tomcat. Refer to :ref:`repository-shared-storage`, step 4, Check mount points, for more details.
 
-		If you select remote storage for the image store, you have to make sure that the path USER_DATA exists, with the correct permissions i.e. tomcat:tomcat. Refer to :ref:`repository-shared-storage`, step 4, Check mount points, for more details.
+	12. Indicate the generation cluster compute node hostnames. You can add additional compute nodes by clicking the add button.
 
-	13. Indicate the generation cluster compute node hostnames. You can add additional compute nodes by clicking the add button.
-
-	14. Once you have finished the configuration, click the ``Deploy`` button.
+	13. Once you have finished the configuration, click the ``Deploy`` button.
 
 		.. note:: The deployment may take a few hours, depending on the number of operating systems you have chosen.
 
-	15. Once the deployment is complete, click ``Finish``. 
+	14. Once the deployment is complete, click ``Finish``. 
+
+.. warning:: As part of the deployment phase, the wizard logs all the steps of the configuration.  These logs though include the administration passwords and other sensitive data you have used to configure this platform.  It is important that these logs do not remain on the machine once the deployment is over.  To do this:
+
+	.. code-block:: bash
+
+		# cd /var/log/UShareSoft
+		# /bin/rm -rf oas-deploy
+		
 
 Configuring Ports
 ~~~~~~~~~~~~~~~~~

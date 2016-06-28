@@ -11,6 +11,7 @@ There are two methods to use the command-line tool:
   * by individual commands, assuming you know the command you want to launch. For example to list user information for root: uforge -u root -p <password> -U https://uforge.usharesoft.com/api user info --account root
 
 Command-line Tool Presentation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The UForge AppCenter command-line tool has the form:
 

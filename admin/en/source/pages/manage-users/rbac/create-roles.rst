@@ -19,7 +19,7 @@ You can also remove an entitlement from a role by using the command::
 
 	uforge role entitlement remove --name newrole --entitlements studio_access -u $ADMIN -p $PASS
 
-You can add entitlements as part of the creation by using the --entitlements option in the create command::
+You can add entitlements as part of the creation by using the ``--entitlements`` option in the create command::
 
 	uforge role create --name newrole --description “description of new role” --entitlements appliance_create studio_access -u $ADMIN -p $PASS
 

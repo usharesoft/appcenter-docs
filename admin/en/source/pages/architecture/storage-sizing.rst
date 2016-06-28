@@ -49,7 +49,7 @@ For a compute node configured to generate 10 images simultaneously and assuming 
 
 	user disk quota x total number of users
 
-For example, a UForge platform providing all the operating systems UForge supports for 100 users, each having a quota of 18 GB (equivalent to having a maximum of 15 stored images of 1GB each and 3GB of uploaded software), the remote storage required is: 1880 GB (1.88 TB).
+For example, a UForge platform providing all the operating systems UForge supports for 100 users, each having a quota of 18 GB (equivalent to having a maximum of 15 stored images of 1GB each and 3GB of uploaded software), the remote storage required is: 1880 GB (1.88 TB). When calculating, you should consider an addition 10% margin, plus 20 GB for UShareSoft bits (installer, ISO, etc).
 
 Depending on the replication policy used for the remote storage, the total remote storage may have to be larger.  Note that it may not be necessary to replicate all the information stored in the remote storage.  Only important information must be replicated, including:
 

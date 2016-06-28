@@ -15,7 +15,6 @@ This section covers:
 	repository-shared-storage
 	repository-local-storage
 	install-ISO
-	install-live-system
 	configure-uforge
 	cloud-platform-ports
 	test-deployment

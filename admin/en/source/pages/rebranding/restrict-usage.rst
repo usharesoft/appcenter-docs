@@ -7,7 +7,7 @@ Restricting Formats
 
 UForge Portal allows users to generate the templates provided to all the formats the user has access to.  If you are using the UForge Online SaaS platform, users will have access to all the formats. In certain circumstances, you may wish to restrict the formats shown to the user. You can either grey out a format or remove it altogether.
 
-To grey out a format, find the <t:format> section of the format you want to be greyed out. This format will remain visible, but will not be available to the users. Set enabled to false::
+To grey out a format, find the <t:format> section of the format you want to be greyed out. This format will remain visible, but will not be available to the users. Set enabled to ``false``::
 
 	<t:publish>
 	    <t:enabled>false<t:enabled>

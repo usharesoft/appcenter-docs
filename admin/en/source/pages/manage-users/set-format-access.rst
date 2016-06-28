@@ -48,9 +48,9 @@ You would use the following command:
 Disabling User Access to Formats
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To disable access to one or more formats for a specific user  (in this example “kermit”), you must specify the format name with option ``--tragetFormats``, as follows:
+To disable access to one or more formats for a specific user  (in this example “kermit”), you must specify the format name with option ``--targetformats``, as follows:
 
 .. code-block:: shell
 
-	user targetformat disable --targetFormats "OVF or OVA" QCOW2 VirtualBox --account kermit --url https://uforge.usharesoft.com:443 -u $ADMIN -p $PASS
+	user targetformat disable --targetformats "OVF or OVA" QCOW2 VirtualBox --account kermit --url https://uforge.usharesoft.com:443 -u $ADMIN -p $PASS
 	

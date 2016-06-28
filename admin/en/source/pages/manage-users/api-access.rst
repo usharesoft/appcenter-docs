@@ -27,7 +27,7 @@ To grant API access to a user account you must create a role to which you will a
 		Getting user [kermit] ...
 		Success: User kermit now has an API Key Quota of [5]
 
-To disable API access simply remove the entitlement api_key_access::
+To disable API access simply remove the entitlement ``api_key_access``::
 
 	uforge user role remove --name newrole --account kermit -u $ADMIN -p $PASS
 

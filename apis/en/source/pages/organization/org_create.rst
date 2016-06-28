@@ -1,0 +1,74 @@
+.. Copyright (c) 2007-2016 UShareSoft, All rights reserved
+
+.. _org-create:
+
+org_create
+----------
+
+.. function:: POST /orgs
+
+.. sidebar:: Summary
+
+	* Method: ``POST``
+	* Response Code: ``201``
+	* Response Formats: ``application/xml`` ``application/json``
+	* Since: ``UForge 3.3``
+
+Creates a new organization. 
+
+Please refer to :ref:`org-object` for a complete list of all the ``organization`` attributes.
+
+Security Summary
+~~~~~~~~~~~~~~~~
+
+* Requires Authentication: ``true``
+* Entitlements Required: ``org_administrate``
+
+URI Parameters
+~~~~~~~~~~~~~~
+
+None
+HTTP Request Body Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A :ref:`org-object` object
+
+Example Request
+~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+	curl "http://www.example.com/api/orgs" -X POST \
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
+
+Example of representation.xml content (the request body):
+
+.. code-block:: xml
+
+	<ns0:org>
+		<name>Org Name Example</name>
+	</ns0:org>
+
+
+.. seealso::
+
+	 * :ref:`org-object`
+	 * :ref:`distribprofile-object`
+	 * :ref:`user-object`
+	 * :ref:`license-object`
+	 * :ref:`org-get`
+	 * :ref:`org-getAll`
+	 * :ref:`orgOS-add`
+	 * :ref:`orgOS-getAll`
+	 * :ref:`orgOS-update`
+	 * :ref:`orgOSWindows-add`
+	 * :ref:`orgOSWindows-getAll`
+	 * :ref:`orgMember-remove`
+	 * :ref:`orgMember-update`
+	 * :ref:`orgMember-getAll`
+	 * :ref:`orgMember-remove`
+	 * :ref:`orgMember-update`
+	 * :ref:`orgMember-getAll`
+	 * :ref:`orgCompany-getAll`
+	 * :ref:`orgLicense-getAll`
+	 * :ref:`orgLicense-download`

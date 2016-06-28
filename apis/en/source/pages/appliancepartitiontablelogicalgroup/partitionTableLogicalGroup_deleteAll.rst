@@ -1,0 +1,57 @@
+.. Copyright (c) 2007-2016 UShareSoft, All rights reserved
+
+.. _partitionTableLogicalGroup-deleteAll:
+
+partitionTableLogicalGroup_deleteAll
+------------------------------------
+
+.. function:: DELETE users/{uid}/appliances/{aid}/installProfile/{ipid}/pt/{ptid}/groups
+
+.. sidebar:: Summary
+
+	* Method: ``DELETE``
+	* Response Code: ``204 / 200``
+	* Response Formats: 
+	* Since: ``UForge 2.1``
+
+Removes all the logical groups from a partitioning table.
+
+Security Summary
+~~~~~~~~~~~~~~~~
+
+* Requires Authentication: ``true``
+* Entitlements Required: ``appliance_create``
+
+URI Parameters
+~~~~~~~~~~~~~~
+
+* ``uid`` (required): the id of the :ref:`user-object` that has created the appliance
+* ``ptid`` (required): the id of the :ref:`partitiontable-object`
+* ``aid`` (required): the id of the :ref:`appliance-object`
+
+HTTP Request Body Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+None
+
+Example Request
+~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+	curl "http://www.example.com/apiusers/{uid}/appliances/{aid}/installProfile/{ipid}/pt/{ptid}/groups" -X DELETE \
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
+
+.. seealso::
+
+	 * :ref:`appliancepartitiontabledisk-api-resources`
+	 * :ref:`appliancepartitiontablediskpartition-api-resources`
+	 * :ref:`appliancepartitiontablelogicalvolume-api-resources`
+	 * :ref:`partitiontable-object`
+	 * :ref:`appliance-object`
+	 * :ref:`logicalgroup-object`
+	 * :ref:`partitionTableLogicalGroup-create`
+	 * :ref:`partitionTableLogicalGroup-getAll`
+	 * :ref:`partitionTableLogicalGroup-delete`
+	 * :ref:`partitionTableLogicalGroup-get`
+	 * :ref:`partitionTableLogicalGroup-update`

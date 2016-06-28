@@ -1,0 +1,74 @@
+.. Copyright (c) 2007-2016 UShareSoft, All rights reserved
+
+.. _cloudAccount-create:
+
+cloudAccount_create
+-------------------
+
+.. function:: POST /users/{uid}/accounts
+
+.. sidebar:: Summary
+
+	* Method: ``POST``
+	* Response Code: ``201``
+	* Response Formats: ``application/xml`` ``application/json``
+	* Since: ``UForge 2.0``
+
+Creates a new cloud account for an user. 
+
+Please refer to :ref:`credaccount-object` for a complete list of all the ``cloud account`` attributes.
+
+Security Summary
+~~~~~~~~~~~~~~~~
+
+* Requires Authentication: ``true``
+* Entitlements Required: ``cloud_account_create``
+
+URI Parameters
+~~~~~~~~~~~~~~
+
+* ``uid`` (required): the id of the :ref:`user-object`
+
+HTTP Request Body Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A :ref:`credAccount-object` object
+
+Example Request
+~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+	curl "http://www.example.com/api/users/{uid}/accounts" -X POST \
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
+
+Example of representation.xml content (the request body):
+
+.. code-block:: xml
+
+	<ns0:credAccount>
+		<xsi:type></xsi:type>
+		<name>OpenStack Example</name>
+		<targetPlatform>
+			<name>OpenStack</name>
+		</targetPlatform>
+		<glanceUrl>http://ip:9292</glanceUrl>
+		<keystoneUrl>http://ip:5000</keystoneUrl>
+		<login>username</login>
+		<password>password</password>
+		<keystoneVersion>v3</keystoneVersion>
+	</ns0:credAccount>
+
+
+.. seealso::
+
+	 * :ref:`credaccount-object`
+	 * :ref:`cloudAccount-getAll`
+	 * :ref:`cloudAccount-get`
+	 * :ref:`cloudAccount-update`
+	 * :ref:`cloudAccount-delete`
+	 * :ref:`cloudAccountResources-get`
+	 * :ref:`cloudAccountCert-create`
+	 * :ref:`cloudAccountCert-download`
+	 * :ref:`cloudAccountCert-delete`
+	 * :ref:`cloudAccountCert-upload`

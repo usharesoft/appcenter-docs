@@ -1,0 +1,65 @@
+.. Copyright (c) 2007-2016 UShareSoft, All rights reserved
+
+.. _applianceOSProfile-create:
+
+applianceOSProfile_create
+-------------------------
+
+.. function:: POST /users/{uid}/appliances/{aid}/osprofile
+
+.. sidebar:: Summary
+
+	* Method: ``POST``
+	* Response Code: ``201``
+	* Response Formats: ``application/xml`` ``application/json``
+	* Since: ``UForge 1.0``
+
+Adds a new OS profile to an appliance. 
+
+Refer to `distribprofile-object` for mandatory and optional parameters
+
+Security Summary
+~~~~~~~~~~~~~~~~
+
+* Requires Authentication: ``true``
+* Entitlements Required: ``appliance_create``
+
+URI Parameters
+~~~~~~~~~~~~~~
+
+* ``uid`` (required): the id of the :ref:`user-object` that has created the appliance
+* ``aid`` (required): the id of the :ref:`appliance-object`
+
+HTTP Request Body Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A :ref:`distribProfile-object` object
+
+Example Request
+~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+	curl "http://www.example.com/api/users/{uid}/appliances/{aid}/osprofile" -X POST \
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
+
+Example of representation.xml content (the request body):
+
+.. code-block:: xml
+
+	<ns0:distribProfile>
+		<name>Minimal</name>
+		<standardProfileUri>distributions/1/profiles/4</standardProfileUri>
+	</ns0:distribProfile>
+
+
+.. seealso::
+
+	 * :ref:`appliance-object`
+	 * :ref:`distribprofile-object`
+	 * :ref:`applianceOSProfile-get`
+	 * :ref:`applianceOSProfile-delete`
+	 * :ref:`applianceOSProfilePkg-getAll`
+	 * :ref:`applianceOSProfilePkg-updateAll`
+	 * :ref:`applianceOSUpdates-get`
+	 * :ref:`applianceOSUpdates-save`

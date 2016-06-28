@@ -1,0 +1,18 @@
+.. Copyright (c) 2007-2016 UShareSoft, All rights reserved
+
+.. _comments-object:
+
+comments
+========
+
+Provides a list of :ref:`comment-object` objects.
+
+Attributes
+~~~~~~~~~~
+
+The list of attributes for ``comments`` are:
+
+	* ``comments``: the list of :ref:`comment-object` objects
+	* ``total`` (long): the total number of objects
+
+

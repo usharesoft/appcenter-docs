@@ -1,0 +1,71 @@
+.. Copyright (c) 2007-2016 UShareSoft, All rights reserved
+
+.. _machineImagePublished-download:
+
+machineImagePublished_download
+------------------------------
+
+.. function:: GET /users/{uid}/appliances/{aid}/pimages/{pitid}/downloads
+
+.. sidebar:: Summary
+
+	* Method: ``GET``
+	* Response Code: ``200 / 304``
+	* Response Formats: ``*/*``
+	* Since: ``UForge 3.0``
+
+Downloads a published machine image. 
+
+This request is the same as :ref:`machineImage-downloadFile` 
+
+.. note:: You can only download a published machine image if the initial machine image generation request included the ``compress`` flag.  For more information, see :ref:`machineImage-generate`. 
+
+The published machine image can be downloaded without authentication if an ``downloadId`` is added as a ``query parameter``.  To retrieve the downloadId, use :ref:`machineImagePublished-getAll`. 
+
+.. note:: The ``downloadId`` can only be used once, afterwards it expires, and a new ``downloadId`` must be retrieved.
+
+Security Summary
+~~~~~~~~~~~~~~~~
+
+* Requires Authentication: ``false``
+* Entitlements Required: ``None``
+
+URI Parameters
+~~~~~~~~~~~~~~
+
+* ``uid`` (required): the id of the :ref:`user-object`
+* ``aid`` (required): the id of the :ref:`appliance-object`
+* ``pitid`` (required): the id of the :ref:`publishimage-object`
+
+HTTP Request Body Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+None
+
+Example Request
+~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+	curl "http://www.example.com/api/users/{uid}/appliances/{aid}/pimages/{pitid}/downloads" -X GET \
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
+
+.. seealso::
+
+	 * :ref:`appliance-object`
+	 * :ref:`publishimage-object`
+	 * :ref:`machineImage-deleteAll`
+	 * :ref:`machineImage-delete`
+	 * :ref:`machineImage-download`
+	 * :ref:`machineImage-downloadFile`
+	 * :ref:`machineImage-generate`
+	 * :ref:`machineImage-get`
+	 * :ref:`machineImage-getAll`
+	 * :ref:`machineImage-regenerate`
+	 * :ref:`machineImageGeneration-cancel`
+	 * :ref:`machineImageStatus-getAll`
+	 * :ref:`machineImageStatus-get`
+	 * :ref:`machineImage-publish`
+	 * :ref:`machineImagePublished-getAll`
+	 * :ref:`machineImagePublished-deleteAll`
+	 * :ref:`machineImagePublishedStatus-getAll`

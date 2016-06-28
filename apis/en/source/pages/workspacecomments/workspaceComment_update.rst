@@ -1,0 +1,72 @@
+.. Copyright (c) 2007-2016 UShareSoft, All rights reserved
+
+.. _workspaceComment-update:
+
+workspaceComment_update
+-----------------------
+
+.. function:: PUT /orgs/{oid}/workspaces/{wid}/comments/{cid}
+
+.. sidebar:: Summary
+
+	* Method: ``PUT``
+	* Response Code: ``200``
+	* Response Formats: ``application/xml`` ``application/json``
+	* Since: ``UForge 3.3.2``
+
+Updates the information of a comment. 
+
+This can include flagging the comment as abusive. 
+
+.. note:: you cannot change the contents of the original comment message using this request.
+
+Security Summary
+~~~~~~~~~~~~~~~~
+
+* Requires Authentication: ``true``
+* Entitlements Required: ``appliance_create``
+
+URI Parameters
+~~~~~~~~~~~~~~
+
+* ``wid`` (required): the id of the :ref:`workspace-object`
+* ``oid`` (required): the id of the :ref:`org-object`
+* ``cid`` (required): the id of the :ref:`comment-object`
+
+HTTP Request Body Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A :ref:`comment-object` object
+
+Example Request
+~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+	curl "/orgs/{oid}/workspaces/{wid}/comments/{cid}" -X PUT \
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
+
+Example of representation.xml content (the request body):
+
+.. code-block:: xml
+
+	<ns0:comment>
+		<abused>true</abused>
+		<message>initial message</message>
+	</ns0:comment>
+
+
+.. seealso::
+
+	 * :ref:`workspace-api-resources`
+	 * :ref:`comment-object`
+	 * :ref:`workspaceComment-create`
+	 * :ref:`workspaceComment-reply`
+	 * :ref:`workspaceComments-getAll`
+	 * :ref:`workspaceComment-get`
+	 * :ref:`workspaceComment-update`
+	 * :ref:`workspaceComment-delete`
+	 * :ref:`workspaceComment-deleteAll`
+	 * :ref:`workspaceComment-reportAbuse`
+	 * :ref:`workspaceComment-like`
+	 * :ref:`workspaceComment-dislike`

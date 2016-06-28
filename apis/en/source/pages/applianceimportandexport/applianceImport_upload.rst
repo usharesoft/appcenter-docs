@@ -1,0 +1,54 @@
+.. Copyright (c) 2007-2016 UShareSoft, All rights reserved
+
+.. _applianceImport-upload:
+
+applianceImport_upload
+----------------------
+
+.. function:: POST /users/{uid}/imports/{iid}/uploads
+
+.. sidebar:: Summary
+
+	* Method: ``POST``
+	* Response Code: ``201``
+	* Response Formats: ``application/xml`` ``application/json``
+	* Since: ``UForge 3.5``
+
+Upload the appliance archive. 
+
+In order to upload an archive, an ``appliance import ticket`` must first be created by using :ref:`appliance-import`. 
+
+Once the upload is complete, the platform extracts the archive and creates an appliance from the archive contents.  This is an asynchronous job.  To get the status of this import, use :ref:`applianceImportStatus-get`
+
+Security Summary
+~~~~~~~~~~~~~~~~
+
+* Requires Authentication: ``true``
+* Entitlements Required: ``appliance_create``
+
+URI Parameters
+~~~~~~~~~~~~~~
+
+* ``uid`` (required): the id of the :ref:`user-object`
+* ``iid`` (required): the id of the :ref:`applianceimport-object` ticket
+
+HTTP Request Body Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The file to upload.
+
+Example Request
+~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+	curl "/users/{uid}/imports/{iid}/uploads" -X POST \
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"-H "Content-type: application/xml" --data-binary "@binaryFilePath"
+
+.. seealso::
+
+	 * :ref:`appliance-object`
+	 * :ref:`applianceimport-object`
+	 * :ref:`appliance-import`
+	 * :ref:`applianceImport-get`
+	 * :ref:`applianceImportStatus-get`

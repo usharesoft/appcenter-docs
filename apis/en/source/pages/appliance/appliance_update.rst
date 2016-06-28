@@ -1,0 +1,70 @@
+.. Copyright (c) 2007-2016 UShareSoft, All rights reserved
+
+.. _appliance-update:
+
+appliance_update
+----------------
+
+.. function:: PUT /users/{uid}/appliances/{aid}
+
+.. sidebar:: Summary
+
+	* Method: ``PUT``
+	* Response Code: ``200``
+	* Response Formats: ``application/xml`` ``application/json``
+	* Since: ``UForge 3.6``
+
+Updates the meta-data information of an appliance. 
+
+Please refer to :ref:`appliance-object` for a complete list of all the ``appliance`` attributes.
+
+Security Summary
+~~~~~~~~~~~~~~~~
+
+* Requires Authentication: ``true``
+* Entitlements Required: ``appliance_create``
+
+URI Parameters
+~~~~~~~~~~~~~~
+
+* ``uid`` (required): the id of the :ref:`user-object`
+* ``aid`` (required): the id of the :ref:`appliance-object` to delete
+
+HTTP Request Body Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A :ref:`appliance-object` object
+
+Example Request
+~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+	curl "/users/{uid}/appliances/{aid}" -X PUT \
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
+
+Example of representation.xml content (the request body):
+
+.. code-block:: xml
+
+	<ns0:appliance>
+		<name>Appliance Example Updated</name>
+		<version>1.0Reloaded</version>
+	</ns0:appliance>
+
+
+.. seealso::
+
+	 * :ref:`appliance-object`
+	 * :ref:`user-object`
+	 * :ref:`appliance-create`
+	 * :ref:`appliance-clone`
+	 * :ref:`appliance-delete`
+	 * :ref:`appliance-get`
+	 * :ref:`appliance-getAll`
+	 * :ref:`applianceLogo-delete`
+	 * :ref:`applianceLogo-download`
+	 * :ref:`applianceLogo-downloadFile`
+	 * :ref:`applianceLogo-upload`
+	 * :ref:`applianceMySoftware-getAll`
+	 * :ref:`applianceProject-getAll`

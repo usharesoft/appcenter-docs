@@ -34,11 +34,18 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = [
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.todo',
-    'rst2pdf.pdfbuilder',
-]
+if on_rtd:
+    extensions = [
+        'sphinx.ext.intersphinx',
+        'sphinx.ext.todo',
+    ]
+else:
+    extensions = [
+        'sphinx.ext.intersphinx',
+        'sphinx.ext.todo',
+        'rst2pdf.pdfbuilder',
+    ]
+
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -56,8 +63,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'UForge AppCenter User Documentation'
-copyright = u'2016, UShareSoft'
-author = u'UShareSoft'
+copyright = u'2016 FUJITSU LIMITED'
+author = u'FUJITSU'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -235,7 +242,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'UForgeAppCenterUserDoc.tex', u'UForge AppCenter User Documentation',
-     u'UShareSoft', 'manual'),
+     u'FUJITSU', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -285,7 +292,7 @@ texinfo_documents = [
 
 # PDF documentation information
 pdf_documents = [
-    ('index', u'UForgeAppCenterUserDoc', u'UForge AppCenter User Documentation', u'UShareSoft'),
+    ('index', u'UForgeAppCenterUserDoc', u'UForge AppCenter User Documentation', u'FUJITSU'),
 ]
 
 # A comma-separated list of custom stylesheets.

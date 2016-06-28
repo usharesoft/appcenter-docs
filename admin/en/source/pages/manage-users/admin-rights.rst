@@ -5,7 +5,7 @@
 Granting a User Administrator Rights
 ------------------------------------
 
-.. note:: The user you set as Administrator will have access to the Admin tab on UForge Portal and have rights to manage the organization. However, an Admin user does not automatically have the right to create users. In order to create new users the user must be part of the Admin list. See Allowing Administrators to Create Users. 
+.. note:: The user you set as Administrator will have access to the Admin tab on UForge Portal and have rights to manage the organization. However, an Admin user does not automatically have the right to create users. In order to create new users the user must be part of the Admin list. See :ref:`subscription-administrator`. 
 
 There are two steps in granting a user Administrator privileges; you must: 
 

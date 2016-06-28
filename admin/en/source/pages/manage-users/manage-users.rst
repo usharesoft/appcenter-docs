@@ -24,7 +24,8 @@ To create a user account:
 
 
 User name can include alphanumeric characters and the following special characters: dashes (-), underscores (_), at symbol (@), and/or periods (.). These special characters are not allowed at the beginning or end, nor can they be consecutive. Spaces and all other characters are not supported at this time.
-If no default password is specified (using --accountPassword), a temporary random password is created for the new user account. An email is automatically sent to the email address assigned to the user account when the account has been successfully created.  
+
+If no default password is specified (using ``--accountPassword``), a temporary random password is created for the new user account. An email is automatically sent to the email address assigned to the user account when the account has been successfully created.  
 
 As no default password is specified, UForge creates a temporary random password for the new user account. An email is automatically sent to the email address assigned to the user account when the account has been successfully created.  The user account is automatically active, allowing the user to sign in and begin using UForge.
 

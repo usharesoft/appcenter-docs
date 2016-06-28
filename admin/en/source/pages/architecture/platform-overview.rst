@@ -95,3 +95,5 @@ The UForge AppCenter requires the following hardware:
 	* RAM: 16GB or more 
 	* Local Hard Drive: 400GB
 	* Storage: 2 GB
+
+This is the minimum for an "all in one" solution. For more information, refer to :ref:`minimum-sw-topology`.

@@ -7,6 +7,10 @@ This directory contains the source for UForge AppCenter online documentation.  T
 Install [Sphinx](http://sphinx-doc.org)
 
     $ pip install sphinx
+    
+Install [rst2pdf](https://github.com/rst2pdf/rst2pdf).  This allows users to build pdfs on Windows machines (on Mac or Linux use latex to create pdfs of this documentation).
+
+    $ pip install rst2pdf
 
 Install [read the docs theme](https://github.com/snide/sphinx_rtd_theme):
 

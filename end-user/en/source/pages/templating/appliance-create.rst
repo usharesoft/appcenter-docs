@@ -39,7 +39,7 @@ To create a Windows Appliance:
 
 		.. note:: Once you have chosen the OS Profile, you cannot add any packages or run updates. The OS Profile is static. Once created, if you select OS Profile, you will only be able to view the details of the profile you selected.  
 
-	6. Set the Install profile and click Save.
+	6. Set the Install profile and click ``Save``.
 
 		.. note:: Unlike Linux, the following cannot be set for Windows appliances: Keyboard, Root user, User & Groups, Kernel Parameters and Firewall.  
 
@@ -47,19 +47,19 @@ To create a Windows Appliance:
 
 	7. Optionally, you can set the Activation Key as part of the Install Profile. If it is not entered in the Install Profile, the default key will be used for a 30-day trial period once the appliance is booted.
 	8. Optionally you can add partitions.
-		a. Click on Partitioning and select Advanced Partitioning
+		a. Click on ``Partitioning`` and select ``Advanced Partitioning``.
 		b. Click on the green + sign at the top.
 		c. You can modify the name and partitions type
 		d. Select the filesystem to ntfs and mount point to D: (or such).
 		e. Enter the size. The install disk  should be 12 Gb for core versions and not less than 32Gb for the full version
 		f. Check the box in the Grow column if you want the partition to be growable.
-		g. Click save.
+		g. Click ``save``.
 
 	.. image :: /images/windows-adv-partitions.jpg
 
 	9. Add software bundles from the Project or MySoftware pages.
 
-	Software bundles included in MySoftware and Project will be put on the image disk but the UForge generation tool WILL NOT install them even if these are executable/installers files (.exe, .msi, etc.). It is up to the end user to manually complete the installation of the software bundles.
+	.. warning:: Software bundles included in MySoftware and Project will be put on the image disk but the UForge generation tool WILL NOT install them even if these are executable/installers files (.exe, .msi, etc.). It is up to the end user to manually complete the installation of the software bundles.
 
 	For Windows, .exe or .msi files can be given extra parameters. The parameters depend on the .exe or .msi file, and can be used for example for silent installation, providing extra configuration values, etc.
 

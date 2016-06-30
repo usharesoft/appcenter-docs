@@ -37,7 +37,7 @@ You can add your own custom software either using the ``Software Library`` or by
 
 The following is a list of supported file formats:
 
-* Linux only, note by default .rpm and .deb files will be installed at generation. This can be modified when you upload the files (see procedure below:
+* Linux only, note by default .rpm and .deb files will be installed at generation. This can be modified when you upload the files (see procedure below):
 
     - .rpm ("rpm i" will be executed)
     - .deb ("dpkg -i" will be executed)

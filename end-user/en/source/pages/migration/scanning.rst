@@ -19,7 +19,7 @@ Recommendations pre-scan:
 
 	* Pre-install or post-install scripts on the system you are about to scan should only use ascii character set
 	* Custom packages on the live system to be scanned should not contain references to package dependencies as relative path. They should be expressed as absolute paths.
-	* If custom packages are installed using ``--nodeps`` flag, the scan process will not detect these packages. When carrying out white box migration, UForge AppCenter will check for these dependencies. If they are custom packages that are not on the live system, the generation will fail. Therefore, it is recommended to provide a custom repository with all the necessary custom packages. Otherwise, they can be added after the scan to the appliance template using the ``My software``.
+	* If custom packages are installed using ``--nodeps`` flag, the scan process will not detect these packages. When carrying out white box migration, UForge AppCenter will check for these dependencies. If they are custom packages that are not on the live system, the generation will fail. Therefore, it is recommended to provide a custom repository with all the necessary custom packages. Otherwise, they can be added after the scan to the appliance template in ``My software``.
 
 .. _migration-scan-linux:
 
@@ -39,14 +39,19 @@ To carry out a scan, go to the ``Migration`` tab:
 	6. Download binary locally by clicking ``Download``.
 	7. Copy the binary on the target environment you want to migrate.
 	8. Open a terminal window and login to the target environment.
-	9. Run the scan command on the running target environment to start a deep scan of the system you want to migrate. 
+	9. Run the scan command on the running target environment to start a deep scan of the system you want to migrate. The binary identifies the packages, files and custom files on the system.
 
-	By default the scan data will be saved in ``/tmp``. You can modify the directory where the data will be saved using the ``-t`` option in order to ensure that there is enough space to save the scan data.
-	The binary runs to identify the packages, files and custom files on the system.
+		By default the scan data will be saved in ``/tmp``. You can modify the directory where the data will be saved using the ``-t`` option in order to ensure that there is enough space to save the scan data.
 
 	10. A report is sent to UForge AppCenter which can be used for migration. To view the progress, go back to the ``Migration`` tab and click ``ok``.
 
-.. note:: The duration of the scan depends on: the power of the machine in the target environment, the complexity of the target environment OS (number of packages installed), the network bandwidth between the target environment and UForge. Scans of typical simple target environments can last about 5 to 15 minutes. In the case of larger and more complex target environments, together with poorer bandwidth, one can experience durations up to one hour.
+.. note:: The duration of the scan depends on: 
+
+	* the power of the machine in the target environment, 
+	* the complexity of the target environment OS (number of packages installed), 
+	* the network bandwidth between the target environment and UForge. 
+	
+	Scans of typical simple target environments can last about 5 to 15 minutes. In the case of larger and more complex target environments, together with poorer bandwidth, one can experience durations up to one hour.
 
 .. _migration-scan-windows:
 

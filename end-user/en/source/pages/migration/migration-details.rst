@@ -70,7 +70,7 @@ You can now carry out a black box or a white box migration.  For black box migra
 Generate an Image (Black Box Migration)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-At this stage, the scan report is used to generate a new machine image.  The generation tools:
+At this stage, the scan report is used to generate a new machine image.  The generation tool:
 
 	1. Returns all the packages discovered on the scan target and installs them.
 	2. Takes the overlay and applies it on top of the built system.

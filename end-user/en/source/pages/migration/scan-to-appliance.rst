@@ -53,12 +53,12 @@ If you want to modify configuration information of a scanned system, there are s
 
 	1. Using pre-install and post-install scripts
 	2. Using boot scripts
-	3. Using UForge Studio. You may want to refer to the UForge Studio documentation.
+	3. Using UForge Studio
 	4. Integrate with a Configuration Management platform
 
 In each case, you must import the scan as an appliance template (white box migration).
 
-**Solution #1**: Using pre-install and post-install scripts in the package mechanism:  RPM and DEB package mechanism allows you to register scripts that are executed at various moments during the installation of the package.  By packaging your middleware or application binaries as a native package allows you to register such scripts.  These scripts are automatically taken into account as part of the machine image generation process.  These packages can be added into the appliance template – either in a custom repository known by UForge AppCenter (in this case the packages are displayed as part of the repository and are added in OS Profile) or as part of a Project or My Software component.
+**Solution #1**: Using pre-install and post-install scripts in the package mechanism:  RPM and DEB package mechanism allows you to register scripts that are executed at various moments during the installation of the package.  By packaging your middleware or application binaries as a native package you can register such scripts.  These scripts are automatically taken into account as part of the machine image generation process.  These packages can be added into the appliance template – either in a custom repository known by UForge AppCenter (in this case the packages are displayed as part of the repository and are added in OS Profile) or as part of a Project or My Software component.
 
 **Solution #2**: Using boot scripts.  UForge AppCenter allows you to add boot scripts in the appliance template.  These boot scripts are executed the first time the migrated instance is provisioned.  Boot scripts can also be registered to be run every time the instance is rebooted.  
 
@@ -71,7 +71,7 @@ In each case, you must import the scan as an appliance template (white box migra
 Adding Security Patches
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-When a scan is imported as an appliance template all the native packages detected from the scan are compared with the UForge AppCenter package repositories.  UForge AppCenter will immediately inform you whether new package versions are available for your scan report.  Using the “appliance update” feature, a graph is displayed showing you all the available updates and allows the user to update the appliance template to the latest available packages.  Once the appliance template has been updated, the user can then generate the machine image and register the machine image on the target environment.  The migrated instance will have the latest packages updates.
+When a scan is imported as an appliance template all the native packages detected from the scan are compared with the UForge AppCenter package repositories.  UForge AppCenter will immediately inform you whether new package versions are available for your scan report.  Using the “appliance update” feature, a graph is displayed showing you all the available updates and allows the user to update the appliance template to the latest available packages.  Once the appliance template has been updated, the user can then generate the machine image and register the machine image on the target environment.  The migrated instance will have the latest package updates.
 
 Of course this is not the only way to update a migrated system.  The administrator can update the live system using the standard operating system update mechanism. Depending on the operating system this will be yum, apt, yast etc.  The administrator can run this update manually, or add a boot script in the appliance template that carries out the update during first boot.
 
@@ -90,7 +90,7 @@ For a list of supported OSes for Migration, see the table in :ref:`uforge-suppor
 
 Major OS versions, for example upgrading from CentOS 5.0 to CentOS 6.0 is not supported automatically, though as we have the complete list of operating system packages from the scan, a new appliance template can be constructed with the new operating system version.  
 
-This process can further be automated by using the command-line tool hammr (see www.hammr.io).  This tool allows you to create identical machine images from a single configuration file (in JSON).  The procedure would be to:
+This process can further be automated by using the command-line tool hammr (see `hammr.io <http://www.hammr.io>`_).  This tool allows you to create identical machine images from a single configuration file (in JSON).  The procedure would be to:
 
 	1. Scan the original system (note the scan process can be launched by hammr too)
 	2. Import the scan as an appliance template (this step can be done by hammr)

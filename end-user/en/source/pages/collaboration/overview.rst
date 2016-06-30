@@ -7,7 +7,7 @@ UForge AppCenter allows users to create workspaces. Only users that have been gi
 
 Under the ``Collaboration`` tab, users can create a number of workspaces, invite other users and share appliance templates with the members of their workspace. A collaboration workspace allows you to restrict the users that can see and use your appliance templates by inviting them to join your workspace. Only users who accept the invitation will be able to view your appliances.
 
-The following sub-sections go into detail on how to use manage workspaces:
+The following sub-sections go into detail on how to manage workspaces:
 
 .. toctree::
    :titlesonly:

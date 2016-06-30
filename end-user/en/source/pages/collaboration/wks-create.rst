@@ -8,7 +8,7 @@ Creating a Workspace
 To create a workspace:
 
 	1. Go to the ``Collaboration`` tab.
-	2. Click on the plus (+) sign on the top right hand, next to the workpace drop-down menu (in the example below ``MySpace``).
+	2. Click on the plus (+) sign on the top right hand, next to the workspace drop-down menu (in the example below ``MySpace``).
 
 	.. image:: /images/workspace-create-button.jpg
 

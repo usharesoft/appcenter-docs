@@ -32,7 +32,7 @@ To use the API, you must have:
 Communicating with UForge
 -------------------------
 
-The ``UForgeConnector`` class provides all the lower level communication with UForge AppCenter by leverering the `Jersey client API <http://jersey.java.net/>`_. This class creates HTTP packets with the correct header information and constructs the request URI to authenticate the request (using the secret and public keys). The response is parsed by JAXB to provide POJO Java classes of the response information.
+The ``UForgeConnector`` class provides all the lower level communication with UForge AppCenter by leveraging the `Jersey client API <http://jersey.java.net/>`_. This class creates HTTP packets with the correct header information and constructs the request URI to authenticate the request (using the secret and public keys). The response is parsed by JAXB to provide POJO Java classes of the response information.
 
 Normally the first step is to get the user information of the account being used to authenticate. The response provides the URIs to the organizations, appliances and software this user has access to. The code below shows how to recuperate the user information. Note, as UForge is completely RESTful, when the method ``login()`` is used, no session is created between the client and UForge. Each request will reuse the authentication information stored in this ``UForgeConnector`` instance.
 
@@ -56,7 +56,7 @@ Normally the first step is to get the user information of the account being used
 Creating an Appliance Template
 ------------------------------
 
-An Appliance Template contains the model of the software stack. The model includes all the operating system packages, middleware and application software for generating an image that can be provisioned on a virtual or cloud platform. To create an appliance template, you need to decide which operating system to contruct the template from, as well as the name and version.
+An Appliance Template contains the model of the software stack. The model includes all the operating system packages, middleware and application software for generating an image that can be provisioned on a virtual or cloud platform. To create an appliance template, you need to decide which operating system to build the template from, as well as the name and version.
 
 When creating an appliance or choosing an operating system, you must choose the organization where to create the appliance or to search an operating system. The user must be a member of the orgnizaton to have authorization to search the organization resources. By default a user will be a member of at least one organization.
 
@@ -85,7 +85,7 @@ The following code provides an example of constructing an appliance template.
 Adding an OS Profile
 --------------------
 
-An Appliance Template must contain an operating system profile. This profile contains a subset of operating system packages required by the middleware an application software to run correctly. Each operating system provided by UForge contains a set of standard operating system profile templates to choose from. These contain commonly used package bundles for the operating system to run, providing the basic operating system services.
+An Appliance Template must contain an operating system profile. This profile contains a subset of operating system packages required by the middleware and application software to run correctly. Each operating system provided by UForge contains a set of standard operating system profile templates to choose from. These contain commonly used package bundles for the operating system to run, providing the basic operating system services.
 
 The "Minimal" OS profile contains the minimum set of packages for the operating system to run properly and provide a minimum set of networking services and administration tools.
 
@@ -104,7 +104,7 @@ The following code shows how to create a new OS profile from a standard OS profi
 	ApplianceOSProfileDelegate aospDelegate = new ApplianceOSProfileDelegate(connector);
 	osProfile = aospDelegate.create(this.appliance, osProfile);
 
-Extra packages can be added to the appliance template´s os profile.
+Extra packages can be added to the appliance template's OS profile.
 
 .. code-block:: java
 
@@ -151,7 +151,7 @@ Extra packages can be added to the appliance template´s os profile.
 Generating a Machine Image
 --------------------------
 
-Once you are happy with the contents of an appliance template, you can then generate a machine image to practically any hypervizor or cloud environment. The following code generates a CloudStack VHD image (for Xen hypervizor). For some image types you can select the disk size and the RAM of the virtual machine to be created. These can be updated once provisioned in the cloud environment. If you have set advanced partitioning in the installation profile, then this will be used instead for the disk size. The generation is done asynchronously; the generation status gives the progress of this generation.
+Once you are happy with the contents of an appliance template, you can then generate a machine image to practically any hypervisor or cloud environment. The following code generates a CloudStack VHD image (for Xen hypervisor). For some image types you can select the disk size and the RAM of the virtual machine to be created. These can be updated once provisioned in the cloud environment. If you have set advanced partitioning in the installation profile, then this will be used instead for the disk size. The generation is done asynchronously; the generation status gives the progress of this generation.
 
 .. code-block:: java
 
@@ -181,7 +181,7 @@ Once you are happy with the contents of an appliance template, you can then gene
 Publishing an Image
 -------------------
 
-UForge has connectors to many of the popular cloud platforms including Amazon, Microsoft Azure, Google Compute Engine, OpenStack, CloudStack, Eucalyptus and Flexiant to name a few. Once an image has been generated you can either download the image or publish directly a cloud environment using your own cloud account credentials. Like generations, publishing images is asynchronous. You can get the progress of the publish from the publish status. The following code publishes a generated VHD image directly to the template library of a CloudStack environment.
+UForge has connectors to many of the popular cloud platforms including Amazon, Microsoft Azure, Google Compute Engine, OpenStack, CloudStack, Eucalyptus and Flexiant to name a few. Once an image has been generated you can either download the image or publish directly to a cloud environment using your own cloud account credentials. Like generations, publishing images is asynchronous. You can get the progress of the publish from the publish status. The following code publishes a generated VHD image directly to the template library of a CloudStack environment.
 
 .. code-block:: java
 

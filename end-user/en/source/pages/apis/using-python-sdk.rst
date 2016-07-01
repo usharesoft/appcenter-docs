@@ -46,7 +46,7 @@ See below the instructions for installing the Python API for your target platfor
 Communicating with UForge
 -------------------------
 
-The python API provides all the lower level communication with UForge AppCenter by creating HTTP request packets with the header information to authenticate correctly.  
+The Python API provides all the lower level communication with UForge AppCenter by creating HTTP request packets with the header information to authenticate correctly.  
 
 Normally the first step is to get the user information of the account being used to authenticate. The response provides the URIs to the organizations, appliances and software this user has access to. The code below shows how to recuperate the user information. Note, as UForge is completely RESTful, when the method ``login()`` is used, no session is created between the client and UForge. Each request will reuse the authentication information stored in this ``api`` instance.
 
@@ -78,7 +78,7 @@ Normally the first step is to get the user information of the account being used
     	print user.loginName + ' - ' + user.email
 
 
-.. note:: All UForge Python objects are in the file ``objects.py``, contained in the Python SDK. You can find all attributes names for each object type.
+.. note:: All UForge Python objects are in the file ``objects.py``, contained in the Python SDK. You can find all attribute names for each object type.
 
 
 Creating an Appliance Template
@@ -86,7 +86,7 @@ Creating an Appliance Template
 
 An Appliance Template contains the model of the software stack. The model includes all the operating system packages, middleware and application software for generating an image that can be provisioned on a virtual or cloud platform. To create an appliance template, you need to decide which operating system to contruct the template from, as well as the name and version.
 
-When creating an appliance or choosing an operating system, you must choose the organization where to create the appliance or to search an operating system. The user must be a member of the orgnizaton to have authorization to search the organization resources. By default a user will be a member of the of at least one organization.
+When creating an appliance or choosing an operating system, you must choose the organization where to create the appliance or to search an operating system. The user must be a member of the organization to search the organization resources. 
 
 The following code provides an example of constructing an appliance template.
 
@@ -112,7 +112,7 @@ The following code shows how to create a new OS profile from a standard OS profi
 Generating a Machine Image
 --------------------------
 
-Once you are happy with the contents of an appliance template, you can then generate a machine image to practically any hypervizor or cloud environment. The following code generates a CloudStack VHD image (for Xen hypervizor). For some image types you can select the disk size and the RAM of the virtual machine to be created. These can be updated once provisioned in the cloud environment. If you have set advanced partitioning in the installation profile, then this will be used instead for the disk size. The generation is done asynchronously, by checking the generation status gives the progress of this generation.
+Once you are happy with the contents of an appliance template, you can then generate a machine image to practically any hypervizor or cloud environment. The following code generates a CloudStack VHD image (for Xen hypervizor). For some image types you can select the disk size and the RAM of the virtual machine to be created. These can be updated once provisioned in the cloud environment. If you have set advanced partitioning in the installation profile, then this will be used instead for the disk size. The generation is done asynchronously. 
 
 .. code-block:: python
 

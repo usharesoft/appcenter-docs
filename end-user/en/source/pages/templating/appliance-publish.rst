@@ -5,7 +5,7 @@
 Publishing a Machine Image
 --------------------------
 
-In order to publish a machine image to a cloud environment, you must already have credentails to access that environment. 
+In order to publish a machine image to a cloud environment, you must already have credentials to access that environment. 
 
 	1. If not already done, create a new cloud account for the target environment.  For more informatin, see :ref:`account-cloud-accounts` 
 	2. Go to the appliance and click the ``Machine Images`` page. If you have not generated a machine image, you will need to do so as described in :ref:`appliance-generate-machine-image`.

@@ -5,9 +5,9 @@
 Listing Appliance Templates
 ---------------------------
 
-To view the appliance templates you have access to, go to the ``VM Builder`` tab in the user interface.  By default the appliance templates are listed by latest first.
+To view the appliance templates you have have access, go to the ``VM Builder`` tab in the user interface.  By default the appliance templates are listed by latest first.
 
-From the ``Appliance Library`` page you can view all the appliances that have access to, organized as follows:
+Under the ``Appliance Library``, the appliances are organized as follows:
 
 	* ``Created Appliances`` are appliance templates you created
 	* ``Imported Appliances`` have been imported from a Collaboration workspace or from the UForge Marketplace if you have access to one 

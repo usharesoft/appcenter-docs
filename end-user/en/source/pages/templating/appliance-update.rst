@@ -5,9 +5,9 @@
 Modifying an Appliance Template
 -------------------------------
 
-You modify and update appliancs that are in your library, including ones that have been imported.
+You can modify and update appliances that are in your library, including ones that have been imported.
 
-To modify your appliance template: 
+To modify an appliance template: 
 
 	1. Click on the appliance template to modify.
 	2. From the ``Overview`` page you can add or change the logo, modify the name, version or description.

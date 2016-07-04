@@ -9,16 +9,16 @@ The ``Install Profile`` on the ``Stack`` page allows you to customize the questi
 
 You can define the following as part of the install profile:
 
-* ``Root User``: The root user password by default is prompted during the first boot of the machine image i.e. ``ask during installation``. However, you can pre-set a root  password. You can all enter an SSH key to allow users to login as root. If you select ``Disable root password login via SSH``, root will still be able to login from the console.
+* ``Root User``: The root user password by default is prompted during the first boot of the machine image i.e. ``ask during installation``. However, you can pre-set a root  password. You can enter an SSH key to allow users to login as root. If you select ``Disable root password login via SSH``, root will still be able to login from the console.
 * ``Users and Groups`` (optional): you can add operating system users and groups. See :ref:`appliance-install-profile-users-groups` for more information
-* ``Network``: This managed the internet settings. The default is “set automatically”
+* ``Network``: You can set the internet settings. The default is ``set automatically``.
 * ``Partitioning``: You can modify the disk and swap size for the automatic set up, select ``ask during install``, or set up ``Advanced Partitioning`` (for several disks). For more information see :ref:`appliance-install-profile-partitioning`.
 * ``Kernel``. You can add kernel parameters by clicking plus, entering data and click ``save``.
-* ``Keyboard``: default is “ask during installation”. You can choose ``set automatically`` and select the keyboard from the drop down menu.
-* ``Licenses``: default is “accept licenses during installation”
-* ``Time Zone``: default is set automatically to London
+* ``Keyboard``: default is ``ask during installation``. You can choose ``set automatically`` and select the keyboard from the drop down menu.
+* ``Licenses``: default is ``accept licenses during installation``.
+* ``Time Zone``: default is ``set automatically to London``.
 * ``Welcome Message``: You can enter a welcome message.
-* ``Services``: Firewall is set to "Off" by default. This parameter allows you to activate or deactivate the firewall present in the filesystem when launching the appliance (regardless of whether the firewall is iptables or other).
+* ``Services``: You to activate or deactivate the firewall present in the filesystem when launching the appliance (regardless of whether the firewall is iptables or other). Firewall is set to ``Off`` by default. 
 
 .. _appliance-install-profile-users-groups:
 

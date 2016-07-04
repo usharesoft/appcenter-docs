@@ -20,11 +20,3 @@ You can also modify the text that appears when you scroll over the logo, as well
 	<c:headerLogoTitle>Go to UShareSoft.com</c:headerLogoTitle>
 	<c:headerLogoLink>http://usharesoft.com</c:headerLogoLink>
 
-You can modify the image that appears in the middle of the banner, in section <c:client>::
-
-	<c:bannerUrl>images/banner.png</c:bannerUrl>
-
-You can also modify the text that appears when you scroll over the banner image, as well as the link the user is directed to when clicking on the link in section <c:client>::
-
-	<c:bannerTitle>Go to sign up form</c:bannerTitle>
-	<c:bannerLink>http://usharesoft.com/products/signup/</c:bannerLink>

@@ -11,7 +11,7 @@ If you are in grid view:
 
 .. image:: /images/os-updates-grid.jpg
 
-If you are in table view, it is listed in the Updates column:
+If you are in table view, it is listed in the ``Updates`` column:
 
 .. image:: /images/os-updates-list.jpg
 
@@ -45,11 +45,12 @@ Modifying a Windows-based Appliance
 For Windows-based appliances UForge will indicate the number of updates available, however you cannot use this procedure to update the packages for an existing Windows appliance.
 
 In order to benefit from a newer version of Windows, you will have to:
-1. Create or retrieve a new Golden Image. See your administrator.
-2. Create a new appliance.
-3. You can re-use the MySoftware components contained in the current appliance.
-4. You can download from the current template the boot scripts and save them on your local hard drive. You can then upload them to the new appliance.
-5. You must re-produce the configuration (Install Profile, Configuration).
+
+	1. Create or retrieve a new Golden Image. See your administrator.
+	2. Create a new appliance.
+	3. You can re-use the MySoftware components contained in the current appliance.
+	4. You can download from the current template the boot scripts and save them on your local hard drive. You can then upload them to the new appliance.
+	5. You must re-produce the configuration (Install Profile, Configuration).
 
 .. _appliance-pkg-updates-sticky:
 
@@ -62,7 +63,7 @@ To make a specific package "sticky":
 
 	1. Select the appliance you want to modify.
 	2. Go to the ``Stack`` page.
-	3. From the ``OS profile``, click on ``sticky`` in the right hand side of the package info. The ``sticky`` button will only be visible when you scroll over this part the page. In the following image, the first package has ``sticky`` in blue because it has been applied. The second one in light blue has no yet been applied.
+	3. From the ``OS profile``, click on ``sticky`` in the right hand side of the package info. The ``sticky`` button will only be visible when you scroll over this part the page. In the following image, the first package has ``sticky`` in blue because it has been applied. The second one in light blue has not yet been applied.
 
 	.. image:: /images/os-profile-sticky.jpg
 

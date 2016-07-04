@@ -20,6 +20,7 @@ Communication with UForge is done via HTTP(S). For security reasons it is recomm
 
 API methods that require a particular HTTP method will return an error if you do not make your request with the correct one. All HTTP methods return codified response codes.
 
+For more information, refer to the API documentation. `API documentation <hhttps://www.usharesoft.com/resources/documentation.html>`_
 
 Response & Error Codes
 ----------------------
@@ -112,18 +113,10 @@ The example illustrates the following:
 * the ``Accept header`` is being used to request that the response be sent in XML. Note that, if this header is omitted, UForge sends the response in XML by default.
 * the response header includes ``ETag`` and ``Last-Modified`` allowing cache validation and a conditional GET requests.
 
-
-Using Basic Authorization
--------------------------
-
-// TODO
-
-
-
 Using the API Keys
 ------------------
 
-To use the UForge AppCenter APIs, it is recommended to use a public and secret API key as part of the request. This allows UForge AppCenter to correctly authenticate and authorize the request. API key pairs are managed from the "My Accounts" > "API Keys" tab.  If you cannot see this tab, then you do not have the right to access UForge via the APIs. Contact your administrator for an initial API key pair.
+To use the UForge AppCenter APIs, it is recommended to use a public and secret API key as part of the request. This allows UForge AppCenter to correctly authenticate and authorize the request. API key pairs are managed on the ``My Accounts`` page under ``API Key``.  If you cannot see this tab, then you do not have the right to access UForge via the APIs. Contact your administrator for an initial API key pair.
 
 The API keys are used inside and to sign each request URI to the UForge platform. The creation of a properly signed request URI is done in 5 steps:
 

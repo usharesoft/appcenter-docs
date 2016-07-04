@@ -48,7 +48,7 @@ Basic Concepts
 Organization
 ~~~~~~~~~~~~
 
-UForge AppCenter is a multi-tenant platform which can serve multiple users.  All the resources of the platform is held within an Organization.  The organization contains:
+UForge AppCenter is a multi-tenant platform which can serve multiple users.  All the resources of the platform are held within an Organization.  The organization contains:
 
 	* One or more users
 	* One or more operating systems

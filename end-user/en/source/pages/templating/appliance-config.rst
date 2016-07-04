@@ -12,9 +12,9 @@ When you create your appliance, you can include boot scripts to configure the ap
 Adding a Boot Script
 ~~~~~~~~~~~~~~~~~~~~
 
-You can add boot scripts that will be run either the first time the appliance is booted or every time the machine or virtual machine is started. The boot scripts will be run once all the software and appliance packages are installed, prior to launching the machine. The scripts are run in numeric and alphabetical order. The boot scripts will be executed as root.
+You can add boot scripts that will be run either the first time the appliance is booted or every time the machine or virtual machine is started. The boot scripts will be run once all the software and appliance packages are installed, prior to launching the machine. The scripts are run in numeric then alphabetical order. The boot scripts will be executed as root.
 
-.. note:: The firstboots are run before everyboot scripts. Bootscripts named 1_script will be run before a_script, which will be run script_1, which is run before script_a
+.. note:: The firstboots are run before everyboot scripts. Bootscripts named 1_script will be run before a_script, which will be run before script_1, which is run before script_a.
 
 If you want to install software or packages as part of the installation, you can use My Software to upload overlay files (e.g. /etc/profile.d/xxx.sh). 
 To add a boot script to your appliance:
@@ -29,7 +29,7 @@ To add a boot script to your appliance:
 If you are creating a new boot script:
 
 	1. Enter the name.
-	2. Select the type: If you select ``first boot``, then the boot script will be launched once on the first time the instance is launched.  If you select ``every boot``, then the boot script will be launched every time the instance ir rebooted.
+	2. Select the type: If you select ``first boot``, then the boot script will be launched once the first time the instance is launched.  If you select ``every boot``, then the boot script will be launched every time the instance is rebooted.
 	3. Select the boot order.
 	4. Enter the contents of the boot script.
 	5. Click ``save``.

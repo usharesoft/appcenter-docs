@@ -33,13 +33,14 @@ You may want to add packages that are provided as part of the operating system d
 	1. Select the appliance to modify and go to the ``Stack`` page.
 	2. Click on ``OS Profile`` in the toolbox.
 	3. Click on the ``search`` button in the top right hand.
-	4. Enter your search string. For example, add ``php`` as a search string to get a list of all the PHP packages provided by CentOS. Click the search icon.
+	4. Enter your search string. For example, add ``php`` as a search string to get a list of all the PHP packages provided by CentOS. 
+	5. Click the search icon.
 
 	.. image:: /images/search-packages.jpg
 
-	5. Optionally you can filter the results by selecting ``32-bit packages`` or by entering text in the ``filter`` box.
-	6. Select the packages you want to add.
-	7. Click the ``save`` button to add the packages to the OS profile.
+	6. Optionally you can filter the results by selecting ``32-bit packages`` or by entering text in the ``filter`` box.
+	7. Select the packages you want to add.
+	8. Click the ``save`` button to add the packages to the OS profile.
 
 .. note:: When you create an appliance, the packages are stored locally in the UForge cache repository. This ensures that the packages will always be available. However, UForge tracks all available updates. 
 

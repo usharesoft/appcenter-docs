@@ -48,6 +48,7 @@ For each of these components we recommend the following minimal (hardware or vir
 +----------------+------------+------------+----------------+--------------------------------+
 | Generation     | 2 GB       | 1          | 15 GB          |                                |
 | Cluster        |            |            |                |                                |
+| (scheduler)    |            |            |                |                                |
 +----------------+------------+------------+----------------+--------------------------------+
 | Compute Node   | 4 GB       | 2          | 30 GB          | If you have a good NAS/SAN you |
 |                |            |            |                | reduce the disk space to 15 GB |
@@ -67,7 +68,7 @@ For each of these components we recommend the following minimal (hardware or vir
 | NAS/SAN        | 2 GB       | 2          |                |                                |
 +----------------+------------+------------+----------------+--------------------------------+
 
-It may be more logical to group the DB, LDAP and Scheduler on one node. Typically you can also group the Webservice and SYNCOPE Webservice.
+It may be more logical to group the DB, LDAP and Generation Cluster (scheduler) on one node. Typically you can also group the Webservice and SYNCOPE Webservice.
 
 .. note:: If you are using high availability and you choose to split the Webservice and SYNCOPE on seperate nodes, then you need a shared NAD/SAN (/tmp/userdata). 
 

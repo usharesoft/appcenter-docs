@@ -53,15 +53,5 @@ To setup the shared storage:
 			cd ~ 
 			umount /mnt 
 
-	8. Once these directories have been exported, use the UForge Setup Disk to copy all the operating system information to the DISTROS sub-directory. To mount the shared directory on the machine where the UForge Setup Disk is plugged to::
-
-		mount <nfs server ip address>:/volume1/DISTROS /mnt
-
-	Then copy the DISTROS information from the Setup Disk to the shared directory::
-
-		rsync -a –-progress <my disk>/DISTROS/ /mnt/DISTROS/
-
-.. note:: It may take up to an hour to copy all of the data. 
-
 
 

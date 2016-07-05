@@ -32,6 +32,8 @@ To apply the changes you made, run the following command. This will stop Tomcat,
 
 	# /opt/UShareSoft/uforge-client/bin/uforge_ui_update.sh
 
+.. _modify-ui-root:
+
 Modifying UForge Portal Application Root Context 
 ------------------------------------------------
 
@@ -42,6 +44,21 @@ To modify the UForge root context of the UForge Portal, you can modify the follo
 To apply the changes you made, run the following command. This will stop Tomcat, integrate the changes and restart Tomcat::
 
 	# /opt/UShareSoft/uforge-client/bin/uforge_ui_update.sh
+
+.. _modify-API-root:
+
+Modifying UForge API Root Context 
+---------------------------------
+
+By default the root context for the UForge API is set to ``/api``. To change the UForge API root context, modify the following variable in the uforge.conf file:
+
+``UFORGE_API_ROOT_CONTEXT``
+
+To apply the changes you made, run the following command. This will stop Tomcat, integrate the changes and restart Tomcat::
+
+	# /opt/UShareSoft/uforge-client/bin/uforge_ui_update.sh
+
+.. _modify-IP:
 
 Modifying the UForge IP address
 -------------------------------

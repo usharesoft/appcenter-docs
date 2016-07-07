@@ -28,7 +28,7 @@ To setup the shared storage:
 		.. code-block:: shell
 
 			mount 192.20.777.205:/appstore_qualif_data/ /mnt 
-			su - glassfish 
+			su - tomcat 
 			cd /mnt
 
 	5. Execute the command::

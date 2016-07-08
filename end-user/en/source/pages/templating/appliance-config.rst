@@ -16,6 +16,8 @@ You can add boot scripts that will be run either the first time the appliance is
 
 .. note:: The firstboots are run before everyboot scripts. Bootscripts named 1_script will be run before a_script, which will be run script_1, which is run before script_a
 
+.. note:: When a user creates an appliance, the packages are stored locally in the UForge cache repository, which is stored on the DB. Therefore, depending on the number of appliances created and OS used, you may need to adjust the DB size.
+
 If you want to install software or packages as part of the installation, you can use My Software to upload overlay files (e.g. /etc/profile.d/xxx.sh). 
 To add a boot script to your appliance:
 

@@ -108,15 +108,7 @@ To create a new Golden Image, you will need to:
 		* System partition. This one is hidden, created automatically during installation of Windows Server.
 		* Drive C:
 
-	2. Ensure that ``uforge-install-config`` software is installed.
-
-		* Take the latest file ``uforge-install-config_<version>_all.zip``. This file can be found on the UForge server machine filesystem under DISTROS/USS/usspkgs/uforge-install-config/win/windows/
-		* Uncompress it to C:\ using Windows explorer or the Windows expand command
-		* Execute the following command using regular Windows CMD prompt and not powershell::
-
-			sc create uforge-boot-service binPath= C:\uforge\uforge-boot- service\uforge-boot-service.exe obj= localsystem start= auto
-
-	3. The following Windows features must be installed:
+	2. The following Windows features must be installed:
 
 		* ServerCore-WOW64
 		* NetFx2-ServerCore
@@ -132,7 +124,7 @@ To create a new Golden Image, you will need to:
 			* start /w dism /online /enable-feature /all /featurename:NetFx3ServerFeatures 
 			* start /w dism /online /enable-feature /all /featurename:NetFx3
 
-	4. Install ``gtk-sharp-2.12.10.win32.msi``. 
+	3. Install ``gtk-sharp-2.12.10.win32.msi``. 
 
 		* You can download it from http://download.mono-project.com/gtk-sharp/gtk-sharp-2.12.10.win32.msi.old
 		* Rename ``gtk-sharp-2.12.10.win32.msi.old`` to ``gtk-sharp-2.12.10.win32.msi``
@@ -140,15 +132,24 @@ To create a new Golden Image, you will need to:
 		
 			gtk-sharp-2.12.10.win32.msi
 
-	5. We recommend that you run Windows Update to ensure that the latest updates are pre-installed in the Golden Image.
+	4. We recommend that you run Windows Update to ensure that the latest updates are pre-installed in the Golden Image.
 
-	6. Optionally, you can also add the following customizations:
+	5. Optionally, you can also add the following customizations:
 
 		* Modify the registry
 		* Extra software installation
 		* User creation
 
-	7. Open a Command Prompt window as an administrator, and go to the WINDIR\system32\sysprep directory. Then run::
+	6. Ensure that ``uforge-install-config`` software is installed.
+
+		* Take the latest file ``uforge-install-config_<version>_all.zip``. This file can be found on the UForge server machine filesystem under DISTROS/USS/usspkgs/uforge-install-config/win/windows/
+		* Uncompress it to C:\ using Windows explorer or the Windows expand command
+		* Execute the following command using regular Windows CMD prompt and not powershell::
+
+			sc create uforge-boot-service binPath= C:\uforge\uforge-boot- service\uforge-boot-service.exe obj= localsystem start= auto
+
+
+	7. Open a Command Prompt window as an administrator, and go to the %WINDIR%\system32\sysprep directory. Then run::
 
 		sysprep.exe /generalize /oobe /shutdown
 

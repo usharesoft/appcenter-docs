@@ -11,25 +11,22 @@ Proprietary packages, such as Red Hat Enterprise Linux are not delivered as part
 
 For example, to add a Red Hat repository:
 
-	1. Mount the iso into /mnt (on the works node)
+	1. Mount the iso into ``/mnt`` (on the works node)
 
-	2. Create the appropriate directory layout under /tmp/USER_DATA/repos/ for example: /tmp/USER_DATA/repos/RHEL/6.5/x86_64/
+	2. Create the appropriate directory layout under ``/tmp/USER_DATA/repos/`` for example: ``/tmp/USER_DATA/repos/RHEL/6.5/x86_64/``
 
-	3. Copy all the contents of the DVD into /tmp/USER_DATA/repos/RHEL/6.5/x86_64/
+	3. Copy all the contents of the DVD into ``/tmp/USER_DATA/repos/RHEL/6.5/x86_64/``
 	
-	4. If the repository does not already contain a repodata folder, you must create it inside the package directory:
+	4. If the repository does not already contain a repodata folder, you must create it inside the package directory::
 
-	.. code-block:: shell
-
-		# cd /tmp/USER_DATA/repos/RHEL/6.5/x86_64/
-		# createrepo .
+		cd /tmp/USER_DATA/repos/RHEL/6.5/x86_64/
+		createrepo .	
 
 	5. Create the repository using the UForge CLI as follows::
 
 		uforge org repo create --name "RHEL 6.5 os" --repoUrl "http://127.0.0.1/repos/RHEL/6.5/x86_64/" --type RPM -u $ADMIN -p $PASS
 
 		The –-name specified here is the “tagname” that will be shown in the UI when creating an appliance.
-		The --repoUrl can be either http:// 
 
 	6. Attach the repository to the distribution as follows::
 
@@ -41,12 +38,10 @@ For example, to add a Red Hat repository:
 
 		This procedure may take a long time.
 
-	8. To verify if the procedure is terminated, run the following command:
+	8. To verify if the procedure is terminated, run the following command::
 
-	.. code-block:: shell
-
-		# tail -f /tmp/USER_DATA/FactoryContainer/logs/repos/spider/<directory name with date>/spider.stdout 
-		
+		tail -f /tmp/USER_DATA/FactoryContainer/logs/repos/spider/<directory name with date>/spider.stdout 
+	
 		The procedure is terminated when you see the line: // INFO  CheckForRepositoriesUpdates:275 - Entering CheckForRepositoriesUpdates->terminate()
 
 	9. Create a OS profile based on packages (minimal, server, etc.)::

@@ -17,7 +17,7 @@ Fill in the wizard, note that all the fields are mandatory.
 
 	2. Enter an email address.  This is the email address of the root administrator of UForge.  All administration email notifications are sent to this email address.
 
-	3. Set the root administrator's password. The password must be at least seven characters long.
+	3. Set the root administrator's password. The password must be at least five characters long, including alphanumeric characters and the following special characters !#$%&'()*+,-/:;<=>?@[\]/^_{|}~`. Spaces are not allowed at the beginning or end.
 
 	4. Provide a username, email and password for an initial user account to be created.  This user account will have administration access rights for the default Organization.
 

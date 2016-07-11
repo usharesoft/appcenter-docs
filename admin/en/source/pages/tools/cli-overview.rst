@@ -17,9 +17,7 @@ The UForge AppCenter command-line tool has the form:
 
 Usage: uforge <target> <command> [options][args]
 
-Where <target> is one of the following:
-
-.. code-block:: shell
+Where <target> is one of the following::
 
   entitlement           Administration of all the entitlements in UForge for
                         RBAC

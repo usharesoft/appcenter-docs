@@ -138,7 +138,42 @@ To create a new Golden Image, you will need to:
 
 			sc create uforge-boot-service binPath= C:\uforge\uforge-boot- service\uforge-boot-service.exe obj= localsystem start= auto
 
-	7. Open a Command Prompt window as an administrator, and go to the %WINDIR%\system32\sysprep directory. Then run::
+	7. Optionally, you can free several gigabytes of space by cleaning up windows updates installers. After this optimization some of the windows updates patches might not be uninstallable::
+
+		dism /online /Cleanup-Image /StartComponentCleanup /ResetBase
+
+	8. In case of installation of Service Packs, you can execute the following command to merge the Service Pack installer to the operating system. 
+
+		.. warning:: After this optimization, you will note be able to uninstall the Service Pack.
+
+	.. code-block:: shell
+
+		dism /online /Cleanup-Image /SPSuperseded
+
+	9. You can optionally perform optimizations in size for the compressed raw virtual disk image. To do so, you must:
+
+		a. Before the sysprep step, use the Microsoft Sysinternals tool called sdelete.exe (or sdelete64.exe) with option ``-z`` in a command line for all partitions, example:
+
+
+		.. code-block:: shell
+	        
+	        sdelete -z C:
+
+   		b. After finishing the golden image (after sysprep at the last step), but before compressing the .raw with gzip or lrzip, perform the following command to the .raw virtual disk image:
+
+
+		.. code-block:: shell
+
+        	cp --sparse=always image.raw newimage.raw
+        
+        This will copy the image file but skip the zeros, so the .raw image will be as sparse as possible, also helping the compression program.
+
+
+		.. code-block:: shell
+
+	        mv -f newimage.raw image.raw
+
+	10. Open a command prompt window as an administrator and go to the %WINDIR%\system32\sysprep directory. Then run::
 
 		sysprep.exe /generalize /oobe /shutdown
 

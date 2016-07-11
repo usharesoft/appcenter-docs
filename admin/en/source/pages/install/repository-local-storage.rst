@@ -13,6 +13,6 @@ When using local storage, UForge must already be installed, but not configured. 
 
 		//# rsync -a –-progress /<disk directory>/DISTROS/ /space/DISTROS/
 
-.. note:: It may take up to an hour to copy all of the data. 
+	.. note:: It may take up to an hour to copy all of the data. 
 
 	4. If you want to create ISO images with UForge then you must copy the ISO skeleton files and mount them to your system, as follows:

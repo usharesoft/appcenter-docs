@@ -15,4 +15,5 @@ The following sections cover information regarding managing the UForge resources
    manage-formats
    windows
    manage-project-catalog
+   manage-categories
    manage-milestone

@@ -19,4 +19,6 @@ To log in as another user with supervisor mode:
 UForge REST API in Supervisor Mode
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The syntax for using basic authentication in supervisor mode is: "Authorization:Basic supervisorusername\supervisedusername:supervisorpassword".
+The syntax for using basic authentication in supervisor mode is::
+
+	Authorization:Basic supervisorusername\supervisedusername:supervisorpassword

@@ -11,7 +11,6 @@ UForge also stores information that is uploaded by the users of the platform. Th
 	* images (photos, appliance logos etc)
 	* boot scripts
 	* licenses (attached to projects and ``My Software``)
-	* UForge Studio packages
 
 All this information is stored in the following directory: /tmp/USER_DATA
 

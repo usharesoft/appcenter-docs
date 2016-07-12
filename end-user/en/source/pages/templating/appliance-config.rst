@@ -46,21 +46,4 @@ If you are uploading an existing boot script:
 	3. Click ``choose`` to locate your file and click ``open``.
 	4. Click ``save``.
 
-.. _appliance-configuration-studio:
-
-Adding a UForge Studio Package
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-UForge Studio allows you to fully automate the post-installation configuration of multi-tier software solutions. You can use Studio to model your configuration scenarios, then include these packages directly into your appliances, making them self-deployable out of the box.
-
-To add your UForge Studio packages to an appliance:
-
-	1. Select the appliance you want to modify.
-	2. From the ``Stack`` page, click on ``Configuration`` in the toolbox.
-	3. Select ``UForge Studio``.
-	4. Click ``upload``.
-	5. Browse for your UForge Studio package and click ``open``.
-	6. Click ``add license`` to add a license (optional).
-	7. Click ``save``.
-
 

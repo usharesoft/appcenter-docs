@@ -13,7 +13,7 @@ To use the UForge AppCenter Java API, you need the jar files. You can either dow
 	<dependency>
 	      <groupId>com.usharesoft</groupId>
 	      <artifactId>uforge-client</artifactId>
-	      <version>3.5.1</version>
+	      <version>3.6</version>
 	</dependency>
 	
 	<repository>

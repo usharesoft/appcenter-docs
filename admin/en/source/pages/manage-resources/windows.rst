@@ -15,8 +15,6 @@ You will need Golden Images to create Windows appliance templates. If you want t
 
 .. note:: A good knowledge of Microsfot Windows is required to create your own Golden Images.
 
-To create a Golden Image UForge has a tool called the Golden Image Creator. This tool can run only on top of a physical machine or as a KVM virtual machine.
-
 Generating all the profiles available (in one language) takes roughly 4 to 7 hours depending on the machine/network performance. You can regenerate Golden Images as often as you like, based on your individual needs. However, it is recommended that you regenerate only for specific updates—these updates will be in the Golden Image and you will not need to run package updates. When you generate a Golden Image the updates are the ones at the moment at which the Golden Image is generated. 
 
 Within UForge, the Golden Image used when you create appliances will be the last Golden Image created. In future releases, the different Golden Images will appear as Milestones. 
@@ -31,6 +29,7 @@ Supported Microsoft Windows Versions
 ------------------------------------
 
 UForge supports Microsoft Windows Server 2008 R2 (this distribution is only 64 bits), 2012 and 2012R2.
+
 Microsoft delivers 4 versions: 
 
 	* DataCenter

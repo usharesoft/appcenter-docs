@@ -100,7 +100,7 @@ To create a new Golden Image, you will need to:
 		* System partition. This one is hidden, created automatically during installation of Windows Server.
 		* Drive C:
 
-	2. The following Windows features must be installed:
+	2. The following Windows features must be installed as Administrator:
 
 		* ServerCore-WOW64
 		* NetFx2-ServerCore
@@ -108,7 +108,7 @@ To create a new Golden Image, you will need to:
 		* NetFx3ServerFeatures
 		* NetFx3
 
-		To install these features, run the following Windows commands:
+		To install these features, you can either go to the control panel under ``Programs and Features`` or open a command prompt window as Administrator and run the following Windows commands:
 
 			* start /w dism /online /enable-feature /all /featurename:ServerCore-WOW64 
 			* start /w dism /online /enable-feature /all /featurename:NetFx2-ServerCore 
@@ -173,7 +173,7 @@ To create a new Golden Image, you will need to:
 
 	        mv -f newimage.raw image.raw
 
-	10. Open a command prompt window as an administrator and go to the %WINDIR%\system32\sysprep directory. Then run::
+	10. Open a command prompt window as an administrator and go to the %WINDIR%\\system32\sysprep directory. Then run::
 
 		sysprep.exe /generalize /oobe /shutdown
 

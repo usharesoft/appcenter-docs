@@ -195,25 +195,18 @@ To create a new Golden Image, you will need to:
 
 		gzip image.raw
 
-.. _install-updated-golden:
-
-Installing Updated Golden Images
---------------------------------
-
-Each time you have a new Golden Image, you need to put them in the right NAS location as described above. Note that the parameters set when running ``org golden create`` should correspond to the path on the NAS, that is: {Language}/{Edition}/{Type}/{generation date}(YYYY-MM-DD)/goldenImagePathCompressedInGz
-
-For example to install the golden image saved to the following path:  Windows/releases/Server2008R2/x86_64/English/Standard/Full/2012-10-19/Windows_2008R2_Standard_Full_2012-10-19.raw.gz, you need to run:: 
-
-	org golden create --name Windows --arch x86_64 --version Server2008R2 --language English --edition Standard --type Full --goldenDate 2012-10-19 --goldenName Windows_2008R2_Standard_Full_2012-10-19.raw.gz
+You can now save you golden image on the NAS.
 
 .. _store-updated-golden:
 
 Storing Golden Images on the NAS
 --------------------------------
 
-To store the golden images (all profiles in one language) you will need about 40Gb of disk space on the UForge NAS. 
+Each time you have a new Golden Image, you need to store them in the right NAS location.
 
-The Golden Images should be stored in::
+.. note:: To store the golden images (all profiles in one language) you will need about 40Gb of disk space on the UForge NAS. 
+
+The golden images should be stored in::
 
 	Base dir = Windows/releases/Server2008R2/x86_64/
 
@@ -296,3 +289,8 @@ To add your Golden Image to UForge:
 		uforge org golden create --name Windows --arch x86_64 --version Server2008R2 --edition Standard --goldenDate 2014-04-28 --language French --type Full --goldenName Windows_2008R2_English_Standard_Full_2014-04-28.raw.gz
 
 	.. note:: The parameters set when running ``org golden create`` should correspond to the path on the NAS, that is: {Language}/{Edition}/{Type}/{generation date}(YYYY-MM-DD)/goldenImagePathCompressedInGz
+
+	For example to install the golden image saved to the following path:  Windows/releases/Server2008R2/x86_64/English/Standard/Full/2012-10-19/Windows_2008R2_Standard_Full_2012-10-19.raw.gz, you need to run:: 
+
+		org golden create --name Windows --arch x86_64 --version Server2008R2 --language English --edition Standard --type Full --goldenDate 2012-10-19 --goldenName Windows_2008R2_Standard_Full_2012-10-19.raw.gz
+

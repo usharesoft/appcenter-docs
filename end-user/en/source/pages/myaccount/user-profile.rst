@@ -3,7 +3,7 @@
 .. _account-user-profile:
 
 Modifying Your User Profile
--------------------------
+---------------------------
 
 You can edit your user profile by going to the ``Profile`` page. The only mandatory information is your email address.
 

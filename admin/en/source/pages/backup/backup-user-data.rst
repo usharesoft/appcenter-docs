@@ -14,4 +14,8 @@ UForge also stores information that is uploaded by the users of the platform. Th
 
 All this information is stored in the following directory: /tmp/USER_DATA
 
-Like the database, this is important information that must be backed up on a regular basis.  The same mechanism can be used for back up as the database, namely using rsync as highlighted in :ref:`backup-database`, or disk mirroring (RAID), or both.
+Like the database, this is important information that must be backed up on a regular basis.  The same mechanism can be used for back up as the database, namely using rsync as highlighted in :ref:`backup-database`.
+
+You do not need to stop the service, but the danger is that if during that time there is damaged data, when rsync is run then this corrupted data is copied and there is no possible way to recuperate the old data.
+
+The time it will take to backup the data will depend on the size of your data and the connection between the two servers. 

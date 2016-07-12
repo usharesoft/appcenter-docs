@@ -34,8 +34,6 @@ Where <target> is one of the following::
                         (list/info/create/delete/generate/share etc)
   user                  User's administration (list/info/create/update/delete
                         etc)
-  usergrp               user group administration (list/info/create/delete
-                        etc)
 
   optional arguments:
     -U URL, --url URL     the server URL endpoint to use

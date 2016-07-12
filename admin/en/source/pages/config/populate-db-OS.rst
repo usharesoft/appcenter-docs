@@ -54,68 +54,68 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 
 	6. Create the distribution repository. The following example shows the creation of an official CentOS repository. However, you can also create a repository based on the UForge official repository as shown later.
 
-	CentOS 6.5 repository:
+		For example, for the CentOS 6.5 repository:
 
-		.. code-block:: shell
+			.. code-block:: shell
 
-			uforge org repo create --name "CentOS 6.5 os" --repoUrl http://vault.centos.org/6.5/os/x86_64/ --type RPM --officiallySupported -u $ADMIN -p $PASS
+				uforge org repo create --name "CentOS 6.5 os" --repoUrl http://vault.centos.org/6.5/os/x86_64/ --type RPM --officiallySupported -u $ADMIN -p $PASS
 
-			Success: Created repository with url [http://vault.centos.org/6.5/os/x86_64/] to default organization
+				Success: Created repository with url [http://vault.centos.org/6.5/os/x86_64/] to default organization
 
-	The ``–-name`` specified here is the “tagname” that will be shown in the UI when creating an appliance.
-	The ``--repoUrl`` can be either ``http://`` or ``file://``
+		The ``–-name`` specified here is the “tagname” that will be shown in the UI when creating an appliance.
+		The ``--repoUrl`` can be either ``http://`` or ``file://``
 
-	Only use ``--officiallySupported`` for distributions that are part of the core distribution. For example, epel or vmwatools are not officially part of the distribution, therefore you should not use the variable ``--officiallySupported``.
+		Only use ``--officiallySupported`` for distributions that are part of the core distribution. For example, epel or vmwatools are not officially part of the distribution, therefore you should not use the variable ``--officiallySupported``.
 
-	The syntax of the repoURL for Debian based OSes follows that of the sources.list file.
+		The syntax of the repoURL for Debian based OSes follows that of the sources.list file.
 
-	See `https://wiki.debian.org/SourcesList <https://wiki.debian.org/SourcesList>`_  and `https://wiki.debian.org/Multiarch/HOWTO <https://wiki.debian.org/Multiarch/HOWTO>`_ (section Setting up apt sources)
+		See `https://wiki.debian.org/SourcesList <https://wiki.debian.org/SourcesList>`_  and `https://wiki.debian.org/Multiarch/HOWTO <https://wiki.debian.org/Multiarch/HOWTO>`_ (section Setting up apt sources)
 
-	Typically, a correct value for the repoURL parameter is either
+		Typically, a correct value for the repoURL parameter is either
 
-		* http://httpredir.debian.org/debian jessie main
-		* http://ftp.riken.go.jp/Linux/ubuntu/ precise-security multiverse restricted universe main
+			* http://httpredir.debian.org/debian jessie main
+			* http://ftp.riken.go.jp/Linux/ubuntu/ precise-security multiverse restricted universe main
 
-	Users may also want to restrict per architecture. For example::
+		Users may also want to restrict per architecture. For example::
 
-		[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/ ...
+			[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/ ...
 
-	`http://distros-repository.usharesoft.com/ <http://distros-repository.usharesoft.com/>`_ is an official public repository that users can use to populate the distributions. Official repositories such as Ubuntu and Debian periodically delete some package versions. In the http://distros-repository.usharesoft.com/ repository, package versions are never deleted. This can facilitate investigations on older systems.
+		`http://distros-repository.usharesoft.com/ <http://distros-repository.usharesoft.com/>`_ is an official public repository that users can use to populate the distributions. Official repositories such as Ubuntu and Debian periodically delete some package versions. In the http://distros-repository.usharesoft.com/ repository, package versions are never deleted. This can facilitate investigations on older systems.
 
-	To populate the distribution using the official UForge repository for CentOS::
+		To populate the distribution using the official UForge repository for CentOS::
 
-		uforge org repo create --name "CentOS 6.5 os" --repoUrl http://distros-repository.usharesoft.com/centos/6/os/x86_64 --type RPM --officiallySupported -u $ADMIN -p $PASS
+			uforge org repo create --name "CentOS 6.5 os" --repoUrl http://distros-repository.usharesoft.com/centos/6/os/x86_64 --type RPM --officiallySupported -u $ADMIN -p $PASS
 
-	The following is a list for all the other distributions:
+		The following is a list for all the other distributions:
 
-	``Ubuntu (exemple 10.04)``
+		``Ubuntu (exemple 10.04)``
 
-		* http://distros-repository.usharesoft.com/ubuntu/lucid/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid multiverse restricted universe main 
-		* http://distros-repository.usharesoft.com/ubuntu/lucid-security/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-security multiverse restricted universe main
-		* http://distros-repository.usharesoft.com/ubuntu/lucid-proposed/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-proposed multiverse restricted universe main
-		* http://distros-repository.usharesoft.com/ubuntu/lucid-backports/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-backports multiverse restricted universe main
-		* http://distros-repository.usharesoft.com/ubuntu/lucid-updates/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-updates multiverse restricted universe main
+			* http://distros-repository.usharesoft.com/ubuntu/lucid/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid multiverse restricted universe main 
+			* http://distros-repository.usharesoft.com/ubuntu/lucid-security/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-security multiverse restricted universe main
+			* http://distros-repository.usharesoft.com/ubuntu/lucid-proposed/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-proposed multiverse restricted universe main
+			* http://distros-repository.usharesoft.com/ubuntu/lucid-backports/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-backports multiverse restricted universe main
+			* http://distros-repository.usharesoft.com/ubuntu/lucid-updates/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-updates multiverse restricted universe main
 
 
-	``Debian (exemple version 6)``
+		``Debian (exemple version 6)``
 
-		* http://distros-repository.usharesoft.com/debian/squeeze/mirror/ftp.fr.debian.org/debian/ squeeze contrib non-free main
-		* http://distros-repository.usharesoft.com/debian/squeeze-updates/mirror/ftp.fr.debian.org/debian/ squeeze-updates contrib non-free main 
-		* http://distros-repository.usharesoft.com/debian/security/squeeze/updates/mirror/security.debian.org/ squeeze/updates main contrib non-free
+			* http://distros-repository.usharesoft.com/debian/squeeze/mirror/ftp.fr.debian.org/debian/ squeeze contrib non-free main
+			* http://distros-repository.usharesoft.com/debian/squeeze-updates/mirror/ftp.fr.debian.org/debian/ squeeze-updates contrib non-free main 
+			* http://distros-repository.usharesoft.com/debian/security/squeeze/updates/mirror/security.debian.org/ squeeze/updates main contrib non-free
 
-	``CentOS (exemple CentOS 6.7)``
+		``CentOS (exemple CentOS 6.7)``
 
-		* http://distros-repository.usharesoft.com/centos/6.7/updates/x86_64
-		* http://distros-repository.usharesoft.com/centos/6.7/extras/x86_64
-		* http://distros-repository.usharesoft.com/centos/6.7/os/x86_64
+			* http://distros-repository.usharesoft.com/centos/6.7/updates/x86_64
+			* http://distros-repository.usharesoft.com/centos/6.7/extras/x86_64
+			* http://distros-repository.usharesoft.com/centos/6.7/os/x86_64
 
-	``OpenSUSE (exemple version 12.2)``
+		``OpenSUSE (exemple version 12.2)``
 
-	http://distros-repository.usharesoft.com/usharesoft/opensuse/12.2/x86_64
+		http://distros-repository.usharesoft.com/usharesoft/opensuse/12.2/x86_64
 
-	``Scientific Linux (exemple version 6.6)``
+		``Scientific Linux (exemple version 6.6)``
 
-	http://distros-repository.usharesoft.com/usharesoft/scientificlinux/6.6/x86_64
+		http://distros-repository.usharesoft.com/usharesoft/scientificlinux/6.6/x86_64
 
 	7. You must then add the specific UForge tool repository. The repository to attach is one of the following:
 

@@ -63,13 +63,13 @@ If you specify any of the above when you create a subscription profile, then all
 
 	1. To create a subscription profile for an organization, run the command::
 
-		uforge subscription create --code <string> --name <string> --org usharesoft --active -u $ADMIN -p $PASS
+		uforge subscription create --code <string> --name <string> --org usharesoft --active -u <user> -p <password>
 
 		The code can be any alpha-numeric string, excluding spaces and special characters.
 
 	2. To enable a subscription profile for an organization, run the command::
 
-		uforge subscription enable --name <string> --org usharesoft -u $ADMIN -p $PASS
+		uforge subscription enable --name <string> --org usharesoft -u <user> -p <password>
 
 .. _subscription-administrator:
 
@@ -83,7 +83,7 @@ In order to create a user, the following are required:
 
 When creating subscription profiles, the UForge administrator can add subscription profile administrators. However, they can also be added after the fact, as follows::
 
-	uforge subscription admin add --admin kermit --name profileA --org usharesoft -u $ADMIN -p $PASS
+	uforge subscription admin add --admin kermit --name profileA --org usharesoft -u <user> -p <password>
 
 The argument admin is the login of the user you want to add as an administrator. This administrator will be able to create users with the subscription profile specified by the argument name.
 
@@ -99,7 +99,7 @@ To add access to a format to a group of users, you can add it as part of a subsc
 
 For example::
 
-	$ uforge subscription targetformat add --targetformat ovf qcow2 vbox --account kermit --url https://uforge.usharesoft.com:443 -u $ADMIN -p $PASS
+	$ uforge subscription targetformat add --targetformat ovf qcow2 vbox --account kermit --url <platform URL endpoint> -u <user> -p <password>
 
 .. _disable-subscription:
 
@@ -110,6 +110,6 @@ If you no longer want a subscription profile to be used when creating new users,
 
 To disable a subscription profile::
 
-	uforge subscription disable --name profileA -u $ADMIN -p $PASS
+	uforge subscription disable --name profileA -u <user> -p <password>
 
 If no org is specified, the default organization is used.

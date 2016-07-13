@@ -13,11 +13,11 @@ In order to interact with the official package repository, you must already have
 
 .. code-block:: shell
 
-	# vi /etc/UShareSoft/uforge/uforge.conf
+	$ vi /etc/UShareSoft/uforge/uforge.conf
 	UFORGE_PRODUCT_ACCESS_USER=username
 	UFORGE_PRODUCT_ACCESS_PASSWORD=password
 
-.. note:: You should never update the following file: `# cat /etc/yum.repo.d/uforge-ee-repo`
+.. note:: You should never update the following file: ``/etc/yum.repo.d/uforge-ee-repo``
 
 The request to update uses these credentials via HTTPS to Fujitsu who then determines whether you have the access rights to update the platform.
 
@@ -25,7 +25,7 @@ You must also have set up the yum repo file to authorize UForge updates using co
 
 .. code-block:: shell
 
-	/opt/UShareSoft/uforge/conf/configure_yum_repos.sh -u <uss account user> -p <uss account password> -t <uforge install type>
+	$ /opt/UShareSoft/uforge/conf/configure_yum_repos.sh -u <uss account user> -p <uss account password> -t <uforge install type>
 
 The (optional) parameter <uforge install type> can take the values uforge-ee or uforge-dev. By default uforge-ee is used.
 
@@ -35,7 +35,7 @@ To update the platform, use the "yum" command-line tool as follows:
 
 .. code-block:: shell
 
-	# yum update 
+	$ yum update 
 
 	Loaded plugins: presto
 	UForge-ee-uforge                                               |  951 B     00:00     
@@ -110,14 +110,14 @@ Run the following CLI command in order to know if Squid is running:
 
 	.. code-block:: shell
 
-		# service squid status
+		$ service squid status
 		
 	
 	If squid is stopped, run the following command-line
 	
 	.. code-block:: shell
 
-		# service squid start	
+		$ service squid start	
 
 .. _uforge-downgrade:
 

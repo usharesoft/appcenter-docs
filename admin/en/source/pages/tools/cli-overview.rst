@@ -9,15 +9,15 @@ There are two methods to use the command-line tool:
 
   * interactive mode. In this case, you launch the UForge CLI as follows:
 
-  .. code-block:: shell
+    .. code-block:: shell
 
-    uforge -u <user> -p <password> -U  https://uforge.usharesoft.com/api
+      $ uforge -u <user> -p <password> -U  https://uforge.usharesoft.com/api
   
   * by individual commands, assuming you know the command you want to launch. For example to list user information for root:
 
-  .. code-block:: shell
+    .. code-block:: shell
 
-    uforge -u root -p <password> -U https://uforge.usharesoft.com/api user info --account root
+      $ uforge -u root -p <password> -U https://uforge.usharesoft.com/api user info --account root
 
 Command-line Tool Presentation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

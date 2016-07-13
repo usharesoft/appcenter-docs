@@ -31,26 +31,26 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 
 	   .. code-block:: shell
 
-		ssh root@<your UForge instance>
+		$ ssh root@<your UForge instance>
 
 	2. In order for the following commands to be generic you can set some variables in your environment.
 
 	   .. code-block:: shell
 
-		. /etc/UShareSoft/uforge/uforge.conf
+		$ . /etc/UShareSoft/uforge/uforge.conf
 		ADMIN=$UFORGE_WEBSVC_LOGIN ; PASS=$UFORGE_WEBSVC_PASSWORD
 
 	3. Run the following CLI command in order to create the distribution::
 
-		uforge org os add --name CentOS --arch x86_64 --version 6.5 -u $ADMIN -p $PASS
+		$ uforge org os add --name CentOS --arch x86_64 --version 6.5 -u $ADMIN -p $PASS
 
 	4. Enable the new operating system for the organization. The following command enables CentOS 6.5 in the default organization::
 
-		uforge org os enable --name CentOS --version 6.5 --arch x86_64 -u $ADMIN -p $PASS
+		$ uforge org os enable --name CentOS --version 6.5 --arch x86_64 -u $ADMIN -p $PASS
 
 	5. Enable the user to use the operating system.  The user must be a member of the organization. This step can be done later.::
 
-		uforge user os enable --account root --name CentOS --version 6.5 --arch x86_64 -u $ADMIN -p $PASS
+		$ uforge user os enable --account root --name CentOS --version 6.5 --arch x86_64 -u $ADMIN -p $PASS
 
 	6. Create the distribution repository. The following example shows the creation of an official CentOS repository. However, you can also create a repository based on the UForge official repository as shown later.
 
@@ -58,7 +58,7 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 
 			.. code-block:: shell
 
-				uforge org repo create --name "CentOS 6.5 os" --repoUrl http://vault.centos.org/6.5/os/x86_64/ --type RPM --officiallySupported -u $ADMIN -p $PASS
+				$ uforge org repo create --name "CentOS 6.5 os" --repoUrl http://vault.centos.org/6.5/os/x86_64/ --type RPM --officiallySupported -u $ADMIN -p $PASS
 
 				Success: Created repository with url [http://vault.centos.org/6.5/os/x86_64/] to default organization
 
@@ -129,30 +129,32 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 
 	    For example::
 
-		uforge org repo create --name "CentOS 6.5 os" --repoUrl http://distros-repository.usharesoft.com/usharesoft/centos/6/x86_64 --type RPM -u $ADMIN -p $PASS
+		$ uforge org repo create --name "CentOS 6.5 os" --repoUrl http://distros-repository.usharesoft.com/usharesoft/centos/6/x86_64 --type RPM -u $ADMIN -p $PASS
 
 	8. Attach repository to the distribution as follows::
 
-		uforge org repo os attach --name CentOS --arch x86_64 --version 6.5 --repoIds 354 -u $ADMIN -p $PASS
+		$ uforge org repo os attach --name CentOS --arch x86_64 --version 6.5 --repoIds 354 -u $ADMIN -p $PASS
 	
 	   The ``–-repoIds`` specified here are the space-separated “id” of previously created repositories, shown by command ``uforge org repo list -u $ADMIN -p $PASS``.
 
-	9. Populate repository packages::
+	9. Populate repository packages:
 
-		/opt/UShareSoft/uforge/cron/update_repos_pkgs.sh
+		.. code-block:: shell
 
-	.. note:: This procedure may take a long time.
+			$ /opt/UShareSoft/uforge/cron/update_repos_pkgs.sh
+
+		.. note:: This procedure may take a long time.
 
 	10. To verify if the procedure is terminated, run the following command:
 
-	.. code-block:: shell
+		.. code-block:: shell
 
-		# tail -f /tmp/USER_DATA/FactoryContainer/logs/repos/spider/<directory name with date>/spider.stdout 
+			$ tail -f /tmp/USER_DATA/FactoryContainer/logs/repos/spider/<directory name with date>/spider.stdout 
 		
 		The procedure is terminated when you see the line: INFO  CheckForRepositoriesUpdates:275 - Entering CheckForRepositoriesUpdates->terminate()
 
 	11. Create OS profile based on packages (minimal, server, etc.)::
 
-		/opt/UShareSoft/uforge/bin/distro_sorter.sh -d CentOS -v 6.5 -a x86_64
+		$ /opt/UShareSoft/uforge/bin/distro_sorter.sh -d CentOS -v 6.5 -a x86_64
 
 	

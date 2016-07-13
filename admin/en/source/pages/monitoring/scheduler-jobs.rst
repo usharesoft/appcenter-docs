@@ -9,7 +9,7 @@ To view the scheduler's current queue, log in to the oar scheduler node as root 
 
   .. code-block:: shell
 
-    # oarstat
+    $ oarstat
     Job id     Name           User           Submission Date     S Queue
     ---------- -------------- -------------- ------------------- - ----------
     5725       4825           glassfish      2012-05-01 18:53:32 R default   
@@ -20,7 +20,7 @@ To view more details of a specific job, log in to the oar scheduler node as root
 
   .. code-block:: shell
 
-    # oarstat --job 5725 –-full
+    $ oarstat --job 5725 –-full
     Job_Id: 5725
         job_array_id = 5725
         job_array_index = 1
@@ -63,7 +63,7 @@ For example:
 
 .. code-block:: shell
 
-  # oarstat
+  $ oarstat
   Job id     Name           User           Submission Date     S Queue
   ---------- -------------- -------------- ------------------- - ----------
   5725       4825           glassfish      2012-05-01 18:53:32 R default 
@@ -72,7 +72,7 @@ The directory will be:
 
 .. code-block:: shell
 
-  # cd <user data mount point>/FactoryContainer/images/4825
+  $ cd <user data mount point>/FactoryContainer/images/4825
 
 Logs for jobs that publish an image to a specific cloud are stored in a sub-directory of the generated image directory.  So for example if a user generates an Amazon image, then publishes the machine image to Amazon, the directory structure created is:
 
@@ -88,14 +88,14 @@ Logs for jobs that publish an image to a specific cloud are stored in a sub-dire
 
 To view the logs of a job, log in to the oar scheduler node as root::
 
-  # cd /<user data mount point>/FactoryContainer/images/<job_name>/oar
+  $ cd /<user data mount point>/FactoryContainer/images/<job_name>/oar
 
 so for example
 
 .. code-block:: shell
 
-  # cd /tmp/USER_DATA/FactoryContainer/images/4825/oar
-  # ls -al
+  $ cd /tmp/USER_DATA/FactoryContainer/images/4825/oar
+  $ ls -al
   total 376
   drwxr-xr-x 2 glassfish glassfish   4096 Apr 30 18:21 .
   drwxr-xr-x 6 glassfish glassfish   4096 Apr 30 18:22 ..
@@ -106,5 +106,5 @@ so for example
 
 To check for suspicious jobs you can run::
   
-  # oarnodes | grep -i suspected
+  $ oarnodes | grep -i suspected
 

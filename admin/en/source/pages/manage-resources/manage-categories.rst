@@ -14,6 +14,6 @@ To create or manage categories with the CLI, use the command ``uforge org``.
 
 The available commands are:
 
-	* category create               
-	* category delete 
-	* category list
+	* ``category create``              
+	* ``category delete`` 
+	* ``category list``

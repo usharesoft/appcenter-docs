@@ -9,7 +9,7 @@ Once the installation is complete on all the nodes you wish to use for the UForg
 
 To launch the UForge Deployment Wizard, use your browser and go to one of the nodes that have been installed:
 
-http://<ip address of the node>:9998/deployments
+	http://<ip address of the node>:9998/deployments
 
 .. note:: The deployment wizard is still using Flex technology, therefore you will require to have flash player installed on your browser.  Steps are being taken to remove this dependency in future versions of the product.
 
@@ -19,7 +19,7 @@ Fill in the wizard, note that all the fields are mandatory.
 
 	2. Enter an email address.  This is the email address of the root administrator of UForge.  All administration email notifications are sent to this email address.
 
-	3. Set the root administrator's password. The password must be at least five characters long, including alphanumeric characters and the following special characters !#$%&'()*+,-/:;<=>?@[\]/^_{|}~`. Spaces are not allowed at the beginning or end.
+	3. Set the root administrator's password. The password must be at least five characters long, including alphanumeric characters and the following special characters ``!#$%&'()*+,-/:;<=>?@[\]/^_{|}~```. Spaces are not allowed at the beginning or end.
 
 	4. Provide a username, email and password for an initial user account to be created.  This user account will have administration access rights for the default Organization.
 
@@ -37,8 +37,8 @@ Fill in the wizard, note that all the fields are mandatory.
 
 	11. Select if OS and image storage should be local or remote. OS storage will be used for distributions, which image storage will include user data such as images, projects, mysoftware and other user data created with UForgeNow.
 
-		* If you choose to use a remote storage, indicate the NFS server with mount point and you should enter the full path for the OS directory e.g. /DISTROS.
-		* If you select remote storage for the image store, you have to make sure that the path USER_DATA exists, with the correct permissions i.e. tomcat:tomcat. Refer to :ref:`repository-shared-storage`, step 4, Check mount points, for more details.
+		* If you choose to use a remote storage, indicate the NFS server with mount point and you should enter the full path for the OS directory e.g. ``/DISTROS``.
+		* If you select remote storage for the image store, you have to make sure that the path ``USER_DATA`` exists, with the correct permissions i.e. tomcat:tomcat. Refer to :ref:`repository-shared-storage`, step 4, Check mount points, for more details.
 
 	12. Indicate the generation cluster compute node hostnames. You can add additional compute nodes by clicking the add button.
 
@@ -52,8 +52,8 @@ Fill in the wizard, note that all the fields are mandatory.
 
 	.. code-block:: bash
 
-		# cd /var/log/UShareSoft
-		# /bin/rm -rf oas-deploy
+		$ cd /var/log/UShareSoft
+		$ /bin/rm -rf oas-deploy
 		
 
 Configuring Ports

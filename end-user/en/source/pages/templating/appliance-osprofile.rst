@@ -21,7 +21,7 @@ To add an OS profile to your appliance:
 	3. Click on ``OS Profile`` in the toolbox.
 	4. From the drop-down menu, select the ``OS profile`` template you wish to use. The operating system packages are added automatically and your appliance revision number is increased.
 
-.. image:: /images/os-profile.jpg
+		.. image:: /images/os-profile.jpg
 
 .. _appliance-os-profile-add-pkgs:
 
@@ -36,7 +36,7 @@ You may want to add packages that are provided as part of the operating system d
 	4. Enter your search string. For example, add ``php`` as a search string to get a list of all the PHP packages provided by CentOS. 
 	5. Click the search icon.
 
-	.. image:: /images/search-packages.jpg
+		.. image:: /images/search-packages.jpg
 
 	6. Optionally you can filter the results by selecting ``32-bit packages`` or by entering text in the ``filter`` box.
 	7. Select the packages you want to add.

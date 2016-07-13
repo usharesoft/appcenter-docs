@@ -34,7 +34,12 @@ To change the email address:
 
 		vi /etc/UShareSoft/uforge/uforge.conf
 
-	2.  Run the script to force UForge to use the new ``uforge.conf`` file, this will restart certain UForge services (if multi-node the following order should be respected: compute notes, db nodes, web service nodes)::
+	2. Update the following variables:
+
+		* UFORGE_REGISTRATIONS_EMAIL: to receive notifications on new user accounts being created
+		* UFORGE_POSTMASTER_EMAIL: to receive all other email notifications (errors etc)
+
+	3.  Run the script to force UForge to use the new ``uforge.conf`` file, this will restart certain UForge services (if multi-node the following order should be respected: compute notes, db nodes, web service nodes)::
 
 		/opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh
 

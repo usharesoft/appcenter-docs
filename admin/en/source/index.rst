@@ -15,22 +15,14 @@ Contents:
 
    pages/architecture/overview
    pages/install/overview
-   
    pages/config/further-config-overview
-
-   pages/upgrade/upgrade-overview
-   pages/config/update-java
-   
+   pages/upgrade/upgrade-overview   
    pages/backup/overview
-   
    pages/manage-services/overview
    pages/manage-resources/overview
    pages/manage-users/overview
-   
    pages/monitoring/overview
-
    pages/tools/overview
-
    pages/rebranding/overview
 
 .. _trademarks:

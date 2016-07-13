@@ -9,13 +9,11 @@ You can add a new OAR compute node which was instantiated from UForge but which 
 
 	1. Make a snapshot of the UForge Server (to be able to come back to the state without the additional OAR compute node). 
 
-	2. Initial setup: oar-server and oarnode1 to oarnodeN already configured 
+	2. Initial setup: ``oar-server`` and ``oarnode1`` to ``oarnodeN`` already configured.  Name oarnodeX and IP-oarnodeX respectively the name and IP address of the new node to be added to the UForge "cluster". 
 
-		Name oarnodeX and IP-oarnodeX respectively the name and IP address of the new node to be added to the UForge "cluster". 
+	.. note:: The following commands are run on the first existing oarnode, for example oarnode1 until stated otherwise.
 
-	.. _note: The following commands are run on the first existing oarnode, for example oarnode1 until stated otherwise.
-
-	3. Copy over /etc/hosts from oarnode1 to oarnodeX with mods
+	3. Copy over ``/etc/hosts`` from oarnode1 to oarnodeX with mods
 
 	4. Get first local network interface (eth0)
 
@@ -30,7 +28,7 @@ You can add a new OAR compute node which was instantiated from UForge but which 
 		IP=`/sbin/ip -o addr show $ITF 2>/dev/null| grep 'inet ' | awk '{print \$4}' |
 		sed -e 's?/.*??'`
 
-	6. Modify and copy /etc/hosts
+	6. Modify and copy ``/etc/hosts``
 
 	.. code-block:: shell
 

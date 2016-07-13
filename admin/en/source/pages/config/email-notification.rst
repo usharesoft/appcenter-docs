@@ -34,14 +34,15 @@ To change the email address:
 
 		vi /etc/UShareSoft/uforge/uforge.conf
 
-	2.  Run the script to force UForge to use the new ``uforge.conf`` file, this will restart certain UForge services::
+	2.  Run the script to force UForge to use the new ``uforge.conf`` file, this will restart certain UForge services (if multi-node the following order should be respected: compute notes, db nodes, web service nodes)::
 
 		/opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh
+
 
 Customizing the Email Templates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can modify or internationalize the information sent during an email notification. UForge provides a set of default templates for each email type sent by the system. The templates are stored in: /opt/UShareSoft/uforge/tmpl
+You can modify or internationalize the information sent during an email notification. UForge provides a set of default templates for each email type sent by the system. The templates are stored in: ``/opt/UShareSoft/uforge/tmpl``
 
 .. warning:: When UForge is upgraded all the templates in the default directory will be overwritten.  To ensure that any custom templates are restored during an update, a copy must be made of the custom template. 
 

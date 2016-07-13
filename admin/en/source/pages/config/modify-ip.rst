@@ -5,7 +5,7 @@
 Modifying the UForge IP Address
 -------------------------------
 
-To modify the UForge IP address or hostname, do the following.
+To modify the UForge IP address or hostname, do the following:
 
 	1. If UForge is installed on a single node, launch a terminal on the UForge machine. 
 
@@ -19,16 +19,18 @@ To modify the UForge IP address or hostname, do the following.
 		* /etc/hosts for all host definitions
 		* /etc/fstab for remote NFS mounts
 		* /etc/UShareSoft/uforge/uforge.conf for the following entries:
+
 			- UFORGE_PROXY_INFOS
 			- UFORGE_EXTERNAL_HOSTNAME
 			- UFORGE_IAAS_DOWNLOAD_URL
 			- UFORGE_NOREPLY_EMAIL
 			- UFORGE_URL
+
 		* /etc/udev/rules.d/70-persistent-net.rules
 
 	4. Modify the header, footer, IP information in /var/opt/UShareSoft/uforge-client/gwt/uforge/templates/config.xml (except for <c:uForgeUrl>) with the EXTERNAL_URL variable. For more information on modifying the portal information, refer to :ref:`rebrand-considerations`.
 
-	5. Launch the following two scripts::
+	5. Launch the following two scripts (if multi-node the following order should be respected: compute notes, db nodes, web service nodes)::
 
 		$ /opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh
 		$ /opt/UShareSoft/uforge-client/bin/uforge_ui_update.sh
@@ -41,4 +43,4 @@ For the UForge CLI you should have::
 
 	UFORGE_GF_ADMIN_WEBSVC_ROOT_CONTEXT=ufadmws
 
-.. note: Some virtualization solutions (like VirtualBox) also add this info into ifcfg-XXX files as HWADDR=MAC
+.. note:: Some virtualization solutions (like VirtualBox) also add this info into ifcfg-XXX files as HWADDR=MAC

@@ -28,5 +28,9 @@ To view the uforge.conf file:
 
 		vi /etc/UShareSoft/uforge/uforge.conf
 
+	3. After making appropriate changes in these files, you should run the following command on all the nodes (if multi-node the following order should be respected: compute notes, db nodes, web service nodes)::
+
+		/opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh
+
 
 For more information on Tomcat, see `http://tomcat.apache.org <http://tomcat.apache.org>`_

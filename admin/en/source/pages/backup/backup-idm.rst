@@ -5,14 +5,14 @@
 IDM Service Backup and Restore
 ------------------------------
 
-UForge uses Syncope for identity management. Note that the following example uses /tmp for the backup; however, we recommend you use a mounted disk, SAN or NAS to store your backup.
+UForge uses Syncope for identity management. Note that the following example uses ``/tmp`` for the backup; however, we recommend you use a mounted disk, SAN or NAS to store your backup.
 
 To Backup Syncope
 ~~~~~~~~~~~~~~~~~
 
 1. Set the environment variables::
 
-	source /etc/UShareSoft/uforge/uforge.conf 
+	source /etc/UShareSoft/auth.conf 
 
 2. Backup the syncope database as follows: 
 
@@ -35,7 +35,7 @@ To Restore the IDM Data
 
 	.. code-block:: shell
 
-		export MYSQLCMD="mysql -s -u$UFORGE_DB_LOGIN -p$UFORGE_DB_PASSWORD"
+		export MYSQLCMD="mysql -s -u$UFORGE_DB_ADMIN_LOGIN -p$UFORGE_DB_ADMIN_PASSWORD"
 		echo "DROP DATABASE IF EXISTS syncope;" | $MYSQLCMD
 
 2. Recreate an empty syncope database::
@@ -52,7 +52,7 @@ To Restore the IDM Data
 
 4. Copy the backup to the restore path::
 
-	scp /tmp/content.xml root@idm-server:/opt/GlassFish/glassfish/domains/syncope/applications/syncope/WEB-INF/classes/content.xml
+	scp /tmp/content.xml root@idm-server:/opt/Tomcat/webapps/syncope/WEB-INF/classes/content.xml
 
 5. Start the Webservices (IDM & UForge):
 
@@ -66,7 +66,7 @@ To Restore the IDM Data
 
 	.. code-block:: shell
 
-		source /etc/UShareSoft/uforge/uforge.conf
+		source /etc/UShareSoft/uforge/auth.conf
 		curl --noproxy idm-server -u $UFORGE_IDM_ADMIN:$UFORGE_IDM_ADMIN_PWD -H "Content-Type: application/xml" -X POST http://idm-server:$UFORGE_IDM_PORT/$UFORGE_IDM_BASEURI/tasks/{100}/execute -D /tmp/headers
 
 7. When the reconciliation task has completed the service should be restored and functional. You can check the reconciliation task has completed successfully:

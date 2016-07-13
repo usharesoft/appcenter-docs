@@ -27,18 +27,18 @@ In order to add an operation system in your UForge AppCenter you must:
 
 The following is a concrete example to begin the population of CentOS 6.5 64bit:
 
-	1. Connect to UForge.
+	1. Connect to UForge:
 
 	   .. code-block:: shell
 
-		# ssh root@<your UForge instance>
+		ssh root@<your UForge instance>
 
 	2. In order for the following commands to be generic you can set some variables in your environment.
 
 	   .. code-block:: shell
 
-		# . /etc/UShareSoft/uforge/uforge.conf
-		# ADMIN=$UFORGE_WEBSVC_LOGIN ; PASS=$UFORGE_WEBSVC_PASSWORD
+		. /etc/UShareSoft/uforge/uforge.conf
+		ADMIN=$UFORGE_WEBSVC_LOGIN ; PASS=$UFORGE_WEBSVC_PASSWORD
 
 	3. Run the following CLI command in order to create the distribution::
 

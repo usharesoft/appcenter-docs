@@ -5,15 +5,17 @@
 Configuring UForge Behind Enterprise Proxy
 ------------------------------------------
 
-Once your UForge platform deployment is complete you can configure SMTP proxy as follows. In /etc/UShareSoft/uforge/uforge.conf you can modify:
+Once your UForge platform deployment is complete you can configure SMTP proxy.  To configure SMTP:
 
-	* UFORGE_RELAY_HOST=
-	* UFORGE_RELAY_PORT=
-	* UFORGE_RELAY_USER=
-	* UFORGE_RELAY_PASSWORD=
+	1. In /etc/UShareSoft/uforge/uforge.conf you can modify:
 
-These can be empty.
+		* UFORGE_RELAY_HOST=
+		* UFORGE_RELAY_PORT=
+		* UFORGE_RELAY_USER=
+		* UFORGE_RELAY_PASSWORD=
 
-Then run::
+		These can be empty.
 
-	/opt/UShareSoft/uforge/conf/uforge_update.sh
+	2. Run the following command on all the nodes (if multi-node the following order should be respected: compute notes, db nodes, web service nodes)::
+
+		/opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh

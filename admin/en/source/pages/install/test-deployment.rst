@@ -9,19 +9,19 @@ Once the configuration phase is complete, you may wish to carry out some basic s
 
 **Step 1:** Check if the web service is operational
 
-Use the values in the uforge.conf to contact the web service and expect a 200 OK response.
+Use the values in the uforge.conf to contact the web service and expect a ``200 OK`` response.
 
 Get the values form the uforge.conf and add them to some environment variables (you could also just manually view the uforge.conf)
 
 .. code-block:: shell
 
-	eval `grep '^UFORGE_WEBSVC_\|^UFORGE_GF_INTERNAL_IP\|^UFORGE_GF_HTTP_PORT\|^UFORGE_GF_WEBSVC_ROOT_CONTEXT' /etc/UShareSoft/uforge/uforge.conf`
+	$ eval `grep '^UFORGE_WEBSVC_\|^UFORGE_GF_INTERNAL_IP\|^UFORGE_GF_HTTP_PORT\|^UFORGE_GF_WEBSVC_ROOT_CONTEXT' /etc/UShareSoft/uforge/uforge.conf`
 
 Run a simple http request (using basic authentication) using curl
 
 .. code-block:: shell
 
-	# curl http://$UFORGE_GF_INTERNAL_IP:$UFORGE_GF_HTTP_PORT/$UFORGE_GF_WEBSVC_ROOT_CONTEXT/users/$UFORGE_WEBSVC_LOGIN -H "Authorization:Basic $UFORGE_WEBSVC_LOGIN:$UFORGE_WEBSVC_PASSWORD" 
+	$ curl http://$UFORGE_GF_INTERNAL_IP:$UFORGE_GF_HTTP_PORT/$UFORGE_GF_WEBSVC_ROOT_CONTEXT/users/$UFORGE_WEBSVC_LOGIN -H "Authorization:Basic $UFORGE_WEBSVC_LOGIN:$UFORGE_WEBSVC_PASSWORD" 
 	--verbose
 
 	* About to connect() to 10.0.0.240 port 9090 (#0)
@@ -45,19 +45,19 @@ Run a simple http request (using basic authentication) using curl
 
 **Step 2:** Check to see if the Database is running
 
-The database service should be running and available on the port 3306 and that the database table is present. The Percona Server instance should have “usharedb” and “oar”
+The database service should be running and available on the port ``3306`` and that the database table is present. The Percona Server instance should have ``usharedb`` and ``oar``
 
 .. code-block:: shell
 
-	# service mysql status
+	$ service mysql status
 	MySQL running (22661)                                      [  OK  ]
 
 Get the values form the uforge.conf and add them to some environment variables (you could also just manually view the uforge.conf)
 
 .. code-block:: shell
 
-	# eval `grep '^UFORGE_DB' /etc/UShareSoft/uforge/uforge.conf`
-	# echo "show databases" | mysql -f -N -u $UFORGE_DB_ADMIN_LOGIN -p$UFORGE_DB_ADMIN_PASSWORD -h db
+	$ eval `grep '^UFORGE_DB' /etc/UShareSoft/uforge/uforge.conf`
+	$ echo "show databases" | mysql -f -N -u $UFORGE_DB_ADMIN_LOGIN -p$UFORGE_DB_ADMIN_PASSWORD -h db
 	information_schema
 	mysql
 	oar
@@ -70,6 +70,6 @@ Check that all the cluster resources are available ('alive').  On each compute n
 
 .. code-block:: shell
 
-	# oarnodes | awk '/resource_id/ {n=$NF} /state : Suspected/ {printf "oarnodesetting -s Alive -r %s\n",n}' | sh
+	$ oarnodes | awk '/resource_id/ {n=$NF} /state : Suspected/ {printf "oarnodesetting -s Alive -r %s\n",n}' | sh
 
 This should return without any output.

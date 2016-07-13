@@ -16,7 +16,7 @@ To create a new appliance in your private workspace:
 	2. On the ``Appliance Library`` page, click on ``create`` in the top right. 
 	3. Enter the ``Name`` and ``Version`` of the appliance.  
 
-	.. image:: /images/create-appliance-centos.jpg
+		.. image:: /images/create-appliance-centos.jpg
 
 	4. From the drop-down menus, select the operating system (distribution, release and architecture).
 	5. Click the ``create`` button. This creates a skeleton of an appliance template in the platform which you can now customize with operating system packages, middleware and application software.
@@ -43,9 +43,10 @@ To create a Windows Appliance:
 
 		.. note:: Unlike Linux, the following cannot be set for Windows appliances: Keyboard, Root user, User & Groups, Kernel Parameters and Firewall.  
 
-	.. image :: /images/windows-install.jpg
+		.. image :: /images/windows-install.jpg
 
 	7. Optionally, you can set the Activation Key as part of the Install Profile. If it is not entered in the Install Profile, the default key will be used for a 30-day trial period once the appliance is booted.
+
 	8. Optionally you can add partitions.
 		a. Click on ``Partitioning`` and select ``Advanced Partitioning``.
 		b. Click on the green + sign at the top.
@@ -55,12 +56,12 @@ To create a Windows Appliance:
 		f. Check the box in the Grow column if you want the partition to be growable.
 		g. Click ``save``.
 
-	.. image :: /images/windows-adv-partitions.jpg
+		.. image :: /images/windows-adv-partitions.jpg
 
 	9. Add software bundles from the Project or MySoftware pages.
 
-	.. warning:: Software bundles included in MySoftware and Project will be put on the image disk but the UForge generation tool WILL NOT install them even if these are executable/installers files (.exe, .msi, etc.). It is up to the end user to manually complete the installation of the software bundles.
+		.. warning:: Software bundles included in MySoftware and Project will be put on the image disk but the UForge generation tool WILL NOT install them even if these are executable/installers files (.exe, .msi, etc.). It is up to the end user to manually complete the installation of the software bundles.
 
-	For Windows, .exe or .msi files can be given extra parameters. The parameters depend on the .exe or .msi file, and can be used for example for silent installation, providing extra configuration values, etc.
+		For Windows, .exe or .msi files can be given extra parameters. The parameters depend on the .exe or .msi file, and can be used for example for silent installation, providing extra configuration values, etc.
 
-.. note:: A binary called UShareInstallConfig is embedded at generation time, which helps the final user of the Appliance do the last-mile configuration.
+.. note:: A binary called ``UShareInstallConfig`` is embedded at generation time, which helps the final user of the Appliance do the last-mile configuration.

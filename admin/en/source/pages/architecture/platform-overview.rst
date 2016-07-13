@@ -21,7 +21,7 @@ The UForge platform can be deployed on physical machines or in a virtualized or 
 
 **UForge Server.** The UForge Server is a RESTful (Representational State Transfer) web service built on top of Java and using the JSR-311 reference implementation (project Jersey).  UForge Server is based on the design principles of REST and Resource Orientated Architecture (ROA).  Resources are references with a unique global identifier (URI).  UForge Server uses the semantics of the HTTP protocol to manipulate these resources. The HTTP response codes are used to determine whether a user's request was treated successfully or not.
 
-Information is returned to the client in either XML or JSON, depending on the “Accept-Type” header attribute used by the client.  If no “Accept-Type” header is provided, XML is returned by default.
+Information is returned to the client in either XML or JSON, depending on the ``Accept-Type`` header attribute used by the client.  If no ``Accept-Type`` header is provided, XML is returned by default.
 To ensure security, communication with the UForge Server is done via HTTPS.
 UForge Server provides authentication (AuthN) and authorization (AuthZ) modules.  These modules can be customized by the customer to provide or use an alternative mechanism for authentication and authorization.  By default these modules communicate with the IDM service.  This service determines whether a request has the correct authentication and the correct access.
 

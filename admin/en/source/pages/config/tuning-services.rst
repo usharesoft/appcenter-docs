@@ -57,13 +57,14 @@ To launch the process in a specific profile, run the script ``runjob.py`` locate
 
 This sets all the properties you have defined in the profile and forwards all the arguments.
 
-Command usage:
+Command usage::
 
-/opt/UShareSoft/uforge/bin/runjob.py profile_name arg1 arg2
+  $ /opt/UShareSoft/uforge/bin/runjob.py profile_name arg1 arg2
 
 where:
+
 	* ``profile_name`` is the name of the profile
-	* ``arg1...argn`` is the list of arguments to forward to the process this profile is to be applied to (defined in “exec’ element)
+	* ``arg1...argn`` is the list of arguments to forward to the process this profile is to be applied to (defined in "exec" element)
 
 Including an Override
 ~~~~~~~~~~~~~~~~~~~~~

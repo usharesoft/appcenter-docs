@@ -5,9 +5,9 @@
 Using the Event Bus
 -------------------
 
-UForge can be easily extended to interact and integrate with other products and services via an event bus service.  Whenever a POST, PUT or DELETE request to UForge, a corresponding event is sent to the event bus (RabbitMQ).  Custom plugins can be built to listen for these events and trigger custom business logic or call out to other 3rd party systems.
+UForge can be easily extended to interact and integrate with other products and services via an event bus service.  Whenever a ``POST``, ``PUT`` or ``DELETE`` request to UForge, a corresponding event is sent to the event bus (RabbitMQ).  Custom plugins can be built to listen for these events and trigger custom business logic or call out to other 3rd party systems.
 
-The event bus service is based on RabbitMQ.  Custom plugins are known as “consumers”.
+The event bus service is based on RabbitMQ.  Custom plugins are known as "consumers".
 
 Custom plugins (RabbitMQ consumers) can be written in many different languages including:
 
@@ -19,9 +19,9 @@ Custom plugins (RabbitMQ consumers) can be written in many different languages i
 	* PHP
 	* Node.js etc
 
-RabbitMQ is a message broker.  In essence, it accepts messages from “producers” and delivers them to “consumers”.  In-between, it can route, buffer and persist messages, known as the “queue”.  
+RabbitMQ is a message broker.  In essence, it accepts messages from "producers" and delivers them to "consumers".  In-between, it can route, buffer and persist messages, known as the "queue".  
 
-When a POST, PUT or DELETE request is sent to the web service, then UForge creates a message (the producer) and posts this to a routing service, called an exchange.  This exchange is configured to publish messages to the UForge queue.  When writing a custom plugin (consumer), it registers itself to this queue. 
+When a ``POST``, ``PUT`` or ``DELETE`` request is sent to the web service, then UForge creates a message (the producer) and posts this to a routing service, called an exchange.  This exchange is configured to publish messages to the UForge queue.  When writing a custom plugin (consumer), it registers itself to this queue. 
 
 Administrators can also reconfigure the event bus routing service to adapt to more complex workflows.  This is done in the event bus administration UI and use the root account of the UForge service, at::
 
@@ -35,7 +35,7 @@ Refer to the RabbitMQ documentation for more information: `https://www.rabbitmq.
 Writing a Custom Plugin (Consumer)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Prior to writing a custom plugin, it is important to understand the producer messages created by the UForge AppCenter.  When a request is sent to the web service (POST, PUT or DELETE) the web service creates a producer message.  The contents of each message is described in an .xsd file here: `https://www.usharesoft.com/resources/docs/ <https://www.usharesoft.com/resources/docs/>`_ 
+Prior to writing a custom plugin, it is important to understand the producer messages created by the UForge AppCenter.  When a request is sent to the web service (``POST``, ``PUT`` or ``DELETE``) the web service creates a producer message.  The contents of each message is described in an .xsd file here: `https://www.usharesoft.com/resources/docs/ <https://www.usharesoft.com/resources/docs/>`_ 
 
 When creating a plugin, you will have access to all the attributes in a message.  The plugin will contain the custom business logic required.
 

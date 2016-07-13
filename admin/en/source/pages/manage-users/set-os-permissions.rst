@@ -21,18 +21,18 @@ An administrator can add or remove access to operating systems for a specific us
 
 	* Adding/removing all CentOS versions:: 
 
-		uforge user os enable --account <username> --name CentOS
-		uforge user os disable --account <username> --name CentOS
+		$ uforge user os enable --account <username> --name CentOS
+		$ uforge user os disable --account <username> --name CentOS
 
 	* Adding/removing CentOS version 5.8 all architectures::
 
-		uforge user os enable --account <username> --name CentOS --version 5.8
-		uforge user os disable --account <username> --name CentOS --version 5.8
+		$ uforge user os enable --account <username> --name CentOS --version 5.8
+		$ uforge user os disable --account <username> --name CentOS --version 5.8
 
 	* Adding/removing CentOS version 5.8 i386::
 
-		uforge user os enable --account <username> --name CentOS --version 5.8 --arch i386
-		uforge user os disable --account <username> --name CentOS --version 5.8 --arch i386
+		$ uforge user os enable --account <username> --name CentOS --version 5.8 --arch i386
+		$ uforge user os disable --account <username> --name CentOS --version 5.8 --arch i386
 
 .. note:: For “Scientific Linux” and “Red Hat Enterprise Linux”, use the following syntax : Scientific.* RedHat.* for the distribution name. 
 

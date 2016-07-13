@@ -9,7 +9,7 @@ A set of default roles are provided by UForge. To view these default roles, use 
 
 .. code-block:: shell
 
-	uforge role list -u $ADMIN -p $PASS
+	$ uforge role list -u $ADMIN -p $PASS
 	Getting all the roles for the default organization ...
 	+--------------------------+----------------------------------------------------------------------------------+
 	| Name                     | Description                                                                      |
@@ -47,7 +47,7 @@ An entitlement describes the right to perform an action on the UForge platform. 
 
 To view all the entitlements provided by UForge, use the command::
 
-	uforge entitlement list -u $ADMIN -p $PASS
+	$ uforge entitlement list -u $ADMIN -p $PASS
 
 .. _list-roles:
 
@@ -56,6 +56,6 @@ Listing Roles for an Organization
 
 To view the available roles for an organization, run the command::
 
-	uforge role list --org usharesoft -u $ADMIN -p $PASS
+	$ uforge role list --org usharesoft -u $ADMIN -p $PASS
 
 If no organization is provided, then the default organization is used.

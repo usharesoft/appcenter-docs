@@ -9,9 +9,9 @@ You can modify a few elements on the sign-in and sign-up page.
 
 The following figure shows a sample Sign-in page, illustrating the elements that can be modified.
 
-.. image: /images/sign-in.jpg
+.. image:: /images/sign-in.jpg
 
-You can modify the logo that appears on the sign-in and sign-up page in section <c:client>::
+You can modify the logo that appears on the sign-in and sign-up page in section ``<c:client>``::
 
 	<c:signInLogoUrl>images/signInLogo.png</c:signInLogoUrl>
 
@@ -28,7 +28,7 @@ To hide the text and link “Need an account? Sign up”, in the custo.css:
 
 .. code-block:: shell
 
-		#main .loginPanel .panelContent .signUpAnchor {
+	#main .loginPanel .panelContent .signUpAnchor {
 	    display: none !important;
 	}
 
@@ -38,7 +38,7 @@ To hide the text and link “Need an account? Sign up”, in the custo.css:
 Modifying the Title of the UForge GUI
 -------------------------------------
 
-You can modify the title that appears in the browser when you open the portal in section <c:client>::
+You can modify the title that appears in the browser when you open the portal in section ``<c:client>``::
 
 	<c:title>UForgePortal</c:title>
 
@@ -48,7 +48,7 @@ You can modify the title that appears in the browser when you open the portal in
 Hiding Option to Modify Password
 --------------------------------
 
-You can choose to hide the option to modify the password on the My Account page. To do so set the option to “false” in section <c:client>::
+You can choose to hide the option to modify the password on the My Account page. To do so set the option to “false” in section ``<c:client>``::
 
 	<c:showChangePassword>false</c:showChangePassword>
 

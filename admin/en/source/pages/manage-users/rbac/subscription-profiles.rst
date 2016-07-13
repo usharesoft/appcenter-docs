@@ -61,15 +61,17 @@ If you specify any of the above when you create a subscription profile, then all
 
 	.. note:: Once you create a user with a specific subscription profile, even if you modify the subscription profile, the rights of the users already created will not be modified. For example, if profileA used to create UserA has quota set to unlimited. Once UserA is created, you modify the profileA to set quota to 3 generations. UserA will still have quota set to unlimited, but UserB created with the updated profileA will have quota set to 3 generations.
 
-	1. To create a subscription profile for an organization, run the command::
+	1. To create a subscription profile for an organization, run the command:
 
-		uforge subscription create --code <string> --name <string> --org usharesoft --active -u $ADMIN -p $PASS
+		.. code-block:: shell
+
+			$ uforge subscription create --code <string> --name <string> --org usharesoft --active -u $ADMIN -p $PASS
 
 		The code can be any alpha-numeric string, excluding spaces and special characters.
 
 	2. To enable a subscription profile for an organization, run the command::
 
-		uforge subscription enable --name <string> --org usharesoft -u $ADMIN -p $PASS
+		$ uforge subscription enable --name <string> --org usharesoft -u $ADMIN -p $PASS
 
 .. _subscription-administrator:
 
@@ -83,7 +85,7 @@ In order to create a user, the following are required:
 
 When creating subscription profiles, the UForge administrator can add subscription profile administrators. However, they can also be added after the fact, as follows::
 
-	uforge subscription admin add --admin kermit --name profileA --org usharesoft -u $ADMIN -p $PASS
+	$ uforge subscription admin add --admin kermit --name profileA --org usharesoft -u $ADMIN -p $PASS
 
 The argument admin is the login of the user you want to add as an administrator. This administrator will be able to create users with the subscription profile specified by the argument name.
 
@@ -110,6 +112,6 @@ If you no longer want a subscription profile to be used when creating new users,
 
 To disable a subscription profile::
 
-	uforge subscription disable --name profileA -u $ADMIN -p $PASS
+	$ uforge subscription disable --name profileA -u $ADMIN -p $PASS
 
 If no org is specified, the default organization is used.

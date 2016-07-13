@@ -29,12 +29,14 @@ When you carry out black box migration (by generating a machine image directly f
 	1. You are prompted to indicate if you want to change the overall disk size.
 	2. Choose the machine image format to generate. Further options are provided depending upon the format chosen.
 	3. UForge AppCenter generates the machine image:
+
 		- Dependency checking is SKIPPED. This is done intentionally so that UForge does not alter the package list manifest detected during the scan process.
 		- Create the disk ready for installation (using the disk size and partitioning by the user if they have requested a change)
 		- Install the native os packages from the scan report
 		- Apply the overlay file from the scan report
 		- Apply the low configuration information detected in the scan report (passwords, timezone, keyboard, etc)
 		- Apply any specific libraries or configuration depending on the machine image format chosen (e.g for AWS UForge adds the required AWS libraries)
+		
 	4. Register the new machine image to the target environment.
 	5. You can provision one or more instances from the machine image. Each instance being a near identical workload from the original.
 

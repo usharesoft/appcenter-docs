@@ -29,7 +29,7 @@ To view these cron jobs, log in to the oar scheduler node as root and view the c
 
 .. code-block:: shell
 
-	# crontab -l
+	$ crontab -l
 	*/5 * * * * /opt/UShareSoft/uforge/cron/reset_oar_resources.sh
 	10 2 * * * /opt/UShareSoft/uforge/cron/cleanup_tickets.sh
 	10 3 * * * /opt/UShareSoft/uforge/cron/cleanup_scans.sh
@@ -41,7 +41,7 @@ To update the crontab, log in to the oar scheduler node as root and edit the cro
 
 .. code-block:: shell
 
-	# crontab -e
+	$ crontab -e
 
 Cron Job Guidelines
 ~~~~~~~~~~~~~~~~~~~

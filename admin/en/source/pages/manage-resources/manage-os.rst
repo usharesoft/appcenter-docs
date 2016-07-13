@@ -9,10 +9,11 @@ All the open source operating system versions are delivered as part of the UForg
 
 To get the complete list of the currently supported operating systems on the UForge platform use the command ``uforge os list``.
 
+Login to one of the UForge instances:
+
 .. code-block :: shell
 
-	Login to one of the UForge instances
-	# uforge os list -u $ADMIN -p $PASS
+	$ uforge os list -u $ADMIN -p $PASS
 	Getting operating systems ...
 	Success: Found the following operating systems
 	+----------------+-----------------+--------------+--------+---------+---------+------------------+
@@ -41,10 +42,11 @@ Viewing the Enabled OSes
 
 To get a list of the operating systems that are currently enabled on your UForge platform use the command ``uforge org os list``.
 
-.. code-block :: shell
+Login to one of the UForge instances:
 
-	Login to one of the UForge instances
-	# uforge org os list -u $ADMIN -p $PASS
+.. code-block :: shell
+	
+	$ uforge org os list -u $ADMIN -p $PASS
 	Getting operating systems ...
 	Success: Found the following operating systems
 	+----------------+-----------------+--------------+--------+---------+---------+------------------+
@@ -84,7 +86,7 @@ In order to add the OS to a specific distribution, you will need to specify ``--
 
 	.. code-block :: shell
 
-		# uforge org os add --name CentOS --version 6.5 --arch i386 -u $ADMIN -p $PASS
+		$ uforge org os add --name CentOS --version 6.5 --arch i386 -u $ADMIN -p $PASS
 		Getting default organization ...
 		Success: Add operating system OK
 
@@ -92,7 +94,7 @@ In order to add the OS to a specific distribution, you will need to specify ``--
 
 	.. code-block :: shell
 
-		# uforge org repo create --name CentOSplus --repoUrl http://vault.centos.org/6.5/centosplus/i386 --type RPM -u $ADMIN -p $PASS
+		$ uforge org repo create --name CentOSplus --repoUrl http://vault.centos.org/6.5/centosplus/i386 --type RPM -u $ADMIN -p $PASS
 		Getting default organization ...
 		Success: Created repository with url [http://vault.centos.org/6.5/centosplus/i386] to default organization
 		+------+----------------+------------+---------------------------------------------+-------+
@@ -104,7 +106,7 @@ In order to add the OS to a specific distribution, you will need to specify ``--
 
 	.. code-block :: shell
 
-		# uforge org repo os attach --name CentOS --version 6.5 --arch i386 --repoId 355 -u $ADMIN -p $PASS
+		$ uforge org repo os attach --name CentOS --version 6.5 --arch i386 --repoId 355 -u $ADMIN -p $PASS
 		Getting default organization ...
 		Success: Attach distribution to repository [355]
 
@@ -116,9 +118,9 @@ Removing OSes and Distributions
 
 You cannot remove an OS from an organization once added. You can only disable it, in which case it can no longer be used. To disable a distribution, for example CentOS for all users of an organization you can specify only the OS name, in which case all the versions will be removed::
 
-	# uforge org os disable --name CentOS -u $ADMIN -p $PASS
+	$ uforge org os disable --name CentOS -u $ADMIN -p $PASS
 
 If you only want to remove a specific version of a distribution (for example CentOS 5), run::
 
-	# uforge org os disable --name CentOS --version 5 -u $ADMIN -p $PASS
+	$ uforge org os disable --name CentOS --version 5 -u $ADMIN -p $PASS
 

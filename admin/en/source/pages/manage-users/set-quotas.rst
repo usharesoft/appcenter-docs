@@ -26,7 +26,7 @@ Viewing the Quotas for a User
 
 You can see the quotas set for a given user as follows::
 
-	uforge user quota list --account <user> -u $ADMIN -p $PASS 
+	$ uforge user quota list --account <user> -u $ADMIN -p $PASS 
 
 In the example above, the argument ``--user`` is the account of the administrator. The argument ``--account`` is the  user name of the account you want to view the quotas for.
 
@@ -54,7 +54,7 @@ You can set a limit to the number of appliances a given user can have. This limi
 
 For example to set the quota of appliances to 10 per month::
 
-	uforge user quota modify --user $ADMIN --password $PASS --account kermit --type appliance --limit 10 --frequency monthly
+	$ uforge user quota modify --user $ADMIN --password $PASS --account kermit --type appliance --limit 10 --frequency monthly
 
 In the example above, the argument ``--user`` is the account of the administrator. The argument ``--account`` is the  user name of the account you want to view the quotas for.
 
@@ -70,7 +70,7 @@ You can set a limit to the number of images a given user can generate. This limi
 
 For example to set the quota of images a user can generate to 10 per month::
 
-	uforge user quota modify --user $ADMIN --password $PASS --account kermit --type generation --limit 10 --frequency monthly
+	$ uforge user quota modify --user $ADMIN --password $PASS --account kermit --type generation --limit 10 --frequency monthly
 
 .. _set-quota-scan:
 
@@ -84,7 +84,7 @@ You can set a limit to number of scans a given user can run. This quota includes
 
 For example to set the number of scans the user can run to 5 per month::
 
-	uforge user quota modify --user $ADMIN --password $PASS --account kermit --type scan --limit 5 --frequency monthly
+	$ uforge user quota modify --user $ADMIN --password $PASS --account kermit --type scan --limit 5 --frequency monthly
 
 .. _set-quota-overlay:
 
@@ -111,13 +111,13 @@ You can set a limit to the disk space a user can use. Disk space usage includes:
 
 For example to set the disk space quota a user can use to 10Gb per month::
 
-	uforge user quota modify --user $ADMIN --account user --type diskusage --limit 10737418240 --password $PASS
+	$ uforge user quota modify --user $ADMIN --account user --type diskusage --limit 10737418240 --password $PASS
 
 The results should be:
 
 .. code-block:: shell
 
-	uforge user quota list --user $ADMIN --account <username> --password $PASS
+	$ uforge user quota list --user $ADMIN --account <username> --password $PASS
 	Getting user [user] ...
 
 	+------------------+--------------+------------+------------+-------------------------------+
@@ -138,4 +138,4 @@ Resetting Quotas
 If you want to remove a quota set on a user, you can do this using the ``--unlimited`` flag.
 For example, to remove a quota limit you might have set on the number of scans for a user, run::
 
-	uforge user quota modify --user $ADMIN --account user --type scan --unlimited --password $PASS
+	$ uforge user quota modify --user $ADMIN --account user --type scan --unlimited --password $PASS

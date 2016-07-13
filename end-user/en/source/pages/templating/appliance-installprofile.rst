@@ -36,7 +36,7 @@ To add a user to an appliance:
 	3. Select ``Users and Groups``.
 	4. Click the plus symbol next to the ``Users`` table. The ``Create User`` page will be displayed.
 
-	.. image :: /images/install-profile-create-user.jpg
+		.. image :: /images/install-profile-create-user.jpg
 
 	5. Enter a user name.
 	6. If you want to manually enter the user ID, deselect ``set the user id automatically`` and enter the ID number.
@@ -53,7 +53,7 @@ To add a group to an appliance install profile:
 	3. Select ``Users and Groups``.
 	4. Click the plus symbol next to the ``Group`` table. The ``Create Group`` page will be displayed.
 
-	.. image:: /images/install-profile-create-group.jpg
+		.. image:: /images/install-profile-create-group.jpg
 
 	5. Enter a group name.
 	6. Check if you want this group to be a system group.

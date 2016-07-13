@@ -32,16 +32,16 @@ To change the email address:
 
 	1.  Log in to the node as root and edit the ``uforge.conf`` file::
 
-		vi /etc/UShareSoft/uforge/uforge.conf
+		$ vi /etc/UShareSoft/uforge/uforge.conf
 
 	2. Update the following variables:
 
-		* UFORGE_REGISTRATIONS_EMAIL: to receive notifications on new user accounts being created
-		* UFORGE_POSTMASTER_EMAIL: to receive all other email notifications (errors etc)
+		* ``UFORGE_REGISTRATIONS_EMAIL``: to receive notifications on new user accounts being created
+		* ``UFORGE_POSTMASTER_EMAIL``: to receive all other email notifications (errors etc)
 
 	3.  Run the script to force UForge to use the new ``uforge.conf`` file, this will restart certain UForge services (if multi-node the following order should be respected: compute notes, db nodes, web service nodes)::
 
-		/opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh
+		$ /opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh
 
 
 Customizing the Email Templates
@@ -100,8 +100,8 @@ Therefore to change an email template:
 
 	.. code-block:: shell
 
-		# cd /opt/UShareSoft/uforge/tmpl
-		# vi AppStoreNotificationNewComment.tmpl
+		$ cd /opt/UShareSoft/uforge/tmpl
+		$ vi AppStoreNotificationNewComment.tmpl
 
 	2. Change the contents of the template and rename using the extension for the new language, if appropriate.
 
@@ -111,9 +111,9 @@ Therefore to change an email template:
 
 	.. code-block:: shell
 
-		# mkdir -p /var/opt/UShareSoft/uforge/tmpl
-		# cp /opt/UShareSoft/uforge/tmpl/AppStoreNotificationNewComment.tmpl /var/opt/UShareSoft/uforge/tmpl
+		$ mkdir -p /var/opt/UShareSoft/uforge/tmpl
+		$ cp /opt/UShareSoft/uforge/tmpl/AppStoreNotificationNewComment.tmpl /var/opt/UShareSoft/uforge/tmpl
 
 	5. Instantiate the following changes by running the following command::
 
-		/opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh
+		$ /opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh

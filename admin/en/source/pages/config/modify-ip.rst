@@ -1,46 +1,53 @@
 .. Copyright 2016 FUJITSU LIMITED
 
-.. _modify-ip:
+.. _modify-external-endpoints:
 
-Modifying the UForge IP Address
--------------------------------
+Modifying the UForge Platform External URL Endpoints
+----------------------------------------------------
 
-To modify the UForge IP address or hostname, do the following:
+There are three external URL endpoints for the UForge platform, namely:
 
-	1. If UForge is installed on a single node, launch a terminal on the UForge machine. 
+	* URL endpoint to access the UForge Portal (user interface)
+	* URL endpoint to access directly the REST web service for command-line tools and REST API calls
+	* URL endpoint for cloud platforms to download machine images from UForge.  This URL endpoint is not used by end users, but only by cloud platforms that request to download machine images, rather than UForge uploading those machine images
 
-	2. Use ``system-config-network`` to modify hostname <MY-NEW-HOSTNAME>. It should also allow you to change the host name (that is the fully qualified domain name like ufiab.mycompany.com). This will apply the changes automatically to the directories in /etc/sysconfig  
+.. image:: /images/external-endpoints.png
 
-	3. Ensure that the changes are applied in the following locations, otherwise make the appropriate changes:
+These URL endpoints are automatically created based on the external hostname provided during the initial configuration of the UForge platform (see :ref:`configure-uforge`).  These URL endpoints can be changed by updating certain variables in the ``/etc/UShareSoft/uforge/uforge.conf`` file.
 
-		* ``/etc/sysconfig`` subdirectory files like ifcfg-XXX where XXX is your main interface name (like eth0)
-		* ``/etc/sysconfig/network`` for HOSTNAME and GATEWAY
-		* ``/etc/resolv.conf`` for your DNS configuration
-		* ``/etc/hosts`` for all host definitions
-		* ``/etc/fstab`` for remote NFS mounts
-		* ``/etc/UShareSoft/uforge/uforge.conf`` for the following entries:
+The UForge Portal URL endpoint is constructed using the following variables:
 
-			- UFORGE_PROXY_INFOS
-			- UFORGE_EXTERNAL_HOSTNAME
-			- UFORGE_IAAS_DOWNLOAD_URL
-			- UFORGE_NOREPLY_EMAIL
-			- UFORGE_URL
+	https://<UFORGE_PROXY_INFOS>/<UFORGE_UI_ROOT_CONTEXT>
 
-		* ``/etc/udev/rules.d/70-persistent-net.rules``
+The URL endpoint for direct REST web service access is constructed using the following variables:
 
-	4. Modify the header, footer, IP information in ``/var/opt/UShareSoft/uforge-client/gwt/uforge/templates/config.xml`` (except for <c:uForgeUrl>) with the EXTERNAL_URL variable. For more information on modifying the portal information, refer to :ref:`rebrand-considerations`.
+	https://<UFORGE_PROXY_INFOS>/<UFORGE_API_ROOT_CONTEXT>
 
-	5. Launch the following two scripts (if multi-node the following order should be respected: compute notes, db nodes, web service nodes)::
+The download URL endpoint is constructed using the ``UFORGE_IAAS_DOWNLOAD_URL`` variable.
+
+If you wish to use ``http`` rather than ``https`` (not recommended) then you require to set the following variable in the uforge.conf file::
+
+	UFORGE_PROXY_USE_SSL = false
+
+For example, if you set the following variables in ``uforge.conf``, will result in the following external URLs::
+
+	UFORGE_PROXY_INFOS = hq.example.com:5666
+	UFORGE_UI_ROOT_CONTEXT = /ui
+	UFORGE_API_ROOT_CONTEXT = /apis
+	UFORGE_IAAS_DOWNLOAD_URL = http://hq.example.com:5777/downloads
+	UFORGE_PROXY_USE_SSL = true
+
+Resulting external URLs::
+
+	* UForge Portal: https://hq.example.com:5666/ui
+	* REST URL endpoint: https://hq.example.com:5666/apis
+	* Machine Image downloads (for external cloud platforms): http://hq.example.com:5777/downloads
+
+To update the external URLs:
+
+	1. Update the ``/etc/UShareSoft/uforge/uforge.conf`` file for each node with the updated variables you wish.
+
+	2. Launch the following two scripts (if multi-node the following order should be respected: compute notes, db nodes, web service nodes)::
 
 		$ /opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh
 		$ /opt/UShareSoft/uforge-client/bin/uforge_ui_update.sh
-
-If you have a load balancer where rules have been entered for accessing the UForge web service make sure the URIs match the following parameter in uforge.conf::
-
-	UFORGE_GF_WEBSVC_ROOT_CONTEXT=ufws
-
-For the UForge CLI you should have::
-
-	UFORGE_GF_ADMIN_WEBSVC_ROOT_CONTEXT=ufadmws
-
-.. note:: Some virtualization solutions (like VirtualBox) also add this info into ifcfg-XXX files as HWADDR=MAC

@@ -14,14 +14,23 @@ The MariaDB database has the following basic configuration information that is s
 	* Administration credential information (user and password)
 	* Address of the uforge database host.
 
-When installing UForge via the deployment wizard some of the configuration attributes can be decided by the administrator. The deployment wizard also creates the ``uforge.conf`` file with all the configuration information. To view the ``uforge.conf`` file:
+When installing UForge via the deployment wizard some of the configuration attributes can be decided by the administrator. The deployment wizard also creates the ``uforge.conf`` file with all the configuration information.
+
+If you decide to change database configuration information including the password, then you must also update the ``auth.conf`` and ``uforge.conf`` files with the correct information on all the nodes of the platform.
+
+To view the ``uforge.conf`` or ``auth.conf`` files:
 
 	1. Log in to the web service node as root::
 	
-		ssh root@<ip address of the node>
+		$ ssh root@<ip address of the node>
 
-	2. Open the uforge.conf file::
+	2. Open the uforge.conf file or auth.conf files::
 
-		vi /etc/UShareSoft/uforge/uforge.conf
+		$ vi /etc/UShareSoft/uforge/uforge.conf
+		$ vi /etc/UShareSoft/auth.conf
+
+	3. After making appropriate changes in these files, you should run the following command on all the nodes (if multi-node the following order should be respected: compute notes, db nodes, web service nodes)::
+
+		$ /opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh
 
 For more information on MariaDB, see `http://www.mariadb.com <http://www.mariadb.com>`_

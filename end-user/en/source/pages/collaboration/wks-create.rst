@@ -10,13 +10,13 @@ To create a workspace:
 	1. Go to the ``Collaboration`` tab.
 	2. Click on the plus (+) sign on the top right hand, next to the workspace drop-down menu (in the example below ``MySpace``).
 
-	.. image:: /images/workspace-create-button.jpg
+		.. image:: /images/workspace-create-button.jpg
 
 	3. Enter the workspace name.
 	4. Select the organization from the drop-down menu.
 	5. Click ``create workspace``.
 
-	.. image:: /images/workspace-create2.jpg
+		.. image:: /images/workspace-create2.jpg
 
 You can now invite users, share appliance templates, and post comments in the activity stream.
 

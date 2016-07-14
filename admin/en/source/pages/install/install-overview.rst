@@ -7,7 +7,7 @@ UForge Installation Overview
 
 To install a fully functioning UForge platform, we provide the following 2 ISOs:
 
-	* ``UForge Setup ISO`` – this includes all the necessary elements to have a functioning "UForge in a Box"
+	* UForge Setup ISO – this includes all the necessary elements to have a functioning "UForge in a Box"
 	
 	* ISO which contains the skeleton of the distribution installers in case you want to create ISO images with UForge. This only needs to be installed if you want to create ISO images.
 
@@ -22,7 +22,7 @@ Before you start deploying UForge, ensure that you have all the following:
 	* Your activation credentials (ID and activation key) provided by your vendor
 	* Architecture of the deployment (number of nodes and networking topology. See :ref:`network-topology`)
 	* The necessary system requirements (see :ref:`storage-sizing`)
-	* Your SSL certificates, key and chaining certificates, and all files corresponding to the following entries in /etc/httpd/conf.d/ssl.conf:
+	* Your SSL certificates, key and chaining certificates, and all files corresponding to the following entries in ``/etc/httpd/conf.d/ssl.conf``:
 
 		- SSLCertificateFile
 		- SSLCertificateKeyFile
@@ -45,8 +45,8 @@ UForge is delivered in one of three forms:
 	2. VHD VM (Xen hypervisor).   This contains all the UForge AppCenter binaries to allow you to provision UForge in Citrix CloudStack (XenServer-based deployments)
 	3. ISO image.  This contains all the UForge AppCenter binaries to allow you to carry out a bare-metal installation or to install into a virtualized or cloud VM instance.
 
-These images can be found in the ``UForge Setup ISO``.  Choose the image type most appropriate to the hardware, virtualized or cloud environment you will be deploying UForge to.
+These images can be found in the UForge Setup ISO.  Choose the image type most appropriate to the hardware, virtualized or cloud environment you will be deploying UForge to.
 
-.. note:: The ``UForge Setup ISO`` allows you to set up partitioning on the deployment nodes.  This gives greater flexibility in sizing correctly the disks on each node depending on their role (for example, an application server node from a database node).
+.. note:: The UForge Setup ISO allows you to set up partitioning on the deployment nodes.  This gives greater flexibility in sizing correctly the disks on each node depending on their role (for example, an application server node from a database node).
 
 Step 3: Additional configuration steps, as described in :ref:`further-config-overview`.

@@ -42,7 +42,7 @@ You would use the following command:
 
 .. code-block:: shell
 
-	user targetformat disable --targetFormats "OpenStack VHD" --account kermit --url <platform URL endpoint> -u <user> -p <password>
+	$ user targetformat disable --targetFormats "OpenStack VHD" --account kermit --url https://uforge.usharesoft.com:443 -u $ADMIN -p $PASS
 
 
 Disabling User Access to Formats
@@ -52,5 +52,5 @@ To disable access to one or more formats for a specific user  (in this example â
 
 .. code-block:: shell
 
-	user targetformat disable --targetformats "OVF or OVA" QCOW2 VirtualBox --account kermit --url <platform URL endpoint> -u <user> -p <password>
+	$ user targetformat disable --targetformats "OVF or OVA" QCOW2 VirtualBox --account kermit --url https://uforge.usharesoft.com:443 -u $ADMIN -p $PASS
 	

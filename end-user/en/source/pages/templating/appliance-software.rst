@@ -21,12 +21,12 @@ The following describes how to add MySQL and Apache to an appliance.
 	1. Select the appliance to modify and go to the ``Stack`` page.
 	2. Click on the ``Projects`` in the toolbox.  This displays the Project Catalog. The bottom table lists which projects have already been added to the appliance. 
 
-	.. image:: /images/project-catalog.jpg
+		.. image:: /images/project-catalog.jpg
 
 	3. Select the projects, for example Apache and MySQL and click the down arrow button. You can scroll through the available projects or enter a search string to filter the list.
 	4. Click Save. These projects should now be displayed in the second table.   
 
-	.. image:: /images/projects-added.jpg
+		.. image:: /images/projects-added.jpg
 
 .. _appliance-mysoftware:
 
@@ -66,7 +66,7 @@ To add custom software components to an appliance:
 	5. To upload the files, go to the ``Files`` page. Click ``upload`` to select the files you want to add and click ``open``. 
 	6. Click ``save``.
 
-	.. image:: /images/adding-mysoftware2.jpg
+		.. image:: /images/adding-mysoftware2.jpg
 
 
 	7. Optionally, you can modify the ``default install path`` that will be used. If you have modified the name of your appliance, it may not be reflected in the install path.
@@ -75,22 +75,22 @@ To add custom software components to an appliance:
 		- Un-select ``Install this native package as part of the generation``. 
 		- Click the check mark to save your changes. 
 	
-	In this case, the ``.deb`` or ``.rpm`` archive file will just be in the directory but will not be installed at generation time.
+		In this case, the ``.deb`` or ``.rpm`` archive file will just be in the directory but will not be installed at generation time.
 
-	.. image:: /images/install-mysoftware-gen.jpg
+		.. image:: /images/install-mysoftware-gen.jpg
 
 	9. Optionally, you can select to unzip archives as part of the generation. To do so: 
 	    - Click on the pencil on the right hand side of your uploaded file. 
 	    - You can then edit the install path and select if it should be extracted. 
 	    - Click the check mark to save your changes.
 
-	.. image:: /images/extract-mysoftware.jpg
+		.. image:: /images/extract-mysoftware.jpg
 
 	10. From the ``Licenses`` page, upload any licenses you want to add to this software. Click ``upload``, select your license and click ``save``.
 	11. Add the uploaded software component to the appliance.  Click on the ``Appliance Library`` to view your Appliance Library.  Double-click on the appliance template you want to add the software to.
 	12. Go to the ``Stack`` page and click on the ``My Software`` button in the toolbox.  
 
-	.. image:: /images/mysoftware.jpg
+		.. image:: /images/mysoftware.jpg
 
 	13. Select the software components you want to add and click the down arrow button. 
 	14. Click ``save`` to add this software component to your appliance template.

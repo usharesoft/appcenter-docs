@@ -10,8 +10,8 @@ This section assumes that you have completed the installation of your UForge pla
 .. toctree::
    :titlesonly:
 
-   add-compute-node
    modify-ip
+   add-compute-node
    configure-ssl-cert
    config-smtp
    config-webservice

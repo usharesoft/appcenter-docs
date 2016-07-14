@@ -29,6 +29,9 @@ We recommend using a firewall with the NAT technology to map a public IP address
 
 For a private network, you can use a NAT translation, but it is better to use the firewall in gateway mode and filter the traffic. This way you can open ports on the different services.
 
+By default UForge provides a proxy service, exposing the user interface (UI), REST web service tier and a download URL allowing external cloud platforms download generated machine images.  This is configured automatically using the information you provide as part of the configuration phase (see :ref:`configure-uforge`).  These values can alsobe configured manually, for more information see :ref:`modify-external-endpoints`.
+
+.. image:: /images/external-endpoints.png
 
 .. _minimum-sw-topology:
 

@@ -43,7 +43,7 @@ Run a simple http request (using basic authentication) using curl
 	< Date: Thu, 03 May 2012 08:33:11 GMT
 	...<rest of the body removed>
 
-**Step 2:** Check to see if the Database is running
+**Step 2:** Check to see if the database is running
 
 The database service should be running and available on the port ``3306`` and that the database table is present. The Percona Server instance should have ``usharedb`` and ``oar``
 
@@ -52,11 +52,11 @@ The database service should be running and available on the port ``3306`` and th
 	$ service mysql status
 	MySQL running (22661)                                      [  OK  ]
 
-Get the values form the uforge.conf and add them to some environment variables (you could also just manually view the uforge.conf)
+Get the values from the auth.conf and add them to some environment variables (you could also just manually view the auth.conf)
 
 .. code-block:: shell
 
-	$ eval `grep '^UFORGE_DB' /etc/UShareSoft/uforge/uforge.conf`
+	$ eval `grep '^UFORGE_DB' /etc/UShareSoft/auth.conf`
 	$ echo "show databases" | mysql -f -N -u $UFORGE_DB_ADMIN_LOGIN -p$UFORGE_DB_ADMIN_PASSWORD -h db
 	information_schema
 	mysql

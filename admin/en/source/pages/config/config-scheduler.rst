@@ -78,6 +78,19 @@ To change a current resource (resource_id: 92) to a different job type (for exam
 
 	$ oarnodesetting -h node1 -r 92 -p nature=1;
 
+Removing a Resource
+~~~~~~~~~~~~~~~~~~~
+
+To add or update a resource, first log in to the oar scheduler node as ``root``.
+
+To remove a resource from the compute node, run the following commands:
+
+.. code-block:: shell
+
+	$ oarnodesetting -s Dead -r <resource_id>
+	$ oarremoveresource <resource_id>
+
+
 .. _delete-job:
 
 Deleting a Job

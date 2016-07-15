@@ -5,26 +5,26 @@
 IDM Service Backup and Restore
 ------------------------------
 
-UForge uses Syncope for identity management. Note that the following example uses /tmp for the backup; however, we recommend you use a mounted disk, SAN or NAS to store your backup.
+UForge uses Syncope for identity management. Note that the following example uses ``/tmp`` for the backup; however, we recommend you use a mounted disk, SAN or NAS to store your backup.
 
 To Backup Syncope
 ~~~~~~~~~~~~~~~~~
 
 1. Set the environment variables::
 
-	source /etc/UShareSoft/uforge/uforge.conf 
+	$ source /etc/UShareSoft/auth.conf 
 
 2. Backup the syncope database as follows: 
 
 	.. code-block:: shell
 
-		curl --noproxy idm-server -o /tmp/content.xml -u $UFORGE_IDM_ADMIN:$UFORGE_IDM_ADMIN_PWD -H "Content-Type: application/xml" -X GET http://idm-server:$UFORGE_IDM_PORT/$UFORGE_IDM_BASEURI/configurations/stream -D /tmp/headerscat
+		$ curl --noproxy idm-server -o /tmp/content.xml -u $UFORGE_IDM_ADMIN:$UFORGE_IDM_ADMIN_PWD -H "Content-Type: application/xml" -X GET http://idm-server:$UFORGE_IDM_PORT/$UFORGE_IDM_BASEURI/configurations/stream -D /tmp/headerscat
 
 3. You can verify the backup was created as follows: 
 
 	.. code-block:: shell
 
-		ls -lrt /tmp/content.xml 
+		$ ls -lrt /tmp/content.xml 
 		-rw-r--r-- 1 root root 89875 Dec  9 16:09 /tmp/content.xml 
 
 To Restore the IDM Data
@@ -35,30 +35,30 @@ To Restore the IDM Data
 
 	.. code-block:: shell
 
-		export MYSQLCMD="mysql -s -u$UFORGE_DB_LOGIN -p$UFORGE_DB_PASSWORD"
-		echo "DROP DATABASE IF EXISTS syncope;" | $MYSQLCMD
+		$ export MYSQLCMD="mysql -s -u$UFORGE_DB_ADMIN_LOGIN -p$UFORGE_DB_ADMIN_PASSWORD"
+		$ echo "DROP DATABASE IF EXISTS syncope;" | $MYSQLCMD
 
 2. Recreate an empty syncope database::
 
-	echo "CREATE DATABASE syncope CHARACTER SET utf8 COLLATE utf8_bin;" | $MYSQLCMD
+	$ echo "CREATE DATABASE syncope CHARACTER SET utf8 COLLATE utf8_bin;" | $MYSQLCMD
 
 3. Stop the webservice:
 
 	.. code-block:: shell
 
-		service tomcat stop
+		$ service tomcat stop
 		Running stop tomcat domain syncope:                     [  OK  ]
 		Running stop tomcat domain uforge:                      [  OK  ]
 
 4. Copy the backup to the restore path::
 
-	scp /tmp/content.xml root@idm-server:/opt/GlassFish/glassfish/domains/syncope/applications/syncope/WEB-INF/classes/content.xml
+	$ scp /tmp/content.xml root@idm-server:/opt/Tomcat/webapps/syncope/WEB-INF/classes/content.xml
 
 5. Start the Webservices (IDM & UForge):
 
 	.. code-block:: shell
 
-		service tomcat start
+		$ service tomcat start
 		Running start tomcat domain syncope:                    [  OK  ]
 		Running start tomcat domain uforge:                     [  OK  ]
 
@@ -66,14 +66,14 @@ To Restore the IDM Data
 
 	.. code-block:: shell
 
-		source /etc/UShareSoft/uforge/uforge.conf
-		curl --noproxy idm-server -u $UFORGE_IDM_ADMIN:$UFORGE_IDM_ADMIN_PWD -H "Content-Type: application/xml" -X POST http://idm-server:$UFORGE_IDM_PORT/$UFORGE_IDM_BASEURI/tasks/{100}/execute -D /tmp/headers
+		$ source /etc/UShareSoft/uforge/auth.conf
+		$ curl --noproxy idm-server -u $UFORGE_IDM_ADMIN:$UFORGE_IDM_ADMIN_PWD -H "Content-Type: application/xml" -X POST http://idm-server:$UFORGE_IDM_PORT/$UFORGE_IDM_BASEURI/tasks/{100}/execute -D /tmp/headers
 
 7. When the reconciliation task has completed the service should be restored and functional. You can check the reconciliation task has completed successfully:
 
 	.. code-block:: shell
 
-		curl --noproxy idm-server -u $UFORGE_IDM_ADMIN:$UFORGE_IDM_ADMIN_PWD -H "Content-Type: application/xml" -X GET http://idm-server:$UFORGE_IDM_PORT/$UFORGE_IDM_BASEURI/tasks/sync/100 | grep "<latestExecStatus>SUCCESS</latestExecStatus>"
+		$ curl --noproxy idm-server -u $UFORGE_IDM_ADMIN:$UFORGE_IDM_ADMIN_PWD -H "Content-Type: application/xml" -X GET http://idm-server:$UFORGE_IDM_PORT/$UFORGE_IDM_BASEURI/tasks/sync/100 | grep "<latestExecStatus>SUCCESS</latestExecStatus>"
 		  % Total    % Received % Xferd  Average Speed   Time Time     Time Current
 		                                 Dload  Upload   Total Spent    Left  Speed
 		100  5312  100  5312    0 <latestExecStatus>SUCCESS</latestExecStatus> 0
@@ -83,10 +83,10 @@ To Restore the IDM Data
 
 	.. code-block:: shell
 
-		curl --noproxy idm-server -u $UFORGE_IDM_ADMIN:$UFORGE_IDM_ADMIN_PWD -H "Content-Type: application/xml" -X POST http://idm-server:$UFORGE_IDM_PORT/$UFORGE_IDM_BASEURI/tasks/{250}/execute -D /tmp/headers
+		$ curl --noproxy idm-server -u $UFORGE_IDM_ADMIN:$UFORGE_IDM_ADMIN_PWD -H "Content-Type: application/xml" -X POST http://idm-server:$UFORGE_IDM_PORT/$UFORGE_IDM_BASEURI/tasks/{250}/execute -D /tmp/headers
 
 	And then:
 
 	.. code-block:: shell
 
-		curl --noproxy idm-server -u $UFORGE_IDM_ADMIN:$UFORGE_IDM_ADMIN_PWD -H "Content-Type: application/xml" -X GET http://idm-server:$UFORGE_IDM_PORT/$UFORGE_IDM_BASEURI/tasks/sync/250 | grep "<latestExecStatus>SUCCESS</latestExecStatus>"
+		$ curl --noproxy idm-server -u $UFORGE_IDM_ADMIN:$UFORGE_IDM_ADMIN_PWD -H "Content-Type: application/xml" -X GET http://idm-server:$UFORGE_IDM_PORT/$UFORGE_IDM_BASEURI/tasks/sync/250 | grep "<latestExecStatus>SUCCESS</latestExecStatus>"

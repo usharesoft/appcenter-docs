@@ -33,7 +33,7 @@ To carry out a scan, go to the ``Migration`` tab:
 	3. Select ``Linux`` from the drop-down menu.
 	4. If you want to exclude certain directories or files from the scan then click ``add`` and enter the directory path or full pathname of the file.
 
-	.. image:: /images/migration-create-scan2.jpg
+		.. image:: /images/migration-create-scan2.jpg
 
 	5. Click ``Next``. Follow the instructions on the UForge AppCenter GUI.
 	6. Download binary locally by clicking ``Download``.
@@ -44,6 +44,7 @@ To carry out a scan, go to the ``Migration`` tab:
 		By default the scan data will be saved in ``/tmp``. You can modify the directory where the data will be saved using the ``-t`` option in order to ensure that there is enough space to save the scan data.
 
 	10. A report is sent to UForge AppCenter which can be used for migration. To view the progress, go back to the ``Migration`` tab and click ``ok``.
+
 
 .. note:: The duration of the scan depends on: 
 
@@ -68,11 +69,11 @@ To carry out a scan, go to the ``Migration`` tab:
 		- If you are using exe the pop up will indicate the partition being scanned and time left
 		- If you choose to download the zip then you will have to launch the command as indicated.
 
-	.. image:: /images/migration-scan-windows.jpg
+		.. image:: /images/migration-scan-windows.jpg
 
 	5. If you want to exclude certain directories or files from the scan then click ``add`` and enter the directory path or full pathname of the file.
 
-	.. image:: /images/migration-windows-download.jpg
+		.. image:: /images/migration-windows-download.jpg
 
 	6. Optionally you can select ``Use local storage``. This means that the scan will be not be done in streaming but in 2 phases. First the data will be stored on a temporary storage drive during the scan process. This temporary storage can be a local directory or a virtual space on the network. It must be at least half the size of the machine you want to scan.
 

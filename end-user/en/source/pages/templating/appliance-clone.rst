@@ -14,7 +14,7 @@ You can clone an appliance template as follows:
 	1. Select the appliance you want to clone.
 	2. Click ``clone`` in the top right hand toolbar.
 
-	.. image :: /images/clone-button.jpg
+		.. image :: /images/clone-button.jpg
 
 	3. Enter the appliance ``name`` and ``version`` that you wish to have for the clone. 
 	4. Click ``clone``.

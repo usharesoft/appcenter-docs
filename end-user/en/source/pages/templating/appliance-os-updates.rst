@@ -25,13 +25,13 @@ To update the OS packages:
 	2. Go to the ``Updates`` page.
 	3. You can see from the graphic when updates were made and how many are available.
 
-	.. image:: /images/os-profile-updates.jpg
+		.. image:: /images/os-profile-updates.jpg
 
 	4. You can select current updates (if any) or select to return to a previous version of the OS by moving the cursor on the graph.
 
 	5. Click ``simulate`` to see the changes that will be applied. The changes will be listed in the bottom of the screen. Scroll to view the results.
 
-	.. image:: /images/os-profile-updates.jpg
+		.. image:: /images/os-profile-updates.jpg
 
 	6. If you want to apply the changes listed, then click ``update``.
 
@@ -65,16 +65,11 @@ To make a specific package "sticky":
 	2. Go to the ``Stack`` page.
 	3. From the ``OS profile``, click on ``sticky`` in the right hand side of the package info. The ``sticky`` button will only be visible when you scroll over this part the page. In the following image, the first package has ``sticky`` in blue because it has been applied. The second one in light blue has not yet been applied.
 
-	.. image:: /images/os-profile-sticky.jpg
+		.. image:: /images/os-profile-sticky.jpg
 
 	4. A pop-up window will list all of the versions of the package available, allowing you to select the version you want.
 
-	.. image:: /images/os-profile-sticky-pkg-popup.jpg
+		.. image:: /images/os-profile-sticky-pkg-popup.jpg
 
 	5. Choose the version of the package you would like, then click ``save``.
-
-
-
-
-
 

@@ -59,7 +59,7 @@ Normally the first step is to get the user information of the account being used
 	import httplib2
 	import base64
 
-	#UForge API instanciation (optional: disable self signed certificate check)
+	# UForge API instantiation (optional: disable self signed certificate check)
 	client = httplib2.Http(disable_ssl_certificate_validation=True)
 
 	login='username'

@@ -32,16 +32,22 @@ To change the email address:
 
 	1.  Log in to the node as root and edit the ``uforge.conf`` file::
 
-		vi /etc/UShareSoft/uforge/uforge.conf
+		$ vi /etc/UShareSoft/uforge/uforge.conf
 
-	2.  Run the script to force UForge to use the new ``uforge.conf`` file, this will restart certain UForge services::
+	2. Update the following variables:
 
-		/opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh
+		* ``UFORGE_REGISTRATIONS_EMAIL``: to receive notifications on new user accounts being created
+		* ``UFORGE_POSTMASTER_EMAIL``: to receive all other email notifications (errors etc)
+
+	3.  Run the script to force UForge to use the new ``uforge.conf`` file, this will restart certain UForge services (if multi-node the following order should be respected: compute notes, db nodes, web service nodes)::
+
+		$ /opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh
+
 
 Customizing the Email Templates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can modify or internationalize the information sent during an email notification. UForge provides a set of default templates for each email type sent by the system. The templates are stored in: /opt/UShareSoft/uforge/tmpl
+You can modify or internationalize the information sent during an email notification. UForge provides a set of default templates for each email type sent by the system. The templates are stored in: ``/opt/UShareSoft/uforge/tmpl``
 
 .. warning:: When UForge is upgraded all the templates in the default directory will be overwritten.  To ensure that any custom templates are restored during an update, a copy must be made of the custom template. 
 
@@ -94,8 +100,8 @@ Therefore to change an email template:
 
 	.. code-block:: shell
 
-		# cd /opt/UShareSoft/uforge/tmpl
-		# vi AppStoreNotificationNewComment.tmpl
+		$ cd /opt/UShareSoft/uforge/tmpl
+		$ vi AppStoreNotificationNewComment.tmpl
 
 	2. Change the contents of the template and rename using the extension for the new language, if appropriate.
 
@@ -105,9 +111,9 @@ Therefore to change an email template:
 
 	.. code-block:: shell
 
-		# mkdir -p /var/opt/UShareSoft/uforge/tmpl
-		# cp /opt/UShareSoft/uforge/tmpl/AppStoreNotificationNewComment.tmpl /var/opt/UShareSoft/uforge/tmpl
+		$ mkdir -p /var/opt/UShareSoft/uforge/tmpl
+		$ cp /opt/UShareSoft/uforge/tmpl/AppStoreNotificationNewComment.tmpl /var/opt/UShareSoft/uforge/tmpl
 
 	5. Instantiate the following changes by running the following command::
 
-		/opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh
+		$ /opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh

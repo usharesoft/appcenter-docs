@@ -12,18 +12,18 @@ Stopping the web service
 
 .. code-block:: shell
 
-  # service tomcat stop
+  $ service tomcat stop
 
 Starting the web service
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: shell
 
-  # service tomcat start
+  $ service tomcat start
 
 Restarting the web service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: shell
 
-  # service tomcat restart
+  $ service tomcat restart

@@ -24,9 +24,9 @@ By copying this information, you are taking a snapshot of the entire database. T
 
 .. code-block:: shell
 
-	# service mysql stop
-	# rsync -a --delete-before /var/lib/mysql root@<BACKUP-DESTINATION>
-	# service mysql start
+	$ service mysql stop
+	$ rsync -a --delete-before /var/lib/mysql root@<BACKUP-DESTINATION>
+	$ service mysql start
 
 As the backup destination does not change, you are creating a replication of the entire database.  The rsync command only copies the incremental differences each time.  
 
@@ -34,12 +34,12 @@ The danger here is that if during that time there is damaged data, when rsync is
 
 .. code-block:: shell
 
-	# service mysql stop
-	# f=`date +%y%m%d`
-	# f=`echo "$f-mysql-backup.tgz"` #what to name backups
-	# tar -czf /tmp/$f /var/lib/mysql/*
-	# rsync -a /tmp/$f root@<BACKUP-DESTINATION>
-	# service mysql start
+	$ service mysql stop
+	$ f=`date +%y%m%d`
+	$ f=`echo "$f-mysql-backup.tgz"` #what to name backups
+	$ tar -czf /tmp/$f /var/lib/mysql/*
+	$ rsync -a /tmp/$f root@<BACKUP-DESTINATION>
+	$ service mysql start
 
 This only works if the database instance is stopped to ensure a consistent dump of the database. Otherwise you get a corrupt, inconsistent backup.
 
@@ -54,7 +54,7 @@ Restoring the database is a simple copy using rsync back to the database directo
 
 .. code-block:: shell
 
-	# service mysql stop
-	# rsync -a --delete-before root@<BACKUP-DESTINATION>/mysql/ /var/lib/mysql 
-	# service mysql start
+	$ service mysql stop
+	$ rsync -a --delete-before root@<BACKUP-DESTINATION>/mysql/ /var/lib/mysql 
+	$ service mysql start
 

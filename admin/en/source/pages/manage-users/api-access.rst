@@ -13,11 +13,11 @@ To grant API access to a user account you must create a role to which you will a
 
 	1. Create the new role::
 
-		uforge role create --name newrole --entitlement api_key_access -u $ADMIN -p $PASS
+		$ uforge role create --name newrole --entitlement api_key_access -u $ADMIN -p $PASS
 
 	2. Assign this new role to the user::
 
-		uforge user role add --name new role --account kermit -u $ADMIN -p $PASS
+		$ uforge user role add --name new role --account kermit -u $ADMIN -p $PASS
 
 	3. Optionally you can set the number of API keys:
 
@@ -29,7 +29,7 @@ To grant API access to a user account you must create a role to which you will a
 
 To disable API access simply remove the entitlement ``api_key_access``::
 
-	uforge user role remove --name newrole --account kermit -u $ADMIN -p $PASS
+	$ uforge user role remove --name newrole --account kermit -u $ADMIN -p $PASS
 
 .. _supervisor-rights:
 
@@ -50,9 +50,9 @@ It is probably safer to create a new "supervisor” role and add the supervisor 
 	2. Add this new supervisor role to the user who will be acting as “supervisor”; see :ref:`add-roles`.
 	3. If the user is not already an administrator, you will need to promote the user as an administrator of the organization for which supervisor rights are assigned::
 
-		uforge user admin promote --account kermit --org MyOrg -u $ADMIN -p $PASS 
+		$ uforge user admin promote --account kermit --org MyOrg -u $ADMIN -p $PASS 
 
 	If no organization is provided, then the default organization is used.
 	If you prefer to add supervisor access to an existing role (in this case “admin”) run the following command::
 
-		uforge role entitlement add --name admin --entitlements supervisor_access -u $ADMIN -p $PASS
+		$ uforge role entitlement add --name admin --entitlements supervisor_access -u $ADMIN -p $PASS

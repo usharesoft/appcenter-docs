@@ -9,9 +9,9 @@ You can modify several elements of the banner.
 
 The following figure shows a sample banner, illustrating the elements that can be modified.
 
-.. image: /images/banner.jpg
+.. image:: /images/banner.jpg
 
-You can modify the logo on the left in section <c:client>::
+You can modify the logo on the left in section ``<c:client>``::
 
 	<c:headerLogoUrl>images/headerLogo.png</c:headerLogoUrl>
 

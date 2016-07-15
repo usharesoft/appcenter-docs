@@ -13,7 +13,7 @@ To use the UForge AppCenter Java API, you need the jar files. You can either dow
 	<dependency>
 	      <groupId>com.usharesoft</groupId>
 	      <artifactId>uforge-client</artifactId>
-	      <version>3.5.1</version>
+	      <version>3.6</version>
 	</dependency>
 	
 	<repository>
@@ -284,9 +284,7 @@ You can upload your own software components to a private software library (``My 
 Adding a Boot Script
 --------------------
 
-Boot scripts can be added to the appliance template allowing initial configuration to be executed either during the first time the image is started or during every boot of the image. Other configuration mechanisms are supported in UForge including:
-
-* UForge Studio packages : a framework allowing to automate a deployment blueprint over one or several instances
+Boot scripts can be added to the appliance template allowing initial configuration to be executed either during the first time the image is started or during every boot of the image. 
 
 The following code shows how to upload a boot script to an appliance.
 
@@ -300,21 +298,3 @@ The following code shows how to upload a boot script to an appliance.
 	// only execute this boot script once during first boot
 	bootscript.setBootType(BootScript.FIRST_BOOT); 
 	bootscript = configDelegate.uploadBootScript(appliance, bootscript, bsf);
-
-Adding an UForge Studio Package
--------------------------------
-
-UForge Studio is a framework allowing users to automate the configuration of an appliance or several appliances to create a solution. The output is an OS native package containing this configuration blueprint that can be added to an appliance template. A license file can also be attached. The following code uploads an RPM-based package to an appliance template.
-
-.. code-block:: java
-
-	ApplianceConfigDelegate configurationDelegate = new ApplianceConfigDelegate(connector);
-	// Upload the UForge Studio package to the appliance
-	File oasf = new File("wordpress-3.2.1-1.i386.rpm");
-	OASPkg oasPkg = configurationDelegate.uploadOASPkg(appliance, oasf);
-
-	// Attach a license with the OAS package uploaded
-	File license = new File("GNU.txt");
-	configurationDelegate.uploadOASLicense(oasPkg, license);
-
-

@@ -35,9 +35,11 @@ To setup the shared storage:
 
 		touch test 
 
-	6. If it returns::
+	6. If it returns:
 
-		touch: cannot touch `test': Permission denied 
+		.. code-block:: text
+
+			touch: cannot touch `test': Permission denied 
 
 		Then execute the following commands (as root) 
 

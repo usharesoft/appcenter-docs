@@ -1,13 +1,17 @@
 .. Copyright 2016 FUJITSU LIMITED
 
+.. _apis-index:
+
 Welcome to UForge AppCenter REST APIs Documentation
 ===================================================
 
 This documentation provides a description of UForge AppCenter RESTful interface.
 
-Download the RESTful WADL specification file here (add link).
+Download the RESTful WADL specification file :download:`here <pages/application.wadl>`.
 
-Note: There are multiple options for reading this documentation - click on the link at the lower left hand corner for these options.
+The .xsd specification file can be downloaded :download:`here <pages/dto-objects/uforge.xsd>`.
+
+.. note:: There are multiple options for reading this documentation - click on the link at the lower left hand corner for these options.
             
 
 .. toctree::

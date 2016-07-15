@@ -6,6 +6,7 @@ Data Transfer Objects
 =====================
 
 This section provides a description of all UForge AppCenter REST Data Transfer objects.
+You can also download the .xsd file :download:`here <uforge.xsd>`
 
 	* :ref:`address-object`
 	* :ref:`apikeypair-object`

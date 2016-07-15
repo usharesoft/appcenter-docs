@@ -15,6 +15,7 @@
 import sys
 import os
 
+
 # on_rtd is whether we are on readthedocs.org
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
@@ -310,8 +311,8 @@ pdf_documents = [
 #texinfo_no_detailmenu = False
 
 
-# Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'https://docs.python.org/': None}
+# Refer to the APIs documentation.
+intersphinx_mapping = {'apis' : ('../../../../../apis/en/build/html/', '../../../apis/en/build/html/objects.inv')}
 
 
 

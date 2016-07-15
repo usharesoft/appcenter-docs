@@ -35,7 +35,7 @@ Refer to the RabbitMQ documentation for more information: `https://www.rabbitmq.
 Writing a Custom Plugin (Consumer)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Prior to writing a custom plugin, it is important to understand the producer messages created by the UForge AppCenter.  When a request is sent to the web service (``POST``, ``PUT`` or ``DELETE``) the web service creates a producer message.  The contents of each message is described in an .xsd file here: `https://www.usharesoft.com/resources/docs/ <https://www.usharesoft.com/resources/docs/>`_ 
+Prior to writing a custom plugin, it is important to understand the producer messages created by the UForge AppCenter.  When a request is sent to the web service (``POST``, ``PUT`` or ``DELETE``) the web service creates a producer message with the contents of the DTO (data transfer object) that is sent as a response to the request.  The attributes for each DTO is described in the `APIs xsd file <apis:apis-index>`.
 
 When creating a plugin, you will have access to all the attributes in a message.  The plugin will contain the custom business logic required.
 

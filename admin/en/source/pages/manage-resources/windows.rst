@@ -136,15 +136,7 @@ To create a new Golden Image, you will need to:
 		* Extra software installation
 		* User creation
 
-	6. Ensure that uforge-install-config software is installed.
-
-		* Take the latest file uforge-install-config_<version>_all.zip. This file can be found on the UForge server machine filesystem under DISTROS/USS/usspkgs/uforge-install-config/win/windows/
-		* Uncompress it to C:\ using Windows explorer or the Windows expand command
-		* Execute the following command using regular Windows CMD prompt and not powershell::
-
-			$ sc create uforge-boot-service binPath= C:\uforge\uforge-boot- service\uforge-boot-service.exe obj= localsystem start= auto
-
-	7. Optionally, you can free several gigabytes of space by cleaning up windows updates installers. 
+	6. Optionally, you can free several gigabytes of space by cleaning up windows updates installers. 
 
 		.. warning:: After this optimization you may not be able to uninstall some of the Windows updates.
 
@@ -152,7 +144,7 @@ To create a new Golden Image, you will need to:
 
 			$ dism /online /Cleanup-Image /StartComponentCleanup /ResetBase
 
-	8. If you have Service Packs installed, you can free up some space by executing the following command, which will merge the Service Pack installer to the operating system. 
+	7. If you have Service Packs installed, you can free up some space by executing the following command, which will merge the Service Pack installer to the operating system. 
 
 		.. warning:: After this optimization, you will not be able to uninstall the Service Pack.
 
@@ -160,7 +152,7 @@ To create a new Golden Image, you will need to:
 
 			$ dism /online /Cleanup-Image /SPSuperseded
 
-	9. You can optionally perform optimizations in size for the compressed raw virtual disk image. To do so, you must:
+	8. You can optionally perform optimizations in size for the compressed raw virtual disk image. To do so, you must:
 
 		a. Before the sysprep step, use the Microsoft Sysinternals tool called sdelete.exe (or sdelete64.exe) with option ``-z`` in a command line for all partitions, example:
 
@@ -180,7 +172,7 @@ To create a new Golden Image, you will need to:
 
 				$ mv -f newimage.raw image.raw
 
-	10. Open a command prompt window as an administrator and go to the ``%WINDIR%\\system32\sysprep`` directory. Then run:
+	9. Open a command prompt window as an administrator and go to the ``%WINDIR%\\system32\sysprep`` directory. Then run:
 
 		.. code-block:: shell
 
@@ -188,7 +180,7 @@ To create a new Golden Image, you will need to:
 	
 		.. note:: This will shutdown the machine. Do not boot the machine again!
 
-	11. You can now compress the golden images by running: 
+	10. You can now compress the golden images by running: 
 
 		.. code-block:: shell
 

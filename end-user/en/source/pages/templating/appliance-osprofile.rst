@@ -38,7 +38,7 @@ You may want to add packages that are provided as part of the operating system d
 
 		.. image:: /images/search-packages.jpg
 
-	6. Optionally you can filter the results by selecting ``32-bit packages`` or by entering text in the ``filter`` box.
+	6. Optionally you can filter the results by selecting ``Show only 32-bit packages`` (this displays only 32bit packages available) or by entering text in the ``filter`` box.
 	7. Select the packages you want to add.
 	8. Click the ``save`` button to add the packages to the OS profile.
 

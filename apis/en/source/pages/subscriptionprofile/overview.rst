@@ -11,6 +11,7 @@ Subscription Profile API Resources
 	* :ref:`subscriptionProfile-update`: Update the information of a subscription profile
 	* :ref:`subscriptionProfile-remove`: Remove a subscription profile from an organization
 	* :ref:`subscriptionProfileOS-update`: Updates the operating system access rights list in a subscription profile
+	* :ref:`subscriptionProfileFormat-update`: Updates the machine image formats access rights list in a subscription profile
 	* :ref:`subscriptionProfileAdmins-update`: Updates the administrators list for a subscription profile
 	* :ref:`subscriptionProfileRoles-update`: Updates the roles in a subscription profile
 	* :ref:`subscriptionProfileQuotas-update`: Updates the quotas in a subscription profile
@@ -27,6 +28,7 @@ Subscription Profile API Resources
     subscriptionProfile_update
     subscriptionProfile_remove
     subscriptionProfileOS_update
+    subscriptionProfileFormat_update
     subscriptionProfileAdmins_update
     subscriptionProfileRoles_update
     subscriptionProfileQuotas_update

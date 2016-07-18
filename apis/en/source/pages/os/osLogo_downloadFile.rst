@@ -40,7 +40,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "/distributions/{id}/logo/{fileName}" -X GET \
+	curl "https://uforge.example.com/api/distributions/{id}/logo/{fileName}" -X GET \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::

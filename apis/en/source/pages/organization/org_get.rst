@@ -37,7 +37,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "/orgs/{oid}" -X GET \
+	curl "https://uforge.example.com/api/orgs/{oid}" -X GET \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::

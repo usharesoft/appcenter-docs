@@ -40,7 +40,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "/distributions/{id}/projects/{pid}/pkgs/{pkgid}/bin/{fileName}" -X POST \
+	curl "https://uforge.example.com/api/distributions/{id}/projects/{pid}/pkgs/{pkgid}/bin/{fileName}" -X POST \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"-H "Content-type: application/xml" --data-binary "@binaryFilePath"
 
 .. seealso::

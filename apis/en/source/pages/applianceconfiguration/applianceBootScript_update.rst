@@ -31,7 +31,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the id of the :ref:`user-object`
+* ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``bsid`` (required): the id of the :ref:`bootscript-object`
 * ``aid`` (required): the id of the :ref:`appliance-object`
 
@@ -45,7 +45,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "/users/{uid}/appliances/{aid}/bootscripts/{bsid}" -X PUT \
+	curl "https://uforge.example.com/api/users/{uid}/appliances/{aid}/bootscripts/{bsid}" -X PUT \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
 
 Example of representation.xml content (the request body):

@@ -27,7 +27,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the id of the :ref:`user-object`
+* ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``fileName`` (required): the file name of the certificate
 * ``caid`` (required): the id of the :ref:`credaccount-object`
 * ``certid`` (required): 
@@ -42,7 +42,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "/users/{uid}/accounts/{caid}/certs/{certid}/{fileName}" -X POST \
+	curl "https://uforge.example.com/api/users/{uid}/accounts/{caid}/certs/{certid}/{fileName}" -X POST \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"-H "Content-type: application/xml" --data-binary "@binaryFilePath"
 
 .. seealso::

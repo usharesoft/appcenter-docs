@@ -49,7 +49,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "http://www.example.com/api/orgs/{oid}/distributions" -X PUT \
+	curl "https://uforge.example.com/api/orgs/{oid}/distributions" -X PUT \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
 
 Example of representation.xml content (the request body):

@@ -25,7 +25,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the id of the :ref:`user-object`
+* ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``msid`` (required): the id of the :ref:`mysoftware-object`
 * ``fileName`` (required): the file name of the binary to upload
 * ``mspackid`` (required): the id of the :ref:`package-object`
@@ -40,7 +40,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "/users/{uid}/mysoftware/{msid}/pkgs/{mspackid}/bin/{fileName}" -X POST \
+	curl "https://uforge.example.com/api/users/{uid}/mysoftware/{msid}/pkgs/{mspackid}/bin/{fileName}" -X POST \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"-H "Content-type: application/xml" --data-binary "@binaryFilePath"
 
 .. seealso::

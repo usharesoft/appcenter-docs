@@ -29,7 +29,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the id of the :ref:`user-object`
+* ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``msid`` (required): the id of the :ref:`mysoftware-object`
 * ``mspackid`` (required): the id of the package
 
@@ -43,7 +43,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "/users/{uid}/mysoftware/{msid}/pkgs/{mspackid}" -X PUT \
+	curl "https://uforge.example.com/api/users/{uid}/mysoftware/{msid}/pkgs/{mspackid}" -X PUT \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
 
 Example of representation.xml content (the request body):

@@ -39,7 +39,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "/users/{uid}/scannedinstances/{siid}/scans/{sid}" -X DELETE \
+	curl "https://uforge.example.com/api/users/{uid}/scannedinstances/{siid}/scans/{sid}" -X DELETE \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::
@@ -53,7 +53,7 @@ Example Request
 	 * :ref:`scan-cancel`
 	 * :ref:`scan-create`
 	 * :ref:`scan-get`
-	 * :ref:`scan-getAll`
+	 * :ref:`userScan-getAll`
 	 * :ref:`scanFile-getAll`
 	 * :ref:`scanFileArchive-download`
 	 * :ref:`scanInstallProfile-get`

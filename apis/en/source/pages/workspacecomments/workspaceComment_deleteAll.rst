@@ -38,7 +38,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "http://www.example.com/api/orgs/{oid}/workspaces/{wid}/comments" -X DELETE \
+	curl "https://uforge.example.com/api/orgs/{oid}/workspaces/{wid}/comments" -X DELETE \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::

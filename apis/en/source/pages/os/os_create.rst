@@ -41,7 +41,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "/distributions/{oid}/{name}/{version}" -X POST \
+	curl "https://uforge.example.com/api/distributions/{oid}/{name}/{version}" -X POST \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::

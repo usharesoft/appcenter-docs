@@ -6,7 +6,6 @@ Data Transfer Objects
 =====================
 
 This section provides a description of all UForge AppCenter REST Data Transfer objects.
-You can also download the .xsd file :download:`here <uforge.xsd>`
 
 	* :ref:`address-object`
 	* :ref:`apikeypair-object`
@@ -160,6 +159,7 @@ You can also download the .xsd file :download:`here <uforge.xsd>`
 	* :ref:`urilist-object`
 	* :ref:`user-object`
 	* :ref:`userprofile-object`
+	* :ref:`userprofiles-object`
 	* :ref:`users-object`
 	* :ref:`userstats-object`
 	* :ref:`votestat-object`
@@ -322,6 +322,7 @@ You can also download the .xsd file :download:`here <uforge.xsd>`
     UriList
     User
     UserProfile
+    UserProfiles
     Users
     UserStats
     VoteStat

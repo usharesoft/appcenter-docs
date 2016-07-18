@@ -27,7 +27,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the id of the :ref:`user-object` that has created the appliance
+* ``uid`` (required): the user name (login name) of the :ref:`user-object` that has created the appliance
 * ``gid`` (required): the id of the :ref:`logicalgroup-object`
 * ``ptid`` (required): the id of the :ref:`partitiontable-object`
 * ``aid`` (required): the id of the :ref:`appliance-object`
@@ -42,7 +42,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "users/{uid}/appliances/{aid}/installProfile/{ipid}/pt/{ptid}/groups/{gid}" -X PUT \
+	curl "https://uforge.example.com/apiusers/{uid}/appliances/{aid}/installProfile/{ipid}/pt/{ptid}/groups/{gid}" -X PUT \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
 
 Example of representation.xml content (the request body):

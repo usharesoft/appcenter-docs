@@ -41,7 +41,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "/orgs/{oid}/workspaces/{wid}/templates/{tid}/logo/{lid}/{fileName}" -X POST \
+	curl "https://uforge.example.com/api/orgs/{oid}/workspaces/{wid}/templates/{tid}/logo/{lid}/{fileName}" -X POST \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"-H "Content-type: application/xml" --data-binary "@binaryFilePath"
 
 .. seealso::

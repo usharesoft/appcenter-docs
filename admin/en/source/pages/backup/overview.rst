@@ -23,6 +23,4 @@ The following zones of UForge data should be backed up:
 
 	backup-database
 	backup-user-data
-	backup-ldap
-	backup-idm
 

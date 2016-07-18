@@ -25,7 +25,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the id of the :ref:`user-object`
+* ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``caid`` (required): the id of the :ref:`credaccount-object`
 * ``certid`` (required): the id of the :ref:`certificate-object`
 
@@ -39,7 +39,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "http://www.example.com/api/users/{uid}/accounts/{caid}/certs/{certid}" -X DELETE \
+	curl "https://uforge.example.com/api/users/{uid}/accounts/{caid}/certs/{certid}" -X DELETE \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::

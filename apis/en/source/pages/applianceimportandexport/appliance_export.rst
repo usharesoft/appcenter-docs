@@ -31,7 +31,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the id of the :ref:`user-object`
+* ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``aid`` (required): the id of the :ref:`appliance-object` to be exported
 
 HTTP Request Body Parameters
@@ -44,7 +44,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "http://www.example.com/api/users/{uid}/appliances/{aid}/exports" -X POST \
+	curl "https://uforge.example.com/api/users/{uid}/appliances/{aid}/exports" -X POST \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::

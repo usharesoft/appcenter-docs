@@ -27,7 +27,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the id of the :ref:`user-object`
+* ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``fileName`` (required): the file name of the partition to upload
 * ``siid`` (required): the id of the :ref:`scannedinstance-object`
 * ``sid`` (required): the id of the :ref:`scan-object`
@@ -42,7 +42,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "/users/{uid}/scannedinstances/{siid}/scans/{sid}/rawparts/{fileName}" -X POST \
+	curl "https://uforge.example.com/api/users/{uid}/scannedinstances/{siid}/scans/{sid}/rawparts/{fileName}" -X POST \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"-H "Content-type: application/xml" --data-binary "@binaryFilePath"
 
 .. seealso::
@@ -57,7 +57,7 @@ Example Request
 	 * :ref:`scan-create`
 	 * :ref:`scan-delete`
 	 * :ref:`scan-get`
-	 * :ref:`scan-getAll`
+	 * :ref:`userScan-getAll`
 	 * :ref:`scanFile-getAll`
 	 * :ref:`scanFileArchive-download`
 	 * :ref:`scanInstallProfile-get`

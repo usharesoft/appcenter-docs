@@ -5,10 +5,6 @@
 User Software Library API Resources
 ===================================
 
-	* :ref:`mySoftwareLicense-upload`: Uploads a license file for a software component
-	* :ref:`mySoftwareLicense-download`: Downloads the license of a software component
-	* :ref:`mySoftwareLicense-delete`: Remove a license file from a software component
-	* :ref:`mySoftwareLicense-uploadFile`: Uploads a license file for a software component
 	* :ref:`mySoftwarePkg-add`: Adds a new package to a software component
 	* :ref:`mySoftwarePkg-getAll`: Retrieves all packages and files for a software component
 	* :ref:`mySoftwarePkg-deleteAll`: Removes all the package binaries from a software component
@@ -24,15 +20,15 @@ User Software Library API Resources
 	* :ref:`mySoftware-update`: Updates the meta-data information of a software component
 	* :ref:`mySoftware-delete`: Removes a software component from a user's ``Software Library``
 	* :ref:`mySoftwareUsage-getAll`: Retrieves all the appliance templates where a software component is includes
+	* :ref:`mySoftwareLicense-upload`: Uploads a license file for a software component
+	* :ref:`mySoftwareLicense-download`: Downloads the license of a software component
+	* :ref:`mySoftwareLicense-delete`: Remove a license file from a software component
+	* :ref:`mySoftwareLicense-uploadFile`: Uploads a license file for a software component
 
 
 .. toctree::
     :hidden:
 
-    mySoftwareLicense_upload
-    mySoftwareLicense_download
-    mySoftwareLicense_delete
-    mySoftwareLicense_uploadFile
     mySoftwarePkg_add
     mySoftwarePkg_getAll
     mySoftwarePkg_deleteAll
@@ -48,3 +44,7 @@ User Software Library API Resources
     mySoftware_update
     mySoftware_delete
     mySoftwareUsage_getAll
+    mySoftwareLicense_upload
+    mySoftwareLicense_download
+    mySoftwareLicense_delete
+    mySoftwareLicense_uploadFile

@@ -25,7 +25,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the id of the :ref:`user-object`
+* ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``siid`` (required): the id of the :ref:`scannedinstance-object`
 * ``itid`` (required): the id of the :ref:`image-object`
 * ``pitid`` (required): the id of the :ref:`publishimage-object` to delete
@@ -41,7 +41,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "/users/{uid}/scannedinstances/{siid}/scans/{sid}/images/{itid}/pimages/{pitid}" -X GET \
+	curl "https://uforge.example.com/api/users/{uid}/scannedinstances/{siid}/scans/{sid}/images/{itid}/pimages/{pitid}" -X GET \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::

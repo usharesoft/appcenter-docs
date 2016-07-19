@@ -22,11 +22,11 @@ Machine Image API Resources
 	* :ref:`machineImageGeneration-cancel`: Cancels a running generation of a machine image
 	* :ref:`machineImageStatus-get`: Retrieves the generation status of a machine image
 	* :ref:`machineImageStatus-getAll`: Retrieves the generation status of all the machine images for an appliance
+	* :ref:`machineImagePublished-download`: Downloads a published machine image
 	* :ref:`machineImage-publish`: Request to publish (register) a generated machine image to a target cloud environment
 	* :ref:`machineImagePublished-getAll`: Retrieve all the published machine images for an appliance
 	* :ref:`machineImagePublished-deleteAll`: Removes all published machine images for an appliance
 	* :ref:`machineImagePublishedStatus-getAll`: Retrieve the publish status of all the published machine images for an appliance
-	* :ref:`machineImagePublished-download`: Downloads a published machine image
 
 
 .. toctree::
@@ -49,8 +49,8 @@ Machine Image API Resources
     machineImageGeneration_cancel
     machineImageStatus_get
     machineImageStatus_getAll
+    machineImagePublished_download
     machineImage_publish
     machineImagePublished_getAll
     machineImagePublished_deleteAll
     machineImagePublishedStatus_getAll
-    machineImagePublished_download

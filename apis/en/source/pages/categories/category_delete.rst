@@ -40,7 +40,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "/orgs/{oid}/categories/{cid}" -X DELETE \
+	curl "https://uforge.example.com/api/orgs/{oid}/categories/{cid}" -X DELETE \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::

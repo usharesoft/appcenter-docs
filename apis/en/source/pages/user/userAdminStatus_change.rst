@@ -25,27 +25,21 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the id of the :ref:`user-object` to remove
-* ``oid`` (required): the name of the organization to remove the user from
+* ``uid`` (required): the user name (login name) of the :ref:`user-object`
+* ``oid`` (required): the name of the organization
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A :ref:`org-object` object
+None
 
 Example Request
 ~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
-	curl "/users/{uid}/orgs/{oid}" -X PUT \
-	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
-
-Example of representation.xml content (the request body):
-
-.. code-block:: xml
-
-
+	curl "https://uforge.example.com/api/users/{uid}/orgs/{oid}" -X PUT \
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::
 

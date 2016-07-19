@@ -1,9 +1,9 @@
 .. Copyright 2016 FUJITSU LIMITED
 
-.. _scan-getAll:
+.. _userScan-getAll:
 
-scan_getAll
------------
+userScan_getAll
+---------------
 
 .. function:: GET /users/{uid}/scans
 
@@ -29,7 +29,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the id of the :ref:`user-object`
+* ``uid`` (required): the user name (login name) of the :ref:`user-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -41,7 +41,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "http://www.example.com/api/users/{uid}/scans" -X GET \
+	curl "https://uforge.example.com/api/users/{uid}/scans" -X GET \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::
@@ -56,7 +56,7 @@ Example Request
 	 * :ref:`scan-create`
 	 * :ref:`scan-delete`
 	 * :ref:`scan-get`
-	 * :ref:`scan-getAll`
+	 * :ref:`userScan-getAll`
 	 * :ref:`scanInstallProfile-get`
 	 * :ref:`scanOverlay-download`
 	 * :ref:`scanOverlay-uploadChunk`

@@ -25,7 +25,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the id of the :ref:`user-object`
+* ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``msid`` (required): the id of the :ref:`mysoftware-object`
 * ``mslid`` (required): the id of the :ref:`license-object`
 
@@ -39,7 +39,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "http://www.example.com/api/users/{uid}/mysoftware/{msid}/licenses/{mslid}" -X GET \
+	curl "https://uforge.example.com/api/users/{uid}/mysoftware/{msid}/licenses/{mslid}" -X GET \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::

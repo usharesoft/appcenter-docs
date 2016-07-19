@@ -1,11 +1,11 @@
 .. Copyright 2016 FUJITSU LIMITED
 
-.. _subscriptionProfile-update:
+.. _subscriptionProfileFormat-update:
 
-subscriptionProfile_update
---------------------------
+subscriptionProfileFormat_update
+--------------------------------
 
-.. function:: PUT /orgs/{oid}/subscriptions/{spid}
+.. function:: PUT /orgs/{oid}/subscriptions/{spid}/formats
 
 .. sidebar:: Summary
 
@@ -14,9 +14,11 @@ subscriptionProfile_update
 	* Response Formats: ``application/xml`` ``application/json``
 	* Since: ``UForge 3.5``
 
-Update the information of a subscription profile. 
+Updates the machine image formats access rights list in a subscription profile. 
 
-Please refer to :ref:`subscriptionprofile-object` for a complete list of all the ``subscription profile`` attributes.
+Any machine image format listed in the subscription profile that is not specified in the new formats list will be removed from the subscription profile. 
+
+.. warning:: The formats provided must be part of the organization's formats list and must be visible and active in the organization.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -33,26 +35,27 @@ URI Parameters
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A :ref:`subscriptionProfile-object` object
+A :ref:`imageFormats-object` object
 
 Example Request
 ~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/orgs/{oid}/subscriptions/{spid}" -X PUT \
+	curl "https://uforge.example.com/api/orgs/{oid}/subscriptions/{spid}/formats" -X PUT \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
 
 Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:subscriptionProfile>
-		<active>true</active>
-		<code>example2</code>
-		<description>Description example</description>
-		<name>example</name>
-	</ns0:subscriptionProfile>
+	<ns0:imageFormats>
+		<imageFormats>
+			<imageFormat>
+				<uri>orgs/1/formats/1</uri>
+			</imageFormat>
+		</imageFormats>
+	</ns0:imageFormats>
 
 
 .. seealso::
@@ -61,9 +64,9 @@ Example of representation.xml content (the request body):
 	 * :ref:`subscriptionProfile-create`
 	 * :ref:`subscriptionProfile-getAll`
 	 * :ref:`subscriptionProfile-get`
+	 * :ref:`subscriptionProfile-update`
 	 * :ref:`subscriptionProfile-remove`
 	 * :ref:`subscriptionProfileOS-update`
-	 * :ref:`subscriptionProfileAdmins-update`
 	 * :ref:`subscriptionProfileRoles-update`
 	 * :ref:`subscriptionProfileQuotas-update`
 	 * :ref:`subscriptionProfileTargetFormat-update`

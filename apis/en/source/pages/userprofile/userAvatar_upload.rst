@@ -25,7 +25,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the id of the :ref:`user-object`
+* ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``fileName`` (required): the file name of the photo to download
 * ``photoId`` (required): the id of the :ref:`logo-object`
 
@@ -39,7 +39,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "/users/{uid}/photo/{photoId}/{fileName}" -X POST \
+	curl "https://uforge.example.com/api/users/{uid}/photo/{photoId}/{fileName}" -X POST \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"-H "Content-type: application/xml" --data-binary "@binaryFilePath"
 
 .. seealso::

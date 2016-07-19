@@ -7,8 +7,8 @@ Appliance Install Profile API Resources
 
 	* :ref:`installProfile-getDeprecated`: Retrieves the installation profile for an appliance
 	* :ref:`installProfile-updateDeprecated`: Updates an installation profile for an appliance
-	* :ref:`installProfile-update`: Updates an installation profile for an appliance
 	* :ref:`installProfile-get`: Retrieves the installation profile for an appliance
+	* :ref:`installProfile-update`: Updates an installation profile for an appliance
 
 
 .. toctree::
@@ -16,5 +16,5 @@ Appliance Install Profile API Resources
 
     installProfile_getDeprecated
     installProfile_updateDeprecated
-    installProfile_update
     installProfile_get
+    installProfile_update

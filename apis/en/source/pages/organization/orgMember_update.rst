@@ -25,7 +25,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the id of the :ref:`user-object` to add or update
+* ``uid`` (required): the user name (login name) of the :ref:`user-object` to add or update
 * ``oid`` (required): the id of the :ref:`org-object`
 
 HTTP Request Body Parameters
@@ -38,7 +38,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "/orgs/{oid}/members/{uid}" -X PUT \
+	curl "https://uforge.example.com/api/orgs/{oid}/members/{uid}" -X PUT \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
 
 Example of representation.xml content (the request body):

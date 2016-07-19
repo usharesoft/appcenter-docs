@@ -27,7 +27,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the id of the :ref:`user-object`
+* ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``eid`` (required): the id of the export ticket (provided after :ref:`appliance-export`)
 * ``aid`` (required): the id of the :ref:`appliance-object`
 
@@ -41,7 +41,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "/users/{uid}/appliances/{aid}/exports/{eid}" -X DELETE \
+	curl "https://uforge.example.com/api/users/{uid}/appliances/{aid}/exports/{eid}" -X DELETE \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::

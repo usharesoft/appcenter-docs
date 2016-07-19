@@ -29,7 +29,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the id of the :ref:`user-object`
+* ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``aid`` (required): the id of the :ref:`appliance-object`
 
 HTTP Request Body Parameters
@@ -42,7 +42,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "http://www.example.com/api/users/{uid}/appliances/{aid}/pimages" -X POST \
+	curl "https://uforge.example.com/api/users/{uid}/appliances/{aid}/pimages" -X POST \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
 
 Example of representation.xml content (the request body):
@@ -95,4 +95,4 @@ Example of representation.xml content (the request body):
 	 * :ref:`machineImagePublished-download`
 	 * :ref:`machineImagePublishedStatus-get`
 	 * :ref:`machineImagePublishedStatus-getAll`
-	 * :ref:`applianceImage-publish`
+	 * :ref:`machineImage-publish`

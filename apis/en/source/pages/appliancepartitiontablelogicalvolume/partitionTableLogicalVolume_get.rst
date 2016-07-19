@@ -26,7 +26,7 @@ URI Parameters
 ~~~~~~~~~~~~~~
 
 * ``vid`` (required): the id of the :ref:`logicalvolume-object`
-* ``uid`` (required): the id of the :ref:`user-object` that has created the appliance
+* ``uid`` (required): the user name (login name) of the :ref:`user-object` that has created the appliance
 * ``ptid`` (required): the id of the :ref:`partitiontable-object`
 * ``aid`` (required): the id of the :ref:`appliance-object`
 
@@ -40,7 +40,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "users/{uid}/appliances/{aid}/installProfile/{ipid}/pt/{ptid}/volumes/{vid}" -X GET \
+	curl "https://uforge.example.com/apiusers/{uid}/appliances/{aid}/installProfile/{ipid}/pt/{ptid}/volumes/{vid}" -X GET \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::

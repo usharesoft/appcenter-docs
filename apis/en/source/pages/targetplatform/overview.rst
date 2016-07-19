@@ -5,6 +5,9 @@
 Target Platform API Resources
 =============================
 
+	* :ref:`targetPlatform-create`: Creates a new target platform in an organization
+	* :ref:`targetPlatform-getAll`: Retrieves all the target platforms for an organization
+	* :ref:`targetPlatform-updateAccess`: Updates one or more target platforms in an organization
 	* :ref:`targetPlatform-get`: Retrieves the information of a target platform
 	* :ref:`targetPlatform-update`: Update the meta-data of a target platform
 	* :ref:`targetPlatform-delete`: Remove a target platform from an organization
@@ -15,14 +18,14 @@ Target Platform API Resources
 	* :ref:`targetPlatformLogo-downloadFile`: Download the logo from a target platform
 	* :ref:`targetPlatformLogo-delete`: Remove an uploaded logo from a target platform
 	* :ref:`targetPlatformLogo-download`: Download the logo from a target platform
-	* :ref:`targetPlatform-create`: Creates a new target platform in an organization
-	* :ref:`targetPlatform-getAll`: Retrieves all the target platforms for an organization
-	* :ref:`targetPlatform-updateAccess`: Updates one or more target platforms in an organization
 
 
 .. toctree::
     :hidden:
 
+    targetPlatform_create
+    targetPlatform_getAll
+    targetPlatform_updateAccess
     targetPlatform_get
     targetPlatform_update
     targetPlatform_delete
@@ -33,6 +36,3 @@ Target Platform API Resources
     targetPlatformLogo_downloadFile
     targetPlatformLogo_delete
     targetPlatformLogo_download
-    targetPlatform_create
-    targetPlatform_getAll
-    targetPlatform_updateAccess

@@ -25,7 +25,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the id of the :ref:`user-object` that has created the appliance
+* ``uid`` (required): the user name (login name) of the :ref:`user-object` that has created the appliance
 * ``ipid`` (required): the id of the :ref:`installprofile-object`
 * ``aid`` (required): the id of the :ref:`appliance-object`
 * ``osuid`` (required): the id of the :ref:`osuser-object` to delete
@@ -40,7 +40,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "/users/{uid}/appliances/{aid}/installProfile/{ipid}/users/{osuid}" -X GET \
+	curl "https://uforge.example.com/api/users/{uid}/appliances/{aid}/installProfile/{ipid}/users/{osuid}" -X GET \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::

@@ -30,7 +30,7 @@ URI Parameters
 ~~~~~~~~~~~~~~
 
 * ``oaslid`` (required): the id of the :ref:`license-object`
-* ``uid`` (required): the id of the :ref:`user-object`
+* ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``fileName`` (required): the file name of the license to upload
 * ``aid`` (required): the id of the :ref:`appliance-object`
 * ``oaspkgid`` (required): the id of the :ref:`oaspkg-object`
@@ -45,7 +45,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "/users/{uid}/appliances/{aid}/oas/{oaspkgid}/licenses/{oaslid}/{fileName}" -X POST \
+	curl "https://uforge.example.com/api/users/{uid}/appliances/{aid}/oas/{oaspkgid}/licenses/{oaslid}/{fileName}" -X POST \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"-H "Content-type: application/xml" --data-binary "@binaryFilePath"
 
 .. seealso::

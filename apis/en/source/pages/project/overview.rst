@@ -9,6 +9,7 @@ Project API Resources
 	* :ref:`projectLicense-uploadChunk`: Uploads a license file for a project
 	* :ref:`projectLicense-delete`: Remove a license file from a project
 	* :ref:`projectLicense-upload`: Uploads a license file for a project
+	* :ref:`project-create`: Create a new project in the ``Project Catalog``
 	* :ref:`projectPkg-getAll`: Retrieves all packages and files for a project
 	* :ref:`projectPkg-create`: Adds a new package to a project
 	* :ref:`projectPkgs-update`: Updates the information of a set of package contained in a project
@@ -23,7 +24,6 @@ Project API Resources
 	* :ref:`project-get`: Retrieves the information of a project
 	* :ref:`project-update`: Updates the information of a project
 	* :ref:`project-delete`: Removes a project from the ``Project Catalog``
-	* :ref:`project-create`: Create a new project in the ``Project Catalog``
 
 
 .. toctree::
@@ -33,6 +33,7 @@ Project API Resources
     projectLicense_uploadChunk
     projectLicense_delete
     projectLicense_upload
+    project_create
     projectPkg_getAll
     projectPkg_create
     projectPkgs_update
@@ -47,4 +48,3 @@ Project API Resources
     project_get
     project_update
     project_delete
-    project_create

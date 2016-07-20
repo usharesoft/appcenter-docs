@@ -14,55 +14,64 @@ The following figure illustrates a sample footer.
 
 .. image:: /images/footer.jpg
 
-Setting the Version
-~~~~~~~~~~~~~~~~~~~
+The version number is automatically provided as part of the initial configuration and any update of the platform.
 
-To set the version number in the footer, under ``<c:client>``::
-
-	<c:version>3.4.2</c:version>
-
+For colours and layout modifications, please refer to :ref:`customize-css`.
 
 Hiding the UForge URL
 ~~~~~~~~~~~~~~~~~~~~~
 
-To show or hide the UForge URL, under ``<c:client>`` enter “false” if you do not want to show the URL::
+To show or hide the UForge URL, under ``<c:client>`` enter “false” if you do not want to show the URL:
+
+.. code-block:: xml 
 
 	<c:showUForgeUrl>false</c:showUForgeUrl>
 
 Modifying the Copyright
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-To modify the copyright under ``<c:client>``::
+To modify the copyright under ``<c:client>``:
+
+.. code-block:: xml
 
 	<c:copyright>Copyright © 2007-2014</c:copyright>
 
-Modifying the Links
-~~~~~~~~~~~~~~~~~~~
+Adding Links to the Footer
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To modify the links in the footer, under ``<c:footer>``.
+You can add links to external resources under the ``<c:footer>`` section.
 
-The following example shows the twitter link. If you want to remove the twitter link, delete the complete section shown below. You can also modify simply the title or link. 
+The following example shows how to add a link to twitter:
 
-You can also include any other links you like in this section::
+.. code-block:: xml 
 
-	<c:footerItem>
-           <c:title>twitter</c:title>
-           <c:link>https:twitter.com/usharesoft</c:link>
-	</c:footerItem>
+	<c:footer>
+		<c:linkItem>
+	           <c:title>twitter</c:title>
+	           <c:link>https:twitter.com/usharesoft</c:link>
+		</c:linkItem>
+	</c:footer>
 
-Modifying the Terms of Use or Privacy Policy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+You can add as many links as you like by adding a ``linkItem`` for each link.
 
-If you want to modify the Terms of Use or Privacy Policy, you MUST include the UShareSoft Terms of Use and Privacy Policy as part of your own. 
 
-To modify the Terms of Use or Privacy Policy, go to the sections under <c:footer> and enter the path to the new terms of use and/or privacy policy. You can also modify the link text if you wish::
+Adding Terms of Use or Privacy Policy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	<c:footerItem>
-           <c:title>terms of use</c:title>
-           <c:link>https//www.usharesoft.com/about/terms-of-use.html</c:link>
-	</c:footerItem>
-	<c:footerItem>
-           <c:title>privacy policy</c:title>
-           <c:link>https//www.usharesoft.com/about/privacy-policy.html</c:link>
-	</c:footerItem>
+If you wish to add a "Terms of Use" or "Privacy Policy", you MUST include the UShareSoft Terms of Use and Privacy Policy as part of your own. 
+
+To modify the Terms of Use or Privacy Policy, go to the sections under <c:footer> and enter the path to the new terms of use and/or privacy policy. You can also modify the link text if you wish:
+
+.. code-block:: xml 
+
+	<c:footer>
+		<c:linkItem>
+	           <c:title>terms of use</c:title>
+	           <c:link>https//www.usharesoft.com/about/terms-of-use.html</c:link>
+		</c:linkItem>
+		<c:linkItem>
+	           <c:title>privacy policy</c:title>
+	           <c:link>https//www.usharesoft.com/about/privacy-policy.html</c:link>
+		</c:linkItem>
+	</c:footer>
 

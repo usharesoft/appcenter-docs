@@ -17,10 +17,10 @@ Once you have completed your changes, you will need to run the following command
    :titlesonly:
 
    image-directory
-   custo-footer
    custo-signin
-   custo-banner
-   custo-logo
+   custo-header
+   custo-footer
+   custo-user-profile
    restrict-usage
    custo-css
    custo-platform

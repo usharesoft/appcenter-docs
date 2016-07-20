@@ -11,7 +11,8 @@ Each organization within the UForge platform has a project catalog, and each mem
 
 	* add new projects to the catalog
 	* update existing projects to the catalog
-	* delete a project. The project will no longer appear in the project catalog, however it is not permanently deleted. This ensures that any existing templates that use the project can still generate images correctly.
+	* mark a project obsolete.
+	* delete a project.
 
 You can also create custom OS profiles to include specific packages to an existing (standard) OS profile. See :ref:`create-custom-os`.
 
@@ -60,7 +61,7 @@ To add a new project:
 	
 	8. Click ``Save``.
 
-.. update-project:
+.. _update-project:
 
 Updating a Project
 ~~~~~~~~~~~~~~~~~~
@@ -72,6 +73,46 @@ To modify the projects:
 	1. Under the ``Administration`` tab, click ``Projects``.
 	2. If you are an administrator to more than one organization, then you can choose the organization to administer from the drop-down menu.
 	3. Projects are associated with a specific version of operating system. Click on the operating system you want to modify. You will see a list of all the projects that are part of the OS.
-	4. You can select and delete projects.
+	4. Click on the project you wish to edit.  At this stage you can change any of the meta-data and files uploaded.
 
-		.. note:: that this will not delete the project but simply mark it as obsolete.
+.. _delete-project:
+
+Deleting a Project
+~~~~~~~~~~~~~~~~~~
+
+When deleting projects from the catalog, it is important to understand that you should check that no appliance templates are using the project you wish to delete (otherwise this may break generating a machine image for the appliance template).
+
+To delete the project:
+
+	1. Under the ``Administration`` tab, click ``Projects``.
+	2. If you are an administrator to more than one organization, then you can choose the organization to administer from the drop-down menu.
+	3. Projects are associated with a specific version of operating system. Click on the operating system you want to modify. You will see a list of all the projects that are part of the OS.
+	4. To delete the project can either: 
+
+	   click on the ``delete`` icon at the extreme right-hand side in the table for the project item.
+
+	   .. image:: /images/project-table-delete.png
+
+	   or
+
+	   click on the project item to edit it, then click on the ``delete`` icon at the top right-hand side of the project edit page. 
+
+	   .. image:: /images/project-delete.png
+
+.. _obsolete-project:
+
+Marking a Project as Obsolete
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Another way to remove a project from the project catalog is to mark the project as ``obsolete``.  This ensures that any existing templates that use the project can still generate images correctly, however the project is no longer accessible in the catalog for new appliance templates.
+
+To mark a project as ``obsolete``:
+
+	1. Under the ``Administration`` tab, click ``Projects``.
+	2. If you are an administrator to more than one organization, then you can choose the organization to administer from the drop-down menu.
+	3. Projects are associated with a specific version of operating system. Click on the operating system you want to modify. You will see a list of all the projects that are part of the OS.
+	4. Click on the project to edit it.
+	5. Click on the ``obsolete`` icon at the top right-hand side of the project edit page. 
+
+	.. image:: /images/project-obsolete.png
+

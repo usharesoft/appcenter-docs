@@ -111,25 +111,24 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 
 		``OpenSUSE (exemple version 12.2)``
 
-		http://distros-repository.usharesoft.com/usharesoft/opensuse/12.2/x86_64
+		http://distros-repository.usharesoft.com/opensuse/12.2/x86_64
 
 		``Scientific Linux (exemple version 6.6)``
 
-		http://distros-repository.usharesoft.com/usharesoft/scientificlinux/6.6/x86_64
+		http://distros-repository.usharesoft.com/scientificlinux/6.6/x86_64
 
 	7. You must then add the specific UForge tool repository. The repository to attach is one of the following:
 
-		* CentOS (example version 6, arch x86_64): http://distros-repository.usharesoft.com/usharesoft/centos/6/x86_64
-		* Red Hat Enterprise Linux: (example version 6.2, arch x86_64): http://distros-repository.usharesoft.com/usharesoft/rhel/6.2/x86_64
-		* OpenSUSE: (example version 12.1, arch x86_64): http://distros-repository.usharesoft.com/usharesoft/opensuse/12.1/x86_64
-		* Scientific Linux: (example version 6, arch x86_64): http://distros-repository.usharesoft.com/usharesoft/scientificlinux/6/x86_64
-		* Debian: (example version 8, arch x86_64) [arch=amd64] http://distros-repository.usharesoft.com/usharesoft/debian/ jessie main
-		* Ubuntu: (example version 14.04, arch x86_64) [arch=amd64] http://distros-repository.usharesoft.com/usharesoft/ubuntu/ trusty main
-
+		* CentOS (example version 6, arch x86_64): http://distros-repository.usharesoft.com/centos/6/x86_64
+		* Red Hat Enterprise Linux: (example version 6.2, arch x86_64): http://distros-repository.usharesoft.com//rhel/6.2/x86_64
+		* OpenSUSE: (example version 12.1, arch x86_64): http://distros-repository.usharesoft.com/opensuse/12.1/x86_64
+		* Scientific Linux: (example version 6, arch x86_64): http://distros-repository.usharesoft.com/scientificlinux/6/x86_64
+		* Debian: (example version 8, arch x86_64) [arch=amd64] http://distros-repository.usharesoft.com/debian/ jessie main
+		* Ubuntu: (example version 14.04, arch x86_64) [arch=amd64] http://distros-repository.usharesoft.com/ubuntu/ trusty main
 
 	    For example::
 
-		$ uforge org repo create --name "CentOS 6.5 os" --repoUrl http://distros-repository.usharesoft.com/usharesoft/centos/6/x86_64 --type RPM -u $ADMIN -p $PASS
+		$ uforge org repo create --name "CentOS 6.5 os" --repoUrl http://distros-repository.usharesoft.com/centos/6/x86_64 --type RPM -u $ADMIN -p $PASS
 
 	8. Attach repository to the distribution as follows::
 

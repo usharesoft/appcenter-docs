@@ -39,14 +39,4 @@ Step 1: Install the UForge AppCenter for each node of the platform.
 
 Step 2: Configure UForge AppCenter using the UForge Deployment Wizard.
 
-UForge is delivered in one of three forms:
-
-	1. OVF (ESXi hypervisor) VM.  This contains all the UForge AppCenter binaries to allow you to provision UForge in VMware vCloud Director or equivalent.
-	2. VHD VM (Xen hypervisor).   This contains all the UForge AppCenter binaries to allow you to provision UForge in Citrix CloudStack (XenServer-based deployments)
-	3. ISO image.  This contains all the UForge AppCenter binaries to allow you to carry out a bare-metal installation or to install into a virtualized or cloud VM instance.
-
-These images can be found in the UForge Setup ISO.  Choose the image type most appropriate to the hardware, virtualized or cloud environment you will be deploying UForge to.
-
-.. note:: The UForge Setup ISO allows you to set up partitioning on the deployment nodes.  This gives greater flexibility in sizing correctly the disks on each node depending on their role (for example, an application server node from a database node).
-
 Step 3: Additional configuration steps, as described in :ref:`further-config-overview`.

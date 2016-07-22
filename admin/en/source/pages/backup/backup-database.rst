@@ -73,7 +73,7 @@ We recommend you use a mounted disk, SAN or NAS to store your backup archives.
 Basic Restore
 ~~~~~~~~~~~~~
 
-Restoring the database is a simple copy using rsync back to the database directory. Note the use of slashes (/ ) is important.  Again, we stop the web service to ensure we do not generate connection error messages in the logs.
+Restoring the database is a simple copy using rsync back to the database directory. Note the use of slashes (/ ) is important.  You should stop the web service to ensure we do not generate connection error messages in the logs.
 
 .. code-block:: shell
 

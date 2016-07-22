@@ -82,6 +82,8 @@ Deleting a Project
 
 When deleting projects from the catalog, it is important to understand that you should check that no appliance templates are using the project you wish to delete (otherwise this may break generating a machine image for the appliance template).
 
+.. note:: If an appliance template is stillusing a project, you can remove the project from the catalog by marking it as ``obsolete``.  This does not delete the project contents, however users cannot use the project for new appliance templates.  See :ref:`obsolete-project` for more information.
+
 To delete the project:
 
 	1. Under the ``Administration`` tab, click ``Projects``.

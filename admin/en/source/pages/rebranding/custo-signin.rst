@@ -74,10 +74,10 @@ By default, the Sign In page allows the user to click a check box to remember pr
 
 .. _hide-password-reset:
 
-Hiding Option to Rest Password
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Hiding Option to Reset Password
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can choose to hide the option to that allows the user to reset the password from the sign in page. To do so set the option to “false” in section ``<c:client>``:
+You can choose to hide the option that allows the user to reset the password from the sign in page. To do so set the option to “false” in section ``<c:client>``:
 
 .. code-block:: xml 
 

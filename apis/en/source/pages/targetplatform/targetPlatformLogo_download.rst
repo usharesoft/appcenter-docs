@@ -21,7 +21,7 @@ This is similar to :ref:`targetPlatformLogo-downloadFile`
 Security Summary
 ~~~~~~~~~~~~~~~~
 
-* Requires Authentication: ``false``
+* Requires Authentication: ``true``
 * Entitlements Required: ``None``
 
 URI Parameters

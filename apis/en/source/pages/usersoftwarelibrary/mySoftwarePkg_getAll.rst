@@ -31,8 +31,8 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): 
-* ``msid`` (required): 
+* ``uid`` (required): the user name (login name) of the :ref:`user-object`
+* ``msid`` (required): the id of the :ref:`mysoftware-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

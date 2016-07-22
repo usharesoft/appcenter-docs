@@ -21,7 +21,7 @@ This request is similar to :ref:`userAvatar-downloadFile`
 Security Summary
 ~~~~~~~~~~~~~~~~
 
-* Requires Authentication: ``false``
+* Requires Authentication: ``true``
 * Entitlements Required: ``None``
 
 URI Parameters

@@ -5,8 +5,8 @@
 Workspace API Resources
 =======================
 
-	* :ref:`workspace-create`: Creates a new workspace in an organization
 	* :ref:`workspace-getAll`: Retrieves all the workspace in an organization
+	* :ref:`workspace-create`: Creates a new workspace in an organization
 	* :ref:`workspace-get`: Retrieves the information of a workspace
 	* :ref:`workspace-delete`: Removes a workspace from an organization
 	* :ref:`userWorkspace-getAll`: Retrieves all the workspaces a user is a member or administrator of
@@ -16,8 +16,8 @@ Workspace API Resources
 .. toctree::
     :hidden:
 
-    workspace_create
     workspace_getAll
+    workspace_create
     workspace_get
     workspace_delete
     userWorkspace_getAll

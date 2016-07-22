@@ -25,9 +25,9 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): 
-* ``siid`` (required): 
-* ``sid`` (required): 
+* ``uid`` (required): the user name (login name) of the :ref:`user-object`
+* ``siid`` (required): the id of the :ref:`scannedinstance-object`
+* ``sid`` (required): the id of the :ref:`scan-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

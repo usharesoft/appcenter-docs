@@ -20,7 +20,7 @@ A published machine image is a machine image that has been uploaded and register
 
 A list of :ref:`publishimage-object` objects are returned. 
 
-The ``pimg`` query parameter can be used to retrieve a subset of published machine images.
+The ``img`` query parameter can be used to retrieve a subset of published machine images.
 
 Security Summary
 ~~~~~~~~~~~~~~~~

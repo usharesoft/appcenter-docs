@@ -21,14 +21,14 @@ This is similar to :ref:`targetPlatformLogo-download`
 Security Summary
 ~~~~~~~~~~~~~~~~
 
-* Requires Authentication: ``false``
+* Requires Authentication: ``true``
 * Entitlements Required: ``None``
 
 URI Parameters
 ~~~~~~~~~~~~~~
 
 * ``tpid`` (required): the id of the :ref:`targetplatform-object`
-* ``fileName`` (required): 
+* ``fileName`` (required): the file name of the logo to upload
 * ``oid`` (required): the id of the :ref:`org-object`
 * ``logoId`` (required): the id of the target platform :ref:`logo-object`
 

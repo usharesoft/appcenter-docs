@@ -19,7 +19,7 @@ Downloads a logo for an appliance template in a workspace.
 Security Summary
 ~~~~~~~~~~~~~~~~
 
-* Requires Authentication: ``false``
+* Requires Authentication: ``true``
 * Entitlements Required: ``None``
 
 URI Parameters

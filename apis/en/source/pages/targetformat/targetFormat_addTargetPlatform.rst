@@ -1,49 +1,51 @@
 .. Copyright 2016 FUJITSU LIMITED
 
-.. _targetFormatLogo-downloadFile:
+.. _targetFormat-addTargetPlatform:
 
-targetFormatLogo_downloadFile
------------------------------
+targetFormat_addTargetPlatform
+------------------------------
 
-.. function:: GET /orgs/{oid}/targetformats/{tfid}/logo/{logoId}/{fileName}
+.. function:: POST /orgs/{oid}/targetformats/{tfid}/targetplatforms
 
 .. sidebar:: Summary
 
-	* Method: ``GET``
-	* Response Code: ``200 / 304``
-	* Response Formats: ``*/*``
+	* Method: ``POST``
+	* Response Code: ``201``
+	* Response Formats: ``application/xml`` ``application/json``
 	* Since: ``UForge 3.6``
 
-Download the logo from a target format. 
-
-This is similar to :ref:`targetFormatLogo-downloadFile`
+Adds the target format to a target platform. This is equivalent to :ref:`targetPlatform-addFormat`.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
 
 * Requires Authentication: ``true``
-* Entitlements Required: ``None``
+* Entitlements Required: ``org_formats_administrate``
 
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``fileName`` (required): the name of the logo binary
 * ``oid`` (required): the id of the :ref:`org-object`
-* ``tfid`` (required): the id of the :ref:`targetformat-object`
-* ``logoId`` (required): the id of the target format :ref:`logo-object`
+* ``tfid`` (required): the id of the :ref:`targetformat-object` to add
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-None
+A :ref:`targetPlatform-object` object
 
 Example Request
 ~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/orgs/{oid}/targetformats/{tfid}/logo/{logoId}/{fileName}" -X GET \
-	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
+	curl "https://uforge.example.com/api/orgs/{oid}/targetformats/{tfid}/targetplatforms" -X POST \
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
+
+Example of representation.xml content (the request body):
+
+.. code-block:: xml
+
+
 
 .. seealso::
 
@@ -62,4 +64,4 @@ Example Request
 	 * :ref:`targetFormatLogo-upload`
 	 * :ref:`targetFormatLogo-delete`
 	 * :ref:`targetFormatLogo-download`
-	 * :ref:`targetFormat-getAllTargetPlatforms`
+	 * :ref:`targetFormatLogo-downloadFile`

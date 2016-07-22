@@ -29,7 +29,7 @@ URI Parameters
 * ``pid`` (required): the id of the :ref:`partition-object`
 * ``ptid`` (required): the id of the :ref:`partitiontable-object`
 * ``aid`` (required): the id of the :ref:`appliance-object`
-* ``did`` (required): 
+* ``did`` (required): the id of the :ref:`disk-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -18,7 +18,7 @@ Retrieves the current status of published machine images owned by a user.
 
 A list of :ref:`status-object` objects are returned. 
 
-The ``pimg`` query parameter can be used to retrieve a subset of published machine images status.
+The ``img`` query parameter can be used to retrieve a subset of published machine images status.
 
 Security Summary
 ~~~~~~~~~~~~~~~~

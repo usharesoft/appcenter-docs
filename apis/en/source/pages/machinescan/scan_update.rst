@@ -1,20 +1,20 @@
 .. Copyright 2016 FUJITSU LIMITED
 
-.. _scan-delete:
+.. _scan-update:
 
-scan_delete
+scan_update
 -----------
 
-.. function:: DELETE /users/{uid}/scannedinstances/{siid}/scans/{sid}
+.. function:: PUT /users/{uid}/scannedinstances/{siid}/scans/{sid}
 
 .. sidebar:: Summary
 
-	* Method: ``DELETE``
-	* Response Code: ``204 / 200``
-	* Response Formats: 
+	* Method: ``PUT``
+	* Response Code: ``200``
+	* Response Formats: ``application/xml`` ``application/json``
 	* Since: ``UForge 3.4``
 
-Removes a scan from a parent ``scanned instance``.  The scan report and related uploaded overlays are deleted.
+Updates a scan object.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -32,15 +32,21 @@ URI Parameters
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-None
+A :ref:`scan-object` object
 
 Example Request
 ~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/users/{uid}/scannedinstances/{siid}/scans/{sid}" -X DELETE \
-	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
+	curl "https://uforge.example.com/api/users/{uid}/scannedinstances/{siid}/scans/{sid}" -X PUT \
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
+
+Example of representation.xml content (the request body):
+
+.. code-block:: xml
+
+
 
 .. seealso::
 
@@ -52,6 +58,7 @@ Example Request
 	 * :ref:`scan-multipartCreate`
 	 * :ref:`scan-cancel`
 	 * :ref:`scan-create`
+	 * :ref:`scan-delete`
 	 * :ref:`scan-get`
 	 * :ref:`userScan-getAll`
 	 * :ref:`scanFile-getAll`

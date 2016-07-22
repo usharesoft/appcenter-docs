@@ -12,6 +12,8 @@ Target Format API Resources
 	* :ref:`targetFormat-update`: Updates the information of a target format
 	* :ref:`targetFormat-delete`: Remove a target format from an organization
 	* :ref:`targetFormat-getAllTargetPlatforms`: Retrieves all the target platforms where this target format is used
+	* :ref:`targetFormat-addTargetPlatform`: Adds the target format to a target platform
+	* :ref:`targetFormat-removeTargetPlatform`: Removes the provided target format from a target platform
 	* :ref:`targetFormatLogo-upload`: Upload a logo for a target format
 	* :ref:`targetFormatLogo-downloadFile`: Download the logo from a target format
 	* :ref:`targetFormatLogo-delete`: Remove an uploaded logo from a target format
@@ -30,6 +32,8 @@ Target Format API Resources
     targetFormat_update
     targetFormat_delete
     targetFormat_getAllTargetPlatforms
+    targetFormat_addTargetPlatform
+    targetFormat_removeTargetPlatform
     targetFormatLogo_upload
     targetFormatLogo_downloadFile
     targetFormatLogo_delete

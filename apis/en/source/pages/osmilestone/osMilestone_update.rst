@@ -27,8 +27,8 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``mid`` (required): 
-* ``id`` (required): the id of the :ref:`milestone-object` to remove
+* ``mid`` (required): the id of the :ref:`milestone-object` to remove
+* ``id`` (required): the id of the :ref:`distribprofile-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

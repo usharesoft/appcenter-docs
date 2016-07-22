@@ -1,20 +1,22 @@
 .. Copyright 2016 FUJITSU LIMITED
 
-.. _mySoftwarePkg-add:
+.. _mySoftwarePkg-updateAll:
 
-mySoftwarePkg_add
------------------
+mySoftwarePkg_updateAll
+-----------------------
 
-.. function:: POST /users/{uid}/mysoftware/{msid}/pkgs
+.. function:: PUT /users/{uid}/mysoftware/{msid}/pkgs
 
 .. sidebar:: Summary
 
-	* Method: ``POST``
-	* Response Code: ``201``
+	* Method: ``PUT``
+	* Response Code: ``200``
 	* Response Formats: ``application/xml`` ``application/json``
 	* Since: ``UForge 1.0``
 
-Adds a new package to a software component.  This only creates the meta-data for the package, please use :ref:`mySoftwarePkg-upload` to upload the file(s). 
+Updates the information of a list of packages in a software component. 
+
+This only updates the meta-data for the packages, please use :ref:`mySoftwarePkg-upload` to upload the file(s). 
 
 Please refer to :ref:`package-object` for a complete list of all the ``pkg`` attributes.
 
@@ -33,14 +35,14 @@ URI Parameters
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A :ref:`package-object` object
+A :ref:`packages-object` object
 
 Example Request
 ~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/users/{uid}/mysoftware/{msid}/pkgs" -X POST \
+	curl "https://uforge.example.com/api/users/{uid}/mysoftware/{msid}/pkgs" -X PUT \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
 
 Example of representation.xml content (the request body):
@@ -48,8 +50,7 @@ Example of representation.xml content (the request body):
 .. code-block:: xml
 
 	<ns0:package>
-		<size>10</size>
-		<origName>example.txt</origName>
+		<fullName>UpdatedFilePath.txt</fullName>
 	</ns0:package>
 
 
@@ -62,10 +63,10 @@ Example of representation.xml content (the request body):
 	 * :ref:`mySoftware-update`
 	 * :ref:`mySoftware-delete`
 	 * :ref:`mySoftwareUsage-getAll`
+	 * :ref:`mySoftwarePkg-add`
 	 * :ref:`mySoftwarePkg-getAll`
 	 * :ref:`mySoftwarePkg-deleteAll`
 	 * :ref:`mySoftwarePkg-get`
-	 * :ref:`mySoftwarePkg-update`
 	 * :ref:`mySoftwarePkg-download`
 	 * :ref:`mySoftwarePkg-downloadFile`
 	 * :ref:`mySoftwarePkg-upload`

@@ -30,7 +30,7 @@ URI Parameters
 * ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``fileName`` (required): the file name of the certificate
 * ``caid`` (required): the id of the :ref:`credaccount-object`
-* ``certid`` (required): 
+* ``certid`` (required): the id of the :ref:`certificate-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

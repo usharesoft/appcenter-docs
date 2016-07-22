@@ -27,7 +27,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``wid`` (required): 
+* ``wid`` (required): the id of the :ref:`workspace-object`
 * ``oid`` (required): the id of the :ref:`org-object`
 
 HTTP Request Body Parameters

@@ -28,7 +28,7 @@ URI Parameters
 ~~~~~~~~~~~~~~
 
 * ``name`` (required): the name of the operating system
-* ``oid`` (required): 
+* ``oid`` (required): the id of the :ref:`org-object`
 * ``version`` (required): the version of the operating system
 
 HTTP Request Body Parameters

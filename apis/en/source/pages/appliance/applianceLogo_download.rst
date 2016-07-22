@@ -21,7 +21,7 @@ This is the same request as :ref:`applianceLogo-downloadFile`
 Security Summary
 ~~~~~~~~~~~~~~~~
 
-* Requires Authentication: ``false``
+* Requires Authentication: ``true``
 * Entitlements Required: ``None``
 
 URI Parameters

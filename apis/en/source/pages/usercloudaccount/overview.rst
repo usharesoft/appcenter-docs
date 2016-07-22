@@ -5,8 +5,8 @@
 User Cloud Account API Resources
 ================================
 
-	* :ref:`cloudAccount-create`: Creates a new cloud account for an user
 	* :ref:`cloudAccount-getAll`: Retrieves all the cloud accounts for an user
+	* :ref:`cloudAccount-create`: Creates a new cloud account for an user
 	* :ref:`cloudAccount-get`: Retrieve the information of a cloud account
 	* :ref:`cloudAccount-update`: Updates the meta-data of a cloud account
 	* :ref:`cloudAccount-delete`: Removes a cloud account from an user
@@ -20,8 +20,8 @@ User Cloud Account API Resources
 .. toctree::
     :hidden:
 
-    cloudAccount_create
     cloudAccount_getAll
+    cloudAccount_create
     cloudAccount_get
     cloudAccount_update
     cloudAccount_delete

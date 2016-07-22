@@ -28,7 +28,7 @@ URI Parameters
 * ``fileName`` (required): the file name of the binary to upload
 * ``pid`` (required): the id of the :ref:`project-object`
 * ``id`` (required): the id of the :ref:`distribprofile-object`
-* ``pkgid`` (required): 
+* ``pkgid`` (required): the id of the :ref:`package-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

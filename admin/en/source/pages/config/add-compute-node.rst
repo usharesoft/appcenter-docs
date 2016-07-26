@@ -86,6 +86,8 @@ You can add a new OAR compute node which was instantiated from UForge but which 
 		{s=$0;gsub(".*nature=","",s);gsub(",.*","",s);printf "/usr/sbin/oarnodesetting
 		-a -h oarnode3 -p cpuset=0,nature=%s\n",s}' | sh
 
+You can also use a remote disk space of the compute node to generate multiple machine images in parallel by mounting the ``/space`` directory with a NAS or SAN.
+
 .. _remove-node:
 
 Removing a Node

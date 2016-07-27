@@ -18,14 +18,6 @@ The version number is automatically provided as part of the initial configuratio
 
 For colours and layout modifications, please refer to :ref:`customize-css`.
 
-Hiding the UForge URL
-~~~~~~~~~~~~~~~~~~~~~
-
-To show or hide the UForge URL, under ``<c:client>`` enter “false” if you do not want to show the URL:
-
-.. code-block:: xml 
-
-	<c:showUForgeUrl>false</c:showUForgeUrl>
 
 Modifying the Copyright
 ~~~~~~~~~~~~~~~~~~~~~~~

@@ -76,7 +76,7 @@ You can set an advanced partioning table for a Windows based appliance template.
 	2. Click on the green + sign at the top.
 	3. You can modify the name and partitions type
 	4. Select the filesystem to ``ntfs`` and mount point, for example: ``D:``.
-	5. Enter the size. The install disk should be ``12 Gb`` for core versions and not less than ``32Gb`` for the full version
+	5. Enter the size. The install disk should be ``14 Gb`` for core versions and not less than ``32Gb`` for the full version
 	6. Check the box in the ``Grow`` column if you want the partition to be growable.
 	7. Click ``save``.
 

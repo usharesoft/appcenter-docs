@@ -18,7 +18,7 @@ To generate a machine image:
 
 	6. You can set the disk size, then click the ``generate`` button to launch a generation in UForge for this appliance template. 
 
-		.. note:: Depending on the packages you install and the size of your software, make sure that the disk size is large enough to accommodate the software to be installed.
+		.. note:: Depending on the packages you install and the size of your software, make sure that the disk size is large enough to accommodate the software to be installed.  For windows based operating systems, it is advised to have a disk size of at least ``14GB`` for core versions, and at least ``20GB`` for full versions.
 
 
 The generation will take a few minutes to complete (depending on the number of packages in the appliance template and the disk size chosen). The generation progress is shown.

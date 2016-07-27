@@ -20,6 +20,8 @@ You can define the following as part of the install profile:
 * ``Welcome Message``: You can enter a welcome message.
 * ``Services``: You to activate or deactivate the firewall present in the filesystem when launching the appliance (regardless of whether the firewall is iptables or other). Firewall is set to ``Off`` by default. 
 
+.. note:: For basic partitioning disk size, you must ensure that the disk is large enough to store all the binaries and files for the appliance template.  For windows based operating systems, it is advised to have a disk size of at least ``14GB`` for core versions, and at least ``20GB`` for  full versions.
+
 .. _appliance-install-profile-users-groups:
 
 Adding Users and Groups

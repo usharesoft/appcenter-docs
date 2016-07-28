@@ -8,7 +8,7 @@ Getting Started
 .. _uforge-signup:
 
 Signing In to UForge Portal
--------------------------
+---------------------------
 
 To sign in, go to the UForge Portal sign in page:
 

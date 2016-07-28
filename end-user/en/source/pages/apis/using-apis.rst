@@ -20,7 +20,7 @@ Communication with UForge is done via HTTP(S). For security reasons it is recomm
 
 API methods that require a particular HTTP method will return an error if you do not make your request with the correct one. All HTTP methods return codified response codes.
 
-For more information, refer to the API documentation. `API documentation <hhttps://www.usharesoft.com/resources/documentation.html>`_
+For more information, refer to the REST APIs documentation.
 
 Response & Error Codes
 ----------------------

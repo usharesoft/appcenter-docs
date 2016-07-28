@@ -44,7 +44,7 @@ This IDM Service can be extended to provide a wider identity and access manageme
 	* Package information for an operating system
 	* Third party project software components
 
-By default MySQL is used as the SQL Store.
+By default MariaDB is used as the SQL Store.
 
 **Generation Cluster.**  Image generation is I/O intensive and may take several minutes to complete.  Consequently an HPC cluster is used to execute image generation jobs.  There are two parts to this cluster:
 

@@ -16,11 +16,16 @@ Install [read the docs theme](https://github.com/snide/sphinx_rtd_theme):
 
     $ pip install sphinx_rtd_theme
     
-Build the docs and open them in your browser.  For example for the UForge End User Guide:
+Build the docs and open them in your browser:
 
-    $ cd uforge-appcenter/end-user/en
+    $ cd uforge-appcenter
     $ make html
-    $ open build/html/index.html
+
+The html files are in the build directory for each sub-project, for example, the end user guide:
+
+    $ open uforge-appcenter/build/html/index.html
+
+You can also build each guide individually, note though the end user guide and admin guide depend on the API guide.
 
 ### Contributions Welcome!
 

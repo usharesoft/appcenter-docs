@@ -7,24 +7,16 @@ Getting Started
 
 .. _uforge-signup:
 
-Signing Up for an Account
+Signing In to UForge Portal
 -------------------------
 
-If you are not using an onsite version of UForge AppCenter, then you can get started by signing up for a free account on UForgeNow.  Go to the registration page on the UShareSoft website at:
+To sign in, go to the UForge Portal sign in page:
 
-	`https://www.usharesoft.com/signup/signup.html <https://www.usharesoft.com/signup/signup.html>`_
+	`https://your-uforge-server-hostname/uforge/ <https://your-uforge-server-hostname/uforge/>`_
 
-Only your name and email are required. When the account has been activated, you will receive an email with your account credential information.
+The UForge Portal has the following pages, accessible from the left-hand sidebar:
 
-.. warning:: If you are using an onsite version, then your sign up process may be different.
-
-To sign in, go to the UForgeNow sign in page:
-
-	`https://uforge.usharesoft.com/signin <https://uforge.usharesoft.com/signin>`_
-
-The UForgeNow portal has the following pages, accessible from the left-hand sidebar:
-
-	* ``Dashboard``. It shows statistics on your UForge usage.
+	* ``Dashboard``: It shows statistics on your UForge usage.
 	* ``VM Builder``: This is where your appliances are created and listed. You also go to this page to add custom software, update packages in appliances, and create images, among other things.
 	* ``Collaboration``: This is a private area where you can share appliances with other users who are part of your workspace. These users must be invited and join your workspace. They can be part of your organization or part or another organization.
 	* ``Migration``: This is where you can launch a scan of a live system, view the results, or compare scans.
@@ -35,8 +27,6 @@ The UForgeNow portal has the following pages, accessible from the left-hand side
 .. warning:: Depending upon your access rights one or more of these tabs may not be visible.
 
 .. image:: /images/uforge-sidebar.jpg
-
-Your UForge platform can be setup to interact with the UForge Marketplace. The Marketplace allows you to provide and sell products to the general public (not limited to your organization). For complete Marketplace documentation, refer to the UForge Marketplace documentation.
 
 .. _uforge-basic-concepts:
 

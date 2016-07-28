@@ -310,11 +310,8 @@ pdf_documents = [
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
 
-
 # Refer to the APIs documentation.
 intersphinx_mapping = {'apis' : ('../../../../../apis/en/build/html/', '../../../apis/en/build/html/objects.inv')}
-
-
 
 # A comma-separated list of custom stylesheets.
 pdf_stylesheets = ['sphinx', 'kerning', 'a4', 'ja']

@@ -16,7 +16,7 @@ To create a new appliance in your private workspace:
 	2. On the ``Appliance Library`` page, click on ``create`` in the top right. 
 	3. Enter the ``Name`` and ``Version`` of the appliance.  
 
-		.. image:: /images/create-appliance-centos.jpg
+		.. image:: /images/create-appliance-centos.png
 
 	4. From the drop-down menus, select the operating system (distribution, release and architecture).
 	5. Click the ``create`` button. This creates a skeleton of an appliance template in the platform which you can now customize with operating system packages, middleware and application software.
@@ -43,7 +43,7 @@ To create a Windows Appliance:
 
 		.. note:: Unlike Linux, the following cannot be set for Windows appliances: Keyboard, Root user, User & Groups, Kernel Parameters and Firewall.  
 
-		.. image :: /images/windows-install.jpg
+		.. image :: /images/windows-install.png
 
 	7. Optionally, you can set the Activation Key as part of the Install Profile. If it is not entered in the Install Profile, the default key will be used for a 30-day trial period once the appliance is booted.
 
@@ -56,7 +56,7 @@ To create a Windows Appliance:
 		f. Check the box in the Grow column if you want the partition to be growable.
 		g. Click ``save``.
 
-		.. image :: /images/windows-adv-partitions.jpg
+		.. image :: /images/install-profile-partitioning-windows.png
 
 	9. Add software bundles from the Project or MySoftware pages.
 

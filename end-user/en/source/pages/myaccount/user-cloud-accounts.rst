@@ -10,7 +10,7 @@ In order to publish an image to a cloud using UForge AppCenter, you will need to
 	1. Click on the ``Credentials`` tab (key icon) and go to ``Cloud Account``.
 	2. Select the type of account you want to create from the drop-down menu. 
 
-	.. image:: /images/cloud-account-create.jpg
+	.. image:: /images/cloud-account-create.png
 
 	3. Scroll over any given field for more information on the mandatory information to provide for a given cloud account.
 	4. Click ``Create`` to complete.

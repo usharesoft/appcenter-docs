@@ -14,7 +14,7 @@ To view the details of a scan:
 	1. Go to the ``Migration`` tab and click ``My Scans``.
 	2. Click on the scan. All of the packages and non-native files will be listed.
 
-	.. image:: /images/scan-details.jpg
+	.. image:: /images/scan-details.png
 
 	3. You can also filter the packages that have been modified (UForge AppCenter compares the packages scanned with its repo) by checking ``Only show the packages with changes``.
 	4. To view the more details of a package, click on the package name and then the arrow.

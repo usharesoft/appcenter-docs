@@ -36,10 +36,10 @@ To add a comment to a specific appliance template in a workspace, do the followi
 	6. Add your text. 
 	7. Click ``post``.
 
-	.. image:: /images/workspace-comment2.jpg
+	.. image:: /images/workspace-template-comment.png
 
 If you want to reply to a comment, enter your comment below the initial comment and click ``reply``.
 
-.. image:: /images/workspace-reply-to-comment2.jpg
+.. image:: /images/workspace-reply-to-comment.png
 
 

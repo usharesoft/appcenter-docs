@@ -7,7 +7,7 @@ Modifying Your User Profile
 
 You can edit your user profile by going to the ``Profile`` page. The only mandatory information is your email address.
 
-.. image:: /images/my-account2.jpg
+.. image:: /images/my-account.png
 
 You can add or modify your name, company information and address and click ``save``.
 
@@ -36,7 +36,7 @@ On the ``Usage`` page you can quickly see:
 
 On the ``Generations`` page you will see a list of the machine images generated (including the ones that failed) and published.
 
-.. image:: /images/my-account-generations.jpg
+.. image:: /images/my-account-generations.png
 
 
 

@@ -13,6 +13,6 @@ To add an SSH key:
 	2. Click ``create``.
 	3. Enter the key name and the key details.
 
-	.. image:: /images/sshkey-create.jpg
+	.. image:: /images/sshkey-create.png
 
 	4. Click ``add``.

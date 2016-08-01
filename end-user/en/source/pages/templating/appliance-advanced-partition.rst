@@ -37,11 +37,11 @@ To set advanced partitioning for an appliance template:
 	    * logical group(s), assigning the associated physical extend (partition)
 	    * specify the logical volume specification for the created logical group(s)
 
-	    .. image:: /images/advanced-partitioning.jpg
+	    .. image:: /images/advanced-partitioning.png
 
 	5. Click on the arrow in ``Disks`` next to sda. You will see the default disks.
 
-		.. image:: /images/install-profile-partitioning-disks.jpg
+		.. image:: /images/install-profile-partitioning-disks.png
 
 	6. Delete the default ``linux swap`` partition by clicking the x at the end of the line with ``linux-swap``. You must not set the swap size to 0.
 	7. Click on the size of the ``MSDOS`` partition to set it to ``20000``.
@@ -51,7 +51,7 @@ To set advanced partitioning for an appliance template:
 	11. In the ``Logical Groups`` section, click on the + sign and set the name of the logical group. For this example: ``ROOTVG``.
 	12. Next to the newly created volume group, click on the + sign to create a new volume extent. A pop-up window will appear proposing a ``sda/2`` physical extend with size automatically set to ``18000 MB``. Click ``ok``.
 
-		.. image:: /images/install-profile-partitioning-enlarge.jpg
+		.. image:: /images/install-profile-partitioning-enlarge.png
 
 	13. Create the logical volumes one by one, or create them all at once and then edit the respective specifications. For each logical volume to create, click on the + sign in the ``Logical Volumes`` section. For our example, you will need seven logical volumes.
 
@@ -80,7 +80,7 @@ You can set an advanced partioning table for a Windows based appliance template.
 	6. Check the box in the ``Grow`` column if you want the partition to be growable.
 	7. Click ``save``.
 
-		.. image:: /images/install-profile-partitioning-windows.jpg
+		.. image:: /images/install-profile-partitioning-windows.png
 
 
 

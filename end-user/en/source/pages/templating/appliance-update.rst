@@ -13,7 +13,7 @@ To modify an appliance template:
 	2. From the ``Overview`` page you can add or change the logo, modify the name, version or description.
 	3. On the ``Stack`` page, you will notice the appliance toolbox on the left-hand side.  
 
-		.. image:: /images/toolbox.jpg
+		.. image:: /images/toolbox.png
 
 The toolbox allows you to define the five key elements of an appliance, namely:
 

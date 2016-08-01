@@ -16,8 +16,6 @@ Each organization within the UForge platform has a project catalog, and each mem
 
 You can also create custom OS profiles to include specific packages to an existing (standard) OS profile. See :ref:`create-custom-os`.
 
-.. image:: /images/project-catalog.jpg
-
 .. _add-project:
 
 Adding a Project
@@ -44,7 +42,7 @@ To add a new project:
 			* License type.  Note if the software has a proprietary license, then choose ``Custom``. This allows you to upload a custom license
 			* Company information. All previous custom companies registered for projects are provided in the list. If the company of the project does not yet exist, choose any existing company and edit it afterwards.
 
-		.. image:: /images/create-project.jpg
+		.. image:: /images/create-project.png
 
 	5. Click ``create``.
 

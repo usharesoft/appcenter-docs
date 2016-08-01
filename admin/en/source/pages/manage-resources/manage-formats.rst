@@ -67,7 +67,7 @@ To create a target platform:
 	1. From the ``Administration`` tab, click on ``Target Platforms``.
 	2. In the top right-hand, click on ``new target platform``.
 
-	.. image:: /images/target-platform-button.jpg
+	.. image:: /images/target-platform-button.png
 
 	3. Enter the name of the target platform.
 	4. Select the type from the drop-down menu.
@@ -75,7 +75,7 @@ To create a target platform:
 	6. If you do not want the target platform to be visible immediately, click on the check box next to ``Enable`` to deselect.
 	7. Click ``create`` in the top right to complete the creation.
 
-	.. image:: /images/target-platform-create.jpg
+	.. image:: /images/target-platform-create.png
 
 
 `Create a Target Format`
@@ -85,7 +85,7 @@ To create a target format:
 	1. From the ``Administration`` tab, click on ``Target Platforms``.
 	2. In the top right-hand, click on ``new target format``.
 
-		.. image:: /images/target-format-button.jpg
+		.. image:: /images/target-format-button.png
 
 	3. From the drop-down menu, choose the target format category and click the next arrow button.
 	4. Enter the name of the target format.
@@ -96,7 +96,7 @@ To create a target format:
 	9. On the ``Target Platforms`` page you can attach your target format to a target platform. To add the target format to a target platform, select the target platfrom from the botton table and click the up arrow. Your target format will be attached to all the target platforms listed in the top table will be part of the part format you are creating.
 	10. Click next to complete.
 
-		.. image:: /images/target-format-create.jpg
+		.. image:: /images/target-format-create.png
 
 
 

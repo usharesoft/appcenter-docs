@@ -16,7 +16,7 @@ To create a new OS profile:
 	3. Double-click on the operating system you want to administer.  This will provide the current list of profiles this operating system has.  
 	4. Select the profile which will serve as the base for your custom OS profile and click create.
 
-		.. image:: /images/create-os-profile.jpg
+		.. image:: /images/create-os-profile.png
 
 	5. Enter your profile name and click create.
 	6. Enter a description (mandatory).

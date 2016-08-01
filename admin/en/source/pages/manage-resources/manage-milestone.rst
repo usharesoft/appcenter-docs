@@ -7,9 +7,9 @@ Creating and Managing Milestones
 
 Milestones are used as a marker for a specific event, such as beta or GA for example. They appear on the GUI under OS package updates.
 
-.. image:: /images/milestone.jpg
+.. image:: /images/milestone.png
 
-In the figure above, the M indicates a Milestone. For CentOS, this is the versions (6.1, 6.2 etc). Milestones can be customized by the UForge administrator using the command line interface. 
+In the figure above, the triangle shape indicates a Milestone. For CentOS, this is the versions (6.1, 6.2 etc). Milestones can be customized by the UForge administrator using the command line interface. 
 
 To create or manage milestones using the CLI, use the command ``uforge os``. 
 

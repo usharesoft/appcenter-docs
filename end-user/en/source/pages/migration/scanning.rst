@@ -33,7 +33,7 @@ To carry out a scan, go to the ``Migration`` tab:
 	3. Select ``Linux`` from the drop-down menu.
 	4. If you want to exclude certain directories or files from the scan then click ``add`` and enter the directory path or full pathname of the file.
 
-		.. image:: /images/migration-create-scan2.jpg
+		.. image:: /images/migration-create-scan.png
 
 	5. Click ``Next``. Follow the instructions on the UForge AppCenter GUI.
 	6. Download binary locally by clicking ``Download``.
@@ -69,7 +69,7 @@ To carry out a scan, go to the ``Migration`` tab:
 		- If you are using exe the pop up will indicate the partition being scanned and time left
 		- If you choose to download the zip then you will have to launch the command as indicated.
 
-		.. image:: /images/migration-scan-windows.jpg
+		.. image:: /images/migration-scan-windows.png
 
 	5. If you want to exclude certain directories or files from the scan then click ``add`` and enter the directory path or full pathname of the file.
 
@@ -84,4 +84,4 @@ Viewing Scans
 
 To view all the scans executed from your UForge account, go to the ``Migration`` tab. On the ``My Scans`` page you can view a list of the scans. To view the details of a scan, click on the scan and refer to :ref:`migration-scan-details`.
 
-	.. image:: /images/scan-list.jpg
+	.. image:: /images/migration-scan-list.png

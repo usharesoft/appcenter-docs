@@ -17,7 +17,7 @@ To invite users to your workspace:
 	1. Go to the ``Members`` page of the ``Collaboration`` tab.
 	2. Click on ``invite`` in the top right.
 
-		.. image:: /images/workspace-invite-members2.jpg
+		.. image:: /images/workspace-invite-members.png
 
 	3. Enter the email addresses of the people you want to invite to your workspace. If the email you specify is not recognized by UForge AppCenter, you will be prompted to invite them to join the platform.
 	4. You can modify the invitation message. This message will be included in the email inviting members to join your workspace.

@@ -13,7 +13,7 @@ Under the ``Appliance Library``, the appliances are organized as follows:
 	* ``Imported Appliances`` have been imported from a Collaboration workspace or from the UForge Marketplace if you have access to one 
 	* ``Shared Appliances`` are appliance templates that you have shared to a Collaboration workspace or to the UForge Marketplace if you have access 
 
-.. image:: /images/appliance-library-new.jpg
+.. image:: /images/appliance-library-new.png
 
 You can view the details of an appliance template, generate images from them and comment on them.
 

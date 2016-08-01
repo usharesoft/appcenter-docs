@@ -26,7 +26,7 @@ The UForge Portal has the following pages, accessible from the left-hand sidebar
 
 .. warning:: Depending upon your access rights one or more of these tabs may not be visible.
 
-.. image:: /images/uforge-sidebar.jpg
+.. image:: /images/uforge-sidebar.png
 
 .. _uforge-basic-concepts:
 

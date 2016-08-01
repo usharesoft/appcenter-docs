@@ -15,7 +15,7 @@ From the Migration tab:
 	1. Go to the ``Migration`` tab > ``My Scans``.
 	2. Select the ``import`` button (downward arrow) to create an appliance template from the scan.
 
-	.. image:: /images/scan-import.jpg
+	.. image:: /images/scan-import.png
 
 	3. Enter the appliance name and version.
 	4. Click ``import``.

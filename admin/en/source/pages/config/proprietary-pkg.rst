@@ -50,5 +50,5 @@ For example, to add a Red Hat repository:
 
 	9. Create a OS profile based on packages (minimal, server, etc.)::
 
-		$ /opt/UShareSoft/uforge/bin/launch_distro_sorter.sh -a x86_64 -d RHEL -v 6.5
+		$ /opt/UShareSoft/uforge/bin/runjob.py sorter_low_prio -a x86_64 -d RHEL -v 6.5
 

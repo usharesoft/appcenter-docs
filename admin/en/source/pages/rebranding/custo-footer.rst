@@ -10,9 +10,6 @@ UForge Portal allows you to customize the information that appears in the footer
 	* ``<c:client>``
 	* ``<c:footer>``
 
-The following figure illustrates a sample footer. 
-
-.. image:: /images/footer.jpg
 
 The version number is automatically provided as part of the initial configuration and any update of the platform.
 

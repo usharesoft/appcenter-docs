@@ -13,7 +13,7 @@ You can modify several elements of the header that is displayed when the user is
 
 The following figure displays the default signed in header.
 
-.. image:: /images/banner.jpg
+.. image:: /images/header.png
 
 For colours and layout modifications, please refer to :ref:`customize-css`.
 

@@ -9,7 +9,7 @@ You can modify a few elements on the sign-in and sign-up pages.
 
 The following figure shows the default Sign-in page.
 
-.. image:: /images/sign-in.jpg
+.. image:: /images/sign-in.png
 
 Modifying the Logo
 ~~~~~~~~~~~~~~~~~~

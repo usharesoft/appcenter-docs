@@ -5,7 +5,15 @@
 applianceStats
 ==============
 
-Provides the statistic information of all the appliance templates for a user. This includes: - the number of appliance templates- the number of machine images generated and a breakdown on the format types used- the breakdown on the operating systems used- the number appliance templates shared (e.g. to workspaces)
+Provides the statistic information of all the appliance templates for a user. This includes:
+
+- the number of appliance templates
+
+- the number of machine images generated and a breakdown on the format types used
+
+- the breakdown on the operating systems used
+
+- the number appliance templates shared (e.g. to workspaces)
 
 Attributes
 ~~~~~~~~~~

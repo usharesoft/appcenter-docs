@@ -5,7 +5,19 @@
 appliance
 =========
 
-Holds all the meta-data information of a software stack (known as an appliance template). It consists of five layers, namely: - an Install Profile - specific information for the first time the image boots - an OS Profile - a list of operating system packages. Each operating system within the organization provides one or more standard OS profiles to choose from when creating the OS Profile of the appliance template. It is also possible to create custom OS profiles. - Projects - a list of Project software components chosen from the Organization´s Project Catalog - My Software - a list of software components chosen from the User´s private “Software Library” - Configuration - configuration information including boot scripts and/or other software components to manage the image after provisioning Appliance templates are then used to generate ``machine images``.
+Holds all the meta-data information of a software stack (known as an appliance template). It consists of five layers, namely:
+
+- an Install Profile - specific information for the first time the image boots
+
+- an OS Profile - a list of operating system packages. Each operating system within the organization provides one or more standard OS profiles to choose from when creating the OS Profile of the appliance template. It is also possible to create custom OS profiles
+
+- Projects - a list of Project software components chosen from the Organization´s Project Catalog
+
+- My Software - a list of software components chosen from the User´s private “Software Library”
+
+- Configuration - configuration information including boot scripts and/or other software components to manage the image after provisioning
+
+Appliance templates are then used to generate ``machine images``.
 
 Attributes
 ~~~~~~~~~~
@@ -45,8 +57,6 @@ The list of attributes for ``appliance`` are:
 	* ``name`` (string): the name of this appliance
 	* ``nbSecurityUpdates`` (int): the number of security operating system packages available for update
 	* ``nbUpdates`` (int): the number of native package updates available for update
-	* ``oasPackage`` (:ref:`oasPkg-object`): the :ref:`oaspkg-object` object describing the UForge Studio package added to this appliance
-	* ``oasPackageUri`` (anyURI): the uri resource of the UForge Studio package added to this appliance
 	* ``orgUri`` (anyURI): the uri resource of the organization this appliance belongs to
 	* ``osProfile`` (:ref:`distribProfile-object`): the :ref:`distribprofile-object` object describing the operating system profile of this appliance
 	* ``osProfileUri`` (anyURI): the uri resource for the operating system profile of this appliance

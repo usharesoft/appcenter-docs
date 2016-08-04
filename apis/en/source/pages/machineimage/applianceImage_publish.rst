@@ -50,7 +50,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:publishImage>
+	<ns0:publishImage xmlns:ns0="http://www.usharesoft.com/uforge">
 		<xsi:type></xsi:type>
 		<applianceUri>users/root/appliances/4</applianceUri>
 		<credAccount>

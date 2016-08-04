@@ -48,7 +48,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:scannedInstance>
+	<ns0:scannedInstance xmlns:ns0="http://www.usharesoft.com/uforge">
 		<name>Example Scan</name>
 		<distribution>
 			<name>CentOS</name>

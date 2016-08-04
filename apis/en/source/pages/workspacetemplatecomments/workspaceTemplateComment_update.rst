@@ -51,7 +51,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:comment>
+	<ns0:comment xmlns:ns0="http://www.usharesoft.com/uforge">
 		<message>Initial message</message>
 		<abused>true</abused>
 	</ns0:comment>

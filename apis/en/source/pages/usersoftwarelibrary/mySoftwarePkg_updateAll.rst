@@ -49,7 +49,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:package>
+	<ns0:package xmlns:ns0="http://www.usharesoft.com/uforge">
 		<fullName>UpdatedFilePath.txt</fullName>
 	</ns0:package>
 

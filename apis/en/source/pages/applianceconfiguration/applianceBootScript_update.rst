@@ -52,7 +52,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:bootScript>
+	<ns0:bootScript xmlns:ns0="http://www.usharesoft.com/uforge">
 		<bootType>everyboot</bootType>
 	</ns0:bootScript>
 

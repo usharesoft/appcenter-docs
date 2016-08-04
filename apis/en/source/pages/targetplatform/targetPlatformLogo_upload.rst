@@ -26,7 +26,7 @@ URI Parameters
 ~~~~~~~~~~~~~~
 
 * ``tpid`` (required): the id of the :ref:`targetplatform-object`
-* ``fileName`` (required): the file name of the logo to upload
+* ``fileName`` (required): the file name of the logo to download
 * ``oid`` (required): the id of the :ref:`org-object`
 * ``logoId`` (required): the id of the target platform :ref:`logo-object`
 

@@ -53,7 +53,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:image>
+	<ns0:image xmlns:ns0="http://www.usharesoft.com/uforge">
 		<compress>true</compress>
 		<targetFormat>
 			<name>VirtualBox</name>

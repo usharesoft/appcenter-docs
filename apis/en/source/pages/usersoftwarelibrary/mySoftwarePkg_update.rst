@@ -31,7 +31,7 @@ URI Parameters
 
 * ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``msid`` (required): the id of the :ref:`mysoftware-object`
-* ``mspackid`` (required): the id of the package
+* ``mspackid`` (required): the id of the :ref:`package-object` to get
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -50,7 +50,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:package>
+	<ns0:package xmlns:ns0="http://www.usharesoft.com/uforge">
 		<fullName>UpdatedFilePath.txt</fullName>
 	</ns0:package>
 

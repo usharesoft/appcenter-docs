@@ -46,7 +46,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:role>
+	<ns0:role xmlns:ns0="http://www.usharesoft.com/uforge">
 		<name>Example Role Updated</name>
 	</ns0:role>
 

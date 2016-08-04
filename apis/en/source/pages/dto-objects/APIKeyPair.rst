@@ -5,7 +5,11 @@
 apiKeyPair
 ==========
 
-Holds the key pair information used as an alternative way to using basic authorization for HTTP requests. The public key is inserted as a query in the request URI. The secret key is then used to encode the entire URI to create a signature using HMAC_SHA1. This signature is then added to the end of the request URI. These keys are created automatically by the platform. For more information, refer to :ref:`apikey-api-resources`.
+Holds the key pair information used as an alternative way to using basic authorization for HTTP requests.
+
+The public key is inserted as a query in the request URI. The secret key is then used to encode the entire URI to create a signature using HMAC_SHA1. This signature is then added to the end of the request URI.
+
+These keys are created automatically by the platform. For more information, refer to :ref:`apikey-api-resources`.
 
 Attributes
 ~~~~~~~~~~

@@ -5,7 +5,7 @@
 projectPkg_downloadFile
 -----------------------
 
-.. function:: GET /distributions/{id}/projects/{pid}/pkgs/{mspackid}/bin/{fileName}
+.. function:: GET /distributions/{id}/projects/{pid}/pkgs/{pkgid}/bin/{fileName}
 
 .. sidebar:: Summary
 
@@ -31,6 +31,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
+* ``fileName`` (required): the file name of the binary to upload
 * ``pid`` (required): the id of the :ref:`project-object`
 * ``id`` (required): the id of the :ref:`distribprofile-object`
 * ``pkgid`` (required): the id of the :ref:`package-object`
@@ -45,7 +46,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/distributions/{id}/projects/{pid}/pkgs/{mspackid}/bin/{fileName}" -X GET \
+	curl "https://uforge.example.com/api/distributions/{id}/projects/{pid}/pkgs/{pkgid}/bin/{fileName}" -X GET \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::

@@ -47,7 +47,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<targetPlatform>
+	<targetPlatform xmlns:ns0="http://www.usharesoft.com/uforge">
 		<name>{name-targetPlatform}</name>
 		<type>openstack</type>
 	</targetPlatform>

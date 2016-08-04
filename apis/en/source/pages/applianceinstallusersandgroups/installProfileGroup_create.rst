@@ -48,7 +48,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:osGroup>
+	<ns0:osGroup xmlns:ns0="http://www.usharesoft.com/uforge">
 		<groupIdAuto>true</groupIdAuto>
 		<name>OS Group Example</name>
 		<systemGroup>true</systemGroup>

@@ -49,7 +49,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<partition>
+	<partition xmlns:ns0="http://www.usharesoft.com/uforge">
 		<fstype>lvm2</fstype>
 	</partition>
 

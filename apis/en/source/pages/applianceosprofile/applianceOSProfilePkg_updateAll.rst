@@ -48,7 +48,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:packages>
+	<ns0:packages xmlns:ns0="http://www.usharesoft.com/uforge">
 		<addedPkgUris>
 			<uri>distributions/1/pkgs/104169</uri>
 			<uri>distributions/1/pkgs/104537</uri>

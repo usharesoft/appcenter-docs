@@ -46,7 +46,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:targetPlatform>
+	<ns0:targetPlatform xmlns:ns0="http://www.usharesoft.com/uforge">
 		<name>My OpenStack</name>
 		<type>openstack</type>
 		<accountInfos>Please find your My OpenStack credentials at the following URL http://provider/myAccount/OpenStackSettings</accountInfos>

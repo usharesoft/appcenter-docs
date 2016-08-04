@@ -47,7 +47,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:milestone>
+	<ns0:milestone xmlns:ns0="http://www.usharesoft.com/uforge">
 		<name>Milestone Example Updated</name>
 		<source>official</source>
 	</ns0:milestone>

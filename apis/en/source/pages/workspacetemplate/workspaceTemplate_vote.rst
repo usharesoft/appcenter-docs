@@ -48,7 +48,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:voteStat>
+	<ns0:voteStat xmlns:ns0="http://www.usharesoft.com/uforge">
 		<rating>3</rating>
 	</ns0:voteStat>
 

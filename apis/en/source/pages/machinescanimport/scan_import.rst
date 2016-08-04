@@ -50,7 +50,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:scanImport>
+	<ns0:scanImport xmlns:ns0="http://www.usharesoft.com/uforge">
 		<applianceName>Import Example</applianceName>
 		<applianceVersion>1.0</applianceVersion>
 		<orgUri>orgs/1</orgUri>

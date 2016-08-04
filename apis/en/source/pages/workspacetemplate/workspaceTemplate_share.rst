@@ -53,7 +53,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:galleryTemplate>
+	<ns0:galleryTemplate xmlns:ns0="http://www.usharesoft.com/uforge">
 		<description>This is a description example when sharing a template.</description>
 		<name>Appliance Example</name>
 		<version>1.0</version>

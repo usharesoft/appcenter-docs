@@ -44,7 +44,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:user>
+	<ns0:user xmlns:ns0="http://www.usharesoft.com/uforge">
 		<loginName>guest</loginName>
 		<active>true</active>
 		<email>example2@example.com</email>

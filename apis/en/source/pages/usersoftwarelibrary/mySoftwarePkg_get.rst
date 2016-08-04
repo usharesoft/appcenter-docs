@@ -29,7 +29,7 @@ URI Parameters
 
 * ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``msid`` (required): the id of the :ref:`mysoftware-object`
-* ``mspackid`` (required): the id of the package
+* ``mspackid`` (required): the id of the :ref:`package-object` to get
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

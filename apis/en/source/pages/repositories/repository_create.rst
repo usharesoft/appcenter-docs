@@ -46,7 +46,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:repository>
+	<ns0:repository xmlns:ns0="http://www.usharesoft.com/uforge">
 		<name>Example Repository</name>
 		<url>http://example.com/repoUrl</url>
 		<packagingType>RPM</packagingType>

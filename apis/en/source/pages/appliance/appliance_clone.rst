@@ -47,7 +47,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:appliance>
+	<ns0:appliance xmlns:ns0="http://www.usharesoft.com/uforge">
 		<name>Appliance Clone Example</name>
 		<orgUri>orgs/1</orgUri>
 		<projects></projects>

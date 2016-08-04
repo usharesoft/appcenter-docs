@@ -44,7 +44,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:quotas>
+	<ns0:quotas xmlns:ns0="http://www.usharesoft.com/uforge">
 		<quotas>
 			<quota>
 				<limit>-1</limit>

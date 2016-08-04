@@ -49,7 +49,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<disk>
+	<disk xmlns:ns0="http://www.usharesoft.com/uforge">
 		<name>sda</name>
 		<partitionType>MSDOS</partitionType>
 		<partition>

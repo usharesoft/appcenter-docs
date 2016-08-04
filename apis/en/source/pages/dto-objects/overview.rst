@@ -84,7 +84,6 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`mysoftwarelist-object`
 	* :ref:`nic-object`
 	* :ref:`nics-object`
-	* :ref:`oaspkg-object`
 	* :ref:`status-object`
 	* :ref:`statuses-object`
 	* :ref:`org-object`
@@ -247,7 +246,6 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     MySoftwareList
     Nic
     Nics
-    OASPkg
     OpStatus
     OpStatuses
     Org

@@ -55,7 +55,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:bootScript>
+	<ns0:bootScript xmlns:ns0="http://www.usharesoft.com/uforge">
 		<md5sum>e46d011c92f41cfc815213d968596081</md5sum>
 		<sha256sum>3396aa52b2a0a401924525c52ce4ed1641d53f743ff35d8edfef368098912e8b</sha256sum>
 		<size>26</size>

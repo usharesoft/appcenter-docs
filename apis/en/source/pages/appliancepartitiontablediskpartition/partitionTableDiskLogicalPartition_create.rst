@@ -50,7 +50,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:partition>
+	<ns0:partition xmlns:ns0="http://www.usharesoft.com/uforge">
 		<name>logicalPartition1</name>
 		<mpoint>/data</mpoint>
 		<size>1024</size>

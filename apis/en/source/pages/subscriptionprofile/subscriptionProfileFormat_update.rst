@@ -49,7 +49,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:imageFormats>
+	<ns0:imageFormats xmlns:ns0="http://www.usharesoft.com/uforge">
 		<imageFormats>
 			<imageFormat>
 				<uri>orgs/1/formats/1</uri>

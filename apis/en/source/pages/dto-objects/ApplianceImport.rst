@@ -5,7 +5,9 @@
 applianceImport
 ===============
 
-Holds the information when an appliance is being imported to this UForge platform. The actual import is done by uploading an appliance archive via the ``uploadUri``. The appliance import is an asynchronous job which may take some time. The current status of the import is stored in this object.
+Holds the information when an appliance is being imported to this UForge platform. The actual import is done by uploading an appliance archive via the ``uploadUri``.
+
+The appliance import is an asynchronous job which may take some time. The current status of the import is stored in this object.
 
 Attributes
 ~~~~~~~~~~

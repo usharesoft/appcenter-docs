@@ -47,7 +47,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:certificate>
+	<ns0:certificate xmlns:ns0="http://www.usharesoft.com/uforge">
 		<name>x509 cert for Amazon EC2</name>
 		<type>x509</type>
 		<certStr>certifacte-content</certStr>

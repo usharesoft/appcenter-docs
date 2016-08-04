@@ -45,7 +45,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:installProfile>
+	<ns0:installProfile xmlns:ns0="http://www.usharesoft.com/uforge">
 		<firewallAuto>true</firewallAuto>
 		<firewallEnabled>false</firewallEnabled>
 		<internetSettingsAuto>true</internetSettingsAuto>

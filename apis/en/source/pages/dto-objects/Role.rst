@@ -5,7 +5,9 @@
 role
 ====
 
-Describes a ``role`` used for Role-Based Access Control (RBAC). A role groups together a list of ``entitlements`` (see :ref:`entitlement-object`.) A role can then be assigned to an user to enforce access rights.
+Describes a ``role`` used for Role-Based Access Control (RBAC). A role groups together a list of ``entitlements`` (see :ref:`entitlement-object`.)
+
+A role can then be assigned to an user to enforce access rights.
 
 Attributes
 ~~~~~~~~~~

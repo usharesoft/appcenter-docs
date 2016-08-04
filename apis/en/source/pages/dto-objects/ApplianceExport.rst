@@ -5,7 +5,9 @@
 applianceExport
 ===============
 
-Holds tracking information on requests to export an appliance. An export basically archives the appliance meta-data and all relevant software and allows the user to download that archive. The archive information can then be version controlled or imported to another UForge platform. The appliance export is an asynchronous job which may take some time. The current status of the export is stored in this object.
+Holds tracking information on requests to export an appliance. An export basically archives the appliance meta-data and all relevant software and allows the user to download that archive. The archive information can then be version controlled or imported to another UForge platform.
+
+The appliance export is an asynchronous job which may take some time. The current status of the export is stored in this object.
 
 Attributes
 ~~~~~~~~~~

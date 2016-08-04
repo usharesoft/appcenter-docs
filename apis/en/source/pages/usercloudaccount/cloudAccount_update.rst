@@ -47,7 +47,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:credAccount>
+	<ns0:credAccount xmlns:ns0="http://www.usharesoft.com/uforge">
 		<xsi:type></xsi:type>
 		<name>OpenStack Example Update</name>
 		<glanceUrl>http://ip:9292</glanceUrl>

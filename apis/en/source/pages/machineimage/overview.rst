@@ -6,6 +6,10 @@ Machine Image API Resources
 ===========================
 
 	* :ref:`machineImagePublished-download`: Downloads a published machine image
+	* :ref:`machineImage-publish`: Request to publish (register) a generated machine image to a target cloud environment
+	* :ref:`machineImagePublished-getAll`: Retrieve all the published machine images for an appliance
+	* :ref:`machineImagePublished-deleteAll`: Removes all published machine images for an appliance
+	* :ref:`machineImagePublishedStatus-getAll`: Retrieve the publish status of all the published machine images for an appliance
 	* :ref:`applianceImage-publish`: Request to publish (register) a generated machine image to a target cloud environment
 	* :ref:`machineImagePublished-get`: Retrieve a published machine image for an appliance
 	* :ref:`machineImagePublished-delete`: Removes a published machine image from an appliance
@@ -13,10 +17,6 @@ Machine Image API Resources
 	* :ref:`machineImagePublish-cancel`: Cancels a running publish of a machine image to a target environment
 	* :ref:`machineImage-download`: Downloads a generated machine image
 	* :ref:`machineImage-downloadFile`: Downloads a generated machine image
-	* :ref:`machineImage-publish`: Request to publish (register) a generated machine image to a target cloud environment
-	* :ref:`machineImagePublished-getAll`: Retrieve all the published machine images for an appliance
-	* :ref:`machineImagePublished-deleteAll`: Removes all published machine images for an appliance
-	* :ref:`machineImagePublishedStatus-getAll`: Retrieve the publish status of all the published machine images for an appliance
 	* :ref:`machineImage-generate`: Request to generate a machine image from an appliance
 	* :ref:`machineImage-deleteAll`: Deletes all the machine images from an appliance
 	* :ref:`machineImage-getAll`: Returns all of the machine images of an appliance
@@ -33,6 +33,10 @@ Machine Image API Resources
     :hidden:
 
     machineImagePublished_download
+    machineImage_publish
+    machineImagePublished_getAll
+    machineImagePublished_deleteAll
+    machineImagePublishedStatus_getAll
     applianceImage_publish
     machineImagePublished_get
     machineImagePublished_delete
@@ -40,10 +44,6 @@ Machine Image API Resources
     machineImagePublish_cancel
     machineImage_download
     machineImage_downloadFile
-    machineImage_publish
-    machineImagePublished_getAll
-    machineImagePublished_deleteAll
-    machineImagePublishedStatus_getAll
     machineImage_generate
     machineImage_deleteAll
     machineImage_getAll

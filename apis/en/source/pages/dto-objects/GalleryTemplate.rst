@@ -69,8 +69,6 @@ The list of attributes for ``galleryTemplate`` are:
 	* ``name`` (string): the name of this appliance
 	* ``nbSecurityUpdates`` (int): the number of security operating system packages available for update
 	* ``nbUpdates`` (int): the number of native package updates available for update
-	* ``oasPackage`` (:ref:`oasPkg-object`): the :ref:`oaspkg-object` object describing the UForge Studio package added to this appliance
-	* ``oasPackageUri`` (anyURI): the uri resource of the UForge Studio package added to this appliance
 	* ``orgUri`` (anyURI): the uri resource of the organization this appliance belongs to
 	* ``osProfile`` (:ref:`distribProfile-object`): the :ref:`distribprofile-object` object describing the operating system profile of this appliance
 	* ``osProfileUri`` (anyURI): the uri resource for the operating system profile of this appliance

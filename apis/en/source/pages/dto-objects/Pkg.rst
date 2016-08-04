@@ -26,6 +26,7 @@ The list of attributes for ``package`` are:
 	* ``pkgFileDate`` (dateTime): the file timestamp
 	* ``release`` (string): the release information package
 	* ``shortTag`` (string): tag value
+	* ``repositoryName`` (string): repository name
 	* ``sticky`` (boolean): boolean to indicate that this package version should not be updated when new package updates are available
 	* ``type`` (string): file media type
 	* ``uri`` (anyURI): the uri resource of this package object

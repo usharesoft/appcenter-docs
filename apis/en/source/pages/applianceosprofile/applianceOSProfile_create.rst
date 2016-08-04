@@ -47,7 +47,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:distribProfile>
+	<ns0:distribProfile xmlns:ns0="http://www.usharesoft.com/uforge">
 		<name>Minimal</name>
 		<standardProfileUri>distributions/1/profiles/4</standardProfileUri>
 	</ns0:distribProfile>

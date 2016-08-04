@@ -46,7 +46,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:distribution>
+	<ns0:distribution xmlns:ns0="http://www.usharesoft.com/uforge">
 		<name>CentOS</name>
 		<version>6</version>
 		<arch>x86_64</arch>

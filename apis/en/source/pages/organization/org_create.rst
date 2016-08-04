@@ -45,7 +45,7 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:org>
+	<ns0:org xmlns:ns0="http://www.usharesoft.com/uforge">
 		<name>Org Name Example</name>
 	</ns0:org>
 

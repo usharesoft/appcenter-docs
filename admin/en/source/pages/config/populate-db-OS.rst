@@ -171,7 +171,9 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 
 			$ tail -f /tmp/USER_DATA/FactoryContainer/logs/repos/spider/<directory name with date>/spider.stdout 
 		
-		The procedure is terminated when you see the line: INFO  CheckForRepositoriesUpdates:275 - Entering CheckForRepositoriesUpdates->terminate()
+		The procedure is terminated when you see the line::
+
+			INFO  CheckForRepositoriesUpdates:275 - Entering CheckForRepositoriesUpdates->terminate()
 
 	11. Create OS profile based on packages (minimal, server, etc.)::
 

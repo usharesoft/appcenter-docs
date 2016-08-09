@@ -46,7 +46,9 @@ For example, to add a Red Hat repository:
 
 			$ tail -f /tmp/USER_DATA/FactoryContainer/logs/repos/spider/<directory name with date>/spider.stdout 
 
-		The procedure is terminated when you see the line: // INFO  CheckForRepositoriesUpdates:275 - Entering CheckForRepositoriesUpdates->terminate()
+		The procedure is terminated when you see the line::
+
+			INFO  CheckForRepositoriesUpdates:275 - Entering CheckForRepositoriesUpdates->terminate()
 
 	9. Create a OS profile based on packages (minimal, server, etc.)::
 

@@ -34,7 +34,7 @@ To set advanced partitioning for an appliance template:
 	4. Advanced partitioning works sequentially, from top to bottom. The three sections offered by the UI, which are ``Disks``, ``Logical Groups``, and ``Logical Volumes`` should be filled in order, sequentially:
 
 	    * disks with partitions including the total virtual disk size required
-	    * logical group(s), assigning the associated physical extend (partition)
+	    * logical group(s), assigning the associated physical extent (partition)
 	    * specify the logical volume specification for the created logical group(s)
 
 	    .. image:: /images/advanced-partitioning.png
@@ -49,7 +49,7 @@ To set advanced partitioning for an appliance template:
 	9. Click on the + sign to create a new partition with type ``lvm2`` and size set to ``18000 MB``.
 	10. Unselect ``Grow`` and set the size of the ``/boot`` disk to ``500``.
 	11. In the ``Logical Groups`` section, click on the + sign and set the name of the logical group. For this example: ``ROOTVG``.
-	12. Next to the newly created volume group, click on the + sign to create a new volume extent. A pop-up window will appear proposing a ``sda/2`` physical extend with size automatically set to ``18000 MB``. Click ``ok``.
+	12. Next to the newly created volume group, click on the + sign to create a new volume extent. A pop-up window will appear proposing a ``sda/2`` physical extent with size automatically set to ``18000 MB``. Click ``ok``.
 
 		.. image:: /images/install-profile-partitioning-enlarge.png
 

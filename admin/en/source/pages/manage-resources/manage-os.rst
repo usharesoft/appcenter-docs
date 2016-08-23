@@ -112,6 +112,8 @@ In order to add the OS to a specific distribution, you will need to specify ``--
 
 	4. Launch Spider and other population steps. Refer to :ref:`populate-db-os`.
 
+When adding CentOS, Debian and RedHat, the major versions are automatically marked as Milestones when the distribution is added to the platform. For more information on Milestones, refer to :ref:`manage-milestone`.
+
 
 Removing OSes and Distributions
 -------------------------------

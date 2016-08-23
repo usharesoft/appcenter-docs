@@ -9,7 +9,9 @@ Milestones are used as a marker for a specific event, such as beta or GA for exa
 
 .. image:: /images/milestone.png
 
-In the figure above, the triangle shape indicates a Milestone. For CentOS, this is the versions (6.1, 6.2 etc). Milestones can be customized by the UForge administrator using the command line interface. 
+In the figure above, the triangle shape indicates a Milestone. For CentOS, this is the versions (6.1, 6.2 etc). For CentOS, Debian and RedHat, the major versions are automatically marked as Milestones when the distribution is added to the platform.
+
+Milestones can be created by the UForge administrator using the command line interface, in order to mark a specific date or version, for example for a beta version or for a security fix. 
 
 To create or manage milestones using the CLI, use the command ``uforge os``. 
 

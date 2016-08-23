@@ -279,7 +279,7 @@ To add your Golden Image to UForge:
 
 		.. code-block:: shell
 
-			$ uforge org golden create --name Windows --arch x86_64 --version Server2008R2 --edition Standard --goldenDate 2014-04-28 --language French --type Full --goldenName Windows_2008R2_English_Standard_Full_2014-04-28.raw.gz
+			$ uforge org golden create --name Windows --arch x86_64 --version Server2008R2 --edition Standard --goldenDate 2014-04-28 --language English --type Full --goldenName Windows_2008R2_English_Standard_Full_2014-04-28.raw.gz
 
 		.. note:: The parameters set when running ``org golden create`` should correspond to the path on the NAS, that is: {Language}/{Edition}/{Type}/{generation date}(YYYY-MM-DD)/goldenImagePathCompressedInGz
 

@@ -26,7 +26,7 @@ To install UForge from the ISO image:
 
 	.. image:: /images/install-reboot.png
 
-	8. Once the system reboots, accepts the EULA license agreement.
+	8. Once the system reboots, accepts the EULA license agreement, select the keyboard and timezone.
 	
 For a multi-node installation, repeat these steps for every physical or VM instance you wish to install.  
 The installation phase is complete, you are now ready to configure the UForge AppCenter, see :ref:`configure-uforge`.

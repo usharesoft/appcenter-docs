@@ -15,42 +15,63 @@ For example, to add a Red Hat repository:
 
 	3. Copy all the contents of the DVD into ``/tmp/USER_DATA/repos/RHEL/6.5/x86_64/``
 	
-	4. If the repository does not already contain a repodata folder, you must create it inside the package directory::
+	4. If the repository does not already contain a repodata folder, you must create it inside the package directory:
+
+	.. code-block:: shell
 
 		$ cd /tmp/USER_DATA/repos/RHEL/6.5/x86_64/
 		$ createrepo .	
 
-	5. Create the repository using the UForge CLI as follows:
+	5. Create a file in ``/etc/httpd/conf.d`` called ``repos.conf``. The file should contain the following:
 
-		.. code-block:: shell
+	.. code-block:: shell
 
-			$ uforge org repo create --name "RHEL 6.5 os" --repoUrl "http://127.0.0.1/repos/RHEL/6.5/x86_64/" --type RPM -u $ADMIN -p $PASS
+		Alias /repos /tmp/USER_DATA/repos
 
-		The –-name specified here is the “tagname” that will be shown in the UI when creating an appliance.
+		<Directory /tmp/USER_DATA/repos>
+		    Options +Indexes
+		</Directory>
 
-	6. Attach the repository to the distribution as follows::
+	6. Run the following from the command line:
+
+	.. code-block:: shell
+
+		service httpd restart
+
+	7. Create the repository using the UForge CLI as follows:
+
+	.. code-block:: shell
+
+		$ uforge org repo create --name "RHEL 6.5 os" --repoUrl "http://MACHINE_IP/repos/RHEL/6.5/x86_64/" --type RPM -u $ADMIN -p $PASS
+
+	The ``–-name`` specified here is the “tagname” that will be shown in the UI when creating an appliance.
+
+	8. Attach the repository to the distribution as follows:
+
+	.. code-block:: shell
 
 		$ uforge org repo os attach --name RHEL --repoIds 954 -u $ADMIN -p $PASS
 
-	7. Populate the repository packages:
+	9. Populate the repository packages:
 
-		.. code-block:: shell
+	.. code-block:: shell
 
-			$ /opt/UShareSoft/uforge/cron/update_repos_pkgs.sh
+		$ /opt/UShareSoft/uforge/cron/update_repos_pkgs.sh
 
-		This procedure may take a long time.
+	This procedure may take a long time.
 
-	8. To verify if the procedure is terminated, run the following command:
+	10. To verify if the procedure is terminated, run the following command:
 
-		.. code-block:: shell
+	.. code-block:: shell
 
-			$ tail -f /tmp/USER_DATA/FactoryContainer/logs/repos/spider/<directory name with date>/spider.stdout 
+		$ tail -f /tmp/USER_DATA/FactoryContainer/logs/repos/spider/<directory name with date>/spider.stdout 
 
-		The procedure is terminated when you see the line::
+	The procedure is terminated when you see the line::
 
-			INFO  CheckForRepositoriesUpdates:275 - Entering CheckForRepositoriesUpdates->terminate()
+		INFO  CheckForRepositoriesUpdates:275 - Entering CheckForRepositoriesUpdates->terminate()
 
-	9. Create a OS profile based on packages (minimal, server, etc.)::
+	11. Create an OS profile based on packages (minimal, server, etc.):
+
+	.. code-block:: shell
 
 		$ /opt/UShareSoft/uforge/bin/runjob.py sorter_low_prio -a x86_64 -d RHEL -v 6.5
-

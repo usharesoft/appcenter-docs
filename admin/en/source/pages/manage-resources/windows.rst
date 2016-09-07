@@ -68,7 +68,7 @@ The following graphic illustrates the workflow to obtain and install Windows Gol
 First Installation of Microsoft Windows
 ---------------------------------------
 
-To install Microsfot Windows, follow the instructions below. This example is for Microsoft Windows Server 2008R2. If you wish to install for Microsoft Windows Server 2012 or 2012 R2, replace the string ``Server2008R2`` with the version you want to install in all commands below. 
+To install Microsoft Windows, follow the instructions below. This example is for Microsoft Windows Server 2008R2. If you wish to install for Microsoft Windows Server 2012 or 2012 R2, replace the string ``Server2008R2`` with the version you want to install in all commands below. 
 
 	1.  First population of Windows::
 

@@ -79,7 +79,7 @@ It is important to keep these repositories up to date so that:
 	* when a user checks the appliance library, the number of updates available are listed
 	* the image generations is faster. If this is not done on a regular basis, when launching a generation, the repositories of the template distribution will be updated and the user will have to wait longer.
 
-Also, if a repository the platform is connected to deletes packages (e.g. because of newer package version -- this is not the case of UShareSoft official repositories), having the latest packages  available is important.
+Also, if a repository the platform is connected to deletes packages (e.g. because of newer package version -- this is not the case of UShareSoft official repositories), having the latest packages available is important.
 
 ``05 * * * * /opt/UShareSoft/uforge/cron/update_repos_local_cache.sh``
 

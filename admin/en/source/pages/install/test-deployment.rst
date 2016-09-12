@@ -11,7 +11,7 @@ Once the configuration phase is complete, you may wish to carry out some basic s
 
 Use the values in the uforge.conf to contact the web service and expect a ``200 OK`` response.
 
-Get the values form the uforge.conf and add them to some environment variables (you could also just manually view the uforge.conf)
+Get the values from the uforge.conf and add them to some environment variables (you could also just manually view the uforge.conf)
 
 .. code-block:: shell
 

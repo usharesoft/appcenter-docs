@@ -67,7 +67,7 @@ If you specify any of the above when you create a subscription profile, then all
 
 			$ uforge subscription create --code <string> --name <string> --org usharesoft --active -u $ADMIN -p $PASS
 
-		The code can be any alpha-numeric string, excluding spaces and special characters.
+		The code can be any alphanumeric string, excluding spaces and special characters.
 
 	2. To enable a subscription profile for an organization, run the command::
 
@@ -108,7 +108,7 @@ For example::
 Disabling a Subscription Profile 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you no longer want a subscription profile to be used when creating new users, you can either delete or disable the subscription profile. However, we recommend that you simply disable the subscription profile, in order to keep a history of the profile. Regardless if you delete or disable the subscription profile, the users created with the associated subscription code will not be deleted or deactivated. 
+If you no longer want a subscription profile to be used when creating new users, you can either delete or disable the subscription profile. However, we recommend that you simply disable the subscription profile, in order to keep a history of the profile. Regardless of whether you delete or disable the subscription profile, the users created with the associated subscription code will not be deleted or deactivated. 
 
 To disable a subscription profile::
 

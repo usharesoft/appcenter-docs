@@ -29,7 +29,7 @@ MariaDB holds both UForge and IDM data. All this information is located under:
 
 By copying this information, you are taking a snapshot of the entire database. 
 
-LDAP (OpenDJ) has its own tool for doing backup, called ``backup``.  To ensure data consistency across the entire platform, we recommend you backup all the databases at the same time.  Here is an example of how to backup the MariaDB (holding IDM and UForge information) and LDAP databases.  Note, we are also stopping the web service instances, this ensures we do not generate connection error messages in the logs:
+LDAP (OpenDJ) has its own tool for doing backup, called ``backup``.  To ensure data consistency across the entire platform, we recommend you backup all the databases at the same time.  Here is an example of how to back up the MariaDB (holding IDM and UForge information) and LDAP databases.  Note, we are also stopping the web service instances, this ensures we do not generate connection error messages in the logs:
 
 .. code-block:: shell
 

@@ -11,7 +11,7 @@ Fault tolerance is an important consideration for large-scale deployments.  UFor
 	* The LDAP service data can be replicated over multiple LDAP instances via MMR (Multi-Master Replication)
 	* Binary data including operating system packages, project packages, uploaded software packages, license files, generated images and logo images. The binary data is stored on a storage system.  This can be on a local filesystem of the database or on a NAS or SAN.  This data is transparently replicated using RAID techniques.
 
-In order to make the web service tier fault tolerant, multiple web servers can be deployed and load balanced.  The administrator may also wish to have multiple load balancers in case the load balancer itself  fails.
+In order to make the web service tier fault tolerant, multiple web servers can be deployed and load balanced.  The administrator may also wish to have multiple load balancers in case the load balancer itself fails.
 
 
 .. _security:

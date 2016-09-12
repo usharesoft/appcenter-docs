@@ -29,7 +29,7 @@ We recommend using a firewall with the NAT technology to map a public IP address
 
 For a private network, you can use a NAT translation, but it is better to use the firewall in gateway mode and filter the traffic. This way you can open ports on the different services.
 
-By default UForge provides a proxy service, exposing the user interface (UI), REST web service tier and a download URL allowing external cloud platforms download generated machine images.  This is configured automatically using the information you provide as part of the configuration phase (see :ref:`configure-uforge`).  These values can alsobe configured manually, for more information see :ref:`modify-external-endpoints`.
+By default UForge provides a proxy service, exposing the user interface (UI), REST web service tier and a download URL allowing external cloud platforms download generated machine images.  This is configured automatically using the information you provide as part of the configuration phase (see :ref:`configure-uforge`).  These values can also be configured manually, for more information see :ref:`modify-external-endpoints`.
 
 .. image:: /images/external-endpoints.png
 
@@ -75,7 +75,7 @@ It may be more logical to group the DB, LDAP and Generation Cluster (scheduler) 
 
 .. note:: When a user creates an appliance, the packages are stored locally in the UForge cache repository, which is stored on the DB. Therefore, depending on the number of appliances created and OS used, you may need to adjust the DB size.
 
-.. note:: If you are using high availability and you choose to split the Webservice and SYNCOPE on seperate nodes, then you need a shared NAD/SAN (/tmp/userdata). 
+.. note:: If you are using high availability and you choose to split the Webservice and SYNCOPE on separate nodes, then you need a shared NAD/SAN (/tmp/userdata). 
 
 Security Options
 ----------------

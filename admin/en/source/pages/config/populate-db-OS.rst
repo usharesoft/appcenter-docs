@@ -17,7 +17,7 @@ For information specific to Microsoft Windows, refer to :ref:`first-windows-inst
 
 .. warning:: If you are going to use the migration feature for RHEL or CentOS, then it is highly recommended to register the major version repositories.
 
-In order to add an operation system in your UForge AppCenter you must:
+In order to add an operating system in your UForge AppCenter you must:
 
 	1. Connect to one of your UForge platform instances
 	2. Create the OS in the organization.
@@ -88,7 +88,7 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 
 		The following is a list for all the other distributions:
 
-		``Ubuntu (exemple 10.04)``
+		``Ubuntu (example 10.04)``
 
 			* http://distros-repository.usharesoft.com/ubuntu/lucid/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid multiverse restricted universe main 
 			* http://distros-repository.usharesoft.com/ubuntu/lucid-security/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-security multiverse restricted universe main
@@ -97,25 +97,25 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 			* http://distros-repository.usharesoft.com/ubuntu/lucid-updates/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-updates multiverse restricted universe main
 
 
-		``Debian (exemple version 6)``
+		``Debian (example version 6)``
 
 			* http://distros-repository.usharesoft.com/debian/squeeze/mirror/ftp.fr.debian.org/debian/ squeeze contrib non-free main
 			* http://distros-repository.usharesoft.com/debian/squeeze-updates/mirror/ftp.fr.debian.org/debian/ squeeze-updates contrib non-free main 
 			* http://distros-repository.usharesoft.com/debian/security/squeeze/updates/mirror/security.debian.org/ squeeze/updates main contrib non-free
 
-		``CentOS (exemple CentOS 6.7)``
+		``CentOS (example CentOS 6.7)``
 
 			* http://distros-repository.usharesoft.com/centos/6.7/updates/x86_64
 			* http://distros-repository.usharesoft.com/centos/6.7/extras/x86_64
 			* http://distros-repository.usharesoft.com/centos/6.7/os/x86_64
 
-		``OpenSUSE (exemple version 12.2)``
+		``OpenSUSE (example version 12.2)``
 
 			* http://distros-repository.usharesoft.com/opensuse/distribution/12.2/repo/oss/
 			* http://distros-repository.usharesoft.com/opensuse/distribution/12.2/repo/non-oss/
 			* http://distros-repository.usharesoft.com/opensuse/update/12.2/
 
-		``Scientific Linux (exemple version 6.6)``
+		``Scientific Linux (example version 6.6)``
 
 			* http://distros-repository.usharesoft.com/scientificlinux/6.6/x86_64/os/
 			* http://distros-repository.usharesoft.com/scientificlinux/6.6/x86_64/updates/fastbugs/

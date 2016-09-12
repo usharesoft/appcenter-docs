@@ -5,7 +5,7 @@
 Cloud Platform Default Ports
 ----------------------------
 
-To allow UForge to register machine images, you must ensure that there is network connectivity to the cloud platforms you wish to push the machine images to.  The table below provides the default port numbers of the cloud platforms supported, and indicates whether UForge uploads the machine image or requets the cloud platform to download.
+To allow UForge to register machine images, you must ensure that there is network connectivity to the cloud platforms you wish to push the machine images to.  The table below provides the default port numbers of the cloud platforms supported, and indicates whether UForge uploads the machine image or requests the cloud platform to download.
 
 .. warning:: For private cloud platforms, the port number may not be the default port number indicated.
 

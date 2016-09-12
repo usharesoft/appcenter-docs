@@ -18,4 +18,4 @@ Like the database, this is important information that must be backed up on a reg
 
 You do not need to stop the service, but the danger is that if during that time there is damaged data, when rsync is run then this corrupted data is copied and there is no possible way to recuperate the old data.
 
-The time it will take to backup the data will depend on the size of your data and the connection between the two servers. 
+The time it will take to back up the data will depend on the size of your data and the connection between the two servers. 

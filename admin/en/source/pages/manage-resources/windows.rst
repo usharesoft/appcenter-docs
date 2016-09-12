@@ -13,7 +13,7 @@ A Golden Image can be between 5 to 10 Gb, depending on the selected version.
 
 You will need Golden Images to create Windows appliance templates. If you want to incorporate a Windows update, then you need to create and install a new set of Golden Images. You can create Golden Images yourself.
 
-.. note:: A good knowledge of Microsfot Windows is required to create your own Golden Images.
+.. note:: A good knowledge of Microsoft Windows is required to create your own Golden Images.
 
 Generating all the profiles available (in one language) takes roughly 4 to 7 hours depending on the machine/network performance. You can regenerate Golden Images as often as you like, based on your individual needs. However, it is recommended that you regenerate only for specific updates—these updates will be in the Golden Image and you will not need to run package updates. When you generate a Golden Image the updates are the ones at the moment at which the Golden Image is generated. 
 

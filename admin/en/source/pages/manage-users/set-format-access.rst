@@ -18,7 +18,7 @@ Adding Formats to a Specific User
 
 To add access to a format for a specific user,  you must follow these steps:
 
-	1. Ensure the target format exists for the organisation. For a list of formats that are part of the organization, use the command ``org targetformat list``. 
+	1. Ensure the target format exists for the organization. For a list of formats that are part of the organization, use the command ``org targetformat list``. 
 	2. Enable the format for the user using ``user targetformat enable``.
 
 

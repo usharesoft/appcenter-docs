@@ -9,7 +9,7 @@ If you require support for your UForge platform, please contact:
 
 	support [@] usharesoft [dot] com
 
-In order to help us understand your issue.  Please include any logs pertinant to the issue you are having.  
+In order to help us understand your issue.  Please include any logs pertinent to the issue you are having.  
 
 To help gather information of the UForge platform, we have included a script you can run on the UForge platform instances.
 

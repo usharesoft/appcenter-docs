@@ -31,7 +31,7 @@ The (optional) parameter <uforge install type> can take the values uforge-ee or 
 
 To update the platform, use the "yum" command-line tool as follows:
 
-.. note:: Running ``yum update`` may also update OS packages from CentOS official repository. You should accept all the updates because UForge is qualified based on the lasest packages.
+.. note:: Running ``yum update`` may also update OS packages from CentOS official repository. You should accept all the updates because UForge is qualified based on the latest packages.
 
 .. code-block:: shell
 
@@ -194,5 +194,5 @@ The following is an example of a request sent to a UForge AppCenter with hostnam
 		* Closing connection #0
 		<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 		<user>
-		...ommitted for clarity
+		...omitted for clarity
 		</user>

@@ -24,7 +24,7 @@ For small deployments, the remote storage system can be on a local filesystem of
 
 **Operating System Cache Repositories and Projects.**  The OS repositories are no longer stored in the UForge AppCenter. UForge AppCenter uses cache repositories in order to generate appliance templates.  Therefore its size will grow and is completely variable. What consumes space are the images generated and the binaries uploaded in MySoftware. You can limit the space used by setting user quotas (refer to :ref:`set-quotas`).
 
-The size of projects also vary, however are usually in the 10 to 100 MB range.  Consequently they take up a very small percentage of the entire disk space.
+The size of projects also vary, however they are usually in the 10 to 100 MB range.  Consequently they take up a very small percentage of the entire disk space.
 
 **Image Generation.**   Compute nodes require local storage to create the disk images during the generation phase of an appliance template. To calculate the local storage required by a compute node, the generation of an image needs to be understood. There are six phases to the generation of an image:
 
@@ -39,13 +39,13 @@ At any given time during the construction of an image, the compute node requires
 
 	average image size x simultaneous generations x 3
 
-Image sizes  vary from 300 MB to 12 GB.  Note this is the disk size required to install all binary packages.  A UForge compute node uses 'sparse' filesystem so that 'free' disk space required by a virtual machine does not need to be allocated during the generation of that virtual machine.
+Image sizes vary from 300 MB to 12 GB.  Note this is the disk size required to install all binary packages.  A UForge compute node uses 'sparse' filesystem so that 'free' disk space required by a virtual machine does not need to be allocated during the generation of that virtual machine.
 
 For a compute node configured to generate 10 images simultaneously and assuming that an average image size is 8 GB, the minimum local storage required by a compute node is:
 
 	8 x 10 x 3 = 240 GB
 
-**User Disk Space.**  Each user on UForge can generate images and also upload their own software.  The user software is stored on the remote storage.  Once an image has been generated it is also stored on remote storage allowing the user to download or publish the image directly to a virtual or cloud platform at a later stage.  User uploaded software is usually a small percentage of the disk space compared to generated images. Note, that as the user has the appliance template, an image can be regenerated at any time, therefore, images can be deleted  to save disk space. The total disk space required to store uploaded software and user images can be calculated as follows:
+**User Disk Space.**  Each user on UForge can generate images and also upload their own software.  The user software is stored on the remote storage.  Once an image has been generated it is also stored on remote storage allowing the user to download or publish the image directly to a virtual or cloud platform at a later stage.  User uploaded software is usually a small percentage of the disk space compared to generated images. Note, that as the user has the appliance template, an image can be regenerated at any time, therefore, images can be deleted to save disk space. The total disk space required to store uploaded software and user images can be calculated as follows:
 
 	user disk quota x total number of users
 

@@ -30,7 +30,7 @@ The UForge Server is deployed inside a web/application server container.  UForge
 
 **Proxy Cache.** UForge AppCenter includes a proxy cache. The proxy used is Squid. It is used for caching and centralizes all outgoing traffic. This improves the performance of UForge, specifically for the population of distribution repositories.
 
-**IDM Service.** The UForge Identity management module is based on Apache Syncope (APL2 licence).  The module allows management of auditing (reports), policies, roles, users, tasks and entitlements.  At present UForge uses this module for authentication and role-based access control (authorization).  The persistence store for the UForge IDM is the SQL Store (described below) and there is a resource connector to the LDAP Service for storage of roles/users and entitlements in an ldap repository backend.  The IDM service is deployed inside a web/application server container.  UForge, by default, uses Tomcat as the application server container.
+**IDM Service.** The UForge Identity management module is based on Apache Syncope (APL2 license).  The module allows management of auditing (reports), policies, roles, users, tasks and entitlements.  At present UForge uses this module for authentication and role-based access control (authorization).  The persistence store for the UForge IDM is the SQL Store (described below) and there is a resource connector to the LDAP Service for storage of roles/users and entitlements in an ldap repository backend.  The IDM service is deployed inside a web/application server container.  UForge, by default, uses Tomcat as the application server container.
 
 This IDM Service can be extended to provide a wider identity and access management (IAM) integration to an existing enterprise or corporate IAM system or to a brand new standards compliant IAM system(s) by using open source industry standard resource connectors.
 
@@ -38,7 +38,7 @@ This IDM Service can be extended to provide a wider identity and access manageme
 
 **SQL Store.** This is a relational database holding all the meta-data of UForge.  Meta-data includes such items as:
 
-	* Appliance information  including which operating system packages are included, install profile, middleware and configuration information.
+	* Appliance information including which operating system packages are included, install profile, middleware and configuration information.
 	* Images that have been generated from an appliance
 	* Images that have been published to a virtual or cloud platform
 	* Package information for an operating system

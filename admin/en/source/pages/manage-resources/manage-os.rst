@@ -9,7 +9,7 @@ All the open source operating system versions are delivered as part of the UForg
 
 To get the complete list of the currently supported operating systems on the UForge platform use the command ``uforge os list``.
 
-Login to one of the UForge instances:
+Log in to one of the UForge instances:
 
 .. code-block :: shell
 

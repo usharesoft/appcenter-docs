@@ -47,7 +47,7 @@ To add access to a format to an organization, you must:
 	6. Enable the target format for the organization using  ``uforge org targetformat enable``.
 	7. Enable the target format using ``user targetformat enable``.
 
-Once the format is created in a organisation, you can either:
+Once the format is created in an organisation, you can either:
 
 	* add it to a group of users by adding it to the subscription profile (refer to :ref:`formats-subscription`)
 	* add it to an individual user (refer to :ref:`set-formats-user`)
@@ -93,7 +93,7 @@ To create a target format:
 	6. Optionally you can click on the plus (+) to add a logo.
 	7. If you do not want the target format to be visible immediately, click on the check box next to ``Enable`` to deselect.
 	8. On the ``Tooltips`` page enter the Credentials, image and publish information.
-	9. On the ``Target Platforms`` page you can attach your target format to a target platform. To add the target format to a target platform, select the target platfrom from the botton table and click the up arrow. Your target format will be attached to all the target platforms listed in the top table will be part of the part format you are creating.
+	9. On the ``Target Platforms`` page you can attach your target format to a target platform. To add the target format to a target platform, select the target platform from the botton table and click the up arrow. Your target format will be attached to all the target platforms listed in the top table will be part of the part format you are creating.
 	10. Click next to complete.
 
 		.. image:: /images/target-format-create.png

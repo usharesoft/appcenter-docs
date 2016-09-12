@@ -21,7 +21,7 @@ Firstly UForge uses Db sharding.  This basically consists of splitting up the da
 
 To help scale out further you can also set up a database cluster, providing multiple database instances to the web service tier (the default database service does not support clustering).
 
-Such bottlenecks can also be reduced by scaling-up (vertical partitioning) where more RAM and CPU  is provided to the machine. 
+Such bottlenecks can also be reduced by scaling-up (vertical partitioning) where more RAM and CPU is provided to the machine. 
 
 The generation cluster is intrinsically scalable, allowing the administrator to easily add new compute nodes to scale-out the number of simultaneous generations.  OAR also provides the ability to deploy multiple schedulers and to configure them in master-slave mode.
 

@@ -28,7 +28,7 @@ You can see the quotas set for a given user as follows::
 
 	$ uforge user quota list --account <user> -u $ADMIN -p $PASS 
 
-In the example above, the argument ``--user`` is the account of the administrator. The argument ``--account`` is the  user name of the account you want to view the quotas for.
+In the example above, the argument ``--user`` is the account of the administrator. The argument ``--account`` is the user name of the account you want to view the quotas for.
 
 Typically, when no limits are set, the results should be:
 

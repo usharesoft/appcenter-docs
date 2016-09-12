@@ -29,7 +29,7 @@ To update the OS packages:
 
 	4. You can select current updates (if any) or select to return to a previous version of the OS by moving the cursor on the graph.
 
-	5. Click ``simulate`` to see the changes that will be applied. The changes will be listed in the bottom of the screen. Scroll to view the results.
+	5. Click ``simulate`` to see the changes that will be applied. The changes will be listed at the bottom of the screen. Scroll to view the results.
 
 	6. If you want to apply the changes listed, then click ``update``.
 

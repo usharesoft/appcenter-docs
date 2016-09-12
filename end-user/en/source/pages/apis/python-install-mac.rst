@@ -2,8 +2,8 @@
 
 .. _apis-python-install-mac:
 
-For MacOS
----------
+For Mac OS
+----------
 
 As a pre-requisite, you need to have XCode installed.
 

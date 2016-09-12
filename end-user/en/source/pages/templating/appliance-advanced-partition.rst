@@ -70,7 +70,7 @@ To set advanced partitioning for an appliance template:
 Advanced Partitioning for Windows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can set an advanced partioning table for a Windows based appliance template.  To set advanced partitioning:
+You can set an advanced partitioning table for a Windows-based appliance template.  To set advanced partitioning:
 
 	1. Click on ``Partitioning`` and select ``Advanced Partitioning``
 	2. Click on the green + sign at the top.

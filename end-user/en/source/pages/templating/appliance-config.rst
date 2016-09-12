@@ -41,7 +41,7 @@ If you are creating a new boot script:
 
 If you are uploading an existing boot script:
 
-	1. Select the type: If you select ``first boot``, then the boot script will be launched once on the first time the instance is launched.  If you select ``every boot``, then the boot script will be launched every time the instance ir rebooted.
+	1. Select the type: If you select ``first boot``, then the boot script will be launched once on the first time the instance is launched.  If you select ``every boot``, then the boot script will be launched every time the instance is rebooted.
 	2. Select the boot order.
 	3. Click ``choose`` to locate your file and click ``open``.
 	4. Click ``save``.

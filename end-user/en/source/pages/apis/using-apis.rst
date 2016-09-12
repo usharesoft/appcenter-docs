@@ -25,7 +25,7 @@ For more information, refer to the `REST APIs documentation <apis:apis-index>`.
 Response & Error Codes
 ----------------------
 
-The UForge API returns typical HTTP status codes for every request received. HTTP status codes in the 200 range mean that the request was successful, while the  400 and 500 range indicates an error. The status codes in the 300 range are reserved for redirection.
+The UForge API returns typical HTTP status codes for every request received. HTTP status codes in the 200 range mean that the request was successful, while the 400 and 500 range indicates an error. The status codes in the 300 range are reserved for redirection.
 
 Some of the error codes are returned by the web server container, while all the other response codes are returned by the UForge REST web service. Errors returned by the UForge REST web service may include a more detailed error message indicating why the request failed.
 
@@ -40,7 +40,7 @@ The following codes indicate a successful connection. The response may also incl
 * ``200 OK``: Success. The request was fulfilled.
 * ``201 Created``: Following a POST command, a new resource has been created. The new resource URI is included in the response.
 * ``204 No Response``: Server has received the request but there is no information to send back. This is usually the case in a DELETE command, where a resource has been deleted
-* ``304 Not Modified``: Used when a client does a Conditional GET Request. If the document has not been modified since the date and time specified in If-Modified-Since field, the server responds with a 304 status code and does not send the document body to the client. The purpose of this feature is to allow efficient updates of local cache information (including relevant meta-information) without requiring the overhead of multiple HTTP requests (e.g. a HEAD followed by a GET) and minimizing the transmition of information already known by the requesting client (usually a caching proxy).
+* ``304 Not Modified``: Used when a client does a Conditional GET Request. If the document has not been modified since the date and time specified in If-Modified-Since field, the server responds with a 304 status code and does not send the document body to the client. The purpose of this feature is to allow efficient updates of local cache information (including relevant meta-information) without requiring the overhead of multiple HTTP requests (e.g. a HEAD followed by a GET) and minimizing the transmission of information already known by the requesting client (usually a caching proxy).
 
 Error Codes
 ~~~~~~~~~~~
@@ -83,7 +83,7 @@ Request Example
 ~~~~~~~~~~~~~~~
 
 The following is an example of a request sent to an UForge platform with hostname ``10.0.0.20`` `using cURL
-<http://curl.haxx.se/docs/manpage.html>`_ to get the user ``myUser``. Note that the response body (the user information) has been ommitted here for clarity::
+<http://curl.haxx.se/docs/manpage.html>`_ to get the user ``myUser``. Note that the response body (the user information) has been omitted here for clarity::
 
 	$ curl 'http://10.0.0.20:9090/ufws-3.3/users/myUser?apiKey=XX8Bs2prKPdFrKH_i4rsW7WR0f4FQ05IO7A8vuQUoNDino-7513mmEDecIAzpeMwWXZvnyZ6W0bJTKBwwc&signature=3qD1oxLwOI321BJ1pDZ6Dzmqbac%3D' -H "Accept: application/xml" -v
 
@@ -129,16 +129,16 @@ The API keys are used inside and to sign each request URI to the UForge platform
 .. image :: /images/uforge-api-request-process.png
 
 
-Query Paramaters
+Query Parameters
 ----------------
 
 Certain resources within the UForge AppCenter API allow query parameters (or query strings) as part of the request URI. This allows you to pass extra parameters during search requests or to restrict the response data.
 
-To pass a query parameter in a URL, the question mark symbol (?) is used as a seperator. For example::
+To pass a query parameter in a URL, the question mark symbol (?) is used as a separator. For example::
 
 	http://server/uripath?query_string
 
-The query string is composed of one or more field-value pairs, each seperated by the equals symbol (=). The series of field pairs is seperated by the ampersand symbol (&). For example::
+The query string is composed of one or more field-value pairs, each separated by the equals symbol (=). The series of field pairs is separated by the ampersand symbol (&). For example::
 
 	http://server/uripath?field1=value1&field2=value2&field3=value3
 

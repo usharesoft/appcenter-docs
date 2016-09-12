@@ -58,7 +58,7 @@ Creating an Appliance Template
 
 An Appliance Template contains the model of the software stack. The model includes all the operating system packages, middleware and application software for generating an image that can be provisioned on a virtual or cloud platform. To create an appliance template, you need to decide which operating system to build the template from, as well as the name and version.
 
-When creating an appliance or choosing an operating system, you must choose the organization where to create the appliance or to search an operating system. The user must be a member of the orgnizaton to have authorization to search the organization resources. By default a user will be a member of at least one organization.
+When creating an appliance or choosing an operating system, you must choose the organization where to create the appliance or to search an operating system. The user must be a member of the organization to have authorization to search the organization resources. By default a user will be a member of at least one organization.
 
 The following code provides an example of constructing an appliance template.
 
@@ -108,7 +108,7 @@ Extra packages can be added to the appliance template's OS profile.
 
 .. code-block:: java
 
-	// Get the current list of packgaes in the os profile
+	// Get the current list of packages in the os profile
 	PkgList pkgs = aospDelegate.getPkgs(osProfile);
 
 	// Add more packages
@@ -170,7 +170,7 @@ Once you are happy with the contents of an appliance template, you can then gene
 	    try {
 	        Thread.sleep(5000);
 	    } catch (InterruptedException ex) {
-	        //Error in a thread while tryingo to get the status of the cloud.com image generation
+	        //Error in a thread while trying to get the status of the cloud.com image generation
 	    }
 	    // Get the status
 	    status = imageDelegate.getStatus(image);
@@ -227,7 +227,7 @@ UForge has connectors to many of the popular cloud platforms including Amazon, M
 	// Publish finished
 	// Can check for errors
 	if (status.isError()) {
-	    // error occured during the publish
+	    // error occurred during the publish
 	}   
 
 Adding a Project from the Project Catalog

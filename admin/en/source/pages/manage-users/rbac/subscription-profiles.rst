@@ -61,6 +61,8 @@ If you specify any of the above when you create a subscription profile, then all
 
 	.. note:: Once you create a user with a specific subscription profile, even if you modify the subscription profile, the rights of the users already created will not be modified. For example, if profileA used to create UserA has quota set to unlimited. Once UserA is created, you modify the profileA to set quota to 3 generations. UserA will still have quota set to unlimited, but UserB created with the updated profileA will have quota set to 3 generations.
 
+In order to force the changes to apply to all users (even those already created), use the option ``--allusers``. This option can be used for roles, OS and format management in subscription profile. It cannot be used for quota.
+
 	1. To create a subscription profile for an organization, run the command:
 
 		.. code-block:: shell
@@ -87,21 +89,7 @@ When creating subscription profiles, the UForge administrator can add subscripti
 
 	$ uforge subscription admin add --admin kermit --name profileA --org usharesoft -u $ADMIN -p $PASS
 
-The argument admin is the login of the user you want to add as an administrator. This administrator will be able to create users with the subscription profile specified by the argument name.
-
-.. _formats-subscription:
-
-Adding Formats to a Group of Users
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-To add access to a format to a group of users, you can add it as part of a subscription profile. This means that all the users that are created with this subscription profile will have access to the format. To add a format to a subscription profile use the command uforge subscription targetFormat add. You cannot add access to a format that is not included in the organization. For a list of formats that are part of the organization, use the command:
-
-	* ``org targetformat list``
-	* ``org targetplatform list``
-
-For example::
-
-	$ uforge subscription targetformat add --targetformat ovf qcow2 vbox --account kermit --url https://uforge.usharesoft.com:443 -u $ADMIN -p $PASS
+The argument ``--admin`` is the login of the user you want to add as an administrator. This administrator will be able to create users with the subscription profile specified by the argument ``--name``.
 
 .. _disable-subscription:
 

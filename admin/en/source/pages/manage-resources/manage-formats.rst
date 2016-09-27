@@ -44,6 +44,12 @@ To add access to a format to an organization, you must:
 		* ``uforge subscription targetformat add``
 		* ``uforge subscription targetplatform add``
 
+	.. note:: In order to force the changes to apply to all users (even those already created), use the option ``--allusers``. For example: 
+
+	.. code-block:: shell
+
+		$ uforge subscription targetformat add --targetformat ovf qcow2 vbox --allusers --name sub --url https://uforge.usharesoft.com:443 -u $ADMIN -p $PASS
+
 	6. Enable the target format for the organization using  ``uforge org targetformat enable``.
 	7. Enable the target format using ``user targetformat enable``.
 

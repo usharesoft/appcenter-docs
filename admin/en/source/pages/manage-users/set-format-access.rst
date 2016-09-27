@@ -7,9 +7,24 @@ Managing User Access to Formats
 
 Image formats can be managed at the level of the organization or of the user.
 
-An administrator who wants to add format rights to several users within an organization should create the formats at the level of the organization (refer to :ref:`formats-org`) and then add them to a subscription profile (refer to :ref:`formats-subscription`. In this case, all new users created with the given subscription profile will have access to the formats. 
+An administrator who wants to add format rights to several users within an organization should create the formats at the level of the organization (refer to :ref:`formats-org`) and then add them to a subscription profile (refer to :ref:`formats-subscription`). In this case, all new users created with the given subscription profile will have access to the formats. 
 
-The administrator can add or remove image formats for a specific user account using the command-line interface, as described here after.
+.. _formats-subscription:
+
+Adding Formats Using Subscription Profile
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To add access to a format to a group of users, you can add it as part of a subscription profile. This means that all the users that are created with this subscription profile will have access to the format. You cannot add access to a format that is not included in the organization. In order to force the changes to apply to all users (even those already created), use the option ``--allusers``. For a list of formats that are part of the organization, use the command:
+
+	* ``org targetformat list``
+	* ``org targetplatform list``
+
+Therefore, in order to add formats using the subscription profile, run the following command. For example::
+
+	$ uforge subscription targetformat add --targetformat ovf qcow2 vbox --allusers --name sub --url https://uforge.usharesoft.com:443 -u $ADMIN -p $PASS
+
+In the example above, the argument ``--name`` is the name of the subscription profile.
+
 
 .. _set-formats-user:
 

@@ -34,6 +34,18 @@ To view the roles already assigned to a specific user, run the command::
 	$ uforge user role list --account <username> -u $ADMIN -p $PASS
 
 
+Adding Roles to a Subscription Profile
+--------------------------------------
+
+If you want a group of users to have the same role, then you can add it to the subscription profile (refer to :ref:`subscription-profiles`). This means that all the users that are created with this subscription profile will have this role. However, this will apply only to the new users created, unless you use the option ``--allusers``.
+
+.. code-block:: shell
+
+	$ uforge subscription role add --name sub --roles newrole --allusers -u $ADMIN -p $PASS
+
+In the example above ``sub`` is the name of the subscription profile.
+
+
 .. _add-roles:
 
 Adding a Role to a User

@@ -21,9 +21,8 @@ Within UForge, the Golden Image used when you create appliances will be the last
 
 Once the Golden Image is created, you will need to
 
-	1. Save it to the proper location (as described in :ref:`store-updated-golden`). 
-	2. Store the golden images (all profiles in one language) as described in :ref:`store-updated-golden`. You will need about 40Gb of disk space on the UForge NAS. 
-	3. Add the Golden Image to your UForge AppCenter, as described in :ref:`add-golden-toAppCenter`.
+	1. Store the golden images (all profiles in one language) as described in :ref:`store-updated-golden`. You will need about 40Gb of disk space on the UForge NAS. 
+	2. Add the Golden Image to your UForge AppCenter, as described in :ref:`add-golden-toAppCenter`.
 
 Supported Microsoft Windows Versions
 ------------------------------------

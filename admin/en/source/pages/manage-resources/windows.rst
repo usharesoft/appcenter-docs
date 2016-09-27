@@ -186,7 +186,7 @@ To create a new Golden Image, you will need to:
 
 			$ gzip image.raw
 
-You can now save you golden image on the NAS.
+You can now save your golden image on the NAS.
 
 .. _store-updated-golden:
 

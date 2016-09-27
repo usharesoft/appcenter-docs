@@ -7,7 +7,7 @@ Microsoft Windows and UForge
 
 Within UForge, Microsoft Windows is treated differently from other Linux/UNIX operating systems. In fact, Windows is not bundled with packages. Consequently, it is not possible to create standard (package based) OS Profile as for all the other supported distributions.
 
-Instead, UForge uses a Golden Image as a profile. A Golden Image is an image that has been by the customer (see :ref:`create-golden-image`) that contains the basic installation of the Windows version and some extra files. You can generate Golden Images at any time.
+Instead, UForge uses a Golden Image as a profile. A Golden Image is an image that has been made by the customer (see :ref:`create-golden-image`) that contains the basic installation of the Windows version and some extra files. You can generate Golden Images at any time.
 
 A Golden Image can be between 5 to 10 Gb, depending on the selected version.
 
@@ -185,7 +185,7 @@ To create a new Golden Image, you will need to:
 
 			$ gzip image.raw
 
-You can now save you golden image on the NAS.
+You can now save your golden image on the NAS.
 
 .. _store-updated-golden:
 

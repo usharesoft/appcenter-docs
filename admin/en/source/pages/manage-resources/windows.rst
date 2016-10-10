@@ -121,6 +121,8 @@ To create a new Golden Image, you will need to:
 			$ start /w dism /online /enable-feature /all /featurename:NetFx2-ServerCore-WOW64 
 			$ start /w dism /online /enable-feature /all /featurename:NetFx3ServerFeatures 
 			$ start /w dism /online /enable-feature /all /featurename:NetFx3
+			$ start /w dism /online /enable-feature /all /featurename:NetFx3-ServerCore
+			$ start /w dism /online /enable-feature /all /featurename:NetFx3-ServerCore-WOW64
 
 	3. Install gtk-sharp-2.12.10.win32.msi. 
 

@@ -14,9 +14,9 @@ applianceImport_upload
 	* Response Formats: ``application/xml`` ``application/json``
 	* Since: ``UForge 3.5``
 
-Upload the appliance archive. 
+Upload the appliance archive. <p/> 
 
-In order to upload an archive, an ``appliance import ticket`` must first be created by using :ref:`appliance-import`. 
+In order to upload an archive, an ``appliance import ticket`` must first be created by using :ref:`appliance-import`. <p/> 
 
 Once the upload is complete, the platform extracts the archive and creates an appliance from the archive contents.  This is an asynchronous job.  To get the status of this import, use :ref:`applianceImportStatus-get`
 
@@ -51,4 +51,7 @@ Example Request
 	 * :ref:`applianceimport-object`
 	 * :ref:`appliance-import`
 	 * :ref:`applianceImport-get`
+	 * :ref:`applianceImport-getAll`
+	 * :ref:`applianceImport-getAllStatus`
 	 * :ref:`applianceImportStatus-get`
+	 * :ref:`applianceImport-delete`

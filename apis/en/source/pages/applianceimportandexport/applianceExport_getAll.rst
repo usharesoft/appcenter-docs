@@ -1,22 +1,24 @@
 .. Copyright 2016 FUJITSU LIMITED
 
-.. _applianceExport-delete:
+.. _applianceExport-getAll:
 
-applianceExport_delete
+applianceExport_getAll
 ----------------------
 
-.. function:: DELETE /users/{uid}/appliances/{aid}/exports/{eid}
+.. function:: GET /users/{uid}/exports
 
 .. sidebar:: Summary
 
-	* Method: ``DELETE``
-	* Response Code: ``204 / 200``
-	* Response Formats: 
-	* Since: ``UForge 3.5``
+	* Method: ``GET``
+	* Response Code: ``200 / 304``
+	* Response Formats: ``application/xml`` ``application/json``
+	* Since: ``3.6``
 
-Deletes the export ticket and associated archive of an exported appliance export metadata (archive). 
+Gets all the appliance exports requested by a particular user. <p/> 
 
-.. note:: This does not delete the source appliance.
+A list of :ref:`applianceexport-object` objects are returned. <p/> 
+
+You can use a ``search criteria`` to retrieve a subset of these appliance export objects.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -28,8 +30,6 @@ URI Parameters
 ~~~~~~~~~~~~~~
 
 * ``uid`` (required): the user name (login name) of the :ref:`user-object`
-* ``eid`` (required): the id of the export ticket (provided after :ref:`appliance-export`)
-* ``aid`` (required): the id of the :ref:`appliance-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -41,7 +41,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/users/{uid}/appliances/{aid}/exports/{eid}" -X DELETE \
+	curl "https://uforge.example.com/api/users/{uid}/exports" -X GET \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::

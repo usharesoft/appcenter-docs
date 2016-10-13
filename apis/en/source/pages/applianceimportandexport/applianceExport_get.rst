@@ -1,22 +1,20 @@
 .. Copyright 2016 FUJITSU LIMITED
 
-.. _applianceExport-delete:
+.. _applianceExport-get:
 
-applianceExport_delete
-----------------------
+applianceExport_get
+-------------------
 
-.. function:: DELETE /users/{uid}/appliances/{aid}/exports/{eid}
+.. function:: GET /users/{uid}/appliances/{aid}/exports/{eid}
 
 .. sidebar:: Summary
 
-	* Method: ``DELETE``
-	* Response Code: ``204 / 200``
-	* Response Formats: 
+	* Method: ``GET``
+	* Response Code: ``200 / 304``
+	* Response Formats: ``application/xml`` ``application/json``
 	* Since: ``UForge 3.5``
 
-Deletes the export ticket and associated archive of an exported appliance export metadata (archive). 
-
-.. note:: This does not delete the source appliance.
+Gets an appliance export ticket.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -41,7 +39,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/users/{uid}/appliances/{aid}/exports/{eid}" -X DELETE \
+	curl "https://uforge.example.com/api/users/{uid}/appliances/{aid}/exports/{eid}" -X GET \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::

@@ -1,22 +1,20 @@
 .. Copyright 2016 FUJITSU LIMITED
 
-.. _appliance-import:
+.. _applianceImport-delete:
 
-appliance_import
-----------------
+applianceImport_delete
+----------------------
 
-.. function:: POST /users/{uid}/imports
+.. function:: DELETE /users/{uid}/imports/{iid}
 
 .. sidebar:: Summary
 
-	* Method: ``POST``
-	* Response Code: ``201``
-	* Response Formats: ``application/xml`` ``application/json``
-	* Since: ``UForge 3.4``
+	* Method: ``DELETE``
+	* Response Code: ``204 / 200``
+	* Response Formats: 
+	* Since: ``3.6``
 
-Requests to import an appliance archive.  This creates an ``appliance import ticket`` that contains the meta-data information on the ``appliance`` that will be created from the archive.  Once this ticket is created, the archive can be uploaded using :ref:`applianceImport-upload`. <p/> 
-
-An archive can be used with the `hammr <http://hammr.io>`_ command-line tool.
+Deletes the specified appliance import.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -28,6 +26,7 @@ URI Parameters
 ~~~~~~~~~~~~~~
 
 * ``uid`` (required): the user name (login name) of the :ref:`user-object`
+* ``iid`` (required): the id of the :ref:`applianceimport-object` ticket to delete
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -39,16 +38,16 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/users/{uid}/imports" -X POST \
+	curl "https://uforge.example.com/api/users/{uid}/imports/{iid}" -X DELETE \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::
 
 	 * :ref:`appliance-object`
 	 * :ref:`applianceimport-object`
+	 * :ref:`appliance-import`
 	 * :ref:`applianceImport-get`
 	 * :ref:`applianceImport-getAll`
 	 * :ref:`applianceImport-getAllStatus`
 	 * :ref:`applianceImport-upload`
 	 * :ref:`applianceImportStatus-get`
-	 * :ref:`applianceImport-delete`

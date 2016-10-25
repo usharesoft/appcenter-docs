@@ -121,6 +121,8 @@ To create a new Golden Image, you will need to:
 			$ start /w dism /online /enable-feature /all /featurename:NetFx3ServerFeatures 
 			$ start /w dism /online /enable-feature /all /featurename:NetFx3
 
+		.. note:: If any of the above commands fail with an error indicating that the feature is non-existant, ignore the error and continue.
+
 	3. Install gtk-sharp-2.12.10.win32.msi. 
 
 		* You can download it from http://download.mono-project.com/gtk-sharp/gtk-sharp-2.12.10.win32.msi.old

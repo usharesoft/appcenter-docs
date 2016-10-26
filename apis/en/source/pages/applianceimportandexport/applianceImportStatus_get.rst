@@ -14,7 +14,7 @@ applianceImportStatus_get
 	* Response Formats: ``application/xml`` ``application/json``
 	* Since: ``UForge 3.5``
 
-Retrieve the current status of importing an appliance archive.
+Retrieve the current status of an appliance archive import.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -47,4 +47,7 @@ Example Request
 	 * :ref:`applianceimport-object`
 	 * :ref:`appliance-import`
 	 * :ref:`applianceImport-get`
+	 * :ref:`applianceImport-getAll`
 	 * :ref:`applianceImport-upload`
+	 * :ref:`applianceImport-getAllStatus`
+	 * :ref:`applianceImport-delete`

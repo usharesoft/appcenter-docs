@@ -53,4 +53,7 @@ Example Request
 	 * :ref:`appliance-export`
 	 * :ref:`applianceExport-cancel`
 	 * :ref:`applianceExport-delete`
-	 * :ref:`applianceExportStatus-get`
+	 * :ref:`applianceExport-download`
+	 * :ref:`applianceExport-get`
+	 * :ref:`applianceExport-getAll`
+	 * :ref:`applianceImport-getAllStatus`

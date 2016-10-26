@@ -1,22 +1,24 @@
 .. Copyright 2016 FUJITSU LIMITED
 
-.. _appliance-import:
+.. _applianceImport-getAllStatus:
 
-appliance_import
-----------------
+applianceImport_getAllStatus
+----------------------------
 
-.. function:: POST /users/{uid}/imports
+.. function:: GET /users/{uid}/imports/statuses
 
 .. sidebar:: Summary
 
-	* Method: ``POST``
-	* Response Code: ``201``
+	* Method: ``GET``
+	* Response Code: ``200 / 304``
 	* Response Formats: ``application/xml`` ``application/json``
-	* Since: ``UForge 3.4``
+	* Since: ``3.6``
 
-Requests to import an appliance archive.  This creates an ``appliance import ticket`` that contains the meta-data information on the ``appliance`` that will be created from the archive.  Once this ticket is created, the archive can be uploaded using :ref:`applianceImport-upload`. <p/> 
+Gets the status of all the current appliance imports for the user 
 
-An archive can be used with the `hammr <http://hammr.io>`_ command-line tool.
+A list of :ref:`status-object` objects are returned. 
+
+The ``ai`` query parameter can be used to retrieve a subset of these import statuses.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -39,16 +41,16 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/users/{uid}/imports" -X POST \
+	curl "https://uforge.example.com/api/users/{uid}/imports/statuses" -X GET \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::
 
 	 * :ref:`appliance-object`
 	 * :ref:`applianceimport-object`
-	 * :ref:`applianceImport-get`
 	 * :ref:`applianceImport-getAll`
-	 * :ref:`applianceImport-getAllStatus`
+	 * :ref:`appliance-import`
+	 * :ref:`applianceImport-get`
 	 * :ref:`applianceImport-upload`
 	 * :ref:`applianceImportStatus-get`
 	 * :ref:`applianceImport-delete`

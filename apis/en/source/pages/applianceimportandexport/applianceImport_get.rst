@@ -14,7 +14,7 @@ applianceImport_get
 	* Response Formats: ``application/xml`` ``application/json``
 	* Since: ``3.4``
 
-Retrieve an appliance import ticket meta-data. 
+Gets an appliance import ticket. <p/> 
 
 This object is created automatically when a request to import an ``appliance archive`` is sent to the platform. See :ref:`appliance-import` for more information.
 
@@ -28,7 +28,7 @@ URI Parameters
 ~~~~~~~~~~~~~~
 
 * ``uid`` (required): the user name (login name) of the :ref:`user-object`
-* ``iid`` (required): the id of the :ref:`applianceimport-object` ticket
+* ``iid`` (required): the id of the :ref:`applianceimport-object` ticket to delete
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -48,5 +48,8 @@ Example Request
 	 * :ref:`appliance-object`
 	 * :ref:`applianceimport-object`
 	 * :ref:`appliance-import`
+	 * :ref:`applianceImport-getAll`
+	 * :ref:`applianceImport-getAllStatus`
 	 * :ref:`applianceImport-upload`
 	 * :ref:`applianceImportStatus-get`
+	 * :ref:`applianceImport-delete`

@@ -18,7 +18,7 @@ You can add boot scripts that will be run either the first time the appliance is
 
 .. warning:: Only .bat files will be executed for Windows. If you want to upload a Powershell script then you should upload it to ``My Software`` and call the execution of the Powershell script from a .bat configuration bootscript.
 
-If you want to install software or packages as part of the installation, you can use My Software to upload overlay files (e.g. /etc/profile.d/xxx.sh). 
+If you want to install software or packages as part of the installation, you can use My Software to upload overlay files (e.g. /etc/profile.d/xxx.sh). For more information, refer to :ref:`appliance-mysoftware`.
 
 To add a boot script to your appliance:
 

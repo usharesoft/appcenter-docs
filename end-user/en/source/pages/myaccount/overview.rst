@@ -12,6 +12,7 @@ The following sub-sections go into detail on how to manage your account informat
 
    user-profile
    user-cloud-accounts
+   user-artifact-account
    user-apikeys
    user-sshkeys
    user-password

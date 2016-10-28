@@ -2,8 +2,8 @@
 
 .. _migration-scan:
 
-Executing a Scan of the Source System
--------------------------------------
+Scanning the Source System
+--------------------------
 
 The first step in migrating your system is running a scan of the target system. This identifies the meta-data of every file and package that makes up the running workload.
 
@@ -43,16 +43,21 @@ To carry out a scan, go to the ``Migration`` tab:
 
 		By default the scan data will be saved in ``/tmp``. You can modify the directory where the data will be saved using the ``-t`` option in order to ensure that there is enough space to save the scan data.
 
+		You can also use API keys to run the command. In this case, in the command you copied, remove the password and enter the API keys using ``-a`` option for the public key and ``-s`` option for the secret key. For example::
+
+		./uforge-scan.[bin/exe] -u <username> -a <public-key> -s <secret-key> -U http://ip:port/ufws -n 'Test_scan'
+
 	10. A report is sent to UForge AppCenter which can be used for migration. To view the progress, go back to the ``Migration`` tab and click ``ok``.
 
+	.. note:: The duration of the scan depends on: 
 
-.. note:: The duration of the scan depends on: 
-
-	* the power of the machine in the target environment, 
-	* the complexity of the target environment OS (number of packages installed), 
-	* the network bandwidth between the target environment and UForge. 
+		* the power of the machine in the target environment, 
+		* the complexity of the target environment OS (number of packages installed), 
+		* the network bandwidth between the target environment and UForge. 
 	
-	Scans of typical simple target environments can last about 5 to 15 minutes. In the case of larger and more complex target environments, together with poorer bandwidth, one can experience durations up to one hour.
+		Scans of typical simple target environments can last about 5 to 15 minutes. In the case of larger and more complex target environments, together with poorer bandwidth, one can experience durations of up to one hour.
+
+	11. To view the details of a scan, click on the scan and refer to :ref:`migration-view-scan`.
 
 .. _migration-scan-windows:
 
@@ -73,15 +78,16 @@ To carry out a scan, go to the ``Migration`` tab:
 
 	5. If you want to exclude certain directories or files from the scan then click ``add`` and enter the directory path or full pathname of the file.
 
-		.. image:: /images/migration-windows-download.jpg
-
 	6. Optionally you can select ``Use local storage``. This means that the scan will be not be done in streaming but in 2 phases. First the data will be stored on a temporary storage drive during the scan process. This temporary storage can be a local directory or a virtual space on the network. It must be at least half the size of the machine you want to scan.
 
-	If you are using local storage you will have to launch a script at the end to upload the archive to UForge AppCenter later.
+		.. image:: /images/migration-windows-download.jpg
 
-Viewing Scans
-~~~~~~~~~~~~~
+	.. note:: If you are using local storage you will have to launch a script at the end to upload the archive to UForge AppCenter later.
 
-To view all the scans executed from your UForge account, go to the ``Migration`` tab. On the ``My Scans`` page you can view a list of the scans. To view the details of a scan, click on the scan and refer to :ref:`migration-scan-details`.
+	7. Optionally you can use API keys. In this case, check ``Use API keys authentication`` and enter the public and secret key information.
 
-	.. image:: /images/migration-scan-list.png
+		.. image:: /images/migration-windows-APIkey.png
+
+	8. Click ``scan`` to launch the scan. A report is sent to UForge AppCenter which can be used for migration. To view the progress, go back to the ``Migration`` tab and click ``ok``.
+
+	9. To view the details of a scan, click on the scan and refer to :ref:`migration-view-scan`.

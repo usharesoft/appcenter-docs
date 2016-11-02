@@ -5,6 +5,8 @@
 Appliance Import and Export API Resources
 =========================================
 
+	* :ref:`applianceExport-getAll`: Gets all the appliance exports requested by a particular user
+	* :ref:`applianceExport-getAllStatus`: Retrieves the status of all the current appliance exports for the user <p/> <p>A list of :ref:`status-object` objects are returned
 	* :ref:`applianceImport-getAll`: Gets all the appliance imports requested by a particular user
 	* :ref:`appliance-import`: Requests to import an appliance archive
 	* :ref:`applianceImport-getAllStatus`: Gets the status of all the current appliance imports for the user
@@ -12,8 +14,6 @@ Appliance Import and Export API Resources
 	* :ref:`applianceImport-delete`: Deletes the specified appliance import
 	* :ref:`applianceImport-upload`: Upload the appliance archive
 	* :ref:`applianceImportStatus-get`: Retrieve the current status of an appliance archive import
-	* :ref:`applianceExport-getAll`: Gets all the appliance exports requested by a particular user
-	* :ref:`applianceExport-getAllStatus`: Retrieves the status of all the current appliance exports for the user
 	* :ref:`appliance-export`: Request to export the specified appliance as an archive
 	* :ref:`applianceExport-get`: Gets an appliance export ticket
 	* :ref:`applianceExport-delete`: Deletes the export ticket
@@ -25,6 +25,8 @@ Appliance Import and Export API Resources
 .. toctree::
     :hidden:
 
+    applianceExport_getAll
+    applianceExport_getAllStatus
     applianceImport_getAll
     appliance_import
     applianceImport_getAllStatus
@@ -32,8 +34,6 @@ Appliance Import and Export API Resources
     applianceImport_delete
     applianceImport_upload
     applianceImportStatus_get
-    applianceExport_getAll
-    applianceExport_getAllStatus
     appliance_export
     applianceExport_get
     applianceExport_delete

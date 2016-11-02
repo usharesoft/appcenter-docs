@@ -16,7 +16,7 @@ applianceMySoftware_getAll
 
 Retrieves all the 3rd party software components that have been added to the appliance from the user's ``Software Library``. 
 
-This returns a list of :ref:`mysoftware-object` objects.
+This returns a list of :ref:`mySoftware-object` objects.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -47,7 +47,7 @@ Example Request
 
 	 * :ref:`appliance-object`
 	 * :ref:`user-object`
-	 * :ref:`mysoftware-object`
+	 * :ref:`mySoftware-object`
 	 * :ref:`appliance-create`
 	 * :ref:`appliance-clone`
 	 * :ref:`appliance-delete`

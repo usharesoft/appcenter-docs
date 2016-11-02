@@ -5,6 +5,11 @@
 Scan Machine Image API Resources
 ================================
 
+	* :ref:`scanImage-publish`: Request to publish (register) a generated machine image to a target cloud environment
+	* :ref:`scanPublishedImage-get`: Retrieve a published machine image for a scan
+	* :ref:`scanPublishedImage-delete`: Removes a published machine image from a scan
+	* :ref:`scanPublishedImageStatus-get`: Retrieve the publish status of all the published machine images for an appliance
+	* :ref:`scanPublishedImage-cancel`: Cancel a publish of a machine image to a cloud environment
 	* :ref:`scanImage-getAll`: Returns all of the machine images generated from a scan
 	* :ref:`scanImage-generate`: Request to generate a machine image from a scan
 	* :ref:`scanImage-get`: Retrieves the meta-data of a machine image generated from a scan
@@ -13,16 +18,16 @@ Scan Machine Image API Resources
 	* :ref:`scanImageGenerationStatus-get`: Retrieves the generation status of a machine image being generated
 	* :ref:`scanImage-download`: Downloads a generated machine image from a scan
 	* :ref:`scanImage-downloadFile`: Downloads a generated machine image from a scan
-	* :ref:`scanImage-publish`: Request to publish (register) a generated machine image to a target cloud environment
-	* :ref:`scanPublishedImage-get`: Retrieve a published machine image for a scan
-	* :ref:`scanPublishedImage-delete`: Removes a published machine image from a scan
-	* :ref:`scanPublishedImageStatus-get`: Retrieve the publish status of all the published machine images for an appliance
-	* :ref:`scanPublishedImage-cancel`: Cancel a publish of a machine image to a cloud environment
 
 
 .. toctree::
     :hidden:
 
+    scanImage_publish
+    scanPublishedImage_get
+    scanPublishedImage_delete
+    scanPublishedImageStatus_get
+    scanPublishedImage_cancel
     scanImage_getAll
     scanImage_generate
     scanImage_get
@@ -31,8 +36,3 @@ Scan Machine Image API Resources
     scanImageGenerationStatus_get
     scanImage_download
     scanImage_downloadFile
-    scanImage_publish
-    scanPublishedImage_get
-    scanPublishedImage_delete
-    scanPublishedImageStatus_get
-    scanPublishedImage_cancel

@@ -26,6 +26,7 @@ Note: There are multiple options for reading this documentation - click on the l
     pages/appliancepartitiontablelogicalgroup/overview
     pages/appliancepartitiontablelogicalvolume/overview
     pages/appliancesoftwarecomponent/overview
+    pages/artifactaccounts/overview
     pages/categories/overview
     pages/machineimage/overview
     pages/machinescan/overview

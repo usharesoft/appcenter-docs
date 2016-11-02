@@ -12,9 +12,13 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`apikeypairs-object`
 	* :ref:`appliance-object`
 	* :ref:`applianceexport-object`
+	* :ref:`applianceexports-object`
 	* :ref:`applianceimport-object`
+	* :ref:`applianceimports-object`
 	* :ref:`appliances-object`
 	* :ref:`appliancestats-object`
+	* :ref:`artifactcredaccount-object`
+	* :ref:`artifactcredaccounts-object`
 	* :ref:`bootscript-object`
 	* :ref:`bootscripts-object`
 	* :ref:`categories-object`
@@ -90,6 +94,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`orgs-object`
 	* :ref:`osgroup-object`
 	* :ref:`osgroups-object`
+	* :ref:`ospackage-object`
+	* :ref:`ospackages-object`
 	* :ref:`osupdate-object`
 	* :ref:`osupdates-object`
 	* :ref:`osuser-object`
@@ -138,6 +144,14 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`scans-object`
 	* :ref:`scanstats-object`
 	* :ref:`servicestatus-object`
+	* :ref:`softwareartifact-object`
+	* :ref:`softwareartifacts-object`
+	* :ref:`softwarebundle-object`
+	* :ref:`softwarebundles-object`
+	* :ref:`softwarebundleexport-object`
+	* :ref:`softwarebundleimport-object`
+	* :ref:`softwarefile-object`
+	* :ref:`softwarefiles-object`
 	* :ref:`sshkey-object`
 	* :ref:`sshkeys-object`
 	* :ref:`statdatapoint-object`
@@ -174,9 +188,13 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     APIKeyPairs
     Appliance
     ApplianceExport
+    ApplianceExports
     ApplianceImport
+    ApplianceImports
     Appliances
     ApplianceStats
+    ArtifactCredAccount
+    ArtifactCredAccounts
     BootScript
     BootScripts
     Categories
@@ -252,6 +270,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     Orgs
     OSGroup
     OSGroups
+    OSPackage
+    OSPackages
     OSUpdate
     OSUpdates
     OSUser
@@ -300,6 +320,14 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     Scans
     ScanStats
     ServiceStatus
+    SoftwareArtifact
+    SoftwareArtifacts
+    SoftwareBundle
+    SoftwareBundles
+    SoftwareBundleExport
+    SoftwareBundleImport
+    SoftwareFile
+    SoftwareFiles
     SSHKey
     SSHKeys
     StatDataPoint

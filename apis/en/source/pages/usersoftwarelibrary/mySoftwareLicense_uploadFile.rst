@@ -5,14 +5,14 @@
 mySoftwareLicense_uploadFile
 ----------------------------
 
-.. function:: POST /users/{uid}/mysoftware/{msid}/licenses/{mslid}/{fileName}
+.. function:: POST /users/{uid}/mysoftware/{msid}/licenses/{lid}/{fileName}
 
 .. sidebar:: Summary
 
 	* Method: ``POST``
 	* Response Code: ``201``
 	* Response Formats: ``application/xml`` ``application/json``
-	* Since: ``UForge 1.0``
+	* Since: ``UForge 3.6``
 
 Uploads a license file for a software component. This request is similar to :ref:`mySoftwareLicense-upload`
 
@@ -25,10 +25,10 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the user name (login name) of the :ref:`user-object`
-* ``msid`` (required): the id of the :ref:`mysoftware-object`
+* ``uid`` (required): the id of the :ref:`user-object`
+* ``msid`` (required): the id of the :ref:`mySoftware-object`
 * ``fileName`` (required): the file name of the license to upload
-* ``mslid`` (required): the id of the :ref:`license-object`
+* ``lid`` (required): the id of the :ref:`license-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -40,7 +40,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/users/{uid}/mysoftware/{msid}/licenses/{mslid}/{fileName}" -X POST \
+	curl "https://uforge.example.com/api/users/{uid}/mysoftware/{msid}/licenses/{lid}/{fileName}" -X POST \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"-H "Content-type: application/xml" --data-binary "@binaryFilePath"
 
 .. seealso::
@@ -51,16 +51,34 @@ Example Request
 	 * :ref:`mySoftware-get`
 	 * :ref:`mySoftware-update`
 	 * :ref:`mySoftware-delete`
+	 * :ref:`mySoftware-clone`
 	 * :ref:`mySoftwareUsage-getAll`
-	 * :ref:`mySoftwarePkg-add`
-	 * :ref:`mySoftwarePkg-getAll`
-	 * :ref:`mySoftwarePkg-deleteAll`
-	 * :ref:`mySoftwarePkg-get`
-	 * :ref:`mySoftwarePkg-update`
-	 * :ref:`mySoftwarePkg-download`
-	 * :ref:`mySoftwarePkg-downloadFile`
-	 * :ref:`mySoftwarePkg-upload`
-	 * :ref:`mySoftwarePkg-delete`
+	 * :ref:`mySoftwareOs-getAll`
+	 * :ref:`mySoftwareArtifact-add`
+	 * :ref:`mySoftwareArtifact-getAll`
+	 * :ref:`mySoftwareArtifact-get`
+	 * :ref:`mySoftwareArtifact-updateAll`
+	 * :ref:`mySoftwareArtifact-update`
+	 * :ref:`mySoftwareArtifact-deleteAll`
+	 * :ref:`mySoftwareArtifact-delete`
+	 * :ref:`mySoftwareArtifact-download`
+	 * :ref:`mySoftwareArtifact-downloadFile`
+	 * :ref:`mySoftwareArtifact-createFromRemoteServer`
+	 * :ref:`mySoftwareArtifact-addOrRemoveFileFromCache`
+	 * :ref:`mySoftwareArtifact-upload`
+	 * :ref:`mySoftwareArtifact-addChild`
 	 * :ref:`mySoftwareLicense-upload`
 	 * :ref:`mySoftwareLicense-download`
 	 * :ref:`mySoftwareLicense-delete`
+	 * :ref:`mySoftwareLogo-download`
+	 * :ref:`mySoftwareLogo-downloadFile`
+	 * :ref:`mySoftwareLogo-upload`
+	 * :ref:`mySoftwareLogo-delete`
+	 * :ref:`mySoftware-export`
+	 * :ref:`mySoftwareExport-delete`
+	 * :ref:`mySoftwareExport-download`
+	 * :ref:`mySoftwareExportStatus-get`
+	 * :ref:`softwareBundleImport-get`
+	 * :ref:`softwarebundle-import`
+	 * :ref:`softwarebundleImport-upload`
+	 * :ref:`softwarebundleImportStatus-get`

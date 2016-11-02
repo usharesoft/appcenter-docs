@@ -26,6 +26,7 @@ The list of attributes for ``partition`` are:
 	* ``size`` (long): the size (in bytes) of the partition
 	* ``uri`` (anyURI): the uri resource of this partition object
 	* ``volumeOrder`` (int): the volume order
+	* ``mbrBoot`` (boolean): boolean indicating whether this partition is bootable
 	* ``created`` (dateTime): the created date of the object
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)

@@ -20,7 +20,7 @@ Security Summary
 ~~~~~~~~~~~~~~~~
 
 * Requires Authentication: ``true``
-* Entitlements Required: ``appliance_create``
+* Entitlements Required: ``None``
 
 URI Parameters
 ~~~~~~~~~~~~~~

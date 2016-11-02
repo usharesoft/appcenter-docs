@@ -17,6 +17,7 @@ The list of attributes for ``applianceExport`` are:
 	* ``applianceName`` (string): the name of the exported appliance
 	* ``applianceVersion`` (string): the version of the exported appliance
 	* ``downloadUri`` (anyURI): the uri allowing the archive to be downloaded
+	* ``downloaded`` (boolean): flag to determine if there has been at least one request to download the export archive
 	* ``parentUri`` (anyURI): the uri of the exported appliance
 	* ``status`` (:ref:`status-object`): the :ref:`status-object` object providing the current status of the export
 	* ``uri`` (anyURI): the uri resource of this appliance export

@@ -16,7 +16,7 @@ mySoftware_update
 
 Updates the meta-data information of a software component. 
 
-Please refer to :ref:`mysoftware-object` for a complete list of all the ``my software`` attributes.
+Please refer to :ref:`mySoftware-object` for a complete list of all the ``my software`` attributes.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -28,7 +28,7 @@ URI Parameters
 ~~~~~~~~~~~~~~
 
 * ``uid`` (required): the user name (login name) of the :ref:`user-object`
-* ``msid`` (required): the id of the :ref:`mysoftware-object`
+* ``msid`` (required): the id of the :ref:`mySoftware-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -54,22 +54,40 @@ Example of representation.xml content (the request body):
 
 .. seealso::
 
-	 * :ref:`mysoftware-object`
+	 * :ref:`mySoftware-object`
 	 * :ref:`mySoftware-create`
 	 * :ref:`mySoftware-getAll`
 	 * :ref:`mySoftware-get`
 	 * :ref:`mySoftware-delete`
+	 * :ref:`mySoftware-clone`
 	 * :ref:`mySoftwareUsage-getAll`
-	 * :ref:`mySoftwarePkg-add`
-	 * :ref:`mySoftwarePkg-getAll`
-	 * :ref:`mySoftwarePkg-deleteAll`
-	 * :ref:`mySoftwarePkg-get`
-	 * :ref:`mySoftwarePkg-update`
-	 * :ref:`mySoftwarePkg-download`
-	 * :ref:`mySoftwarePkg-downloadFile`
-	 * :ref:`mySoftwarePkg-upload`
-	 * :ref:`mySoftwarePkg-delete`
+	 * :ref:`mySoftwareOs-getAll`
+	 * :ref:`mySoftwareArtifact-add`
+	 * :ref:`mySoftwareArtifact-getAll`
+	 * :ref:`mySoftwareArtifact-get`
+	 * :ref:`mySoftwareArtifact-updateAll`
+	 * :ref:`mySoftwareArtifact-update`
+	 * :ref:`mySoftwareArtifact-deleteAll`
+	 * :ref:`mySoftwareArtifact-delete`
+	 * :ref:`mySoftwareArtifact-download`
+	 * :ref:`mySoftwareArtifact-downloadFile`
+	 * :ref:`mySoftwareArtifact-createFromRemoteServer`
+	 * :ref:`mySoftwareArtifact-addOrRemoveFileFromCache`
+	 * :ref:`mySoftwareArtifact-upload`
+	 * :ref:`mySoftwareArtifact-addChild`
 	 * :ref:`mySoftwareLicense-upload`
 	 * :ref:`mySoftwareLicense-uploadFile`
 	 * :ref:`mySoftwareLicense-download`
 	 * :ref:`mySoftwareLicense-delete`
+	 * :ref:`mySoftwareLogo-download`
+	 * :ref:`mySoftwareLogo-downloadFile`
+	 * :ref:`mySoftwareLogo-upload`
+	 * :ref:`mySoftwareLogo-delete`
+	 * :ref:`mySoftware-export`
+	 * :ref:`mySoftwareExport-delete`
+	 * :ref:`mySoftwareExport-download`
+	 * :ref:`mySoftwareExportStatus-get`
+	 * :ref:`softwareBundleImport-get`
+	 * :ref:`softwarebundle-import`
+	 * :ref:`softwarebundleImport-upload`
+	 * :ref:`softwarebundleImportStatus-get`

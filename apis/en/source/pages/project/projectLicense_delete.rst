@@ -5,7 +5,7 @@
 projectLicense_delete
 ---------------------
 
-.. function:: DELETE /distributions/{id}/projects/{pid}/licenses/{lid}
+.. function:: DELETE /orgs/{oid}/projects/{pid}/licenses/{lid}
 
 .. sidebar:: Summary
 
@@ -27,7 +27,7 @@ URI Parameters
 
 * ``lid`` (required): the id of the :ref:`license-object`
 * ``pid`` (required): the id of the :ref:`project-object`
-* ``id`` (required): the id of the :ref:`distribprofile-object`
+* ``oid`` (required): the id of the :ref:`org-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -39,7 +39,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/distributions/{id}/projects/{pid}/licenses/{lid}" -X DELETE \
+	curl "https://uforge.example.com/api/orgs/{oid}/projects/{pid}/licenses/{lid}" -X DELETE \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::

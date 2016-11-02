@@ -5,16 +5,11 @@
 Machine Image API Resources
 ===========================
 
-	* :ref:`machineImagePublished-download`: Downloads a published machine image
 	* :ref:`machineImage-publish`: Request to publish (register) a generated machine image to a target cloud environment
 	* :ref:`machineImagePublished-getAll`: Retrieve all the published machine images for an appliance
 	* :ref:`machineImagePublished-deleteAll`: Removes all published machine images for an appliance
 	* :ref:`machineImagePublishedStatus-getAll`: Retrieve the publish status of all the published machine images for an appliance
-	* :ref:`applianceImage-publish`: Request to publish (register) a generated machine image to a target cloud environment
-	* :ref:`machineImagePublished-get`: Retrieve a published machine image for an appliance
-	* :ref:`machineImagePublished-delete`: Removes a published machine image from an appliance
-	* :ref:`machineImagePublishedStatus-get`: Retrieve the publish status of a published machine image for an appliance
-	* :ref:`machineImagePublish-cancel`: Cancels a running publish of a machine image to a target environment
+	* :ref:`machineImagePublished-download`: Downloads a published machine image
 	* :ref:`machineImage-download`: Downloads a generated machine image
 	* :ref:`machineImage-downloadFile`: Downloads a generated machine image
 	* :ref:`machineImage-generate`: Request to generate a machine image from an appliance
@@ -27,21 +22,21 @@ Machine Image API Resources
 	* :ref:`machineImageGeneration-cancel`: Cancels a running generation of a machine image
 	* :ref:`machineImageStatus-get`: Retrieves the generation status of a machine image
 	* :ref:`machineImageStatus-getAll`: Retrieves the generation status of all the machine images for an appliance
+	* :ref:`applianceImage-publish`: Request to publish (register) a generated machine image to a target cloud environment
+	* :ref:`machineImagePublished-get`: Retrieve a published machine image for an appliance
+	* :ref:`machineImagePublished-delete`: Removes a published machine image from an appliance
+	* :ref:`machineImagePublishedStatus-get`: Retrieve the publish status of a published machine image for an appliance
+	* :ref:`machineImagePublish-cancel`: Cancels a running publish of a machine image to a target environment
 
 
 .. toctree::
     :hidden:
 
-    machineImagePublished_download
     machineImage_publish
     machineImagePublished_getAll
     machineImagePublished_deleteAll
     machineImagePublishedStatus_getAll
-    applianceImage_publish
-    machineImagePublished_get
-    machineImagePublished_delete
-    machineImagePublishedStatus_get
-    machineImagePublish_cancel
+    machineImagePublished_download
     machineImage_download
     machineImage_downloadFile
     machineImage_generate
@@ -54,3 +49,8 @@ Machine Image API Resources
     machineImageGeneration_cancel
     machineImageStatus_get
     machineImageStatus_getAll
+    applianceImage_publish
+    machineImagePublished_get
+    machineImagePublished_delete
+    machineImagePublishedStatus_get
+    machineImagePublish_cancel

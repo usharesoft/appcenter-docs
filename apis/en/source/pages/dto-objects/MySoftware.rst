@@ -14,26 +14,31 @@ The list of attributes for ``mySoftware`` are:
 
 	* ``appliancesUri`` (anyURI): the uri resource to retrieve all the appliance templates that use this software component
 	* ``applianceUris`` (:ref:`UriList-object`): the list of uri resources of each appliance template using this software component
-	* ``defaultInstallLocation`` (string): the default full pathname of where to install the software (if not a native package)
+	* ``cloneUri`` (anyURI): uri resource used to clone this MySoftware
 	* ``imported`` (boolean): a boolean highlighting if the MySoftware has been imported (from a scan, an appliance import or a workspace)
-	* ``installLocation`` (string): the full pathname of where to install this software item (overrides the ``defaultInstallLocation``)
-	* ``revision`` (int): the revision number of the software
-	* ``category`` (string): the category for this group of packages
-	* ``company`` (:ref:`company-object`): the company name
-	* ``description`` (string): the description for this group of packages
-	* ``distributionUri`` (anyURI): the uri resource of the operating system these packages belong to
-	* ``distroId`` (long): the unique id of the operating system these packages belong to
-	* ``installedSize`` (long): the estimated disk size (in bytes) required to install these group of packages
-	* ``license`` (:ref:`license-object`): the license information (see :ref:`license-object`)
-	* ``name`` (string): the name of these group of packages
-	* ``packagesUri`` (anyURI): the uri resource to retrieve the details of these packages
-	* ``packageUris`` (:ref:`UriList-object`): the list of uri resources for each package in the group
-	* ``release`` (string): the release information for the group
-	* ``size`` (long): the total size of all the packages in the group (in bytes)
 	* ``tag`` (string): the tag information
-	* ``uri`` (anyURI): the uri resource of this package group object
-	* ``version`` (string): the version information of this package group
-	* ``packages``: the list of packages in this group (see :ref:`package-object`)
+	* ``shortTag`` (string): the short tag information (mySoftware or project)
+	* ``name`` (string): the name of this software bundle
+	* ``version`` (string): the version information of this software bundle
+	* ``description`` (string): the description for this software bundle
+	* ``release`` (string): the release information for the software bundle
+	* ``defaultInstallLocation`` (string): the default full pathname of where to install the software bundle (if not a native package)
+	* ``installLocation`` (string): the full pathname of where to install this software bundle item (overrides the ``defaultInstallLocation``)
+	* ``restricted`` (boolean): a boolean highlighting if the Software bundle is restricted
+	* ``installedSize`` (long): the estimated disk size (in bytes) required to install this software bundle
+	* ``size`` (long): the total size of this software bundle (in bytes)
+	* ``revision`` (long): the revision number of the software bundle
+	* ``artifactsUri`` (anyURI): the uri resource to retrieve the details of software artifacts contained in the software bundle
+	* ``uri`` (anyURI): the uri resource of this software bundle object
+	* ``distributionsUri`` (anyURI): the uri resource to retrieve all the operating system this software bundle is designed for
+	* ``distributionUris`` (:ref:`UriList-object`): the list of uri resources of each operating system this software bundle is designed for
+	* ``exportUri`` (anyURI): uri resource used to export this software bundle
+	* ``category`` (:ref:`category-object`): the category for this software bundle (project)
+	* ``license`` (:ref:`license-object`): the license information (see :ref:`license-object`)
+	* ``logo`` (:ref:`logo-object`): the :ref:`logo-object` object for the software bundle
+	* ``maintainer`` (string): the maintainer name for this project
+	* ``website`` (anyURI): the website URL of the maintainer
+	* ``softwareArtifactUris`` (:ref:`UriList-object`): the list of uri resources for each software artifacts in the software bundle
 	* ``created`` (dateTime): the created date of the object
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)

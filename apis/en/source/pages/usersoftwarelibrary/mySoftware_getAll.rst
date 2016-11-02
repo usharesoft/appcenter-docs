@@ -16,7 +16,7 @@ mySoftware_getAll
 
 Gets all the user's software components from their ``Software Library``. 
 
-A list of :ref:`mysoftware-object` objects are returned. 
+A list of :ref:`mySoftware-object` objects are returned. 
 
 You can use a ``search criteria`` to retrieve a subset of these software components.
 
@@ -46,22 +46,40 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`mysoftware-object`
+	 * :ref:`mySoftware-object`
 	 * :ref:`mySoftware-create`
 	 * :ref:`mySoftware-get`
 	 * :ref:`mySoftware-update`
 	 * :ref:`mySoftware-delete`
+	 * :ref:`mySoftware-clone`
 	 * :ref:`mySoftwareUsage-getAll`
-	 * :ref:`mySoftwarePkg-add`
-	 * :ref:`mySoftwarePkg-getAll`
-	 * :ref:`mySoftwarePkg-deleteAll`
-	 * :ref:`mySoftwarePkg-get`
-	 * :ref:`mySoftwarePkg-update`
-	 * :ref:`mySoftwarePkg-download`
-	 * :ref:`mySoftwarePkg-downloadFile`
-	 * :ref:`mySoftwarePkg-upload`
-	 * :ref:`mySoftwarePkg-delete`
+	 * :ref:`mySoftwareOs-getAll`
+	 * :ref:`mySoftwareArtifact-add`
+	 * :ref:`mySoftwareArtifact-getAll`
+	 * :ref:`mySoftwareArtifact-get`
+	 * :ref:`mySoftwareArtifact-updateAll`
+	 * :ref:`mySoftwareArtifact-update`
+	 * :ref:`mySoftwareArtifact-deleteAll`
+	 * :ref:`mySoftwareArtifact-delete`
+	 * :ref:`mySoftwareArtifact-download`
+	 * :ref:`mySoftwareArtifact-downloadFile`
+	 * :ref:`mySoftwareArtifact-createFromRemoteServer`
+	 * :ref:`mySoftwareArtifact-addOrRemoveFileFromCache`
+	 * :ref:`mySoftwareArtifact-upload`
+	 * :ref:`mySoftwareArtifact-addChild`
 	 * :ref:`mySoftwareLicense-upload`
 	 * :ref:`mySoftwareLicense-uploadFile`
 	 * :ref:`mySoftwareLicense-download`
 	 * :ref:`mySoftwareLicense-delete`
+	 * :ref:`mySoftwareLogo-download`
+	 * :ref:`mySoftwareLogo-downloadFile`
+	 * :ref:`mySoftwareLogo-upload`
+	 * :ref:`mySoftwareLogo-delete`
+	 * :ref:`mySoftware-export`
+	 * :ref:`mySoftwareExport-delete`
+	 * :ref:`mySoftwareExport-download`
+	 * :ref:`mySoftwareExportStatus-get`
+	 * :ref:`softwareBundleImport-get`
+	 * :ref:`softwarebundle-import`
+	 * :ref:`softwarebundleImport-upload`
+	 * :ref:`softwarebundleImportStatus-get`

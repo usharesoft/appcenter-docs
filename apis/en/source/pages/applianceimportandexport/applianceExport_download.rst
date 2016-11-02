@@ -14,7 +14,7 @@ applianceExport_download
 	* Response Formats: ``*/*``
 	* Since: ``UForge 3.5``
 
-Downloads the archive (.tar.gz file) of an exported appliance.  The archive contains the meta-data file of the :ref:`appliance-object` and any 3rd party software or configuration scripts associated with the :ref:`appliance-object`. 
+Downloads the archive of an exported appliance.  The archive is a .tar.gz file.  The archive contains the meta-data file of the :ref:`appliance-object` and any 3rd party software or configuration scripts associated with the :ref:`appliance-object`. 
 
 An archive can be used with the `hammr <http://hammr.io>`_ command-line tool. 
 

@@ -5,7 +5,7 @@
 project_get
 -----------
 
-.. function:: GET /distributions/{id}/projects/{pid}
+.. function:: GET /orgs/{oid}/projects/{pid}
 
 .. sidebar:: Summary
 
@@ -26,7 +26,7 @@ URI Parameters
 ~~~~~~~~~~~~~~
 
 * ``pid`` (required): the id of the :ref:`project-object`
-* ``id`` (required): the id of the :ref:`distribprofile-object`
+* ``oid`` (required): the id of the :ref:`org-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -38,23 +38,31 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/distributions/{id}/projects/{pid}" -X GET \
+	curl "https://uforge.example.com/api/orgs/{oid}/projects/{pid}" -X GET \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::
 
-	 * :ref:`package-object`
+	 * :ref:`project-object`
 	 * :ref:`project-create`
 	 * :ref:`project-getAll`
 	 * :ref:`project-delete`
 	 * :ref:`project-update`
-	 * :ref:`projectPkg-create`
-	 * :ref:`projectPkg-get`
-	 * :ref:`projectPkg-getAll`
-	 * :ref:`projectPkg-delete`
-	 * :ref:`projectPkg-deleteAll`
-	 * :ref:`projectPkg-download`
-	 * :ref:`projectPkg-downloadFile`
-	 * :ref:`projectPkgs-update`
-	 * :ref:`projectPkg-update`
-	 * :ref:`projectPkg-upload`
+	 * :ref:`projectOs-getAll`
+	 * :ref:`projectArtifact-create`
+	 * :ref:`projectArtifact-getAll`
+	 * :ref:`projectArtifact-get`
+	 * :ref:`projectArtifact-updateAll`
+	 * :ref:`projectArtifact-update`
+	 * :ref:`projectArtifact-upload`
+	 * :ref:`projectArtifact-deleteAll`
+	 * :ref:`projectArtifact-delete`
+	 * :ref:`projectArtifact-download`
+	 * :ref:`projectArtifact-downloadFile`
+	 * :ref:`projectArtifact-createFromRemoteServer`
+	 * :ref:`projectArtifact-addOrRemoveFileFromCache`
+	 * :ref:`projectArtifact-addChild`
+	 * :ref:`projectLogo-download`
+	 * :ref:`projectLogo-downloadFile`
+	 * :ref:`projectLogo-upload`
+	 * :ref:`projectLogo-delete`

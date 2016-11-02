@@ -18,7 +18,7 @@ Retrieves the status of all the current appliance exports for the user <p/>
 
 A list of :ref:`status-object` objects are returned. <p/> 
 
-The ``ai`` query parameter can be used to retrieve a subset of these export statuses.
+The ``ae`` query parameter can be used to retrieve a subset of these export statuses.
 
 Security Summary
 ~~~~~~~~~~~~~~~~

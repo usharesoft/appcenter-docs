@@ -5,7 +5,7 @@
 project_update
 --------------
 
-.. function:: PUT /distributions/{id}/projects/{pid}
+.. function:: PUT /orgs/{oid}/projects/{pid}
 
 .. sidebar:: Summary
 
@@ -16,7 +16,7 @@ project_update
 
 Updates the information of a project. 
 
-Please refer to :ref:`project-object` for a complete list of all the ``project`` attributes.
+Please refer to :ref:`project-object` for a complete list of all the ``software bundle`` attributes.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -28,7 +28,7 @@ URI Parameters
 ~~~~~~~~~~~~~~
 
 * ``pid`` (required): the id of the :ref:`project-object`
-* ``id`` (required): the id of the :ref:`distribprofile-object`
+* ``oid`` (required): the id of the :ref:`org-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -40,7 +40,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/distributions/{id}/projects/{pid}" -X PUT \
+	curl "https://uforge.example.com/api/orgs/{oid}/projects/{pid}" -X PUT \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
 
 Example of representation.xml content (the request body):
@@ -48,7 +48,9 @@ Example of representation.xml content (the request body):
 .. code-block:: xml
 
 	<ns0:project xmlns:ns0="http://www.usharesoft.com/uforge">
-		<category>Blogging</category>
+		<category>
+			<name>Blogging</name>
+		</category>
 		<company>
 			<name>Maintainer Example</name>
 		</company>
@@ -58,24 +60,32 @@ Example of representation.xml content (the request body):
 		</license>
 		<name>Project Example</name>
 		<version>1.0</version>
-		<shortTag>INTERNAL</shortTag>
+		<shortTag>project</shortTag>
 	</ns0:project>
 
 
 .. seealso::
 
-	 * :ref:`package-object`
+	 * :ref:`project-object`
 	 * :ref:`project-create`
 	 * :ref:`project-getAll`
 	 * :ref:`project-get`
 	 * :ref:`project-delete`
-	 * :ref:`projectPkg-create`
-	 * :ref:`projectPkg-get`
-	 * :ref:`projectPkg-getAll`
-	 * :ref:`projectPkg-delete`
-	 * :ref:`projectPkg-deleteAll`
-	 * :ref:`projectPkg-download`
-	 * :ref:`projectPkg-downloadFile`
-	 * :ref:`projectPkgs-update`
-	 * :ref:`projectPkg-update`
-	 * :ref:`projectPkg-upload`
+	 * :ref:`projectOs-getAll`
+	 * :ref:`projectArtifact-create`
+	 * :ref:`projectArtifact-getAll`
+	 * :ref:`projectArtifact-get`
+	 * :ref:`projectArtifact-updateAll`
+	 * :ref:`projectArtifact-update`
+	 * :ref:`projectArtifact-upload`
+	 * :ref:`projectArtifact-deleteAll`
+	 * :ref:`projectArtifact-delete`
+	 * :ref:`projectArtifact-download`
+	 * :ref:`projectArtifact-downloadFile`
+	 * :ref:`projectArtifact-createFromRemoteServer`
+	 * :ref:`projectArtifact-addOrRemoveFileFromCache`
+	 * :ref:`projectArtifact-addChild`
+	 * :ref:`projectLogo-download`
+	 * :ref:`projectLogo-downloadFile`
+	 * :ref:`projectLogo-upload`
+	 * :ref:`projectLogo-delete`

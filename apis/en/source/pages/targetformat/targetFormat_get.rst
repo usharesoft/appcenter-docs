@@ -20,7 +20,7 @@ Security Summary
 ~~~~~~~~~~~~~~~~
 
 * Requires Authentication: ``true``
-* Entitlements Required: ``org_formats_administrate``
+* Entitlements Required: ``None``
 
 URI Parameters
 ~~~~~~~~~~~~~~

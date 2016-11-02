@@ -19,8 +19,8 @@ Downloads a license file from an organization.
 Security Summary
 ~~~~~~~~~~~~~~~~
 
-* Requires Authentication: ``true``
-* Entitlements Required: ``org_administrate``
+* Requires Authentication: ``false``
+* Entitlements Required: ``None``
 
 URI Parameters
 ~~~~~~~~~~~~~~

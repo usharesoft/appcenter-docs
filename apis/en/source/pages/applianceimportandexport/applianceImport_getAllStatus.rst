@@ -14,7 +14,7 @@ applianceImport_getAllStatus
 	* Response Formats: ``application/xml`` ``application/json``
 	* Since: ``3.6``
 
-Gets the status of all the current appliance imports for the user 
+Gets the status of all the current appliance imports for the user. 
 
 A list of :ref:`status-object` objects are returned. 
 

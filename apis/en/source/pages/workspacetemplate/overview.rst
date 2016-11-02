@@ -8,6 +8,7 @@ Workspace Template API Resources
 	* :ref:`workspaceTemplate-vote`: Post a rating for a shared appliance template
 	* :ref:`workspaceTemplate-getAll`: Retrieves all the appliance templates shared in a workspace
 	* :ref:`workspaceTemplate-share`: Requests to add an appliance from a user's Appliance Library to a workspace
+	* :ref:`workspaceTemplateStats-get`: Retrieves the statistics for a shared appliance template in a workspace
 	* :ref:`workspaceTemplate-get`: Retrieves the information of an appliance template in a workspace
 	* :ref:`workspaceTemplate-update`: Updates the information of an appliance template in a workspace
 	* :ref:`workspaceTemplate-delete`: Removes an appliance template from a workspace
@@ -20,7 +21,6 @@ Workspace Template API Resources
 	* :ref:`workspaceTemplateInstallProfile-get`: Receives the installation profile for a shared appliance template
 	* :ref:`workspaceTemplateProjects-get`: Retrieves all the project components for a shared appliance template
 	* :ref:`workspaceTemplateStudio-get`: Retrieves the UForge Studio package information of a shared appliance template
-	* :ref:`workspaceTemplateStats-get`: Retrieves the statistics for a shared appliance template in a workspace
 
 
 .. toctree::
@@ -29,6 +29,7 @@ Workspace Template API Resources
     workspaceTemplate_vote
     workspaceTemplate_getAll
     workspaceTemplate_share
+    workspaceTemplateStats_get
     workspaceTemplate_get
     workspaceTemplate_update
     workspaceTemplate_delete
@@ -41,4 +42,3 @@ Workspace Template API Resources
     workspaceTemplateInstallProfile_get
     workspaceTemplateProjects_get
     workspaceTemplateStudio_get
-    workspaceTemplateStats_get

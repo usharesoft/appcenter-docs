@@ -16,13 +16,13 @@ project_create
 
 Create a new project in the ``Project Catalog``. 
 
-Please refer to :ref:`project-object` for a complete list of all the ``project`` attributes.
+Please refer to :ref:`project-object` for a complete list of all the ``software bundle`` attributes.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
 
 * Requires Authentication: ``true``
-* Entitlements Required: ``org_projects_administrate``
+* Entitlements Required: ``software_upload``
 
 URI Parameters
 ~~~~~~~~~~~~~~
@@ -47,7 +47,9 @@ Example of representation.xml content (the request body):
 .. code-block:: xml
 
 	<ns0:project xmlns:ns0="http://www.usharesoft.com/uforge">
-		<category>Blogging</category>
+		<category>
+			<name>Blogging</name>
+		</category>
 		<company>
 			<name>Maintainer Example</name>
 		</company>
@@ -57,24 +59,33 @@ Example of representation.xml content (the request body):
 		</license>
 		<name>Project Example</name>
 		<version>1.0</version>
-		<shortTag>INTERNAL</shortTag>
+		<shortTag>project</shortTag>
 	</ns0:project>
 
 
 .. seealso::
 
-	 * :ref:`package-object`
+	 * :ref:`project-object`
+	 * :ref:`softwareartifact-object`
 	 * :ref:`project-getAll`
 	 * :ref:`project-get`
 	 * :ref:`project-delete`
 	 * :ref:`project-update`
-	 * :ref:`projectPkg-create`
-	 * :ref:`projectPkg-get`
-	 * :ref:`projectPkg-getAll`
-	 * :ref:`projectPkg-delete`
-	 * :ref:`projectPkg-deleteAll`
-	 * :ref:`projectPkg-download`
-	 * :ref:`projectPkg-downloadFile`
-	 * :ref:`projectPkgs-update`
-	 * :ref:`projectPkg-update`
-	 * :ref:`projectPkg-upload`
+	 * :ref:`projectOs-getAll`
+	 * :ref:`projectArtifact-create`
+	 * :ref:`projectArtifact-getAll`
+	 * :ref:`projectArtifact-get`
+	 * :ref:`projectArtifact-updateAll`
+	 * :ref:`projectArtifact-update`
+	 * :ref:`projectArtifact-upload`
+	 * :ref:`projectArtifact-deleteAll`
+	 * :ref:`projectArtifact-delete`
+	 * :ref:`projectArtifact-download`
+	 * :ref:`projectArtifact-downloadFile`
+	 * :ref:`projectArtifact-createFromRemoteServer`
+	 * :ref:`projectArtifact-addOrRemoveFileFromCache`
+	 * :ref:`projectArtifact-addChild`
+	 * :ref:`projectLogo-download`
+	 * :ref:`projectLogo-downloadFile`
+	 * :ref:`projectLogo-upload`
+	 * :ref:`projectLogo-delete`

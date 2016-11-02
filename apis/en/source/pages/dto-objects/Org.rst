@@ -47,6 +47,7 @@ The list of attributes for ``org`` are:
 	* ``uri`` (anyURI): the uri resource for this organization object
 	* ``workspacesUri`` (anyURI): the uri resource to retrieve all the workspaces registered to this organization
 	* ``repositoriesUri`` (anyURI): the uri resource to retrieve all the operating system repositories registered to this organization
+	* ``artifactAccountsUri`` (anyURI): the uri resource to retrieve all the artifact accounts registered to this organization
 	* ``created`` (dateTime): the created date of the object
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)

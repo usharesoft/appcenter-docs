@@ -5,13 +5,13 @@
 project_delete
 --------------
 
-.. function:: DELETE /distributions/{id}/projects/{pid}
+.. function:: DELETE /orgs/{oid}/projects/{pid}
 
 .. sidebar:: Summary
 
 	* Method: ``DELETE``
 	* Response Code: ``204 / 200``
-	* Response Formats: 
+	* Response Formats: ``application/xml`` ``application/json``
 	* Since: ``UForge 1.0``
 
 Removes a project from the ``Project Catalog``. 
@@ -30,7 +30,7 @@ URI Parameters
 ~~~~~~~~~~~~~~
 
 * ``pid`` (required): the id of the :ref:`project-object`
-* ``id`` (required): the id of the :ref:`distribprofile-object`
+* ``oid`` (required): the id of the :ref:`org-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -42,23 +42,31 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/distributions/{id}/projects/{pid}" -X DELETE \
+	curl "https://uforge.example.com/api/orgs/{oid}/projects/{pid}" -X DELETE \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::
 
-	 * :ref:`package-object`
+	 * :ref:`project-object`
 	 * :ref:`project-create`
 	 * :ref:`project-getAll`
 	 * :ref:`project-get`
 	 * :ref:`project-update`
-	 * :ref:`projectPkg-create`
-	 * :ref:`projectPkg-get`
-	 * :ref:`projectPkg-getAll`
-	 * :ref:`projectPkg-delete`
-	 * :ref:`projectPkg-deleteAll`
-	 * :ref:`projectPkg-download`
-	 * :ref:`projectPkg-downloadFile`
-	 * :ref:`projectPkgs-update`
-	 * :ref:`projectPkg-update`
-	 * :ref:`projectPkg-upload`
+	 * :ref:`projectOs-getAll`
+	 * :ref:`projectArtifact-create`
+	 * :ref:`projectArtifact-getAll`
+	 * :ref:`projectArtifact-get`
+	 * :ref:`projectArtifact-updateAll`
+	 * :ref:`projectArtifact-update`
+	 * :ref:`projectArtifact-upload`
+	 * :ref:`projectArtifact-deleteAll`
+	 * :ref:`projectArtifact-delete`
+	 * :ref:`projectArtifact-download`
+	 * :ref:`projectArtifact-downloadFile`
+	 * :ref:`projectArtifact-createFromRemoteServer`
+	 * :ref:`projectArtifact-addOrRemoveFileFromCache`
+	 * :ref:`projectArtifact-addChild`
+	 * :ref:`projectLogo-download`
+	 * :ref:`projectLogo-downloadFile`
+	 * :ref:`projectLogo-upload`
+	 * :ref:`projectLogo-delete`

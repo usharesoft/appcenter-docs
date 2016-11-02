@@ -14,7 +14,7 @@ applianceExport_delete
 	* Response Formats: 
 	* Since: ``UForge 3.5``
 
-Deletes the export ticket and associated archive of an exported appliance export metadata (archive). 
+Deletes the export ticket.  This deletes the associated archive of an exported appliance export metadata (archive). 
 
 .. note:: This does not delete the source appliance.
 

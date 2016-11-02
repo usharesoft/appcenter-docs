@@ -26,7 +26,9 @@ The list of attributes for ``user`` are:
 	* ``baseTargetPlatformsUri`` (anyURI): the uri resource to retrieve the target platforms the user has access to
 	* ``baseTargetFormatsUri`` (anyURI): the uri resource to retrieve the target formats the user has access to
 	* ``baseImagesUri`` (anyURI): the uri resource to retrieve the user's machine images
+	* ``baseExportsUri`` (anyURI): the uri resource to retrieve the user's exported appliance templates
 	* ``baseImportsUri`` (anyURI): the uri resource to retrieve the user's imported appliance templates
+	* ``mySoftwareImportsUri`` (anyURI): the uri resource to retrieve the user's imported software bundles
 	* ``baseMySoftwareLibraryUri`` (anyURI): the uri resource to retrieve the user's software library (containing private software components)
 	* ``baseOrgsUri`` (anyURI): the uri resource to retrieve the organizations the user is a member of
 	* ``baseProjectsUri`` (anyURI): the uri resource to retrieve the project catalog software components
@@ -35,6 +37,7 @@ The list of attributes for ``user`` are:
 	* ``baseWorkspacesUri`` (anyURI): the uri resource to retrieve the workspaces the user has access to
 	* ``creationCode`` (string): the code used for creating the user (subscription profile code, see :ref:`subscriptionprofile-object`)
 	* ``credAccountUris`` (:ref:`UriList-object`): the list of uri resources for each cloud account the user has
+	* ``artifactAccountsUri`` (anyURI): the uri resource to retrieve the user's artifact accounts
 	* ``distributionUris`` (:ref:`UriList-object`): the list of uris for each operating system the user has access to
 	* ``dob`` (dateTime): the user's date of birth
 	* ``formats``: the list of primitive formats the user has access to (see :ref:`imageformat-object`)

@@ -55,9 +55,6 @@ Normally the first step is to get the user information of the account being used
 
 	# Import the Uforge python API
 	from uforge.application import Api
-	# Import http client
-	import httplib2
-	import base64
 
 	# UForge API instantiation (optional: disable self signed certificate check)
 	client = httplib2.Http(disable_ssl_certificate_validation=True)
@@ -65,14 +62,10 @@ Normally the first step is to get the user information of the account being used
 	login='username'
 	passwd='password'
 
-	# Header for authentication
-	headers = {}
-	headers['Authorization'] = 'Basic ' + base64.encodestring( login + ':' + passwd )
-
 	# Create the API object
-	api = Api('https://10.0.0.1/ufws-3.3', client = client, headers = headers)
+	api = Api('https://mylittleuforge.usharesoft.com/api', login, passwd, None, True)
 
-	# Send a rquest (getting the user object)
+	# Send a request (getting the user object)
 	user = api.Users(login).Get()
 	if user is not None:
     	print user.loginName + ' - ' + user.email

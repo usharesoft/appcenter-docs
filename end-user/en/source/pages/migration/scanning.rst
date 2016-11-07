@@ -59,6 +59,11 @@ To carry out a scan, go to the ``Migration`` tab:
 
 	11. To view the details of a scan, click on the scan and refer to :ref:`migration-view-scan`.
 
+
+.. warning:: When scanning a Linux machine, you have to check whether the licenses of OS and software which the source machine contains permit you to use them on destination server which you migrate to.
+             For more detail, refer to :ref:`notes-on-the-lincensing`.
+
+
 .. _migration-scan-windows:
 
 Scanning a Microsoft Windows Machine
@@ -91,3 +96,6 @@ To carry out a scan, go to the ``Migration`` tab:
 	8. Click ``scan`` to launch the scan. A report is sent to UForge AppCenter which can be used for migration. To view the progress, go back to the ``Migration`` tab and click ``ok``.
 
 	9. To view the details of a scan, click on the scan and refer to :ref:`migration-view-scan`.
+	
+.. warning:: When scanning a Microsoft Windows machine, you must acquire Windows licenses in order to handle Windows OS in UForge and confirm usage conditions of cloud provider and virtualization software which you scan and migrate to.
+

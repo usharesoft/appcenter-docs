@@ -25,6 +25,8 @@ Contents:
    pages/tools/overview
    pages/rebranding/overview
 
+   pages/changelog
+
 .. _trademarks:
 
 Trademarks

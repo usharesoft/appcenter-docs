@@ -60,6 +60,7 @@ Note: There are multiple options for reading this documentation - click on the l
     pages/workspacetemplate/overview
     pages/workspacetemplatecomments/overview
 
+    pages/changelog
 
 .. _trademarks:
 

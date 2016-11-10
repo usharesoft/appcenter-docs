@@ -12,8 +12,19 @@ New Features
 ~~~~~~~~~~~~
 
 * Import/Export of appliance templates in the user interface
-* MySoftware overhaul. Software added through MySoftware is now treated like in Project, including the fact that you can now added licences.
-* API keys can be used when running a scan for migration.
+* Software (MySoftware) and Project bundles now consolidated.  New features added including:
+	- pulling files from remote locations (HTTP, FTP endpoints) so the user no longer requires to upload software components to the platform
+	- pulling files can be cached for future generations or pulled on each generation
+	- file permissions added for files and directories
+	- can create directory structures in a software bundle
+	- can add tagging information to a software bundle
+	- can add native packages from OS respositories to a software bundle
+	- can add boot scripts to a software bundle
+	- identify the software bundle only being supported on a subset of operating systems
+
+* API keys can be used for authentication when running a scan for migration.
+* Scan messages and error messages cleaned up and more understandable
+* Japanese language localization for the UI
 
 
 Bug Fixes
@@ -43,9 +54,3 @@ Bug Fixes
 * 5551 Spelling mistake in UI when publishing to Flexiant
 * 5549 The error of Keystone version is displayed in Keystone Server URL
 * 5403 Scan fails when trying to rebuild a non repo package
-
-
-Known Issues
-~~~~~~~~~~~~
-
-

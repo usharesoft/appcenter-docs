@@ -22,6 +22,8 @@ Contents:
    pages/apis/hammr
    pages/apis/python-cli
 
+   pages/changelog
+
 .. _trademarks:
 
 Trademarks

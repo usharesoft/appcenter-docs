@@ -24,6 +24,7 @@ Contents:
    pages/monitoring/overview
    pages/tools/overview
    pages/rebranding/overview
+   pages/changelog
 
 .. _trademarks:
 

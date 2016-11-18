@@ -22,8 +22,8 @@ On the scan target, the ``uforge-scan`` binary is copied and launched as root to
 
 	1. ``uforge-scan`` tests the connection to UForge server with the information provided by the user in the command line.
 	2. ``uforge-scan`` checks the basic information of the machine (Operating System, architecture) and the installation parameters (partitioning, timezone, keyboard, etc.).
-	3. Analysis of the operating system native packages installed on the system. The ``uforge-scan`` binary checks which packages have been installed, the state of the files in these packages etc.  The scan process registers all the metadata (rights, user and groups, checksums).
-	4. Analysis of the files that are not part of any operating system native packages. The ``uforge-scan`` binary registers all the metadata (rights, user and groups, checksums).
+	3. Analysis of the operating system native packages installed on the system. The ``uforge-scan`` binary checks which packages have been installed, the state of the files in these packages etc.  The scan process registers all the metadata (rights, user and groups, checksums, link count).
+	4. Analysis of the files that are not part of any operating system native packages. The ``uforge-scan`` binary registers all the metadata (rights, user and groups, checksums, link count).
 
 .. _migration-process-analysis:
 

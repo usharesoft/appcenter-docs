@@ -35,5 +35,4 @@ Once the scan report has been imported as an appliance template, you can update 
 
 The generation process is slightly different between black box and white box migration. UForge is not generating a machine image from a scan report, rather from an appliance template. You can add and remove packages at will from the OS Profile layer.  Consequently package dependencies are calculated using the list of packages in the OS Profile. Any missing packages from the OS Profile are added prior to generating the machine image.  
 
-
-
+.. warning:: UForge restores hard links. But if the partitioning table has been updated (and different from the original), restoring one or more hard links may fail (hard links must be in the same partition). In this case, UForge creates copy of the original file.

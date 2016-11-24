@@ -42,11 +42,12 @@ The following is a list of supported OSes that users can use as the guest operat
 .. _supported-image-formats:
 
 Supported Machine Image Types
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------
 
-The following machine image formats are supported:
+With UForge you can create machine images in the following formats:
 
 	* Physical: ISO
-	* Virtual: Hyper-V, KVM, LXC, OVF, QCOW2, Raw, tar.gz, Vagrant Base Box, VHD, VirtualBox, VMWare vCenter, VMware Server, Vagrant, Xen, Citrix XenServer
+	* Virtual: Hyper-V, KVM, OVF, QCOW2, Raw, tar.gz, Vagrant Base Box, VHD, VirtualBox, VMWare vCenter, VMware Server, Vagrant, Xen, Citrix XenServer
+	* Container: Docker, LXC
 	* Cloud: Abiquo, Amazon AWS, CloudStack, Cloudwatt, Eucalyptus, Flexiant, Google Compute Engine, Microsoft Azure, Nimbula, OpenStack, SUSE Cloud, VMware vCloud Director
 

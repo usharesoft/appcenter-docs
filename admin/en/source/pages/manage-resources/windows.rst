@@ -176,15 +176,51 @@ To create a new Golden Image, you will need to:
 
 				$ mv -f newimage.raw image.raw
 
-	9. Open a command prompt window as an administrator and go to the ``%WINDIR%\\system32\sysprep`` directory. Then run:
+	9. For Windows 2008R2 create a file as follows. Note that the admin user name may be different depending on the environment. Please replace ``Administrator`` in the script with the appropriate one.
 
 		.. code-block:: shell
 
-			$ sysprep.exe /generalize /oobe /shutdown
+			mkdir C:\Windows\Setup\Scripts
+			notepad C:\Windows\Setup\Scripts\SetupComplete.cmd
+			---
+			net user Administrator /logonpasswordchg:yes
+			---
+
+	10. For Windows 2012 and 2012R create a file as follows. Note that the admin user name may be different depending on the environment. Please replace ``Administrator`` in the script with the appropriate one.
+
+		.. code-block:: shell
+
+			mkdir C:\Windows\Setup\Scripts
+			notepad C:\Windows\Setup\Scripts\SetupComplete.cmd
+			---
+			@echo off
+			if not exist C:\etc\UShareSoft\no_console (
+			    net user Administrator /logonpasswordchg:yes
+			)
+			---
+
+		``changepasswd.bat`` is specified in ``Unattend.xml``. The script is launched only when the image has no console, just after uforge-install-config before displaying desktop.
+
+			.. code-block:: shell
+
+				notepad C:\uforge\changepasswd.bat
+				---
+				@if exist C:\etc\UShareSoft\no_console (
+				    @title Changing Administrator password
+				    echo Please provide new Administrator password.
+				    net user Administrator *
+				)
+				---
+
+	11. Open a command prompt window as an administrator and go to the ``%WINDIR%\\system32\sysprep`` directory. Then run:
+
+		.. code-block:: shell
+
+			$ sysprep.exe /generalize /oobe /shutdown /unattend:c:\path-to-sysprep\Unattend.xml
 	
 		.. note:: This will shutdown the machine. Do not boot the machine again!
 
-	10. You can now compress the golden images by running: 
+	12. You can now compress the golden images by running: 
 
 		.. code-block:: shell
 

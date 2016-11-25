@@ -7,9 +7,9 @@ Executing a Scan of the Source System
 
 The first step in migrating your system is running a scan of the target system. This identifies the meta-data of every file and package that makes up the running workload.
 
-You must have root access on the target system in order to complete the scan, as you will need to copy and run a binary file on the target system.
+You must have root (on Linux) or Administrator (on Windows) access on the target system in order to complete the scan, as you will need to copy and run a binary file on the target system.
 
-.. warning:: UForge AppCenter does not support multi-kernels. When scanning a machine with more than one kernel, only the kernel running will be scanned and imported.
+.. warning (Linux only):: UForge AppCenter does not support multi-kernels. When scanning a machine with more than one kernel, only the kernel running will be scanned and imported.
 
 When you run a scan of a system, UForge AppCenter will differentiate between “known” data (OS packages and files that are already part of UForge AppCenter repository) and files that are “unknown”. UForge AppCenter does not support more than 10 Gb of compressed "unknown" data.
 
@@ -17,7 +17,6 @@ When you run a scan of a system, UForge AppCenter will differentiate between “
 
 Recommendations pre-scan:
 
-	* Pre-install or post-install scripts on the system you are about to scan should only use ascii character set
 	* Custom packages on the live system to be scanned should not contain references to package dependencies as relative path. They should be expressed as absolute paths.
 	* If custom packages are installed using ``--nodeps`` flag, the scan process will not detect these packages. When carrying out white box migration, UForge AppCenter will check for these dependencies. If they are custom packages that are not on the live system, the generation will fail. Therefore, it is recommended to provide a custom repository with all the necessary custom packages. Otherwise, they can be added after the scan to the appliance template in ``My software``.
 
@@ -42,6 +41,8 @@ To carry out a scan, go to the ``Migration`` tab:
 	9. Run the scan command on the running target environment to start a deep scan of the system you want to migrate. The binary identifies the packages, files and custom files on the system.
 
 		By default the scan data will be saved in ``/tmp``. You can modify the directory where the data will be saved using the ``-t`` option in order to ensure that there is enough space to save the scan data.
+		
+		By default all available bandwidth will be used. You can limit the bandwidth usage by using the ´´-b`` option following the reservation (for example ´´-b 50K`` to limit used bandwidth to 50 Kilobytes).
 
 	10. A report is sent to UForge AppCenter which can be used for migration. To view the progress, go back to the ``Migration`` tab and click ``ok``.
 

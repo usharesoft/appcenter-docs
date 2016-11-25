@@ -20,7 +20,7 @@ To create a new appliance in your private workspace:
 
 	4. From the drop-down menus, select the operating system (distribution, release and architecture).
 	5. Click the ``create`` button. This creates a skeleton of an appliance template in the platform which you can now customize with operating system packages, middleware and application software.
-	6. You should now see the appliance overview page. You can add a description to your appliance (optional) and a logo (optional). The logo format must be in .jpg, .jpeg or .png format.
+	6. You should now see the appliance overview page. You can add a description to your appliance (optional) and a logo (optional). The logo must be in .jpg, .jpeg or .png format.
 	7. An OS profile is mandatory. See :ref:`appliance-os-profile-new`. However, you can leave the appliance at this point and edit it later.
 	8. If you have made any modifications, click the checkmark to save.
 

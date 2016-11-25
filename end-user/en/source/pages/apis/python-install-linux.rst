@@ -5,8 +5,8 @@ For Linux
 
 First, you need to install extra packages on your system, and then install the SDK package.
 
-Debian
-~~~~~~
+Debian and Ubuntu
+~~~~~~~~~~~~~~~~~
 
 .. code-block:: sh
 

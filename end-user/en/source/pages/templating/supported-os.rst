@@ -37,7 +37,7 @@ The following is a list of supported OSes that users can use as the guest operat
 
 .. note:: For Red Hat Enterprise Linux you must provide the ISO images or access to a repository.
 
-.. warning:: If you intend to generate machine images for cloud environments, ensure that the operating system you are using in the machine image is correctly supported by the cloud environment.  For example, Microsoft Azure supports the following `operating systems <https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-endorsed-distros/>`_.
+.. warning:: If you intend to generate machine images for cloud environments, ensure that the operating system you are using in the machine image is correctly supported by the cloud environment.  For example, Microsoft Azure supports the following `operating systems <https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json/>`_.
 
 .. _supported-image-formats:
 

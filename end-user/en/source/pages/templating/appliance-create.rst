@@ -14,7 +14,7 @@ To create a new appliance in your private workspace:
 
 	1. Select ``VM Builder`` icon on the left.
 	2. On the ``Appliance Library`` page, click on ``create`` in the top right. 
-	3. Enter the ``Name`` and ``Version`` of the appliance.  
+	3. Enter the ``Name`` and ``Version`` of the appliance.
 
 		.. image:: /images/create-appliance-centos.png
 
@@ -23,9 +23,6 @@ To create a new appliance in your private workspace:
 	6. You should now see the appliance overview page. You can add a description to your appliance (optional) and a logo (optional). The logo format must be in .jpg, .jpeg or .png format.
 	7. An OS profile is mandatory. See :ref:`appliance-os-profile-new`. However, you can leave the appliance at this point and edit it later.
 	8. If you have made any modifications, click the checkmark to save.
-
-.. note:: When you create an appliance, the packages are stored locally in the UForge cache repository. This ensures that the packages will always be available.
-.. ToDo mstenz: Are you sure? I thought the Uforge cache is only populated in the process of image creation??
 
 Creating a Windows-based Appliance
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -39,11 +36,11 @@ To create a Windows Appliance:
 	5. From the ``Stack`` page, select the OS Profile. **Core** or **Full** may be possible available releases you can select, but this depends on your platform. Click ``save``.
 
 		.. note:: Once you have chosen the OS Profile, you cannot add any packages or run updates. The OS Profile is static. Once created, if you select OS Profile, you will only be able to view the details of the profile you selected.  
-		.. note:: If you want to revert the choosen OS Profile and restart this step click ``delete`` and ``confirm``.  
+		.. note:: If you want to revert the chosen OS Profile and restart this step click ``delete`` and ``confirm``.
 
 	6. Set the Install profile and click ``Save``.
 
-		.. note:: Unlike Linux, the following cannot be set for Windows appliances: Keyboard, Root user, User & Groups, Kernel Parameters and Services (Firewall).  
+		.. note:: Unlike Linux, the following cannot be set for Windows appliances: Keyboard, Root user, User & Groups, Kernel Parameters and Services (Firewall).
 
 		.. image :: /images/windows-install.png
 

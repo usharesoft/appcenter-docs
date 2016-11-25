@@ -23,7 +23,7 @@ To generate a machine image:
 The generation will take a few minutes to complete (depending on the number of packages in the appliance template and the disk size chosen). The generation progress is shown.
 Once the generation is complete, you can download the image locally, or for certain cloud formats register the machine image directly to the target environment using your cloud credentials.
 
-.. note:: In the process of generating a machine image all required packages get downloaded from remote repository and stored locally in the UForge cache repository. This ensures all packages will always be available and speed up the generating process.
+.. note:: In the process of generating a machine image all required packages get downloaded from the remote repository and stored locally in the UForge cache repository. This accelerate future generation processes and ensures all packages will always be available.
 
 You will note that a package ``uforge-install-config`` is injected in the generated image. This file is responsible for: 
 

@@ -74,7 +74,7 @@ An Appliance Template is meta-data describing a software stack.   It consists of
 	* ``My Software`` (optional) - a list of software components chosen from the User´s private "Software Library"
 	* ``Configuration`` (optional) - configuration information including boot scripts and/or other software components to manage the image after provisioning
 
-Depending on the user´s roles and privileges, the user may only have access to a restricted number of operating systems, projects and image formats the organization has to offer.
+.. note:: Depending on the user´s roles and privileges, the user may only have access to a restricted number of operating systems, projects and image formats the organization has to offer.
 
 Using an appliance template, the user can generate machine images in different formats. For some formats, the user can publish and register machine images to a target cloud or virtualization platform. Each appliance template stores meta-data regarding each machine image generated and published.
 

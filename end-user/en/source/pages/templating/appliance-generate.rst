@@ -41,7 +41,8 @@ To generate a machine image:
 	1. Go to the ``VM Builder`` tab.
 	2. Select the appliance from the ``Appliance Library``. 
 	3. Click on the ``generate`` button at the top right to display all possible image formats which can be generated. 
-	4. Choose ``Container``, then ``Docker`` image format. The following pop-up will be displayed.
+	4. Choose ``Container``, then ``Docker`` image format. 
+	5. You can set the disk size, then click the ``generate`` button to launch a generation in UForge for this appliance template. The following pop-up will be displayed once the generation ends on the summary view.
 
 		.. image:: /images/docker-image-publish.png
 

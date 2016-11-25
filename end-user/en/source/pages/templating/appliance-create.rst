@@ -20,11 +20,12 @@ To create a new appliance in your private workspace:
 
 	4. From the drop-down menus, select the operating system (distribution, release and architecture).
 	5. Click the ``create`` button. This creates a skeleton of an appliance template in the platform which you can now customize with operating system packages, middleware and application software.
-	6. You should now see the appliance overview page. You can add a description to your appliance (optional) and a logo (optional). The logo format must be .jpg, .jpeg or .png.
+	6. You should now see the appliance overview page. You can add a description to your appliance (optional) and a logo (optional). The logo format must be in .jpg, .jpeg or .png format.
 	7. An OS profile is mandatory. See :ref:`appliance-os-profile-new`. However, you can leave the appliance at this point and edit it later.
 	8. If you have made any modifications, click the checkmark to save.
 
 .. note:: When you create an appliance, the packages are stored locally in the UForge cache repository. This ensures that the packages will always be available.
+.. ToDo mstenz: Are you sure? I thought the Uforge cache is only populated in the process of image creation??
 
 Creating a Windows-based Appliance
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -35,13 +36,14 @@ To create a Windows Appliance:
 	2. Enter the appliance name.
 	3. Choose ``Windows`` from the OS Distribution drop down menu.
 	4. Click ``create``.
-	5. From the ``Stack`` page, select the OS Profile. Each version has a Core or Full release. Click ``save``.
+	5. From the ``Stack`` page, select the OS Profile. **Core** or **Full** may be possible available releases you can select, but this depends on your platform. Click ``save``.
 
 		.. note:: Once you have chosen the OS Profile, you cannot add any packages or run updates. The OS Profile is static. Once created, if you select OS Profile, you will only be able to view the details of the profile you selected.  
+		.. note:: If you want to revert the choosen OS Profile and restart this step click ``delete`` and ``confirm``.  
 
 	6. Set the Install profile and click ``Save``.
 
-		.. note:: Unlike Linux, the following cannot be set for Windows appliances: Keyboard, Root user, User & Groups, Kernel Parameters and Firewall.  
+		.. note:: Unlike Linux, the following cannot be set for Windows appliances: Keyboard, Root user, User & Groups, Kernel Parameters and Services (Firewall).  
 
 		.. image :: /images/windows-install.png
 
@@ -62,6 +64,6 @@ To create a Windows Appliance:
 
 		.. warning:: Software bundles included in MySoftware and Project will be put on the image disk but the UForge generation tool WILL NOT install them even if these are executable/installers files (.exe, .msi, etc.). It is up to the end user to manually complete the installation of the software bundles.
 
-		For Windows, .exe or .msi files can be given extra parameters. The parameters depend on the .exe or .msi file, and can be used for example for silent installation, providing extra configuration values, etc.
+		For Windows, .exe or .msi files can be given extra parameters. The parameters depend on the .exe or .msi file, and can be used for example for silent installation, providing extra configuration values, etc. See :ref:`appliance-configuration-bootscripts` for further information how this can be achieved. 
 
 .. note:: A binary called ``UShareInstallConfig`` is embedded at generation time, which helps the final user of the Appliance do the last-mile configuration.

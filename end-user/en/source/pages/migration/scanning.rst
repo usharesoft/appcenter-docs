@@ -9,7 +9,7 @@ The first step in migrating your system is running a scan of the target system. 
 
 You must have root (on Linux) or Administrator (on Windows) access on the target system in order to complete the scan, as you will need to copy and run a binary file on the target system.
 
-.. warning (Linux only):: UForge AppCenter does not support multi-kernels. When scanning a machine with more than one kernel, only the kernel running will be scanned and imported.
+.. warning:: For Linux, UForge AppCenter does not support multi-kernels. When scanning a machine with more than one kernel, only the kernel running will be scanned and imported.
 
 When you run a scan of a system, UForge AppCenter will differentiate between “known” data (OS packages and files that are already part of UForge AppCenter repository) and files that are “unknown”. UForge AppCenter does not support more than 10 Gb of compressed "unknown" data.
 
@@ -42,7 +42,7 @@ To carry out a scan, go to the ``Migration`` tab:
 
 		By default the scan data will be saved in ``/tmp``. You can modify the directory where the data will be saved using the ``-t`` option in order to ensure that there is enough space to save the scan data.
 		
-		By default all available bandwidth will be used. You can limit the bandwidth usage by using the ´´-b`` option following the reservation (for example ´´-b 50K`` to limit used bandwidth to 50 Kilobytes).
+		By default all available bandwidth will be used. You can limit the bandwidth usage by using the ``-b`` option following the limit (for example ``-b 50K`` to limit used bandwidth to 50 Kilobytes).
 
 	10. A report is sent to UForge AppCenter which can be used for migration. To view the progress, go back to the ``Migration`` tab and click ``ok``.
 

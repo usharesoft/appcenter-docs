@@ -13,7 +13,9 @@ There are three external URL endpoints for the UForge platform, namely:
 
 .. image:: /images/external-endpoints.png
 
-These URL endpoints are automatically created based on the external hostname provided during the initial configuration of the UForge platform (see :ref:`configure-uforge`).  These URL endpoints can be changed by updating certain variables in the ``/etc/UShareSoft/uforge/uforge.conf`` file.
+These URL endpoints can be changed by updating certain variables in the ``/etc/UShareSoft/uforge/uforge.conf`` file.
+
+The former two URL endpoints are automatically created based on one of the IP addresses of UI server during the initial configuration of the UForge platform (see :ref:`configure-uforge`).
 
 The UForge Portal URL endpoint is constructed using the following variables:
 
@@ -23,7 +25,7 @@ The URL endpoint for direct REST web service access is constructed using the fol
 
 	https://<UFORGE_PROXY_INFOS>/<UFORGE_API_ROOT_CONTEXT>
 
-The download URL endpoint is constructed using the ``UFORGE_IAAS_DOWNLOAD_URL`` variable.
+The download URL endpoint is constructed using the ``UFORGE_IAAS_DOWNLOAD_URL`` variable, which is automatically created based on the external hostname provided during the initial configuration of the UForge platform.
 
 If you wish to use ``http`` rather than ``https`` (not recommended) then you require to set the following variable in the uforge.conf file::
 

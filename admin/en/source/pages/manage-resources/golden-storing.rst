@@ -17,41 +17,9 @@ The path is::
 
 	{Language}/{Edition}/{Type}/{generation date}(YYYY-MM-DD)/goldenImagePathCompressedInGz
 
-For instance, below is a sample hierarchy: 
+So for example: 
 
-Windows/
-Windows/releases
-Windows/releases/Server2008R2
-Windows/releases/Server2008R2/x86_64
-Windows/releases/Server2008R2/x86_64/English
-Windows/releases/Server2008R2/x86_64/English/Standard
-Windows/releases/Server2008R2/x86_64/English/Standard/Core
-Windows/releases/Server2008R2/x86_64/English/Standard/Core/2012-10-19
-Windows/releases/Server2008R2/x86_64/English/Standard/Core/2012-10-19/Windows_2008R2_Standard_Core_2012-10-19.raw.gz
-Windows/releases/Server2008R2/x86_64/English/Standard/Full
-Windows/releases/Server2008R2/x86_64/English/Standard/Full/2012-10-19
-Windows/releases/Server2008R2/x86_64/English/Standard/Full/2012-10-19/Windows_2008R2_Standard_Full_2012-10-19.raw.gz
-Windows/releases/Server2008R2/x86_64/English/WebServer
-Windows/releases/Server2008R2/x86_64/English/WebServer/Core
-Windows/releases/Server2008R2/x86_64/English/WebServer/Core/2012-10-19
-Windows/releases/Server2008R2/x86_64/English/WebServer/Core/2012-10-19/Windows_2008R2_WebServer_Core_2012-10-19.raw.gz
-Windows/releases/Server2008R2/x86_64/English/WebServer/Full
-Windows/releases/Server2008R2/x86_64/English/WebServer/Full/2012-10-19
-Windows/releases/Server2008R2/x86_64/English/WebServer/Full/2012-10-19/Windows_2008R2_WebServer_Full_2012-10-19.raw.gz
-Windows/releases/Server2008R2/x86_64/English/Enterprise
-Windows/releases/Server2008R2/x86_64/English/Enterprise/Core
-Windows/releases/Server2008R2/x86_64/English/Enterprise/Core/2012-10-19
-Windows/releases/Server2008R2/x86_64/English/Enterprise/Core/2012-10-19/Windows_2008R2_Enterprise_Core_2012-10-19.raw.gz
-Windows/releases/Server2008R2/x86_64/English/Enterprise/Full
-Windows/releases/Server2008R2/x86_64/English/Enterprise/Full/2012-10-19
-Windows/releases/Server2008R2/x86_64/English/Enterprise/Full/2012-10-19/Windows_2008R2_Enterprise_Full_2012-10-19.raw.gz
-Windows/releases/Server2008R2/x86_64/English/Datacenter
-Windows/releases/Server2008R2/x86_64/English/Datacenter/Core
-Windows/releases/Server2008R2/x86_64/English/Datacenter/Core/2012-10-19
-Windows/releases/Server2008R2/x86_64/English/Datacenter/Core/2012-10-19/Windows_2008R2_Datacenter_Core_2012-10-19.raw.gz
-Windows/releases/Server2008R2/x86_64/English/Datacenter/Full
-Windows/releases/Server2008R2/x86_64/English/Datacenter/Full/2012-10-19
-Windows/releases/Server2008R2/x86_64/English/Datacenter/Full/2012-10-19/Windows_2008R2_Datacenter_Full_2012-10-19.raw.gz
+``Windows/releases/Server2008R2/x86_64/English/Standard/Core/2012-10-19/Windows_2008R2_Standard_Core_2012-10-19.raw.gz``
 
 
 .. _add-golden-toAppCenter:

@@ -11,15 +11,15 @@ To enable UForge to generate images based on the operating system it needs all t
 
 .. note:: Custom repositories are supported in UForge. They are treated like other OS packages.
 
-.. warning:: When using UForge, you have to comply with the license agreement of OSes and software which UForge handles. Especially, topics below are typical and remarkable:
+.. warning:: When using UForge, you have to comply with the license agreement of OSes and software which UForge handles, in particular:
 	
-	Publishing OS image of RHEL (Red Hat Enterprise Linux) subscription to public cloud
+	* Publishing OS image of RHEL (Red Hat Enterprise Linux) subscription to public cloud
 		Cloud provider has to be CCSP (Certified Cloud & Service Provider) and you must register to Red Hat Cloud Access. For more details, please confirm with cloud provider.
 	
-	Scanning server
-		You have to check whether the licenses of OS and software which the source machine contains permit you to use them on destination server which you migrate to. In case that the source machine contains rpm packages which Red Hat provides, you must register repository with these rpm packages to UForge. Unless you register repository, UForge automatically regenerates rpm packages which the source machine contains, and regenerated packages are NOT supported by Red Hat.
+	* Scanning server
+		You have to check whether the licenses of OS and software which the source machine contains allow you to use them on the destination server which you are migrating to. If the source machine contains rpm packages which Red Hat provides, you must register repository with these rpm packages to UForge. Unless you register repository, UForge automatically regenerates rpm packages which the source machine contains, and regenerated packages are NOT supported by Red Hat.
 
-	Handling Microsoft Windows
+	* Handling Microsoft Windows
 		Refer to :ref:`windows-uforge`.
 
 .. note:: When installing a major version, all minor versions will be included. If you want to restrict to only a few minor versions, you will have to follow this procedure for each minor version you want to install.  

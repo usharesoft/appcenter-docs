@@ -22,11 +22,11 @@ In order to publish a machine image to a cloud environment, you must already hav
 
 	.. note:: UForge does not launch instances in the target cloud environment. If you wish to launch an instance from this machine image, you should go to your target cloud environment console for further actions.
 
-.. warning:: When publishing an image, you have to comply with the license agreement of OS and software. Especially, following topics on RHEL(Red Hat Enterprise Linux) and Microsoft Windows are typical and remarkable:
+.. warning:: When publishing an image, you have to comply with the license agreement of OSes and software which UForge handles, in particular:
 
-	Publishing OS image of RHEL subscrption to public cloud
+	* Publishing OS image of RHEL subscrption to public cloud
 		Cloud provider has to be CCSP (Certified Cloud & Service Provider) and be registered to Red Hat Cloud Access. For more details, please confirm with cloud provider.
 
-	Publishing Windows OS image
+	* Publishing Windows OS image
 		You must acquire Windows licenses in order to handle Windows OSes in UForge and confirm usage conditions of cloud provider and virtualization software which you publish to.
 

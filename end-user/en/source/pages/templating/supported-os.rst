@@ -40,20 +40,20 @@ The following is a list of supported OSes that users can use as the guest operat
 .. warning:: If you intend to generate machine images for cloud environments, ensure that the operating system you are using in the machine image is correctly supported by the cloud environment.  For example, Microsoft Azure supports the following `operating systems <https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-endorsed-distros/>`_.
 
 
-.. _notes-on-the-lincensing:
+.. _notes-on-licensing:
 
-Notes on the licensing
+Notes on Licensing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When using UForge, you have to comply with the license agreement of OSes and software which UForge handles. Especially, topics below are typical and remarkable:
+When using UForge, you have to comply with the license agreement of OSes and software which UForge handles, in particular:
 	
-	Publishing OS image of RHEL (Red Hat Enterprise Linux) subscription to public cloud
+	* Publishing OS image of RHEL (Red Hat Enterprise Linux) subscription to public cloud
 		Cloud provider has to be CCSP (Certified Cloud & Service Provider) and you must register to Red Hat Cloud Access. For more details, please confirm with cloud provider.
 	
-	Scanning server
-		You have to check whether the licenses of OS and software which the source machine contains permit you to use them on the destination server which you migrate to.
+	* Scanning server
+		You have to check whether the licenses of OS and software which the source machine contains allow you to use them on the destination server which you are migrating to.
 		
-		In case that the source machine contains rpm packages which Red Hat provides, please ask the administrator whether UForge repository contains these packages, 
+		If the source machine contains rpm packages which Red Hat provides, please ask the administrator whether UForge repository contains these packages, 
 		because UForge automatically regenerates rpm packages which the repository doesn't contain and regenerated packages are NOT supported by Red Hat.
 		
 		On UForge Portal, you can see the list of rpm packages which the source machine contains 
@@ -62,7 +62,7 @@ When using UForge, you have to comply with the license agreement of OSes and sof
 		If regenerated, ``Build Host`` is overwritten as ``uforge``.
 
 
-	Handling Microsoft Windows
+	* Handling Microsoft Windows
 		UForge user must acquire Windows license in order to handle Windows OSes in UForge. When publishing Windows OS image or scanning Windows server, you have to confirm usage conditions of cloud provider and virtualization software which you publish to or scan.
 
 

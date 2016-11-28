@@ -60,8 +60,8 @@ To carry out a scan, go to the ``Migration`` tab:
 	11. To view the details of a scan, click on the scan and refer to :ref:`migration-view-scan`.
 
 
-.. warning:: When scanning a Linux machine, you have to check whether the licenses of OS and software which the source machine contains permit you to use them on destination server which you migrate to.
-             For more detail, refer to :ref:`notes-on-the-lincensing`.
+.. warning:: When scanning a Linux machine, you have to check whether the licenses of OS and software which the source machine contains allow you to use them on the destination server which you are migrating to.
+             For more detail, refer to :ref:`notes-on-licensing`.
 
 
 .. _migration-scan-windows:

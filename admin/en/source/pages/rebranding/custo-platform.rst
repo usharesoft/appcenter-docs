@@ -31,7 +31,7 @@ To modify the sender of automatic emails generated from UForge, you can modify:
 
 To apply the changes you made, run the following command. This will stop Tomcat, integrate the changes and restart Tomcat::
 
-	$ /opt/UShareSoft/uforge-client/bin/uforge_ui_update.sh
+	$ /opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh
 
 
 Modifying UForge WebService URL

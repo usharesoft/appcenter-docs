@@ -16,7 +16,7 @@ The goal of black box migration is to reproduce a near identical copy of the cur
 	* users and groups
 	* ssh keys
 	* filesystem layout (partitioning)
-	* SELinux settings (for Linux only)
+	* SELinux settings (for Linux only). When SELinux is detected on the migrated system, the ``/.autorelabel`` file is added to the file system in order to relabel it on first boot.
 
 When you generate a machine image from the scan, all the information detected by the scan report is used in constructing the new machine image. However, prior to the generation starting, you will be prompted to indicate if you want to change some basic settings of the filesystem, namely the overall disk size and the swap size. You cannot set the swap size to 0. If you want to delete the swap partition, you must do this in ``Advanced Partitioning`` (refer to :ref:`appliance-install-profile-partitioning`).
 

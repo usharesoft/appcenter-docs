@@ -37,6 +37,7 @@ The following example shows how to add a link to twitter:
 	<c:footer>
 		<c:linkItem>
 	           <c:title>twitter</c:title>
+	           <c:icon>images/common/icons/twitter.svg</c:icon>
 	           <c:link>https:twitter.com/usharesoft</c:link>
 		</c:linkItem>
 	</c:footer>

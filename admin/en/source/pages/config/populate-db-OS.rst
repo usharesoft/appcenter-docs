@@ -101,7 +101,6 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 
 			* http://distros-repository.usharesoft.com/ubuntu/lucid/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid multiverse restricted universe main 
 			* http://distros-repository.usharesoft.com/ubuntu/lucid-security/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-security multiverse restricted universe main
-			* http://distros-repository.usharesoft.com/ubuntu/lucid-proposed/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-proposed multiverse restricted universe main
 			* http://distros-repository.usharesoft.com/ubuntu/lucid-backports/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-backports multiverse restricted universe main
 			* http://distros-repository.usharesoft.com/ubuntu/lucid-updates/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-updates multiverse restricted universe main
 

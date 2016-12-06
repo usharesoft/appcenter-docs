@@ -43,7 +43,7 @@ The following is a list of supported OSes that users can use as the guest operat
 .. _notes-on-licensing:
 
 Notes on Licensing
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~
 
 When using UForge, you have to comply with the license agreement of OSes and software which UForge handles, in particular:
 	
@@ -77,5 +77,5 @@ With UForge you can create machine images in the following formats:
 	* Physical: ISO
 	* Virtual: Hyper-V, KVM, OVF, QCOW2, Raw, tar.gz, Vagrant Base Box, VHD, VirtualBox, VMWare vCenter, VMware Server, Vagrant, Xen, Citrix XenServer
 	* Container: Docker, LXC
-	* Cloud: Abiquo, Amazon AWS, CloudStack, Cloudwatt, Eucalyptus, Flexiant, Google Compute Engine, Microsoft Azure, Nimbula, OpenStack, SUSE Cloud, VMware vCloud Director
+	* Cloud: Abiquo, Amazon AWS, CloudStack, Cloudwatt, Eucalyptus, Flexiant, Google Compute Engine, Microsoft Azure, Nimbula, OpenStack, SUSE Cloud, VMware vCloud Director, Fujitsu K5
 

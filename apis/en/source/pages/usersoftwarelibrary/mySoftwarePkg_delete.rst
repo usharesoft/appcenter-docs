@@ -29,7 +29,7 @@ URI Parameters
 
 * ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``msid`` (required): the id of the :ref:`mysoftware-object`
-* ``mspackid`` (required): the id of the :ref:`package-object` to get
+* ``mspackid`` (required): the id of the package
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -46,18 +46,18 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`mysoftware-object`
-	 * :ref:`mySoftware-create`
-	 * :ref:`mySoftware-getAll`
-	 * :ref:`mySoftware-get`
-	 * :ref:`mySoftware-update`
-	 * :ref:`mySoftware-delete`
-	 * :ref:`mySoftwareUsage-getAll`
 	 * :ref:`mySoftwarePkg-add`
-	 * :ref:`mySoftwarePkg-getAll`
 	 * :ref:`mySoftwarePkg-deleteAll`
-	 * :ref:`mySoftwarePkg-get`
-	 * :ref:`mySoftwarePkg-update`
 	 * :ref:`mySoftwarePkg-download`
 	 * :ref:`mySoftwarePkg-downloadFile`
+	 * :ref:`mySoftwarePkg-get`
+	 * :ref:`mySoftwarePkg-getAll`
+	 * :ref:`mySoftwarePkg-update`
 	 * :ref:`mySoftwarePkg-upload`
+	 * :ref:`mySoftwareUsage-getAll`
+	 * :ref:`mySoftware-create`
+	 * :ref:`mySoftware-delete`
+	 * :ref:`mySoftware-get`
+	 * :ref:`mySoftware-getAll`
+	 * :ref:`mySoftware-update`
+	 * :ref:`mysoftware-object`

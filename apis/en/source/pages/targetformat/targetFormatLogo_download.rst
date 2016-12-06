@@ -46,16 +46,16 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`targetplatform-api-resources`
-	 * :ref:`targetplatform-object`
-	 * :ref:`targetformat-object`
-	 * :ref:`targetFormat-create`
-	 * :ref:`targetFormat-getAll`
-	 * :ref:`targetFormat-get`
-	 * :ref:`targetFormat-delete`
-	 * :ref:`targetFormat-update`
-	 * :ref:`targetFormat-updateAccess`
-	 * :ref:`targetFormatLogo-upload`
 	 * :ref:`targetFormatLogo-delete`
 	 * :ref:`targetFormatLogo-downloadFile`
+	 * :ref:`targetFormatLogo-upload`
+	 * :ref:`targetFormat-create`
+	 * :ref:`targetFormat-delete`
+	 * :ref:`targetFormat-get`
+	 * :ref:`targetFormat-getAll`
 	 * :ref:`targetFormat-getAllTargetPlatforms`
+	 * :ref:`targetFormat-update`
+	 * :ref:`targetFormat-updateAccess`
+	 * :ref:`targetformat-object`
+	 * :ref:`targetplatform-api-resources`
+	 * :ref:`targetplatform-object`

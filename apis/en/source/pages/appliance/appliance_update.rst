@@ -56,15 +56,15 @@ Example of representation.xml content (the request body):
 .. seealso::
 
 	 * :ref:`appliance-object`
-	 * :ref:`user-object`
-	 * :ref:`appliance-create`
-	 * :ref:`appliance-clone`
-	 * :ref:`appliance-delete`
-	 * :ref:`appliance-get`
-	 * :ref:`appliance-getAll`
 	 * :ref:`applianceLogo-delete`
 	 * :ref:`applianceLogo-download`
 	 * :ref:`applianceLogo-downloadFile`
 	 * :ref:`applianceLogo-upload`
 	 * :ref:`applianceMySoftware-getAll`
 	 * :ref:`applianceProject-getAll`
+	 * :ref:`appliance-clone`
+	 * :ref:`appliance-create`
+	 * :ref:`appliance-delete`
+	 * :ref:`appliance-get`
+	 * :ref:`appliance-getAll`
+	 * :ref:`user-object`

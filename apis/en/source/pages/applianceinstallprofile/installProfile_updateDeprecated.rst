@@ -68,9 +68,9 @@ Example of representation.xml content (the request body):
 .. seealso::
 
 	 * :ref:`appliance-object`
+	 * :ref:`applianceinstallusersandgroups-api-resources`
+	 * :ref:`appliancepartitiontabledisk-api-resources`
+	 * :ref:`installProfile-get`
 	 * :ref:`installprofile-object`
 	 * :ref:`osgroup-object`
 	 * :ref:`osuser-object`
-	 * :ref:`installProfile-get`
-	 * :ref:`applianceinstallusersandgroups-api-resources`
-	 * :ref:`appliancepartitiontabledisk-api-resources`

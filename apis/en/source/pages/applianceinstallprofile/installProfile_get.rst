@@ -45,9 +45,9 @@ Example Request
 .. seealso::
 
 	 * :ref:`appliance-object`
+	 * :ref:`applianceinstallusersandgroups-api-resources`
+	 * :ref:`appliancepartitiontabledisk-api-resources`
+	 * :ref:`installProfile-update`
 	 * :ref:`installprofile-object`
 	 * :ref:`osgroup-object`
 	 * :ref:`osuser-object`
-	 * :ref:`installProfile-update`
-	 * :ref:`applianceinstallusersandgroups-api-resources`
-	 * :ref:`appliancepartitiontabledisk-api-resources`

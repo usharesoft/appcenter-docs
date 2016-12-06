@@ -25,7 +25,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``id`` (required): the id of the :ref:`distribprofile-object`
+* ``id`` (required): the id of the :ref:`org-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -43,13 +43,13 @@ Example Request
 .. seealso::
 
 	 * :ref:`distribprofile-object`
-	 * :ref:`os-create`
-	 * :ref:`os-getAll`
-	 * :ref:`os-update`
 	 * :ref:`osAccess-update`
 	 * :ref:`osLicense-download`
 	 * :ref:`osLogo-download`
 	 * :ref:`osLogo-downloadFile`
-	 * :ref:`osPkg-getAll`
-	 * :ref:`osPkg-get`
 	 * :ref:`osPkgUpdates-getAll`
+	 * :ref:`osPkg-get`
+	 * :ref:`osPkg-getAll`
+	 * :ref:`os-create`
+	 * :ref:`os-getAll`
+	 * :ref:`os-update`

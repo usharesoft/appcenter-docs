@@ -14,7 +14,7 @@ user_getAll
 	* Response Formats: ``application/xml`` ``application/json``
 	* Since: ``UForge 1.0``
 
-Retrieves all the users in the platform 
+Retrieves all the users in the platform. 
 
 A list of :ref:`user-object` objects are returned. 
 
@@ -46,9 +46,9 @@ Example Request
 .. seealso::
 
 	 * :ref:`user-object`
+	 * :ref:`userAdminStatus-change`
+	 * :ref:`userOrg-getAll`
+	 * :ref:`userOrg-remove`
 	 * :ref:`user-create`
 	 * :ref:`user-get`
 	 * :ref:`user-update`
-	 * :ref:`userOrg-getAll`
-	 * :ref:`userOrg-remove`
-	 * :ref:`userAdminStatus-change`

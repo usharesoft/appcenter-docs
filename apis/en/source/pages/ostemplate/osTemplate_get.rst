@@ -43,13 +43,13 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`distribprofile-object`
-	 * :ref:`distribprofiletemplate-object`
 	 * :ref:`appliance-object`
 	 * :ref:`distribprofile-object`
-	 * :ref:`osTemplate-getAll`
-	 * :ref:`osTemplate-get`
+	 * :ref:`distribprofile-object`
+	 * :ref:`distribprofiletemplate-object`
 	 * :ref:`osTemplatePkgs-get`
 	 * :ref:`osTemplate-create`
-	 * :ref:`osTemplate-update`
 	 * :ref:`osTemplate-delete`
+	 * :ref:`osTemplate-get`
+	 * :ref:`osTemplate-getAll`
+	 * :ref:`osTemplate-update`

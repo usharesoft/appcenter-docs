@@ -45,18 +45,18 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`mysoftware-object`
-	 * :ref:`mySoftware-create`
-	 * :ref:`mySoftware-getAll`
-	 * :ref:`mySoftware-get`
-	 * :ref:`mySoftware-update`
-	 * :ref:`mySoftware-delete`
-	 * :ref:`mySoftwareUsage-getAll`
 	 * :ref:`mySoftwarePkg-add`
-	 * :ref:`mySoftwarePkg-getAll`
+	 * :ref:`mySoftwarePkg-delete`
 	 * :ref:`mySoftwarePkg-deleteAll`
-	 * :ref:`mySoftwarePkg-get`
-	 * :ref:`mySoftwarePkg-update`
 	 * :ref:`mySoftwarePkg-download`
 	 * :ref:`mySoftwarePkg-downloadFile`
-	 * :ref:`mySoftwarePkg-delete`
+	 * :ref:`mySoftwarePkg-get`
+	 * :ref:`mySoftwarePkg-getAll`
+	 * :ref:`mySoftwarePkg-update`
+	 * :ref:`mySoftwareUsage-getAll`
+	 * :ref:`mySoftware-create`
+	 * :ref:`mySoftware-delete`
+	 * :ref:`mySoftware-get`
+	 * :ref:`mySoftware-getAll`
+	 * :ref:`mySoftware-update`
+	 * :ref:`mysoftware-object`

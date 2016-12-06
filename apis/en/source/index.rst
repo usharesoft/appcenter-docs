@@ -5,11 +5,6 @@ Welcome to UForge AppCenter REST APIs Documentation
 
 This documentation provides a description of UForge AppCenter RESTful interface.
 
-Download the RESTful WADL specification file here (add link).
-
-Note: There are multiple options for reading this documentation - click on the link at the lower left hand corner for these options.
-            
-
 .. toctree::
     :maxdepth: 1
 
@@ -58,7 +53,6 @@ Note: There are multiple options for reading this documentation - click on the l
     pages/workspacemembers/overview
     pages/workspacetemplate/overview
     pages/workspacetemplatecomments/overview
-
 
 .. _trademarks:
 

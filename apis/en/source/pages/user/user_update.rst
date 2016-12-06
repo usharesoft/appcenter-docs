@@ -54,9 +54,9 @@ Example of representation.xml content (the request body):
 .. seealso::
 
 	 * :ref:`user-object`
+	 * :ref:`userAdminStatus-change`
+	 * :ref:`userOrg-getAll`
+	 * :ref:`userOrg-remove`
 	 * :ref:`user-create`
 	 * :ref:`user-get`
 	 * :ref:`user-getAll`
-	 * :ref:`userOrg-getAll`
-	 * :ref:`userOrg-remove`
-	 * :ref:`userAdminStatus-change`

@@ -56,13 +56,13 @@ Example Request
 	 * :ref:`appliance-object`
 	 * :ref:`image-object`
 	 * :ref:`imagepkgs-object`
-	 * :ref:`machineImage-deleteAll`
+	 * :ref:`machineImageGeneration-cancel`
+	 * :ref:`machineImageStatus-get`
+	 * :ref:`machineImageStatus-getAll`
 	 * :ref:`machineImage-delete`
+	 * :ref:`machineImage-deleteAll`
 	 * :ref:`machineImage-download`
 	 * :ref:`machineImage-generate`
 	 * :ref:`machineImage-get`
 	 * :ref:`machineImage-getAll`
 	 * :ref:`machineImage-regenerate`
-	 * :ref:`machineImageGeneration-cancel`
-	 * :ref:`machineImageStatus-getAll`
-	 * :ref:`machineImageStatus-get`

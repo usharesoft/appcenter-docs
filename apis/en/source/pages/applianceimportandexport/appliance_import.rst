@@ -45,7 +45,7 @@ Example Request
 .. seealso::
 
 	 * :ref:`appliance-object`
-	 * :ref:`applianceimport-object`
+	 * :ref:`applianceImportStatus-get`
 	 * :ref:`applianceImport-get`
 	 * :ref:`applianceImport-upload`
-	 * :ref:`applianceImportStatus-get`
+	 * :ref:`applianceimport-object`

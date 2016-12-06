@@ -18,7 +18,7 @@ Creates a new category in an organization.
 
 Refer to :ref:`category-object` for all the mandatory and optional attributes. 
 
-..warning:: Only administrators have the ability to create and manage categories
+.. warning:: Only administrators have the ability to create and manage categories
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -56,11 +56,11 @@ Example of representation.xml content (the request body):
 
 .. seealso::
 
-	 * :ref:`org-object`
 	 * :ref:`category-object`
 	 * :ref:`categoryChild-create`
 	 * :ref:`category-delete`
 	 * :ref:`category-deleteAll`
-	 * :ref:`category-getAll`
 	 * :ref:`category-get`
+	 * :ref:`category-getAll`
 	 * :ref:`category-update`
+	 * :ref:`org-object`

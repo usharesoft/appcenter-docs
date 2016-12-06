@@ -18,7 +18,7 @@ Deletes all of the categories from an organization.
 
 A subset of categories can be deleted by providing a list of category ``ids`` to delete as a set of ``query parameters`` in the request. 
 
-..warning:: Only administrators have the ability to create and manage categories
+.. warning:: Only administrators have the ability to create and manage categories
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -46,11 +46,11 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`org-object`
 	 * :ref:`category-object`
-	 * :ref:`category-create`
 	 * :ref:`categoryChild-create`
+	 * :ref:`category-create`
 	 * :ref:`category-delete`
-	 * :ref:`category-getAll`
 	 * :ref:`category-get`
+	 * :ref:`category-getAll`
 	 * :ref:`category-update`
+	 * :ref:`org-object`

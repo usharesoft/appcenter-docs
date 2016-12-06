@@ -5,7 +5,7 @@
 distribProfileTemplate
 ======================
 
-Describes a group of native packages from an operating system. This profile is created by a platform administrator. These templates are used by users of the platform to easily create operating profiles that are part of an appliance template.
+Describes a group of native packages from an operating system. This profile is created by a platform administrator. These templates are used by users of the platform to easily create operating system profiles that are part of an appliance template.
 
 Attributes
 ~~~~~~~~~~
@@ -17,7 +17,7 @@ The list of attributes for ``distribProfileTemplate`` are:
 	* ``description`` (string): the description of this os profile template
 	* ``distributionPackagesUri`` (anyURI): the uri resource to retrieve all the operating system packages contained in this os profile template
 	* ``distributionUri`` (anyURI): the uri resource to retrieve the operating system information this os profile template is based on
-	* ``installedSize`` (long): estimated install disk size required (in bytes) to install the packages this template contains. .. note:: this attempts to include all package dependencies.
+	* ``installedSize`` (long): estimated install disk size required (in bytes) to install the packages this template contains. Note, this attempts to include all package dependencies.
 	* ``name`` (string): the name of this os profile template
 	* ``packagesUri`` (anyURI): the uri resource to retrieve all the packages this os profile template contains (may contain custom packages from other repositories other than the operating system)
 	* ``packageUris`` (:ref:`UriList-object`): the list of uris for the packages this os profile template contains

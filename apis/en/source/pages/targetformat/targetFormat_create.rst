@@ -61,19 +61,19 @@ Example of representation.xml content (the request body):
 
 .. seealso::
 
-	 * :ref:`targetplatform-api-resources`
-	 * :ref:`targetplatform-object`
-	 * :ref:`targetformat-object`
 	 * :ref:`imageformat-object`
 	 * :ref:`primitiveFormat-getAll`
 	 * :ref:`primitiveFormat-update`
-	 * :ref:`targetFormat-getAll`
-	 * :ref:`targetFormat-get`
-	 * :ref:`targetFormat-delete`
-	 * :ref:`targetFormat-update`
-	 * :ref:`targetFormat-updateAccess`
-	 * :ref:`targetFormatLogo-upload`
 	 * :ref:`targetFormatLogo-delete`
 	 * :ref:`targetFormatLogo-download`
 	 * :ref:`targetFormatLogo-downloadFile`
+	 * :ref:`targetFormatLogo-upload`
+	 * :ref:`targetFormat-delete`
+	 * :ref:`targetFormat-get`
+	 * :ref:`targetFormat-getAll`
 	 * :ref:`targetFormat-getAllTargetPlatforms`
+	 * :ref:`targetFormat-update`
+	 * :ref:`targetFormat-updateAccess`
+	 * :ref:`targetformat-object`
+	 * :ref:`targetplatform-api-resources`
+	 * :ref:`targetplatform-object`

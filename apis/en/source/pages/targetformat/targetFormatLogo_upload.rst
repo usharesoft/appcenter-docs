@@ -25,7 +25,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``fileName`` (required): the name of the logo binary
+* ``fileName`` (required): the file name of the logo to upload
 * ``oid`` (required): the id of the :ref:`org-object`
 * ``tfid`` (required): the id of the :ref:`targetformat-object`
 * ``logoId`` (required): the id of the target format :ref:`logo-object`
@@ -45,19 +45,19 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`targetplatform-api-resources`
-	 * :ref:`targetplatform-object`
-	 * :ref:`targetformat-object`
 	 * :ref:`imageformat-object`
 	 * :ref:`primitiveFormat-getAll`
 	 * :ref:`primitiveFormat-update`
-	 * :ref:`targetFormat-create`
-	 * :ref:`targetFormat-getAll`
-	 * :ref:`targetFormat-get`
-	 * :ref:`targetFormat-delete`
-	 * :ref:`targetFormat-update`
-	 * :ref:`targetFormat-updateAccess`
 	 * :ref:`targetFormatLogo-delete`
 	 * :ref:`targetFormatLogo-download`
 	 * :ref:`targetFormatLogo-downloadFile`
+	 * :ref:`targetFormat-create`
+	 * :ref:`targetFormat-delete`
+	 * :ref:`targetFormat-get`
+	 * :ref:`targetFormat-getAll`
 	 * :ref:`targetFormat-getAllTargetPlatforms`
+	 * :ref:`targetFormat-update`
+	 * :ref:`targetFormat-updateAccess`
+	 * :ref:`targetformat-object`
+	 * :ref:`targetplatform-api-resources`
+	 * :ref:`targetplatform-object`

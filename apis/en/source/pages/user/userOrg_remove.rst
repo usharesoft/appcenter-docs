@@ -25,8 +25,8 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the user name (login name) of the :ref:`user-object`
-* ``oid`` (required): the name of the organization
+* ``uid`` (required): the user name (login name) of the :ref:`user-object` to remove
+* ``oid`` (required): the name of the organization to remove the user from
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -43,13 +43,13 @@ Example Request
 
 .. seealso::
 
+	 * :ref:`org-object`
 	 * :ref:`organization-api-resources`
 	 * :ref:`user-object`
-	 * :ref:`org-object`
+	 * :ref:`userAdminStatus-change`
+	 * :ref:`userOrg-getAll`
+	 * :ref:`userOrg-remove`
 	 * :ref:`user-create`
 	 * :ref:`user-get`
 	 * :ref:`user-getAll`
 	 * :ref:`user-update`
-	 * :ref:`userOrg-getAll`
-	 * :ref:`userOrg-remove`
-	 * :ref:`userAdminStatus-change`

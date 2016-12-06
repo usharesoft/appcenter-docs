@@ -45,6 +45,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`credaccountsusecloud-object`
 	* :ref:`credaccountvclouddirector-object`
 	* :ref:`credaccountvsphere-object`
+	* :ref:`credaccountk5-object`
 	* :ref:`disk-object`
 	* :ref:`disks-object`
 	* :ref:`distribprofile-object`
@@ -122,6 +123,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`publishimagesusecloud-object`
 	* :ref:`publishimagevclouddirector-object`
 	* :ref:`publishimagevsphere-object`
+	* :ref:`publishimagek5-object`
 	* :ref:`publishimages-object`
 	* :ref:`quota-object`
 	* :ref:`quotas-object`
@@ -176,6 +178,12 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`users-object`
 	* :ref:`userstats-object`
 	* :ref:`votestat-object`
+	* :ref:`winmsiapplication-object`
+	* :ref:`winmsiapplications-object`
+	* :ref:`winstoreapplication-object`
+	* :ref:`winstoreapplications-object`
+	* :ref:`winservice-object`
+	* :ref:`winservices-object`
 	* :ref:`workspace-object`
 	* :ref:`workspaces-object`
 
@@ -221,6 +229,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     CredAccountSuseCloud
     CredAccountVCloudDirector
     CredAccountVSphere
+    CredAccountK5
     Disk
     Disks
     DistribProfile
@@ -298,6 +307,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     PublishImageSuseCloud
     PublishImageVCloudDirector
     PublishImageVSphere
+    PublishImageK5
     PublishImages
     Quota
     Quotas
@@ -352,5 +362,11 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     Users
     UserStats
     VoteStat
+    WinMsiApplication
+    WinMsiApplications
+    WinStoreApplication
+    WinStoreApplications
+    WinService
+    WinServices
     Workspace
     Workspaces

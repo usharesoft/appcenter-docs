@@ -48,42 +48,42 @@ Example Request
 .. seealso::
 
 	 * :ref:`mySoftware-object`
-	 * :ref:`softwarebundleexport-object`
-	 * :ref:`softwarebundle-object`
-	 * :ref:`softwarebundleimport-object`
-	 * :ref:`mySoftware-create`
-	 * :ref:`mySoftware-getAll`
-	 * :ref:`mySoftware-get`
-	 * :ref:`mySoftware-update`
-	 * :ref:`mySoftware-delete`
-	 * :ref:`mySoftware-clone`
-	 * :ref:`mySoftwareUsage-getAll`
-	 * :ref:`mySoftwareOs-getAll`
 	 * :ref:`mySoftwareArtifact-add`
-	 * :ref:`mySoftwareArtifact-getAll`
-	 * :ref:`mySoftwareArtifact-get`
-	 * :ref:`mySoftwareArtifact-updateAll`
-	 * :ref:`mySoftwareArtifact-update`
-	 * :ref:`mySoftwareArtifact-deleteAll`
+	 * :ref:`mySoftwareArtifact-addChild`
+	 * :ref:`mySoftwareArtifact-addOrRemoveFileFromCache`
+	 * :ref:`mySoftwareArtifact-createFromRemoteServer`
 	 * :ref:`mySoftwareArtifact-delete`
+	 * :ref:`mySoftwareArtifact-deleteAll`
 	 * :ref:`mySoftwareArtifact-download`
 	 * :ref:`mySoftwareArtifact-downloadFile`
-	 * :ref:`mySoftwareArtifact-createFromRemoteServer`
-	 * :ref:`mySoftwareArtifact-addOrRemoveFileFromCache`
+	 * :ref:`mySoftwareArtifact-get`
+	 * :ref:`mySoftwareArtifact-getAll`
+	 * :ref:`mySoftwareArtifact-update`
+	 * :ref:`mySoftwareArtifact-updateAll`
 	 * :ref:`mySoftwareArtifact-upload`
-	 * :ref:`mySoftwareArtifact-addChild`
+	 * :ref:`mySoftwareExportStatus-get`
+	 * :ref:`mySoftwareExport-delete`
+	 * :ref:`mySoftwareExport-download`
+	 * :ref:`mySoftwareLicense-delete`
+	 * :ref:`mySoftwareLicense-download`
 	 * :ref:`mySoftwareLicense-upload`
 	 * :ref:`mySoftwareLicense-uploadFile`
-	 * :ref:`mySoftwareLicense-download`
-	 * :ref:`mySoftwareLicense-delete`
+	 * :ref:`mySoftwareLogo-delete`
 	 * :ref:`mySoftwareLogo-download`
 	 * :ref:`mySoftwareLogo-downloadFile`
 	 * :ref:`mySoftwareLogo-upload`
-	 * :ref:`mySoftwareLogo-delete`
+	 * :ref:`mySoftwareOs-getAll`
+	 * :ref:`mySoftwareUsage-getAll`
+	 * :ref:`mySoftware-clone`
+	 * :ref:`mySoftware-create`
+	 * :ref:`mySoftware-delete`
 	 * :ref:`mySoftware-export`
-	 * :ref:`mySoftwareExport-delete`
-	 * :ref:`mySoftwareExport-download`
-	 * :ref:`mySoftwareExportStatus-get`
-	 * :ref:`softwareBundle-import`
-	 * :ref:`softwareBundleImport-get`
+	 * :ref:`mySoftware-get`
+	 * :ref:`mySoftware-getAll`
+	 * :ref:`mySoftware-update`
 	 * :ref:`softwareBundleImportStatus-get`
+	 * :ref:`softwareBundleImport-get`
+	 * :ref:`softwareBundle-import`
+	 * :ref:`softwarebundle-object`
+	 * :ref:`softwarebundleexport-object`
+	 * :ref:`softwarebundleimport-object`

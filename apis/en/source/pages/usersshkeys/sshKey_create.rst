@@ -54,7 +54,7 @@ Example of representation.xml content (the request body):
 
 .. seealso::
 
-	 * :ref:`sshkey-object`
+	 * :ref:`sshKey-delete`
 	 * :ref:`sshKey-get`
 	 * :ref:`sshKey-getAll`
-	 * :ref:`sshKey-delete`
+	 * :ref:`sshkey-object`

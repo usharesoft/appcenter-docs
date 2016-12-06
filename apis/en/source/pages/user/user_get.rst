@@ -43,9 +43,9 @@ Example Request
 .. seealso::
 
 	 * :ref:`user-object`
+	 * :ref:`userAdminStatus-change`
+	 * :ref:`userOrg-getAll`
+	 * :ref:`userOrg-remove`
 	 * :ref:`user-create`
 	 * :ref:`user-getAll`
 	 * :ref:`user-update`
-	 * :ref:`userOrg-getAll`
-	 * :ref:`userOrg-remove`
-	 * :ref:`userAdminStatus-change`

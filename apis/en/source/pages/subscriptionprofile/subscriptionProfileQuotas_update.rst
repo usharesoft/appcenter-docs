@@ -69,14 +69,14 @@ Example of representation.xml content (the request body):
 
 .. seealso::
 
-	 * :ref:`subscriptionprofile-object`
-	 * :ref:`subscriptionProfile-create`
-	 * :ref:`subscriptionProfile-getAll`
-	 * :ref:`subscriptionProfile-get`
-	 * :ref:`subscriptionProfile-update`
-	 * :ref:`subscriptionProfile-remove`
-	 * :ref:`subscriptionProfileOS-update`
 	 * :ref:`subscriptionProfileAdmins-update`
+	 * :ref:`subscriptionProfileOS-update`
 	 * :ref:`subscriptionProfileRoles-update`
 	 * :ref:`subscriptionProfileTargetFormat-update`
 	 * :ref:`subscriptionProfileTargetPlatform-update`
+	 * :ref:`subscriptionProfile-create`
+	 * :ref:`subscriptionProfile-get`
+	 * :ref:`subscriptionProfile-getAll`
+	 * :ref:`subscriptionProfile-remove`
+	 * :ref:`subscriptionProfile-update`
+	 * :ref:`subscriptionprofile-object`

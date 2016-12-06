@@ -29,7 +29,7 @@ URI Parameters
 
 * ``pid`` (required): the id of the :ref:`project-object`
 * ``oid`` (required): the id of the :ref:`org-object`
-* ``said`` (required): the id of the :ref:`softwareartifact-object`
+* ``said`` (required): the id of the :ref:`softwareartifact-object` to update
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -60,26 +60,26 @@ Example of representation.xml content (the request body):
 .. seealso::
 
 	 * :ref:`project-object`
-	 * :ref:`softwareartifact-object`
-	 * :ref:`project-create`
-	 * :ref:`project-getAll`
-	 * :ref:`project-get`
-	 * :ref:`project-delete`
-	 * :ref:`project-update`
-	 * :ref:`projectOs-getAll`
+	 * :ref:`projectArtifact-addChild`
+	 * :ref:`projectArtifact-addOrRemoveFileFromCache`
 	 * :ref:`projectArtifact-create`
-	 * :ref:`projectArtifact-getAll`
-	 * :ref:`projectArtifact-get`
-	 * :ref:`projectArtifact-updateAll`
-	 * :ref:`projectArtifact-upload`
-	 * :ref:`projectArtifact-deleteAll`
+	 * :ref:`projectArtifact-createFromRemoteServer`
 	 * :ref:`projectArtifact-delete`
+	 * :ref:`projectArtifact-deleteAll`
 	 * :ref:`projectArtifact-download`
 	 * :ref:`projectArtifact-downloadFile`
-	 * :ref:`projectArtifact-createFromRemoteServer`
-	 * :ref:`projectArtifact-addOrRemoveFileFromCache`
-	 * :ref:`projectArtifact-addChild`
+	 * :ref:`projectArtifact-get`
+	 * :ref:`projectArtifact-getAll`
+	 * :ref:`projectArtifact-updateAll`
+	 * :ref:`projectArtifact-upload`
+	 * :ref:`projectLogo-delete`
 	 * :ref:`projectLogo-download`
 	 * :ref:`projectLogo-downloadFile`
 	 * :ref:`projectLogo-upload`
-	 * :ref:`projectLogo-delete`
+	 * :ref:`projectOs-getAll`
+	 * :ref:`project-create`
+	 * :ref:`project-delete`
+	 * :ref:`project-get`
+	 * :ref:`project-getAll`
+	 * :ref:`project-update`
+	 * :ref:`softwareartifact-object`

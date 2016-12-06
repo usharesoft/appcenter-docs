@@ -45,11 +45,11 @@ Example Request
 
 	 * :ref:`artifactcredaccount-object`
 	 * :ref:`orgArtifactCredAccount-create`
+	 * :ref:`orgArtifactCredAccount-delete`
 	 * :ref:`orgArtifactCredAccount-getAll`
 	 * :ref:`orgArtifactCredAccount-update`
-	 * :ref:`orgArtifactCredAccount-delete`
 	 * :ref:`userArtifactCredAccount-create`
-	 * :ref:`userArtifactCredAccount-getAll`
-	 * :ref:`userArtifactCredAccount-get`
-	 * :ref:`userArtifactCredAccount-update`
 	 * :ref:`userArtifactCredAccount-delete`
+	 * :ref:`userArtifactCredAccount-get`
+	 * :ref:`userArtifactCredAccount-getAll`
+	 * :ref:`userArtifactCredAccount-update`

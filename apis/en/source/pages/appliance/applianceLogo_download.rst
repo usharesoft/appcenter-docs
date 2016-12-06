@@ -47,13 +47,13 @@ Example Request
 .. seealso::
 
 	 * :ref:`appliance-object`
-	 * :ref:`logo-object`
-	 * :ref:`appliance-create`
+	 * :ref:`applianceLogo-delete`
+	 * :ref:`applianceLogo-downloadFile`
+	 * :ref:`applianceLogo-upload`
 	 * :ref:`appliance-clone`
+	 * :ref:`appliance-create`
 	 * :ref:`appliance-delete`
 	 * :ref:`appliance-get`
 	 * :ref:`appliance-getAll`
 	 * :ref:`appliance-update`
-	 * :ref:`applianceLogo-delete`
-	 * :ref:`applianceLogo-downloadFile`
-	 * :ref:`applianceLogo-upload`
+	 * :ref:`logo-object`

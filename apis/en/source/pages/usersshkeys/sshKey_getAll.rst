@@ -46,7 +46,7 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`sshkey-object`
-	 * :ref:`sshKey-get`
 	 * :ref:`sshKey-create`
 	 * :ref:`sshKey-delete`
+	 * :ref:`sshKey-get`
+	 * :ref:`sshkey-object`

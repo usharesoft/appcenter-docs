@@ -44,26 +44,26 @@ Example Request
 .. seealso::
 
 	 * :ref:`appliance-object`
+	 * :ref:`applianceImage-publish`
 	 * :ref:`image-object`
 	 * :ref:`imagepkgs-object`
+	 * :ref:`machineImageGeneration-cancel`
+	 * :ref:`machineImagePkg-getAll`
+	 * :ref:`machineImagePublish-cancel`
+	 * :ref:`machineImagePublishedStatus-get`
+	 * :ref:`machineImagePublishedStatus-getAll`
+	 * :ref:`machineImagePublished-delete`
+	 * :ref:`machineImagePublished-deleteAll`
+	 * :ref:`machineImagePublished-download`
+	 * :ref:`machineImagePublished-get`
+	 * :ref:`machineImagePublished-getAll`
+	 * :ref:`machineImageStatus-get`
+	 * :ref:`machineImageStatus-getAll`
 	 * :ref:`machineImage-delete`
 	 * :ref:`machineImage-download`
 	 * :ref:`machineImage-downloadFile`
 	 * :ref:`machineImage-generate`
 	 * :ref:`machineImage-get`
 	 * :ref:`machineImage-getAll`
-	 * :ref:`machineImage-regenerate`
-	 * :ref:`machineImageGeneration-cancel`
-	 * :ref:`machineImageStatus-getAll`
-	 * :ref:`machineImageStatus-get`
-	 * :ref:`machineImagePkg-getAll`
 	 * :ref:`machineImage-publish`
-	 * :ref:`machineImagePublish-cancel`
-	 * :ref:`machineImagePublished-get`
-	 * :ref:`machineImagePublished-getAll`
-	 * :ref:`machineImagePublished-delete`
-	 * :ref:`machineImagePublished-deleteAll`
-	 * :ref:`machineImagePublished-download`
-	 * :ref:`machineImagePublishedStatus-get`
-	 * :ref:`machineImagePublishedStatus-getAll`
-	 * :ref:`applianceImage-publish`
+	 * :ref:`machineImage-regenerate`

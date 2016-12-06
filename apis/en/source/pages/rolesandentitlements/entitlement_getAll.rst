@@ -43,9 +43,9 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`role-object`
 	 * :ref:`entitlement-object`
+	 * :ref:`role-object`
 	 * :ref:`role-create`
+	 * :ref:`role-delete`
 	 * :ref:`role-getAll`
 	 * :ref:`role-update`
-	 * :ref:`role-delete`

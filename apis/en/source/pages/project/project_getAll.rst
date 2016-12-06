@@ -47,25 +47,25 @@ Example Request
 .. seealso::
 
 	 * :ref:`project-object`
-	 * :ref:`project-create`
-	 * :ref:`project-get`
-	 * :ref:`project-delete`
-	 * :ref:`project-update`
-	 * :ref:`projectOs-getAll`
+	 * :ref:`projectArtifact-addChild`
+	 * :ref:`projectArtifact-addOrRemoveFileFromCache`
 	 * :ref:`projectArtifact-create`
-	 * :ref:`projectArtifact-getAll`
-	 * :ref:`projectArtifact-get`
-	 * :ref:`projectArtifact-updateAll`
-	 * :ref:`projectArtifact-update`
-	 * :ref:`projectArtifact-upload`
-	 * :ref:`projectArtifact-deleteAll`
+	 * :ref:`projectArtifact-createFromRemoteServer`
 	 * :ref:`projectArtifact-delete`
+	 * :ref:`projectArtifact-deleteAll`
 	 * :ref:`projectArtifact-download`
 	 * :ref:`projectArtifact-downloadFile`
-	 * :ref:`projectArtifact-createFromRemoteServer`
-	 * :ref:`projectArtifact-addOrRemoveFileFromCache`
-	 * :ref:`projectArtifact-addChild`
+	 * :ref:`projectArtifact-get`
+	 * :ref:`projectArtifact-getAll`
+	 * :ref:`projectArtifact-update`
+	 * :ref:`projectArtifact-updateAll`
+	 * :ref:`projectArtifact-upload`
+	 * :ref:`projectLogo-delete`
 	 * :ref:`projectLogo-download`
 	 * :ref:`projectLogo-downloadFile`
 	 * :ref:`projectLogo-upload`
-	 * :ref:`projectLogo-delete`
+	 * :ref:`projectOs-getAll`
+	 * :ref:`project-create`
+	 * :ref:`project-delete`
+	 * :ref:`project-get`
+	 * :ref:`project-update`

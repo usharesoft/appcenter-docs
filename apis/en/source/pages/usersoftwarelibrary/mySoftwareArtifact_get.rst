@@ -29,7 +29,7 @@ URI Parameters
 
 * ``uid`` (required): the id of the :ref:`user-object`
 * ``msid`` (required): the id of the :ref:`mySoftware-object`
-* ``said`` (required): the id of the :ref:`softwareartifact-object`
+* ``said`` (required): the id of the :ref:`softwareartifact-object` to update
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -47,40 +47,40 @@ Example Request
 .. seealso::
 
 	 * :ref:`mySoftware-object`
-	 * :ref:`softwareartifact-object`
-	 * :ref:`mySoftware-create`
-	 * :ref:`mySoftware-getAll`
-	 * :ref:`mySoftware-get`
-	 * :ref:`mySoftware-update`
-	 * :ref:`mySoftware-delete`
-	 * :ref:`mySoftware-clone`
-	 * :ref:`mySoftwareUsage-getAll`
-	 * :ref:`mySoftwareOs-getAll`
 	 * :ref:`mySoftwareArtifact-add`
-	 * :ref:`mySoftwareArtifact-getAll`
-	 * :ref:`mySoftwareArtifact-updateAll`
-	 * :ref:`mySoftwareArtifact-update`
-	 * :ref:`mySoftwareArtifact-deleteAll`
+	 * :ref:`mySoftwareArtifact-addChild`
+	 * :ref:`mySoftwareArtifact-addOrRemoveFileFromCache`
+	 * :ref:`mySoftwareArtifact-createFromRemoteServer`
 	 * :ref:`mySoftwareArtifact-delete`
+	 * :ref:`mySoftwareArtifact-deleteAll`
 	 * :ref:`mySoftwareArtifact-download`
 	 * :ref:`mySoftwareArtifact-downloadFile`
-	 * :ref:`mySoftwareArtifact-createFromRemoteServer`
-	 * :ref:`mySoftwareArtifact-addOrRemoveFileFromCache`
+	 * :ref:`mySoftwareArtifact-getAll`
+	 * :ref:`mySoftwareArtifact-update`
+	 * :ref:`mySoftwareArtifact-updateAll`
 	 * :ref:`mySoftwareArtifact-upload`
-	 * :ref:`mySoftwareArtifact-addChild`
+	 * :ref:`mySoftwareExportStatus-get`
+	 * :ref:`mySoftwareExport-delete`
+	 * :ref:`mySoftwareExport-download`
+	 * :ref:`mySoftwareLicense-delete`
+	 * :ref:`mySoftwareLicense-download`
 	 * :ref:`mySoftwareLicense-upload`
 	 * :ref:`mySoftwareLicense-uploadFile`
-	 * :ref:`mySoftwareLicense-download`
-	 * :ref:`mySoftwareLicense-delete`
+	 * :ref:`mySoftwareLogo-delete`
 	 * :ref:`mySoftwareLogo-download`
 	 * :ref:`mySoftwareLogo-downloadFile`
 	 * :ref:`mySoftwareLogo-upload`
-	 * :ref:`mySoftwareLogo-delete`
+	 * :ref:`mySoftwareOs-getAll`
+	 * :ref:`mySoftwareUsage-getAll`
+	 * :ref:`mySoftware-clone`
+	 * :ref:`mySoftware-create`
+	 * :ref:`mySoftware-delete`
 	 * :ref:`mySoftware-export`
-	 * :ref:`mySoftwareExport-delete`
-	 * :ref:`mySoftwareExport-download`
-	 * :ref:`mySoftwareExportStatus-get`
+	 * :ref:`mySoftware-get`
+	 * :ref:`mySoftware-getAll`
+	 * :ref:`mySoftware-update`
 	 * :ref:`softwareBundleImport-get`
-	 * :ref:`softwarebundle-import`
-	 * :ref:`softwarebundleImport-upload`
+	 * :ref:`softwareartifact-object`
 	 * :ref:`softwarebundleImportStatus-get`
+	 * :ref:`softwarebundleImport-upload`
+	 * :ref:`softwarebundle-import`

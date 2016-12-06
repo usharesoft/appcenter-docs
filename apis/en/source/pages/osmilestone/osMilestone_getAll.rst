@@ -46,8 +46,8 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`milestone-object`
 	 * :ref:`distribprofile-object`
+	 * :ref:`milestone-object`
 	 * :ref:`osMilestone-create`
 	 * :ref:`osMilestone-delete`
 	 * :ref:`osMilestone-get`

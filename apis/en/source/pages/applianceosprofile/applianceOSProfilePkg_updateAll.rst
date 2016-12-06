@@ -16,7 +16,7 @@ applianceOSProfilePkg_updateAll
 
 Updates the native packages contained in an OS profile. 
 
-.. warning:: All the packages that are not contained in the new package list ar removed from the OS profile.  All new packages in the list will be added to the OS profile.
+.. warning:: All the packages that are not contained in the new package list are removed from the OS profile.  All new packages in the list will be added to the OS profile.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -60,11 +60,11 @@ Example of representation.xml content (the request body):
 .. seealso::
 
 	 * :ref:`appliance-object`
-	 * :ref:`distribprofile-object`
-	 * :ref:`packages-object`
-	 * :ref:`applianceOSProfile-create`
-	 * :ref:`applianceOSProfile-get`
-	 * :ref:`applianceOSProfile-delete`
 	 * :ref:`applianceOSProfilePkg-getAll`
+	 * :ref:`applianceOSProfile-create`
+	 * :ref:`applianceOSProfile-delete`
+	 * :ref:`applianceOSProfile-get`
 	 * :ref:`applianceOSUpdates-get`
 	 * :ref:`applianceOSUpdates-save`
+	 * :ref:`distribprofile-object`
+	 * :ref:`packages-object`

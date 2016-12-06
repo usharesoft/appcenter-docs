@@ -53,9 +53,9 @@ Example of representation.xml content (the request body):
 
 .. seealso::
 
-	 * :ref:`role-object`
 	 * :ref:`entitlement-object`
 	 * :ref:`entitlement-getAll`
+	 * :ref:`role-object`
+	 * :ref:`role-delete`
 	 * :ref:`role-getAll`
 	 * :ref:`role-update`
-	 * :ref:`role-delete`

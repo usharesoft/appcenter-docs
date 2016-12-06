@@ -48,12 +48,12 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`applianceexport-object`
 	 * :ref:`appliance-object`
-	 * :ref:`appliance-export`
 	 * :ref:`applianceExport-cancel`
 	 * :ref:`applianceExport-delete`
 	 * :ref:`applianceExport-download`
 	 * :ref:`applianceExport-get`
 	 * :ref:`applianceExport-getAll`
 	 * :ref:`applianceImport-getAllStatus`
+	 * :ref:`appliance-export`
+	 * :ref:`applianceexport-object`

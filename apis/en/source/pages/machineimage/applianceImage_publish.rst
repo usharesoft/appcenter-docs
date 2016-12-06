@@ -75,25 +75,25 @@ Example of representation.xml content (the request body):
 .. seealso::
 
 	 * :ref:`appliance-object`
-	 * :ref:`publishimage-object`
-	 * :ref:`machineImage-deleteAll`
-	 * :ref:`machineImage-delete`
-	 * :ref:`machineImage-download`
-	 * :ref:`machineImage-downloadFile`
-	 * :ref:`machineImage-generate`
-	 * :ref:`machineImage-publish`
-	 * :ref:`machineImage-get`
-	 * :ref:`machineImage-getAll`
-	 * :ref:`machineImage-regenerate`
+	 * :ref:`applianceImage-publish`
 	 * :ref:`machineImageGeneration-cancel`
-	 * :ref:`machineImageStatus-getAll`
-	 * :ref:`machineImageStatus-get`
 	 * :ref:`machineImagePublish-cancel`
-	 * :ref:`machineImagePublished-get`
-	 * :ref:`machineImagePublished-getAll`
+	 * :ref:`machineImagePublishedStatus-get`
+	 * :ref:`machineImagePublishedStatus-getAll`
 	 * :ref:`machineImagePublished-delete`
 	 * :ref:`machineImagePublished-deleteAll`
 	 * :ref:`machineImagePublished-download`
-	 * :ref:`machineImagePublishedStatus-get`
-	 * :ref:`machineImagePublishedStatus-getAll`
-	 * :ref:`applianceImage-publish`
+	 * :ref:`machineImagePublished-get`
+	 * :ref:`machineImagePublished-getAll`
+	 * :ref:`machineImageStatus-get`
+	 * :ref:`machineImageStatus-getAll`
+	 * :ref:`machineImage-delete`
+	 * :ref:`machineImage-deleteAll`
+	 * :ref:`machineImage-download`
+	 * :ref:`machineImage-downloadFile`
+	 * :ref:`machineImage-generate`
+	 * :ref:`machineImage-get`
+	 * :ref:`machineImage-getAll`
+	 * :ref:`machineImage-publish`
+	 * :ref:`machineImage-regenerate`
+	 * :ref:`publishimage-object`

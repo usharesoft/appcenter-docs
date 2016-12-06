@@ -18,7 +18,7 @@ Invites one or more users to become members of a workspace.
 
 Please refer to :ref:`membership-object` for a complete list of all the ``membership`` attributes. 
 
-You can invite people, based on their UForge login name or email address, though the user must already have an account. 
+You can invite people, based on their UForge login name or email address, though the user must already have an account and its membership to this workspace can't already be in accepted or declined state. 
 
 By default, the invitee will have a ``Collaborator`` role inside the workspace. You can specify a specific role in each Membership instance. Please refer to :ref:`workspaceMember-update` to change the role of a workspace member. 
 
@@ -67,12 +67,12 @@ Example of representation.xml content (the request body):
 
 .. seealso::
 
+	 * :ref:`membership-object`
 	 * :ref:`workspace-api-resources`
 	 * :ref:`workspace-object`
-	 * :ref:`membership-object`
-	 * :ref:`workspaceMember-invite`
-	 * :ref:`workspaceMember-getAll`
-	 * :ref:`workspaceMember-deleteList`
 	 * :ref:`workspaceMember-delete`
+	 * :ref:`workspaceMember-deleteList`
+	 * :ref:`workspaceMember-getAll`
+	 * :ref:`workspaceMember-invite`
 	 * :ref:`workspaceMember-update`
 	 * :ref:`workspaceMember-updateList`

@@ -70,5 +70,5 @@ Example of representation.xml content (the request body):
 
 	 * :ref:`quota-object`
 	 * :ref:`statticket-object`
-	 * :ref:`userUsage-get`
 	 * :ref:`userQuotas-get`
+	 * :ref:`userUsage-get`

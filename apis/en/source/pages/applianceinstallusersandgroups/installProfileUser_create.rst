@@ -63,9 +63,7 @@ Example of representation.xml content (the request body):
 .. seealso::
 
 	 * :ref:`appliance-object`
-	 * :ref:`installprofile-object`
-	 * :ref:`osuser-object`
-	 * :ref:`osgroup-object`
+	 * :ref:`applianceinstallprofile-api-resources`
 	 * :ref:`installProfileGroup-create`
 	 * :ref:`installProfileGroup-delete`
 	 * :ref:`installProfileGroup-deleteAll`
@@ -77,4 +75,6 @@ Example of representation.xml content (the request body):
 	 * :ref:`installProfileUser-get`
 	 * :ref:`installProfileUser-getAll`
 	 * :ref:`installProfileUser-update`
-	 * :ref:`applianceinstallprofile-api-resources`
+	 * :ref:`installprofile-object`
+	 * :ref:`osgroup-object`
+	 * :ref:`osuser-object`

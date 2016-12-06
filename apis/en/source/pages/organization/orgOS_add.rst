@@ -55,21 +55,21 @@ Example of representation.xml content (the request body):
 
 .. seealso::
 
-	 * :ref:`org-object`
 	 * :ref:`distribprofile-object`
-	 * :ref:`user-object`
 	 * :ref:`license-object`
+	 * :ref:`org-object`
+	 * :ref:`orgCompany-getAll`
+	 * :ref:`orgMember-getAll`
+	 * :ref:`orgMember-getAll`
+	 * :ref:`orgMember-remove`
+	 * :ref:`orgMember-remove`
+	 * :ref:`orgMember-update`
+	 * :ref:`orgMember-update`
+	 * :ref:`orgOSWindows-add`
+	 * :ref:`orgOSWindows-getAll`
+	 * :ref:`orgOS-getAll`
+	 * :ref:`orgOS-update`
 	 * :ref:`org-create`
 	 * :ref:`org-get`
 	 * :ref:`org-getAll`
-	 * :ref:`orgOS-getAll`
-	 * :ref:`orgOS-update`
-	 * :ref:`orgOSWindows-add`
-	 * :ref:`orgOSWindows-getAll`
-	 * :ref:`orgMember-remove`
-	 * :ref:`orgMember-update`
-	 * :ref:`orgMember-getAll`
-	 * :ref:`orgMember-remove`
-	 * :ref:`orgMember-update`
-	 * :ref:`orgMember-getAll`
-	 * :ref:`orgCompany-getAll`
+	 * :ref:`user-object`

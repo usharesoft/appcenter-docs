@@ -55,12 +55,12 @@ Example of representation.xml content (the request body):
 
 .. seealso::
 
+	 * :ref:`userWorkspace-create`
+	 * :ref:`userWorkspace-getAll`
+	 * :ref:`workspace-object`
+	 * :ref:`workspace-delete`
+	 * :ref:`workspace-get`
+	 * :ref:`workspace-getAll`
+	 * :ref:`workspacecomments-api-resources`
 	 * :ref:`workspacemembers-api-resources`
 	 * :ref:`workspacetemplate-api-resources`
-	 * :ref:`workspacecomments-api-resources`
-	 * :ref:`workspace-object`
-	 * :ref:`workspace-getAll`
-	 * :ref:`workspace-get`
-	 * :ref:`workspace-delete`
-	 * :ref:`userWorkspace-getAll`
-	 * :ref:`userWorkspace-create`

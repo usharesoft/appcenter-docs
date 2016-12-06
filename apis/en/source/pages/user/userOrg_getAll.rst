@@ -46,13 +46,13 @@ Example Request
 
 .. seealso::
 
+	 * :ref:`org-object`
 	 * :ref:`organization-api-resources`
 	 * :ref:`user-object`
-	 * :ref:`org-object`
+	 * :ref:`userAdminStatus-change`
+	 * :ref:`userOrg-getAll`
+	 * :ref:`userOrg-remove`
 	 * :ref:`user-create`
 	 * :ref:`user-get`
 	 * :ref:`user-getAll`
 	 * :ref:`user-update`
-	 * :ref:`userOrg-getAll`
-	 * :ref:`userOrg-remove`
-	 * :ref:`userAdminStatus-change`

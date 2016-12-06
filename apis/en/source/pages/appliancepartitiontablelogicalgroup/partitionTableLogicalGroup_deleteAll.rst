@@ -44,14 +44,14 @@ Example Request
 
 .. seealso::
 
+	 * :ref:`appliance-object`
 	 * :ref:`appliancepartitiontabledisk-api-resources`
 	 * :ref:`appliancepartitiontablediskpartition-api-resources`
 	 * :ref:`appliancepartitiontablelogicalvolume-api-resources`
-	 * :ref:`partitiontable-object`
-	 * :ref:`appliance-object`
 	 * :ref:`logicalgroup-object`
 	 * :ref:`partitionTableLogicalGroup-create`
-	 * :ref:`partitionTableLogicalGroup-getAll`
 	 * :ref:`partitionTableLogicalGroup-delete`
 	 * :ref:`partitionTableLogicalGroup-get`
+	 * :ref:`partitionTableLogicalGroup-getAll`
 	 * :ref:`partitionTableLogicalGroup-update`
+	 * :ref:`partitiontable-object`

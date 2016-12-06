@@ -14,7 +14,7 @@ osPkgUpdates_getAll
 	* Response Formats: ``application/xml`` ``application/json``
 	* Since: ``UForge 3.5``
 
-Retrieves all the updates related to package in an operating system
+Retrieves all the updates related to packages in an operating system.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -44,14 +44,13 @@ Example Request
 .. seealso::
 
 	 * :ref:`distribprofile-object`
-	 * :ref:`package-object`
-	 * :ref:`os-create`
-	 * :ref:`os-getAll`
-	 * :ref:`os-get`
-	 * :ref:`os-update`
 	 * :ref:`osAccess-update`
 	 * :ref:`osLicense-download`
 	 * :ref:`osLogo-download`
 	 * :ref:`osLogo-downloadFile`
 	 * :ref:`osPkg-get`
-	 * :ref:`osPkgUpdates-getAll`
+	 * :ref:`os-create`
+	 * :ref:`os-get`
+	 * :ref:`os-getAll`
+	 * :ref:`os-update`
+	 * :ref:`package-object`

@@ -47,15 +47,15 @@ Example Request
 .. seealso::
 
 	 * :ref:`appliance-object`
-	 * :ref:`user-object`
-	 * :ref:`appliance-create`
-	 * :ref:`appliance-clone`
-	 * :ref:`appliance-delete`
-	 * :ref:`appliance-get`
-	 * :ref:`appliance-update`
 	 * :ref:`applianceLogo-delete`
 	 * :ref:`applianceLogo-download`
 	 * :ref:`applianceLogo-downloadFile`
 	 * :ref:`applianceLogo-upload`
 	 * :ref:`applianceMySoftware-getAll`
 	 * :ref:`applianceProject-getAll`
+	 * :ref:`appliance-clone`
+	 * :ref:`appliance-create`
+	 * :ref:`appliance-delete`
+	 * :ref:`appliance-get`
+	 * :ref:`appliance-update`
+	 * :ref:`user-object`

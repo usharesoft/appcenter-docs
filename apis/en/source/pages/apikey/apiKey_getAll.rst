@@ -42,7 +42,7 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`user-object`
-	 * :ref:`apikeypairs-object`
-	 * :ref:`apiKey-delete`
 	 * :ref:`apiKey-create`
+	 * :ref:`apiKey-delete`
+	 * :ref:`apikeypairs-object`
+	 * :ref:`user-object`

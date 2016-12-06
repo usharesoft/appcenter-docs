@@ -60,17 +60,17 @@ Example of representation.xml content (the request body):
 .. seealso::
 
 	 * :ref:`package-object`
-	 * :ref:`project-create`
-	 * :ref:`project-getAll`
-	 * :ref:`project-get`
-	 * :ref:`project-delete`
-	 * :ref:`project-update`
 	 * :ref:`projectPkg-create`
-	 * :ref:`projectPkg-get`
-	 * :ref:`projectPkg-getAll`
 	 * :ref:`projectPkg-delete`
 	 * :ref:`projectPkg-deleteAll`
 	 * :ref:`projectPkg-download`
 	 * :ref:`projectPkg-downloadFile`
+	 * :ref:`projectPkg-get`
+	 * :ref:`projectPkg-getAll`
 	 * :ref:`projectPkg-update`
 	 * :ref:`projectPkg-upload`
+	 * :ref:`project-create`
+	 * :ref:`project-delete`
+	 * :ref:`project-get`
+	 * :ref:`project-getAll`
+	 * :ref:`project-update`

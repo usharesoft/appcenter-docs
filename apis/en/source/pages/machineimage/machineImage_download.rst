@@ -55,18 +55,18 @@ Example Request
 	 * :ref:`appliance-object`
 	 * :ref:`image-object`
 	 * :ref:`imagepkgs-object`
-	 * :ref:`machineImage-deleteAll`
+	 * :ref:`machineImageGeneration-cancel`
+	 * :ref:`machineImagePublishedStatus-getAll`
+	 * :ref:`machineImagePublished-deleteAll`
+	 * :ref:`machineImagePublished-download`
+	 * :ref:`machineImagePublished-getAll`
+	 * :ref:`machineImageStatus-get`
+	 * :ref:`machineImageStatus-getAll`
 	 * :ref:`machineImage-delete`
+	 * :ref:`machineImage-deleteAll`
 	 * :ref:`machineImage-downloadFile`
 	 * :ref:`machineImage-generate`
 	 * :ref:`machineImage-get`
 	 * :ref:`machineImage-getAll`
-	 * :ref:`machineImage-regenerate`
-	 * :ref:`machineImageGeneration-cancel`
-	 * :ref:`machineImageStatus-getAll`
-	 * :ref:`machineImageStatus-get`
 	 * :ref:`machineImage-publish`
-	 * :ref:`machineImagePublished-getAll`
-	 * :ref:`machineImagePublished-deleteAll`
-	 * :ref:`machineImagePublished-download`
-	 * :ref:`machineImagePublishedStatus-getAll`
+	 * :ref:`machineImage-regenerate`

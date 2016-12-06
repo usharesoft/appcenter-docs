@@ -14,7 +14,7 @@ applianceExportStatus_get
 	* Response Formats: ``application/xml`` ``application/json``
 	* Since: ``UForge 3.5``
 
-Retrieve the current status of exporting an appliance.
+Gets the status of the specified appliance export.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -44,9 +44,9 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`applianceexport-object`
 	 * :ref:`appliance-object`
-	 * :ref:`appliance-export`
 	 * :ref:`applianceExport-cancel`
 	 * :ref:`applianceExport-delete`
 	 * :ref:`applianceExport-download`
+	 * :ref:`appliance-export`
+	 * :ref:`applianceexport-object`

@@ -28,6 +28,35 @@ The UForge Portal has the following pages, accessible from the left-hand sidebar
 
 .. image:: /images/uforge-sidebar.png
 
+.. _uforge-supported-browsers:
+
+Supported Browsers for UI Access
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following browser versions are officially supported when using the user interface:
+
+	* Firefox v35 or later
+	* Chrome v29 or later
+	* Safari v9 or later
+	* Internet Explorer 11 or later
+	* Opera v15 or later
+
+.. note:: Javascript is required when using the UI. The following error will appear if you have disabled Javascript (check your browser configuration, plugins or security settings). 
+
+.. image:: /images/javascript-warning.png
+
+.. _uforge-ui-languages:
+
+Language Selection for the Graphical User Interface
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The UForge UI is accessible in different languages. You can select the language using the round flag options at the top right-hand of the UI, next to the sign-in button. 
+
+.. image:: /images/uforge-ui-language.png
+
+.. note:: The language choice is saved at the level of the browser and not of the user account. 
+
+
 .. _uforge-basic-concepts:
 
 Basic Concepts
@@ -97,21 +126,6 @@ Members of a workspace are either:
 * ``Collaborator``. The collaborator has the same basic rights as the Guest, but can also share templates.
 * ``Guest``. They can read and post to the activity stream, and import templates into their private appliance library.
 
-.. _uforge-supported-browsers:
 
-Supported Browsers for UI Access
---------------------------------
-
-The following browser versions are officially supported when using the user interface:
-
-	* Firefox v35 or later
-	* Chrome v29 or later
-	* Safari v9 or later
-	* Internet Explorer 11 or later
-	* Opera v15 or later
-
-.. note:: Javascript is required when using the UI. The following error will appear if you have disabled Javascript (check your browser configuration, plugins or security settings). 
-
-.. image:: /images/javascript-warning.png
 
 

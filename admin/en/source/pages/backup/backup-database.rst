@@ -35,30 +35,28 @@ LDAP (OpenDJ) has its own tool for doing backup, called ``backup``.  To ensure d
 
 	$ service tomcat stop
 	$ service mysql stop
-	$ rsync -a --delete-before /var/lib/mysql /tmp/dir_to_backup/mysql
-	$ /opt/OpenDJ/bin/backup -a -c -d /tmp/dir_to_backup/ldap
-	$ rsync -a --delete-before /tmp/dir_to_backup/* root@/tmp/dir_to_backup/
-	$ service mysql start
-	$ service tomcat start
-
-As the backup destination does not change, you are creating a replication of the entire database.  The rsync command only copies the incremental differences each time.  
-
-The danger here is that if during that time there is damaged data, when rsync is run then this corrupted data is copied and there is no possible way to recuperate the old data. To overcome this, we also create archive backups of the entire database.
-
-.. code-block:: shell
-
-	$ service tomcat stop
-	$ service mysql stop
-	$ f=`date +%y%m%d`
-	$ l=`echo "$f-ldap-backup.tgz"` #what to name ldap backups
-	$ f=`echo "$f-mysql-backup.tgz"` #what to name backups
+	$ f=$(date +%y%m%d)
+	$ l="$f-ldap-backup.tgz" #what to name ldap backups
+	$ f="$f-mysql-backup.tgz" #what to name backups
 	$ tar -czf /tmp/$f /var/lib/mysql/*
 	$ /opt/OpenDJ/bin/backup -a -c -d /tmp/ldap_backup
 	$ tar -czf /tmp/$l /tmp/ldap_backup
-	$ rsync -a /tmp/$f root@<BACKUP-DESTINATION>
-	$ rsync -a /tmp/$l root@<BACKUP-DESTINATION>
 	$ service mysql start
 	$ service tomcat start
+
+If using SAN mountpoint, add:
+
+.. code-block:: shell
+
+	$ rsync /tmp/$f /<SAN-MOUNTPOINT-BACKUP-DESTINATION>
+	$ rsync /tmp/$l /<SAN-MOUNTPOINT-BACKUP-DESTINATION>
+
+If using remote backup, add:
+
+.. code-block:: shell
+
+	$ rsync /tmp/$f root@<BACKUP-DESTINATION>
+	$ rsync /tmp/$l root@<BACKUP-DESTINATION>
 
 This only works if the database instance is stopped to ensure a consistent dump of the database. Otherwise you get a corrupt, inconsistent backup.
 
@@ -66,12 +64,11 @@ The issue with this method is if you have only one database instance, then you a
 
 .. note:: For LDAP, the service does not need to be stopped.
 
-We recommend you use a mounted disk, SAN or NAS to store your backup archives.
 
 .. _basic-restore:
 
 Basic Restore
-~~~~~~~~~~~~~
+-------------
 
 Restoring the database is a simple copy using rsync back to the database directory. Note the use of slashes (/ ) is important.  You should stop the web service to ensure we do not generate connection error messages in the logs.
 
@@ -80,14 +77,28 @@ Restoring the database is a simple copy using rsync back to the database directo
 	$ service tomcat stop
 	$ service OpenDJ stop
 	$ service mysql stop
-	$ rsync -a --delete-before root@<BACKUP-DESTINATION>/<ldap tarball> /tmp
+	$ cd /tmp
 	$ tar -xvf /tmp/<ldap tarball>
 	$ /opt/OpenDJ/bin/restore -d /tmp/<ldap dir>/userRoot
 	$ /opt/OpenDJ/bin/restore -d /tmp/<ldap dir>/tasks
 	$ /opt/OpenDJ/bin/restore -d /tmp/<ldap dir>/config
 	$ /opt/OpenDJ/bin/restore -d /tmp/<ldap dir>/schema
-	$ rsync -a --delete-before root@<BACKUP-DESTINATION>/mysql/ /var/lib/mysql 
+	$ tar -xvf /tmp/<mysql tarball>
+	$ rsync -a --delete-before /tmp/<mysql dir>/* /var/lib/mysql/
 	$ service OpenDJ start
 	$ service mysql start
-	$ service tomcat start
+
+To restore the SAN mountpoint:
+
+.. code-block:: shell
+
+	$ rsync /<SAN-MOUNTPOINT-BACKUP-DESTINATION>/<ldap tarball> /tmp
+	$ rsync /<SAN-MOUNTPOINT-BACKUP-DESTINATION>/<mysql tarball> /tmp
+
+To restore Remote backup:
+
+.. code-block:: shell
+
+	$ rsync root@<BACKUP-DESTINATION>/<ldap tarball> /tmp
+	$ rsync root@<BACKUP-DESTINATION>/<mysql tarball> /tmp
 

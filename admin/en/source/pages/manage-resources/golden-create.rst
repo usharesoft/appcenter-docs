@@ -56,7 +56,7 @@ To create a new Golden Image, you will need to:
 
 				$ mv -f newimage.raw image.raw
 
-	7. For Windows 2008R2 create a file as follows. Note that the admin user name may be different depending on the environment. Please replace ``Administrator`` in the script with the appropriate one.
+	7. For Windows 2008R2, you can optionally change the password of the admin user at the first boot by creating a file as follows. Note that the admin user name may be different depending on the environment. Please replace ``Administrator`` in the script with the appropriate one.
 
 		.. code-block:: shell
 
@@ -66,7 +66,7 @@ To create a new Golden Image, you will need to:
 			net user Administrator /logonpasswordchg:yes
 			---
 
-	8. For Windows 2012 and 2012R create a file as follows. Note that the admin user name may be different depending on the environment. Please replace ``Administrator`` in the script with the appropriate one.
+	8. For Windows 2012 and 2012R, you can optionally change the password of the admin user at the first boot by creating a file as follows. Note that the admin user name may be different depending on the environment. Please replace ``Administrator`` in the script with the appropriate one.
 
 		.. code-block:: shell
 

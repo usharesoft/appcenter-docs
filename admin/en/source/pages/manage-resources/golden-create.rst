@@ -158,7 +158,7 @@ The following is an example of an unattend file to be used when creating a golde
 		    </settings>
 		</unattend>
 
-	.. note:: <ProductKey> element in the unattend file may not be mandatory. Whether the element is necessary or not depends on the type of the installation medium you used for the system. For example, the Volume License media do not require any <ProductKey> element in the unattend file. Please refer to Microsoft's documents for details.
+	.. note:: ``<ProductKey>`` element in the unattend file may not be mandatory. Whether the element is necessary or not depends on the type of the installation medium you used for the system. For example, the Volume License media do not require any <ProductKey> element in the unattend file. Please refer to Microsoft's documents for details.
 
 Example of Unattend File for Windows 2012 and 2012R2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -217,4 +217,4 @@ The following is an example of an unattend file to be used when creating a golde
 		    </settings>
 		</unattend>
 	
-	.. note:: <ProductKey> element in the unattend file may not be mandatory. Whether the element is necessary or not depends on the type of the installation medium you used for the system. For example, the Volume License media do not require any <ProductKey> element in the unattend file. Please refer to Microsoft's documents for details.
+	.. note:: ``<ProductKey>`` element in the unattend file may not be mandatory. Whether the element is necessary or not depends on the type of the installation medium you used for the system. For example, the Volume License media do not require any <ProductKey> element in the unattend file. Please refer to Microsoft's documents for details.

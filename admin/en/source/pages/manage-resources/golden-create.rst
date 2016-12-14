@@ -66,7 +66,7 @@ To create a new Golden Image, you will need to:
 			net user Administrator /logonpasswordchg:yes
 			---
 
-	8. For Windows 2012 and 2012R, you can optionally change the password of the admin user at the first boot by creating a file as follows. Note that the admin user name may be different depending on the environment. Please replace ``Administrator`` in the script with the appropriate one.
+	8. For Windows 2012 and 2012R2, you can optionally change the password of the admin user at the first boot by creating a file as follows. Note that the admin user name may be different depending on the environment. Please replace ``Administrator`` in the script with the appropriate one.
 
 		.. code-block:: shell
 
@@ -92,7 +92,7 @@ To create a new Golden Image, you will need to:
 				)
 				---
 
-	9. Open a command prompt window as an administrator and go to the ``%WINDIR%\\system32\sysprep`` directory. Then run:
+	9. Open a command prompt window as an administrator and go to the ``%WINDIR%\system32\sysprep`` directory. Then run:
 
 		.. code-block:: shell
 
@@ -158,6 +158,8 @@ The following is an example of an unattend file to be used when creating a golde
 		    </settings>
 		</unattend>
 
+	.. note:: <ProductKey> element in the unattend file may not be mandatory. Whether the element is necessary or not depends on the type of the installation medium you used for the system. For example, the Volume License media do not require any <ProductKey> element in the unattend file. Please refer to Microsoft's documents for details.
+
 Example of Unattend File for Windows 2012 and 2012R2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -214,3 +216,5 @@ The following is an example of an unattend file to be used when creating a golde
 		        </component>
 		    </settings>
 		</unattend>
+	
+	.. note:: <ProductKey> element in the unattend file may not be mandatory. Whether the element is necessary or not depends on the type of the installation medium you used for the system. For example, the Volume License media do not require any <ProductKey> element in the unattend file. Please refer to Microsoft's documents for details.

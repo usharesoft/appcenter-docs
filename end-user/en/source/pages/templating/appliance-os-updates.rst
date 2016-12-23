@@ -33,7 +33,7 @@ To update the OS packages:
 
 	6. If you want to apply the changes listed, then click ``update``.
 
-.. note:: The triangle indicates a Milestone. For Centos, this is the versions (6.1, 6.2 etc). Milestones are customized by the UForge administrator.
+.. note:: The triangle indicates a Milestone. For CentOS, this is the versions (6.1, 6.2 etc). Milestones are customized by the UForge administrator.
 
 .. _windows-update:
 

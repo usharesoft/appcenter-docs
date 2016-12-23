@@ -11,7 +11,7 @@ You can define the following as part of the install profile:
 
 * ``Root User``: The root user password by default is prompted during the first boot of the machine image i.e. ``ask during installation``. However, you can pre-set a root  password. You can enter an SSH key to allow users to login as root. If you select ``Disable root password login via SSH``, root will still be able to login from the console.
 * ``Users and Groups`` (optional): you can add operating system users and groups. See :ref:`appliance-install-profile-users-groups` for more information
-* ``Network``: You can set the internet settings. The default is ``set automatically``.
+* ``Network``: You can set the internet settings. The default is ``set automatically``. See :ref:`appliance-multinic`
 * ``Security``: You can activate or deactivate the firewall present in the filesystem when launching the appliance (regardless of whether the firewall is iptables or other). Firewall is set to ``Off`` by default. You can also set the SELinux configuration here.
 * ``Partitioning``: You can modify the disk and swap size for the automatic set up, select ``ask during install``, or set up ``Advanced Partitioning`` (for several disks). For more information see :ref:`appliance-install-profile-partitioning`.
 * ``Kernel``. You can add kernel parameters by clicking plus, entering data and click ``save``.

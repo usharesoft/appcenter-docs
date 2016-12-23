@@ -6,7 +6,7 @@
 Configuring Advanced Partitioning
 ---------------------------------
 
-You can configure advanced partitioning as part of your appliance template in the Install Profile. The elements you can configure will depend if your template is Linux or Windows based. 
+You can configure advanced partitioning as part of your appliance template in the ``Install Profile``. The elements you can configure will depend if your template is Linux or Windows based. 
 
 Advanced Partitioning for Linux
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

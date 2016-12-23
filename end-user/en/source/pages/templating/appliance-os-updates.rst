@@ -5,7 +5,7 @@
 Tracking OS Package Updates
 ---------------------------
 
-All the OS packages added to the OS Profile section of the appliance templates are tracked for any updates by UForge AppCenter. Based on a timestamp stored in the appliance template, UForge AppCenter can detect any OS package updates that are available.  Updates are displayed in the user interface for each appliance template.
+All the OS packages added to the ``OS Profile`` section of the appliance templates are tracked for any updates by UForge AppCenter. Based on a timestamp stored in the appliance template, UForge AppCenter can detect any OS package updates that are available.  Updates are displayed in the user interface for each appliance template.
 
 If you are in grid view:
 

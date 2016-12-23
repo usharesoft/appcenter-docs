@@ -8,7 +8,7 @@ Blackbox Migration Process
 The goal of black box migration is to reproduce a near identical copy of the currently running workload.  However, there will always be small differences between the two workloads after migration is complete.  When scanning a system the following information is detected:
 
 	* all the files and packages on the system (including configuration information)
-	* network settings including all NICs 
+	* network settings including all NICs. Note that if the first card is static, it will be changed to DHCP. 
 	* root and user password (encrypted)
 	* timezone
 	* keyboard settings

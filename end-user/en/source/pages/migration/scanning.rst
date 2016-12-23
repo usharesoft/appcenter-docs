@@ -26,6 +26,9 @@ Recommendations pre-scan:
 Scanning a Linux Machine
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. warning:: When scanning a Linux machine, you have to check whether the licenses of OS and software which the source machine contains allow you to use them on the destination server which you are migrating to. For more detail, refer to :ref:`notes-on-licensing`.
+
+
 To carry out a scan, go to the ``Migration`` tab:
 
 	1. Click on ``scan`` in the top right.
@@ -60,41 +63,41 @@ To carry out a scan, go to the ``Migration`` tab:
 	11. To view the details of a scan, click on the scan and refer to :ref:`migration-view-scan`.
 
 
-.. warning:: When scanning a Linux machine, you have to check whether the licenses of OS and software which the source machine contains allow you to use them on the destination server which you are migrating to. For more detail, refer to :ref:`notes-on-licensing`.
-
-
 .. _migration-scan-windows:
 
 Scanning a Microsoft Windows Machine
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. warning:: When scanning a Microsoft Windows machine, you must acquire Windows licenses in order to handle Windows OS in UForge and confirm usage conditions of cloud provider and virtualization software which you scan and migrate to.
 
 To carry out a scan, go to the ``Migration`` tab:
 
 	1. Click on ``scan`` in the top right.
 	2. Enter a name for the scan of the target system you want to migrate.
 	3. Select ``Windows`` from the drop-down menu and click next.
-	4. Select the method you want to use: if you want to scan using an exe that will launch a graphical interface, or by downloading a zip file and launching it through command-line.
+	4. Select the method you want to use:
 
-		- If you are using exe the pop up will indicate the partition being scanned and time left.
-		- If you choose to download the zip then you will have to launch the command as indicated.
+		- If you choose the graphical interface, a pop up will indicate the partition being scanned and time left.
+		- If you choose to download the command line, you will download a zip file which you can then launch as indicated.
 
-	The following image illustrates a windows can with all of the possible options checked. They are described in the following steps.
+		.. image:: /images/migration-windows-scan-options.png
+
+	5. You can then launch the scan. The following image illustrates a windows scan with all of the possible options checked. They are described in the following steps.
 
 		.. image:: /images/migration-scan-windows2.png
 
-	5. Optionally you can use API keys. In this case, check ``Use API keys authentication`` and enter the public and secret key information.
+	6. Optionally you can use API keys. In this case, check ``Use API keys authentication`` and enter the public and secret key information.
 
-	6. If you want to set up a proxy, check ``Proxy authentication required`` and enter the proxy information.
+	7. If you want to set up a proxy, check ``Proxy authentication required`` and enter the proxy information.
 
-	7. Optionally you can select ``Use local storage``. This means that the scan will be not be done in streaming but in 2 phases. First the data will be stored on a temporary storage drive during the scan process. This temporary storage can be a local directory or a virtual space on the network. It must be at least half the size of the machine you want to scan.
+	8. Optionally you can select ``Use local storage``. This means that the scan will be not be done in streaming but in 2 phases. First the data will be stored on a temporary storage drive during the scan process. This temporary storage can be a local directory or a virtual space on the network. It must be at least half the size of the machine you want to scan.
 
 	.. note:: If you are using local storage you will have to launch a script at the end to upload the archive to UForge AppCenter later.
 
-	8. If you want to exclude certain directories or files from the scan then click ``add`` and enter the directory path or full pathname of the file.
+	9. If you want to exclude certain directories or files from the scan then click ``add`` and enter the directory path or full pathname of the file.
 
-	9. Click ``scan`` to launch the scan. A report is sent to UForge AppCenter which can be used for migration. To view the progress, go back to the ``Migration`` tab and click ``ok``.
+	10. Click ``scan`` to launch the scan. A report is sent to UForge AppCenter which can be used for migration. To view the progress, go back to the ``Migration`` tab and click ``ok``.
 
-	10. To view the details of a scan, click on the scan and refer to :ref:`migration-view-scan`.
+	11. To view the details of a scan, click on the scan and refer to :ref:`migration-view-scan`.
 	
-.. warning:: When scanning a Microsoft Windows machine, you must acquire Windows licenses in order to handle Windows OS in UForge and confirm usage conditions of cloud provider and virtualization software which you scan and migrate to.
 

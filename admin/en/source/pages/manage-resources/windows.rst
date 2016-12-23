@@ -17,7 +17,7 @@ You will need Golden Images to create Windows appliance templates. If you want t
 
 .. note:: A good knowledge of Microsoft Windows is required to create your own Golden Images.
 
-Generating all the profiles available (in one language) takes roughly 4 to 7 hours depending on the machine/network performance. You can regenerate Golden Images as often as you like, based on your individual needs. However, it is recommended that you regenerate only for specific updates—these updates will be in the Golden Image and you will not need to run package updates. When you generate a Golden Image the updates are the ones at the moment at which the Golden Image is generated. 
+Generating all the profiles available (in one language) takes roughly 4 to 7 hours depending on the machine/network performance. You can regenerate Golden Images as often as you like, based on your individual needs. However, it is recommended that you regenerate Golden Image only for getting specific updates. The Golden Image includes all updates at the moment when generated and therefore you will not need to run package updates later. 
 
 Within UForge, the Golden Image used when you create appliances will be the last Golden Image created. In future releases, the different Golden Images will appear as Milestones. 
 

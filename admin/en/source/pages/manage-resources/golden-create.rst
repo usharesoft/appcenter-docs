@@ -12,43 +12,15 @@ To create a new Golden Image, you will need to:
 		* System partition. This one is hidden, created automatically during installation of Windows Server.
 		* Drive ``C:``
 
-	2. The following Windows features must be installed as Administrator:
-
-		* ServerCore-WOW64
-		* NetFx2-ServerCore
-		* NetFx2-ServerCore-WOW64
-		* NetFx3ServerFeatures
-		* NetFx3
-
-		To install these features, you can either go to the ``Control Panel`` under ``Programs and Features`` or open a command prompt window as Administrator and run the following Windows commands:
-
-		.. code-block:: shell
-
-			$ start /w dism /online /enable-feature /all /featurename:ServerCore-WOW64 
-			$ start /w dism /online /enable-feature /all /featurename:NetFx2-ServerCore 
-			$ start /w dism /online /enable-feature /all /featurename:NetFx2-ServerCore-WOW64 
-			$ start /w dism /online /enable-feature /all /featurename:NetFx3ServerFeatures 
-			$ start /w dism /online /enable-feature /all /featurename:NetFx3
-			$ start /w dism /online /enable-feature /all /featurename:NetFx3-ServerCore
-			$ start /w dism /online /enable-feature /all /featurename:NetFx3-ServerCore-WOW64
-
-		.. note:: If any of the above commands fail with an error indicating that the feature is non-existant, ignore the error and continue.
-
-	3. Install gtk-sharp-2.12.10.win32.msi. 
-
-		* You can download it from ``http://download.mono-project.com/gtk-sharp/gtk-sharp-2.12.10.win32.msi.old``
-		* Rename ``gtk-sharp-2.12.10.win32.msi.old to gtk-sharp-2.12.10.win32.msi``
-		* Run the following command: ``gtk-sharp-2.12.10.win32.msi``
-
-	4. We recommend that you run Windows Update to ensure that the latest updates are pre-installed in the Golden Image.
+	2. We recommend that you run Windows Update to ensure that the latest updates are pre-installed in the Golden Image.
 	
-	5. Optionally, you can also add the following customizations:
+	3. Optionally, you can also add the following customizations:
 
 		* Modify the registry
 		* Extra software installation
 		* User creation
 
-	6. Optionally, you can free several gigabytes of space by cleaning up windows updates installers. 
+	4. Optionally, you can free several gigabytes of space by cleaning up windows updates installers. 
 
 		.. warning:: After this optimization you may not be able to uninstall some of the Windows updates.
 
@@ -56,7 +28,7 @@ To create a new Golden Image, you will need to:
 
 			$ dism /online /Cleanup-Image /StartComponentCleanup /ResetBase
 
-	7. If you have Service Packs installed, you can free up some space by executing the following command, which will merge the Service Pack installer to the operating system. 
+	5. If you have Service Packs installed, you can free up some space by executing the following command, which will merge the Service Pack installer to the operating system. 
 
 		.. warning:: After this optimization, you will not be able to uninstall the Service Pack.
 
@@ -64,7 +36,7 @@ To create a new Golden Image, you will need to:
 
 			$ dism /online /Cleanup-Image /SPSuperseded
 
-	8. You can optionally perform optimizations in size for the compressed raw virtual disk image. To do so, you must:
+	6. You can optionally perform optimizations in size for the compressed raw virtual disk image. To do so, you must:
 
 		a. Before the sysprep step, use the Microsoft Sysinternals tool called sdelete.exe (or sdelete64.exe) with option ``-z`` in a command line for all partitions, example:
 
@@ -84,7 +56,7 @@ To create a new Golden Image, you will need to:
 
 				$ mv -f newimage.raw image.raw
 
-	9. For Windows 2008R2 create a file as follows. Note that the admin user name may be different depending on the environment. Please replace ``Administrator`` in the script with the appropriate one.
+	7. For Windows 2008R2, you can optionally change the password of the admin user at the first boot by creating a file as follows. Note that the admin user name may be different depending on the environment. Please replace ``Administrator`` in the script with the appropriate one.
 
 		.. code-block:: shell
 
@@ -94,7 +66,7 @@ To create a new Golden Image, you will need to:
 			net user Administrator /logonpasswordchg:yes
 			---
 
-	10. For Windows 2012 and 2012R create a file as follows. Note that the admin user name may be different depending on the environment. Please replace ``Administrator`` in the script with the appropriate one.
+	8. For Windows 2012 and 2012R2, you can optionally change the password of the admin user at the first boot by creating a file as follows. Note that the admin user name may be different depending on the environment. Please replace ``Administrator`` in the script with the appropriate one.
 
 		.. code-block:: shell
 
@@ -120,7 +92,7 @@ To create a new Golden Image, you will need to:
 				)
 				---
 
-	11. Open a command prompt window as an administrator and go to the ``%WINDIR%\\system32\sysprep`` directory. Then run:
+	9. Open a command prompt window as an administrator and go to the ``%WINDIR%\system32\sysprep`` directory. Then run:
 
 		.. code-block:: shell
 
@@ -128,7 +100,7 @@ To create a new Golden Image, you will need to:
 	
 		.. note:: This will shutdown the machine. Do not boot the machine again!
 
-	12. You can now compress the golden images by running: 
+	10. You can now compress the golden images by running: 
 
 		.. code-block:: shell
 
@@ -161,11 +133,11 @@ The following is an example of an unattend file to be used when creating a golde
 		            </UserAccounts>
 		        </component>
 		        <component name="Microsoft-Windows-International-Core" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-		            <InputLocale>0411:00000411</InputLocale>
-		            <SystemLocale>ja-JP</SystemLocale>
-		            <UILanguage>ja-JP</UILanguage>
-		            <UILanguageFallback>ja-JP</UILanguageFallback>
-		            <UserLocale>ja-JP</UserLocale>
+		            <InputLocale>0409:00000409</InputLocale>
+		            <SystemLocale>en-US</SystemLocale>
+		            <UILanguage>en-US</UILanguage>
+		            <UILanguageFallback>en-US</UILanguageFallback>
+		            <UserLocale>en-US</UserLocale>
 		        </component>
 		    </settings>
 		    <settings pass="specialize">
@@ -185,6 +157,18 @@ The following is an example of an unattend file to be used when creating a golde
 		        </component>
 		    </settings>
 		</unattend>
+
+	.. note:: ``<ProductKey>`` element in the unattend file may not be mandatory. Whether the element is necessary or not depends on the type of the installation medium you used for the system. For example, the Volume License media do not require any <ProductKey> element in the unattend file. Please refer to Microsoft's documents for details.
+	
+	.. note:: Elements for the locale and the language in the unattend file should have appropriate values in accordance with the language of the target OS. The following example shows the elements and their values for Japanese Windows.
+	
+		.. code-block:: shell
+			
+			<InputLocale>0411:00000411</InputLocale>
+			<SystemLocale>ja-JP</SystemLocale>
+			<UILanguage>ja-JP</UILanguage>
+			<UILanguageFallback>ja-JP</UILanguageFallback>
+			<UserLocale>ja-JP</UserLocale>
 
 Example of Unattend File for Windows 2012 and 2012R2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -218,11 +202,11 @@ The following is an example of an unattend file to be used when creating a golde
 		            </FirstLogonCommands>
 		        </component>
 		        <component name="Microsoft-Windows-International-Core" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-		            <InputLocale>0411:00000411</InputLocale>
-		            <SystemLocale>ja-JP</SystemLocale>
-		            <UILanguage>ja-JP</UILanguage>
-		            <UILanguageFallback>ja-JP</UILanguageFallback>
-		            <UserLocale>ja-JP</UserLocale>
+		            <InputLocale>0409:00000409</InputLocale>
+		            <SystemLocale>en-US</SystemLocale>
+		            <UILanguage>en-US</UILanguage>
+		            <UILanguageFallback>en-US</UILanguageFallback>
+		            <UserLocale>en-US</UserLocale>
 		        </component>
 		    </settings>
 		    <settings pass="specialize">
@@ -242,3 +226,15 @@ The following is an example of an unattend file to be used when creating a golde
 		        </component>
 		    </settings>
 		</unattend>
+	
+	.. note:: ``<ProductKey>`` element in the unattend file may not be mandatory. Whether the element is necessary or not depends on the type of the installation medium you used for the system. For example, the Volume License media do not require any <ProductKey> element in the unattend file. Please refer to Microsoft's documents for details.
+
+	.. note:: Elements for the locale and the language in the unattend file should have appropriate values in accordance with the language of the target OS. The following example shows the elements and their values for Japanese Windows.
+	
+		.. code-block:: shell
+			
+			<InputLocale>0411:00000411</InputLocale>
+			<SystemLocale>ja-JP</SystemLocale>
+			<UILanguage>ja-JP</UILanguage>
+			<UILanguageFallback>ja-JP</UILanguageFallback>
+			<UserLocale>ja-JP</UserLocale>

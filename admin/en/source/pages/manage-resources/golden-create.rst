@@ -133,11 +133,11 @@ The following is an example of an unattend file to be used when creating a golde
 		            </UserAccounts>
 		        </component>
 		        <component name="Microsoft-Windows-International-Core" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-		            <InputLocale>0411:00000411</InputLocale>
-		            <SystemLocale>ja-JP</SystemLocale>
-		            <UILanguage>ja-JP</UILanguage>
-		            <UILanguageFallback>ja-JP</UILanguageFallback>
-		            <UserLocale>ja-JP</UserLocale>
+		            <InputLocale>0409:00000409</InputLocale>
+		            <SystemLocale>en-US</SystemLocale>
+		            <UILanguage>en-US</UILanguage>
+		            <UILanguageFallback>en-US</UILanguageFallback>
+		            <UserLocale>en-US</UserLocale>
 		        </component>
 		    </settings>
 		    <settings pass="specialize">
@@ -159,6 +159,16 @@ The following is an example of an unattend file to be used when creating a golde
 		</unattend>
 
 	.. note:: ``<ProductKey>`` element in the unattend file may not be mandatory. Whether the element is necessary or not depends on the type of the installation medium you used for the system. For example, the Volume License media do not require any <ProductKey> element in the unattend file. Please refer to Microsoft's documents for details.
+	
+	.. note:: Elements for the locale and the language in the unattend file should have appropriate values in accordance with the language of the target OS. The following example shows the elements and their values for Japanese Windows.
+	
+		.. code-block:: shell
+			
+			<InputLocale>0411:00000411</InputLocale>
+			<SystemLocale>ja-JP</SystemLocale>
+			<UILanguage>ja-JP</UILanguage>
+			<UILanguageFallback>ja-JP</UILanguageFallback>
+			<UserLocale>ja-JP</UserLocale>
 
 Example of Unattend File for Windows 2012 and 2012R2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -192,11 +202,11 @@ The following is an example of an unattend file to be used when creating a golde
 		            </FirstLogonCommands>
 		        </component>
 		        <component name="Microsoft-Windows-International-Core" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-		            <InputLocale>0411:00000411</InputLocale>
-		            <SystemLocale>ja-JP</SystemLocale>
-		            <UILanguage>ja-JP</UILanguage>
-		            <UILanguageFallback>ja-JP</UILanguageFallback>
-		            <UserLocale>ja-JP</UserLocale>
+		            <InputLocale>0409:00000409</InputLocale>
+		            <SystemLocale>en-US</SystemLocale>
+		            <UILanguage>en-US</UILanguage>
+		            <UILanguageFallback>en-US</UILanguageFallback>
+		            <UserLocale>en-US</UserLocale>
 		        </component>
 		    </settings>
 		    <settings pass="specialize">
@@ -218,3 +228,13 @@ The following is an example of an unattend file to be used when creating a golde
 		</unattend>
 	
 	.. note:: ``<ProductKey>`` element in the unattend file may not be mandatory. Whether the element is necessary or not depends on the type of the installation medium you used for the system. For example, the Volume License media do not require any <ProductKey> element in the unattend file. Please refer to Microsoft's documents for details.
+
+	.. note:: Elements for the locale and the language in the unattend file should have appropriate values in accordance with the language of the target OS. The following example shows the elements and their values for Japanese Windows.
+	
+		.. code-block:: shell
+			
+			<InputLocale>0411:00000411</InputLocale>
+			<SystemLocale>ja-JP</SystemLocale>
+			<UILanguage>ja-JP</UILanguage>
+			<UILanguageFallback>ja-JP</UILanguageFallback>
+			<UserLocale>ja-JP</UserLocale>

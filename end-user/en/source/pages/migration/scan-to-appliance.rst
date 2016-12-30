@@ -53,8 +53,7 @@ If you want to modify configuration information of a scanned system, there are s
 
 	1. Using pre-install and post-install scripts
 	2. Using boot scripts
-	3. Using UForge Studio
-	4. Integrate with a Configuration Management platform
+	3. Integrate with a Configuration Management platform
 
 In each case, you must import the scan as an appliance template (white box migration).
 
@@ -62,9 +61,7 @@ In each case, you must import the scan as an appliance template (white box migra
 
 **Solution #2**: Using boot scripts.  UForge AppCenter allows you to add boot scripts in the appliance template.  These boot scripts are executed the first time the migrated instance is provisioned.  Boot scripts can also be registered to be run every time the instance is rebooted.  
 
-**Solution #3**: Using UForge Studio.  UForge Studio provides a more comprehensive framework for executing post-configuration scenarios.  UForge Studio is a stand alone product that includes a distribution and synchronization mechanism that can also be used on a single instance or even for configuring multi-node deployments.  When using UForge Studio, a native package is created that includes the UForge Studio runtime and your configuration scenario.  This package is added in the Configuration section of an appliance template.
-
-**Solution #4**: Integrate with a Configuration Management platform:  There are many 3rd party platforms including Puppet, Chef, Ansible and Saltstack that can be used to configure middleware and application layers.  Once a system has been migrated or a machine image generated from an appliance template, such configuration management platforms can be used for package update and configuration.  You may need to include a bootstrapping mechanism to register the instance to the configuration management platform of your choice.  This bootstrapping can be done using boot scripts (see solution #2).
+**Solution #3**: Integrate with a Configuration Management platform:  There are many 3rd party platforms including Puppet, Chef, Ansible and Saltstack that can be used to configure middleware and application layers.  Once a system has been migrated or a machine image generated from an appliance template, such configuration management platforms can be used for package update and configuration.  You may need to include a bootstrapping mechanism to register the instance to the configuration management platform of your choice.  This bootstrapping can be done using boot scripts (see solution #2).
 
 .. _migration-scan-appliance-os-profile:
 

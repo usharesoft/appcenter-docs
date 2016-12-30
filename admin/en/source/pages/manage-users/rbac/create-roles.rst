@@ -13,15 +13,15 @@ To create a new role in the default organization::
 
 By default, this role will be empty (containing no entitlements).  You can then add entitlements to a role by using the command::
 
-	$ uforge role entitlement add --name newrole --entitlements appliance_create studio_access -u $ADMIN -p $PASS
+	$ uforge role entitlement add --name newrole --entitlements entitlement-name -u $ADMIN -p $PASS
 
 You can also remove an entitlement from a role by using the command::
 
-	$ uforge role entitlement remove --name newrole --entitlements studio_access -u $ADMIN -p $PASS
+	$ uforge role entitlement remove --name newrole --entitlements entitlement-name -u $ADMIN -p $PASS
 
 You can add entitlements as part of the creation by using the ``--entitlements`` option in the create command::
 
-	$ uforge role create --name newrole --description “description of new role” --entitlements appliance_create studio_access -u $ADMIN -p $PASS
+	$ uforge role create --name newrole --description “description of new role” --entitlements entitlement-name studio_access -u $ADMIN -p $PASS
 
 .. note:: You cannot modify the “root” role.
 

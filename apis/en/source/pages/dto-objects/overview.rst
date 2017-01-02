@@ -21,6 +21,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`artifactcredaccounts-object`
 	* :ref:`bootscript-object`
 	* :ref:`bootscripts-object`
+	* :ref:`bundlerestriction-object`
+	* :ref:`bundlerestrictions-object`
 	* :ref:`categories-object`
 	* :ref:`category-object`
 	* :ref:`certificate-object`
@@ -205,6 +207,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     ArtifactCredAccounts
     BootScript
     BootScripts
+    BundleRestriction
+    BundleRestrictions
     Categories
     Category
     Certificate

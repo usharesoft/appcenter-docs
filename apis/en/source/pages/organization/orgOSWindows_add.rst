@@ -25,8 +25,8 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``oid`` (required): the id of the :ref:`org-object`
-* ``did`` (required): the id of the :ref:`distribprofile-object`
+* ``oid`` (optional): 
+* ``did`` (optional): 
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

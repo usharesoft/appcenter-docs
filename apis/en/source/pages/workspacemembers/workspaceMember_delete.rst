@@ -26,7 +26,7 @@ URI Parameters
 ~~~~~~~~~~~~~~
 
 * ``wid`` (required): the id of the :ref:`workspace-object`
-* ``mid`` (required): the id of the :ref:`membership-object` to remove
+* ``mid`` (required): the id of the :ref:`membership-object`
 * ``oid`` (required): the id of the :ref:`org-object`
 
 HTTP Request Body Parameters

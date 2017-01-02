@@ -31,7 +31,7 @@ URI Parameters
 
 * ``uid`` (required): the id of the :ref:`user-object`
 * ``msid`` (required): the id of the :ref:`mySoftware-object`
-* ``said`` (required): the id of the :ref:`softwareartifact-object` to update
+* ``said`` (required): the id of the :ref:`softwareartifact-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -86,6 +86,13 @@ Example of representation.xml content (the request body):
 	 * :ref:`mySoftwareLogo-downloadFile`
 	 * :ref:`mySoftwareLogo-upload`
 	 * :ref:`mySoftwareOs-getAll`
+	 * :ref:`mySoftwareRestrictionOs-getAll`
+	 * :ref:`mySoftwareRestriction-add`
+	 * :ref:`mySoftwareRestriction-delete`
+	 * :ref:`mySoftwareRestriction-deleteAll`
+	 * :ref:`mySoftwareRestriction-get`
+	 * :ref:`mySoftwareRestriction-getAll`
+	 * :ref:`mySoftwareRestriction-update`
 	 * :ref:`mySoftwareUsage-getAll`
 	 * :ref:`mySoftware-clone`
 	 * :ref:`mySoftware-create`

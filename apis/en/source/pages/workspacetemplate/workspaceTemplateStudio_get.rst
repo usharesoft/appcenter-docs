@@ -28,7 +28,7 @@ URI Parameters
 * ``wid`` (required): the id of the :ref:`workspace-object`
 * ``oid`` (required): the id of the :ref:`org-object`
 * ``tid`` (required): the id of the :ref:`gallerytemplate-object`
-* ``oaspkgid`` (required): the id of the :ref:`oaspkg-object`
+* ``oaspkgid`` (required): the id of the UForge Studio package
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

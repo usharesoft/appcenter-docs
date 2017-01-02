@@ -84,6 +84,13 @@ Example of representation.xml content (the request body):
 	 * :ref:`projectLogo-downloadFile`
 	 * :ref:`projectLogo-upload`
 	 * :ref:`projectOs-getAll`
+	 * :ref:`projectRestrictionOs-getAll`
+	 * :ref:`projectRestriction-add`
+	 * :ref:`projectRestriction-delete`
+	 * :ref:`projectRestriction-deleteAll`
+	 * :ref:`projectRestriction-get`
+	 * :ref:`projectRestriction-getAll`
+	 * :ref:`projectRestriction-update`
 	 * :ref:`project-delete`
 	 * :ref:`project-get`
 	 * :ref:`project-getAll`

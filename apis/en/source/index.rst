@@ -14,6 +14,7 @@ This documentation provides a description of UForge AppCenter RESTful interface.
     pages/applianceconfiguration/overview
     pages/applianceimportandexport/overview
     pages/applianceinstallprofile/overview
+    pages/applianceinstallprofilenic/overview
     pages/applianceinstallusersandgroups/overview
     pages/applianceosprofile/overview
     pages/appliancepartitiontabledisk/overview

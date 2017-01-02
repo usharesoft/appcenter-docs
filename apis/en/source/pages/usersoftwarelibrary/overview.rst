@@ -30,6 +30,13 @@ User Software Library API Resources
 	* :ref:`mySoftwareLogo-downloadFile`: Downloads the logo file for the specified mysoftware
 	* :ref:`mySoftwareLogo-upload`: Uploads a logo file for the specified software component
 	* :ref:`mySoftwareOs-getAll`: Retrieves all the distributions where a software component can be used
+	* :ref:`mySoftwareRestrictionOs-getAll`: Retrieves all the distributions of the bundle restirction
+	* :ref:`mySoftwareRestriction-add`: Adds a new Bundle Restriction to a software component
+	* :ref:`mySoftwareRestriction-delete`: Removes a bundle restriction for a software component
+	* :ref:`mySoftwareRestriction-deleteAll`: Removes all the bundle restrictions for a software component
+	* :ref:`mySoftwareRestriction-get`: Retrieves a bundle restriction for a software component
+	* :ref:`mySoftwareRestriction-getAll`: Retrieves all bundle restrictions for a software component
+	* :ref:`mySoftwareRestriction-update`: Updates the bundle restriction for a software component
 	* :ref:`mySoftwareUsage-getAll`: Retrieves all the appliance templates where a software component is includes
 	* :ref:`mySoftware-clone`: Clones a new "My Software" object
 	* :ref:`mySoftware-create`: Creates a new software component in a user's ``Software library``
@@ -72,6 +79,13 @@ User Software Library API Resources
     mySoftwareLogo_downloadFile
     mySoftwareLogo_upload
     mySoftwareOs_getAll
+    mySoftwareRestrictionOs_getAll
+    mySoftwareRestriction_add
+    mySoftwareRestriction_delete
+    mySoftwareRestriction_deleteAll
+    mySoftwareRestriction_get
+    mySoftwareRestriction_getAll
+    mySoftwareRestriction_update
     mySoftwareUsage_getAll
     mySoftware_clone
     mySoftware_create

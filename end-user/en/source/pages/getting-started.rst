@@ -17,7 +17,7 @@ To sign in, go to the UForge Portal sign in page:
 The UForge Portal has the following pages, accessible from the left-hand sidebar:
 
 	* ``Dashboard``: It shows statistics on your UForge usage.
-	* ``VM Builder``: This is where your appliances are created and listed. You also go to this page to add custom software, update packages in appliances, and create images, among other things.
+	* ``Apps``: This is where your appliances are created and listed. You also go to this page to add custom software, update packages in appliances, and create images, among other things.
 	* ``Collaboration``: This is a private area where you can share appliances with other users who are part of your workspace. These users must be invited and join your workspace. They can be part of your organization or part or another organization.
 	* ``Migration``: This is where you can launch a scan of a live system, view the results, or compare scans.
 	* ``Credentials``: This is where you manage your cloud account information, SSH keys and API keys.

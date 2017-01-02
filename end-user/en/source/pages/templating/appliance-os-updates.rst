@@ -21,7 +21,7 @@ You can then easily update the packages using the UForge GUI. Using this tool, y
 
 To update the OS packages:
 
-	1. Select your appliance from your appliance library under the ``VM Builder`` tab.
+	1. Select your appliance from your appliance library under the ``Apps`` tab.
 	2. Go to the ``Updates`` page.
 	3. You can see from the graphic when updates were made and how many are available.
 

@@ -59,7 +59,7 @@ The following is a list of supported file formats:
 
 To add custom software components to an appliance:
 
-	1. From the ``VM Builder`` tab, click on ``Software Library`` in the top left hand side of the UI.  This opens your private Software Library.  
+	1. From the ``Apps`` tab, click on ``Software Library`` in the top left hand side of the UI.  This opens your private Software Library.  
 	2. Click on the ``add software`` in the top right hand side.
 	3. You are now prompted for the name, version and maintainer of the software component you would like to add. You can also set a tag and category. Click ``create`` to complete.
 	4. The software ``Overview`` page will now open. You can modify the name and version, and add a description.

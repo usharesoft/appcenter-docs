@@ -12,7 +12,7 @@ Creating a Linux-based Appliance
 
 To create a new appliance in your private workspace: 
 
-	1. Select ``VM Builder`` icon on the left.
+	1. Select ``Apps`` icon on the left.
 	2. On the ``Appliance Library`` page, click on ``create`` in the top right. 
 	3. Enter the ``Name`` and ``Version`` of the appliance.  
 
@@ -21,7 +21,7 @@ To create a new appliance in your private workspace:
 	4. From the drop-down menus, select the operating system (distribution, release and architecture).
 	5. Click the ``create`` button. This creates a skeleton of an appliance template in the platform which you can now customize with operating system packages, middleware and application software.
 
-	.. note:: If SELinux is installed (ie the file /etc/selinux/config exists), the filesystem will be relabeled on the first boot of a UForge generated VM in order to add the SELinux context in the all system files ' extended attribute. At boot time, init.rc checks for the existence of /.autorelabel. If this file exists, SELinux performs a complete file system relabel (using the /sbin/fixfiles -f -F relabel command), and then deletes /.autorelabel.)
+	.. note:: If SELinux is installed (ie the file /etc/selinux/config exists), the filesystem will be relabeled on the first boot of a UForge generated machine image in order to add the SELinux context in the all system files ' extended attribute. At boot time, init.rc checks for the existence of /.autorelabel. If this file exists, SELinux performs a complete file system relabel (using the /sbin/fixfiles -f -F relabel command), and then deletes /.autorelabel.)
 
 	6. You should now see the appliance overview page. You can add a description to your appliance (optional) and a logo (optional). The logo format must be .jpg, .jpeg or .png.
 	7. An OS profile is mandatory. See :ref:`appliance-os-profile-new`. However, you can leave the appliance at this point and edit it later.
@@ -34,7 +34,7 @@ Creating a Windows-based Appliance
 
 To create a Windows Appliance:
 
-	1. From the VM Builder tab, select ``create``.
+	1. From the ``Apps`` tab, select ``create``.
 	2. Enter the appliance name.
 	3. Choose ``Windows`` from the OS Distribution drop down menu.
 	4. Click ``create``.

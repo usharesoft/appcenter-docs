@@ -23,7 +23,7 @@ From the Migration tab:
 
 You can now generate a machine image and share it, as you would any other appliance template.
 
-More importantly you can now change the contents of the original scanned system.  If you go to the ``VM Builder`` tab, the new appliance template will be listed in the ``imported templates`` section.  Double-click on it to view the details or modify it.
+More importantly you can now change the contents of the original scanned system.  If you go to the ``Apps`` tab, the new appliance template will be listed in the ``imported templates`` section.  Double-click on it to view the details or modify it.
 
 .. _migration-scan-appliance-config-console:
 

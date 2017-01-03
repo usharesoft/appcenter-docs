@@ -40,7 +40,7 @@ When you carry out black box migration (by generating a machine image directly f
 	4. Register the new machine image to the target environment.
 	5. You can provision one or more instances from the machine image. Each instance being a near identical workload from the original.
 
-	.. note:: If you plan migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/solutions/cloud/k5/>`_, you must also (before scanning):
+	.. note:: If you plan migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/solutions/cloud/k5/>`_, you must also do the following before scanning:
 
 				* Uninstall VMWare Tools (if installed).
 				* Retrieve Transport Agent Software from `K5 Support <mailto:FCSK5_GSD@ph.fujitsu.com>`_.

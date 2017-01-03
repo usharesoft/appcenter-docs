@@ -21,9 +21,9 @@ So for example:
 
 ``Windows/releases/Server2008R2/x86_64/English/Standard/Core/2012-10-19/Windows_2008R2_Standard_Core_2012-10-19.raw.gz``
 
-.. note:: If you plan to deploy generated Windows instances onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/solutions/cloud/k5/>`_, only `Standard` and `Enterprise` editions are supported.
+.. note:: If you plan to deploy generated Windows instances onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/solutions/cloud/k5/>`_, only "Standard" and "Enterprise" editions are supported.
 
- For convenience, you can use an edition name starting by `Standard` or `Enterprise`. For example: `StandardK5` will be recognized as a `Standard` edition, `EnterpriseMDR` will be recognized as `Enterprise`.
+ For convenience, you can use an edition name starting by "Standard" or "Enterprise". For example: "StandardK5" will be recognized as a "Standard" edition, "EnterpriseMDR" will be recognized as "Enterprise".
 
  For more detailed information, please refer to `official Fujitsu K5 IaaS Documentation <http://www.fujitsu.com/uk/Images/k5-iaas-features-handbook.pdf>`_.
 

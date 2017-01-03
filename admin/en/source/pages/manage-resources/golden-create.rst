@@ -20,7 +20,9 @@ To create a new Golden Image, you will need to:
 		* NetFx3ServerFeatures
 		* NetFx3
 
-		To install these features, you can either go to the ``Control Panel`` under ``Programs and Features`` or open a command prompt window as Administrator and run the following Windows commands:
+		To install these features, you can:
+
+		a) Go to the ``Control Panel`` under ``Programs and Features`` or open a command prompt window as Administrator and run the following Windows commands:
 
 		.. code-block:: shell
 
@@ -33,6 +35,14 @@ To create a new Golden Image, you will need to:
 			$ start /w dism /online /enable-feature /all /featurename:NetFx3-ServerCore-WOW64
 
 		.. note:: If any of the above commands fail with an error indicating that the feature is non-existant, ignore the error and continue.
+
+		b) If you do not have internet access and you have access to the installation DVD, the ``dism.exe`` commands can be executed by using the following parameters:
+
+		.. code-block:: shell
+
+			start /w dism /online /enable-feature /all /limitaccess /featurename:<feature_to_enable> /source:d:\souces\sxs
+
+		Where d: for example is the location of the mounted installation DVD
 
 	3. Install gtk-sharp-2.12.10.win32.msi. 
 

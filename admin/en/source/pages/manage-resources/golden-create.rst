@@ -13,22 +13,26 @@ To create a new Golden Image, you will need to:
 		* Drive ``C:``
 
 	2. We recommend that you run Windows Update to ensure that the latest updates are pre-installed in the Golden Image.
-	
+
 	3. Optionally, you can also add the following customizations:
 
 		* Modify the registry
 		* Extra software installation
 		* User creation
 
-	4. Optionally, you can free several gigabytes of space by cleaning up windows updates installers. 
+	.. note:: If you plan to deploy generated Windows instances onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/solutions/cloud/k5/>`_, you must retrieve
+		Transport Agent Software from `K5 Support <mailto:FCSK5_GSD@ph.fujitsu.com>`_, and install it. For more detailed information, please refer to
+		`official Fujitsu K5 IaaS Documentation <http://www.fujitsu.com/uk/Images/k5-iaas-features-handbook.pdf>`_.
+
+	4. Optionally, you can free several gigabytes of space by cleaning up windows updates installers.
 
 		.. warning:: After this optimization you may not be able to uninstall some of the Windows updates.
 
-		.. code-block:: shell	
+		.. code-block:: shell
 
 			$ dism /online /Cleanup-Image /StartComponentCleanup /ResetBase
 
-	5. If you have Service Packs installed, you can free up some space by executing the following command, which will merge the Service Pack installer to the operating system. 
+	5. If you have Service Packs installed, you can free up some space by executing the following command, which will merge the Service Pack installer to the operating system.
 
 		.. warning:: After this optimization, you will not be able to uninstall the Service Pack.
 
@@ -49,7 +53,7 @@ To create a new Golden Image, you will need to:
 			.. code-block:: shell
 
 				$ cp --sparse=always image.raw newimage.raw
-        
+
         	This will copy the image file but skip the zeros, so the .raw image will be as sparse as possible, also helping the compression program.
 
 			.. code-block:: shell
@@ -97,10 +101,10 @@ To create a new Golden Image, you will need to:
 		.. code-block:: shell
 
 			$ sysprep.exe /generalize /oobe /shutdown /unattend:c:\path-to-sysprep\Unattend.xml
-	
+
 		.. note:: This will shutdown the machine. Do not boot the machine again!
 
-	10. You can now compress the golden images by running: 
+	10. You can now compress the golden images by running:
 
 		.. code-block:: shell
 
@@ -159,11 +163,11 @@ The following is an example of an unattend file to be used when creating a golde
 		</unattend>
 
 	.. note:: ``<ProductKey>`` element in the unattend file may not be mandatory. Whether the element is necessary or not depends on the type of the installation medium you used for the system. For example, the Volume License media do not require any <ProductKey> element in the unattend file. Please refer to Microsoft's documents for details.
-	
+
 	.. note:: Elements for the locale and the language in the unattend file should have appropriate values in accordance with the language of the target OS. The following example shows the elements and their values for Japanese Windows.
-	
+
 		.. code-block:: shell
-			
+
 			<InputLocale>0411:00000411</InputLocale>
 			<SystemLocale>ja-JP</SystemLocale>
 			<UILanguage>ja-JP</UILanguage>
@@ -226,13 +230,13 @@ The following is an example of an unattend file to be used when creating a golde
 		        </component>
 		    </settings>
 		</unattend>
-	
+
 	.. note:: ``<ProductKey>`` element in the unattend file may not be mandatory. Whether the element is necessary or not depends on the type of the installation medium you used for the system. For example, the Volume License media do not require any <ProductKey> element in the unattend file. Please refer to Microsoft's documents for details.
 
 	.. note:: Elements for the locale and the language in the unattend file should have appropriate values in accordance with the language of the target OS. The following example shows the elements and their values for Japanese Windows.
-	
+
 		.. code-block:: shell
-			
+
 			<InputLocale>0411:00000411</InputLocale>
 			<SystemLocale>ja-JP</SystemLocale>
 			<UILanguage>ja-JP</UILanguage>

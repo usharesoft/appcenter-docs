@@ -8,7 +8,7 @@ Blackbox Migration Process
 The goal of black box migration is to reproduce a near identical copy of the currently running workload.  However, there will always be small differences between the two workloads after migration is complete.  When scanning a system the following information is detected:
 
 	* all the files and packages on the system (including configuration information)
-	* network settings including all NICs. Note that if the first card is static, it will be changed to DHCP. 
+	* network settings including all NICs. Note that if the first card is static, it will be changed to DHCP.
 	* root and user password (encrypted)
 	* timezone
 	* keyboard settings
@@ -36,7 +36,15 @@ When you carry out black box migration (by generating a machine image directly f
 		- Apply the overlay file from the scan report
 		- Apply the low configuration information detected in the scan report (passwords, timezone, keyboard, etc)
 		- Apply any specific libraries or configuration depending on the machine image format chosen (e.g for AWS UForge adds the required AWS libraries)
-		
+
 	4. Register the new machine image to the target environment.
 	5. You can provision one or more instances from the machine image. Each instance being a near identical workload from the original.
 
+	.. note:: If you plan migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/solutions/cloud/k5/>`_, you must also (before scanning):
+
+				* Uninstall VMWare Tools (if installed).
+				* Retrieve Transport Agent Software from `K5 Support <mailto:FCSK5_GSD@ph.fujitsu.com>`_.
+				* Install Transport Agent Software.
+				* Uninstall CloudBase-Init (if installed).
+
+				For more detailed information, please refer to `official Fujitsu K5 IaaS Documentation <http://www.fujitsu.com/uk/Images/k5-iaas-features-handbook.pdf>`_.

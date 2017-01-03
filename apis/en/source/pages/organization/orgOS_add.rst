@@ -16,7 +16,7 @@ orgOS_add
 
 Registers a new operating system to an organization. 
 
-Please refer to :ref:`distribprofile-object` for a complete list of all the ``os`` attributes.
+Please refer to :ref:`distribution-object` for a complete list of all the ``os`` attributes.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -55,7 +55,7 @@ Example of representation.xml content (the request body):
 
 .. seealso::
 
-	 * :ref:`distribprofile-object`
+	 * :ref:`distribution-object`
 	 * :ref:`license-object`
 	 * :ref:`org-object`
 	 * :ref:`orgCompany-getAll`
@@ -66,6 +66,7 @@ Example of representation.xml content (the request body):
 	 * :ref:`orgMember-update`
 	 * :ref:`orgMember-update`
 	 * :ref:`orgOSWindows-add`
+	 * :ref:`orgOSWindows-delete`
 	 * :ref:`orgOSWindows-getAll`
 	 * :ref:`orgOS-getAll`
 	 * :ref:`orgOS-update`

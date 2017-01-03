@@ -26,7 +26,7 @@ URI Parameters
 ~~~~~~~~~~~~~~
 
 * ``uid`` (required): the user name (login name) of the :ref:`user-object` that has created the appliance
-* ``osid`` (required): the id of the :ref:`distribprofile-object`
+* ``osid`` (required): the id of the :ref:`linuxprofile-object`
 * ``aid`` (required): the id of the :ref:`appliance-object`
 
 HTTP Request Body Parameters
@@ -52,4 +52,5 @@ Example Request
 	 * :ref:`applianceOSUpdates-get`
 	 * :ref:`applianceOSUpdates-save`
 	 * :ref:`distribprofile-object`
+	 * :ref:`linuxprofile-object`
 	 * :ref:`packages-object`

@@ -12,6 +12,7 @@ Organization API Resources
 	* :ref:`orgMember-remove`: Removes an user from an organization
 	* :ref:`orgMember-update`: Adds or updates (the privileges of) an user to an organization
 	* :ref:`orgOSWindows-add`: Adds a new Microsoft Windows base machine image (golden image) to a Microsoft Windows operating system
+	* :ref:`orgOSWindows-delete`: Delete a new Microsoft Windows base machine image (golden image) to a Microsoft Windows operating system
 	* :ref:`orgOSWindows-getAll`: Retrieves all the machine images (golden images) that have been registered for a Microsoft Windows operating system
 	* :ref:`orgOS-add`: Registers a new operating system to an organization
 	* :ref:`orgOS-getAll`: Retrieves all the operating systems for an organization
@@ -31,6 +32,7 @@ Organization API Resources
     orgMember_remove
     orgMember_update
     orgOSWindows_add
+    orgOSWindows_delete
     orgOSWindows_getAll
     orgOS_add
     orgOS_getAll

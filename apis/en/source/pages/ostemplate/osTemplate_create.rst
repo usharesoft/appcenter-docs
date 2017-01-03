@@ -14,9 +14,9 @@ osTemplate_create
 	* Response Formats: ``application/xml`` ``application/json``
 	* Since: ``UForge 3.6``
 
-Creates a new OS template for an operating system.  An ``OS template`` groups together packages from the operating system that can be re-used in as an ``OS profile`` when creating an managing ``appliances``. 
+Creates a new OS template for an operating system.  An ``OS template`` groups together packages from the operating system that can be re-used in as an ``OS profile`` when creating and managing ``appliances``. 
 
-Please refer to :ref:`distribprofiletemplate-object` for a complete list of all the ``OS template`` attributes.
+Please refer to :ref:`distribprofile-object` for a complete list of all the ``OS template`` attributes.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -27,12 +27,12 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``id`` (required): the id of the :ref:`distribprofile-object`
+* ``id`` (required): the id of the :ref:`distribution-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A :ref:`distribProfileTemplate-object` object
+A :ref:`distribProfile-object` object
 
 Example Request
 ~~~~~~~~~~~~~~~
@@ -46,20 +46,21 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:distribProfileTemplate xmlns:ns0="http://www.usharesoft.com/uforge">
+	<ns0:distribProfile xmlns:ns0="http://www.usharesoft.com/uforge">
 		<description>This distribution contains the minimal amount of services</description>
 		<name>Template Example</name>
-	</ns0:distribProfileTemplate>
+	</ns0:distribProfile>
 
 
 .. seealso::
 
 	 * :ref:`appliance-object`
 	 * :ref:`distribprofile-object`
-	 * :ref:`distribprofile-object`
-	 * :ref:`distribprofiletemplate-object`
+	 * :ref:`distribution-object`
+	 * :ref:`linuxprofile-object`
 	 * :ref:`osTemplatePkgs-get`
 	 * :ref:`osTemplate-delete`
 	 * :ref:`osTemplate-get`
 	 * :ref:`osTemplate-getAll`
 	 * :ref:`osTemplate-update`
+	 * :ref:`windowsprofile-object`

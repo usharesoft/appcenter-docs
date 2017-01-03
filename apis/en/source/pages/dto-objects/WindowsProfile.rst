@@ -1,17 +1,22 @@
 .. Copyright 2016 FUJITSU LIMITED
 
-.. _distribprofile-object:
+.. _windowsprofile-object:
 
-distribProfile
+windowsProfile
 ==============
 
-Describes an abstract profile shared between linux and windows.
+Describes a group of native applications and services from a windows operating system. This profile is created by a platform administrator or used in an appliance template. These templates are used by users of the platform to easily create operating profiles that are part of an appliance template.
 
 Attributes
 ~~~~~~~~~~
 
-The list of attributes for ``distribProfile`` are:
+The list of attributes for ``windowsProfile`` are:
 
+	* ``edition``: the edition of the operating system for this os profile
+	* ``goldenUri`` (anyURI): the uri resource to retrieve the golden machine image for this os profile
+	* ``partitionTable`` (:ref:`partitionTable-object`): the partition table information (see :ref:`partitiontable-object`).
+	* ``type``: the type of the operating system for this os profile
+	* ``language`` (string): the language of the attached golden machine image
 	* ``active`` (boolean): boolean to determine if this os profile is active (i.e. available to use by a user)
 	* ``applianceUri`` (anyURI): the uri resource of the appliance this os profile is attached to
 	* ``arch`` (string): the architecture of the operating system this os profile is based on

@@ -5,14 +5,14 @@
 winServices
 ===========
 
-Provides a list of :ref:`winService-object` objects.
+Provides a list of :ref:`winservice-object` objects.
 
 Attributes
 ~~~~~~~~~~
 
 The list of attributes for ``winServices`` are:
 
-	* ``winServices``: the list of :ref:`winService-object` objects
+	* ``winServices``: the list of :ref:`winservice-object` objects
 	* ``total`` (long): the total number of objects
 
 

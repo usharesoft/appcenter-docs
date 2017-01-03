@@ -25,8 +25,8 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``oid`` (optional): 
-* ``did`` (optional): 
+* ``oid`` (required): the id of the :ref:`org-object`
+* ``did`` (required): the id of the :ref:`distribution-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -43,15 +43,17 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`distribprofile-object`
+	 * :ref:`distribution-object`
 	 * :ref:`license-object`
 	 * :ref:`org-object`
 	 * :ref:`orgCompany-getAll`
 	 * :ref:`orgMember-getAll`
 	 * :ref:`orgMember-remove`
 	 * :ref:`orgMember-update`
+	 * :ref:`orgOSWindows-delete`
 	 * :ref:`orgOSWindows-getAll`
 	 * :ref:`orgOS-add`
 	 * :ref:`orgOS-getAll`
 	 * :ref:`orgOS-update`
 	 * :ref:`user-object`
+	 * :ref:`windowsprofile-object`

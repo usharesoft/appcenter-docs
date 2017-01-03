@@ -5,7 +5,7 @@
 Listing Appliance Templates
 ---------------------------
 
-To view the appliance templates you have access, go to the ``VM Builder`` tab in the user interface.  By default the appliance templates are listed by latest first.
+To view the appliance templates you have access, go to the ``Apps`` tab in the user interface.  By default the appliance templates are listed by latest first.
 
 Under the ``Appliance Library``, the appliances are organized as follows:
 

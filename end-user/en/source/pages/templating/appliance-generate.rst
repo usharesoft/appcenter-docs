@@ -8,7 +8,7 @@ Generating a Machine Image
 Once an appliance template has been created, you can generate a machine image that packages the stack to run on a particular virtual, cloud, container or physical environment. For a complete list of supported machine image formats, refer to :ref:`supported-image-formats`.
 
 To generate a machine image:
-	1. Go to the ``VM Builder`` tab.
+	1. Go to the ``Apps`` tab.
 	2. Select the appliance from the ``Appliance Library``. 
 	3. Click on the ``generate`` button at the top right to display all possible image formats which can be generated. The formats are organized by type: Cloud, Container, Virtual, Physical.
 	4. Choose the image format you would like to generate. For a Docker image, refer to :ref:`appliance-docker-image`.
@@ -38,7 +38,7 @@ Generating a Docker Image
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To generate a machine image:
-	1. Go to the ``VM Builder`` tab.
+	1. Go to the ``Apps`` tab.
 	2. Select the appliance from the ``Appliance Library``. 
 	3. Click on the ``generate`` button at the top right to display all possible image formats which can be generated. 
 	4. Choose ``Container``, then ``Docker`` image format. 

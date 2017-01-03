@@ -16,7 +16,7 @@ orgOS_getAll
 
 Retrieves all the operating systems for an organization. 
 
-A list of :ref:`distribprofile-object` objects are returned. You can use a set of query parameters to retrieve a subset of these operating systems: 
+A list of :ref:`distribution-object` objects are returned. You can use a set of query parameters to retrieve a subset of these operating systems: 
 
  
 
@@ -52,7 +52,7 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`distribprofile-object`
+	 * :ref:`distribution-object`
 	 * :ref:`license-object`
 	 * :ref:`org-object`
 	 * :ref:`orgCompany-getAll`
@@ -60,6 +60,7 @@ Example Request
 	 * :ref:`orgMember-remove`
 	 * :ref:`orgMember-update`
 	 * :ref:`orgOSWindows-add`
+	 * :ref:`orgOSWindows-delete`
 	 * :ref:`orgOSWindows-getAll`
 	 * :ref:`orgOS-add`
 	 * :ref:`orgOS-update`

@@ -9,7 +9,10 @@ Workspace Template API Resources
 	* :ref:`workspaceTemplateLogo-delete`: Removes a logo from an appliance template in a workspace
 	* :ref:`workspaceTemplateLogo-download`: Downloads a logo for an appliance template in a workspace
 	* :ref:`workspaceTemplateLogo-upload`: Uploads a logo for an appliance template in a workspace
+	* :ref:`workspaceTemplateOSApplications-get`: Receives all applications contained in the shared appliance template
+	* :ref:`workspaceTemplateOSPartitionTable-get`: Receives the partition table contained in the shared appliance template
 	* :ref:`workspaceTemplateOSPkgs-get`: Receives all the native packages contained in the shared appliance template
+	* :ref:`workspaceTemplateOSServices-get`: Receives all services contained in the shared appliance template
 	* :ref:`workspaceTemplateProjects-get`: Retrieves all the project components for a shared appliance template
 	* :ref:`workspaceTemplateShare-cancel`: Cancels the current sharing process (import) of an appliance template to a workspace
 	* :ref:`workspaceTemplateStats-get`: Retrieves the statistics for a shared appliance template in a workspace
@@ -30,7 +33,10 @@ Workspace Template API Resources
     workspaceTemplateLogo_delete
     workspaceTemplateLogo_download
     workspaceTemplateLogo_upload
+    workspaceTemplateOSApplications_get
+    workspaceTemplateOSPartitionTable_get
     workspaceTemplateOSPkgs_get
+    workspaceTemplateOSServices_get
     workspaceTemplateProjects_get
     workspaceTemplateShare_cancel
     workspaceTemplateStats_get

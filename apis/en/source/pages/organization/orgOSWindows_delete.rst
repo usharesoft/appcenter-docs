@@ -1,20 +1,20 @@
 .. Copyright 2016 FUJITSU LIMITED
 
-.. _orgOSWindows-getAll:
+.. _orgOSWindows-delete:
 
-orgOSWindows_getAll
+orgOSWindows_delete
 -------------------
 
-.. function:: GET /orgs/{oid}/distributions/{did}/goldens
+.. function:: DELETE /orgs/{oid}/distributions/{did}/goldens
 
 .. sidebar:: Summary
 
-	* Method: ``GET``
-	* Response Code: ``200 / 304``
-	* Response Formats: ``application/xml`` ``application/json``
+	* Method: ``DELETE``
+	* Response Code: ``204 / 200``
+	* Response Formats: 
 	* Since: ``UForge 3.5.1``
 
-Retrieves all the machine images (golden images) that have been registered for a Microsoft Windows operating system.
+Delete a new Microsoft Windows base machine image (golden image) to a Microsoft Windows operating system.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -38,7 +38,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/orgs/{oid}/distributions/{did}/goldens" -X GET \
+	curl "https://uforge.example.com/api/orgs/{oid}/distributions/{did}/goldens" -X DELETE \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::
@@ -51,7 +51,7 @@ Example Request
 	 * :ref:`orgMember-remove`
 	 * :ref:`orgMember-update`
 	 * :ref:`orgOSWindows-add`
-	 * :ref:`orgOSWindows-delete`
+	 * :ref:`orgOSWindows-getAll`
 	 * :ref:`orgOS-add`
 	 * :ref:`orgOS-getAll`
 	 * :ref:`orgOS-update`

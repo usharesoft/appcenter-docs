@@ -70,7 +70,7 @@ Example of representation.xml content (the request body):
 
 .. seealso::
 
-	 * :ref:`distribprofile-object`
+	 * :ref:`distribution-object`
 	 * :ref:`license-object`
 	 * :ref:`org-object`
 	 * :ref:`orgCompany-getAll`
@@ -78,6 +78,7 @@ Example of representation.xml content (the request body):
 	 * :ref:`orgMember-remove`
 	 * :ref:`orgMember-update`
 	 * :ref:`orgOSWindows-add`
+	 * :ref:`orgOSWindows-delete`
 	 * :ref:`orgOSWindows-getAll`
 	 * :ref:`orgOS-add`
 	 * :ref:`orgOS-getAll`

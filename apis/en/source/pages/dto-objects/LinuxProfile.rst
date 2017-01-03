@@ -1,17 +1,24 @@
 .. Copyright 2016 FUJITSU LIMITED
 
-.. _distribprofile-object:
+.. _linuxprofile-object:
 
-distribProfile
-==============
+linuxProfile
+============
 
-Describes an abstract profile shared between linux and windows.
+Describes a group of native packages from a linux operating system. This profile is created by a platform administrator or used in an appliance template. These templates are used by users of the platform to easily create operating profiles that are part of an appliance template.
 
 Attributes
 ~~~~~~~~~~
 
-The list of attributes for ``distribProfile`` are:
+The list of attributes for ``linuxProfile`` are:
 
+	* ``distributionPackagesUri`` (anyURI): the uri resource to retrieve all the operating system packages contained in this os profile
+	* ``distributionServicesUri`` (anyURI): the uri resource to retrieve all the operating system services contained in this os profile
+	* ``packagesUri`` (anyURI): the uri resource to retrieve all the packages this os profile contains (may contain custom packages from other repositories other than the operating system)
+	* ``packageUris`` (:ref:`UriList-object`): the list of uris for the packages this os profile contains
+	* ``servicesUri`` (anyURI): the uri resource to retrieve all the services contained in this os profile
+	* ``serviceUris`` (:ref:`UriList-object`): the uri resource to get all the available services uri
+	* ``updatesUri`` (anyURI): the uri resource to get all the available package updates (see :ref:`osupdate-object`)
 	* ``active`` (boolean): boolean to determine if this os profile is active (i.e. available to use by a user)
 	* ``applianceUri`` (anyURI): the uri resource of the appliance this os profile is attached to
 	* ``arch`` (string): the architecture of the operating system this os profile is based on

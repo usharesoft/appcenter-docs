@@ -53,7 +53,7 @@ Example of representation.xml content (the request body):
 
 .. seealso::
 
-	 * :ref:`distribprofile-object`
+	 * :ref:`distribution-object`
 	 * :ref:`osAccess-update`
 	 * :ref:`osLicense-download`
 	 * :ref:`osLogo-download`

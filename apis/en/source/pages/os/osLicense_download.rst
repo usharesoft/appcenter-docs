@@ -25,7 +25,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``id`` (required): the id of the :ref:`distribprofile-object`
+* ``id`` (required): the id of the :ref:`distribution-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -42,7 +42,7 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`distribprofile-object`
+	 * :ref:`distribution-object`
 	 * :ref:`osAccess-update`
 	 * :ref:`osLogo-download`
 	 * :ref:`osLogo-downloadFile`

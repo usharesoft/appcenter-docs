@@ -1,12 +1,58 @@
-.. Copyright 2016 FUJITSU LIMITED
+.. Copyright 2017 FUJITSU LIMITED
 
 Changelog
 =========
 
+3.7.fp1
+-------
+
+Release Date: 2017-01-09
+
+New Features
+~~~~~~~~~~~~
+
+* Multi-NIC support for Linux based appliance templates.
+* Driver injection improvements (internal mechanism) for Windows-based appliance templates. 
+
+Bug Fixes
+~~~~~~~~~
+
+* 6326 Impossible to publish an ``OpenStack VDI`` image
+* 6323 Cloud account name appears twice in the public informations in UI for all Cloud formats
+* 6234 Sticky package of imported template is not shown in the UI
+* 6141 User gets a 500 call failed if a custom target platform has been added but not enabled specifically for the user
+* 6042 OS packages are not sortable in the ``Repository`` column
+* 6237 Spelling mistakes in the API docs
+* 6222 Format enabling/disabling not working when updating the UI config
+* 6453 Impossible to generate image when install profile contains users
+* 6199 Migration fails because the user ID taken from a scan and user ID that the package makes overlap.
+* 6409 OE-lite can't fetch QT source file
+* 6206 Filter inactive pkgs on ``DistributionPackages.getAll()`` method
+* 6200 Scanning a disabled OS is possible
+* 6190 Scanning an azure vm with advance partitioning : install profile partioning not correct
+* 6180 Errors outputted into ``/oar/oar_scan_job*.stderr`` when scanning CentOS 6
+* 6154 Launching windows scan binary from command line with API key does not launch the scan
+* 6134 Pkg overlay archive are built differently if a black box migration is done first or if it's a scan import to appliance
+* 6309 Several concurrent generations could fail if there are uncached software bundles files in it
+* 6211 Creating a two bootscripts with same name does not show an error message
+* 6194 Japanese Characters are OK to use but encoded incorrectly for ``Tag`` and ``Maintainer`` fields of a software component
+* 6193 Same rpm file can be uploaded without overwritten to a software component
+* 6178 Errors outputted into ``/oar/job_finalize.log`` when generating CentOS image
+* 6169 Total Disk Usage doesn't count the size of files uploaded to software components
+* 6027 Exported template has lost some information on MySoftware
+* 6346 WARP should skip to inject uforge agent in the specific condition
+* 6327 Scripts are not imported when sharing a template in a ``Workspace``
+* 6057 Yum update error ``uforge_update.sh: line 660: [: too many arguments``
+* 6055 The volume shadow copy is not deleted after scan of Windows.
+* 6007 Code in ``distrotools/lib/str.[c|h]`` in function ``repl_str()`` cannot compile for windows using ``mingw c++``
+* 6440 Can't display ``Projects`` as guest user
+* 6453 Impossible to generate image when install profile contains users
+
+
 3.7
 ---
 
-Release Date: 2017-01-31
+Release Date: 2016-12-27
 
 New Features
 ~~~~~~~~~~~~

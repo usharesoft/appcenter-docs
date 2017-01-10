@@ -3,6 +3,106 @@
 Changelog
 =========
 
+3.7
+---
+
+Release Date: 2017-01-31
+
+New Features
+~~~~~~~~~~~~
+None (released based 3.6-fp2)
+
+Bug Fixes
+~~~~~~~~~
+
+* 6537 Removed AMI format for AWS S3
+* 6521 Launching windows scan binary from command line with API key does not launch the scan
+* 6517 Impossible to know which publish image on UForge corresponds to which Image in K5 portal
+* 6515 CentOS 6 images can be accessed with SSH on K5
+* 6513 Validation for K5 publish view is not properly handled
+* 6511 Launching uforge-scan.exe from command prompt still fails if the file path includes Japanese characters
+* 6507 The ``uforge-install-config`` binary for windows does not start because ``uforge-install-profile-1-1.noarch.zip``does not contain the correct directory structure.
+* 6505 The ``no_console`` file is not created for Windows.
+* 6504 Problem with OpenDJ port 4444 usage in several UForge config scripts
+* 6503 The ``uforge.conf.ORIG`` contains plain passwords with very weak permission
+* 6502 AWS connector uses a fixed size 3.4 GB disk and publication fails for larger images
+* 6422 Uploading an avatar image twice, the first image is still used
+* 6410 Loading page empty during 5 seconds for the first time in ``Sofware Library`` view
+* 5897 If a space is used in cloud accounts in openstack in the URL, then an internal error is observed
+* 5849 Displaying the logo in view package details of a target format is not displayed
+* 6488 Impossible to generate image when install profile contains users
+* 6362 AWS resource connector no longer work due to credential changes
+* 6064 The CLI command ``org repo update`` returns exception if ``--type`` param value is invalid.
+* 5900 Generation sometimes fails if the second disk of the appliance is too small
+
+
+3.6-fp2
+-------
+
+Release Date: 2016-12-05
+
+New Features
+~~~~~~~~~~~~
+
+* Fujitsu K5 support.  Can now register machine images generated on the platform to Fujitsu K5.
+
+	.. note:: The following operating systems are supported for the moment (others will be supported soon):
+
+		* CentOS 7.0
+		* Ubuntu 14.04
+
+* SELinux support when creating appliance templates and during migration
+* Docker machine image generation support.  This allows users to build docker base images.
+* When scanning Windows machines, the scan report now includes the services detected.
+
+	.. note:: The platform does not support the comparison of windows-based scans at this time.
+
+RFEs
+~~~~
+
+* Better progress status when scanning Windows machines
+* Less restrictive validation of website information in the MySoftware/Project Overview
+* New icons for 'pull' and 'upload' for software/project files management
+* Added directory icon when displaying all the files for software/project files view
+* When deleting a folder, the confirm message should be more explicit (that all sub folders and files will also be deleted)
+* Better explanation of the "cached" option for software/project files in the UI
+* Managing licenses for software/project components; there is now an explicit delet button to remove an uploaded license file 
+
+Bug Fixes
+~~~~~~~~~
+
+* 6123 Publishing a generation from a scan results in 500 error in UI
+* 6089 Member's role on workspace couldn't be changed if language is set as French or Japanese
+* 6017 Canceling from Appliance Create no longer returns to previous page
+* 5946 Publishing to CloudStack fails with the next error: vhd.gz: No such file or directory
+* 5942 RHEL is added despite launching `org os add` for Oracle Linux or Scientific Linux with cli
+* 5909 User ID and group ID of the install profile can be set 0
+* 5906 UserResourcesAccessRights database mapping not proxied
+* 5896 Deployment fails due to NIC settings
+* 5892 Deployment fails when using eth1
+* 5843 "org category delete" raises an error
+* 5777 Launching uforge-scan.exe from command prompt fails with an error if the file path to the binary includes Japanese characters.
+* 5762 Cannot register the third disk with a VirtualBox image
+* 5756 New users, the defaukt country is: Abkhasia
+* 5754 opening the Dashboard > Generations page first shows progress bar for all publications
+* 5752 Number of MySoftware components not properly refreshed in the UI
+* 5750 Number of Appliance not properly refreshed in the UI
+* 5748 The diskusage of "uforge user quota list" is displayed by byte
+* 5684 Invite the same user in the collaboration members list does not show error message
+* 5676 Duplicated variable in /etc/default/grub if distribution provides default values.
+* 5647 Keyboard and kernel parameters are not taken into the scan report on CentOS 7 scan.
+* 5635 Broken incremental scan for windows 2012R2
+* 5627 Cancelling scan via ctrl+c is not correctly displayed in the UI
+* 5625 uforge-scan does not respect bandwidth limit
+* 5623 When the image of CentOS7 is generated, RPM-GPG-KEY-CentOS import read fails
+* 5621 rpmgen fails to build package if file path in %file includes space.
+* 5570 Impossible to delete an incremental scan
+* 5562 UForge CLI accesses to interactive mode even if the user or password are wrong
+* 5560 The input value of the activation key is not saved in a Windows appliance
+* 5342 Scan incremental with Ubuntu does not appear in UI
+* 5265 No dialog box displayed after running an instance on Azure
+
+
 3.6-fp1
 -------
 

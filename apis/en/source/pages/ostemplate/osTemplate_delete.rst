@@ -25,8 +25,8 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``prid`` (required): the id of the :ref:`distribprofile-object`
-* ``id`` (required): the id of the :ref:`distribution-object`
+* ``prid`` (required): the id of the :ref:`distribprofiletemplate-object`
+* ``id`` (required): the id of the :ref:`distribprofile-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,11 +45,10 @@ Example Request
 
 	 * :ref:`appliance-object`
 	 * :ref:`distribprofile-object`
-	 * :ref:`distribution-object`
-	 * :ref:`linuxprofile-object`
+	 * :ref:`distribprofile-object`
+	 * :ref:`distribprofiletemplate-object`
 	 * :ref:`osTemplatePkgs-get`
 	 * :ref:`osTemplate-create`
 	 * :ref:`osTemplate-get`
 	 * :ref:`osTemplate-getAll`
 	 * :ref:`osTemplate-update`
-	 * :ref:`windowsprofile-object`

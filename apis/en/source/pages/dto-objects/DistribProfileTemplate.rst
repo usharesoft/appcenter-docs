@@ -1,20 +1,17 @@
 .. Copyright 2016 FUJITSU LIMITED
 
-.. _distribprofile-object:
+.. _distribprofiletemplate-object:
 
-distribProfile
-==============
+distribProfileTemplate
+======================
 
-Describes a group of native packages from an operating system. This profile is used in an appliance template. This profile is created from a :ref:`distribprofiletemplate-object` that is created and maintained by a platform administrator.
+Describes a group of native packages from an operating system. This profile is created by a platform administrator. These templates are used by users of the platform to easily create operating system profiles that are part of an appliance template.
 
 Attributes
 ~~~~~~~~~~
 
-The list of attributes for ``distribProfile`` are:
+The list of attributes for ``distribProfileTemplate`` are:
 
-	* ``applianceUri`` (anyURI): the uri resource of the appliance template this os profile is attached to
-	* ``standardProfileUri`` (anyURI): the uri resource to get the os profile template this profile is based on (see :ref:`distribprofiletemplate-object`)
-	* ``updatesUri`` (anyURI): the uri resource to get all the available package updates (see :ref:`osupdate-object`
 	* ``active`` (boolean): boolean to determine if this os profile template is active (i.e. available to use by a user)
 	* ``arch`` (string): the architecture of the operating system this os profile template is based on
 	* ``description`` (string): the description of this os profile template

@@ -45,13 +45,13 @@ Example Request
 .. seealso::
 
 	 * :ref:`appliance-object`
-	 * :ref:`applianceLogo-download`
-	 * :ref:`applianceLogo-downloadFile`
-	 * :ref:`applianceLogo-upload`
-	 * :ref:`appliance-clone`
+	 * :ref:`logo-object`
 	 * :ref:`appliance-create`
+	 * :ref:`appliance-clone`
 	 * :ref:`appliance-delete`
 	 * :ref:`appliance-get`
 	 * :ref:`appliance-getAll`
 	 * :ref:`appliance-update`
-	 * :ref:`logo-object`
+	 * :ref:`applianceLogo-download`
+	 * :ref:`applianceLogo-downloadFile`
+	 * :ref:`applianceLogo-upload`

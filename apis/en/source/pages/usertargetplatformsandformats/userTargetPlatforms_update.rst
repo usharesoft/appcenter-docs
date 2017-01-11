@@ -66,14 +66,14 @@ Example of representation.xml content (the request body):
 
 .. seealso::
 
-	 * :ref:`imageformat-object`
 	 * :ref:`targetformat-api-resources`
-	 * :ref:`targetformat-object`
 	 * :ref:`targetplatform-api-resources`
+	 * :ref:`imageformat-object`
+	 * :ref:`targetformat-object`
 	 * :ref:`targetplatform-object`
 	 * :ref:`userFormats-getAll`
 	 * :ref:`userFormats-update`
 	 * :ref:`userTargetFormat-getAll`
 	 * :ref:`userTargetFormat-update`
-	 * :ref:`userTargetPlatformFormat-getAll`
 	 * :ref:`userTargetPlatforms-getAll`
+	 * :ref:`userTargetPlatformFormat-getAll`

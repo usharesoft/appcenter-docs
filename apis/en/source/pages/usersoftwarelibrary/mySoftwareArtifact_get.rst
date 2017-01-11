@@ -47,47 +47,40 @@ Example Request
 .. seealso::
 
 	 * :ref:`mySoftware-object`
+	 * :ref:`softwareartifact-object`
+	 * :ref:`mySoftware-create`
+	 * :ref:`mySoftware-getAll`
+	 * :ref:`mySoftware-get`
+	 * :ref:`mySoftware-update`
+	 * :ref:`mySoftware-delete`
+	 * :ref:`mySoftware-clone`
+	 * :ref:`mySoftwareUsage-getAll`
+	 * :ref:`mySoftwareOs-getAll`
 	 * :ref:`mySoftwareArtifact-add`
-	 * :ref:`mySoftwareArtifact-addChild`
-	 * :ref:`mySoftwareArtifact-addOrRemoveFileFromCache`
-	 * :ref:`mySoftwareArtifact-createFromRemoteServer`
-	 * :ref:`mySoftwareArtifact-delete`
+	 * :ref:`mySoftwareArtifact-getAll`
+	 * :ref:`mySoftwareArtifact-updateAll`
+	 * :ref:`mySoftwareArtifact-update`
 	 * :ref:`mySoftwareArtifact-deleteAll`
+	 * :ref:`mySoftwareArtifact-delete`
 	 * :ref:`mySoftwareArtifact-download`
 	 * :ref:`mySoftwareArtifact-downloadFile`
-	 * :ref:`mySoftwareArtifact-getAll`
-	 * :ref:`mySoftwareArtifact-update`
-	 * :ref:`mySoftwareArtifact-updateAll`
+	 * :ref:`mySoftwareArtifact-createFromRemoteServer`
+	 * :ref:`mySoftwareArtifact-addOrRemoveFileFromCache`
 	 * :ref:`mySoftwareArtifact-upload`
-	 * :ref:`mySoftwareExportStatus-get`
-	 * :ref:`mySoftwareExport-delete`
-	 * :ref:`mySoftwareExport-download`
-	 * :ref:`mySoftwareLicense-delete`
-	 * :ref:`mySoftwareLicense-download`
+	 * :ref:`mySoftwareArtifact-addChild`
 	 * :ref:`mySoftwareLicense-upload`
 	 * :ref:`mySoftwareLicense-uploadFile`
-	 * :ref:`mySoftwareLogo-delete`
+	 * :ref:`mySoftwareLicense-download`
+	 * :ref:`mySoftwareLicense-delete`
 	 * :ref:`mySoftwareLogo-download`
 	 * :ref:`mySoftwareLogo-downloadFile`
 	 * :ref:`mySoftwareLogo-upload`
-	 * :ref:`mySoftwareOs-getAll`
-	 * :ref:`mySoftwareRestrictionOs-getAll`
-	 * :ref:`mySoftwareRestriction-add`
-	 * :ref:`mySoftwareRestriction-delete`
-	 * :ref:`mySoftwareRestriction-deleteAll`
-	 * :ref:`mySoftwareRestriction-get`
-	 * :ref:`mySoftwareRestriction-getAll`
-	 * :ref:`mySoftwareRestriction-update`
-	 * :ref:`mySoftwareUsage-getAll`
-	 * :ref:`mySoftware-clone`
-	 * :ref:`mySoftware-create`
-	 * :ref:`mySoftware-delete`
+	 * :ref:`mySoftwareLogo-delete`
 	 * :ref:`mySoftware-export`
-	 * :ref:`mySoftware-get`
-	 * :ref:`mySoftware-getAll`
-	 * :ref:`mySoftware-update`
+	 * :ref:`mySoftwareExport-delete`
+	 * :ref:`mySoftwareExport-download`
+	 * :ref:`mySoftwareExportStatus-get`
 	 * :ref:`softwareBundleImport-get`
-	 * :ref:`softwareartifact-object`
-	 * :ref:`softwarebundleImportStatus-get`
-	 * :ref:`softwarebundleImport-upload`
 	 * :ref:`softwarebundle-import`
+	 * :ref:`softwarebundleImport-upload`
+	 * :ref:`softwarebundleImportStatus-get`

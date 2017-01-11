@@ -42,7 +42,7 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`distribution-object`
+	 * :ref:`distribprofile-object`
 	 * :ref:`osAccess-update`
 	 * :ref:`osLicense-download`
 	 * :ref:`osLogo-download`

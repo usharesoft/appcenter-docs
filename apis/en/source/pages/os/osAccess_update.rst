@@ -46,7 +46,7 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`distribution-object`
+	 * :ref:`distribprofile-object`
 	 * :ref:`osLicense-download`
 	 * :ref:`osLogo-download`
 	 * :ref:`osLogo-downloadFile`

@@ -52,6 +52,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`disks-object`
 	* :ref:`distribprofile-object`
 	* :ref:`distribprofiles-object`
+	* :ref:`distribprofiletemplate-object`
+	* :ref:`distribprofiletemplates-object`
 	* :ref:`distribution-object`
 	* :ref:`distributions-object`
 	* :ref:`entitlement-object`
@@ -75,8 +77,6 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`ipaddress-object`
 	* :ref:`license-object`
 	* :ref:`licenses-object`
-	* :ref:`linuxprofile-object`
-	* :ref:`linuxprofiles-object`
 	* :ref:`localizedmessage-object`
 	* :ref:`logicalgroup-object`
 	* :ref:`logicalgroups-object`
@@ -180,8 +180,6 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`users-object`
 	* :ref:`userstats-object`
 	* :ref:`votestat-object`
-	* :ref:`windowsprofile-object`
-	* :ref:`windowsprofiles-object`
 	* :ref:`winmsiapplication-object`
 	* :ref:`winmsiapplications-object`
 	* :ref:`winstoreapplication-object`
@@ -240,6 +238,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     Disks
     DistribProfile
     DistribProfiles
+    DistribProfileTemplate
+    DistribProfileTemplates
     Distribution
     Distributions
     Entitlement
@@ -263,8 +263,6 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     IPAddress
     License
     Licenses
-    LinuxProfile
-    LinuxProfiles
     LocalizedMessage
     LogicalGroup
     LogicalGroups
@@ -368,8 +366,6 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     Users
     UserStats
     VoteStat
-    WindowsProfile
-    WindowsProfiles
     WinMsiApplication
     WinMsiApplications
     WinStoreApplication

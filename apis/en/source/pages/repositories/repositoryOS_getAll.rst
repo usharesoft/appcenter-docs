@@ -45,10 +45,10 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`distribprofile-object`
 	 * :ref:`repository-object`
-	 * :ref:`repositoryOS-getAll`
+	 * :ref:`distribprofile-object`
+	 * :ref:`repository-getAll`
 	 * :ref:`repository-create`
 	 * :ref:`repository-delete`
-	 * :ref:`repository-getAll`
 	 * :ref:`repository-update`
+	 * :ref:`repositoryOS-getAll`

@@ -57,6 +57,6 @@ Example of representation.xml content (the request body):
 
 .. seealso::
 
-	 * :ref:`role-object`
 	 * :ref:`rolesandentitlements-api-resources`
+	 * :ref:`role-object`
 	 * :ref:`userRoles-getAll`

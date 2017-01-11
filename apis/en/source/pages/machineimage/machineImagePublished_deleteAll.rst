@@ -44,25 +44,25 @@ Example Request
 .. seealso::
 
 	 * :ref:`appliance-object`
-	 * :ref:`machineImageGeneration-cancel`
-	 * :ref:`machineImagePublish-cancel`
-	 * :ref:`machineImagePublishedStatus-get`
-	 * :ref:`machineImagePublishedStatus-getAll`
-	 * :ref:`machineImagePublished-delete`
-	 * :ref:`machineImagePublished-deleteAll`
-	 * :ref:`machineImagePublished-download`
-	 * :ref:`machineImagePublished-get`
-	 * :ref:`machineImagePublished-getAll`
-	 * :ref:`machineImageStatus-get`
-	 * :ref:`machineImageStatus-getAll`
-	 * :ref:`machineImage-delete`
+	 * :ref:`publishimage-object`
 	 * :ref:`machineImage-deleteAll`
+	 * :ref:`machineImage-delete`
 	 * :ref:`machineImage-download`
 	 * :ref:`machineImage-downloadFile`
 	 * :ref:`machineImage-generate`
+	 * :ref:`machineImage-publish`
 	 * :ref:`machineImage-get`
 	 * :ref:`machineImage-getAll`
-	 * :ref:`machineImage-publish`
-	 * :ref:`machineImage-publish`
 	 * :ref:`machineImage-regenerate`
-	 * :ref:`publishimage-object`
+	 * :ref:`machineImageGeneration-cancel`
+	 * :ref:`machineImageStatus-getAll`
+	 * :ref:`machineImageStatus-get`
+	 * :ref:`machineImagePublish-cancel`
+	 * :ref:`machineImagePublished-get`
+	 * :ref:`machineImagePublished-getAll`
+	 * :ref:`machineImagePublished-delete`
+	 * :ref:`machineImagePublished-deleteAll`
+	 * :ref:`machineImagePublished-download`
+	 * :ref:`machineImagePublishedStatus-get`
+	 * :ref:`machineImagePublishedStatus-getAll`
+	 * :ref:`machineImage-publish`

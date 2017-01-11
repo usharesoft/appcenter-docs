@@ -47,10 +47,10 @@ Example Request
 .. seealso::
 
 	 * :ref:`appliance-object`
-	 * :ref:`applianceImportStatus-get`
-	 * :ref:`applianceImport-delete`
+	 * :ref:`applianceimport-object`
+	 * :ref:`appliance-import`
 	 * :ref:`applianceImport-get`
 	 * :ref:`applianceImport-getAllStatus`
 	 * :ref:`applianceImport-upload`
-	 * :ref:`appliance-import`
-	 * :ref:`applianceimport-object`
+	 * :ref:`applianceImportStatus-get`
+	 * :ref:`applianceImport-delete`

@@ -44,11 +44,11 @@ Example Request
 
 .. seealso::
 
+	 * :ref:`org-object`
 	 * :ref:`category-object`
-	 * :ref:`categoryChild-create`
 	 * :ref:`category-create`
+	 * :ref:`categoryChild-create`
 	 * :ref:`category-delete`
 	 * :ref:`category-deleteAll`
 	 * :ref:`category-get`
 	 * :ref:`category-update`
-	 * :ref:`org-object`

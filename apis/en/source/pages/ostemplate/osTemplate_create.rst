@@ -14,9 +14,9 @@ osTemplate_create
 	* Response Formats: ``application/xml`` ``application/json``
 	* Since: ``UForge 3.6``
 
-Creates a new OS template for an operating system.  An ``OS template`` groups together packages from the operating system that can be re-used in as an ``OS profile`` when creating and managing ``appliances``. 
+Creates a new OS template for an operating system.  An ``OS template`` groups together packages from the operating system that can be re-used in as an ``OS profile`` when creating an managing ``appliances``. 
 
-Please refer to :ref:`distribprofile-object` for a complete list of all the ``OS template`` attributes.
+Please refer to :ref:`distribprofiletemplate-object` for a complete list of all the ``OS template`` attributes.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -27,12 +27,12 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``id`` (required): the id of the :ref:`distribution-object`
+* ``id`` (required): the id of the :ref:`distribprofile-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A :ref:`distribProfile-object` object
+A :ref:`distribProfileTemplate-object` object
 
 Example Request
 ~~~~~~~~~~~~~~~
@@ -46,21 +46,20 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:distribProfile xmlns:ns0="http://www.usharesoft.com/uforge">
+	<ns0:distribProfileTemplate xmlns:ns0="http://www.usharesoft.com/uforge">
 		<description>This distribution contains the minimal amount of services</description>
 		<name>Template Example</name>
-	</ns0:distribProfile>
+	</ns0:distribProfileTemplate>
 
 
 .. seealso::
 
+	 * :ref:`distribprofile-object`
+	 * :ref:`distribprofiletemplate-object`
 	 * :ref:`appliance-object`
 	 * :ref:`distribprofile-object`
-	 * :ref:`distribution-object`
-	 * :ref:`linuxprofile-object`
-	 * :ref:`osTemplatePkgs-get`
-	 * :ref:`osTemplate-delete`
-	 * :ref:`osTemplate-get`
 	 * :ref:`osTemplate-getAll`
+	 * :ref:`osTemplate-get`
+	 * :ref:`osTemplatePkgs-get`
 	 * :ref:`osTemplate-update`
-	 * :ref:`windowsprofile-object`
+	 * :ref:`osTemplate-delete`

@@ -51,33 +51,26 @@ Example Request
 .. seealso::
 
 	 * :ref:`project-object`
-	 * :ref:`projectArtifact-addChild`
-	 * :ref:`projectArtifact-addOrRemoveFileFromCache`
+	 * :ref:`softwareartifact-object`
+	 * :ref:`project-create`
+	 * :ref:`project-getAll`
+	 * :ref:`project-get`
+	 * :ref:`project-delete`
+	 * :ref:`project-update`
+	 * :ref:`projectOs-getAll`
 	 * :ref:`projectArtifact-create`
-	 * :ref:`projectArtifact-createFromRemoteServer`
-	 * :ref:`projectArtifact-delete`
-	 * :ref:`projectArtifact-deleteAll`
-	 * :ref:`projectArtifact-downloadFile`
-	 * :ref:`projectArtifact-get`
 	 * :ref:`projectArtifact-getAll`
-	 * :ref:`projectArtifact-update`
+	 * :ref:`projectArtifact-get`
 	 * :ref:`projectArtifact-updateAll`
+	 * :ref:`projectArtifact-update`
 	 * :ref:`projectArtifact-upload`
-	 * :ref:`projectLogo-delete`
+	 * :ref:`projectArtifact-deleteAll`
+	 * :ref:`projectArtifact-delete`
+	 * :ref:`projectArtifact-downloadFile`
+	 * :ref:`projectArtifact-createFromRemoteServer`
+	 * :ref:`projectArtifact-addOrRemoveFileFromCache`
+	 * :ref:`projectArtifact-addChild`
 	 * :ref:`projectLogo-download`
 	 * :ref:`projectLogo-downloadFile`
 	 * :ref:`projectLogo-upload`
-	 * :ref:`projectOs-getAll`
-	 * :ref:`projectRestrictionOs-getAll`
-	 * :ref:`projectRestriction-add`
-	 * :ref:`projectRestriction-delete`
-	 * :ref:`projectRestriction-deleteAll`
-	 * :ref:`projectRestriction-get`
-	 * :ref:`projectRestriction-getAll`
-	 * :ref:`projectRestriction-update`
-	 * :ref:`project-create`
-	 * :ref:`project-delete`
-	 * :ref:`project-get`
-	 * :ref:`project-getAll`
-	 * :ref:`project-update`
-	 * :ref:`softwareartifact-object`
+	 * :ref:`projectLogo-delete`

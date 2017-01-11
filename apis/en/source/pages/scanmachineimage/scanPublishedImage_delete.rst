@@ -46,17 +46,17 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`machinescan-api-resources`
-	 * :ref:`machinescaninstance-api-resources`
+	 * :ref:`scannedinstance-object`
 	 * :ref:`scan-object`
-	 * :ref:`scanImageGenerationStatus-get`
+	 * :ref:`machinescaninstance-api-resources`
+	 * :ref:`machinescan-api-resources`
+	 * :ref:`scanImage-generate`
+	 * :ref:`scanImage-getAll`
+	 * :ref:`scanImage-get`
 	 * :ref:`scanImageGeneration-cancel`
 	 * :ref:`scanImageGeneration-delete`
-	 * :ref:`scanImage-generate`
-	 * :ref:`scanImage-get`
-	 * :ref:`scanImage-getAll`
+	 * :ref:`scanImageGenerationStatus-get`
 	 * :ref:`scanImage-publish`
+	 * :ref:`scanPublishedImage-get`
 	 * :ref:`scanPublishedImageStatus-get`
 	 * :ref:`scanPublishedImage-cancel`
-	 * :ref:`scanPublishedImage-get`
-	 * :ref:`scannedinstance-object`

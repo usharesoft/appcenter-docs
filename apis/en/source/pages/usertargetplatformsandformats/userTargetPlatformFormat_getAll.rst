@@ -47,10 +47,10 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`imageformat-object`
 	 * :ref:`targetformat-api-resources`
-	 * :ref:`targetformat-object`
 	 * :ref:`targetplatform-api-resources`
+	 * :ref:`imageformat-object`
+	 * :ref:`targetformat-object`
 	 * :ref:`targetplatform-object`
 	 * :ref:`userFormats-getAll`
 	 * :ref:`userFormats-update`

@@ -43,14 +43,14 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`subscriptionProfileAdmins-update`
-	 * :ref:`subscriptionProfileOS-update`
-	 * :ref:`subscriptionProfileQuotas-update`
-	 * :ref:`subscriptionProfileRoles-update`
-	 * :ref:`subscriptionProfileTargetFormat-update`
-	 * :ref:`subscriptionProfileTargetPlatform-update`
+	 * :ref:`subscriptionprofile-object`
 	 * :ref:`subscriptionProfile-create`
 	 * :ref:`subscriptionProfile-getAll`
-	 * :ref:`subscriptionProfile-remove`
 	 * :ref:`subscriptionProfile-update`
-	 * :ref:`subscriptionprofile-object`
+	 * :ref:`subscriptionProfile-remove`
+	 * :ref:`subscriptionProfileOS-update`
+	 * :ref:`subscriptionProfileAdmins-update`
+	 * :ref:`subscriptionProfileRoles-update`
+	 * :ref:`subscriptionProfileQuotas-update`
+	 * :ref:`subscriptionProfileTargetFormat-update`
+	 * :ref:`subscriptionProfileTargetPlatform-update`

@@ -67,7 +67,7 @@ Bug Fixes
 * 6515 CentOS 6 images can be accessed with SSH on K5
 * 6513 Validation for K5 publish view is not properly handled
 * 6511 Launching uforge-scan.exe from command prompt still fails if the file path includes Japanese characters
-* 6507 The ``uforge-install-config`` binary for windows does not start because ``uforge-install-profile-1-1.noarch.zip``does not contain the correct directory structure.
+* 6507 The ``uforge-install-config`` binary for windows does not start because ``uforge-install-profile-1-1.noarch.zip`` does not contain the correct directory structure.
 * 6505 The ``no_console`` file is not created for Windows.
 * 6504 Problem with OpenDJ port 4444 usage in several UForge config scripts
 * 6503 The ``uforge.conf.ORIG`` contains plain passwords with very weak permission

@@ -57,7 +57,7 @@ To add a new project:
 
 		.. image:: /images/create-project-files.png
 
-		If you want to include files from a remote location click on ``pull`. Select how the file should be retrieved and if it should be cached.
+		If you want to include files from a remote location click on ``pull``. Select how the file should be retrieved and if it should be cached.
 
 		.. image:: /images/create-project-file-pull.png
 

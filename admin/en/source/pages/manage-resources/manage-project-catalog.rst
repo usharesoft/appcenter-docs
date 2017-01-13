@@ -27,37 +27,57 @@ To add a new project:
 
 	2. If you are an administrator to more than one organization, then you can choose the organization to administer from the drop-down menu.
 
-	3. Projects are associated with a specific version of operating system. Click on the operating system you want to create a project for.  This will provide the current list of projects this operating system has. 
+	3. Click on ``add project`` in the top right hand. 
 
-		.. note:: If a project supports more than one version of operating system, then you must re-create a new project for each operating system version. To automate the way projects are added and maintained, use the UForge APIs (for example to add the same project to multiple operating systems). 
+		.. note:: Projects are associated with a specific version of operating system. If a project supports more than one version of operating system, then you must re-create a new project for each operating system version. To automate the way projects are added and maintained, use the UForge APIs (for example to add the same project to multiple operating systems). 
 
-	4. Click the ``create`` button in the ``Projects`` section of the page.
-
-		Fill in the mandatory information including:
+	4. Fill in the mandatory information including:
 
 			* Name of the project
-			* Version of the project
+			* Version
 			* Project tag
 			* Category
-			* License type.  Note if the software has a proprietary license, then choose ``Custom``. This allows you to upload a custom license
-			* Company information. All previous custom companies registered for projects are provided in the list. If the company of the project does not yet exist, choose any existing company and edit it afterwards.
+			* Maintainer
 
-		.. image:: /images/create-project.png
+		.. image:: /images/create-project2.png
 
 	5. Click ``create``.
 
-	6. Enter a description.
-
-	7. Optionally, you can add the following meta-data:
+	6. Optionally, you can add the following meta-data on the ``Overview`` tab:
 	
 		* a logo for the project
 		* website information of where the project came from
-		* in the case of a Custom license, upload the license file (HTML or text files)
-		* set the default install path
+		* description
 
-		You can upload the software files that are required by the project. Files can be binaries, text files, jar files etc. The administrator can also choose native packages from the operating system itself to be part of the project.
+	7. You can (optionally) restrict the distributions that the project applies to. On the ``Restrictions`` page select the distribution from the bottom list and click the upward arrow. Click ``save``.
+
+		.. image:: /images/create-project-restrictions.png
+
+	8. You can add files by clicking ``upload``. If you want to add many files, you can create a folder and add files within the folder.
+
+		.. image:: /images/create-project-files.png
+
+		If you want to include files from a remote location click on ``pull`. Select how the file should be retrieved and if it should be cached.
+
+		.. image:: /images/create-project-file-pull.png
+
+	9. You can add a license (optional). To do so, 
+
+		a. Go to the ``License`` tab
+		b. Select the license type from the drop-down menu.
+		c. Click ``upload``.
+		d. Select the file and click ``open``.
+
+	10. You can add a bootscript (optional) on the ``Bootscript`` tab. 
+
+		a. Enter the name.
+		b. Select the type. If you select first boot, then the boot script will be launched once the first time the instance is launched. If you select every boot, then the boot script will be launched every time the instance is rebooted. 
+		c. Set the boot order.
+		d. Enter the boot script.
+
+		.. image:: /images/create-project-bootscript.png
 	
-	8. Click ``Save``.
+	11. Click ``Save``.
 
 .. _update-project:
 

@@ -3,7 +3,7 @@
 Managing Your Accounts
 ======================
 
-The ``Profile`` tab and ``Crendentials`` tab allow you to modify a large number of your personal details, including your password, Cloud Account information, API Keys and SSH keys.  
+The ``Profile`` tab on the left-hand sidebar allows you to modify a large number of your personal details, including your password.  
 
 The following sub-sections go into detail on how to manage your account information:
 
@@ -11,8 +11,4 @@ The following sub-sections go into detail on how to manage your account informat
    :titlesonly:
 
    user-profile
-   user-cloud-accounts
-   user-artifact-account
-   user-apikeys
-   user-sshkeys
    user-password

@@ -15,6 +15,7 @@ Contents:
    pages/migration/overview
    pages/collaboration/overview
    pages/myaccount/overview
+   pages/credentials/overview
    
    pages/apis/using-apis
    pages/apis/using-java-sdk

@@ -24,7 +24,7 @@ To export an existing appliance:
 
 	.. image :: /images/exporting-appliance.png
 
-	4. Once the export is complete, you will be prompted to download the archive file
+	4. Once the export is complete, you will be prompted to download the archive file.
 
 	.. image :: /images/export-download.png
 

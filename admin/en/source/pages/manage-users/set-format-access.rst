@@ -16,8 +16,8 @@ Adding Formats Using Subscription Profile
 
 To add access to a format to a group of users, you can add it as part of a subscription profile. This means that all the users that are created with this subscription profile will have access to the format. You cannot add access to a format that is not included in the organization. In order to force the changes to apply to all users (even those already created), use the option ``--allusers``. For a list of formats that are part of the organization, use the command:
 
-	* ``org targetformat list``
-	* ``org targetplatform list``
+	* ``uforge org targetformat list``
+	* ``uforge org targetplatform list``
 
 Therefore, in order to add formats using the subscription profile, run the following command. For example::
 
@@ -33,8 +33,8 @@ Adding Formats to a Specific User
 
 To add access to a format for a specific user,  you must follow these steps:
 
-	1. Ensure the target format exists for the organization. For a list of formats that are part of the organization, use the command ``org targetformat list``. 
-	2. Enable the format for the user using ``user targetformat enable``.
+	1. Ensure the target format exists for the organization. For a list of formats that are part of the organization, use the command ``uforge org targetformat list``. 
+	2. Enable the format for the user using ``uforge user targetformat enable``.
 
 
 Enabling Access to a Format
@@ -57,7 +57,7 @@ You would use the following command:
 
 .. code-block:: shell
 
-	$ user targetformat disable --targetFormats "OpenStack VHD" --account kermit --url https://uforge.usharesoft.com:443 -u $ADMIN -p $PASS
+	$ uforge user targetformat disable --targetFormats "OpenStack VHD" --account kermit --url https://uforge.usharesoft.com:443 -u $ADMIN -p $PASS
 
 
 Disabling User Access to Formats
@@ -67,5 +67,5 @@ To disable access to one or more formats for a specific user  (in this example â
 
 .. code-block:: shell
 
-	$ user targetformat disable --targetformats "OVF or OVA" QCOW2 VirtualBox --account kermit --url https://uforge.usharesoft.com:443 -u $ADMIN -p $PASS
+	$ uforge user targetformat disable --targetformats "OVF or OVA" QCOW2 VirtualBox --account kermit --url https://uforge.usharesoft.com:443 -u $ADMIN -p $PASS
 	

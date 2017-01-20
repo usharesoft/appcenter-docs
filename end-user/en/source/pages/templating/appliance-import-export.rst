@@ -35,15 +35,17 @@ Importing
 
 To import an archive:
 
-	1. Go to your ``Appliance Library`` 
+	1. Go to your ``Appliance Library``. 
 
-	2. Click on the ``import`` button at the top right hand side of the view
+	2. Click on the ``import`` button at the top right hand side of the view.
 
 	.. image :: /images/import-appliance.png
 
-	3. This opens up a file browser, choose the archive to upload
+	3. A number of options are proposed. Select the method of import and click the folder icon to select the archive to import.
 
-	4. This will start the import process.  
+	.. image :: /images/import-options2.png
+
+	4. Click ``import``. This will start the import process. The import progress will be shown.  
 
 	.. image :: /images/importing-appliance.png
 

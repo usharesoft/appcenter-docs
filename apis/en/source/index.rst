@@ -1,4 +1,4 @@
-.. Copyright 2016 FUJITSU LIMITED
+.. Copyright 2017 FUJITSU LIMITED
 
 Welcome to UForge AppCenter REST APIs Documentation
 ===================================================
@@ -80,7 +80,7 @@ UNIX is a registered trademark of the Open Group in the United States and in oth
 
 Other company names and product names are trademarks or registered trademarks of their respective owners.
 
-Copyright FUJITSU LIMITED 2016
+Copyright FUJITSU LIMITED 2017
 ==============================
 
 All rights reserved, including those of translation into other languages. No part of this manual may be reproduced

@@ -1,4 +1,4 @@
-.. Copyright 2016 FUJITSU LIMITED
+.. Copyright 2017 FUJITSU LIMITED
 
 .. _scanFile-getAll:
 

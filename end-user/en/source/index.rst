@@ -1,4 +1,4 @@
-.. Copyright 2016 FUJITSU LIMITED
+.. Copyright 2017 FUJITSU LIMITED
 
 Welcome to the UForge AppCenter User Documentation
 ==================================================
@@ -47,7 +47,7 @@ MySQL and the MySQL logo are the servicemarks, trademarks, or registered tradema
 
 Other company names and product names are trademarks or registered trademarks of their respective owners.
 
-Copyright FUJITSU LIMITED 2016
+Copyright FUJITSU LIMITED 2017
 ==============================
 
 All rights reserved, including those of translation into other languages. No part of this manual may be reproduced

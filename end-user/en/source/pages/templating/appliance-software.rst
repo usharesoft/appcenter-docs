@@ -65,7 +65,7 @@ To add custom software components to an appliance:
 	4. The software ``Overview`` page will now open. You can modify the name and version, and add a description.
 	5. To upload the files, go to the ``Files`` page. 
 
-		.. image:: /images/adding-mysoftware-MSO.png
+		.. image:: /images/adding-mysoftware-MSO2.png
 
 	.. note:: If you want to group a set of files, you can create a folder by clicking ``create folder``. Then enter a folder name and click ``create folder``. Now if you want to put files in this folder, click on the upload icon next to the folder name.
 
@@ -97,7 +97,7 @@ To add custom software components to an appliance:
 
 		.. image:: /images/extract-mysoftware.png
 
-	9. From the ``Distribution`` page, you can set the distributions with which your software is compatible. By default, all the distributions listed in the bottom table are compatible. If you want to remove a distribution from the list, select and click the up arrow and ``save``. 
+	9. From the ``Restriction`` page, you can set the distributions with which your software is compatible. By default, all the distributions listed in the bottom table are compatible. If you want to remove a distribution from the list, select and click the up arrow and ``save``. 
 
 		.. note:: If you remove all the distribution compatibility, the software will not be visible for any appliances.
 

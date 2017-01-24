@@ -76,12 +76,9 @@ To carry out a scan, go to the ``Migration`` tab:
 	1. Click on ``scan`` in the top right.
 	2. Enter a name for the scan of the target system you want to migrate.
 	3. Select ``Windows`` from the drop-down menu and click next.
-	4. Select the method you want to use:
+	4. Select if you want to use the graphical user interface or the command line. Follow the instructions on the pop-up to download the scan binary.
 
-		- If you choose the graphical interface, a pop up will indicate the partition being scanned and time left.
-		- If you choose to download the command line, you will download a zip file which you can then launch as indicated.
-
-		.. image:: /images/migration-windows-scan-options.png
+		.. image:: /images/migration-windows-scan-options2.png
 
 	5. You can then launch the scan. The following image illustrates a windows scan with all of the possible options checked. They are described in the following steps.
 

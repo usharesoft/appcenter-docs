@@ -45,6 +45,7 @@ When you carry out black box migration (by generating a machine image directly f
 				* Uninstall VMWare Tools (if installed).
 				* Retrieve Transport Agent Software from `K5 Support <mailto:FCSK5_GSD@ph.fujitsu.com>`_.
 				* Install Transport Agent Software.
+                                * Disable NLA for RDP (`How to do it <http://www.parallels.com/blogs/ras/disabling-network-level-authentication-for-remote-desktop-services-connections-2/>`_).
 				* Uninstall CloudBase-Init (if installed).
 
 				For more detailed information, please refer to `official Fujitsu K5 IaaS Documentation <http://www.fujitsu.com/uk/Images/k5-iaas-features-handbook.pdf>`_.

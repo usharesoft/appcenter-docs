@@ -24,7 +24,7 @@ To create a new Golden Image, you will need to:
 
                 * Retrieve Transport Agent Software from `K5 Support <mailto:FCSK5_GSD@ph.fujitsu.com>`_.
                 * Install Transport Agent Software.
-                * Disable NLA for RDP (Please refer to `official Microsoft documentation <https://technet.microsoft.com/en-us/library/cc732713(v=ws.11).aspx/>`_).
+                * Disable NLA for RDP (Please refer to official Microsoft documentation `Configure Network Level Authentication for Remote Desktop Services Connections <https://technet.microsoft.com/en-us/library/cc732713(v=ws.11).aspx/>`_).
 
                 For more detailed information, please refer to `official Fujitsu K5 IaaS Documentation <http://www.fujitsu.com/uk/Images/k5-iaas-features-handbook.pdf>`_.
 

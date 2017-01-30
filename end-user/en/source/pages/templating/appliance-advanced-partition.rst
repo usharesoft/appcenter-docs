@@ -61,6 +61,8 @@ To set advanced partitioning for an appliance template:
 		* LogVolTMP	ext4		/tmp	1024
 		* LogVolOPT	ext4		/opt	1024
 
+	.. note:: Image generation will fail when migrating if the volume group name set in the Partitioning Table is the same as the name of LVM volume group in UForge server.
+
 	14. Click ``Save``.
 
 .. _appliance-install-profile-partitioning-windows:

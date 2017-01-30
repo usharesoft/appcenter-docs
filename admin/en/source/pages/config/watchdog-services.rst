@@ -83,7 +83,7 @@ Also, if a repository the platform is connected to deletes packages (e.g. becaus
 
 ``05 * * * * /opt/UShareSoft/uforge/cron/update_repos_local_cache.sh``
 
-Since UForge 3.5.1, the UForge platform does not download all the packages from all the repositories listed. Instead, only the necessary packages are downloaded "on demand". 
+The UForge platform does not download all the packages from all the repositories listed. Instead, only the necessary packages are downloaded "on demand". 
 
 In the case of repositories that remove packages (because of newer packages), it is important to be able to reproduce a machine image with the same packages even though these packages no longer exist on the remote repository.
 
@@ -93,7 +93,7 @@ It is important to execute regularly if the repositories use removed packages.
 
 On extremely large platforms, it could take time and be IO-intensive.
 
-If this command fails, usually it will only have an impact several days later (depending on the removing-package-repo policy with package removal). For example, if you generate a machine image with a sticky package version 1.2.3 on NTP. Let's consider NTP is on a repository that removes packages. You generate a machine image and NTP gets downloaded. update_repos_local_cache.sh. You generate the machine image again. No issue. Three days later, 1.2.4 version is released and 1.2.3 is removed from the remote repository. In that case, you will no longer be able to generate as the package in not in the remote repository, nor in the cache.
+If this command fails, usually it will only have an impact several days later (depending on the removing-package-repo policy with package removal). For example, if you generate a machine image with a pinned package version 1.2.3 on NTP. Let's consider NTP is on a repository that removes packages. You generate a machine image and NTP gets downloaded. update_repos_local_cache.sh. You generate the machine image again. No issue. Three days later, 1.2.4 version is released and 1.2.3 is removed from the remote repository. In that case, you will no longer be able to generate as the package in not in the remote repository, nor in the cache.
 
 ``1 8 * * * /opt/UShareSoft/uforge/cron/drop_caches.sh``
 

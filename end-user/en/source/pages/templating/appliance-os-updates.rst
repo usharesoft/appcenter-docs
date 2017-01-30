@@ -52,22 +52,22 @@ In order to benefit from a newer version of Windows, you will have to:
 
 .. _appliance-pkg-updates-sticky:
 
-Making Packages "Sticky"
-~~~~~~~~~~~~~~~~~~~~~~~~
+Pinning Packages
+~~~~~~~~~~~~~~~~
 
-UForge allows you to select certain packages as "sticky". This means that during image generation, this package version is chosen regardless of the current appliance template timestamp for calculating package versions.  All the package dependencies of this package are also calculated.
+UForge allows you to "pin" certain packages in your appliance (previously refered to a "sticky" package). This means that during image generation, the package version you have pinned is chosen regardless of the current appliance template timestamp for calculating package versions.  All the package dependencies of this package are also calculated.
 
-To make a specific package "sticky":
+To pin a specific package:
 
 	1. Select the appliance you want to modify.
 	2. Go to the ``Stack`` page.
-	3. From the ``OS profile``, click on ``sticky`` in the right hand side of the package info. The ``sticky`` button will only be visible when you scroll over this part the page. In the following image, the first package has ``sticky`` in blue because it has been applied. The second one in light blue has not yet been applied.
+	3. From the ``OS profile``, click on the ``pinned`` bar in the right hand side of the package info. In the following image, the first package has been pinned and the bar is darker. 
 
-		.. image:: /images/os-profile-sticky.png
+		.. image:: /images/os-profile-pin.png
 
-	4. A pop-up window will list all of the versions of the package available, allowing you to select the version you want.
+	4. A pop-up window will list all of the versions of the package available, allowing you to select the version you want to pin.
 
-		.. image:: /images/os-profile-sticky-pkg-popup.png
+		.. image:: /images/os-profile-pin-pkg-popup.png
 
-	5. Choose the version of the package you would like, then click ``save``.
+	5. Choose the version of the package you want to pin, then click ``save``.
 

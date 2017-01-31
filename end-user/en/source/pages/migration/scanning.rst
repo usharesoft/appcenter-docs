@@ -60,6 +60,8 @@ To carry out a scan, go to the ``Migration`` tab:
 
 	11. To view the details of a scan, click on the scan and refer to :ref:`migration-view-scan`.
 
+.. note:: Image generation will fail when migrating if the source server has the same LVM volume group name as the UForge server's one. It will fail also if the volume group name set in the Partitioning Table is the same as the name of LVM volume group in UForge server.
+
 .. _migration-scan-windows:
 
 Scanning a Microsoft Windows Machine

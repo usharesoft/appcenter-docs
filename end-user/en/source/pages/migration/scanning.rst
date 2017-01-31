@@ -28,7 +28,6 @@ Scanning a Linux Machine
 
 .. warning:: When scanning a Linux machine, you have to check whether the licenses of OS and software which the source machine contains allow you to use them on the destination server which you are migrating to. For more detail, refer to :ref:`notes-on-licensing`.
 
-
 To carry out a scan, go to the ``Migration`` tab:
 
 	1. Click on ``scan`` in the top right.
@@ -61,6 +60,8 @@ To carry out a scan, go to the ``Migration`` tab:
 		Scans of typical simple target environments can last about 5 to 15 minutes. In the case of larger and more complex target environments, together with poorer bandwidth, one can experience durations of up to one hour.
 
 	11. To view the details of a scan, click on the scan and refer to :ref:`migration-view-scan`.
+
+.. note:: Image generation will fail when migrating if the source server has the same LVM volume group name as the UForge server's one. It will fail also if the volume group name set in the Partitioning Table is the same as the name of LVM volume group in UForge server.
 
 
 .. _migration-scan-windows:

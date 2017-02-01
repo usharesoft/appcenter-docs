@@ -49,6 +49,9 @@ To set advanced partitioning for an appliance template:
 	9. Click on the + sign to create a new partition with type ``lvm2`` and size set to ``18000 MB``.
 	10. Unselect ``Grow`` and set the size of the ``/boot`` disk to ``500``.
 	11. In the ``Logical Groups`` section, click on the + sign and set the name of the logical group. For this example: ``ROOTVG``.
+
+		.. note:: Image generation will fail when migrating if the volume group name set in the Partitioning Table is the same as the name of LVM volume group in UForge server.
+
 	12. Next to the newly created volume group, click on the + sign to create a new volume extent. A pop-up window will appear proposing a ``sda/2`` physical extent with size automatically set to ``18000 MB``. Click ``ok``.
 
 		.. image:: /images/install-profile-partitioning-enlarge.png

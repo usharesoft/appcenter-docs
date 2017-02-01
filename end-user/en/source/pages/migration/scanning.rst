@@ -21,6 +21,8 @@ Recommendations pre-scan:
 	* Custom packages on the live system to be scanned should not contain references to package dependencies as relative path. They should be expressed as absolute paths.
 	* If custom packages are installed using ``--nodeps`` flag, the scan process will not detect these packages. When carrying out white box migration, UForge AppCenter will check for these dependencies. If they are custom packages that are not on the live system, the generation will fail. Therefore, it is recommended to provide a custom repository with all the necessary custom packages. Otherwise, they can be added after the scan to the appliance template in ``My software``.
 
+	.. warning:: When scanning a Linux machine, you have to check whether the licenses of OS and software which the source machine contains allow you to use them on the destination server which you are migrating to. For more detail, refer to :ref:`notes-on-licensing`.
+
 .. _migration-scan-linux:
 
 Scanning a Linux Machine
@@ -62,6 +64,8 @@ To carry out a scan, go to the ``Migration`` tab:
 
 	11. To view the details of a scan, click on the scan and refer to :ref:`migration-view-scan`.
 
+.. note:: Image generation will fail when migrating if the source server has the same LVM volume group name as the UForge server's one. It will fail also if the volume group name set in the Partitioning Table is the same as the name of LVM volume group in UForge server.
+
 
 .. _migration-scan-windows:
 
@@ -99,5 +103,6 @@ To carry out a scan, go to the ``Migration`` tab:
 	10. Click ``scan`` to launch the scan. A report is sent to UForge AppCenter which can be used for migration. To view the progress, go back to the ``Migration`` tab and click ``ok``.
 
 	11. To view the details of a scan, click on the scan and refer to :ref:`migration-view-scan`.
+
 	
 

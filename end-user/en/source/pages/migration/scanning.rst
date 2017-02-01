@@ -48,6 +48,8 @@ To carry out a scan, go to the ``Migration`` tab:
 
 .. note:: The duration of the scan depends on: the power of the machine in the target environment, the complexity of the target environment OS (number of packages installed), the network bandwidth between the target environment and UForge. Scans of typical simple target environments can last about 5 to 15 minutes. In the case of larger and more complex target environments, together with poorer bandwidth, one can experience durations up to one hour.
 
+.. note:: Image generation will fail when migrating if the source server has the same LVM volume group name as the UForge server's one. It will fail also if the volume group name set in the Partitioning Table is the same as the name of LVM volume group in UForge server.
+
 .. _migration-scan-windows:
 
 Scanning a Windows Machine

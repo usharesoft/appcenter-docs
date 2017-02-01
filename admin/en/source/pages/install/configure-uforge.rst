@@ -7,6 +7,11 @@ Configuring UForge
 
 Once the installation is complete on all the nodes you wish to use for the UForge AppCenter, you are now ready to configure all the UForge AppCenter services.  This is done via the UForge Deployment Wizard that helps guide you through the final steps of the installation process.
 
+.. note:: The LVM VolGroup Name name should be unique. The default when installing UForge will have a format similar to ``vg_uss_150910-lv_uss_150910``. If your scanned instance has the same volume group name, or if you set up advanced partitioning with the same name, you will get an error when migrating.
+
+Launching Deployment Wizard
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 To launch the UForge Deployment Wizard, use your browser and go to one of the nodes that have been installed:
 
 	http://<ip address of the node>:9998/deployments

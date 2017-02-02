@@ -61,7 +61,7 @@ To make a specific package "sticky":
 
 	1. Select the appliance you want to modify.
 	2. Go to the ``Stack`` page.
-	3. From the ``OS profile``, click on ``sticky`` in the right hand side of the package info. The ``sticky`` button will only be visible when you scroll over this part the page. In the following image, the first package has ``sticky`` in blue because it has been applied. The second one in light blue has not yet been applied.
+	3. From the ``OS profile``, click on ``sticky`` in the right hand side of the package info. The ``sticky`` button will only be visible when you scroll over this part the page. In the following image, the first package has ``Sticky`` noted because a specific package version has been selected. 
 
 		.. image:: /images/os-profile-sticky.png
 

@@ -17,7 +17,7 @@ In order to interact with the official package repository, you must already have
 	UFORGE_PRODUCT_ACCESS_USER=username
 	UFORGE_PRODUCT_ACCESS_PASSWORD=password
 
-.. note:: You should never update the following file: ``/etc/yum.repo.d/uforge-ee-repo``
+.. warning:: You should never update the following file: ``/etc/yum.repo.d/uforge-ee-repo``
 
 The request to update uses these credentials via HTTPS to Fujitsu who then determines whether you have the access rights to update the platform.
 
@@ -28,6 +28,8 @@ You must also have set up the yum repo file to authorize UForge updates using co
 	$ /opt/UShareSoft/uforge/conf/configure_yum_repos.sh -u <uss account user> -p <uss account password> -t <uforge install type>
 
 The (optional) parameter <uforge install type> can take the values uforge-ee or uforge-dev. By default uforge-ee is used.
+
+.. note:: Before upgrading UForge, make sure that no cron jobs are running. For more information on cron jobs, refer to :ref:`watchdog-services`.
 
 To update the platform, use the "yum" command-line tool as follows:
 

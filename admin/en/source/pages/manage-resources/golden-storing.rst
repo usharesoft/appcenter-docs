@@ -2,14 +2,14 @@
 
 .. _store-updated-golden:
 
-Storing Golden Images
----------------------
+Storing Golden Images on the NAS
+--------------------------------
 
-Each time you have a new Golden Image, you need to store them in an appropriate location.
+Each time you have a new Golden Image, you need to store them in an appropriate NAS location.
 
 .. note:: To store the golden images (all profiles in one language) you will need about 40Gb of disk space on the UForge NAS.
 
-You can store your golden images in the location you choose, but will need to specify the full path when adding the golden to your UForge. We recommend you store the golden images in::
+You can store your golden images in the NAS location you choose, but will need to specify the full path when adding the golden to your UForge. We recommend you store the golden images in::
 
 	Base dir = Windows/releases/Server2008R2/x86_64/
 
@@ -76,6 +76,9 @@ To add your Golden Image to UForge:
 			* ``--edition`` Should be an official Microsoft Edition (Datacenter, Enterprise, Standard, Web)
 			* ``--goldenDate`` The date of the golden image (YYYY-MM-DD). If the option is not present, will be set to the date the command is run
 			* ``--goldenPath`` The full path where the golden image is stored.
+			* ``--name`` The distribution name (Windows)
+			* ``--version`` The OS version
+			* ``--arch`` The architecture
 			* ``--profileName`` The name of the profile, which will be visible in the user interface when creating a new Windows appliance. The name should be unique. If this option is not present, the name is generated automatically with the following info ``EDITION TYPE LANGUAGE``. So for example: ``Standard Full English``.
 
 		For example:

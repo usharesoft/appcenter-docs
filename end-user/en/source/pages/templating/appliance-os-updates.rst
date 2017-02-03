@@ -61,7 +61,7 @@ To pin a specific package:
 
 	1. Select the appliance you want to modify.
 	2. Go to the ``Stack`` page.
-	3. From the ``OS profile``, click on the ``pinned`` bar in the right hand side of the package info. In the following image, the first package has been pinned and the bar is darker. 
+	3. From the ``OS profile``, click on the ``pinned`` bar in the right hand side of the package info. In the following image, the first package has been pinned. 
 
 		.. image:: /images/os-profile-pin.png
 

@@ -115,7 +115,7 @@ To create a new Golden Image, you will need to:
 
 			$ gzip image.raw
 
-You can now save your golden image on the NAS.
+You can now save your golden image to the location you wish. This path will need to be specified when you add the golden images to your UForge.
 
 Example of Unattend File for Windows 2008R2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -100,5 +100,7 @@ To carry out a scan, go to the ``Migration`` tab:
 	10. Click ``scan`` to launch the scan. A report is sent to UForge AppCenter which can be used for migration. To view the progress, go back to the ``Migration`` tab and click ``ok``.
 
 	11. To view the details of a scan, click on the scan and refer to :ref:`migration-view-scan`.
+
+.. warning:: When scanning a Windows machine, if the Edition was set to any value other than the official MS editions (Datacenter, Enterprise, Standard, Web), the migration script will set the edition will be reset to "Standard" and a warning will appear in the uforge_update logs.
 	
 

@@ -2,14 +2,14 @@
 
 .. _store-updated-golden:
 
-Storing Golden Images on the NAS
---------------------------------
+Storing Golden Images
+---------------------
 
-Each time you have a new Golden Image, you need to store them in the right NAS location.
+Each time you have a new Golden Image, you need to store them in an appropriate location.
 
 .. note:: To store the golden images (all profiles in one language) you will need about 40Gb of disk space on the UForge NAS.
 
-The golden images should be stored in::
+You can store your golden images in the location you choose, but will need to specify the full path when adding the golden to your UForge. We recommend you store the golden images in::
 
 	Base dir = Windows/releases/Server2008R2/x86_64/
 
@@ -21,7 +21,6 @@ Where
 	* {Language} is one of ``English``, ``French`` or ``Japanese``
 	* {Edition} corresponds to an official edition name such as ``Datacenter``, ``Standard``, ``Enterprise`` or ``Web``
 	* {Type} is ``Full`` or ``Core``
-
 
 So for example:
 
@@ -70,13 +69,20 @@ To add your Golden Image to UForge:
 
 		.. code-block:: shell
 
-			$ uforge org golden create --name Windows --arch x86_64 --version Server2008R2 --edition Standard --goldenDate 2014-04-28 --language English --type Full --goldenName Windows_2008R2_English_Standard_Full_2014-04-28.raw.gz
+			$ org golden create --arch ARCH --edition EDITION --goldenDate GOLDENDATE --goldenPath GOLDENPATH --language LANGUAGE --type TYPE --name NAME --version VERSION --profileName PROFILENAME
 
-		.. note:: The parameters set when running ``org golden create`` should correspond to the path on the NAS, that is: {Language}/{Edition}/{Type}/{generation date}(YYYY-MM-DD)/goldenImagePathCompressedInGz
+		Where the following apply :
 
-		For example to install the golden image saved to the following path: ``Windows/releases/Server2008R2/x86_64/English/Standard/Full/2012-10-19/Windows_2008R2_Standard_Full_2012-10-19.raw.gz``, you need to run::
+			* ``--edition`` Should be an official Microsoft Edition (Datacenter, Enterprise, Standard, Web)
+			* ``--goldenDate`` The date of the golden image (YYYY-MM-DD). If the option is not present, will be set to the date the command is run
+			* ``--goldenPath`` The full path where the golden image is stored.
+			* ``--profileName`` The name of the profile, which will be visible in the user interface when creating a new Windows appliance. The name should be unique. If this option is not present, the name is generated automatically with the following info ``EDITION TYPE LANGUAGE``. So for example: ``Standard Full English``.
 
-		$ org golden create --name Windows --arch x86_64 --version Server2008R2 --language English --edition Standard --type Full --goldenDate 2012-10-19 --goldenName Windows_2008R2_Standard_Full_2012-10-19.raw.gz
+		For example:
+
+		.. code-block:: shell
+
+			$ uforge org golden create --name Windows --arch x86_64 --version Server2012 --edition Standard --goldenDate 2016-01-28 --language English --type Full --goldenPath /tmp/DISTROS/Windows/releases/WS2012.raw.gz --profileName StandardK5
 
 		.. warning:: When running ``uforge orge golden create`` you can use the --force flag. This force flag will allow you to overwrite an existing golden with the same name. The --force flag should be used with caution as the new changes will be applied for all appliances already using this golden image.
 

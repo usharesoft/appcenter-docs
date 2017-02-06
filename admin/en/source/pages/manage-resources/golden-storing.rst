@@ -73,3 +73,21 @@ To add your Golden Image to UForge:
 		For example to install the golden image saved to the following path: ``Windows/releases/Server2008R2/x86_64/English/Standard/Full/2012-10-19/Windows_2008R2_Standard_Full_2012-10-19.raw.gz``, you need to run::
 
 		$ org golden create --name Windows --arch x86_64 --version Server2008R2 --language English --edition Standard --type Full --goldenDate 2012-10-19 --goldenName Windows_2008R2_Standard_Full_2012-10-19.raw.gz
+
+.. _delete-golden:
+
+Deleting a Golden Image
+-----------------------
+
+In order to delete the golden image from your UForge, run the command ``org golden delete`` with the following arguments:
+
+*  ``--arch`` : The operating system architecture (i386, x86_64).
+*  ``--profileName`` : The name of the profile to delete
+*  ``--name`` : Operating system name
+*  ``--version`` : Operating system version
+
+For example :
+
+	.. code-block:: shell
+
+		$ uforge org golden delete --name Windows --arch x86_64 --version Server2012 --profileName Standard Full Edition

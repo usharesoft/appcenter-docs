@@ -29,7 +29,7 @@ To create a new Golden Image, you will need to:
                 For more detailed information, please refer to `official Fujitsu K5 IaaS Documentation <http://www.fujitsu.com/uk/Images/k5-iaas-features-handbook.pdf>`_.
 
 
-	4. Optionally, you can free several gigabytes of space by cleaning up windows updates installers.
+	4. Optionally, you can free several gigabytes of space by cleaning up Windows updates installers.
 
 		.. warning:: After this optimization you may not be able to uninstall some of the Windows updates.
 
@@ -115,7 +115,7 @@ To create a new Golden Image, you will need to:
 
 			$ gzip image.raw
 
-You can now save your golden image on the NAS.
+You can now save your golden image to the location you wish. This path will need to be specified when you add the golden images to your UForge.
 
 Example of Unattend File for Windows 2008R2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

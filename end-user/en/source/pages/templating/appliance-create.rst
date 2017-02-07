@@ -7,6 +7,8 @@ Creating an Appliance Template
 
 You can create either Linux-based or Windows-based appliance templates. The steps differ slightly. Please refer to the appropriate section below.
 
+.. _appliance-create-linux:
+
 Creating a Linux-based Appliance
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -29,28 +31,36 @@ To create a new appliance in your private workspace:
 
 .. note:: When you create an appliance, the packages are stored locally in the UForge cache repository. This ensures that the packages will always be available.
 
+.. _appliance-create-windows:
+
 Creating a Windows-based Appliance
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To create a Windows Appliance:
 
 	1. From the ``Apps`` tab, select ``create``.
-	2. Enter the appliance name.
-	3. Choose ``Windows`` from the OS Distribution drop down menu.
-	4. Click ``create``.
-	5. From the ``Stack`` page, select the OS Profile. Each version has a Core or Full release. Click ``save``.
+	2. Enter the appliance name and version.
+	3. Choose ``Windows`` from the OS Distribution drop-down menu.
+
+		.. image:: /images/create-appliance-windows.png
+
+	4. Select the Release and Architecture from the drop-down menus.
+	5. Click ``create``.
+	6. From the ``Stack`` page, select the OS Profile from the drop-down list under ``Profile name``. Click ``save``.
 
 		.. note:: Once you have chosen the OS Profile, you cannot add any packages or run updates. The OS Profile is static. Once created, if you select OS Profile, you will only be able to view the details of the profile you selected.  
 
-	6. Set the Install profile and click ``Save``.
+		.. image:: /images/create-appliance-windows-profile.png
+
+	7. Set the Install profile and click ``Save``.
 
 		.. note:: Unlike Linux, the following cannot be set for Windows appliances: Keyboard, Root user, User & Groups, Kernel Parameters and Firewall.  
 
 		.. image :: /images/windows-install.png
 
-	7. Optionally, you can set the Activation Key as part of the Install Profile. If it is not entered in the Install Profile, the default key will be used for a 30-day trial period once the appliance is booted.
+	8. Optionally, you can set the Activation Key as part of the Install Profile. If it is not entered in the ``Install Profile``, the default key will be used for a 30-day trial period once the appliance is booted.
 
-	8. Optionally you can add partitions.
+	9. Optionally you can add partitions.
 		a. Click on ``Partitioning`` and select ``Advanced Partitioning``.
 		b. Click on the green + sign at the top.
 		c. You can modify the name and partitions type
@@ -61,9 +71,9 @@ To create a Windows Appliance:
 
 		.. image :: /images/install-profile-partitioning-windows.png
 
-	9. Add software bundles from the Project or MySoftware pages.
+	10. Add software bundles from the ``Projects`` or ``MySoftware`` pages.
 
-		.. warning:: Software bundles included in MySoftware and Project will be put on the image disk but the UForge generation tool WILL NOT install them even if these are executable/installers files (.exe, .msi, etc.). It is up to the end user to manually complete the installation of the software bundles.
+		.. warning:: Software bundles included in ``MySoftware`` and ``Projects`` will be put on the image disk but the UForge generation tool WILL NOT install them even if these are executable/installers files (.exe, .msi, etc.). It is up to the end user to manually complete the installation of the software bundles.
 
 		For Windows, .exe or .msi files can be given extra parameters. The parameters depend on the .exe or .msi file, and can be used for example for silent installation, providing extra configuration values, etc.
 

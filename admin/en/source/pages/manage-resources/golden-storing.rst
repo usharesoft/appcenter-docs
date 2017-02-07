@@ -89,3 +89,20 @@ To add your Golden Image to UForge:
 
 		.. warning:: When running ``uforge org golden create`` you can use the ``--force`` flag. This force flag will allow you to overwrite an existing golden with the same name. The ``--force`` flag should be used with caution as the new changes will be applied for all appliances already using this golden image.
 
+.. _delete-golden:
+
+Deleting a Golden Image
+-----------------------
+
+In order to delete the golden image from your UForge, run the command ``org golden delete`` with the following arguments:
+
+*  ``--arch`` : The operating system architecture (i386, x86_64).
+*  ``--profileName`` : The name of the profile to delete
+*  ``--name`` : Operating system name
+*  ``--version`` : Operating system version
+
+For example :
+
+	.. code-block:: shell
+
+		$ uforge org golden delete --name Windows --arch x86_64 --version Server2012 --profileName Standard Full Edition

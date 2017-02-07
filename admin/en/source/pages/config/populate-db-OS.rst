@@ -72,9 +72,9 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 				Success: Created repository with url [http://vault.centos.org/6.5/os/x86_64/] to default organization
 
 		The ``–-name`` specified here is the “tagname” that will be shown in the UI when creating an appliance.
-		The ``--repoUrl`` can be either ``http://`` or ``file://``
+		The ``--repoUrl`` can be either ``http://`` or ``file://``.
 
-		Only use ``--officiallySupported`` for distributions that are part of the core distribution. For example, epel or vmwatools are not officially part of the distribution, therefore you should not use the variable ``--officiallySupported``.
+		..warning:: You must use the ``--officiallySupported`` flag for all officially supported OSes. If you do not include this argument the packages will not appear in the install profile of appliances built with the corresponding operating system. Do not use ``--officiallySupported`` for distributions that are part of the core distribution. For example, epel or vmwatools are not officially part of the distribution, therefore you should not use ``--officiallySupported`` when adding such repositories.
 
 		The syntax of the repoURL for Debian based OSes follows that of the sources.list file.
 

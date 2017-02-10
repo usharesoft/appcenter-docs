@@ -13,6 +13,13 @@ The entire migration process has 5 main steps.  These are:
 	4. The overlay archive is uncompressed, and the information is stored in the database as a ``Scan``.
 	5. The scan can be used to generate machine images (black box migration) or imported to create a new appliance template (white box migration). The generated machine image can then be published to the target environment and instances can be provisioned.
 
+In order to migrate a system, it must meet the following conditions:
+
+	* The operating system must be in one of the supported formats (refer to :ref:`uforge-supported-os-formats`). 
+	* The image formats must be in supported formats (refer to :ref:`supported-image-formats`)
+	* For Windows, the partition format must be NTFS
+	* For Windows, GPT is not supported.  Scanned Windows machine has to have MBR.
+
 .. _migration-process-scan-source:
 
 Scanning the Source Machine

@@ -73,9 +73,9 @@ The following is a list for all the distributions that can be used to create an 
 		* http://distros-repository.usharesoft.com/scientificlinux/6.6/x86_64/updates/fastbugs/
 		* http://distros-repository.usharesoft.com/scientificlinux/6.6/x86_64/updates/security/
 
-	``RedHat Enterprise Linux (example version 6.2)``
+	``RedHat Enterprise Linux``
 
-		* http://distros-repository.usharesoft.com/usharesoft/rhel/6.2/x86_64/
+		* You need to use your own repository.
 
 
 .. _populate-tool-repo:
@@ -110,10 +110,15 @@ The following is a list of specific UForge tool repositories that can be added. 
 
 		* http://distros-repository.usharesoft.com/usharesoft/ubuntu/ trusty main
 
+Examples for Adding RPM Type OSes
+---------------------------------
+
+The following sections give examples for adding CentOS and RedHat Enterprise Linux. They can be adjusted for your particular version, and are applicable to OpenSUSE and Scientific Linux.
+
 .. _populate-centos:
 
 Example for Adding CentOS
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following is a concrete example to begin the population of CentOS 6.5 64bit:
 
@@ -157,19 +162,6 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 
 		..warning:: You must use the ``--officiallySupported`` flag for all officially supported OSes. If you do not include this argument the packages will not appear in the install profile of appliances built with the corresponding operating system. Do not use ``--officiallySupported`` for distributions that are part of the core distribution. For example, epel or vmwatools are not officially part of the distribution, therefore you should not use ``--officiallySupported`` when adding such repositories.
 
-		The syntax of the repoURL for Debian based OSes follows that of the sources.list file.
-
-		See `https://wiki.debian.org/SourcesList <https://wiki.debian.org/SourcesList>`_  and `https://wiki.debian.org/Multiarch/HOWTO <https://wiki.debian.org/Multiarch/HOWTO>`_ (section Setting up apt sources)
-
-		Typically, a correct value for the repoURL parameter is either
-
-			* http://httpredir.debian.org/debian jessie main
-			* http://ftp.riken.go.jp/Linux/ubuntu/ precise-security multiverse restricted universe main
-
-		Users may also want to restrict per architecture. For example::
-
-			[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/ ...
-
 		`http://distros-repository.usharesoft.com/ <http://distros-repository.usharesoft.com/>`_ is an official public repository that users can use to populate the distributions. Official repositories such as Ubuntu and Debian periodically delete some package versions. In the http://distros-repository.usharesoft.com/ repository, package versions are never deleted. This can facilitate investigations on older systems.
 
 
@@ -183,7 +175,7 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 
 	.. note:: For a complete list of the different repositories that can be attached, refer to :ref:`populate-tool-repo`.
 
-	8. Attach repository to the distribution as follows::
+	8. Attach repository to the distribution as follows for each repository (your own repository and the UShareSoft tool repository)::
 
 		$ uforge org repo os attach --name CentOS --arch x86_64 --version 6.5 --repoIds 354 -u $ADMIN -p $PASS
 	
@@ -212,7 +204,7 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 .. _populate-rhel:
 
 Example for Adding RedHat Enterprise Linux
-------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following is a concrete example to begin the population of RedHat Enterprise Linux version 7, 64bit:
 
@@ -231,41 +223,26 @@ The following is a concrete example to begin the population of RedHat Enterprise
 
 	3. Run the following CLI command in order to create the distribution::
 
-		$ uforge org os add --name RedHat Enterprise Linux --arch x86_64 --version 7 -u $ADMIN -p $PASS
+		$ uforge org os add --name "RedHat Enterprise Linux" --arch x86_64 --version 7 -u $ADMIN -p $PASS
 
 	4. Enable the new operating system for the organization. The following command enables CentOS 6.5 in the default organization::
 
-		$ uforge org os enable --name RedHat Enterprise Linux --arch x86_64 --version 7 -u $ADMIN -p $PASS
+		$ uforge org os enable --name "RedHat Enterprise Linux" --arch x86_64 --version 7 -u $ADMIN -p $PASS
 
 	5. Enable the user to use the operating system.  The user must be a member of the organization. This step can be done later.::
 
-		$ uforge user os enable --account root --name RedHat Enterprise Linux --arch x86_64 --version 7 -u $ADMIN -p $PASS
+		$ uforge user os enable --account root --name "RedHat Enterprise Linux" --arch x86_64 --version 7 -u $ADMIN -p $PASS
 
 	6. Create the distribution repository. The following example shows the creation of an official RedHat Enterprise Linux repository. 
 
 		.. code-block:: shell
 
-			$ uforge org repo create --name "RedHat 7" --repoUrl http://distros-repository.usharesoft.com/usharesoft/rhel/7/x86_64/ --type RPM --officiallySupported -u $ADMIN -p $PASS
+			$ uforge org repo create --name "RedHat 7" --repoUrl http://<your-repo> --type RPM --officiallySupported -u $ADMIN -p $PASS
 
 	The ``–-name`` specified here is the “tagname” that will be shown in the UI when creating an appliance.
 	The ``--repoUrl`` can be either ``http://`` or ``file://``.
 
 	..warning:: You must use the ``--officiallySupported`` flag for all officially supported OSes. If you do not include this argument the packages will not appear in the install profile of appliances built with the corresponding operating system. Do not use ``--officiallySupported`` for distributions that are part of the core distribution. For example, epel or vmwatools are not officially part of the distribution, therefore you should not use ``--officiallySupported`` when adding such repositories.
-
-	The syntax of the repoURL for Debian based OSes follows that of the sources.list file.
-
-	See `https://wiki.debian.org/SourcesList <https://wiki.debian.org/SourcesList>`_  and `https://wiki.debian.org/Multiarch/HOWTO <https://wiki.debian.org/Multiarch/HOWTO>`_ (section Setting up apt sources)
-
-	Typically, a correct value for the repoURL parameter is either
-
-		* http://httpredir.debian.org/debian jessie main
-		* http://ftp.riken.go.jp/Linux/ubuntu/ precise-security multiverse restricted universe main
-
-		Users may also want to restrict per architecture. For example::
-
-			[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/ ...
-
-		`http://distros-repository.usharesoft.com/ <http://distros-repository.usharesoft.com/>`_ is an official public repository that users can use to populate the distributions. Official repositories such as Ubuntu and Debian periodically delete some package versions. In the ``http://distros-repository.usharesoft.com/`` repository, package versions are never deleted. This can facilitate investigations on older systems.
 
 	7. You must then add the specific UForge tool repository. The repository to attach for RedHat Enterprise Linux version 7 arch x86_64 is the following:
 
@@ -273,13 +250,13 @@ The following is a concrete example to begin the population of RedHat Enterprise
 
 	    For example::
 
-		$ uforge org repo create --name "RedHat 7" --repoUrl http://distros-repository.usharesoft.com/usharesoft/rhel/7/x86_64/ --type RPM -u $ADMIN -p $PASS
+		$ uforge org repo create --name "UShareSoft RedHat 7" --repoUrl http://distros-repository.usharesoft.com/usharesoft/rhel/7/x86_64/ --type RPM -u $ADMIN -p $PASS
 
 	.. note:: For a complete list of the different repositories that can be attached, refer to :ref:`populate-tool-repo`.
 
-	8. Attach repository to the distribution as follows::
+	8. Attach repository to the distribution as follows for each repository (your own repository and the UShareSoft tool repository)::
 
-		$ uforge org repo os attach --name RedHat Enterprise Linux --arch x86_64 --version 7 --repoIds 432 -u $ADMIN -p $PASS
+		$ uforge org repo os attach --name "RedHat Enterprise Linux" --arch x86_64 --version 7 --repoIds 432 -u $ADMIN -p $PASS
 	
 	   The ``–-repoIds`` specified here are the space-separated “id” of previously created repositories, shown by command ``uforge org repo list -u $ADMIN -p $PASS``.
 
@@ -303,3 +280,109 @@ The following is a concrete example to begin the population of RedHat Enterprise
 
 		$ /opt/UShareSoft/uforge/bin/runjob.py sorter_low_prio -d "RedHat" -v 7 -a x86_64
 
+Examples for Adding DEB Type OSes
+---------------------------------
+
+The following section give an example for adding Ubuntu. It is also applicable for Debian.
+
+.. _populate-ubuntu:
+
+Example for Adding Ubuntu
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following is a concrete example to begin the population of Ubuntu 10.04 64bit:
+
+	1. Connect to UForge:
+
+	   .. code-block:: shell
+
+		$ ssh root@<your UForge instance>
+
+	2. In order for the following commands to be generic you can set some variables in your environment.
+
+	   .. code-block:: shell
+
+		$ . /etc/UShareSoft/uforge/uforge.conf
+		ADMIN=$UFORGE_WEBSVC_LOGIN ; PASS=$UFORGE_WEBSVC_PASSWORD
+
+	3. Run the following CLI command in order to create the distribution::
+
+		$ uforge org os add --name Ubuntu --arch x86_64 --version 10.04 -u $ADMIN -p $PASS
+
+	4. Enable the new operating system for the organization. The following command enables Ubuntu 10.04 in the default organization::
+
+		$ uforge org os enable --name Unbuntu --version 10.04 --arch x86_64 -u $ADMIN -p $PASS
+
+	5. Enable the user to use the operating system.  The user must be a member of the organization. This step can be done later.::
+
+		$ uforge user os enable --account root --name Unbuntu --version 10.04 --arch x86_64 -u $ADMIN -p $PASS
+
+	6. Create the distribution repository. The following example shows the creation of an official Ubuntu repository. However, you can also create a repository based on the UForge official repository as shown later.
+
+			.. code-block:: shell
+
+				$ uforge org repo create --name "Ubuntu x86_64 lucid-main" --repoUrl "[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/lucid-security/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid multiverse restricted universe main" --type DEB --officiallySupported -u $ADMIN -p $PASS
+
+				$ uforge org repo create --name "Ubuntu x86_64 lucid-security" --repoUrl "[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/lucid-security/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-security multiverse restricted universe main" --type DEB --officiallySupported -u $ADMIN -p $PASS
+
+
+				$ uforge org repo create --name "Ubuntu x86_64 lucid-backports" --repoUrl "[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/lucid-backports/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-backports multiverse restricted universe main" --type DEB --officiallySupported -u $ADMIN -p $PASS
+
+				$ uforge org repo create --name "Ubuntu x86_64 lucid-updates" --repoUrl "[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/lucid-updates/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-updates multiverse restricted universe main" --type DEB --officiallySupported -u $ADMIN -p $PASS
+
+		The ``–-name`` specified here is the “tagname” that will be shown in the UI when creating an appliance.
+		The ``--repoUrl`` can be either ``http://`` or ``file://``.
+
+		..warning:: You must use the ``--officiallySupported`` flag for all officially supported OSes. If you do not include this argument the packages will not appear in the install profile of appliances built with the corresponding operating system. Do not use ``--officiallySupported`` for distributions that are part of the core distribution. For example, epel or vmwatools are not officially part of the distribution, therefore you should not use ``--officiallySupported`` when adding such repositories.
+
+		The syntax of the repoURL for Debian based OSes follows that of the sources.list file.
+
+		See `https://wiki.debian.org/SourcesList <https://wiki.debian.org/SourcesList>`_  and `https://wiki.debian.org/Multiarch/HOWTO <https://wiki.debian.org/Multiarch/HOWTO>`_ (section Setting up apt sources)
+
+		Typically, a correct value for the repoURL parameter is either
+
+			* http://httpredir.debian.org/debian jessie main
+			* http://ftp.riken.go.jp/Linux/ubuntu/ precise-security multiverse restricted universe main
+
+		Users may also want to restrict per architecture. For example::
+
+			[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/ ...
+
+		`http://distros-repository.usharesoft.com/ <http://distros-repository.usharesoft.com/>`_ is an official public repository that users can use to populate the distributions. Official repositories such as Ubuntu and Debian periodically delete some package versions. In the http://distros-repository.usharesoft.com/ repository, package versions are never deleted. This can facilitate investigations on older systems.
+
+
+	7. You must then add the specific UForge tool repository. The repository to attach for ``CentOS`` (example version 6, arch x86_64) is the following:
+
+			* http://distros-repository.usharesoft.com/usharesoft/ubuntu/
+
+	    For example::
+
+		$ uforge org repo create --name "UShareSoft Ubuntu x86_64 lucid" --repoUrl "[arch=amd64] http://distros-repository.usharesoft.com/usharesoft/ubuntu/ lucid main" --type DEB -u $ADMIN -p $PASS
+
+	.. note:: For a complete list of the different repositories that can be attached, refer to :ref:`populate-tool-repo`.
+
+	8. Attach repository to the distribution as follows for each repository (your own repository and the UShareSoft tool repository)::
+
+		$ uforge org repo os attach --name Ubuntu --arch x86_64 --version 10.04 --repoIds 354 -u $ADMIN -p $PASS
+	
+	   The ``–-repoIds`` specified here are the space-separated “id” of previously created repositories, shown by command ``uforge org repo list -u $ADMIN -p $PASS``.
+
+	9. Populate repository packages:
+
+		.. code-block:: shell
+
+			$ /opt/UShareSoft/uforge/cron/update_repos_pkgs.sh
+
+		.. note:: This procedure may take a long time.
+
+	10. To verify if the procedure is terminated, run the following command:
+
+		.. code-block:: shell
+
+			$ tail -f /tmp/USER_DATA/FactoryContainer/logs/repos/spider/<directory name with date>/spider.stdout 
+		
+		The procedure is terminated when you see the line ``INFO`` ends with ``Entering CheckForRepositoriesUpdates->terminate()``
+
+	11. Create OS profile based on packages (minimal, server, etc.)::
+
+		$ /opt/UShareSoft/uforge/bin/runjob.py sorter_low_prio -d Ubuntu -v 10.04 -a x86_64

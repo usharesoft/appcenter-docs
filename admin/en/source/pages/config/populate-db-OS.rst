@@ -110,8 +110,8 @@ The following is a list of specific UForge tool repositories that can be added. 
 
 		* http://distros-repository.usharesoft.com/usharesoft/ubuntu/ trusty main
 
-Examples for Adding RPM Type OSes
----------------------------------
+Adding RPM Type OSes
+--------------------
 
 The following sections give examples for adding CentOS and RedHat Enterprise Linux. They can be adjusted for your particular version, and are applicable to OpenSUSE and Scientific Linux.
 
@@ -160,7 +160,7 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 		The ``–-name`` specified here is the “tagname” that will be shown in the UI when creating an appliance.
 		The ``--repoUrl`` can be either ``http://`` or ``file://``.
 
-		..warning:: You must use the ``--officiallySupported`` flag for all officially supported OSes. If you do not include this argument the packages will not appear in the install profile of appliances built with the corresponding operating system. Do not use ``--officiallySupported`` for distributions that are part of the core distribution. For example, epel or vmwatools are not officially part of the distribution, therefore you should not use ``--officiallySupported`` when adding such repositories.
+		.. warning:: You must use the ``--officiallySupported`` flag for all officially supported OSes. If you do not include this argument the packages will not appear in the install profile of appliances built with the corresponding operating system. Do not use ``--officiallySupported`` for distributions that are part of the core distribution. For example, epel or vmwatools are not officially part of the distribution, therefore you should not use ``--officiallySupported`` when adding such repositories.
 
 		`http://distros-repository.usharesoft.com/ <http://distros-repository.usharesoft.com/>`_ is an official public repository that users can use to populate the distributions. Official repositories such as Ubuntu and Debian periodically delete some package versions. In the http://distros-repository.usharesoft.com/ repository, package versions are never deleted. This can facilitate investigations on older systems.
 
@@ -195,7 +195,7 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 
 			$ tail -f /tmp/USER_DATA/FactoryContainer/logs/repos/spider/<directory name with date>/spider.stdout 
 		
-		The procedure is terminated when you see the line ``INFO`` ends with ``Entering CheckForRepositoriesUpdates->terminate()``
+		The procedure is complete when you see the line ``INFO`` ends with ``Entering CheckForRepositoriesUpdates->terminate()``
 
 	11. Create OS profile based on packages (minimal, server, etc.)::
 
@@ -239,10 +239,10 @@ The following is a concrete example to begin the population of RedHat Enterprise
 
 			$ uforge org repo create --name "RedHat 7" --repoUrl http://<your-repo> --type RPM --officiallySupported -u $ADMIN -p $PASS
 
-	The ``–-name`` specified here is the “tagname” that will be shown in the UI when creating an appliance.
-	The ``--repoUrl`` can be either ``http://`` or ``file://``.
+		The ``–-name`` specified here is the “tagname” that will be shown in the UI when creating an appliance.
+		The ``--repoUrl`` can be either ``http://`` or ``file://``.
 
-	..warning:: You must use the ``--officiallySupported`` flag for all officially supported OSes. If you do not include this argument the packages will not appear in the install profile of appliances built with the corresponding operating system. Do not use ``--officiallySupported`` for distributions that are part of the core distribution. For example, epel or vmwatools are not officially part of the distribution, therefore you should not use ``--officiallySupported`` when adding such repositories.
+		.. warning:: You must use the ``--officiallySupported`` flag for all officially supported OSes. If you do not include this argument the packages will not appear in the install profile of appliances built with the corresponding operating system. Do not use ``--officiallySupported`` for distributions that are part of the core distribution. For example, epel or vmwatools are not officially part of the distribution, therefore you should not use ``--officiallySupported`` when adding such repositories.
 
 	7. You must then add the specific UForge tool repository. The repository to attach for RedHat Enterprise Linux version 7 arch x86_64 is the following:
 
@@ -274,14 +274,14 @@ The following is a concrete example to begin the population of RedHat Enterprise
 
 			$ tail -f /tmp/USER_DATA/FactoryContainer/logs/repos/spider/<directory name with date>/spider.stdout 
 		
-		The procedure is terminated when you see the line ``INFO`` ends with ``Entering CheckForRepositoriesUpdates->terminate()``
+		The procedure is complete when you see the line ``INFO`` ends with ``Entering CheckForRepositoriesUpdates->terminate()``
 
 	11. Create OS profile based on packages (minimal, server, etc.)::
 
 		$ /opt/UShareSoft/uforge/bin/runjob.py sorter_low_prio -d "RedHat" -v 7 -a x86_64
 
-Examples for Adding DEB Type OSes
----------------------------------
+Adding DEB Type OSes
+--------------------
 
 The following section give an example for adding Ubuntu. It is also applicable for Debian.
 
@@ -317,23 +317,22 @@ The following is a concrete example to begin the population of Ubuntu 10.04 64bi
 
 		$ uforge user os enable --account root --name Unbuntu --version 10.04 --arch x86_64 -u $ADMIN -p $PASS
 
-	6. Create the distribution repository. The following example shows the creation of an official Ubuntu repository. However, you can also create a repository based on the UForge official repository as shown later.
+	6. Create the distribution repository. The following example shows the creation of an official Ubuntu repository.
 
-			.. code-block:: shell
+		.. code-block:: shell
 
-				$ uforge org repo create --name "Ubuntu x86_64 lucid-main" --repoUrl "[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/lucid-security/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid multiverse restricted universe main" --type DEB --officiallySupported -u $ADMIN -p $PASS
+			$ uforge org repo create --name "Ubuntu x86_64 lucid-main" --repoUrl "[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/lucid-security/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid multiverse restricted universe main" --type DEB --officiallySupported -u $ADMIN -p $PASS
 
-				$ uforge org repo create --name "Ubuntu x86_64 lucid-security" --repoUrl "[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/lucid-security/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-security multiverse restricted universe main" --type DEB --officiallySupported -u $ADMIN -p $PASS
+			$ uforge org repo create --name "Ubuntu x86_64 lucid-security" --repoUrl "[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/lucid-security/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-security multiverse restricted universe main" --type DEB --officiallySupported -u $ADMIN -p $PASS
 
+			$ uforge org repo create --name "Ubuntu x86_64 lucid-backports" --repoUrl "[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/lucid-backports/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-backports multiverse restricted universe main" --type DEB --officiallySupported -u $ADMIN -p $PASS
 
-				$ uforge org repo create --name "Ubuntu x86_64 lucid-backports" --repoUrl "[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/lucid-backports/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-backports multiverse restricted universe main" --type DEB --officiallySupported -u $ADMIN -p $PASS
-
-				$ uforge org repo create --name "Ubuntu x86_64 lucid-updates" --repoUrl "[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/lucid-updates/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-updates multiverse restricted universe main" --type DEB --officiallySupported -u $ADMIN -p $PASS
+			$ uforge org repo create --name "Ubuntu x86_64 lucid-updates" --repoUrl "[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/lucid-updates/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-updates multiverse restricted universe main" --type DEB --officiallySupported -u $ADMIN -p $PASS
 
 		The ``–-name`` specified here is the “tagname” that will be shown in the UI when creating an appliance.
 		The ``--repoUrl`` can be either ``http://`` or ``file://``.
 
-		..warning:: You must use the ``--officiallySupported`` flag for all officially supported OSes. If you do not include this argument the packages will not appear in the install profile of appliances built with the corresponding operating system. Do not use ``--officiallySupported`` for distributions that are part of the core distribution. For example, epel or vmwatools are not officially part of the distribution, therefore you should not use ``--officiallySupported`` when adding such repositories.
+		.. warning:: You must use the ``--officiallySupported`` flag for all officially supported OSes. If you do not include this argument the packages will not appear in the install profile of appliances built with the corresponding operating system. Do not use ``--officiallySupported`` for distributions that are part of the core distribution. For example, epel or vmwatools are not officially part of the distribution, therefore you should not use ``--officiallySupported`` when adding such repositories.
 
 		The syntax of the repoURL for Debian based OSes follows that of the sources.list file.
 
@@ -349,7 +348,6 @@ The following is a concrete example to begin the population of Ubuntu 10.04 64bi
 			[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/ ...
 
 		`http://distros-repository.usharesoft.com/ <http://distros-repository.usharesoft.com/>`_ is an official public repository that users can use to populate the distributions. Official repositories such as Ubuntu and Debian periodically delete some package versions. In the http://distros-repository.usharesoft.com/ repository, package versions are never deleted. This can facilitate investigations on older systems.
-
 
 	7. You must then add the specific UForge tool repository. The repository to attach for ``CentOS`` (example version 6, arch x86_64) is the following:
 
@@ -381,7 +379,7 @@ The following is a concrete example to begin the population of Ubuntu 10.04 64bi
 
 			$ tail -f /tmp/USER_DATA/FactoryContainer/logs/repos/spider/<directory name with date>/spider.stdout 
 		
-		The procedure is terminated when you see the line ``INFO`` ends with ``Entering CheckForRepositoriesUpdates->terminate()``
+		The procedure is complete when you see the line ``INFO`` ends with ``Entering CheckForRepositoriesUpdates->terminate()``
 
 	11. Create OS profile based on packages (minimal, server, etc.)::
 

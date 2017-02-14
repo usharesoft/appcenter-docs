@@ -51,13 +51,13 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`bootscript-object`
 	 * :ref:`appliance-object`
 	 * :ref:`applianceBootScript-create`
 	 * :ref:`applianceBootScript-delete`
 	 * :ref:`applianceBootScript-download`
 	 * :ref:`applianceBootScript-downloadFile`
-	 * :ref:`applianceBootScript-getAll`
 	 * :ref:`applianceBootScript-get`
+	 * :ref:`applianceBootScript-getAll`
 	 * :ref:`applianceBootScript-update`
 	 * :ref:`applianceBootScript-upload`
+	 * :ref:`bootscript-object`

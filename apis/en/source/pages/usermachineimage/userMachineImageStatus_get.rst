@@ -46,9 +46,9 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`machineimage-api-resources`
 	 * :ref:`image-object`
+	 * :ref:`machineimage-api-resources`
 	 * :ref:`publishimage-object`
-	 * :ref:`userMachineImage-getAll`
-	 * :ref:`userMachineImagePublished-getAll`
 	 * :ref:`userMachineImagePublishedStatus-getAll`
+	 * :ref:`userMachineImagePublished-getAll`
+	 * :ref:`userMachineImage-getAll`

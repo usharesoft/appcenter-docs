@@ -49,20 +49,20 @@ Example Request
 
 .. seealso::
 
+	 * :ref:`appliance-object`
 	 * :ref:`appliancepartitiontablediskpartition-api-resources`
 	 * :ref:`appliancepartitiontablelogicalgroup-api-resources`
 	 * :ref:`appliancepartitiontablelogicalvolume-api-resources`
-	 * :ref:`partitiontable-object`
-	 * :ref:`appliance-object`
 	 * :ref:`partition-object`
-	 * :ref:`partitionTableDiskPartition-get`
-	 * :ref:`partitionTableDiskPartition-create`
-	 * :ref:`partitionTableDiskPartition-deleteAll`
-	 * :ref:`partitionTableDiskPartition-delete`
-	 * :ref:`partitionTableDiskPartition-update`
-	 * :ref:`partitionTableDiskLogicalPartition-getAll`
-	 * :ref:`partitionTableDiskLogicalPartition-get`
 	 * :ref:`partitionTableDiskLogicalPartition-create`
-	 * :ref:`partitionTableDiskLogicalPartition-deleteAll`
 	 * :ref:`partitionTableDiskLogicalPartition-delete`
+	 * :ref:`partitionTableDiskLogicalPartition-deleteAll`
+	 * :ref:`partitionTableDiskLogicalPartition-get`
+	 * :ref:`partitionTableDiskLogicalPartition-getAll`
 	 * :ref:`partitionTableDiskLogicalPartition-update`
+	 * :ref:`partitionTableDiskPartition-create`
+	 * :ref:`partitionTableDiskPartition-delete`
+	 * :ref:`partitionTableDiskPartition-deleteAll`
+	 * :ref:`partitionTableDiskPartition-get`
+	 * :ref:`partitionTableDiskPartition-update`
+	 * :ref:`partitiontable-object`

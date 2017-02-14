@@ -45,10 +45,10 @@ Example Request
 .. seealso::
 
 	 * :ref:`appliance-object`
-	 * :ref:`distribprofile-object`
-	 * :ref:`applianceOSProfile-create`
-	 * :ref:`applianceOSProfile-get`
 	 * :ref:`applianceOSProfilePkg-getAll`
 	 * :ref:`applianceOSProfilePkg-updateAll`
+	 * :ref:`applianceOSProfile-create`
+	 * :ref:`applianceOSProfile-get`
 	 * :ref:`applianceOSUpdates-get`
 	 * :ref:`applianceOSUpdates-save`
+	 * :ref:`distribprofile-object`

@@ -59,13 +59,13 @@ Example of representation.xml content (the request body):
 
 .. seealso::
 
-	 * :ref:`scannedinstance-object`
-	 * :ref:`scan-object`
-	 * :ref:`scanimport-object`
 	 * :ref:`appliance-object`
-	 * :ref:`machinescaninstance-api-resources`
 	 * :ref:`machinescan-api-resources`
-	 * :ref:`scanImport-getAll`
+	 * :ref:`machinescaninstance-api-resources`
+	 * :ref:`scan-object`
 	 * :ref:`scanImportStatus-get`
-	 * :ref:`scanImport-delete`
 	 * :ref:`scanImport-cancel`
+	 * :ref:`scanImport-delete`
+	 * :ref:`scanImport-getAll`
+	 * :ref:`scanimport-object`
+	 * :ref:`scannedinstance-object`

@@ -45,23 +45,23 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`workspace-api-resources`
-	 * :ref:`workspacetemplatecomments-api-resources`
-	 * :ref:`workspace-object`
-	 * :ref:`gallerytemplate-object`
 	 * :ref:`appliance-object`
-	 * :ref:`workspaceTemplate-get`
-	 * :ref:`workspaceTemplate-getAll`
-	 * :ref:`workspaceTemplate-delete`
-	 * :ref:`workspaceTemplate-share`
-	 * :ref:`workspaceTemplate-vote`
-	 * :ref:`workspaceTemplate-update`
-	 * :ref:`workspaceTemplateStatus-get`
+	 * :ref:`gallerytemplate-object`
+	 * :ref:`workspace-api-resources`
+	 * :ref:`workspace-object`
+	 * :ref:`workspaceTemplateInstallProfile-get`
 	 * :ref:`workspaceTemplateLogo-delete`
 	 * :ref:`workspaceTemplateLogo-upload`
 	 * :ref:`workspaceTemplateOSPkgs-get`
-	 * :ref:`workspaceTemplateInstallProfile-get`
 	 * :ref:`workspaceTemplateProjects-get`
-	 * :ref:`workspaceTemplateStudio-get`
 	 * :ref:`workspaceTemplateShare-cancel`
 	 * :ref:`workspaceTemplateStats-get`
+	 * :ref:`workspaceTemplateStatus-get`
+	 * :ref:`workspaceTemplateStudio-get`
+	 * :ref:`workspaceTemplate-delete`
+	 * :ref:`workspaceTemplate-get`
+	 * :ref:`workspaceTemplate-getAll`
+	 * :ref:`workspaceTemplate-share`
+	 * :ref:`workspaceTemplate-update`
+	 * :ref:`workspaceTemplate-vote`
+	 * :ref:`workspacetemplatecomments-api-resources`

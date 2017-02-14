@@ -18,7 +18,7 @@ Updates the list of target formats that an user has has access to.
 
 Please refer to :ref:`targetformat-object` for a complete list of all the ``target format`` attributes. 
 
-.. warning:: Any target format that the user currently has access to that is not specified in the new target format list will be removed, this effectively de-activates those target platforms for the user.
+.. warning:: Any target format that the user currently has access to that is not specified in the new target format list will be removed, this effectively de-activates those target formats for the user.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -59,14 +59,14 @@ Example of representation.xml content (the request body):
 
 .. seealso::
 
-	 * :ref:`targetformat-api-resources`
-	 * :ref:`targetplatform-api-resources`
 	 * :ref:`imageformat-object`
+	 * :ref:`targetformat-api-resources`
 	 * :ref:`targetformat-object`
+	 * :ref:`targetplatform-api-resources`
 	 * :ref:`targetplatform-object`
 	 * :ref:`userFormats-getAll`
 	 * :ref:`userFormats-update`
 	 * :ref:`userTargetFormat-getAll`
+	 * :ref:`userTargetPlatformFormat-getAll`
 	 * :ref:`userTargetPlatforms-getAll`
 	 * :ref:`userTargetPlatforms-update`
-	 * :ref:`userTargetPlatformFormat-getAll`

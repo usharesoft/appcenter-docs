@@ -3,6 +3,91 @@
 Changelog
 =========
 
+3.7.fp2
+-------
+
+Release Date: 2017-02-13
+
+New Features
+~~~~~~~~~~~~
+
+* Support registration of machine images for Azure ARM and Azure Enterprise Accounts
+* Ability to register docker images built in UForge to DockerHub.  This includes managing credential information to authenticate against DockerHub.
+* In ``Projects`` or ``My Software`` can now provide restrictions to determine if they are compatible with a particular OS family, type or version.
+
+Enhancements
+~~~~~~~~~~~~
+
+* Renamed ``VM Builder`` Tab in the UI to ``Apps``.
+* Better internal logging information when publishing/registering machine images to a target cloud environment.
+* Better validation in the web service for information used in publishing/registering machine images.
+* Better UX experience when managing and choosing ``pinned`` (or ``sticky``) packages.
+* UI now displaying the size of the generated machine images.
+* Can now delete an invitation of a user to a Workspace if a user has invited someone to join a collaboration workspace, and the person is not responding, there is no way to cancel the invitation.
+* Added an ``Id`` column for all UForge CLI commands that lists information (for better referencing in other commands).
+* Added the ability to reset a user's password via the UForge CLI (``--resetPassword`` option).
+
+
+Compatibility Issues
+~~~~~~~~~~~~~~~~~~~~
+
+Migrating to UForge 3.7-2 will have the following compatibility issues:
+
+* any Windows golden image that use a non-standard Edition (for example ``Windows K5`` instead of the official ``Standard``, ``Enterprise``, ``Webserver`` or ``Database``) will be changed to ``Standard`` edition. A warning will be added to the log files. If you would like to change the Edition of the golden image, you should re-register the golden image with ``org golden create`` command. 
+
+.. warning:: Fujitsu is not legally responsible for any damage or loss caused by the possible inconsistency between the assumed and the actual Editions.
+
+The following API interface and calls have been modified:
+
+* The object ``DistribProfile`` is now an abstract object and is implemented by either :ref:`linuxProfile-object` or :ref:`windowsProfile-object` (which are new object types).
+* The deprecated object ``DistribProfileTemplate`` has now been deleted.  The object :ref:`distribProfile-object` is now used.  The attribute ``standardProfileUri`` is now deprecated and been set to ``null``.
+
+Due to the above object changes, the following API calls have been modified:
+
+	* :ref:`orgOSWindows-add`
+	* :ref:`orgOSWindows-delete`
+	* :ref:`osTemplate-getAll`
+	* :ref:`osTemplate-get`
+	* :ref:`orgOSWindows-getAll`
+
+The following API calls have been added to enhance scanned Windows-based workloads:
+
+	* :ref:`workspaceTemplateOSApplications-get`
+	* :ref:`workspaceTemplateOSServices-get`
+	* :ref:`workspaceTemplateOSPartitionTable-get`
+
+
+Bug Fixes
+~~~~~~~~~
+
+* 6853 While scanning Windows OS, Scan progress is continued to copy on the clipboard.
+* 6821 Blob name must finish with ``.vhd`` and add some information in the publish popup.
+* 6820 Issues in properties i18n file.
+* 6809 OpenStack account turned into another type of cloud account after the migration from 3.5.1 to 3.6.
+* 6706 Fix backward compatibility for golden edition with custom names.
+* 5607 Even if the scan ends the UI continues to ask for information of the scan.
+* 6737 Sub menu scrollable inside the Dashboard.
+* 6734 Cannot delete template with software component from workspace.
+* 6732 Unexpected scroll bar in My Software view.
+* 6716 Cannot download rpms from yum repos whilst scanning a centos system.
+* 6713 Error message containing typo for windows disk size.
+* 6711 Golden location is retrieved from Pkgs table, it should be retrieved from WindowsProfile table.
+* 6672 Scan does not read KEYBOARD in metadata.
+* 6646 File conflicts against packages built with when installing centos distribution packages.
+* 6639 Primary disk size is changed to the other disk size on UI when having multiple disks.
+* 6627 Cannot export a template if the software component has rpm file in Repository Packages tab.
+* 6614 Creating folder failed but displayed on UI.
+* 6599 i18n properties breaking master build.
+* 6596 Imported appliances from archive are not counted statistics in Dashboard.
+* 6529 Image generation fails when a template includes rpm file with no cached.
+* 6497 Can't display ``Projects`` as guest user.
+* 6495 The ``org golden xxx`` command fails if edition name in db is not allowed.
+* 6492 Badly formed error label for Credentials Microsoft Azure.
+* 6480 Spelling mistake retrieving remote path and error message shown.
+* 6478 Sharing a template in collaboration, including software that does not use the cache of the fetch, raises an Internal Server Error.
+* 6460 Imported appliances are counted as created on statistics in Dashboard.
+
+
 3.7.fp1
 -------
 
@@ -82,7 +167,7 @@ Bug Fixes
 * 5900 Generation sometimes fails if the second disk of the appliance is too small
 
 
-3.6-fp2
+3.6.fp2
 -------
 
 Release Date: 2016-12-05
@@ -149,7 +234,7 @@ Bug Fixes
 * 5265 No dialog box displayed after running an instance on Azure
 
 
-3.6-fp1
+3.6.fp1
 -------
 
 Release Date: 2016-10-31

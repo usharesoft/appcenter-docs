@@ -16,7 +16,7 @@ category_delete
 
 Deletes a category from an organization. 
 
-..warning:: Only administrators have the ability to create and manage categories
+.. warning:: Only administrators have the ability to create and manage categories
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -45,11 +45,11 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`org-object`
 	 * :ref:`category-object`
-	 * :ref:`category-create`
 	 * :ref:`categoryChild-create`
+	 * :ref:`category-create`
 	 * :ref:`category-deleteAll`
-	 * :ref:`category-getAll`
 	 * :ref:`category-get`
+	 * :ref:`category-getAll`
 	 * :ref:`category-update`
+	 * :ref:`org-object`

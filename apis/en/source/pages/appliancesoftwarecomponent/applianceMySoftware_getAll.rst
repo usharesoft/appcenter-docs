@@ -46,12 +46,12 @@ Example Request
 .. seealso::
 
 	 * :ref:`appliance-object`
-	 * :ref:`user-object`
-	 * :ref:`mySoftware-object`
-	 * :ref:`appliance-create`
+	 * :ref:`applianceProject-getAll`
 	 * :ref:`appliance-clone`
+	 * :ref:`appliance-create`
 	 * :ref:`appliance-delete`
 	 * :ref:`appliance-get`
 	 * :ref:`appliance-getAll`
 	 * :ref:`appliance-update`
-	 * :ref:`applianceProject-getAll`
+	 * :ref:`mySoftware-object`
+	 * :ref:`user-object`

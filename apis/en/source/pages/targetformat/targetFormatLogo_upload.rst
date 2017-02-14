@@ -45,19 +45,19 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`targetplatform-api-resources`
-	 * :ref:`targetplatform-object`
-	 * :ref:`targetformat-object`
 	 * :ref:`imageformat-object`
 	 * :ref:`primitiveFormat-getAll`
 	 * :ref:`primitiveFormat-update`
-	 * :ref:`targetFormat-create`
-	 * :ref:`targetFormat-getAll`
-	 * :ref:`targetFormat-get`
-	 * :ref:`targetFormat-delete`
-	 * :ref:`targetFormat-update`
-	 * :ref:`targetFormat-updateAccess`
 	 * :ref:`targetFormatLogo-delete`
 	 * :ref:`targetFormatLogo-download`
 	 * :ref:`targetFormatLogo-downloadFile`
+	 * :ref:`targetFormat-create`
+	 * :ref:`targetFormat-delete`
+	 * :ref:`targetFormat-get`
+	 * :ref:`targetFormat-getAll`
 	 * :ref:`targetFormat-getAllTargetPlatforms`
+	 * :ref:`targetFormat-update`
+	 * :ref:`targetFormat-updateAccess`
+	 * :ref:`targetformat-object`
+	 * :ref:`targetplatform-api-resources`
+	 * :ref:`targetplatform-object`

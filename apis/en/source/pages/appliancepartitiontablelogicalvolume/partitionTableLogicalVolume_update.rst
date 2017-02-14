@@ -53,14 +53,14 @@ Example of representation.xml content (the request body):
 
 .. seealso::
 
+	 * :ref:`appliance-object`
 	 * :ref:`appliancepartitiontabledisk-api-resources`
 	 * :ref:`appliancepartitiontablediskpartition-api-resources`
 	 * :ref:`appliancepartitiontablelogicalgroup-api-resources`
-	 * :ref:`partitiontable-object`
-	 * :ref:`appliance-object`
 	 * :ref:`logicalvolume-object`
 	 * :ref:`partitionTableLogicalVolume-create`
-	 * :ref:`partitionTableLogicalVolume-getAll`
 	 * :ref:`partitionTableLogicalVolume-delete`
 	 * :ref:`partitionTableLogicalVolume-deleteAll`
 	 * :ref:`partitionTableLogicalVolume-get`
+	 * :ref:`partitionTableLogicalVolume-getAll`
+	 * :ref:`partitiontable-object`

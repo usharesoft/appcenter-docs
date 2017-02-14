@@ -43,7 +43,7 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`user-object`
-	 * :ref:`apikeypairs-object`
-	 * :ref:`apiKey-getAll`
 	 * :ref:`apiKey-create`
+	 * :ref:`apiKey-getAll`
+	 * :ref:`apikeypairs-object`
+	 * :ref:`user-object`

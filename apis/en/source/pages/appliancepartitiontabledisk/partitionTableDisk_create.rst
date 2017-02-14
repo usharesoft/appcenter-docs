@@ -63,14 +63,14 @@ Example of representation.xml content (the request body):
 
 .. seealso::
 
+	 * :ref:`appliance-object`
 	 * :ref:`appliancepartitiontabledisk-api-resources`
 	 * :ref:`appliancepartitiontablelogicalgroup-api-resources`
 	 * :ref:`appliancepartitiontablelogicalvolume-api-resources`
-	 * :ref:`partitiontable-object`
-	 * :ref:`appliance-object`
 	 * :ref:`disk-object`
-	 * :ref:`partitionTableDisk-getAll`
+	 * :ref:`partitionTableDisk-delete`
 	 * :ref:`partitionTableDisk-deleteAll`
 	 * :ref:`partitionTableDisk-get`
+	 * :ref:`partitionTableDisk-getAll`
 	 * :ref:`partitionTableDisk-update`
-	 * :ref:`partitionTableDisk-delete`
+	 * :ref:`partitiontable-object`

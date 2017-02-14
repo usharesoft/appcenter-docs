@@ -61,38 +61,38 @@ Example of representation.xml content (the request body):
 			<keystoneUrl>http://ip:5000</keystoneUrl>
 			<login>username</login>
 			<password>password</password>
-			<keystoneVersion>v3</keystoneVersion>
+			<keystoneVersion>v2.0</keystoneVersion>
 		</credAccount>
 		<imageUri>users/root/appliances/4/images/7</imageUri>
-		<keystoneDomain>Keystone Domain Example</keystoneDomain>
-		<keystoneProject>Keystone Project Example</keystoneProject>
+		<instances></instances>
 		<displayName>Machine Image Name Example</displayName>
-		<publicImage>true</publicImage>
+		<publicImage>false</publicImage>
+		<tenantName>mytenantname</tenantName>
 	</ns0:publishImage>
 
 
 .. seealso::
 
 	 * :ref:`appliance-object`
-	 * :ref:`publishimage-object`
-	 * :ref:`machineImage-deleteAll`
-	 * :ref:`machineImage-delete`
-	 * :ref:`machineImage-download`
-	 * :ref:`machineImage-downloadFile`
-	 * :ref:`machineImage-generate`
-	 * :ref:`machineImage-publish`
-	 * :ref:`machineImage-get`
-	 * :ref:`machineImage-getAll`
-	 * :ref:`machineImage-regenerate`
 	 * :ref:`machineImageGeneration-cancel`
-	 * :ref:`machineImageStatus-getAll`
-	 * :ref:`machineImageStatus-get`
 	 * :ref:`machineImagePublish-cancel`
-	 * :ref:`machineImagePublished-get`
-	 * :ref:`machineImagePublished-getAll`
+	 * :ref:`machineImagePublishedStatus-get`
+	 * :ref:`machineImagePublishedStatus-getAll`
 	 * :ref:`machineImagePublished-delete`
 	 * :ref:`machineImagePublished-deleteAll`
 	 * :ref:`machineImagePublished-download`
-	 * :ref:`machineImagePublishedStatus-get`
-	 * :ref:`machineImagePublishedStatus-getAll`
+	 * :ref:`machineImagePublished-get`
+	 * :ref:`machineImagePublished-getAll`
+	 * :ref:`machineImageStatus-get`
+	 * :ref:`machineImageStatus-getAll`
+	 * :ref:`machineImage-delete`
+	 * :ref:`machineImage-deleteAll`
+	 * :ref:`machineImage-download`
+	 * :ref:`machineImage-downloadFile`
+	 * :ref:`machineImage-generate`
+	 * :ref:`machineImage-get`
+	 * :ref:`machineImage-getAll`
 	 * :ref:`machineImage-publish`
+	 * :ref:`machineImage-publish`
+	 * :ref:`machineImage-regenerate`
+	 * :ref:`publishimage-object`

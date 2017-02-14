@@ -44,17 +44,17 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`workspace-api-resources`
-	 * :ref:`workspacetemplate-api-resources`
-	 * :ref:`workspacecomments-api-resources`
 	 * :ref:`comment-object`
+	 * :ref:`workspace-api-resources`
 	 * :ref:`workspaceTemplateComment-create`
-	 * :ref:`workspaceTemplateComment-reply`
-	 * :ref:`workspaceTemplateComment-getAll`
-	 * :ref:`workspaceTemplateComment-get`
-	 * :ref:`workspaceTemplateComment-update`
-	 * :ref:`workspaceTemplateComment-deleteAll`
 	 * :ref:`workspaceTemplateComment-delete`
-	 * :ref:`workspaceTemplateComment-reportAbuse`
-	 * :ref:`workspaceTemplateComment-like`
+	 * :ref:`workspaceTemplateComment-deleteAll`
 	 * :ref:`workspaceTemplateComment-dislike`
+	 * :ref:`workspaceTemplateComment-get`
+	 * :ref:`workspaceTemplateComment-getAll`
+	 * :ref:`workspaceTemplateComment-like`
+	 * :ref:`workspaceTemplateComment-reply`
+	 * :ref:`workspaceTemplateComment-reportAbuse`
+	 * :ref:`workspaceTemplateComment-update`
+	 * :ref:`workspacecomments-api-resources`
+	 * :ref:`workspacetemplate-api-resources`

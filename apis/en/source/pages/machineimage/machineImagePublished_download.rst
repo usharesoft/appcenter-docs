@@ -53,19 +53,19 @@ Example Request
 .. seealso::
 
 	 * :ref:`appliance-object`
-	 * :ref:`publishimage-object`
-	 * :ref:`machineImage-deleteAll`
+	 * :ref:`machineImageGeneration-cancel`
+	 * :ref:`machineImagePublishedStatus-getAll`
+	 * :ref:`machineImagePublished-deleteAll`
+	 * :ref:`machineImagePublished-getAll`
+	 * :ref:`machineImageStatus-get`
+	 * :ref:`machineImageStatus-getAll`
 	 * :ref:`machineImage-delete`
+	 * :ref:`machineImage-deleteAll`
 	 * :ref:`machineImage-download`
 	 * :ref:`machineImage-downloadFile`
 	 * :ref:`machineImage-generate`
 	 * :ref:`machineImage-get`
 	 * :ref:`machineImage-getAll`
-	 * :ref:`machineImage-regenerate`
-	 * :ref:`machineImageGeneration-cancel`
-	 * :ref:`machineImageStatus-getAll`
-	 * :ref:`machineImageStatus-get`
 	 * :ref:`machineImage-publish`
-	 * :ref:`machineImagePublished-getAll`
-	 * :ref:`machineImagePublished-deleteAll`
-	 * :ref:`machineImagePublishedStatus-getAll`
+	 * :ref:`machineImage-regenerate`
+	 * :ref:`publishimage-object`

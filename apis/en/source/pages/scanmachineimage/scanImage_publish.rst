@@ -73,17 +73,17 @@ Example of representation.xml content (the request body):
 
 .. seealso::
 
-	 * :ref:`scannedinstance-object`
-	 * :ref:`scan-object`
-	 * :ref:`machinescaninstance-api-resources`
 	 * :ref:`machinescan-api-resources`
-	 * :ref:`scanImage-generate`
-	 * :ref:`scanImage-getAll`
-	 * :ref:`scanImage-get`
+	 * :ref:`machinescaninstance-api-resources`
+	 * :ref:`scan-object`
+	 * :ref:`scanImageGenerationStatus-get`
 	 * :ref:`scanImageGeneration-cancel`
 	 * :ref:`scanImageGeneration-delete`
-	 * :ref:`scanImageGenerationStatus-get`
-	 * :ref:`scanPublishedImage-get`
-	 * :ref:`scanPublishedImage-delete`
+	 * :ref:`scanImage-generate`
+	 * :ref:`scanImage-get`
+	 * :ref:`scanImage-getAll`
 	 * :ref:`scanPublishedImageStatus-get`
 	 * :ref:`scanPublishedImage-cancel`
+	 * :ref:`scanPublishedImage-delete`
+	 * :ref:`scanPublishedImage-get`
+	 * :ref:`scannedinstance-object`

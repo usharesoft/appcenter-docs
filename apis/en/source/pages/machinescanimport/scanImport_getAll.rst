@@ -46,13 +46,13 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`scannedinstance-object`
-	 * :ref:`scan-object`
-	 * :ref:`scanimport-object`
 	 * :ref:`appliance-object`
-	 * :ref:`machinescaninstance-api-resources`
 	 * :ref:`machinescan-api-resources`
+	 * :ref:`machinescaninstance-api-resources`
+	 * :ref:`scan-object`
 	 * :ref:`scanImportStatus-get`
-	 * :ref:`scanImport-delete`
 	 * :ref:`scanImport-cancel`
+	 * :ref:`scanImport-delete`
 	 * :ref:`scan-import`
+	 * :ref:`scanimport-object`
+	 * :ref:`scannedinstance-object`

@@ -60,11 +60,11 @@ Example of representation.xml content (the request body):
 
 .. seealso::
 
-	 * :ref:`scannedinstance-object`
-	 * :ref:`scan-object`
 	 * :ref:`machinescan-api-resources`
-	 * :ref:`scannedInstanceScan-getAll`
-	 * :ref:`scanInstance-getAll`
-	 * :ref:`scanInstance-get`
-	 * :ref:`scanInstance-deleteAll`
+	 * :ref:`scan-object`
 	 * :ref:`scanInstance-delete`
+	 * :ref:`scanInstance-deleteAll`
+	 * :ref:`scanInstance-get`
+	 * :ref:`scanInstance-getAll`
+	 * :ref:`scannedInstanceScan-getAll`
+	 * :ref:`scannedinstance-object`

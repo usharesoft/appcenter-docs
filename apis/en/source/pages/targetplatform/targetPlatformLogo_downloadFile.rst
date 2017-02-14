@@ -47,19 +47,19 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`targetformat-api-resources`
-	 * :ref:`targetplatform-object`
-	 * :ref:`targetformat-object`
-	 * :ref:`targetPlatform-create`
-	 * :ref:`targetPlatform-getAll`
-	 * :ref:`targetPlatform-get`
-	 * :ref:`targetPlatform-update`
-	 * :ref:`targetPlatform-updateAccess`
-	 * :ref:`targetPlatform-delete`
-	 * :ref:`targetPlatform-getAllFormats`
-	 * :ref:`targetPlatform-addFormat`
-	 * :ref:`targetPlatform-removeFormat`
-	 * :ref:`targetPlatformLogo-upload`
 	 * :ref:`targetPlatformLogo-delete`
 	 * :ref:`targetPlatformLogo-download`
 	 * :ref:`targetPlatformLogo-downloadFile`
+	 * :ref:`targetPlatformLogo-upload`
+	 * :ref:`targetPlatform-addFormat`
+	 * :ref:`targetPlatform-create`
+	 * :ref:`targetPlatform-delete`
+	 * :ref:`targetPlatform-get`
+	 * :ref:`targetPlatform-getAll`
+	 * :ref:`targetPlatform-getAllFormats`
+	 * :ref:`targetPlatform-removeFormat`
+	 * :ref:`targetPlatform-update`
+	 * :ref:`targetPlatform-updateAccess`
+	 * :ref:`targetformat-api-resources`
+	 * :ref:`targetformat-object`
+	 * :ref:`targetplatform-object`

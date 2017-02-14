@@ -38,14 +38,7 @@ The list of attributes for ``user`` are:
 	* ``creationCode`` (string): the code used for creating the user (subscription profile code, see :ref:`subscriptionprofile-object`)
 	* ``credAccountUris`` (:ref:`UriList-object`): the list of uri resources for each cloud account the user has
 	* ``artifactAccountsUri`` (anyURI): the uri resource to retrieve the user's artifact accounts
-	* ``distributionUris`` (:ref:`UriList-object`): the list of uris for each operating system the user has access to
 	* ``dob`` (dateTime): the user's date of birth
-	* ``formats``: the list of primitive formats the user has access to (see :ref:`imageformat-object`)
-	* ``targetPlatforms``: the list of target platforms the user has access to (see :ref:`targetplatform-object`)
-	* ``targetFormats``: the list of target formats the user has access to (see :ref:`targetformat-object`)
-	* ``formatUris`` (:ref:`UriList-object`): the list of uri resources for each primitive format the user has access to
-	* ``targetPlatformUris`` (:ref:`UriList-object`): the list of uri resources for each target platform the user has access to
-	* ``targetFormatUris`` (:ref:`UriList-object`): the list of uri resources for each target format the user has access to
 	* ``gender`` (string): the user's gender
 	* ``homePhone`` (string): the user's home phone number
 	* ``lang`` (string): the user's preferred language

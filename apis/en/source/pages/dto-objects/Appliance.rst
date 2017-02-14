@@ -44,7 +44,6 @@ The list of attributes for ``appliance`` are:
 	* ``distributionName`` (string): the operating system this appliance is based on (includes name and version)
 	* ``distributionUri`` (anyURI): uri resource to get the details of the operating system this appliance is based on
 	* ``exportsUri`` (anyURI): uri resource to get all the export objects for this appliance
-	* ``images``: a list of :ref:`image-object` objects that have been generated from this appliance
 	* ``imageUris`` (:ref:`UriList-object`): a list of uris for the machine images generated from this appliance
 	* ``imported`` (boolean): boolean to determine if this appliance is an import (e.g. from a ``scan``)
 	* ``installedSize`` (long): estimated disk size required to install the appliance's software

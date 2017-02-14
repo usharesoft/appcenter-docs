@@ -27,6 +27,7 @@ The list of attributes for ``PublishImageCloudStack`` are:
 	* ``completeSize`` (long): the size (in bytes) of the machine image
 	* ``compress`` (boolean): a boolean flag to determine if this machine image has been compressed
 	* ``credAccount`` (:ref:`credAccount-object`): the cloud account object related to this machine image (see :ref:`credaccount-object`)
+	* ``distributionName`` (string): the operating system name this machine image is built upon or requires to run
 	* ``downloadKey`` (string): the unique download key to download the machine image without authentication (can only be used once)
 	* ``downloadUri`` (anyURI): the uri resource to download the machine image
 	* ``ebs`` (boolean): a boolean flag to determine if this machine image should use an EBS volume

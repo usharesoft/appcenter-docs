@@ -44,22 +44,22 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`scannedinstance-object`
-	 * :ref:`scan-object`
 	 * :ref:`machinescaninstance-api-resources`
-	 * :ref:`scannedInstanceScan-deleteAll`
-	 * :ref:`scannedInstanceScan-getAll`
-	 * :ref:`scan-multipartCreate`
+	 * :ref:`scan-object`
+	 * :ref:`scanInstallProfile-get`
+	 * :ref:`scanOverlay-download`
+	 * :ref:`scanOverlay-upload`
+	 * :ref:`scanOverlay-uploadChunk`
+	 * :ref:`scanPackageBinary-getAll`
+	 * :ref:`scanPackageFile-get`
+	 * :ref:`scanPackage-getAll`
+	 * :ref:`scanPartition-upload`
 	 * :ref:`scan-cancel`
 	 * :ref:`scan-create`
 	 * :ref:`scan-delete`
 	 * :ref:`scan-get`
+	 * :ref:`scan-multipartCreate`
+	 * :ref:`scannedInstanceScan-deleteAll`
+	 * :ref:`scannedInstanceScan-getAll`
+	 * :ref:`scannedinstance-object`
 	 * :ref:`userScan-getAll`
-	 * :ref:`scanInstallProfile-get`
-	 * :ref:`scanOverlay-download`
-	 * :ref:`scanOverlay-uploadChunk`
-	 * :ref:`scanOverlay-upload`
-	 * :ref:`scanPartition-upload`
-	 * :ref:`scanPackage-getAll`
-	 * :ref:`scanPackageBinary-getAll`
-	 * :ref:`scanPackageFile-get`

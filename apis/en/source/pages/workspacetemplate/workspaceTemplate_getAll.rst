@@ -47,22 +47,22 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`workspace-api-resources`
-	 * :ref:`workspacetemplatecomments-api-resources`
-	 * :ref:`workspace-object`
-	 * :ref:`gallerytemplate-object`
 	 * :ref:`appliance-object`
-	 * :ref:`workspaceTemplate-get`
-	 * :ref:`workspaceTemplate-delete`
-	 * :ref:`workspaceTemplate-share`
-	 * :ref:`workspaceTemplate-update`
-	 * :ref:`workspaceTemplateStatus-get`
-	 * :ref:`workspaceTemplateLogo-download`
+	 * :ref:`gallerytemplate-object`
+	 * :ref:`workspace-api-resources`
+	 * :ref:`workspace-object`
+	 * :ref:`workspaceTemplateInstallProfile-get`
 	 * :ref:`workspaceTemplateLogo-delete`
+	 * :ref:`workspaceTemplateLogo-download`
 	 * :ref:`workspaceTemplateLogo-upload`
 	 * :ref:`workspaceTemplateOSPkgs-get`
-	 * :ref:`workspaceTemplateInstallProfile-get`
 	 * :ref:`workspaceTemplateProjects-get`
-	 * :ref:`workspaceTemplateStudio-get`
 	 * :ref:`workspaceTemplateShare-cancel`
 	 * :ref:`workspaceTemplateStats-get`
+	 * :ref:`workspaceTemplateStatus-get`
+	 * :ref:`workspaceTemplateStudio-get`
+	 * :ref:`workspaceTemplate-delete`
+	 * :ref:`workspaceTemplate-get`
+	 * :ref:`workspaceTemplate-share`
+	 * :ref:`workspaceTemplate-update`
+	 * :ref:`workspacetemplatecomments-api-resources`

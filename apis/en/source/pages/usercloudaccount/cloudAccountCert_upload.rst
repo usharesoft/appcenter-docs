@@ -47,15 +47,15 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`credaccount-object`
 	 * :ref:`certificate-object`
-	 * :ref:`cloudAccount-create`
-	 * :ref:`cloudAccount-getAll`
-	 * :ref:`cloudAccount-get`
-	 * :ref:`cloudAccount-update`
-	 * :ref:`cloudAccount-delete`
-	 * :ref:`cloudAccountResources-get`
 	 * :ref:`cloudAccountCert-create`
-	 * :ref:`cloudAccountCert-download`
 	 * :ref:`cloudAccountCert-delete`
+	 * :ref:`cloudAccountCert-download`
 	 * :ref:`cloudAccountCert-upload`
+	 * :ref:`cloudAccountResources-get`
+	 * :ref:`cloudAccount-create`
+	 * :ref:`cloudAccount-delete`
+	 * :ref:`cloudAccount-get`
+	 * :ref:`cloudAccount-getAll`
+	 * :ref:`cloudAccount-update`
+	 * :ref:`credaccount-object`

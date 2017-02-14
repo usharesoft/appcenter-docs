@@ -7,8 +7,6 @@ Data Transfer Objects
 
 This section provides a description of all UForge AppCenter REST Data Transfer objects.
 
-	* :ref:`abstractwinapplication-object`
-	* :ref:`abstractwinapplications-object`
 	* :ref:`address-object`
 	* :ref:`apikeypair-object`
 	* :ref:`apikeypairs-object`
@@ -23,6 +21,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`artifactcredaccounts-object`
 	* :ref:`bootscript-object`
 	* :ref:`bootscripts-object`
+	* :ref:`bundlerestriction-object`
+	* :ref:`bundlerestrictions-object`
 	* :ref:`categories-object`
 	* :ref:`category-object`
 	* :ref:`certificate-object`
@@ -35,6 +35,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`credaccountabiquo-object`
 	* :ref:`credaccountaws-object`
 	* :ref:`credaccountazure-object`
+	* :ref:`credaccountazureresourcemanager-object`
 	* :ref:`credaccountcert-object`
 	* :ref:`credaccountcloudstack-object`
 	* :ref:`credaccounteuca-object`
@@ -48,24 +49,20 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`credaccountvclouddirector-object`
 	* :ref:`credaccountvsphere-object`
 	* :ref:`credaccountk5-object`
+	* :ref:`credaccountdocker-object`
 	* :ref:`disk-object`
 	* :ref:`disks-object`
 	* :ref:`distribprofile-object`
 	* :ref:`distribprofiles-object`
-	* :ref:`distribprofiletemplate-object`
-	* :ref:`distribprofiletemplates-object`
 	* :ref:`distribution-object`
 	* :ref:`distributions-object`
 	* :ref:`entitlement-object`
 	* :ref:`entitlements-object`
-	* :ref:`exportobject-object`
-	* :ref:`exportobjects-object`
 	* :ref:`fileentry-object`
 	* :ref:`gallerytemplate-object`
 	* :ref:`gallerytemplates-object`
 	* :ref:`gallerytemplatestat-object`
 	* :ref:`gallerytemplatestatistics-object`
-	* :ref:`hardwaresettings-object`
 	* :ref:`image-object`
 	* :ref:`imageformat-object`
 	* :ref:`imageformats-object`
@@ -77,6 +74,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`ipaddress-object`
 	* :ref:`license-object`
 	* :ref:`licenses-object`
+	* :ref:`linuxprofile-object`
+	* :ref:`linuxprofiles-object`
 	* :ref:`localizedmessage-object`
 	* :ref:`logicalgroup-object`
 	* :ref:`logicalgroups-object`
@@ -115,6 +114,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`publishimageabiquo-object`
 	* :ref:`publishimageaws-object`
 	* :ref:`publishimageazure-object`
+	* :ref:`publishimageazureresourcemanager-object`
 	* :ref:`publishimagecloudstack-object`
 	* :ref:`publishimageeuca-object`
 	* :ref:`publishimageflexiant-object`
@@ -126,6 +126,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`publishimagevclouddirector-object`
 	* :ref:`publishimagevsphere-object`
 	* :ref:`publishimagek5-object`
+	* :ref:`publishimagedocker-object`
 	* :ref:`publishimages-object`
 	* :ref:`quota-object`
 	* :ref:`quotas-object`
@@ -180,6 +181,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`users-object`
 	* :ref:`userstats-object`
 	* :ref:`votestat-object`
+	* :ref:`windowsprofile-object`
+	* :ref:`windowsprofiles-object`
 	* :ref:`winmsiapplication-object`
 	* :ref:`winmsiapplications-object`
 	* :ref:`winstoreapplication-object`
@@ -193,8 +196,6 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 .. toctree::
     :hidden:
 
-    AbstractWinApplication
-    AbstractWinApplications
     Address
     APIKeyPair
     APIKeyPairs
@@ -209,6 +210,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     ArtifactCredAccounts
     BootScript
     BootScripts
+    BundleRestriction
+    BundleRestrictions
     Categories
     Category
     Certificate
@@ -221,6 +224,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     CredAccountAbiquo
     CredAccountAws
     CredAccountAzure
+    CredAccountAzureResourceManager
     CredAccountCert
     CredAccountCloudStack
     CredAccountEuca
@@ -234,24 +238,20 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     CredAccountVCloudDirector
     CredAccountVSphere
     CredAccountK5
+    CredAccountDocker
     Disk
     Disks
     DistribProfile
     DistribProfiles
-    DistribProfileTemplate
-    DistribProfileTemplates
     Distribution
     Distributions
     Entitlement
     Entitlements
-    ExportObject
-    ExportObjects
     FileEntry
     GalleryTemplate
     GalleryTemplates
     GalleryTemplateStat
     GalleryTemplateStatistics
-    HardwareSettings
     Image
     ImageFormat
     ImageFormats
@@ -263,6 +263,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     IPAddress
     License
     Licenses
+    LinuxProfile
+    LinuxProfiles
     LocalizedMessage
     LogicalGroup
     LogicalGroups
@@ -301,6 +303,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     PublishImageAbiquo
     PublishImageAws
     PublishImageAzure
+    PublishImageAzureResourceManager
     PublishImageCloudStack
     PublishImageEuca
     PublishImageFlexiant
@@ -312,6 +315,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     PublishImageVCloudDirector
     PublishImageVSphere
     PublishImageK5
+    PublishImageDocker
     PublishImages
     Quota
     Quotas
@@ -366,6 +370,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     Users
     UserStats
     VoteStat
+    WindowsProfile
+    WindowsProfiles
     WinMsiApplication
     WinMsiApplications
     WinStoreApplication

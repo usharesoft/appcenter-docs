@@ -43,23 +43,23 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`org-object`
 	 * :ref:`distribprofile-object`
-	 * :ref:`user-object`
 	 * :ref:`license-object`
-	 * :ref:`org-create`
-	 * :ref:`org-get`
+	 * :ref:`org-object`
+	 * :ref:`orgCompany-getAll`
+	 * :ref:`orgLicense-download`
+	 * :ref:`orgLicense-getAll`
+	 * :ref:`orgMember-getAll`
+	 * :ref:`orgMember-getAll`
+	 * :ref:`orgMember-remove`
+	 * :ref:`orgMember-remove`
+	 * :ref:`orgMember-update`
+	 * :ref:`orgMember-update`
+	 * :ref:`orgOSWindows-add`
+	 * :ref:`orgOSWindows-getAll`
 	 * :ref:`orgOS-add`
 	 * :ref:`orgOS-getAll`
 	 * :ref:`orgOS-update`
-	 * :ref:`orgOSWindows-add`
-	 * :ref:`orgOSWindows-getAll`
-	 * :ref:`orgMember-remove`
-	 * :ref:`orgMember-update`
-	 * :ref:`orgMember-getAll`
-	 * :ref:`orgMember-remove`
-	 * :ref:`orgMember-update`
-	 * :ref:`orgMember-getAll`
-	 * :ref:`orgCompany-getAll`
-	 * :ref:`orgLicense-getAll`
-	 * :ref:`orgLicense-download`
+	 * :ref:`org-create`
+	 * :ref:`org-get`
+	 * :ref:`user-object`

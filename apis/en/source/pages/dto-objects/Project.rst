@@ -25,6 +25,7 @@ The list of attributes for ``project`` are:
 	* ``installedSize`` (long): the estimated disk size (in bytes) required to install this software bundle
 	* ``size`` (long): the total size of this software bundle (in bytes)
 	* ``revision`` (long): the revision number of the software bundle
+	* ``bundleRestrictionsUri`` (anyURI): the uri resource to retrieve the restrictions for this software bundle
 	* ``artifactsUri`` (anyURI): the uri resource to retrieve the details of software artifacts contained in the software bundle
 	* ``uri`` (anyURI): the uri resource of this software bundle object
 	* ``distributionsUri`` (anyURI): the uri resource to retrieve all the operating system this software bundle is designed for
@@ -35,6 +36,7 @@ The list of attributes for ``project`` are:
 	* ``logo`` (:ref:`logo-object`): the :ref:`logo-object` object for the software bundle
 	* ``maintainer`` (string): the maintainer name for this project
 	* ``website`` (anyURI): the website URL of the maintainer
+	* ``bundleRestrictionUris`` (:ref:`UriList-object`): the list of uri resources of each restrictions for this software bundle
 	* ``softwareArtifactUris`` (:ref:`UriList-object`): the list of uri resources for each software artifacts in the software bundle
 	* ``created`` (dateTime): the created date of the object
 	* ``dbId`` (long): the database id of the object

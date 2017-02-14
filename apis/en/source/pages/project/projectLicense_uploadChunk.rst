@@ -44,9 +44,9 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`project-object`
 	 * :ref:`license-object`
+	 * :ref:`project-object`
+	 * :ref:`projectLicense-delete`
 	 * :ref:`projectLicense-download`
 	 * :ref:`projectLicense-upload`
 	 * :ref:`projectLicense-uploadChunk`
-	 * :ref:`projectLicense-delete`

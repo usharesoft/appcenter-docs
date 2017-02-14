@@ -45,12 +45,12 @@ Example Request
 
 .. seealso::
 
+	 * :ref:`membership-object`
 	 * :ref:`workspace-api-resources`
 	 * :ref:`workspace-object`
-	 * :ref:`membership-object`
-	 * :ref:`workspaceMember-invite`
-	 * :ref:`workspaceMember-getAll`
-	 * :ref:`workspaceMember-deleteList`
 	 * :ref:`workspaceMember-delete`
+	 * :ref:`workspaceMember-deleteList`
+	 * :ref:`workspaceMember-getAll`
+	 * :ref:`workspaceMember-invite`
 	 * :ref:`workspaceMember-update`
 	 * :ref:`workspaceMember-updateList`

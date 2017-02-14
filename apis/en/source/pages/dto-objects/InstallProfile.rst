@@ -30,6 +30,7 @@ The list of attributes for ``installProfile`` are:
 	* ``partitionAuto`` (boolean): boolean to determine whether to automatically create the partitioning table, if false this question is asked to the user interactively when provisioning an instance
 	* ``partitionTable`` (:ref:`partitionTable-object`): the partition table information (see :ref:`partitiontable-object`). Only used if ``partitionAuto = true``
 	* ``rootUser`` (:ref:`osUser-object`): the root user information, includes root password information
+	* ``runSysprep`` (boolean): boolean to determine if sysprep will be executed for Windows operating system
 	* ``skipLicenses`` (boolean): a boolean to determine whether to display and enforce the user to accept licensing information during the provisioning of an instance. if ``true`` no licensing information is displayed
 	* ``swapSize`` (long): the swap size (in bytes). .. note:: this is only used for ``basic partitioning`` with one disk
 	* ``timezone``: the timezone to set. Only used if ``timezoneAuto == true``

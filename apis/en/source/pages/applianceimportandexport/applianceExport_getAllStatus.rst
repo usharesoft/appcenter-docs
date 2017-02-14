@@ -14,9 +14,9 @@ applianceExport_getAllStatus
 	* Response Formats: ``application/xml`` ``application/json``
 	* Since: ``3.6``
 
-Retrieves the status of all the current appliance exports for the user <p/> 
+Retrieves the status of all the current appliance exports for the user. 
 
-A list of :ref:`status-object` objects are returned. <p/> 
+A list of :ref:`status-object` objects are returned. 
 
 The ``ae`` query parameter can be used to retrieve a subset of these export statuses.
 
@@ -46,12 +46,12 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`applianceexport-object`
 	 * :ref:`appliance-object`
-	 * :ref:`appliance-export`
 	 * :ref:`applianceExport-cancel`
 	 * :ref:`applianceExport-delete`
 	 * :ref:`applianceExport-download`
 	 * :ref:`applianceExport-get`
 	 * :ref:`applianceExport-getAll`
 	 * :ref:`applianceImport-getAllStatus`
+	 * :ref:`appliance-export`
+	 * :ref:`applianceexport-object`

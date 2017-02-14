@@ -56,15 +56,15 @@ Example of representation.xml content (the request body):
 
 .. seealso::
 
-	 * :ref:`workspace-api-resources`
 	 * :ref:`comment-object`
+	 * :ref:`workspace-api-resources`
 	 * :ref:`workspaceComment-create`
-	 * :ref:`workspaceComment-reply`
-	 * :ref:`workspaceComments-getAll`
-	 * :ref:`workspaceComment-get`
-	 * :ref:`workspaceComment-update`
 	 * :ref:`workspaceComment-delete`
 	 * :ref:`workspaceComment-deleteAll`
-	 * :ref:`workspaceComment-reportAbuse`
-	 * :ref:`workspaceComment-like`
 	 * :ref:`workspaceComment-dislike`
+	 * :ref:`workspaceComment-get`
+	 * :ref:`workspaceComment-like`
+	 * :ref:`workspaceComment-reply`
+	 * :ref:`workspaceComment-reportAbuse`
+	 * :ref:`workspaceComment-update`
+	 * :ref:`workspaceComments-getAll`

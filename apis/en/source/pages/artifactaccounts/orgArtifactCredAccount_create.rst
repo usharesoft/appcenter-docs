@@ -59,12 +59,12 @@ Example of representation.xml content (the request body):
 .. seealso::
 
 	 * :ref:`artifactcredaccount-object`
-	 * :ref:`orgArtifactCredAccount-getAll`
-	 * :ref:`orgArtifactCredAccount-get`
-	 * :ref:`orgArtifactCredAccount-update`
 	 * :ref:`orgArtifactCredAccount-delete`
+	 * :ref:`orgArtifactCredAccount-get`
+	 * :ref:`orgArtifactCredAccount-getAll`
+	 * :ref:`orgArtifactCredAccount-update`
 	 * :ref:`userArtifactCredAccount-create`
-	 * :ref:`userArtifactCredAccount-getAll`
-	 * :ref:`userArtifactCredAccount-get`
-	 * :ref:`userArtifactCredAccount-update`
 	 * :ref:`userArtifactCredAccount-delete`
+	 * :ref:`userArtifactCredAccount-get`
+	 * :ref:`userArtifactCredAccount-getAll`
+	 * :ref:`userArtifactCredAccount-update`

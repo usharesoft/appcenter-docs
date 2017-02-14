@@ -47,14 +47,14 @@ Example Request
 .. seealso::
 
 	 * :ref:`distribprofile-object`
-	 * :ref:`package-object`
-	 * :ref:`os-create`
-	 * :ref:`os-get`
-	 * :ref:`os-update`
 	 * :ref:`osAccess-update`
 	 * :ref:`osLicense-download`
 	 * :ref:`osLogo-download`
 	 * :ref:`osLogo-downloadFile`
-	 * :ref:`osPkg-getAll`
-	 * :ref:`osPkg-get`
 	 * :ref:`osPkgUpdates-getAll`
+	 * :ref:`osPkg-get`
+	 * :ref:`osPkg-getAll`
+	 * :ref:`os-create`
+	 * :ref:`os-get`
+	 * :ref:`os-update`
+	 * :ref:`package-object`

@@ -139,6 +139,8 @@ With UForge you can create machine images in the following formats.
 +-------------------------------------+-------------------------------------------------------+
 | Amazon AWS                          | none                                                  |
 +-------------------------------------+-------------------------------------------------------+
+| Azure Resource Manager              | none                                                  |
++-------------------------------------+-------------------------------------------------------+
 | Eucalyptus                          | Target formats:                                       |
 |                                     | Eucalyptus KVM                                        |
 |                                     | Eucalyptus Xen                                        |

@@ -92,4 +92,4 @@ Listing Existing Golden Images
 
 In order to view a list of existing golden images installed on your UForge run::
 
-	$ uforge org golden list --name Windows --arch x86_64 --version Server2008R2 
+	$ uforge org golden list --arch x86_64 --version Server2008R2 

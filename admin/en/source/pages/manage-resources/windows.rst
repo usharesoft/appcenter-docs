@@ -74,16 +74,16 @@ To install Microsoft Windows, follow the instructions below. This example is for
 
 	1.  First population of Windows::
 
-		$ org os add --name Windows --arch x86_64 --version Server2008R2
+		$ uforge org os add --name Windows --arch x86_64 --version Server2008R2
 
 	2.  Activate Windows Server2008R2 inside the UForge organization::
 
-		$ org os enable --name Windows --arch x86_64 --version Server2008R2
+		$ uforge org os enable --name Windows --arch x86_64 --version Server2008R2
 
 	3.  Activate Windows Server2008R2 for root user (and potentially other preexisting users)::
 
-		$ user os enable --name Windows --arch x86_64 --version Server2008R2 --account root
-		$ user os enable --name Windows --arch x86_64 --version Server2008R2 --account <OTHER_USER_NAME>
+		$ uforge user os enable --name Windows --arch x86_64 --version Server2008R2 --account root
+		$ uforge user os enable --name Windows --arch x86_64 --version Server2008R2 --account <OTHER_USER_NAME>
 
 .. note:: UForge does not manage Windows updates as it does for Linux. Each time you want to have an update for Windows, you will need to create and install a new set of Golden Images.
 
@@ -92,4 +92,4 @@ Listing Existing Golden Images
 
 In order to view a list of existing golden images installed on your UForge run::
 
-	$ org golden list --name Windows --arch x86_64 --version Server2008R2 
+	$ uforge org golden list --arch x86_64 --version Server2008R2 

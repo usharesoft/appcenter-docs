@@ -2,25 +2,36 @@
 
 .. _python-cli:
 
-Using Python CLI
+Using UForge CLI
 ================
 
-You can manage UForge AppCenter using the Python command-line interface. 
+You can manage UForge AppCenter using the UForge command-line interface (CLI). 
 
-Installing Python CLI
+Installing UForge CLI
 ---------------------
 
-To install the Python CLI run::
+The UForge CLI is available for CentOS 6 clients.
 
+In order to install the version of the UForge CLI which corresponds to your UForge AppCenter, please ask your administrator to provide you with the ``/etc/yum.repos.d/uforge-ee-centos.repo`` file of the UForge AppCenter installation.
+
+Then, run the following commands:
+
+To install the UForge CLI run::
+
+	yum clean all
 	yum install uforge-cli
 
 
-Launching Python CLI
+Launching UForge CLI
 --------------------
 
-To launch Python CLI locally on the machine, launch::
+To launch UForge CLI locally on the machine, launch::
 
-	/opt/UShareSoft/uforge/cli/bin/uforge -u $UFORGE_WEBSVC_LOGIN -p $UFORGE_WEBSVC_PASSWORD -U http://ws1:8080/ufws
+	/opt/UShareSoft/uforge/cli/bin/uforge -u LOGIN_NAME -p PASSWORD -U http://IP-OF-MACHINE/api
 
-When accessing from outside the machine, use: https://IP-OF-MACHINE/api
+The ``-p`` argument is optional. If the password is not entered in the command, the user will be prompted to enter their password.
+
+Use ``--help`` to get a list of available commands.
+
+.. note:: When accessing from outside the machine, use: https://IP-OF-MACHINE/api
 

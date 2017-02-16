@@ -24,6 +24,17 @@ When you generate a machine image from the scan, all the information detected by
 
 .. warning:: Currently, UForge is not able to migrate the Yum repository GPG keys. This means that the user will have to accept the repository GPG key when the user installs or updates a package. The user will have to do this only once per repository.
 
+.. note:: If you plan migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/solutions/cloud/k5/>`_, you must also do the following before scanning:
+
+	* Uninstall VMWare Tools (if installed).
+	* Retrieve Transport Agent Software from `K5 Support <mailto:FCSK5_GSD@ph.fujitsu.com>`_.
+	* Install Transport Agent Software.
+	* Disable NLA for RDP (Please refer to official Microsoft documentation `Configure Network Level Authentication for Remote Desktop Services Connections <https://technet.microsoft.com/en-us/library/cc732713(v=ws.11).aspx/>`_).
+	* Uninstall CloudBase-Init (if installed).
+
+	For more detailed information, please refer to `official Fujitsu K5 IaaS Documentation <http://www.fujitsu.com/uk/Images/k5-iaas-features-handbook.pdf>`_.
+
+
 When you carry out black box migration (by generating a machine image directly from a scan), the following steps are carried out:
 
 	1. You are prompted to indicate if you want to change the overall disk size.
@@ -39,13 +50,3 @@ When you carry out black box migration (by generating a machine image directly f
 
 	4. Register the new machine image to the target environment.
 	5. You can provision one or more instances from the machine image. Each instance being a near identical workload from the original.
-
-	.. note:: If you plan migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/solutions/cloud/k5/>`_, you must also do the following before scanning:
-
-				* Uninstall VMWare Tools (if installed).
-				* Retrieve Transport Agent Software from `K5 Support <mailto:FCSK5_GSD@ph.fujitsu.com>`_.
-				* Install Transport Agent Software.
-                                * Disable NLA for RDP (Please refer to official Microsoft documentation `Configure Network Level Authentication for Remote Desktop Services Connections <https://technet.microsoft.com/en-us/library/cc732713(v=ws.11).aspx/>`_).
-				* Uninstall CloudBase-Init (if installed).
-
-				For more detailed information, please refer to `official Fujitsu K5 IaaS Documentation <http://www.fujitsu.com/uk/Images/k5-iaas-features-handbook.pdf>`_.

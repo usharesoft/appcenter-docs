@@ -3,6 +3,125 @@
 Changelog
 =========
 
+3.7-3
+-----
+
+Release Date: 2017-02-17
+
+Installation
+~~~~~~~~~~~~
+
+To be able to update a 3.7 UForge using the latest yum repo, you have to edit ``/etc/yum.repos.d/uforge-ee-centos.repo`` and replace ``stable/3.7/official/centos/releases/$releasever/$basearch/`` by ``test/3.7/centos/releases/$releasever/$basearch/``
+
+A compatible version of hammr is also available : 3.7-3
+
+This version is only compatible with UForge AppCenter 3.7-3
+
+To install it, you will have to launch the following command::
+
+	$ pip install hammr==3.7-3
+
+
+Enhancements
+~~~~~~~~~~~~
+
+* YAML support for UforgeAppCenter
+* MySoftware overhaul features alignments in Hammr
+
+Bug Fixes
+~~~~~~~~~
+
+* 6924 Canceling the K5 publication finishes with ERROR message.
+* 6920 Incoherence in template and mysoftware revisions when sharing to workspace
+* 6899 Documentation mentions copyright in CSS customisation but copyright is not displayed
+* 6896 Multiple simultaneous scans failed with Lock wait timeout exceeded in ushare-distrotools
+* 6878 Success message for "org os add is not correct
+* 6868 Cannot download software artifacts when file size exceed 2GB and file size has been changed
+* 6867 Generation of AWS image for Windows Server 2012R2 fails with illegal seek exception
+* 6851 When uploading a second time a file already uploaded in mysoftware files, the confirm popup has two handlers (so there is two webservice call)
+* 6846 While scanning Windows OS, Scan progress is continued to copy on the clipboard
+* 6833 After the migration from 3.5.1 to 3.6, created API keys disappeared
+* 6817 Cannot retrieve directory from remote site with http basic authentication in software library
+* 6802 A generated CentOS 6.8 image does not boot by kernel panic if it has a logical volume
+* 6788 OpenStack account turned into another type of cloud account after migration from 3.5.1 to 3.6
+* 6786 Cannot download rpms from yum repos whilst scanning a centos system
+* 6776 CentOS 6 scan and generation leads to an error
+* 6771 Credentials Microsoft Azure, the error label is "This should never happen, please update TemplateInfo"
+* 6769 Creating folder failed but displayed on UI
+* 6768 GUI i18n: Instruction on ""Artifact Accounts"" page is not translated
+* 6766 GUI i18n: A Table Header in [SSH Keys] is not translated into Japanese
+* 6762 Cannot delete template with software component from workspace
+* 6745 The image cannot be downloaded with curl and wget
+* 6705 An image can be downloaded more than once by using the URL with same Download ID
+* 6665 When disk size allocated is not enough, the windows generation fails and there is no error raised in the UI
+* 6662 rpm file in project which is tagged as NOT to install during generation is installed
+* 6655 After K5 Black box migration, Firewall setting changes to enable in Cent OS 6
+* 6647 File conflicts against packages built with when installing centos distribution packages
+* 6628 Importing appliance with repository packages in bundle fails with "Import Error: Transfer in progress"
+* 6610 Cannot download non-cached software artifact correctly if the remote file size has been changed
+* 6609 Cannot pull files from FTP in MySoftware
+* 6603 After import an appliance with archive file, the number of appliances is not updated
+* 6556 Creating a user with allowed '@' character raises issues
+* 6528 "org targetformat enable" does not show X in Access
+* 6439 "SQL Error: 0, SQLState: null" occurs
+* 6036 The logo of the Software component of a template imported from collaboration is broken
+* 4251 User's scan count increases though the scan is cancelled if the user has unlimited scan quota
+
+3.7-2
+-----
+
+Release Date: 2017-02-02
+
+Installation
+~~~~~~~~~~~~
+
+To be able to update a 3.7 forge using the latest yum repo, you have to edit ``/etc/yum.repos.d/uforge-ee-centos.repo`` and replace ``stable/3.7/official/centos/releases/$releasever/$basearch/`` by ``test/3.7/centos/releases/$releasever/$basearch/``
+
+Bug Fixes
+~~~~~~~~~
+
+* 6669 Cannot cancel the k5 publication
+* 6434 Imported appliances are counted as created on statistics in Dashboard
+* 6114 Sharing a template in collaboration, including software that does not use the cache of the fetch, raises an Internal Server Error
+* 6476 Spelling mistake retrieving remote path and error message shown
+* 6509 Several concurrent generations could fail if there are uncached software bundles files in it
+* 6561 OS packages are not sortable by the Repository column
+* 6563 Sticky package of imported template is not shown in UI at all
+* 6564 Cloud account name appears twice in the public informations in UI for all Cloud formats
+* 6565 Impossible to publish an OpenStack VDI image
+* 6566 Creating two bootscripts with same name does not show an error message
+* 6575 Pkg overlay archive are built differently if a black box migration is done first or if it's a scan import to appliance
+* 6577 Exported template has lost some information on MySoftware
+* 6579 Total Disk Usage doesn't count the size of files uploaded to software components
+* 6582 Errors outputted into /oar/job_finalize.log when generating CentOS image
+* 6584 Errors outputted into /oar/oar_scan_job*.stderr when scanning CentOS6
+* 6597 Imported appliances from archive are not counted statistics in Dashboard
+* 6604 Same rpm file can be uploaded without overwritten to a software component
+* 6606 Filter inactive pkgs on DistributionPackages.getAll
+* 6310 Primary disk size is changed to the other disk size on UI when having multiple disks
+* 6435 "cached" option doesn't change when a file overwrites an existing pulled file
+* 6442 Image generation fails when a template includes rpm file with no cached
+* 6535 Cannot retrieve artifact from remote site using http basic authentication.
+* 6543 Cannot export a template if the software component has rpm file in Repository Packages tab
+* 6425 Cannot select OS profile for Windows if the edition includes "-"
+* 6283 Launching an oarsub job where directory contains an '@' fails
+* 6383 machineImage_Publish APIs return HTTP 500 Internal Server Error when the specified ID of the publishImage does not exist
+* 6403 Scripts are not imported when sharing a template by Workspace
+* 6417 Appliance import fails if MySoftware includes rpm packages
+* 6533 Code in distrotools/lib/str.[c|h] in function repl_str() cannot compile for windows using mingw c++
+* 6538 User can view all the distributions enabled in the ORG on Mysoftware>Distributions even if the user has only one Distribution enabled
+* 6253 Keyboard is Arabic on UI after importing Ubuntu scan when keyboard is ``jp``
+* 6380 User Update API call fails with "This user email is already in use"
+* 6525 After import scan ubuntu information in InstallProfile are not correct (kernel param, license and firewall)
+* 6530 Grub entries order are not conserved
+* 6532 CLI command ``org golden create`` must have a ``--force`` to overwrite golden instead of showing an error
+* 6534 Keyboard value is not imported correctly with white box migration
+* 6536 Scanning a linux system with a filename including pipes ``|`` fails
+* 6657 Scan does not read KEYBOARD in metadata
+* 6658 Logs from SELinuxModeParser.java show KeyboardParser 
+
+
+
 3.7
 ---
 

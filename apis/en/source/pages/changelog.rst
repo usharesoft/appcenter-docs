@@ -22,12 +22,6 @@ To install it, you will have to launch the following command::
 	$ pip install hammr==3.7-3
 
 
-Enhancements
-~~~~~~~~~~~~
-
-* YAML support for UforgeAppCenter
-* MySoftware overhaul features alignments in Hammr
-
 Bug Fixes
 ~~~~~~~~~
 

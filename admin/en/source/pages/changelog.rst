@@ -22,12 +22,6 @@ To install it, you will have to launch the following command::
 	$ pip install hammr==3.7-3
 
 
-Enhancements
-~~~~~~~~~~~~
-
-* YAML support for UforgeAppCenter
-* MySoftware overhaul features alignments in Hammr
-
 Bug Fixes
 ~~~~~~~~~
 
@@ -103,7 +97,6 @@ Bug Fixes
 * 6442 Image generation fails when a template includes rpm file with no cached
 * 6535 Cannot retrieve artifact from remote site using http basic authentication.
 * 6543 Cannot export a template if the software component has rpm file in Repository Packages tab
-* 6425 Cannot select OS profile for Windows if the edition includes "-"
 * 6283 Launching an oarsub job where directory contains an '@' fails
 * 6383 machineImage_Publish APIs return HTTP 500 Internal Server Error when the specified ID of the publishImage does not exist
 * 6403 Scripts are not imported when sharing a template by Workspace

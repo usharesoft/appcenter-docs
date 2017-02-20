@@ -53,7 +53,7 @@ For each of these components we recommend the following minimal (hardware or vir
 | Cluster        |            |            |                |                                |
 | (scheduler)    |            |            |                |                                |
 +----------------+------------+------------+----------------+--------------------------------+
-| Compute Node   | 4 GB       | 2          | 30 GB          | If you have a good NAS/SAN you |
+| Compute Node   | 4 GB       | 2          | 30 GB          | With a good NAS/SAN you can    |
 |                |            |            |                | reduce the disk space to 15 GB |
 |                |            |            |                | if you map the directory       |
 |                |            |            |                | /space/REPOS with the NAS/SAN  |
@@ -61,7 +61,7 @@ For each of these components we recommend the following minimal (hardware or vir
 | SYNCOPE        | 2 GB       | 2          | 15 GB          |                                |
 | Webservice     |            |            |                |                                |
 +----------------+------------+------------+----------------+--------------------------------+
-| Database       | 4 GB       | 4          | 100 GB         | If you have a good NAS/SAN you |
+| Database       | 4 GB       | 4          | 100 GB         | With a good NAS/SAN you can    |
 |                |            |            |                | reduce the disk space to 15 GB |
 |                |            |            |                | if you map the directory       |
 |                |            |            |                | /space/REPOS with the NAS/SAN  |
@@ -89,7 +89,7 @@ See the specification of these options:
 +----------------+------------+------------+----------------+--------------------------------+
 | Component      | RAM        | CPU        | Hard Drive     | Comment                        |
 +================+============+============+================+================================+
-| Database Slave | 2 GB       | 1          | 70 GB          | If you have a good NAS/SAN you |
+| Database Slave | 2 GB       | 1          | 70 GB          | With a good NAS/SAN you can    |
 |                |            |            |                | reduce the disk space to 15 GB |
 |                |            |            |                | if you map the directory       |
 |                |            |            |                | /var/lib/mysql to the NAS/SAN  |

@@ -117,7 +117,7 @@ To delete the project:
 
 	   click on the project item to edit it, then click on the ``delete`` icon at the top right-hand side of the project edit page. 
 
-	   .. image:: /images/project-delete.png
+	   .. image:: /images/project-delete2.png
 
 .. _obsolete-project:
 
@@ -134,5 +134,5 @@ To mark a project as ``obsolete``:
 	4. Click on the project to edit it.
 	5. Click on the ``obsolete`` icon at the top right-hand side of the project edit page. 
 
-	.. image:: /images/project-obsolete.png
+	.. image:: /images/project-obsolete2.png
 

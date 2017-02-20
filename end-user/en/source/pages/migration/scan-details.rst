@@ -26,9 +26,9 @@ To view the details of a scanned Linux-based instance:
 Windows-based
 ~~~~~~~~~~~~~
 
-To view the details of a scanned Windows-based instance:
-
 .. note:: The details of the scan are for information purposes only. They cannot be modified.
+
+To view the details of a scanned Windows-based instance:
 
 	1. Go to the ``Migration`` tab and click ``My Scans``.
 	2. Click on the scan.

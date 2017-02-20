@@ -18,7 +18,7 @@ To add a photo to your profile or modify the existing one:
 	3. Click on the round photo icon on the left hand side.
 	4. Navigate to the desired image (preferably a .jpeg or .png). 
 	5. Click ``Open``.
-	6. Click ``Save``.
+	6. Click ``save``.
 
 .. _account-statistics:
 

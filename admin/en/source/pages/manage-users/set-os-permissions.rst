@@ -46,5 +46,5 @@ An administrator can add or remove access to operating systems for a specific us
 		$ uforge user os enable --account <username> --name CentOS --version 5.8 --arch i386
 		$ uforge user os disable --account <username> --name CentOS --version 5.8 --arch i386
 
-.. note:: For “Scientific Linux” and “Red Hat Enterprise Linux”, use the following syntax : Scientific.* RedHat.* for the distribution name. 
+.. note:: For Scientific Linux and Red Hat Enterprise Linux, use the following syntax: ``Scientific.*`` and ``RedHat.*`` for the distribution name. 
 

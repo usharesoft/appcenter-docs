@@ -14,9 +14,9 @@ Exporting
 
 To export an existing appliance:
 
-	1. Go to your ``Appliance Library``
+	1. Go to your ``Appliance Library``.
 
-	2. Click on the ``export`` icon on the right hand side of the appliance template in question to export
+	2. Click on the ``export`` icon on the right hand side of the appliance template in question to export.
 
 	.. image :: /images/export-appliance.png
 
@@ -52,4 +52,4 @@ To import an archive:
 	5. Once the import is complete, a new appliance template can be found in the ``Imported Appliances`` sub-section of your ``Appliance Library``.
 
 
-.. note:: If you have already an appliance with the same name, version and OS type then this import will fail due to an appliance template conflict.  In such situations, you will require to delete the original appliance template.
+.. warning:: If you already have an appliance with the same name, version and OS type then this import will fail due to an appliance template conflict.  In such situations, you must delete the original appliance template.

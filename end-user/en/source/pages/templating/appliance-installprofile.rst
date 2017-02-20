@@ -43,7 +43,7 @@ To add a user to an appliance:
 	5. Enter a user name.
 	6. If you want to manually enter the user ID, deselect ``set the user id automatically`` and enter the ID number.
 	7. If you want to manually create the primary group the user is part of, deselect ``automatically create primary group for user`` and enter the group name. 
-	8. Click ``create``
+	8. Click ``create``.
 
 .. warning:: If you create a user and list it as part of a specific group, you must then also create the group; otherwise the image generation will fail. 
 

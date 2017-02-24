@@ -10,6 +10,7 @@ The following sections cover information regarding managing the UForge users. Ma
 .. toctree::
    :titlesonly:
 
+   manage-users
    rbac/rbac-overview
    admin-rights
    set-quotas

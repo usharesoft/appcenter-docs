@@ -18,8 +18,8 @@ The list of attributes for ``repository`` are:
 	* ``distributionsUri`` (anyURI): the uri resource to retrieve the operating system(s) of this repository (may contain minor versions)
 	* ``url`` (string): the URL endpoint of this repository
 	* ``packagingType``: the package type ths repository holds
-	* ``lastUpdated`` (dateTime): the date this repository last recieved a package update
-	* ``status`` (:ref:`status-object`): the current status of the repository
+	* ``lastUpdated`` (dateTime): the date this repository last received a package update
+	* ``repositoryUpdates``: the list of update for the repository (see :ref:`repositoryUpdate-object`
 	* ``officiallySupported`` (boolean): boolean indicating whether this repository is officially supported
 	* ``distributionsUriList`` (:ref:`UriList-object`): the list of uri resources for each operating system contained in this repository
 	* ``created`` (dateTime): the created date of the object

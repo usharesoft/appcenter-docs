@@ -134,6 +134,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`referrals-object`
 	* :ref:`repository-object`
 	* :ref:`repositories-object`
+	* :ref:`repositoryupdate-object`
+	* :ref:`repositoryupdates-object`
 	* :ref:`role-object`
 	* :ref:`roles-object`
 	* :ref:`route-object`
@@ -323,6 +325,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     Referrals
     Repository
     Repositories
+    RepositoryUpdate
+    RepositoryUpdates
     Role
     Roles
     Route

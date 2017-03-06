@@ -47,7 +47,11 @@ Example Request
 
 	 * :ref:`org-object`
 	 * :ref:`repository-object`
+	 * :ref:`repositoryUpdate-object`
 	 * :ref:`repositoryUpdateStatus-get`
 	 * :ref:`repositoryUpdate-getAll`
-	 * :ref:`repositoryupdate-object`
+	 * :ref:`repository-create`
+	 * :ref:`repository-delete`
+	 * :ref:`repository-getAll`
+	 * :ref:`repository-update`
 	 * :ref:`status-object`

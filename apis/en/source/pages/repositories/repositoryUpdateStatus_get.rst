@@ -25,7 +25,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the id of the :ref:`repositoryupdate-object`
+* ``uid`` (required): the id of the :ref:`repositoryUpdate-object`
 * ``oid`` (required): the id of the :ref:`org-object`
 * ``rid`` (required): the id of the :ref:`repository-object`
 
@@ -46,7 +46,11 @@ Example Request
 
 	 * :ref:`org-object`
 	 * :ref:`repository-object`
+	 * :ref:`repositoryUpdate-object`
 	 * :ref:`repositoryUpdate-create`
 	 * :ref:`repositoryUpdate-getAll`
-	 * :ref:`repositoryupdate-object`
+	 * :ref:`repository-create`
+	 * :ref:`repository-delete`
+	 * :ref:`repository-getAll`
+	 * :ref:`repository-update`
 	 * :ref:`status-object`

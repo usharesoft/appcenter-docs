@@ -5,7 +5,7 @@
 repositoryUpdate
 ================
 
-Holds information used by an update of a :ref:`repository-object`
+Object holding the update information of a :ref:`repository-object`.
 
 Attributes
 ~~~~~~~~~~

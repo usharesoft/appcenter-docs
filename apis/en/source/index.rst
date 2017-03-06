@@ -34,7 +34,6 @@ This documentation provides a description of UForge AppCenter RESTful interface.
     pages/organization/overview
     pages/project/overview
     pages/repositories/overview
-    pages/repositoryupdate/overview
     pages/rolesandentitlements/overview
     pages/scanmachineimage/overview
     pages/subscriptionprofile/overview

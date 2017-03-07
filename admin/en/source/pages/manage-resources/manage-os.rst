@@ -114,6 +114,27 @@ In order to add the OS to a specific distribution, you will need to specify ``--
 
 When adding CentOS, Debian and RedHat, the major versions are automatically marked as Milestones when the distribution is added to the platform. For more information on Milestones, refer to :ref:`manage-milestone`.
 
+.. _updating-repo:
+
+Updating a Repository
+---------------------
+
+You can manually launch an update of a specific repository using ``uforge org repo refresh``. To do this, you must have the ``repoId``, which you can find using ``uforge org repo list``. For example, to launch the update:
+
+.. code-block :: shell
+
+	$ uforge org repo refresh trigger --repoId 355 -u $ADMIN -p $PASS
+
+In order to view the status of a repository update, launch:
+
+.. code-block :: shell
+
+	$ uforge org repo refresh status --repoId 355 --refreshId 887 -u $ADMIN -p $PASS
+
+To view a list of all the updates launched, use: ``uforge org repo refresh list``.
+
+
+.. _removing-os:
 
 Removing OSes and Distributions
 -------------------------------

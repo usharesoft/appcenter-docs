@@ -55,5 +55,8 @@ The following example shows how to add a link to a blog under the ``<c:header>``
         <c:linkItem>
     		<c:title>Blog</c:title>
         	<c:link>https://blog.usharesoft.com/</c:link>
+        	<c:target>blank</c:target>
     	</c:linkItem>
     </c:header>
+
+If ``<c:target>blank</c:target>`` or ``<c:target>_blank</c:target>`` are used with ``<c:linkItem>`` the page will open in a new tab.

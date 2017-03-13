@@ -45,7 +45,7 @@ The following example shows how to add a link to twitter:
 
 You can add as many links as you like by adding a ``linkItem`` for each link.
 
-If ``<c:target>blank</c:target>`` or ``<c:target>_blank</c:target>`` are used with ``<c:linkItem>`` the page will open if a new tab.
+If ``<c:target>blank</c:target>`` or ``<c:target>_blank</c:target>`` are used with ``<c:linkItem>`` the page will open in a new tab.
 
 
 Adding Terms of Use or Privacy Policy
@@ -70,4 +70,4 @@ To modify the Terms of Use or Privacy Policy, go to the sections under <c:footer
 		</c:linkItem>
 	</c:footer>
 
-If ``<c:target>blank</c:target>`` or ``<c:target>_blank</c:target>`` are used with ``<c:linkItem>`` the page will open if a new tab.
+If ``<c:target>blank</c:target>`` or ``<c:target>_blank</c:target>`` are used with ``<c:linkItem>`` the page will open in a new tab.

@@ -206,6 +206,8 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 Example for Adding RedHat Enterprise Linux
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. note:: Before populating RedHat Enterprise Linux, you should complete the steps in :ref:`proprietary-pkg`, unless you have a Red Hat Satellite, in which case you should contact your Red Hat Satellite administrator for the Satellite repo URL. 
+
 The following is a concrete example to begin the population of RedHat Enterprise Linux version 7, 64bit:
 
 	1. Connect to UForge:
@@ -278,7 +280,7 @@ The following is a concrete example to begin the population of RedHat Enterprise
 
 	11. Create OS profile based on packages (minimal, server, etc.)::
 
-		$ /opt/UShareSoft/uforge/bin/runjob.py sorter_low_prio -d "RedHat" -v 7 -a x86_64
+		$ /opt/UShareSoft/uforge/bin/runjob.py sorter_low_prio -d RHEL -v 7 -a x86_64
 
 Adding DEB Type OSes
 --------------------
@@ -373,13 +375,13 @@ The following is a concrete example to begin the population of Ubuntu 10.04 64bi
 
 		.. note:: This procedure may take a long time.
 
-	10. To verify if the procedure is terminated, run the following command:
+	10. To verify if the procedure is finished, run the following command:
 
 		.. code-block:: shell
 
 			$ tail -f /tmp/USER_DATA/FactoryContainer/logs/repos/spider/<directory name with date>/spider.stdout 
 		
-		The procedure is complete when you see the line ``INFO`` ends with ``Entering CheckForRepositoriesUpdates->terminate()``
+		The procedure is done when you see the line ``INFO`` ends with ``Entering CheckForRepositoriesUpdates->terminate()``
 
 	11. Create OS profile based on packages (minimal, server, etc.)::
 

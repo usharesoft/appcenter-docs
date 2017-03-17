@@ -5,9 +5,11 @@
 Hosting Proprietary Packages
 ----------------------------
 
-Proprietary packages, such as Red Hat Enterprise Linux are not delivered as part of the UForge repository. You must have the original ISO images of the operating system in questions and follow the steps below.
+Proprietary packages, such as RedHat Enterprise Linux are not delivered as part of the UForge repository. You must have the original ISO images of the operating system in questions and follow the steps below.
 
-For example, to add a Red Hat repository:
+.. warning:: If you populate UForge AppCenter with Red Hat Enterprise Linux using an ISO, only the package versions in the ISO image will be known to UForge AppCenter. If you later scan a Red Hat Enterprise Linux machine with package versions more recent than those of the ISO, the scan will succeed, but will be extremely inefficient since all packages will have to be rebuilt. Therefore, if you have access to a Red Hat Satellite, then adding the Red Hat Enterprise Linux repository exposed by the Red Hat Satellite is a better option.
+
+To add a RedHat repository using your ISO:
 
 	1. Mount the iso into ``/mnt`` (on the works node)
 
@@ -38,40 +40,4 @@ For example, to add a Red Hat repository:
 
 		service httpd restart
 
-	7. Create the repository using the UForge CLI as follows:
-
-	.. code-block:: shell
-
-		$ uforge org repo create --name "RHEL 6.5 os" --repoUrl "http://MACHINE_IP/repos/RHEL/6.5/x86_64/" --type RPM -u $ADMIN -p $PASS
-
-	The ``–-name`` specified here is the “tagname” that will be shown in the UI when creating an appliance.
-
-	8. Attach the repository to the distribution as follows:
-
-	.. code-block:: shell
-
-		$ uforge org repo os attach --name RHEL --repoIds 954 -u $ADMIN -p $PASS
-
-	9. Populate the repository packages:
-
-	.. code-block:: shell
-
-		$ /opt/UShareSoft/uforge/cron/update_repos_pkgs.sh
-
-	This procedure may take a long time.
-
-	10. To verify if the procedure is terminated, run the following command:
-
-	.. code-block:: shell
-
-		$ tail -f /tmp/USER_DATA/FactoryContainer/logs/repos/spider/<directory name with date>/spider.stdout 
-
-	The procedure is terminated when you see the line::
-
-		INFO  CheckForRepositoriesUpdates:275 - Entering CheckForRepositoriesUpdates->terminate()
-
-	11. Create an OS profile based on packages (minimal, server, etc.):
-
-	.. code-block:: shell
-
-		$ /opt/UShareSoft/uforge/bin/runjob.py sorter_low_prio -a x86_64 -d RHEL -v 6.5
+	7. You must now populate the RedHat Enterprise Linux repository, as describred in :ref:`populate-rhel`.

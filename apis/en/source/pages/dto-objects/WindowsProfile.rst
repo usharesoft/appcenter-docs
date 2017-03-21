@@ -14,9 +14,11 @@ The list of attributes for ``windowsProfile`` are:
 
 	* ``edition``: the edition of the operating system for this os profile
 	* ``goldenUri`` (anyURI): the uri resource to retrieve the golden machine image for this os profile
-	* ``partitionTable`` (:ref:`partitionTable-object`): the partition table information (see :ref:`partitiontable-object`).
+	* ``partitionTable`` (:ref:`partitionTable-object`): the partition table of the os profile (see :ref:`partitiontable-object`).
 	* ``type``: the type of the operating system for this os profile
 	* ``language`` (string): the language of the attached golden machine image
+	* ``servicesUri`` (anyURI): the uri resource to retrieve all the services contained in this os profile
+	* ``applicationsUri`` (anyURI): the uri resource to retrieve all the applications contained in this os profile
 	* ``active`` (boolean): boolean to determine if this os profile is active (i.e. available to use by a user)
 	* ``applianceUri`` (anyURI): the uri resource of the appliance this os profile is attached to
 	* ``arch`` (string): the architecture of the operating system this os profile is based on

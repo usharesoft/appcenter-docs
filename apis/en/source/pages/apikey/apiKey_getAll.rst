@@ -44,5 +44,6 @@ Example Request
 
 	 * :ref:`apiKey-create`
 	 * :ref:`apiKey-delete`
+	 * :ref:`apiKey-update`
 	 * :ref:`apikeypairs-object`
 	 * :ref:`user-object`

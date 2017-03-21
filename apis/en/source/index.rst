@@ -31,6 +31,7 @@ This documentation provides a description of UForge AppCenter RESTful interface.
     pages/os/overview
     pages/osmilestone/overview
     pages/ostemplate/overview
+    pages/ostemplateapplications/overview
     pages/organization/overview
     pages/project/overview
     pages/repositories/overview

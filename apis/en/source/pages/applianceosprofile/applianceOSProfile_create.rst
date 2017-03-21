@@ -56,8 +56,10 @@ Example of representation.xml content (the request body):
 .. seealso::
 
 	 * :ref:`appliance-object`
+	 * :ref:`applianceOSProfileApplications-getAll`
 	 * :ref:`applianceOSProfilePkg-getAll`
 	 * :ref:`applianceOSProfilePkg-updateAll`
+	 * :ref:`applianceOSProfileServices-getAll`
 	 * :ref:`applianceOSProfile-delete`
 	 * :ref:`applianceOSProfile-get`
 	 * :ref:`applianceOSUpdates-get`

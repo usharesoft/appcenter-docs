@@ -23,6 +23,7 @@ The list of attributes for ``scan`` are:
 	* ``imports``: a list of :ref:`scanimport-object` objects that have been imported from this scan report
 	* ``winServices``: a list of :ref:`winservice-object` objects that represent Windows services on the scanned machine
 	* ``winApplications``: a list of :ref:`winMsiApplication-object` and :ref:`winStoreApplication-object` objects that represent Windows applications on the scanned machine
+	* ``osConfig`` (:ref:`osConfig-object`): `osconfig-object` of the scan
 	* ``importsUri`` (anyURI): the uri resource to retrieve all the imports
 	* ``installProfile`` (:ref:`installProfile-object`): the install profile of the scanned system
 	* ``installProfileUri`` (anyURI): the uri resource of the :ref:`installprofile-object`

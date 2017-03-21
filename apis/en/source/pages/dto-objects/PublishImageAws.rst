@@ -12,7 +12,6 @@ Attributes
 
 The list of attributes for ``PublishImageAws`` are:
 
-	* ``bucket`` (string): the bucket name where this machine image is registered
 	* ``region`` (string): the region where this machine image is registered
 	* ``cloudId`` (string): the unique id for the machine image registered on the cloud environment
 	* ``imageUri`` (anyURI): the uri resource of the machine image

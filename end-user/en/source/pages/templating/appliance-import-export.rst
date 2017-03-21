@@ -35,7 +35,7 @@ The equivalent export feature is available when editing an appliance template.
 Importing
 ~~~~~~~~~
 
-.. warning:: You will only be able to import a Windows appliance to a UForge has the same golden image as the one used for the scanned appliance. In order to make sure that you can use the Windows appliance, you must export the appliance and remove the OS section. Refer to :ref:`appliance-update-windows-import`.
+.. warning:: You will only be able to import a Windows appliance to a UForge has the same golden image as the one used by the appliance. If the golden does not exist on the target UForge you must export the appliance without OS Profile or remove some OS section fields in template file. Refer to :ref:`appliance-update-windows-import`.
 
 To import an archive:
 
@@ -60,34 +60,34 @@ To import an archive:
 Updating a Windows Appliance Before Import
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you try to import a Windows appliance, UForge will check if the golden image used to create the appliance exists on the UForge. If it does not exist, the import will fail. However, in order to import the template, you must export the appliance and remove the OS profile.
+If you try to import a Windows appliance, UForge will check if the golden image used to create the appliance exists on the UForge. If it does not exist, the import will fail. However, in order to import the template, you must export the appliance and remove the OS profile. You can also remove the OS Profile using the UI by going to the the "Stack" page of the appliance before exporting.
 
-For example, in order to remove the OS section before importing your Windows appliance:
+For example, in order to remove some OS section fields before importing your Windows appliance:
 
 	1. Go to your ``Appliance Library``.
 	2. Click on the ``export`` icon on the right hand side of the appliance template to export.
 	3. Once the export is complete, you will be prompted to download the archive file.
 	4. Open the archive file. The OS section should look something like:
 
-	.. code-block:javascript
+	.. code-block:: yaml
 
 		os:
-		    name: "Windows"
-		    version: "Server2012R2"
-		    arch: "x86_64"
-		    profile: "Win2K12R2 scan Scan #1"
-		    windowsEdition: "standard"
-		    windowsType: "full"
-		    windowsLanguage: "English"
+		  name: "Windows"
+		  version: "Server2012R2"
+		  arch: "x86_64"
+		  profile: "Win2K12R2 scan Scan #1"
+		  windowsEdition: "standard"
+		  windowsType: "full"
+		  windowsLanguage: "English"
 
 	5. Update the OS section to remove the lines ``profile``, ``windowsEdition``, ``windowsType``, ``windowsLanguage``. For example:
 
-		.. code-block:javascript
+	.. code-block:: yaml
 
 		os:
-		    name: "Windows"
-		    version: "Server2012R2"
-		    arch: "x86_64"
+		  name: "Windows"
+		  version: "Server2012R2"
+		  arch: "x86_64"
 		    
 	6. Save the file.
 	7. Go to your ``Appliance Library``. 

@@ -80,7 +80,15 @@ For example, in order to remove the OS section before importing your Windows app
 		    windowsType: "full"
 		    windowsLanguage: "English"
 
-	5. Update the OS section to remove the lines ``profile``, ``windowsEdition``, ``windowsType``, ``windowsLanguage``.
+	5. Update the OS section to remove the lines ``profile``, ``windowsEdition``, ``windowsType``, ``windowsLanguage``. For example:
+
+		.. code-block:javascript
+
+		os:
+		    name: "Windows"
+		    version: "Server2012R2"
+		    arch: "x86_64"
+		    
 	6. Save the file.
 	7. Go to your ``Appliance Library``. 
 	8. Click on the ``import`` button at the top right hand side of the view.

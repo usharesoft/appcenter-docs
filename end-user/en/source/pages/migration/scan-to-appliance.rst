@@ -7,8 +7,6 @@ Create an Appliance Template
 
 You can create an appliance template from a scan. Once you create an appliance template packages and files that are known will be listed under ``OS profile``, while "unknown" packages and files will be listed under ``MySoftware``.
 
-.. warning:: This is only supported for Linux based source instances.
-
 To create an appliance template from a scan:
 
 From the Migration tab:
@@ -23,7 +21,9 @@ From the Migration tab:
 
 You can now generate a machine image and share it, as you would any other appliance template.
 
-More importantly you can now change the contents of the original scanned system.  If you go to the ``Apps`` tab, the new appliance template will be listed in the ``imported templates`` section.  Double-click on it to view the details or modify it.
+More importantly you can now change the contents of the original scanned system.  If you go to the ``Apps`` tab, the new appliance template will be listed in the ``Imported Appliances`` section.  Double-click on it to view the details or modify it.
+
+.. warning:: Once you have created a Windows appliance using ``import`` from a scan, you will only be able to import this appliance to another UForge platform by removing some OS section fields. Refer to :ref:`appliance-update-windows-import`.
 
 .. _migration-scan-appliance-config-console:
 

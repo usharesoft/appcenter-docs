@@ -5,9 +5,12 @@
 Updating the Install Profile
 ----------------------------
 
-The ``Install Profile`` on the ``Stack`` page allows you to customize the questions asked when the image is booted for the very first time (or during installation for an ISO image). The install profile is mandatory.
+The ``Install Profile`` on the ``Stack`` page allows you to customize the questions asked when the image is booted for the very first time (or during installation for an ISO image). The install profile is mandatory. However, the options you set will differ depending on if you appliance in Linux-based or Windows-based. Please refer to the appropriate section below.
 
-You can define the following as part of the install profile:
+Updating a Linux-based Install Profile
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can define the following as part of a Linux-based appliance install profile:
 
 * ``Root User``: The root user password by default is prompted during the first boot of the machine image i.e. ``ask during installation``. However, you can pre-set a root  password. You can enter an SSH key to allow users to login as root. If you select ``Disable root password login via SSH``, root will still be able to login from the console.
 * ``Users and Groups`` (optional): you can add operating system users and groups. See :ref:`appliance-install-profile-users-groups` for more information
@@ -27,7 +30,7 @@ You can define the following as part of the install profile:
 Adding Users and Groups
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-You can add operating system users and groups to the appliance Install Profile. These will be integrated to the appliance template.
+You can add operating system users and groups to a Linux-based appliance Install Profile. These will be integrated to the appliance template.
 
 .. warning:: The users and groups created in UForge are not linked. If you create a user and list it as part of a specific group, you must then also create the group; otherwise the image generation will fail. 
 
@@ -48,7 +51,7 @@ To add a user to an appliance:
 .. warning:: If you create a user and list it as part of a specific group, you must then also create the group; otherwise the image generation will fail. 
 
 
-To add a group to an appliance install profile:
+To add a group to a Linux-based appliance install profile:
 
 	1. Select the appliance template you want to modify.
 	2. From the ``Stack`` page, click on ``Install Profile`` in the toolbox.
@@ -62,3 +65,19 @@ To add a group to an appliance install profile:
 	7. If you want to manually enter the group ID, deselect ``Set the group id automatically`` and enter the group ID number.
 	8. Click ``create``.
 
+.. _windows-install-profile:
+
+Updating a Windows-based Install Profile
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can define the following as part of a Windows-based appliance install profile:
+
+* ``Sysprep``: Allows you to indicate that sysprep should be run on first boot. If you do not select to run sysprep, you cannot deploy a template.
+* ``Activation Key``: You can set the Windows Activation Key. If it is not entered in the Install Profile, the default key will be used for a 30-day trial period once the appliance is booted.
+* ``Administrator``: To set the administrator root login. Can be one of ``Ask during installation``, ``None`` or ``Set automatically``. Note that this option is visible only if you have selected to run sysprep under ``Sysprep`` option.
+* ``Network``: You can set the internet settings. The default is ``set automatically``. See :ref:`appliance-multinic`
+* ``Partitioning``: You can modify the disk and swap size for the automatic set up, select ``ask during install``, or set up ``Advanced Partitioning`` (for several disks). For more information see :ref:`appliance-install-profile-partitioning`.
+* ``Time Zone``: default is ``set automatically to London``.
+* ``Welcome Message``: You can enter a welcome message.
+
+	.. image:: /images/install-profile-windowsfp3.png

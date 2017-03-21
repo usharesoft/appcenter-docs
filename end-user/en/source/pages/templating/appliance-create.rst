@@ -42,7 +42,7 @@ To create a Windows Appliance:
 	2. Enter the appliance name and version.
 	3. Choose ``Windows`` from the OS Distribution drop-down menu.
 
-		.. image:: /images/create-appliance-windows.png
+		.. image :: /images/create-appliance-windows.png
 
 	4. Select the Release and Architecture from the drop-down menus.
 	5. Click ``create``.
@@ -50,28 +50,26 @@ To create a Windows Appliance:
 
 		.. note:: Once you have chosen the OS Profile, you cannot add any packages or run updates. The OS Profile is static. Once created, if you select OS Profile, you will only be able to view the details of the profile you selected.  
 
-		.. image:: /images/create-appliance-windows-profile.png
+		.. image :: /images/create-appliance-windows-profile.png
 
-	7. Set the Install profile and click ``Save``.
+	7. Set the Install profile and click ``Save``. For more information, refer to :ref:`windows-install-profile`.
 
 		.. note:: Unlike Linux, the following cannot be set for Windows appliances: Keyboard, Root user, User & Groups, Kernel Parameters and Firewall.  
 
-		.. image :: /images/windows-install.png
+		.. image :: /images/windows-install2.png
 
-	8. Optionally, you can set the Activation Key as part of the Install Profile. If it is not entered in the ``Install Profile``, the default key will be used for a 30-day trial period once the appliance is booted.
-
-	9. Optionally you can add partitions.
+	8. Optionally you can add partitions.
 		a. Click on ``Partitioning`` and select ``Advanced Partitioning``.
 		b. Click on the green + sign at the top.
-		c. You can modify the name and partitions type
-		d. Select the filesystem to ntfs and mount point to D: (or such).
-		e. Enter the size. The install disk  should be 12 Gb for core versions and not less than 32Gb for the full version
-		f. Check the box in the Grow column if you want the partition to be growable.
+		c. You can modify the name and partition type
+		d. Select the filesystem to ``ntfs`` and mount point to ``D:`` (for example).
+		e. Enter the size. The install disk should be 12 Gb for core versions and not less than 32Gb for the full version.
+		f. Check the box in the ``Grow`` column if you want the partition to be growable.
 		g. Click ``save``.
 
 		.. image :: /images/install-profile-partitioning-windows.png
 
-	10. Add software bundles from the ``Projects`` or ``MySoftware`` pages.
+	9. Add software bundles from the ``Projects`` or ``MySoftware`` pages.
 
 		.. warning:: Software bundles included in ``MySoftware`` and ``Projects`` will be put on the image disk but the UForge generation tool WILL NOT install them even if these are executable/installers files (.exe, .msi, etc.). It is up to the end user to manually complete the installation of the software bundles.
 

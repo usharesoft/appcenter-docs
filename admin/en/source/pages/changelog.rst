@@ -3,6 +3,66 @@
 Changelog
 =========
 
+3.7.fp3
+-------
+
+Release Date: 2017-03-21
+
+New Features
+~~~~~~~~~~~~
+
+* Users can now import a Windows based scan, creating an appliance template.  This allows users to update the appliance template prior to migration. 
+* Users can specify to run ``sysprep`` as part of a machine image generation for Windows-based appliances that have been imported from a Scan.  This allows users to provide a new administrator password as part of the install profile.
+* Ability to trigger Repository updates manually via an API call.
+
+Enhancements
+~~~~~~~~~~~~
+
+* The UI updated to display the language, type and edition of Windows OS profile
+* The UI can be customized to allow hyperlinks in the footer or header to either open in a new tab (default) or in the same tab (replacing the UI).
+* API Keys now have optional name and description meta-data to help the user identify what API keys are used for.
+
+Bug Fixes
+~~~~~~~~~
+
+* 7146 Scan cannot treat files whose name includes ``>``
+* 6995 The scan status is not updated to ``error`` when the error occurs during uploading
+* 6993 A file or directory name whose include a line feed (LF) is not present in the scan result
+* 7069 Upload a logo which is not ``png`` or ``jpg`` raise an error but erase the existing logo
+* 7065 Incorrect warning message when appliance has multiple disks during generation of some formats
+* 7061 Issue when adding PDF files as custom license to project (should not be allowed)
+* 7035 ``rpmgen -e`` (exclude dir list) option is not working correctly
+* 7074 MySoftware files are not copied on the filestystem when generating CentOS7 ISO images
+* 7024 Windows scan of a machine with 2 disks, when user excludes 1 disk, UForge still creates 2 disks in the scan meta data
+* 7067 ``uforge org category delete`` fails with two arguments
+* 7029 Cannot create unformatted logical volumes
+* 6939 My profile picture is not displayed on Activity Stream Workspace
+* 7048 Search for packages does not take into account hour of the day
+* 6873 Amazon publication - S3 bucket is not necessary anymore
+* 7009 UForge root password can not be changed wrong message
+* 7002 Spider do not cleanup all temporary dirs in /tmp
+* 6948 Projects non-native files are ignored if my software has the same name.
+* 7003 Windows generation is failing during OS check
+* 6998 When exporting a linux appliance without OS Profile an internal servor error is raised
+* 6986 After delete a custom license in MySofware or Project , the icon ``done.svg`` is still visible
+* 6971 After K5 Black box migration, Firewall setting changes to enable in Cent OS 6.
+* 6970 CentOS 6 scan and generation leads to an error
+* 6884 Generation of AWS image for Windows Server 2012R2 fails with illegal seek exception
+* 6834 After the migration from 3.5.1 to 3.6, created API keys no longer displayed in the UI
+* 6964 Canceling the K5 publication finishes with ERROR message.
+* 6961 Incoherence in template and mysoftware revisions when sharing to workspace
+* 6963 Internal generation tools must generate the correct guestOS inside vmx when windows+vmware
+* 6747 An image can be downloaded more than once by using the URL with same Download ID
+* 6855 Cannot retrieve directory from remote site with http basic authentication in software library.
+* 6794 Documentation mentions copyright in customisation but copyright is not displayed
+* 6870 A generated CentOS 6.8 image kernel panics if it has a logical volume in the partitioning table
+* 6815 Cannot pull files from FTP in MySoftware.
+* 6875 When uploading a file for the second time the confirm popup has two handlers and so the action is carried out twice
+* 6872 Success message for ``org os add`` is not correct
+* 6800 Cannot download non-cached software artifact correctly if the remote file size has been changed.
+* 6819 While scanning Windows OS, Scan progress is continued to copy on the clipboard.
+
+
 3.7.fp2
 -------
 

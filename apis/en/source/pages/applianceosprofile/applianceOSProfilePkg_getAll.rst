@@ -45,7 +45,9 @@ Example Request
 .. seealso::
 
 	 * :ref:`appliance-object`
+	 * :ref:`applianceOSProfileApplications-getAll`
 	 * :ref:`applianceOSProfilePkg-updateAll`
+	 * :ref:`applianceOSProfileServices-getAll`
 	 * :ref:`applianceOSProfile-create`
 	 * :ref:`applianceOSProfile-delete`
 	 * :ref:`applianceOSProfile-get`

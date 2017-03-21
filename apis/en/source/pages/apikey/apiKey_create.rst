@@ -12,11 +12,11 @@ apiKey_create
 	* Method: ``POST``
 	* Response Code: ``201``
 	* Response Formats: ``application/xml`` ``application/json``
-	* Since: ``UForge 3.0``
+	* Since: ``UForge 3.7``
 
 Creates an API Key for the specified user. 
 
-.. note:: No request body is required in HTTP POST, as the internal platform will automatically generate a new api key pair.
+.. note:: The :ref:`apikeypair-object` can be empty as only the description information is used.  The public and secret key information is generated automatically.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -32,7 +32,7 @@ URI Parameters
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-None
+A :ref:`apiKeyPair-object` object
 
 Example Request
 ~~~~~~~~~~~~~~~
@@ -40,11 +40,18 @@ Example Request
 .. code-block:: bash
 
 	curl "https://uforge.example.com/api/users/{uid}/apikeys" -X POST \
-	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
+
+Example of representation.xml content (the request body):
+
+.. code-block:: xml
+
+
 
 .. seealso::
 
 	 * :ref:`apiKey-delete`
 	 * :ref:`apiKey-getAll`
+	 * :ref:`apiKey-update`
 	 * :ref:`apikeypairs-object`
 	 * :ref:`user-object`

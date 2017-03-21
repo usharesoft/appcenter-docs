@@ -15,6 +15,8 @@ The list of attributes for ``winService`` are:
 	* ``serviceName`` (string): The name of the service
 	* ``displayName`` (string): the human readable name of the service
 	* ``description`` (string): the description of the service
+	* ``parentUri`` (anyURI): the resource uri of the parent :ref:`windowsprofile-object` object
+	* ``uri`` (anyURI): the resource uri of the service
 	* ``created`` (dateTime): the created date of the object
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)

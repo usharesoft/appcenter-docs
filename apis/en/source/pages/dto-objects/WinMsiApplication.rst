@@ -18,6 +18,8 @@ The list of attributes for ``winMsiApplication`` are:
 	* ``displayName`` (string): the name of the application
 	* ``version`` (string): the version of the application
 	* ``architecture``: the architecture of the application
+	* ``parentUri`` (anyURI): the resource uri of the parent :ref:`windowsprofile-object` object
+	* ``uri`` (anyURI): the resource uri of the application
 	* ``created`` (dateTime): the created date of the object
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)

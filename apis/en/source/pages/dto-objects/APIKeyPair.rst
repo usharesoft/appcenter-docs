@@ -16,6 +16,8 @@ Attributes
 
 The list of attributes for ``apiKeyPair`` are:
 
+	* ``name`` (string): name or tag of the API key pair
+	* ``description`` (string): description of the API key pair
 	* ``publicKey`` (string): the public key string
 	* ``secretKey`` (string): the private key string
 	* ``uri`` (anyURI): the resource uri of the `APIKeyPair` object

@@ -7,6 +7,8 @@ Data Transfer Objects
 
 This section provides a description of all UForge AppCenter REST Data Transfer objects.
 
+	* :ref:`abstractwinapplication-object`
+	* :ref:`abstractwinapplications-object`
 	* :ref:`address-object`
 	* :ref:`apikeypair-object`
 	* :ref:`apikeypairs-object`
@@ -94,6 +96,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`statuses-object`
 	* :ref:`org-object`
 	* :ref:`orgs-object`
+	* :ref:`osconfig-object`
+	* :ref:`osconfigs-object`
 	* :ref:`osgroup-object`
 	* :ref:`osgroups-object`
 	* :ref:`ospackage-object`
@@ -198,6 +202,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 .. toctree::
     :hidden:
 
+    AbstractWinApplication
+    AbstractWinApplications
     Address
     APIKeyPair
     APIKeyPairs
@@ -285,6 +291,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     OpStatuses
     Org
     Orgs
+    OsConfig
+    OsConfigs
     OSGroup
     OSGroups
     OSPackage

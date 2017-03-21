@@ -18,7 +18,7 @@ To create a new appliance in your private workspace:
 	2. On the ``Appliance Library`` page, click on ``create`` in the top right. 
 	3. Enter the ``Name`` and ``Version`` of the appliance.  
 
-		.. image:: /images/create-appliance-centos.png
+		.. image :: /images/create-appliance-centos.png
 
 	4. From the drop-down menus, select the operating system (distribution, release and architecture).
 	5. Click the ``create`` button. This creates a skeleton of an appliance template in the platform which you can now customize with operating system packages, middleware and application software.
@@ -42,7 +42,7 @@ To create a Windows Appliance:
 	2. Enter the appliance name and version.
 	3. Choose ``Windows`` from the OS Distribution drop-down menu.
 
-		.. image:: /images/create-appliance-windows.png
+		.. image :: /images/create-appliance-windows.png
 
 	4. Select the Release and Architecture from the drop-down menus.
 	5. Click ``create``.
@@ -50,7 +50,7 @@ To create a Windows Appliance:
 
 		.. note:: Once you have chosen the OS Profile, you cannot add any packages or run updates. The OS Profile is static. Once created, if you select OS Profile, you will only be able to view the details of the profile you selected.  
 
-		.. image:: /images/create-appliance-windows-profile.png
+		.. image :: /images/create-appliance-windows-profile.png
 
 	7. Set the Install profile and click ``Save``.
 

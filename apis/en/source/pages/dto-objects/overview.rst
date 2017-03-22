@@ -185,6 +185,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`userprofile-object`
 	* :ref:`userprofiles-object`
 	* :ref:`users-object`
+	* :ref:`userstat-object`
 	* :ref:`userstats-object`
 	* :ref:`votestat-object`
 	* :ref:`windowsprofile-object`
@@ -380,6 +381,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     UserProfile
     UserProfiles
     Users
+    UserStat
     UserStats
     VoteStat
     WindowsProfile

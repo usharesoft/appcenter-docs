@@ -27,7 +27,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``brid`` (required): the id of the :ref:`bundlerestriction-object`
+* ``brid`` (required): the id of the :ref:`bundlerestriction-object` to update
 * ``pid`` (required): the id of the :ref:`project-object`
 * ``oid`` (required): the id of the :ref:`org-object`
 

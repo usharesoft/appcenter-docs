@@ -2,15 +2,15 @@
 
 .. _statdatapoint-object:
 
-StatDataPoint
+statDataPoint
 =============
 
-Generic object holding information of statistic data point.
+Generic object holding a statistic data point.
 
 Attributes
 ~~~~~~~~~~
 
-The list of attributes for ``StatDataPoint`` are:
+The list of attributes for ``statDataPoint`` are:
 
 	* ``date`` (dateTime): the date of this data point
 	* ``distribArch`` (string): the architecture of the operating system

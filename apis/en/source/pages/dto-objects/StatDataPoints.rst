@@ -2,7 +2,7 @@
 
 .. _statdatapoints-object:
 
-StatDataPoints
+statDataPoints
 ==============
 
 Provides a list of :ref:`statdatapoint-object` objects.
@@ -10,7 +10,7 @@ Provides a list of :ref:`statdatapoint-object` objects.
 Attributes
 ~~~~~~~~~~
 
-The list of attributes for ``StatDataPoints`` are:
+The list of attributes for ``statDataPoints`` are:
 
 	* ``statDataPoints``: the list of :ref:`statdatapoint-object` objects
 	* ``total`` (long): the total number of objects

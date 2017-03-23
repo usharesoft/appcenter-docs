@@ -16,7 +16,7 @@ To create a new appliance in your private workspace:
 	2. On the ``Appliance Library`` page, click on ``create`` in the top right. 
 	3. Enter the ``Name`` and ``Version`` of the appliance.  
 
-		.. image:: /images/create-appliance-centos.png
+		.. image :: /images/create-appliance-centos.png
 
 	4. From the drop-down menus, select the operating system (distribution, release and architecture).
 	5. Click the ``create`` button. This creates a skeleton of an appliance template in the platform which you can now customize with operating system packages, middleware and application software.

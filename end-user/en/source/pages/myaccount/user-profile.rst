@@ -40,15 +40,15 @@ The ``Generations`` summary is the number of machine images you have generated f
 
 The ``Scans`` summary displays the number of successful live machine scans you have carried out.  This number does not reflect the number of scans you currently have in your account.  If you delete a scan from your account the value is not changed.  This value will be reset if you have a quota that is associated with a frequency (e.g. 5 scans per month).  If you cancel a scan or if there is an error during a scan, the value is not updated.
 
-The ``Disk Usage`` summary shows the disk space consumed by you by storing software components, machine images and scan data.  If you have reached your quota limit, you can delete software components, machine images or scans to save space.
+The ``Disk Usage`` summary shows the disk space consumed by you for storing software components, machine images and scan data.  If you have reached your quota limit, you can delete software components, machine images or scans to save space.
 
 The rest of the ``Usage`` page provides more detailed activity information including:
 
-	* An ``Appliance Activity`` displaying the number of appliance templates and machine image generations created though time.  It also provides a breakdown of operating systems used in the appliances and the types of formats of the generated machine images.
+	* An ``Appliance Activity`` displaying a timeline of the number of appliance templates and machine image generations created.  It also provides a breakdown of operating systems used in the appliances and the types of formats of the generated machine images.
 
-	* A ``Scan Activity`` displaying the number scans and machine image generations created though time.  It also provides a breakdown of operating systems found for each scan and the types of formats of the generated machine images.
+	* A ``Scan Activity`` displaying a timeline of the number scans and machine image generations created.  It also provides a breakdown of operating systems found for each scan and the types of formats of the generated machine images.
 	
-	* A ``Disk Usage`` displaying the disk space consumed (software components, machine images and scan data currently stored).	
+	* A ``Disk Usage`` displaying the disk space consumed to store your software components, machine images and scan data.  This includes any software that has been imported.	
 
 .. image:: /images/dashboard.png
 

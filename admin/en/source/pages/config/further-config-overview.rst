@@ -14,6 +14,7 @@ This section assumes that you have completed the installation of your UForge pla
    add-compute-node
    configure-ssl-cert
    config-smtp
+   config-proxy
    config-webservice
    config-database
    config-scheduler

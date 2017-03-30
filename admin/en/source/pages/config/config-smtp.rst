@@ -2,8 +2,8 @@
 
 .. _config-smtp:
 
-Configuring UForge Behind Enterprise Proxy
-------------------------------------------
+Configuring SMTP Proxy
+----------------------
 
 Once your UForge platform deployment is complete you can configure SMTP proxy.  To configure SMTP:
 
@@ -13,6 +13,7 @@ Once your UForge platform deployment is complete you can configure SMTP proxy.  
 		* UFORGE_RELAY_PORT=
 		* UFORGE_RELAY_USER=
 		* UFORGE_RELAY_PASSWORD=
+		* If you want to use SSL set: UFORGE_RELAY_USE_SSL= 1 or 0
 
 		These can be empty.
 

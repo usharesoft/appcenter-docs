@@ -141,6 +141,11 @@ With UForge you can create machine images in the following formats.
 +-------------------------------------+-------------------------------------------------------+
 | Azure Resource Manager              | none                                                  |
 +-------------------------------------+-------------------------------------------------------+
+| Cloudstack                          | Target formats:                                       |
+|                                     | CloudStack VMWare (OVA)                               |
+|                                     | CloudStack Citrix Xen (VHD)                           |
+|                                     | CloudStack KVM (QCOW2)                                |
++-------------------------------------+-------------------------------------------------------+
 | Eucalyptus                          | Target formats:                                       |
 |                                     | Eucalyptus KVM                                        |
 |                                     | Eucalyptus Xen                                        |

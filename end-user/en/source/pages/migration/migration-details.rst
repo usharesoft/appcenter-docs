@@ -7,10 +7,10 @@ Migration Process In Detail
 
 The entire migration process has 5 main steps.  These are:
 
-	1. Scan the source machine
-	2. Report the scan results to UForge AppCenter, where the platform analyzes the report. The results of this analysis are sent back to the source machine.
-	3. The results are used to build an "overlay" archive. This overlay is sent back to the platform.
-	4. The overlay archive is uncompressed, and the information is stored in the database as a ``Scan``.
+	1. Scan the source machine.
+	2. Report the scan results to UForge AppCenter, where the platform analyzes the report. The scan differentiates between known packages and extra files. 
+	3. The results are used to build an archive. The extra files are only included in the archive if the user is performing a scan with overlay. The archive is sent back to the platform.
+	4. The archive is uncompressed, and the information is stored in the database as a ``Scan``.
 	5. The scan can be used to generate machine images (black box migration) or imported to create a new appliance template (white box migration). The generated machine image can then be published to the target environment and instances can be provisioned.
 
 In order to migrate a system, it must meet the following conditions:
@@ -39,6 +39,8 @@ Analysis of Report
 
 A report is created by the ``uforge-scan`` binary based on all the information discovered. This report is transferred via HTTPS to UForge AppCenter.
 
+.. note:: The extra files are only included in the archive if the user is performing a scan with overlay.
+
 UForge AppCenter stores all the report information. This data is then processed to identify what information is missing by UForge AppCenter to rebuild the source machine.  The processing includes:
 
 	* which operating system native packages UForge AppCenter does not have in its repository or in an incremental scan.
@@ -52,7 +54,7 @@ The results of this analysis are then sent via HTTPS back to the ``uforge-scan``
 Build the Overlay Archive
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The ``uforge-scan`` binary retrieves the analysis results from UForge AppCenter. These results include a list of all the packages and files UForge requires.  The ``uforge-scan`` binary builds an overlay archive of all these packages and files.
+The ``uforge-scan`` binary retrieves the analysis results from UForge AppCenter. These results include a list of all the packages and files UForge requires.  The ``uforge-scan`` binary builds an overlay archive of all these packages and files, if the user has performed a scan with overlay.
 
 The overlay is all the things that are missing compared to a known state (a previous scan of a machine or the operating system native packages). This overlay is a standard tar archive. Once created, it is uploaded via HTTPS to the UForge AppCenter.
 
@@ -67,7 +69,8 @@ At this stage in the process, the ``uforge-scan`` binary has finished its job an
 Overlay Extraction
 ~~~~~~~~~~~~~~~~~~
 
-UForge AppCenter retrieves and extracts the overlay sent by the uforge-scan binary.  It then recreates all the necessary OS native packages that are not present in any of the package repositories known by UForge AppCenter.
+UForge AppCenter retrieves and extracts the overlay sent by the uforge-scan binary if the user has performed a scan with overlay.  It then recreates all the necessary OS native packages that are not present in any of the package repositories known by UForge AppCenter.
+
 The analysis and overlay processes are now finished. All the scan metadata remain in UForge AppCenter until the scan gets deleted.
 
 You can now carry out a black box or a white box migration.  For black box migration, you generate a new machine image from the scan.  For white box migration, you must first import the scan as an appliance template.
@@ -80,7 +83,7 @@ Generate an Image (Black Box Migration)
 At this stage, the scan report is used to generate a new machine image.  The generation tool:
 
 	1. Returns all the packages discovered on the scan target and installs them.
-	2. Takes the overlay and applies it on top of the built system.
+	2. Takes the overlay and applies it on top of the built system (for scan with overlay).
 	3. Tunes the machine for the target environment.  This is specific to the machine image format chosen.  This includes injecting extra libraries and packages required by the target environment.
 	4. The networking information is treated differently depending on whether the IP address of the workload being migrated is using a static IP address or DHCP.
 
@@ -103,7 +106,7 @@ The process of importing:
 
 	1. Creates a template.
 	2. Creates an ``OS Profile`` and injects all the native packages.
-	3. Injects the overlay as a ``My Software`` component and is added to the appliance template.
+	3. Injects the overlay as a ``My Software`` component and is added to the appliance template (for scan with overlay).
 	4. Sets the scanned installation configuration information in the ``Install Profile``.
 
 It is then completely detached from the scan and you can do exactly the same things as with any other template.

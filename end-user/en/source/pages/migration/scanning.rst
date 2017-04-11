@@ -33,16 +33,20 @@ To carry out a scan, go to the ``Migration`` tab:
 
 	1. Click on ``scan`` in the top right.
 	2. Enter a name for the scan of the target system you want to migrate.
+
+		.. image:: /images/migration-create-scan2.png
+
 	3. Select ``Linux`` from the drop-down menu.
-	4. If you want to exclude certain directories or files from the scan then click ``add`` and enter the directory path or full pathname of the file.
+	4. Leave ``Include overlay`` selected if you want to run a scan with overlay. This will return all the packages, files and configuration information of the source machine.
+	5. If you want to exclude certain directories or files from the scan then click ``add`` and enter the directory path or full pathname of the file.
+	6. Click ``Next``. Follow the instructions on the UForge AppCenter GUI.
 
-		.. image:: /images/migration-create-scan.png
+		.. image:: /images/migration-code.png
 
-	5. Click ``Next``. Follow the instructions on the UForge AppCenter GUI.
-	6. Download binary locally by clicking ``Download``.
-	7. Copy the binary on the target environment you want to migrate.
-	8. Open a terminal window and login to the target environment.
-	9. Run the scan command on the running target environment to start a deep scan of the system you want to migrate. The binary identifies the packages, files and custom files on the system.
+	7. Download binary locally by clicking ``Download``.
+	8. Copy the binary on the target environment you want to migrate.
+	9. Open a terminal window and login to the target environment.
+	10. Run the scan command on the running target environment to start a scan of the system you want to migrate. Note the ``-o`` option in ghe scan command identifies that you will launch a scan with overlay. The binary identifies the packages, files and custom files on the system.
 
 		By default the scan data will be saved in ``/tmp``. You can modify the directory where the data will be saved using the ``-t`` option in order to ensure that there is enough space to save the scan data.
 
@@ -50,7 +54,7 @@ To carry out a scan, go to the ``Migration`` tab:
 
 		./uforge-scan.[bin/exe] -u <username> -a <public-key> -s <secret-key> -U http://ip:port/ufws -n 'Test_scan'
 
-	10. A report is sent to UForge AppCenter which can be used for migration. To view the progress, go back to the ``Migration`` tab and click ``ok``.
+	11. A report is sent to UForge AppCenter which can be used for migration. To view the progress, go back to the ``Migration`` tab and click ``ok``.
 
 	.. note:: The duration of the scan depends on: 
 
@@ -60,7 +64,7 @@ To carry out a scan, go to the ``Migration`` tab:
 	
 		Scans of typical simple target environments can last about 5 to 15 minutes. In the case of larger and more complex target environments, together with poorer bandwidth, one can experience durations of up to one hour.
 
-	11. To view the details of a scan, click on the scan and refer to :ref:`migration-view-scan`.
+	12. To view the details of a scan, click on the scan and refer to :ref:`migration-view-scan`.
 
 .. note:: Image generation will fail when migrating if the source server has the same LVM volume group name as the UForge server's one. It will fail also if the volume group name set in the Partitioning Table is the same as the name of LVM volume group in UForge server.
 

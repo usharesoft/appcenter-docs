@@ -56,7 +56,7 @@ To create a Windows Appliance:
 
 		.. note:: Unlike Linux, the following cannot be set for Windows appliances: Keyboard, Root user, User & Groups, Kernel Parameters and Firewall.  
 
-		.. image :: /images/windows-install2.png
+		.. image :: /images/windows-installfp4.png
 
 	8. Optionally you can add partitions.
 		a. Click on ``Partitioning`` and select ``Advanced Partitioning``.

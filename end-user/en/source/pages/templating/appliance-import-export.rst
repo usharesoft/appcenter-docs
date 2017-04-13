@@ -39,7 +39,7 @@ The equivalent export feature is available when editing an appliance template.
 Importing
 ~~~~~~~~~
 
-.. warning:: You will only be able to import a Windows appliance to a UForge has the same golden image as the one used by the appliance. If the golden does not exist on the target UForge you must export the appliance without OS Profile or remove some OS section fields in template file. Refer to :ref:`appliance-update-windows-import`.
+.. warning:: You will only be able to import a Windows appliance to a UForge that has the same golden image as the one used by the appliance. If the golden does not exist on the target UForge you must export the appliance without OS Profile or remove some OS section fields in template file. Refer to :ref:`appliance-update-windows-import`.
 
 To import an archive:
 

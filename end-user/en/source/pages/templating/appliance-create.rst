@@ -76,3 +76,5 @@ To create a Windows Appliance:
 		For Windows, .exe or .msi files can be given extra parameters. The parameters depend on the .exe or .msi file, and can be used for example for silent installation, providing extra configuration values, etc.
 
 .. note:: A binary called ``UShareInstallConfig`` is embedded at generation time, which helps the final user of the Appliance do the last-mile configuration.
+
+.. note:: A Windows appliance created using a golden image will not list the appliances and services under ``Stack`` ``OS Profile``.

@@ -20,6 +20,10 @@ From the ``Migration`` tab:
 
 You can now generate a machine image and share it, as you would any other appliance template.
 
+.. note:: When you create a Windows appliance from scan, the applications and services will be visible.
+
+	.. image:: /images/scan-windows-appliance.png
+
 More importantly you can now change the contents of the original scanned system.  If you go to the ``Apps`` tab, the new appliance template will be listed in the ``Imported Appliances`` section.  Double-click on it to view the details or modify it.
 
 .. warning:: Once you have created a Windows appliance using ``import`` from a scan, you will only be able to import this appliance to another UForge platform by removing some OS section fields. Refer to :ref:`appliance-update-windows-import`.

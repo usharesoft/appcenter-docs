@@ -20,7 +20,7 @@ From the ``Migration`` tab:
 
 You can now generate a machine image and share it, as you would any other appliance template.
 
-.. note:: When you create a Windows appliance from scan, the applications and services will be visible.
+.. note:: When you create a Windows appliance from scan, the applications and services will be visible under ``OS Profile`` on the ``Stack`` page.
 
 	.. image:: /images/scan-windows-appliance.png
 

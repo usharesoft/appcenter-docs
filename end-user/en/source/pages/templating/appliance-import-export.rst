@@ -64,7 +64,7 @@ To import an archive:
 Updating a Windows Appliance Before Import
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you try to import a Windows appliance, UForge will check if the golden image used to create the appliance exists on the UForge. If it does not exist, the import will fail. However, in order to import the template, you must export the appliance and remove the OS profile. You can also remove the OS Profile using the UI by going to the the "Stack" page of the appliance before exporting.
+When you import a Windows appliance, UForge checks if the golden image used to create the appliance exists on the UForge. If it does not exist, the import will fail. In order to import the template, you must export the appliance and remove the OS profile. 
 
 For example, in order to remove some OS section fields before importing your Windows appliance:
 
@@ -98,3 +98,5 @@ For example, in order to remove some OS section fields before importing your Win
 	8. Click on the ``import`` button at the top right hand side of the view.
 	9. A number of options are proposed. Select the method of import and click the folder icon to select the archive to import.
 	10. Click ``import``. This will start the import process. 
+
+You can also remove the OS Profile from the UI by going to the ``Stack`` page of the appliance before exporting.

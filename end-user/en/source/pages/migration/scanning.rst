@@ -46,7 +46,7 @@ To carry out a scan, go to the ``Migration`` tab:
 	7. Download binary locally by clicking ``Download``.
 	8. Copy the binary on the target environment you want to migrate.
 	9. Open a terminal window and login to the target environment.
-	10. Run the scan command on the running target environment to start a scan of the system you want to migrate. Note the ``-o`` option in ghe scan command identifies that you will launch a scan with overlay. The binary identifies the packages, files and custom files on the system.
+	10. Run the scan command on the running target environment to start a scan of the system you want to migrate. Note the ``-o`` option in the scan command identifies that you will launch a scan with overlay. The binary identifies the packages, files and custom files on the system.
 
 		By default the scan data will be saved in ``/tmp``. You can modify the directory where the data will be saved using the ``-t`` option in order to ensure that there is enough space to save the scan data.
 

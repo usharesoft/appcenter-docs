@@ -57,7 +57,7 @@ The results of this analysis are then sent via HTTPS back to the ``uforge-scan``
 Build the Overlay Archive
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The ``uforge-scan`` binary retrieves the analysis results from UForge AppCenter. These results include a list of all the packages and files UForge requires.  The ``uforge-scan`` binary builds an overlay archive of all these packages and files, if the user has performed a scan with overlay.
+The ``uforge-scan`` binary retrieves the analysis results from UForge AppCenter. These results include a list of all the packages and files UForge requires.  The ``uforge-scan`` binary builds an overlay archive of all these packages, as well as the extra files if the user has performed a scan with overlay.
 
 The overlay is all the things that are missing compared to a known state (a previous scan of a machine or the operating system native packages). This overlay is a standard tar archive. Once created, it is uploaded via HTTPS to the UForge AppCenter.
 

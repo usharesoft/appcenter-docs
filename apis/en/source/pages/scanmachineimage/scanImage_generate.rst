@@ -26,7 +26,7 @@ Security Summary
 ~~~~~~~~~~~~~~~~
 
 * Requires Authentication: ``true``
-* Entitlements Required: ``migration_generate``
+* Entitlements Required: ``image_generate``
 
 URI Parameters
 ~~~~~~~~~~~~~~
@@ -65,19 +65,19 @@ Example of representation.xml content (the request body):
 
 .. seealso::
 
-	 * :ref:`machinescan-api-resources`
-	 * :ref:`machinescaninstance-api-resources`
+	 * :ref:`scannedinstance-object`
 	 * :ref:`scan-object`
-	 * :ref:`scanImageGenerationStatus-get`
-	 * :ref:`scanImageGeneration-cancel`
-	 * :ref:`scanImageGeneration-delete`
+	 * :ref:`machinescaninstance-api-resources`
+	 * :ref:`machinescan-api-resources`
+	 * :ref:`scanImage-getAll`
+	 * :ref:`scanImage-get`
 	 * :ref:`scanImage-download`
 	 * :ref:`scanImage-downloadFile`
-	 * :ref:`scanImage-get`
-	 * :ref:`scanImage-getAll`
+	 * :ref:`scanImageGeneration-cancel`
+	 * :ref:`scanImageGeneration-delete`
+	 * :ref:`scanImageGenerationStatus-get`
 	 * :ref:`scanImage-publish`
+	 * :ref:`scanPublishedImage-get`
+	 * :ref:`scanPublishedImage-delete`
 	 * :ref:`scanPublishedImageStatus-get`
 	 * :ref:`scanPublishedImage-cancel`
-	 * :ref:`scanPublishedImage-delete`
-	 * :ref:`scanPublishedImage-get`
-	 * :ref:`scannedinstance-object`

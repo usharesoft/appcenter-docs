@@ -28,7 +28,7 @@ URI Parameters
 * ``uid`` (required): the user name (login name) of the :ref:`user-object` that has created the appliance
 * ``ipid`` (required): the id of the :ref:`installprofile-object`
 * ``aid`` (required): the id of the :ref:`appliance-object`
-* ``osuid`` (required): the id of the :ref:`osuser-object` to delete
+* ``osuid`` (required): the id of the :ref:`osuser-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -56,7 +56,9 @@ Example of representation.xml content (the request body):
 .. seealso::
 
 	 * :ref:`appliance-object`
-	 * :ref:`applianceinstallprofile-api-resources`
+	 * :ref:`installprofile-object`
+	 * :ref:`osuser-object`
+	 * :ref:`osgroup-object`
 	 * :ref:`installProfileGroup-create`
 	 * :ref:`installProfileGroup-delete`
 	 * :ref:`installProfileGroup-deleteAll`
@@ -68,6 +70,4 @@ Example of representation.xml content (the request body):
 	 * :ref:`installProfileUser-deleteAll`
 	 * :ref:`installProfileUser-get`
 	 * :ref:`installProfileUser-getAll`
-	 * :ref:`installprofile-object`
-	 * :ref:`osgroup-object`
-	 * :ref:`osuser-object`
+	 * :ref:`applianceinstallprofile-api-resources`

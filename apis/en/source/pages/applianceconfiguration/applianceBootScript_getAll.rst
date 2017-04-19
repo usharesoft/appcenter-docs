@@ -45,6 +45,7 @@ Example Request
 
 .. seealso::
 
+	 * :ref:`bootscript-object`
 	 * :ref:`appliance-object`
 	 * :ref:`applianceBootScript-create`
 	 * :ref:`applianceBootScript-delete`
@@ -54,4 +55,3 @@ Example Request
 	 * :ref:`applianceBootScript-get`
 	 * :ref:`applianceBootScript-update`
 	 * :ref:`applianceBootScript-upload`
-	 * :ref:`bootscript-object`

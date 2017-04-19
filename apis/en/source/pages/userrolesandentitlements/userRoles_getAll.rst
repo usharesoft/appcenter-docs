@@ -44,6 +44,6 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`role-object`
 	 * :ref:`rolesandentitlements-api-resources`
+	 * :ref:`role-object`
 	 * :ref:`userRoles-update`

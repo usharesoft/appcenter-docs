@@ -46,5 +46,5 @@ Example Request
 
 	 * :ref:`quota-object`
 	 * :ref:`statticket-object`
-	 * :ref:`userQuotas-update`
 	 * :ref:`userUsage-get`
+	 * :ref:`userQuotas-update`

@@ -44,15 +44,15 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`comment-object`
 	 * :ref:`workspace-api-resources`
+	 * :ref:`comment-object`
 	 * :ref:`workspaceComment-create`
+	 * :ref:`workspaceComment-reply`
+	 * :ref:`workspaceComments-getAll`
+	 * :ref:`workspaceComment-get`
+	 * :ref:`workspaceComment-update`
 	 * :ref:`workspaceComment-delete`
 	 * :ref:`workspaceComment-deleteAll`
-	 * :ref:`workspaceComment-dislike`
-	 * :ref:`workspaceComment-get`
-	 * :ref:`workspaceComment-like`
-	 * :ref:`workspaceComment-reply`
 	 * :ref:`workspaceComment-reportAbuse`
-	 * :ref:`workspaceComment-update`
-	 * :ref:`workspaceComments-getAll`
+	 * :ref:`workspaceComment-like`
+	 * :ref:`workspaceComment-dislike`

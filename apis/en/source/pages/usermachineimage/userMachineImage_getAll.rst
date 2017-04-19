@@ -24,7 +24,7 @@ Security Summary
 ~~~~~~~~~~~~~~~~
 
 * Requires Authentication: ``true``
-* Entitlements Required: ``appliance_create,image_generate``
+* Entitlements Required: ``image_generate``
 
 URI Parameters
 ~~~~~~~~~~~~~~
@@ -46,9 +46,9 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`image-object`
 	 * :ref:`machineimage-api-resources`
+	 * :ref:`image-object`
 	 * :ref:`publishimage-object`
-	 * :ref:`userMachineImagePublishedStatus-getAll`
-	 * :ref:`userMachineImagePublished-getAll`
 	 * :ref:`userMachineImageStatus-get`
+	 * :ref:`userMachineImagePublished-getAll`
+	 * :ref:`userMachineImagePublishedStatus-getAll`

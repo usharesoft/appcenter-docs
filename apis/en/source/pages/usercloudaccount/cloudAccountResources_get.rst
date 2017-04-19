@@ -14,7 +14,7 @@ cloudAccountResources_get
 	* Response Formats: ``application/xml`` ``application/json``
 	* Since: ``UForge 2.0``
 
-Retrieves any dynamic resource information from the tagret cloud environment. 
+Retrieves any dynamic resource information from the target cloud environment. 
 
 The cloud account information is used with the target cloud's APIs to retrieve any resource information that is required to register generated machine images to the target cloud environment.
 

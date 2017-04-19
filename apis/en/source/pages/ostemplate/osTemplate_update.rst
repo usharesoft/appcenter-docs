@@ -16,7 +16,7 @@ osTemplate_update
 
 Updates the meta-data information of an OS template. 
 
-Please refer to :ref:`distribprofile-object` for a complete list of all the ``OS template`` attributes.
+Please refer to :ref:`distribprofiletemplate-object` for a complete list of all the ``OS template`` attributes.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -27,13 +27,13 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``prid`` (required): the id of the :ref:`distribprofile-object`
-* ``id`` (required): the id of the :ref:`distribution-object`
+* ``prid`` (required): the id of the :ref:`distribprofiletemplate-object`
+* ``id`` (required): the id of the :ref:`distribprofile-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A :ref:`distribProfile-object` object
+A :ref:`distribProfileTemplate-object` object
 
 Example Request
 ~~~~~~~~~~~~~~~
@@ -47,21 +47,20 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:distribProfile xmlns:ns0="http://www.usharesoft.com/uforge">
+	<ns0:distribProfileTemplate xmlns:ns0="http://www.usharesoft.com/uforge">
 		<description>This is an updated description</description>
 		<name>Template Example - Updated</name>
-	</ns0:distribProfile>
+	</ns0:distribProfileTemplate>
 
 
 .. seealso::
 
 	 * :ref:`appliance-object`
 	 * :ref:`distribprofile-object`
-	 * :ref:`distribution-object`
-	 * :ref:`linuxprofile-object`
+	 * :ref:`distribprofile-object`
+	 * :ref:`distribprofiletemplate-object`
 	 * :ref:`osTemplatePkgs-get`
 	 * :ref:`osTemplate-create`
 	 * :ref:`osTemplate-delete`
 	 * :ref:`osTemplate-get`
 	 * :ref:`osTemplate-getAll`
-	 * :ref:`windowsprofile-object`

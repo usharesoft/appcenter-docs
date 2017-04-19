@@ -25,7 +25,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the user name (login name) of the :ref:`user-object` to add or update
+* ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``oid`` (required): the id of the :ref:`org-object`
 
 HTTP Request Body Parameters
@@ -53,21 +53,21 @@ Example of representation.xml content (the request body):
 
 .. seealso::
 
-	 * :ref:`distribprofile-object`
-	 * :ref:`license-object`
 	 * :ref:`org-object`
-	 * :ref:`orgCompany-getAll`
-	 * :ref:`orgMember-getAll`
-	 * :ref:`orgMember-getAll`
-	 * :ref:`orgMember-remove`
-	 * :ref:`orgMember-remove`
-	 * :ref:`orgMember-update`
-	 * :ref:`orgOSWindows-add`
-	 * :ref:`orgOSWindows-getAll`
-	 * :ref:`orgOS-add`
-	 * :ref:`orgOS-getAll`
-	 * :ref:`orgOS-update`
+	 * :ref:`distribprofile-object`
+	 * :ref:`user-object`
+	 * :ref:`license-object`
 	 * :ref:`org-create`
 	 * :ref:`org-get`
 	 * :ref:`org-getAll`
-	 * :ref:`user-object`
+	 * :ref:`orgOS-add`
+	 * :ref:`orgOS-getAll`
+	 * :ref:`orgOS-update`
+	 * :ref:`orgOSWindows-add`
+	 * :ref:`orgOSWindows-getAll`
+	 * :ref:`orgMember-remove`
+	 * :ref:`orgMember-getAll`
+	 * :ref:`orgMember-remove`
+	 * :ref:`orgMember-update`
+	 * :ref:`orgMember-getAll`
+	 * :ref:`orgCompany-getAll`

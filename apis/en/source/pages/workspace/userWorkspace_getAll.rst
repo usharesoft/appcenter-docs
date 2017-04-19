@@ -44,12 +44,12 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`userWorkspace-create`
-	 * :ref:`workspace-object`
-	 * :ref:`workspace-create`
-	 * :ref:`workspace-delete`
-	 * :ref:`workspace-get`
-	 * :ref:`workspace-getAll`
-	 * :ref:`workspacecomments-api-resources`
 	 * :ref:`workspacemembers-api-resources`
 	 * :ref:`workspacetemplate-api-resources`
+	 * :ref:`workspacecomments-api-resources`
+	 * :ref:`workspace-object`
+	 * :ref:`workspace-create`
+	 * :ref:`workspace-getAll`
+	 * :ref:`workspace-get`
+	 * :ref:`workspace-delete`
+	 * :ref:`userWorkspace-create`

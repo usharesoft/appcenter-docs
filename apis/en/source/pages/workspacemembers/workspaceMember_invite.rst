@@ -67,12 +67,12 @@ Example of representation.xml content (the request body):
 
 .. seealso::
 
-	 * :ref:`membership-object`
 	 * :ref:`workspace-api-resources`
 	 * :ref:`workspace-object`
-	 * :ref:`workspaceMember-delete`
-	 * :ref:`workspaceMember-deleteList`
-	 * :ref:`workspaceMember-getAll`
+	 * :ref:`membership-object`
 	 * :ref:`workspaceMember-invite`
+	 * :ref:`workspaceMember-getAll`
+	 * :ref:`workspaceMember-deleteList`
+	 * :ref:`workspaceMember-delete`
 	 * :ref:`workspaceMember-update`
 	 * :ref:`workspaceMember-updateList`

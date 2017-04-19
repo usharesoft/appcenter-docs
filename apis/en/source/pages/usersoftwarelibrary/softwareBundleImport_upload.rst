@@ -48,49 +48,42 @@ Example Request
 .. seealso::
 
 	 * :ref:`mySoftware-object`
+	 * :ref:`softwarebundleexport-object`
+	 * :ref:`softwarebundle-object`
+	 * :ref:`softwarebundleimport-object`
+	 * :ref:`mySoftware-create`
+	 * :ref:`mySoftware-getAll`
+	 * :ref:`mySoftware-get`
+	 * :ref:`mySoftware-update`
+	 * :ref:`mySoftware-delete`
+	 * :ref:`mySoftware-clone`
+	 * :ref:`mySoftwareUsage-getAll`
+	 * :ref:`mySoftwareOs-getAll`
 	 * :ref:`mySoftwareArtifact-add`
-	 * :ref:`mySoftwareArtifact-addChild`
-	 * :ref:`mySoftwareArtifact-addOrRemoveFileFromCache`
-	 * :ref:`mySoftwareArtifact-createFromRemoteServer`
-	 * :ref:`mySoftwareArtifact-delete`
+	 * :ref:`mySoftwareArtifact-getAll`
+	 * :ref:`mySoftwareArtifact-get`
+	 * :ref:`mySoftwareArtifact-updateAll`
+	 * :ref:`mySoftwareArtifact-update`
 	 * :ref:`mySoftwareArtifact-deleteAll`
+	 * :ref:`mySoftwareArtifact-delete`
 	 * :ref:`mySoftwareArtifact-download`
 	 * :ref:`mySoftwareArtifact-downloadFile`
-	 * :ref:`mySoftwareArtifact-get`
-	 * :ref:`mySoftwareArtifact-getAll`
-	 * :ref:`mySoftwareArtifact-update`
-	 * :ref:`mySoftwareArtifact-updateAll`
+	 * :ref:`mySoftwareArtifact-createFromRemoteServer`
+	 * :ref:`mySoftwareArtifact-addOrRemoveFileFromCache`
 	 * :ref:`mySoftwareArtifact-upload`
-	 * :ref:`mySoftwareExportStatus-get`
-	 * :ref:`mySoftwareExport-delete`
-	 * :ref:`mySoftwareExport-download`
-	 * :ref:`mySoftwareLicense-delete`
-	 * :ref:`mySoftwareLicense-download`
+	 * :ref:`mySoftwareArtifact-addChild`
 	 * :ref:`mySoftwareLicense-upload`
 	 * :ref:`mySoftwareLicense-uploadFile`
-	 * :ref:`mySoftwareLogo-delete`
+	 * :ref:`mySoftwareLicense-download`
+	 * :ref:`mySoftwareLicense-delete`
 	 * :ref:`mySoftwareLogo-download`
 	 * :ref:`mySoftwareLogo-downloadFile`
 	 * :ref:`mySoftwareLogo-upload`
-	 * :ref:`mySoftwareOs-getAll`
-	 * :ref:`mySoftwareRestrictionOs-getAll`
-	 * :ref:`mySoftwareRestriction-add`
-	 * :ref:`mySoftwareRestriction-delete`
-	 * :ref:`mySoftwareRestriction-deleteAll`
-	 * :ref:`mySoftwareRestriction-get`
-	 * :ref:`mySoftwareRestriction-getAll`
-	 * :ref:`mySoftwareRestriction-update`
-	 * :ref:`mySoftwareUsage-getAll`
-	 * :ref:`mySoftware-clone`
-	 * :ref:`mySoftware-create`
-	 * :ref:`mySoftware-delete`
+	 * :ref:`mySoftwareLogo-delete`
 	 * :ref:`mySoftware-export`
-	 * :ref:`mySoftware-get`
-	 * :ref:`mySoftware-getAll`
-	 * :ref:`mySoftware-update`
-	 * :ref:`softwareBundleImportStatus-get`
-	 * :ref:`softwareBundleImport-get`
+	 * :ref:`mySoftwareExport-delete`
+	 * :ref:`mySoftwareExport-download`
+	 * :ref:`mySoftwareExportStatus-get`
 	 * :ref:`softwareBundle-import`
-	 * :ref:`softwarebundle-object`
-	 * :ref:`softwarebundleexport-object`
-	 * :ref:`softwarebundleimport-object`
+	 * :ref:`softwareBundleImport-get`
+	 * :ref:`softwareBundleImportStatus-get`

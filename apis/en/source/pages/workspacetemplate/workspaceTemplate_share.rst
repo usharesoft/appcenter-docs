@@ -65,22 +65,22 @@ Example of representation.xml content (the request body):
 
 .. seealso::
 
-	 * :ref:`appliance-object`
-	 * :ref:`gallerytemplate-object`
 	 * :ref:`workspace-api-resources`
+	 * :ref:`workspacetemplatecomments-api-resources`
 	 * :ref:`workspace-object`
-	 * :ref:`workspaceTemplateInstallProfile-get`
-	 * :ref:`workspaceTemplateLogo-delete`
-	 * :ref:`workspaceTemplateLogo-download`
-	 * :ref:`workspaceTemplateLogo-upload`
-	 * :ref:`workspaceTemplateOSPkgs-get`
-	 * :ref:`workspaceTemplateProjects-get`
-	 * :ref:`workspaceTemplateShare-cancel`
-	 * :ref:`workspaceTemplateStats-get`
-	 * :ref:`workspaceTemplateStatus-get`
-	 * :ref:`workspaceTemplateStudio-get`
-	 * :ref:`workspaceTemplate-delete`
+	 * :ref:`gallerytemplate-object`
+	 * :ref:`appliance-object`
 	 * :ref:`workspaceTemplate-get`
 	 * :ref:`workspaceTemplate-getAll`
+	 * :ref:`workspaceTemplate-delete`
 	 * :ref:`workspaceTemplate-update`
-	 * :ref:`workspacetemplatecomments-api-resources`
+	 * :ref:`workspaceTemplateStatus-get`
+	 * :ref:`workspaceTemplateLogo-download`
+	 * :ref:`workspaceTemplateLogo-delete`
+	 * :ref:`workspaceTemplateLogo-upload`
+	 * :ref:`workspaceTemplateOSPkgs-get`
+	 * :ref:`workspaceTemplateInstallProfile-get`
+	 * :ref:`workspaceTemplateProjects-get`
+	 * :ref:`workspaceTemplateStudio-get`
+	 * :ref:`workspaceTemplateShare-cancel`
+	 * :ref:`workspaceTemplateStats-get`

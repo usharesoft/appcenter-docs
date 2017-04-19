@@ -16,7 +16,7 @@ The list of attributes for ``distribution`` are:
 	* ``arch``: the architecture of this operating system
 	* ``baseMilestonesUri`` (anyURI): the uri resource to retrieve the milestones for this operating system
 	* ``basePkgsUri`` (anyURI): the uri resource to retrieve all the packages contained in this operating system
-	* ``baseProfilesUri`` (anyURI): the uri resource to retrieve all the os profile templates (see :ref:`distribprofile-object`)
+	* ``baseProfilesUri`` (anyURI): the uri resource to retrieve all the os profile templates (see :ref:`distribprofiletemplate-object`)
 	* ``baseGoldensUri`` (anyURI): the uri resource to retrieve the base machine images (for Microsoft Windows only)
 	* ``company`` (:ref:`company-object`): the company information of this operating system (see :ref:`company-object`
 	* ``description`` (string): the description of this operating system
@@ -26,7 +26,7 @@ The list of attributes for ``distribution`` are:
 	* ``name``: the name of the operating system
 	* ``parentUri`` (anyURI): the uri resource of the parent object this operating system is attached to (normally an organization)
 	* ``pkgType`` (string): the native package type this operating system supports
-	* ``profiles``: the list of os profile template objects (see :ref:`distribprofile-object`)
+	* ``profiles``: the list of os profile template objects (see :ref:`distribprofiletemplate-object`)
 	* ``profileUris`` (:ref:`UriList-object`): the list of uri resources for each os profile template registered for this operating system
 	* ``releaseDate`` (dateTime): the date this operating system was released
 	* ``size`` (long): the estimated size of the operating system (total size of all the packages in the repository)

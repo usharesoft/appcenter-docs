@@ -27,7 +27,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the user name (login name) of the :ref:`user-object`
+* ``uid`` (required): the user name (login name) of the :ref:`user-object` to remove
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -62,13 +62,13 @@ Example of representation.xml content (the request body):
 
 .. seealso::
 
-	 * :ref:`cloudAccountCert-create`
-	 * :ref:`cloudAccountCert-delete`
-	 * :ref:`cloudAccountCert-download`
-	 * :ref:`cloudAccountCert-upload`
-	 * :ref:`cloudAccountResources-get`
-	 * :ref:`cloudAccount-delete`
-	 * :ref:`cloudAccount-get`
-	 * :ref:`cloudAccount-getAll`
-	 * :ref:`cloudAccount-update`
 	 * :ref:`credaccount-object`
+	 * :ref:`cloudAccount-getAll`
+	 * :ref:`cloudAccount-get`
+	 * :ref:`cloudAccount-update`
+	 * :ref:`cloudAccount-delete`
+	 * :ref:`cloudAccountResources-get`
+	 * :ref:`cloudAccountCert-create`
+	 * :ref:`cloudAccountCert-download`
+	 * :ref:`cloudAccountCert-delete`
+	 * :ref:`cloudAccountCert-upload`

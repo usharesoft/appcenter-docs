@@ -44,7 +44,7 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`apiKey-delete`
-	 * :ref:`apiKey-getAll`
-	 * :ref:`apikeypairs-object`
 	 * :ref:`user-object`
+	 * :ref:`apikeypairs-object`
+	 * :ref:`apiKey-getAll`
+	 * :ref:`apiKey-delete`

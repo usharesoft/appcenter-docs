@@ -45,7 +45,9 @@ Example Request
 .. seealso::
 
 	 * :ref:`appliance-object`
-	 * :ref:`applianceinstallprofile-api-resources`
+	 * :ref:`installprofile-object`
+	 * :ref:`osuser-object`
+	 * :ref:`osgroup-object`
 	 * :ref:`installProfileGroup-create`
 	 * :ref:`installProfileGroup-delete`
 	 * :ref:`installProfileGroup-deleteAll`
@@ -57,6 +59,4 @@ Example Request
 	 * :ref:`installProfileUser-deleteAll`
 	 * :ref:`installProfileUser-get`
 	 * :ref:`installProfileUser-update`
-	 * :ref:`installprofile-object`
-	 * :ref:`osgroup-object`
-	 * :ref:`osuser-object`
+	 * :ref:`applianceinstallprofile-api-resources`

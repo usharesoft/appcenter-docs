@@ -70,19 +70,18 @@ Example of representation.xml content (the request body):
 
 .. seealso::
 
-	 * :ref:`distribution-object`
-	 * :ref:`license-object`
 	 * :ref:`org-object`
-	 * :ref:`orgCompany-getAll`
-	 * :ref:`orgMember-getAll`
-	 * :ref:`orgMember-remove`
-	 * :ref:`orgMember-update`
-	 * :ref:`orgOSWindows-add`
-	 * :ref:`orgOSWindows-delete`
-	 * :ref:`orgOSWindows-getAll`
-	 * :ref:`orgOS-add`
-	 * :ref:`orgOS-getAll`
+	 * :ref:`distribprofile-object`
+	 * :ref:`user-object`
+	 * :ref:`license-object`
 	 * :ref:`org-create`
 	 * :ref:`org-get`
 	 * :ref:`org-getAll`
-	 * :ref:`user-object`
+	 * :ref:`orgOS-add`
+	 * :ref:`orgOS-getAll`
+	 * :ref:`orgOSWindows-add`
+	 * :ref:`orgOSWindows-getAll`
+	 * :ref:`orgMember-remove`
+	 * :ref:`orgMember-update`
+	 * :ref:`orgMember-getAll`
+	 * :ref:`orgCompany-getAll`

@@ -16,7 +16,7 @@ osTemplate_getAll
 
 Retrieves all the templates available for an operating system.  An ``OS template`` groups together packages from the operating system that can be re-used in as an ``OS profile`` when creating an managing ``appliances``. 
 
-A list of :ref:`distribution-object` objects are returned. 
+A list of :ref:`distribprofiletemplate-object` objects are returned. 
 
 A search criteria can be used to retrieve a subset of these templates.
 
@@ -29,7 +29,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``id`` (required): the id of the :ref:`distribution-object`
+* ``id`` (required): the id of the :ref:`distribprofile-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -48,11 +48,10 @@ Example Request
 
 	 * :ref:`appliance-object`
 	 * :ref:`distribprofile-object`
-	 * :ref:`distribution-object`
-	 * :ref:`linuxprofile-object`
+	 * :ref:`distribprofile-object`
+	 * :ref:`distribprofiletemplate-object`
 	 * :ref:`osTemplatePkgs-get`
 	 * :ref:`osTemplate-create`
 	 * :ref:`osTemplate-delete`
 	 * :ref:`osTemplate-get`
 	 * :ref:`osTemplate-update`
-	 * :ref:`windowsprofile-object`

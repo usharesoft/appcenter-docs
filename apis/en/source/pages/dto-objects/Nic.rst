@@ -5,21 +5,30 @@
 nic
 ===
 
-Provides the information of a network interface card (NIC). This NIC information is attached to the installation profile belonging to an appliance template.
+Describes a network card information. These NICs are part of an installation profile of an appliance template.
 
 Attributes
 ~~~~~~~~~~
 
 The list of attributes for ``nic`` are:
 
-	* ``autoConnect`` (boolean): a boolean highlighting if the network card should be activated automatically
+	* ``autoConnect`` (boolean): a boolean highligthing if the network card should be activated automatically
+	* ``default`` (boolean): a boolean hightlighting if the network card is the default machine network card
+	* ``dhcpClientId`` (string): the dhcp client id
 	* ``ipAddresses``: the list of static IP address information for this NIC (see :ref:`ipaddress-object`
-	* ``ipv4Method``: the IPv4 method to be used (manual, dhcp, etc.)
-	* ``ipv6Method``: the IPv6 method to be used (manual, dhcp, etc.)
+	* ``ipAddressesUri`` (anyURI): the uri resource to retrieve the IP address information for this NIC
+	* ``ipv4DnsServers`` (string): the space separated list of IPv4 DNS servers
+	* ``ipv4Method`` (int): the IPv4 method to be used (manual, dhcp, etc.)
+	* ``ipv4SearchDomains`` (string): the space separated list of IPv4 search domains
+	* ``ipv6DnsServers`` (string): the space separated list of IPv6 DNS servers
+	* ``ipv6Method`` (int): the IPv6 method to be used (manual, dhcp, etc.)
+	* ``ipv6SearchDomains`` (string): the space separated list of IPv6 search domains
+	* ``macAddress`` (string): the MAC address for this NIC card
 	* ``name`` (string): the name of this NIC
 	* ``parentUri`` (anyURI): the uri resource of the parent object this NIC is attached to (e.g. an install profile object)
-	* ``type``: the type of NIC
-	* ``order`` (int): the order of NIC
+	* ``routes``: the list of :ref:`route-object` objects
+	* ``routesUri`` (anyURI): the uri to get all the :ref:`route-object` objects
+	* ``type`` (int): the type of NIC
 	* ``uri`` (anyURI): the uri resource of this NIC
 	* ``created`` (dateTime): the created date of the object
 	* ``dbId`` (long): the database id of the object

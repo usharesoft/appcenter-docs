@@ -15,11 +15,19 @@
 
     <xs:element name="applianceExport" type="ApplianceExport"/>
 
+    <xs:element name="applianceExports" type="ApplianceExports"/>
+
     <xs:element name="applianceImport" type="ApplianceImport"/>
+
+    <xs:element name="applianceImports" type="ApplianceImports"/>
 
     <xs:element name="appliances" type="Appliances"/>
 
     <xs:element name="applianceStats" type="ApplianceStats"/>
+
+    <xs:element name="artifactCredAccount" type="ArtifactCredAccount"/>
+
+    <xs:element name="artifactCredAccounts" type="ArtifactCredAccounts"/>
 
     <xs:element name="blueprint" type="Blueprint"/>
 
@@ -181,6 +189,10 @@
 
     <xs:element name="osGroups" type="OSGroups"/>
 
+    <xs:element name="osPackage" type="OSPackage"/>
+
+    <xs:element name="osPackages" type="OSPackages"/>
+
     <xs:element name="osUpdate" type="OSUpdate"/>
 
     <xs:element name="osUpdates" type="OSUpdates"/>
@@ -263,6 +275,22 @@
 
     <xs:element name="serviceStatus" type="ServiceStatus"/>
 
+    <xs:element name="softwareArtifact" type="SoftwareArtifact"/>
+
+    <xs:element name="softwareArtifacts" type="SoftwareArtifacts"/>
+
+    <xs:element name="softwareBundle" type="SoftwareBundle"/>
+
+    <xs:element name="softwareBundleExport" type="SoftwareBundleExport"/>
+
+    <xs:element name="softwareBundleImport" type="SoftwareBundleImport"/>
+
+    <xs:element name="softwareBundles" type="SoftwareBundles"/>
+
+    <xs:element name="softwareFile" type="SoftwareFile"/>
+
+    <xs:element name="softwareFiles" type="SoftwareFiles"/>
+
     <xs:element name="sshKey" type="SSHKey"/>
 
     <xs:element name="sshKeys" type="SSHKeys"/>
@@ -313,9 +341,83 @@
 
     <xs:element name="voteStat" type="VoteStat"/>
 
+    <xs:element name="winMsiApplication" type="WinMsiApplication"/>
+
+    <xs:element name="winMsiApplications" type="WinMsiApplications"/>
+
+    <xs:element name="winStoreApplication" type="WinStoreApplication"/>
+
+    <xs:element name="winStoreApplications" type="WinStoreApplications"/>
+
+    <xs:element name="winService" type="WinService"/>
+
+    <xs:element name="winServices" type="WinServices"/>
+
     <xs:element name="workspace" type="Workspace"/>
 
     <xs:element name="workspaces" type="Workspaces"/>
+
+    <xs:complexType name="AbstractWinApplication" abstract="true">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Provides information of a Windows application
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObject">
+                <xs:sequence>
+                    <xs:element name="displayName" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the name of the application</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="version" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the version of the application</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="architecture" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the architecture of the application</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="x64"/>
+                                <xs:enumeration value="x86"/>
+                                <xs:enumeration value="neutral"/>
+                                <xs:enumeration value="arm"/>
+                                <xs:enumeration value="unknown"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="AbstractWinApplications">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Provides a list of :ref:`abstractWinApplication-object` objects.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObjects">
+                <xs:sequence>
+                    <xs:element name="abstractWinApplications" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of :ref:`abstractWinApplication-object` objects</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="abstractWinApplication" type="AbstractWinApplication" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
 
     <xs:complexType name="Address">
         <xsd:annotation>
@@ -362,11 +464,10 @@
                 Holds the key pair information used as an alternative way to using basic authorization for
                 HTTP requests.
 
-                <p>The public key is inserted as a query in the request URI. The secret key is then used to encode the entire URI
-                    to create a signature using HMAC_SHA1. This signature is then added to the end of the request URI.
-                </p>
+                The public key is inserted as a query in the request URI. The secret key is then used to encode the entire URI
+                to create a signature using HMAC_SHA1. This signature is then added to the end of the request URI.
 
-                <p>These keys are created automatically by the platform. For more information, refer to :ref:`apikey-api-resources`.</p>
+                These keys are created automatically by the platform. For more information, refer to :ref:`apikey-api-resources`.
             </xsd:documentation>
         </xsd:annotation>
         <xs:complexContent>
@@ -391,7 +492,6 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-
 
     <xs:complexType name="APIKeyPairs">
         <xsd:annotation>
@@ -425,9 +525,13 @@
                 It consists of five layers, namely:
 
                 - an Install Profile - specific information for the first time the image boots
-                - an OS Profile - a list of operating system packages. Each operating system within the organization provides one or more standard OS profiles to choose from when creating the OS Profile of the appliance template. It is also possible to create custom OS profiles.
+
+                - an OS Profile - a list of operating system packages. Each operating system within the organization provides one or more standard OS profiles to choose from when creating the OS Profile of the appliance template. It is also possible to create custom OS profiles
+
                 - Projects - a list of Project software components chosen from the Organization´s Project Catalog
+
                 - My Software - a list of software components chosen from the User´s private “Software Library”
+
                 - Configuration - configuration information including boot scripts and/or other software components to manage the image after provisioning
 
                 Appliance templates are then used to generate ``machine images``.
@@ -643,17 +747,10 @@
                         </xsd:annotation>
                     </xs:element>
 
-                    <xs:element name="oasPackage" type="OASPkg" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the :ref:`oaspkg-object` object describing the UForge Studio package added to this appliance</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
+                    <xs:element name="oasPackage" type="OASPkg" minOccurs="0"/>
 
-                    <xs:element name="oasPackageUri" type="xs:anyURI" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the uri resource of the UForge Studio package added to this appliance</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
+                    <xs:element name="oasPackageUri" type="xs:anyURI" minOccurs="0"/>
+
                     <xs:element name="orgUri" type="xs:anyURI" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the uri resource of the organization this appliance belongs to</xsd:documentation>
@@ -758,13 +855,10 @@
     <xs:complexType name="ApplianceExport">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
-                Holds tracking information on requests to export an appliance. An export basically
-                archives the appliance meta-data and all relevant software and allows the user to download that archive. The archive
-                information can then be version controlled or imported to another UForge platform.
+                Holds tracking information on requests to export an appliance. An export basically archives the appliance meta-data and all relevant software and allows the user to download that archive. The archive information can then be version controlled or imported
+                to another UForge platform.
 
-                <p>The appliance export is an asynchronous job which may take some time. The current status of the export
-                    is stored in this object.
-                </p>
+                The appliance export is an asynchronous job which may take some time. The current status of the export is stored in this object.
             </xsd:documentation>
         </xsd:annotation>
         <xs:complexContent>
@@ -783,6 +877,11 @@
                     <xs:element name="downloadUri" type="xs:anyURI" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the uri allowing the archive to be downloaded</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="downloaded" type="xs:boolean" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">flag to determine if there has been at least one request to download the export archive</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                     <!-- hack, this should not be in uforge.xsd but in a xsd dedicated to event bus objects -->
@@ -807,6 +906,29 @@
         </xs:complexContent>
     </xs:complexType>
 
+    <xs:complexType name="ApplianceExports">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Provides a list of :ref:`applianceExport-object` objects.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObjects">
+                <xs:sequence>
+                    <xs:element name="applianceExports" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of :ref:`applianceExport-object` objects</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="applianceExport" type="ApplianceExport" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
 
     <xs:complexType name="ApplianceImport">
         <xsd:annotation>
@@ -814,9 +936,7 @@
                 Holds the information when an appliance is being imported to this UForge platform.
                 The actual import is done by uploading an appliance archive via the ``uploadUri``.
 
-                <p>The appliance import is an asynchronous job which may take some time. The current status of the import is stored
-                    in this object.
-                </p>
+                The appliance import is an asynchronous job which may take some time. The current status of the import is stored in this object.
             </xsd:documentation>
         </xsd:annotation>
         <xs:complexContent>
@@ -867,6 +987,29 @@
         </xs:complexContent>
     </xs:complexType>
 
+    <xs:complexType name="ApplianceImports">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Provides a list of :ref:`applianceImport-object` objects.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObjects">
+                <xs:sequence>
+                    <xs:element name="applianceImports" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of :ref:`applianceImport-object` objects</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="applianceImport" type="ApplianceImport" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
 
     <xs:complexType name="Appliances">
         <xsd:annotation>
@@ -892,16 +1035,19 @@
         </xs:complexContent>
     </xs:complexType>
 
-
     <xs:complexType name="ApplianceStats">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
                 Provides the statistic information of all the appliance templates for a user.
                 This includes:
-                <p>- the number of appliance templates</p>
-                <p>- the number of machine images generated and a breakdown on the format types used</p>
-                <p>- the breakdown on the operating systems used</p>
-                <p>- the number appliance templates shared (e.g. to workspaces)</p>
+
+                - the number of appliance templates
+
+                - the number of machine images generated and a breakdown on the format types used
+
+                - the breakdown on the operating systems used
+
+                - the number appliance templates shared (e.g. to workspaces)
             </xsd:documentation>
         </xsd:annotation>
         <xs:sequence>
@@ -968,6 +1114,94 @@
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ArtifactCredAccount">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Holds artifact account information for a software artifact. These credentials allow the platform
+                to communicate with the remote repository to fetch to add files for a software or project.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObject">
+                <xs:sequence>
+                    <xs:element name="uri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource of this artifact account</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="parentUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource of the parent object this artifact account is attached to</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="name" type="xs:string">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the name of the artifact account</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="host" type="xs:string">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the hostname of the artifact account</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="login" type="xs:string">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the login (optional) to connect to the artifact account</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="password" type="xs:string">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the password (optional) to connect to the artifact account</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="type" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the type of the artifact account, for example ``ftp``</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="http"/>
+                                <xs:enumeration value="https"/>
+                                <xs:enumeration value="ftp"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="port" type="xs:int">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the port of the artifact account</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="softwareArtifactsUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource to retrieve artifacts from the artifact account</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ArtifactCredAccounts">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Provides a list of :ref:`artifactcredaccount-object` objects.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObjects">
+                <xs:sequence>
+                    <xs:element name="artifactCredAccounts" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="artifactCredAccount" type="ArtifactCredAccount" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
     </xs:complexType>
 
     <xs:complexType name="AwsResources">
@@ -1310,7 +1544,6 @@
         </xs:complexContent>
     </xs:complexType>
 
-
     <xs:complexType name="BootScript">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
@@ -1320,7 +1553,7 @@
             </xsd:documentation>
         </xsd:annotation>
         <xs:complexContent>
-            <xs:extension base="Pkg">
+            <xs:extension base="SoftwareArtifact">
                 <xs:sequence>
                     <xs:element name="bootOrder" type="xs:int" minOccurs="0">
                         <xsd:annotation>
@@ -1342,7 +1575,6 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-
 
     <xs:complexType name="BootScripts">
         <xsd:annotation>
@@ -1368,7 +1600,6 @@
         </xs:complexContent>
     </xs:complexType>
 
-
     <xs:complexType name="Catalog">
         <xs:complexContent>
             <xs:extension base="UForgeObject">
@@ -1393,7 +1624,6 @@
         </xs:complexContent>
     </xs:complexType>
 
-
     <xs:complexType name="Categories">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
@@ -1417,7 +1647,6 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-
 
     <xs:complexType name="Category">
         <xsd:annotation>
@@ -1971,7 +2200,6 @@
         </xs:complexContent>
     </xs:complexType>
 
-
     <xs:complexType name="Comment">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
@@ -2123,7 +2351,6 @@
         </xs:complexContent>
     </xs:complexType>
 
-
     <xs:complexType name="Company">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">Provides information for an organization.
@@ -2167,7 +2394,6 @@
         </xs:complexContent>
     </xs:complexType>
 
-
     <xs:complexType name="ConfMgmtPlatform">
         <xs:complexContent>
             <xs:extension base="UForgeObject">
@@ -2181,7 +2407,6 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-
 
     <xs:complexType name="ConfMgmtPlatforms">
         <xs:complexContent>
@@ -2198,7 +2423,6 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-
 
     <xs:complexType name="CredAccount" abstract="true">
         <xsd:annotation>
@@ -2264,7 +2488,6 @@
         </xs:complexContent>
     </xs:complexType>
 
-
     <xs:complexType name="CredAccountAws">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
@@ -2299,7 +2522,6 @@
         </xs:complexContent>
     </xs:complexType>
 
-
     <xs:complexType name="CredAccountAzure">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
@@ -2318,7 +2540,6 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-
 
     <xs:complexType name="CredAccountCert" abstract="true">
         <xsd:annotation>
@@ -2355,7 +2576,6 @@
         </xs:complexContent>
     </xs:complexType>
 
-
     <xs:complexType name="CredAccountCloudStack">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
@@ -2385,7 +2605,6 @@
         </xs:complexContent>
     </xs:complexType>
 
-
     <xs:complexType name="CredAccountCloudwatt">
         <xs:complexContent>
             <xs:extension base="CredAccount">
@@ -2398,7 +2617,6 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-
 
     <xs:complexType name="CredAccountEuca">
         <xsd:annotation>
@@ -2434,7 +2652,6 @@
         </xs:complexContent>
     </xs:complexType>
 
-
     <xs:complexType name="CredAccountFlexiant">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
@@ -2469,7 +2686,6 @@
         </xs:complexContent>
     </xs:complexType>
 
-
     <xs:complexType name="CredAccountGoogle">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
@@ -2493,7 +2709,6 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-
 
     <xs:complexType name="CredAccountNimbula">
         <xsd:annotation>
@@ -2523,7 +2738,6 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-
 
     <xs:complexType name="CredAccountOpenStack">
         <xsd:annotation>
@@ -2563,7 +2777,6 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-
 
     <xs:complexType name="CredAccountOutscale">
         <xsd:annotation>
@@ -2774,6 +2987,30 @@
         </xs:complexContent>
     </xs:complexType>
 
+    <xs:complexType name="CredAccountK5">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Holds specific account information for the Fujitsu K5 public cloud platform.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="CredAccount">
+                <xs:sequence>
+                    <xs:element name="login" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the user login name to use</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="password" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the user password to use</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
     <xs:complexType name="Deployment">
         <xs:complexContent>
             <xs:extension base="UForgeObject">
@@ -2966,7 +3203,7 @@
             <xsd:documentation xml:lang="en">
                 Describes a group of native packages from an operating system. This profile is
                 created by a platform administrator. These templates are used by users of the platform to easily create operating
-                profiles that are part of an appliance template.
+                system profiles that are part of an appliance template.
             </xsd:documentation>
         </xsd:annotation>
         <xs:complexContent>
@@ -3001,8 +3238,7 @@
                     </xs:element>
                     <xs:element name="installedSize" type="xs:long" minOccurs="0">
                         <xsd:annotation>
-                            <xsd:documentation xml:lang="en">estimated install disk size required (in bytes) to install the packages this template contains.
-                                <p>.. note:: this attempts to include all package dependencies.</p>
+                            <xsd:documentation xml:lang="en">estimated install disk size required (in bytes) to install the packages this template contains. Note, this attempts to include all package dependencies.
                             </xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
@@ -3113,11 +3349,6 @@
                     </xs:element>
                     <xs:element name="baseProhibitedFormatsUri" type="xs:anyURI" minOccurs="0"/>
                     <xs:element name="baseProhibitedTargetFormatsUri" type="xs:anyURI" minOccurs="0"/>
-                    <xs:element name="baseProjectsUri" type="xs:anyURI" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the uri resource to retrieve all the projects supporting this operating system</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
                     <xs:element name="baseServicesUri" type="xs:anyURI" minOccurs="0"/>
                     <xs:element name="baseGoldensUri" type="xs:anyURI" minOccurs="0">
                         <xsd:annotation>
@@ -3215,11 +3446,6 @@
                                 <xs:element name="prohibitedTargetFormat" type="TargetFormat" minOccurs="0" maxOccurs="unbounded"/>
                             </xs:sequence>
                         </xs:complexType>
-                    </xs:element>
-                    <xs:element name="projectUris" type="UriList" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the list of uri resources for the projects supporting this operating system</xsd:documentation>
-                        </xsd:annotation>
                     </xs:element>
                     <xs:element name="releaseDate" type="xs:dateTime" minOccurs="0">
                         <xsd:annotation>
@@ -4378,7 +4604,6 @@
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
                                 <xs:enumeration value="abiquo"/>
-                                <xs:enumeration value="ami"/>
                                 <xs:enumeration value="aws"/>
                                 <xs:enumeration value="azure"/>
                                 <xs:enumeration value="cloudburstvmware"/>
@@ -4387,6 +4612,7 @@
                                 <xs:enumeration value="cloudstackvhd"/>
                                 <xs:enumeration value="cloudsigmaraw"/>
                                 <xs:enumeration value="cloudwatt"/>
+                                <xs:enumeration value="docker"/>
                                 <xs:enumeration value="emi-kvm"/>
                                 <xs:enumeration value="emi-xen"/>
                                 <xs:enumeration value="esx"/>
@@ -4398,6 +4624,7 @@
                                 <xs:enumeration value="hyperv2012"/>
                                 <xs:enumeration value="ISO"/>
                                 <xs:enumeration value="kvm"/>
+                                <xs:enumeration value="k5vmdk"/>
                                 <xs:enumeration value="lxc"/>
                                 <xs:enumeration value="nimbulaesx"/>
                                 <xs:enumeration value="nimbulakvm"/>
@@ -4489,7 +4716,7 @@
     <xs:complexType name="ImagePkgs">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
-                Provides a list of :ref:`package-object` objects.
+                Provides a list of :ref:`imagepkg-object` objects.
             </xsd:documentation>
         </xsd:annotation>
         <xs:complexContent>
@@ -4497,7 +4724,7 @@
                 <xs:sequence>
                     <xs:element name="imagePkgs" minOccurs="0">
                         <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the list of :ref:`package-object` objects</xsd:documentation>
+                            <xsd:documentation xml:lang="en">the list of :ref:`imagepkg-object` objects</xsd:documentation>
                         </xsd:annotation>
                         <xs:complexType>
                             <xs:sequence>
@@ -4617,7 +4844,8 @@
                     <xs:element name="diskSize" type="xs:long" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the disk size (in bytes).
-                                <p>.. note:: this is only used for ``basic partitioning`` with one disk</p>
+
+                                .. note:: this is only used for ``basic partitioning`` with one disk
                             </xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
@@ -4788,7 +5016,8 @@
                     <xs:element name="swapSize" type="xs:long" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the swap size (in bytes).
-                                <p>.. note:: this is only used for ``basic partitioning`` with one disk</p>
+
+                                .. note:: this is only used for ``basic partitioning`` with one disk
                             </xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
@@ -5221,7 +5450,8 @@
                     <xs:element name="updateTools" type="xs:boolean" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">boolean to determine whether to allow automatic update of AWS libraries and tools in the cloud environment.
-                                <p>.. note:: only used for AWS</p>
+
+                                .. note:: only used for AWS
                             </xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
@@ -5255,10 +5485,23 @@
                             <xsd:documentation xml:lang="en">welcome message to display to the end user when provisioning an instance</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
+                    <xs:element name="seLinuxMode" type="seLinuxMode" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the SELinux mode (disabled/permissive/enforcing)</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
+
+    <xsd:simpleType name="seLinuxMode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="disabled"/>
+            <xsd:enumeration value="permissive"/>
+            <xsd:enumeration value="enforcing"/>
+        </xsd:restriction>
+    </xsd:simpleType>
 
     <xs:complexType name="Instance">
         <xs:complexContent>
@@ -5506,12 +5749,17 @@
                 Describes a logical volume group in a partitioning table. A volume group creates a pool of disk space from a
                 collection of disks or partitions. This volume group can then be partitioned via a logical volume.
 
-                <p>.. note:: Only disks and partitions of type lvm and logical partitions can be added to a volume group</p>
+                .. note:: Only disks and partitions of type lvm and logical partitions can be added to a volume group
             </xsd:documentation>
         </xsd:annotation>
         <xs:complexContent>
             <xs:extension base="UForgeObject">
                 <xs:sequence>
+                    <xs:element name="diskUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resources for each disk this logical group uses</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
                     <xs:element name="diskUris" type="UriList" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the list of uri resources for each disk this logical group uses</xsd:documentation>
@@ -5526,6 +5774,11 @@
                     <xs:element name="partitionTableUri" type="xs:anyURI" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the uri resource of the partition table object (see :ref:`partitiontable-object`)</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="partitionUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resources for each partition this logical group uses</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                     <xs:element name="partitionUris" type="UriList" minOccurs="0">
@@ -5832,7 +6085,6 @@
         </xs:complexContent>
     </xs:complexType>
 
-
     <xs:complexType name="MySoftware">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
@@ -5841,7 +6093,7 @@
             </xsd:documentation>
         </xsd:annotation>
         <xs:complexContent>
-            <xs:extension base="PkgGroup">
+            <xs:extension base="SoftwareBundle">
                 <xs:sequence>
                     <xs:element name="appliancesUri" type="xs:anyURI" minOccurs="0">
                         <xsd:annotation>
@@ -5853,24 +6105,14 @@
                             <xsd:documentation xml:lang="en">the list of uri resources of each appliance template using this software component</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
-                    <xs:element name="defaultInstallLocation" type="xs:string" minOccurs="0">
+                    <xs:element name="cloneUri" type="xs:anyURI" minOccurs="0">
                         <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the default full pathname of where to install the software (if not a native package)</xsd:documentation>
+                            <xsd:documentation xml:lang="en">uri resource used to clone this MySoftware</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                     <xs:element name="imported" type="xs:boolean" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">a boolean highlighting if the MySoftware has been imported (from a scan, an appliance import or a workspace)</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="installLocation" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the full pathname of where to install this software item (overrides the ``defaultInstallLocation``)</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="revision" type="xs:int" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the revision number of the software</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                 </xs:sequence>
@@ -6081,24 +6323,11 @@
 
 
     <xs:complexType name="OASPkg">
-        <xsd:annotation>
-            <xsd:documentation xml:lang="en">
-                Provides the meta-data of an UForge Studio package uploaded and used by an appliance template.
-            </xsd:documentation>
-        </xsd:annotation>
         <xs:complexContent>
             <xs:extension base="Pkg">
                 <xs:sequence>
-                    <xs:element name="license" type="License" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the license information for this package (see :ref:`license-object`</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="licenseUploaded" type="xs:boolean" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">boolean to determine if a license file has been uploaded</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
+                    <xs:element name="license" type="License" minOccurs="0"/>
+                    <xs:element name="licenseUploaded" type="xs:boolean" minOccurs="0"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -6573,6 +6802,11 @@
                             <xsd:documentation xml:lang="en">the uri resource to retrieve all the operating system repositories registered to this organization</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
+                    <xs:element name="artifactAccountsUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource to retrieve all the artifact accounts registered to this organization</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -6672,6 +6906,60 @@
         </xs:complexContent>
     </xs:complexType>
 
+    <xs:complexType name="OSPackage">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Holds information of a native operating system package attached to a software bundle.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="SoftwareArtifact">
+                <xs:sequence>
+                    <xs:element name="sticky" type="xs:boolean" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">boolean to indicate that this package version should not be updated when new package updates are available</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="repoId" type="xs:long" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the unique id of the repository these packages belong to</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="repository" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">repository name</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="distroId" type="xs:long" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the unique id of the operating system this software artifact (OS Package) belong to</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="OSPackages">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Provides a list of :ref:`ospackage-object` objects.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObjects">
+                <xs:sequence>
+                    <xs:element name="osPkgs" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="osPkg" type="OSPackage" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
 
     <xs:complexType name="OSUpdate">
         <xsd:annotation>
@@ -6902,6 +7190,11 @@
         <xs:complexContent>
             <xs:extension base="UForgeObject">
                 <xs:sequence>
+                    <xs:element name="dumpLocation" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the location of the partition's dump file</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
                     <xs:element name="fstype" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the filesystem type of the partition</xsd:documentation>
@@ -6987,6 +7280,11 @@
                     <xs:element name="volumeOrder" type="xs:int" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the volume order</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="mbrBoot" type="xs:boolean" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">boolean indicating whether this partition is bootable</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                 </xs:sequence>
@@ -7194,6 +7492,11 @@
                             <xsd:documentation xml:lang="en">tag value</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
+                    <xs:element name="repositoryName" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">repository name</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
                     <xs:element name="sticky" type="xs:boolean" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">boolean to indicate that this package version should not be updated when new package updates are available</xsd:documentation>
@@ -7223,7 +7526,6 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-
 
     <xs:complexType name="PkgGroup">
         <xsd:annotation>
@@ -7411,7 +7713,6 @@
         </xs:complexContent>
     </xs:complexType>
 
-
     <xs:complexType name="Project">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
@@ -7421,37 +7722,11 @@
             </xsd:documentation>
         </xsd:annotation>
         <xs:complexContent>
-            <xs:extension base="PkgGroup">
+            <xs:extension base="SoftwareBundle">
                 <xs:sequence>
-                    <xs:element name="baseOrgUri" type="xs:anyURI" minOccurs="0">
+                    <xs:element name="orgUris" type="UriList" minOccurs="0">
                         <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the uri resource of the organization this project has been registered to</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="defaultInstallLocation" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the default installation location of the files for this project</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="installLocation" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the installation location of the files for this project (overrides the ``defaultInstallLocation``)</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="orgUris" type="UriList" minOccurs="0"/>
-                    <xs:element name="osPackageUris" type="UriList" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the list of uri resources for each native package included in this project</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="shortTag" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the tag for this project</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="uploadedPackageUris" type="UriList" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the list of uri resources for uploaded file/package included in this project</xsd:documentation>
+                            <xsd:documentation xml:lang="en">the list of uri resources of each organization this software bundle (project) has been registered to</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                 </xs:sequence>
@@ -7482,7 +7757,6 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-
 
     <xs:complexType name="PublishImage" abstract="true">
         <xsd:annotation>
@@ -7571,11 +7845,6 @@
         <xs:complexContent>
             <xs:extension base="PublishImage">
                 <xs:sequence>
-                    <xs:element name="bucket" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the bucket name where this machine image is registered</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
                     <xs:element name="region" type="xs:string" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the region where this machine image is registered</xsd:documentation>
@@ -7885,7 +8154,6 @@
         </xs:complexContent>
     </xs:complexType>
 
-
     <xs:complexType name="PublishImageOutscale">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
@@ -8018,6 +8286,35 @@
                     <xs:element name="network" type="xs:string" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the network where to register the machine image</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="PublishImageK5">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Holds the information on the registration of a machine image to the K5 environment.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="PublishImage">
+                <xs:sequence>
+                    <xs:element name="keystoneDomain" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the keystone domain to use when registering the machine image</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="keystoneProject" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the keystone project to use when registering the machine image</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="displayName" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the public name of the machine image</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                 </xs:sequence>
@@ -8336,7 +8633,7 @@
                 Describes a ``role`` used for Role-Based Access Control (RBAC). A role groups together a list of ``entitlements``
                 (see :ref:`entitlement-object`.)
 
-                <p>A role can then be assigned to an user to enforce access rights.</p>
+                A role can then be assigned to an user to enforce access rights.
             </xsd:documentation>
         </xsd:annotation>
         <xs:complexContent>
@@ -8533,6 +8830,26 @@
                         <xs:complexType>
                             <xs:sequence>
                                 <xs:element name="import" type="ScanImport" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="winServices" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">a list of :ref:`winService-object` objects that represent Windows services on the scanned machine</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="winService" type="WinService" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="winApplications" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">a list of :ref:`winmsiapplication-object` objects that represent Windows applications on the scanned machine</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="winApplication" type="AbstractWinApplication" minOccurs="0" maxOccurs="unbounded"/>
                             </xs:sequence>
                         </xs:complexType>
                     </xs:element>
@@ -9138,6 +9455,11 @@
                             <xsd:documentation xml:lang="en">determines if the platform is up and running</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
+                    <xs:element name="version" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the current version of the platform</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
                     <xs:element name="serviceLoad" type="xs:int" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the current service load (max is 100)</xsd:documentation>
@@ -9148,6 +9470,476 @@
         </xs:complexContent>
     </xs:complexType>
 
+    <xs:complexType name="SoftwareArtifact">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Holds information of a native operating system package, file or bootscript.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeUploadObject">
+                <xs:sequence>
+                    <xs:element name="uri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource of this software artifact object</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="tag" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the tag information</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="binaryUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource to retrieve the binary</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="parentUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource of the parent object this software artifact belongs to</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="extract" type="xs:boolean" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">a boolean flag to extract an archive (if the uploaded object is an archive) as part of the generation</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="install" type="xs:boolean" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">boolean to indicate whether to install the software artifact or just to store it on the filesystem</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="cache" type="xs:boolean" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">boolean to indicate whether to put in cache the software artifact or just upload during generation</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="active" type="xs:boolean" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">boolean to indicate whether the software artifact active or not</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="installLocation" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the location to store the software artifact if ``install == false``</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="name" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the name of the software artifact</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="fullName" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the name of the file including the extension</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="origName" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the original name of the software artifact</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="artifactBuildDate" type="xs:dateTime" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the date the software artifact was built</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="artifactFileDate" type="xs:dateTime" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the file timestamp</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="release" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the release information of the software artifact</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="shortTag" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">short tag value (osPackage, softwarefile or bootscript)</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="type" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">file media type</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="version" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the version of this software artifact</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="arch" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the architecture type for this software artifact (rpm uploaded file or OS Package)</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="params" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">silent install parameters to use as part of the installation of the object (for windows only)</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="artifactCredAccount" type="ArtifactCredAccount" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the artifact account (see :ref:`artifactcredaccount-object`) this software artifact belong to</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="subSoftwareArtifacts" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of sub-software artifact of this software artifact (which represents a folder)</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="softwareArtifact" type="SoftwareArtifact" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="subSoftwareArtifactUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of sub-software artifact uris of this software artifact</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="parentPath" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the parent pathname of this software artifact (depending of its parent software artifact)</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="remotePath" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the remote pathname of this software artifact to retrieve from artifact account</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="SoftwareArtifacts">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Provides a list of :ref:`softwareartifact-object` objects.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObjects">
+                <xs:sequence>
+                    <xs:element name="softwareArtifacts" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="softwareArtifact" type="SoftwareArtifact" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="SoftwareBundle">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Describes a software bundle (MySoftware or Project).
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObject">
+                <xs:sequence>
+                    <xs:element name="tag" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the tag information</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="shortTag" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the short tag information (mySoftware or project)</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="name" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the name of this software bundle</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="version" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the version information of this software bundle</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="description" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the description for this software bundle</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="release" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the release information for the software bundle</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="location" type="xs:anyURI" minOccurs="0"/>
+                    <xs:element name="defaultInstallLocation" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the default full pathname of where to install the software bundle (if not a native package)</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="installLocation" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the full pathname of where to install this software bundle item (overrides the ``defaultInstallLocation``)</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="restricted" type="xs:boolean" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">a boolean highlighting if the Software bundle is restricted</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="installedSize" type="xs:long" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the estimated disk size (in bytes) required to install this software bundle</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="size" type="xs:long" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the total size of this software bundle (in bytes)</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="revision" type="xs:long" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the revision number of the software bundle</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="artifactsUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource to retrieve the details of software artifacts contained in the software bundle</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="uri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource of this software bundle object</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="distributionsUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource to retrieve all the operating system this software bundle is designed for</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="distributionUris" type="UriList" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of uri resources of each operating system this software bundle is designed for</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="exportUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">uri resource used to export this software bundle</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="category" type="Category" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the category for this software bundle (project)</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="license" type="License" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the license information (see :ref:`license-object`)</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="logo" type="Logo" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the :ref:`logo-object` object for the software bundle</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="maintainer" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the maintainer name for this project</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="website" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the website URL of the maintainer</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="softwareArtifactUris" type="UriList" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of uri resources for each software artifacts in the software bundle</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="SoftwareBundles">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Provides a list of :ref:`softwarebundle-object` objects.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObjects">
+                <xs:sequence>
+                    <xs:element name="softwareBundles" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="softwareBundle" type="SoftwareBundle" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="SoftwareBundleExport">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Holds tracking information on requests to export a software bundle. An export basically
+                archives the software bundle meta-data and all relevant files and allows the user to download that archive. The archive
+                information can then be version controlled or imported to another UForge platform.
+
+                <p>The software bundle export is an asynchronous job which may take some time. The current status of the export
+                    is stored in this object.
+                </p>
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObject">
+                <xs:sequence>
+                    <xs:element name="bundleName" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the name of this exported software bundle</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="bundleVersion" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the version information of this exported software bundle</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="downloadUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">uri resource used to download this exported software bundle (as an archive)</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="location" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the full pathname where the exported software bundle (as an archive) is stored locally</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="parentUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource of the parent object this exported software bundle belongs to</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="status" type="OpStatus" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the current status of the exported software bundle</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="uri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource of this exported software bundle object</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="SoftwareBundleImport">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Holds the information when a software bundle is being imported to this UForge platform.
+                The actual import is done by uploading a software bundle archive via the ``uploadUri``.
+
+                <p>The software bundle import is an asynchronous job which may take some time. The current status of the import is stored
+                    in this object.
+                </p>
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeUploadObject">
+                <xs:sequence>
+                    <xs:element name="parentUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource of the parent object this object is attached to</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="referenceUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri of the software bundle created from this import</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="uploadUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource to upload any files assocaited with this import</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="statusUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource of the current status of the software bundle import</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="imported" type="xs:boolean" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">boolean flag indicating that is a real import or a creation</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="uri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource of this software bundle import</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+
+    <xs:complexType name="SoftwareFile">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Holds information of a simple file attached to a software bundle.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="SoftwareArtifact">
+                <xs:sequence>
+                    <xs:element name="ownerGroup" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the string owner:group for this software file to set during the generation of a machine image</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="rights" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the rights for this software file (for example 777) to set during the generation of a machine image</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="symlink" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">a symbolic link for this software file to set during the generation of a machine image</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="SoftwareFiles">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Provides a list of :ref:`softwarefile-object` objects.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObjects">
+                <xs:sequence>
+                    <xs:element name="softwareFiles" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="softwareFile" type="SoftwareFile" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
 
     <xs:complexType name="SSHKey">
         <xsd:annotation>
@@ -9388,22 +10180,53 @@
     </xs:complexType>
 
     <xs:complexType name="SubscriptionProfile">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Describes access and permission information used when creating new users on the platform.
+            </xsd:documentation>
+        </xsd:annotation>
         <xs:complexContent>
             <xs:extension base="UForgeObject">
                 <xs:sequence>
-                    <xs:element name="active" type="xs:boolean" minOccurs="0"/>
+                    <xs:element name="active" type="xs:boolean" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">boolean flag to indicate whether this subscription profile can be used</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
                     <xs:element name="admins" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of administrators that can use this subscription profile when creating a new user (see :ref:`user-object`)</xsd:documentation>
+                        </xsd:annotation>
                         <xs:complexType>
                             <xs:sequence>
                                 <xs:element name="admin" type="UserProfile" minOccurs="0" maxOccurs="unbounded"/>
                             </xs:sequence>
                         </xs:complexType>
                     </xs:element>
-                    <xs:element name="adminsUri" type="xs:anyURI" minOccurs="0"/>
-                    <xs:element name="code" type="xs:string" minOccurs="0"/>
-                    <xs:element name="description" type="xs:string" minOccurs="0"/>
-                    <xs:element name="distribsUri" type="xs:anyURI" minOccurs="0"/>
+                    <xs:element name="adminsUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource to retrieve all the administrators that can use this subscription profile</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="code" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the subscription profile code to use when creating a user (this subscription profile will be used)</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="description" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the description of this subscription profile</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="distribsUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource to get all the operating systems that the user will be given access to</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
                     <xs:element name="distributions" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of operating systems that the user will be given access to (see :ref:`distribution-object`)</xsd:documentation>
+                        </xsd:annotation>
                         <xs:complexType>
                             <xs:sequence>
                                 <xs:element name="distribution" type="Distribution" minOccurs="0" maxOccurs="unbounded"/>
@@ -9616,6 +10439,7 @@
                                 <xs:enumeration value="openstack"/>
                                 <xs:enumeration value="vclouddirector"/>
                                 <xs:enumeration value="vsphere"/>
+                                <xs:enumeration value="k5"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -9729,6 +10553,7 @@
                                 <xs:enumeration value="openstack"/>
                                 <xs:enumeration value="vclouddirector"/>
                                 <xs:enumeration value="vsphere"/>
+                                <xs:enumeration value="k5"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -10016,9 +10841,19 @@
                             <xsd:documentation xml:lang="en">the uri resource to retrieve the user's machine images</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
+                    <xs:element name="baseExportsUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource to retrieve the user's exported appliance templates</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
                     <xs:element name="baseImportsUri" type="xs:anyURI" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the uri resource to retrieve the user's imported appliance templates</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="mySoftwareImportsUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource to retrieve the user's imported software bundles</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                     <xs:element name="baseMySoftwareLibraryUri" type="xs:anyURI" minOccurs="0">
@@ -10069,6 +10904,11 @@
                     <xs:element name="credAccountUris" type="UriList" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the list of uri resources for each cloud account the user has</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="artifactAccountsUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource to retrieve the user's artifact accounts</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                     <xs:element name="distributionUris" type="UriList" minOccurs="0">
@@ -10363,10 +11203,18 @@
     </xs:complexType>
 
     <xs:complexType name="UserProfiles">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Provides a list of :ref:`userprofile-object` objects.
+            </xsd:documentation>
+        </xsd:annotation>
         <xs:complexContent>
             <xs:extension base="UForgeObjects">
                 <xs:sequence>
                     <xs:element name="userProfiles" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of :ref:`userprofile-object` objects</xsd:documentation>
+                        </xsd:annotation>
                         <xs:complexType>
                             <xs:sequence>
                                 <xs:element name="userProfile" type="UserProfile" minOccurs="0" maxOccurs="unbounded"/>
@@ -10683,6 +11531,159 @@
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the user information providing the rating (see :ref:`user-object`)</xsd:documentation>
                         </xsd:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="WinMsiApplication">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Provides information of a Windows Msi Application
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="AbstractWinApplication">
+                <xs:sequence>
+                    <xs:element name="publisher" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">The publisher of the msi application</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="installLocation" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the location the msi application is installed</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="estimatedSizeInKB" type="xs:integer" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the estimated size of the msi application</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+
+    <xs:complexType name="WinMsiApplications">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Provides a list of :ref:`winMsiApplication-object` objects.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObjects">
+                <xs:sequence>
+                    <xs:element name="winMsiApplications" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of :ref:`winMsiApplication-object` objects</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="winMsiApplication" type="WinMsiApplication" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="WinStoreApplication">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Provides information of a Windows Store Application
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="AbstractWinApplication">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="WinStoreApplications">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Provides a list of :ref:`winStoreApplication-object` objects.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObjects">
+                <xs:sequence>
+                    <xs:element name="winStoreApplications" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of :ref:`winStoreApplication-object` objects</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="winStoreApplication" type="WinStoreApplication" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="WinService">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Provides information of a Windows Service
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObject">
+                <xs:sequence>
+                    <xs:element name="serviceName" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">The name of the service</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="displayName" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the human readable name of the service</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="description" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the description of the service</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="startupType" minOccurs="0">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="SERVICE_AUTO_START"/>
+                                <xs:enumeration value="SERVICE_DEMAND_START"/>
+                                <xs:enumeration value="SERVICE_DISABLED"/>
+                                <xs:enumeration value="SERVICE_STARTUPTYPE_UNKNOWN"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="WinServices">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Provides a list of :ref:`winService-object` objects.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObjects">
+                <xs:sequence>
+                    <xs:element name="winServices" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of :ref:`winService-object` objects</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="winService" type="WinService" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
                     </xs:element>
                 </xs:sequence>
             </xs:extension>

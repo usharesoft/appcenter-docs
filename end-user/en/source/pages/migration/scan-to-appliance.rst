@@ -106,6 +106,8 @@ Qualification of any middleware and application software is strongly recommended
 Modifying the Scan Overlay
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. note:: This section only applies if you performed a scan with overlay.
+
 When you import a scan as an appliance template, the overlay created as part of the scan process is registered as a ``My Software`` component.  This ``My Software`` component is added to the appliance template.  
 
 The ``My Software`` component created from the overlay contains two archives.  The first includes all the native package meta-data changes (permissions, ownership changes) and data changes (due to configuration modifications through the lifetime of the live machine).  The second archive includes all files that are not part of any native package.

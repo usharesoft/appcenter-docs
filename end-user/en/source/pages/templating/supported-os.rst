@@ -31,7 +31,7 @@ The following is a list of supported OSes that users can use as the guest operat
 | Ubuntu LTS       | 10.04 (Lucid), 12.04 (Precise),          | 10.04 (Lucid), 12.04 (Precise),          |
 |                  | 14.04 (Trusty) (32bit and 64bit)         | 14.04 (Trusty) (32bit and 64bit)         |
 +------------------+------------------------------------------+------------------------------------------+
-| Microsoft        | 2008R2, 2012, 2012R2                     | 2008R2, 2012, 2012R2                     |
+| Microsoft        | 2008R2, 2012, 2012R2, 2016               | 2008R2, 2012, 2012R2, 2016               |
 | Windows Server   |                                          |                                          |
 +------------------+------------------------------------------+------------------------------------------+
 
@@ -140,6 +140,11 @@ With UForge you can create machine images in the following formats.
 | Amazon AWS                          | none                                                  |
 +-------------------------------------+-------------------------------------------------------+
 | Azure Resource Manager              | none                                                  |
++-------------------------------------+-------------------------------------------------------+
+| Cloudstack                          | Target formats:                                       |
+|                                     | CloudStack VMWare (OVA)                               |
+|                                     | CloudStack Citrix Xen (VHD)                           |
+|                                     | CloudStack KVM (QCOW2)                                |
 +-------------------------------------+-------------------------------------------------------+
 | Eucalyptus                          | Target formats:                                       |
 |                                     | Eucalyptus KVM                                        |

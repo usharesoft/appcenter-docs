@@ -29,6 +29,14 @@ Before you start deploying UForge, ensure that you have all the following:
 		- SSLCACertificateFile
 		- SSLCertificateChainFile (might be empty)
 
+.. note:: Ideally, UForge should be setup with your machine connected to internet, in order to be able to complete all the configuration steps, namely accessing:
+
+	* OS distribution repositories 
+	* UForge Tools repository 
+	* a YUM repository, in order to obtain all the UForge package when updating UForge.
+
+	However, UForge can be setup and operated without Internet. A proxy server can be setup in order to obtain updated UForge packages.
+
 
 Installation Steps
 ------------------

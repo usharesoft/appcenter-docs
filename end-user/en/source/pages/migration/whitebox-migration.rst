@@ -13,7 +13,7 @@ As part of this transformation process, the scan information is mapped to one or
 
 	* Native packages that have been analyzed by the scan process and correctly found in one of UForge AppCenter package repositories are added to the ``OS Profile``.
 	* Native packages that have been analyzed by the scan process and NOT found in any of UForge AppCenter's package repositories are added to a ``My Software`` component.
-	* All other files (including configuration files) that are not part of a native package are added to a ``My Software`` component.
+	* All other files (including configuration files) that are not part of a native package are added to a ``My Software`` component if you performed a scan with overlay.
 	* Partitioning table information is added to the ``Install Profile``
 	* Root and user passwords are added to the ``Install Profile`` (encrypted)
 	* Timezone is added to the ``Install Profile``

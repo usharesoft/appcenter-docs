@@ -30,7 +30,7 @@ Once the Golden Image is created, you will need to
 Supported Microsoft Windows Versions
 ------------------------------------
 
-UForge supports Microsoft Windows Server 2008 R2 (this distribution is only 64 bits), 2012 and 2012R2.
+UForge supports Microsoft Windows Server 2008 R2 (this distribution is only 64 bits), 2012, 2012R2, and 2016.
 
 Microsoft delivers 4 versions: 
 
@@ -70,7 +70,7 @@ The following graphic illustrates the workflow to obtain and install Windows Gol
 First Installation of Microsoft Windows
 ---------------------------------------
 
-To install Microsoft Windows, follow the instructions below. This example is for Microsoft Windows Server 2008R2. If you wish to install for Microsoft Windows Server 2012 or 2012 R2, replace the string ``Server2008R2`` with the version you want to install in all commands below. 
+To install Microsoft Windows, follow the instructions below. This example is for Microsoft Windows Server 2008R2. If you wish to install for Microsoft Windows Server 2012, 2012R2 or 2016, replace the string ``Server2008R2`` with the version you want to install in all commands below. 
 
 	1.  First population of Windows::
 

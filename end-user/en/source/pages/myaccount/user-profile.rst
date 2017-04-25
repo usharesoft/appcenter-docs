@@ -30,25 +30,26 @@ Your Usage
 
 When you log in to the UForge Portal, the first page you will see is the ``Dashboard`` > ``Usage`` sub tab. This view displays your statistics on the platform.
 
-The first part of the page displays your quota consumption and a summary of your quota limit for appliance templates, software components, machine image generations, scans created and disk usage.
+The first part of the page displays your current usage and quota information for appliance templates, software components, machine image generations and scans created.
 
-The ``Appliances`` summary shows the number of appliance templates you currently have in your Appliance Library.  If you have reached your quota limit, you can delete existing appliance templates to free up space to create new ones.  This information is not shown if you do not have access to creating and managing appliance templates.
+The ``Appliances`` summary shows the number of appliance templates you currently have in your Appliance Library.  Your quota usage and limit is displayed under the summary information.  If you have reached your quota limit, you can delete existing appliance templates to free up space to create new ones.  This information is not shown if you do not have access to creating and managing appliance templates.
 
-The ``Software Components`` summary is the number of software components (also known as software bundles) you currently have in your Software Library.  If you have reached your quota limit, you can delete existing software components to free up space to create new ones.  This information is not shown if you do not have access to creating and managing appliance templates (as these software components are added to appliance templates).
+The ``Software Components`` summary is the number of software components (also known as software bundles) you currently have in your Software Library.  Your quota usage and limit is displayed under the summary information.  If you have reached your quota limit, you can delete existing software components to free up space to create new ones.  This information is not shown if you do not have access to creating and managing appliance templates (as these software components are added to appliance templates).  This information is not shown if you do not have access to creating and managing appliance templates.
 
-The ``Generations`` summary is the number of machine images you have generated from appliance templates or scans.  The number of generations is measured on the number of successful machine images you requested over a period of time; and not necessarily the number of machine images you currently have listed on your account.  Even if you delete an existing machine image, this does not change this value.  This value will be reset if you have a quota that is associated with a frequency (e.g. 5 generations per month).  If you cancel a generation or if there is an error during the generation, this value is not updated. 
+The ``Generations`` summary is the number of machine images you have currently stored on the platform.  These machine images are generated from appliance templates or scans.  Your quota usage and limit is displayed under the summary information.  The quota information is measured on the number of successful machine images you have requested over a period of time; and not necessarily the number of machine images you currently have listed on your account.  Even if you delete an existing machine image, the quota usage will not be changed.  Your quota usage will be reset if you have a quota that is associated with a frequency (e.g. 5 generations per month).  If you cancel a generation or if there is an error during the generation, the quota value is not updated. 
 
-The ``Scans`` summary displays the number of successful live machine scans you have carried out.  This number does not reflect the number of scans you currently have in your account.  If you delete a scan from your account the value is not changed.  This value will be reset if you have a quota that is associated with a frequency (e.g. 5 scans per month).  If you cancel a scan or if there is an error during a scan, the value is not updated.
+The ``Scans`` summary displays the current number of successful live machine scans stored on the platform.  Your quota usage and limit is displayed under the summary information.  The quota information is measured on the number of successful scans you hve requested over a period of time.  This number does not necessarily reflect the number of scans you currently have in your account.  If you delete a scan from your account the quota value is not changed.  Your quota usage will be reset if you have a quota that is associated with a frequency (e.g. 5 scans per month).  If you cancel a scan or if there is an error during a scan, the quota usage is not updated.  This information is not shown if you do not have access to migration features.
 
-The ``Disk Usage`` summary shows the disk space consumed by you by storing software components, machine images and scan data.  If you have reached your quota limit, you can delete software components, machine images or scans to save space.
 
 The rest of the ``Usage`` page provides more detailed activity information including:
 
-	* An ``Appliance Activity`` displaying the number of appliance templates and machine image generations created though time.  It also provides a breakdown of operating systems used in the appliances and the types of formats of the generated machine images.
+	* Your ``Disk Usage``.  This shows the disk space consumed by you for storing software components, machine images and scan data.  If you have reached your quota limit, you can delete software components, machine images or scans to save space.
 
-	* A ``Scan Activity`` displaying the number scans and machine image generations created though time.  It also provides a breakdown of operating systems found for each scan and the types of formats of the generated machine images.
+	* An ``Appliance Activity`` displaying a timeline of the number of appliance templates and machine image generations created.  It also provides a breakdown of operating systems used in the appliances and the types of formats of the generated machine images.
+
+	* A ``Scan Activity`` displaying a timeline of the number scans and machine image generations created.  It also provides a breakdown of operating systems found for each scan and the types of formats of the generated machine images.
 	
-	* A ``Disk Usage`` displaying the disk space consumed (software components, machine images and scan data currently stored).	
+	* A ``Disk Usage`` displaying the disk space consumed to store your software components, machine images and scan data.  This includes any software that has been imported.	
 
 .. image:: /images/dashboard.png
 

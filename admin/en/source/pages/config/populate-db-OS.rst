@@ -22,9 +22,9 @@ To enable UForge to generate images based on the operating system it needs all t
 	* Handling Microsoft Windows
 		Refer to :ref:`windows-uforge`.
 
-.. note:: When installing a major version, all minor versions will be included. If you want to restrict to only a few minor versions, you will have to follow this procedure for each minor version you want to install.  
+.. note:: When installing a major version, all minor versions will be included. If you want to restrict to only a few minor versions, you will have to follow this procedure for each minor version you want to install. You should note however, that a scan will take longer if not all minor versions of a distribution are install in your UForge AppCenter. For example, if you scan a CentOS 6.8 machine, but your AppCenter has only been populated with packages up to CentOS 6.7, then the AppCenter will use the machine's yum repo to download the missing packages. As a result, the scan will take longer before completing. 
 
-.. warning:: If you are going to use the migration feature for RHEL or CentOS, you must register the major version repositories.
+.. warning:: If you are going to use the migration feature for RHEL or CentOS, you must add the major OS version to UForge AppCenter and attach to this major OS version all the repositories of the OS minor versions.
 
 In order to add an operating system in your UForge AppCenter you must:
 
@@ -160,7 +160,7 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 		The ``–-name`` specified here is the “tagname” that will be shown in the UI when creating an appliance.
 		The ``--repoUrl`` can be either ``http://`` or ``file://``.
 
-		.. warning:: You must use the ``--officiallySupported`` flag for all officially supported OSes. If you do not include this argument the packages will not appear in the install profile of appliances built with the corresponding operating system. Do not use ``--officiallySupported`` for distributions that are part of the core distribution. For example, epel or vmwatools are not officially part of the distribution, therefore you should not use ``--officiallySupported`` when adding such repositories.
+		.. warning:: You must use the ``--officiallySupported`` flag for all the default repositories of officially supported OSes (for a list of supported OSes, refer to :ref: `uforge-supported-os-formats`). Do not use ``--officiallySupported`` for repositories that are not part of the core distribution, such as epel or VMware tools. When generating a machine image, packages tagged as ``--officiallySupported`` are installed first, before other packages. 
 
 		`http://distros-repository.usharesoft.com/ <http://distros-repository.usharesoft.com/>`_ is an official public repository that users can use to populate the distributions. Official repositories such as Ubuntu and Debian periodically delete some package versions. In the http://distros-repository.usharesoft.com/ repository, package versions are never deleted. This can facilitate investigations on older systems.
 

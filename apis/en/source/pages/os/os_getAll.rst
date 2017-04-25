@@ -16,7 +16,7 @@ os_getAll
 
 Retrieves all the operating system registered on the platform. 
 
-A list of :ref:`distribution-object` objects are returned. 
+A list of :ref:`distribprofile-object` objects are returned. 
 
 You can use a ``search criteria`` to retrieve a subset of these operating systems.
 
@@ -45,7 +45,7 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`distribution-object`
+	 * :ref:`distribprofile-object`
 	 * :ref:`osAccess-update`
 	 * :ref:`osLicense-download`
 	 * :ref:`osLogo-download`

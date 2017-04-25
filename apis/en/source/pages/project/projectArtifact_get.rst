@@ -27,7 +27,7 @@ URI Parameters
 
 * ``pid`` (required): the id of the :ref:`project-object`
 * ``oid`` (required): the id of the :ref:`org-object`
-* ``said`` (required): the id of the :ref:`softwareartifact-object`
+* ``said`` (required): the id of the :ref:`softwareartifact-object` to update
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -62,13 +62,6 @@ Example Request
 	 * :ref:`projectLogo-downloadFile`
 	 * :ref:`projectLogo-upload`
 	 * :ref:`projectOs-getAll`
-	 * :ref:`projectRestrictionOs-getAll`
-	 * :ref:`projectRestriction-add`
-	 * :ref:`projectRestriction-delete`
-	 * :ref:`projectRestriction-deleteAll`
-	 * :ref:`projectRestriction-get`
-	 * :ref:`projectRestriction-getAll`
-	 * :ref:`projectRestriction-update`
 	 * :ref:`project-create`
 	 * :ref:`project-delete`
 	 * :ref:`project-get`

@@ -18,6 +18,7 @@ The list of attributes for ``softwareBundleImport`` are:
 	* ``referenceUri`` (anyURI): the uri of the software bundle created from this import
 	* ``uploadUri`` (anyURI): the uri resource to upload any files assocaited with this import
 	* ``statusUri`` (anyURI): the uri resource of the current status of the software bundle import
+	* ``imported`` (boolean): boolean flag indicating that is a real import or a creation
 	* ``uri`` (anyURI): the uri resource of this software bundle import
 	* ``md5sum`` (string): the md5sum of the uploaded object
 	* ``mimeType`` (string): the mime type of the file uploaded

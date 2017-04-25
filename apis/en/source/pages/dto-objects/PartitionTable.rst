@@ -15,7 +15,7 @@ The list of attributes for ``partitionTable`` are:
 	* ``disks``: the list of disks this partition table has (see :ref:`disk-object`)
 	* ``disksUri`` (anyURI): the uri resource to retrieve the disks for this partition table
 	* ``diskUris`` (:ref:`UriList-object`): the list of uris for each disk of the partition table
-	* ``parentUri`` (anyURI): the uri resource of the parent this partition table is attached to
+	* ``installProfileUri`` (anyURI): the uri resource of the install profile this partition table is attached to
 	* ``logicalGroups``: the list of logical groups for this partition table (see :ref:`logicalgroup-object`)
 	* ``logicalGroupsUri`` (anyURI): the uri resource to retrieve the logical groups in this partition table
 	* ``logicalGroupUris`` (:ref:`UriList-object`): the list of uri resources for each logical group in this partition table

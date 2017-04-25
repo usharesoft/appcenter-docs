@@ -9,7 +9,7 @@ User Cloud Account API Resources
 	* :ref:`cloudAccountCert-delete`: Remove a certificate file from a user's cloud account
 	* :ref:`cloudAccountCert-download`: Downloads a certificate from an user's cloud account
 	* :ref:`cloudAccountCert-upload`: Uploads a certificate to a user's cloud account
-	* :ref:`cloudAccountResources-get`: Retrieves any dynamic resource information from the tagret cloud environment
+	* :ref:`cloudAccountResources-get`: Retrieves any dynamic resource information from the target cloud environment
 	* :ref:`cloudAccount-create`: Creates a new cloud account for an user
 	* :ref:`cloudAccount-delete`: Removes a cloud account from an user
 	* :ref:`cloudAccount-get`: Retrieve the information of a cloud account

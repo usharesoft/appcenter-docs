@@ -26,7 +26,7 @@ URI Parameters
 ~~~~~~~~~~~~~~
 
 * ``oid`` (required): the id of the :ref:`org-object`
-* ``did`` (required): the id of the :ref:`distribution-object`
+* ``did`` (required): the id of the :ref:`distribprofile-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -43,7 +43,7 @@ Example Request
 
 .. seealso::
 
-	 * :ref:`distribution-object`
+	 * :ref:`distribprofile-object`
 	 * :ref:`license-object`
 	 * :ref:`org-object`
 	 * :ref:`orgCompany-getAll`
@@ -51,7 +51,6 @@ Example Request
 	 * :ref:`orgMember-remove`
 	 * :ref:`orgMember-update`
 	 * :ref:`orgOSWindows-add`
-	 * :ref:`orgOSWindows-delete`
 	 * :ref:`orgOS-add`
 	 * :ref:`orgOS-getAll`
 	 * :ref:`orgOS-update`
@@ -59,4 +58,3 @@ Example Request
 	 * :ref:`org-get`
 	 * :ref:`org-getAll`
 	 * :ref:`user-object`
-	 * :ref:`windowsprofile-object`

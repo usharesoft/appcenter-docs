@@ -87,13 +87,13 @@ For a list of supported OSes for Migration, see the table in :ref:`uforge-suppor
 
 Major OS versions, for example upgrading from CentOS 5.0 to CentOS 6.0 is not supported automatically, though as we have the complete list of operating system packages from the scan, a new appliance template can be constructed with the new operating system version.  
 
-This process can further be automated by using the command-line tool hammr (see `hammr.io <http://www.hammr.io>`_).  This tool allows you to create identical machine images from a single configuration file (in JSON).  The procedure would be to:
+This process can further be automated by using the command-line tool hammr (see `hammr.io <http://www.hammr.io>`_).  This tool allows you to create identical machine images from a single configuration file (in JSON or YAML).  The procedure would be to:
 
 	1. Scan the original system (note the scan process can be launched by hammr too)
 	2. Import the scan as an appliance template (this step can be done by hammr)
-	3. Export the appliance template using hammr.  This will create an archive including a JSON file of all the meta-data.
-	4. Update manually the major version of the operating system in the JSON file.
-	5. Attempt to import using the new JSON file.  A new appliance template will be created with the new major operating system.  Note, you may need to iterate on this, if some packages listed in the JSON file are not found (due to potential package renaming).
+	3. Export the appliance template using hammr.  This will create an archive including a JSON or YAML file of all the meta-data.
+	4. Update manually the major version of the operating system in the JSON or YAML file.
+	5. Attempt to import using the new JSON or YAML file.  A new appliance template will be created with the new major operating system.  Note, you may need to iterate on this, if some packages listed in the JSON or YAML file are not found (due to potential package renaming).
 	6. Once the import is done, re-generate which would effectively migrate the system you scanned but with a major operating system upgrade.
 
 Qualification of any middleware and application software is strongly recommended.

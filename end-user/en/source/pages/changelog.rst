@@ -3,6 +3,53 @@
 Changelog
 =========
 
+3.7.fp4
+-------
+
+Release Date: 2017-05-02
+
+New Features
+~~~~~~~~~~~~
+* New user dashboard providing usage statistics and quota information
+* New option to scan a live machine without transfering any overlay information (allowing a light-weight audit of the instance)
+* Support to create appliance templates based on Windows 2016 operating system
+* Ability to scan and migrate Windows 2016 instances
+* Application and services information now captured and displayed when scanning a Windows-based instance
+
+Enhancements
+~~~~~~~~~~~~
+* Ability to export an appliance template in either YAML or JSON format (default now YAML)
+* Enhanced the information displayed after registering machine images to a cloud environment.  machine ID and cloud location (region, zone etc depending upon the cloud target) now displayed in the UI
+
+Bug Fixes
+~~~~~~~~~
+
+* 7553 A workload based on Scientific Linux cannot be scanned
+* 7546 Scanning failed at Phase 6 (heap memory in eventcontroller to the even bus - message too large)
+* 7534 Wrong values in /etc/fstab if the appliance has both partition '/' and partition '/boot'
+* 7521 ``hammr template import`` fails for certain types of advanced partitioning tables
+* 7500 K5 publication fails with message "Error creating publish command for K5"
+* 7436 500 call fail when displaying the detailed information of a scan when i18n is Japanese
+* 7403 Windows scan command displayed in the UI is wrong
+* 7369 Error badly handled during appliance import if message contains "'"
+* 7360 Oracle Linux 7 and Scientific Linux 7 machine images do not boot if the appliance templates has logical volumes
+* 7340 Scanning a server with a file larger than 40 GB fails
+* 7314 Cannot generate a machine image for Fujitsu K5 format from a scan
+* 7229 Registering a machine image to AWS fails with Java ``PublishCommunicator`` error
+* 7157 The scan binary ignores option ``-e "/"``
+* 7153 Scan cannot treat files whose name includes ``>``
+* 7147 Docker publish does not work anymore
+* 7092 When launching Service Management Tool from ``run`` -> ``services.msc``, an error occurs
+* 7071 The check box ``Ignore dependency checking warnings`` is displayed in the UI when a Windows image is created
+* 7063 Inconsistent update of template revision
+* 6960 Simultaneous scans of two ``CentOS 7.3`` machines fails
+* 6932 When cloning an imported appliance and exporting, the wrong page is displayed
+* 6748 Unable to download a generated machine image via the UI twice
+* 5977 When resetting password, the information message to indicate that an email  has been sent is badly positioned 
+* 5907 When inviting a collaborator to a workspace, email textbox is case insensitive
+* 5074 Bad vertical aligned text in expandable button
+
+
 3.7.fp3
 -------
 

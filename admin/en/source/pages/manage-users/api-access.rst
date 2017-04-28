@@ -41,7 +41,7 @@ If you want to allow a user to login to UForge as another user, you must grant t
 	* add the entitlement to an existing role (note this will give supervisor rights to ALL the users with that role)
 	* create a new role with the supervisor access. 
 
-.. warning:: Users with Supervisor Access will be able to log in as ANY of the users in the organization without entering a password. This right should be limited to support or managed services. Users with Supervisor Role needs to respect the privacy of the user data, according to current legislation.
+.. warning:: Users with Supervisor Access will be able to log in as ANY of the users in the organization without entering a password. This right should be limited to support or managed services. Users with Supervisor Role need to respect the privacy of the user data, according to current legislation.
 
 It is probably safer to create a new "supervisor” role and add the supervisor rights, to limit the number of users that can access all the user accounts in the organization. 
 

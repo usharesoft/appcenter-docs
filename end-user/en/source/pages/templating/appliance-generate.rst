@@ -12,6 +12,9 @@ To generate a machine image:
 	2. Select the appliance from the ``Appliance Library``. 
 	3. Click on the ``generate`` button at the top right to display all possible image formats which can be generated. The formats are organized by type: Cloud, Container, Virtual, Physical.
 	4. Choose the image format you would like to generate. For a Docker image, refer to :ref:`appliance-docker-image`.
+
+	.. note:: For Windows appliances, if you are generating an image for VMware vCenter make sure that your generated image's hardware version is the most up to date for the ESXi host that you are using for publish. For more information please refer to `VMWare recommentations <https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003746>`_
+
 	5. You will see a recap of the image you are about to generate. 
 
 		.. note:: If you want to ignore dependency checking during image generation (for example because you have knowingly removed a package dependency that is not required in your environment), then you check the option ``ignore dependency checking warnings``. Note that this is an advanced option and should not be used systematically.

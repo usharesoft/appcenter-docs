@@ -3,6 +3,76 @@
 Changelog
 =========
 
+3.7-5
+-----
+
+Release Date: 2017-05-03
+
+Installation
+~~~~~~~~~~~~
+
+To be able to update a 3.7 UForge using the latest yum repo, you have to edit ``/etc/yum.repos.d/uforge-ee-centos.repo`` and replace ``stable/3.7/official/centos/releases/$releasever/$basearch/`` by ``test/3.7/centos/releases/$releasever/$basearch/``
+
+A compatible version of hammr is also available : 3.7-5
+
+This version is only compatible with UForge AppCenter 3.7-5
+
+To install it, you will have to launch the following command::
+
+	$ pip install hammr==3.7-5
+
+
+Enhancements
+~~~~~~~~~~~~
+
+* Ability to export an appliance template in either YAML or JSON format (default now YAML)
+
+Bug Fixes
+~~~~~~~~~
+
+* 7634 Failed to delete together two or more artifact accounts with error
+* 7658 spelling mistakes on the API doc
+* 7404 Windows scan fail if is is executed according to portal
+* 7522 hammr template import fails with "You can not have more than 4 partitions per disk. Disk sda has 6. Please modify your partition table." error
+* 5680 Migrator Role does not allow create image, neither Cloud Accounts
+* 7535 wrong values in /etc/fstab if the appliance has both partition '/' and partition '/boot'
+* 6949 Windows generation error when disk too small does not raise an understandable error message
+* 6871 either Oracle Linux 7 or Scientific Linux 7 image does not boot if it has logical volumes
+* 6929 the timestamps of generation-failed images become UTC
+* 7114 Modify upload timeout to avoid error during scan with big file
+* 7180 uforge-scan.bin ignores option -e "/"
+* 4020 option -e does NOT exclude some files/directory
+* 7152 Scan cannot treat files whose name includes ">".
+* 6801 Cannot download non-cached software using artifact accounts after the password is updated.
+* 7093 generation failure with Debian 8 backports repo packages
+* 6985 UriBuilder does not encode pipe in a certain chars order and results scan error.
+* 6710 dependency checker ignores selected version of "Essential" packages in os profile and causes generation error.
+* 5720 Error on generation update
+* 6892 Debian dependency checker always ignores dependency error
+* 7036 rpmgen -e (exclude dir list) option is not working
+* 3131 images of a deactivated user should not be downloadable
+* 6928 version&release should be used instead of builddate for checking dependencies
+* 7075 mysoftware files are not copied on the filestystem when generating CentOS7 ISO images
+* 6891 WARP must generate the correct guestOS inside vmx when windows+vmware
+* 7038 Fail to generate Windows machineImage created from a VMDK format Golden Image
+* 6943 A file or directory name whose include a line feed (LF) is not present in the scan result.
+* 6681 Windows scan of a machine with 2 disks excluding 1 disk creates 2 disks in the meta data
+* 6988 the scan status is not updated to "error" when the error occurs during uploading
+* 6930 cannot create unformatted logical volumes
+* 6839 Amazon publication - S3 bucket is not necessary anymore
+* 7006 Check box "Ignore dependency checking warnings" is displayed when a  Windows image is created.
+* 6982 Issue retrocompatibility with post update modif of AMI clean up
+* 6633 UForge root password can not be changed wrong message
+* 3193 Spider do not cleanup all temporary dirs in /tmp
+* 6915 Projects non-native files are ignored if my software has the same name.
+* 6901 Incorrect warning message when appliance have multidisk during generation of some formats
+* 6990 Upload a logo which is not png or jpg raise an error but erase the existing logo
+* 6945 "uforge org category delete" fails with two arguments
+* 6972 After delete a custom license in MySofware or Project, the icon done.svg is still there beside the upload button
+* 6624 issue when adding PDF as custom license to project
+* 5994 My profile picture is not displayed on Activity Stream Workspace
+* 6926 inconstent update of template revision
+
 3.7-3
 -----
 

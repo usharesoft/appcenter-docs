@@ -5,7 +5,7 @@
 Blackbox Migration Process
 --------------------------
 
-The goal of black box migration is to reproduce a near identical copy of the currently running workload.  However, there will always be small differences between the two workloads after migration is complete.  When scanning a system the following information is detected:
+The goal of black box migration is to reproduce a near identical copy of the currently running workload.  However, there will always be small differences between the two workloads after migration is complete, notably some services are disabled or enabled depending on the target machine image being created (refer to :ref:`migration-service-state`).  When scanning a system the following information is detected:
 
 	* all the files and packages on the system (including configuration information). If you have selected a scan without overlay, then extra files and specific configuration information will be detected but will not be included in the report.
 	* network settings including all NICs. Note that if the first card is static, it will be changed to DHCP.
@@ -49,3 +49,41 @@ When you carry out black box migration (by generating a machine image directly f
 
 	4. Register the new machine image to the target environment.
 	5. You can provision one or more instances from the machine image. Each instance being a near identical workload from the original.
+
+.. _migration-service-state:
+
+Changes to Service State Following Migration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When generating a machine image from a scan, certain services are disabled or enabled depending on the target machine image being created. The following changes are common to all formats:
+
+	* ``libvirtd`` disabled
+	* ``sshd`` enabled
+	* rewrite grub configuration and ``initramfs/initrd``
+
+If after all service modification, networking services are not enabled, then ``NetworkManager`` is enabled if the package is present, otherwise ``network`` is enabled.
+
+.. note:: ``NetworkManager`` is the name used by some operating systems which is the equivalent to ``network-manager``. The name ``network`` is used by some operating systems which is the equivalent to ``networking``.
+
+EC2 AMI Image
+
+	* ``hal`` disabled
+	* ``haddaemon`` disabled
+	* ``network`` enabled
+	* ``ip6tables`` disabled
+	* ``iptables`` disabled
+
+OpenStack Image
+
+	* ``hal`` disabled
+	* ``haddaemon`` disabled
+	* ``network`` enabled
+	* ``ip6tables`` disabled
+	* ``iptables`` disabled
+
+Microsoft Azure Image
+
+	* ``networkmanager`` disabled
+	* ``network`` enabled
+
+

@@ -75,7 +75,7 @@ To create a new Golden Image, you will need to:
 			net user Administrator /logonpasswordchg:yes
 			---
 
-	8. For Windows 2012 and 2012R2, you can optionally change the password of the admin user at the first boot by creating a file as follows. Note that the admin user name may be different depending on the environment. Please replace ``Administrator`` in the script with the appropriate one.
+	8. For Windows 2012, 2012R2 and 2016, you can optionally change the password of the admin user at the first boot by creating a file as follows. Note that the admin user name may be different depending on the environment. Please replace ``Administrator`` in the script with the appropriate one.
 
 		.. code-block:: shell
 
@@ -107,7 +107,9 @@ To create a new Golden Image, you will need to:
 
 			$ sysprep.exe /generalize /oobe /shutdown /unattend:c:\path-to-sysprep\Unattend.xml
 
-		.. note:: This will shutdown the machine. Do not boot the machine again!
+		.. warning:: This will shutdown the machine. Do not boot the machine again!
+
+		.. note:: If the ``unattend.xml`` is not properly configured, the setup initiated by sysprep may suspend or stop during processing. In this case, you need to connect to the system through a console, not by Remote Desktop Service, in order to read setup instructions. 
 
 	10. You can now compress the golden images by running:
 
@@ -179,10 +181,10 @@ The following is an example of an unattend file to be used when creating a golde
 			<UILanguageFallback>ja-JP</UILanguageFallback>
 			<UserLocale>ja-JP</UserLocale>
 
-Example of Unattend File for Windows 2012 and 2012R2
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Example of Unattend File for Windows 2012, 2012R2, or 2016
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The following is an example of an unattend file to be used when creating a golden image for Windows 2012 and 2012R2.
+The following is an example of an unattend file to be used when creating a golden image for Windows 2012, 2012R2 or 2016.
 
 	.. code-block:: shell
 

@@ -39,7 +39,7 @@ The equivalent export feature is available when editing an appliance template.
 Importing
 ~~~~~~~~~
 
-.. warning:: You will only be able to import a Windows appliance to a UForge has the same golden image as the one used by the appliance. If the golden does not exist on the target UForge you must export the appliance without OS Profile or remove some OS section fields in template file. Refer to :ref:`appliance-update-windows-import`.
+.. warning:: You will only be able to import a Windows appliance to a UForge that has the same golden image as the one used by the appliance. If the golden does not exist on the target UForge you must export the appliance without OS Profile or remove some OS section fields in template file. Refer to :ref:`appliance-update-windows-import`.
 
 To import an archive:
 
@@ -64,7 +64,7 @@ To import an archive:
 Updating a Windows Appliance Before Import
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you try to import a Windows appliance, UForge will check if the golden image used to create the appliance exists on the UForge. If it does not exist, the import will fail. However, in order to import the template, you must export the appliance and remove the OS profile. You can also remove the OS Profile using the UI by going to the the "Stack" page of the appliance before exporting.
+When you import a Windows appliance, UForge checks if the golden image used to create the appliance exists on the UForge. If it does not exist, the import will fail. In order to import the template, you must export the appliance and remove the OS profile. 
 
 For example, in order to remove some OS section fields before importing your Windows appliance:
 
@@ -98,3 +98,5 @@ For example, in order to remove some OS section fields before importing your Win
 	8. Click on the ``import`` button at the top right hand side of the view.
 	9. A number of options are proposed. Select the method of import and click the folder icon to select the archive to import.
 	10. Click ``import``. This will start the import process. 
+
+You can also remove the OS Profile from the UI by going to the ``Stack`` page of the appliance before exporting.

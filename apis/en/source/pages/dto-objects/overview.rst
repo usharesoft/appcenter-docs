@@ -154,6 +154,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`scannedpackages-object`
 	* :ref:`scans-object`
 	* :ref:`scanstats-object`
+	* :ref:`scansummary-object`
 	* :ref:`servicestatus-object`
 	* :ref:`softwareartifact-object`
 	* :ref:`softwareartifacts-object`
@@ -350,6 +351,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     ScannedPkgs
     Scans
     ScanStats
+    ScanSummary
     ServiceStatus
     SoftwareArtifact
     SoftwareArtifacts

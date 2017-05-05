@@ -26,7 +26,7 @@ Security Summary
 ~~~~~~~~~~~~~~~~
 
 * Requires Authentication: ``true``
-* Entitlements Required: ``appliance_create``
+* Entitlements Required: ``image_generate``
 
 URI Parameters
 ~~~~~~~~~~~~~~

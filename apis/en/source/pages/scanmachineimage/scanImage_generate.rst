@@ -26,7 +26,7 @@ Security Summary
 ~~~~~~~~~~~~~~~~
 
 * Requires Authentication: ``true``
-* Entitlements Required: ``migration_generate``
+* Entitlements Required: ``image_generate``
 
 URI Parameters
 ~~~~~~~~~~~~~~

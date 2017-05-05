@@ -18,6 +18,7 @@ The list of attributes for ``scannedInstance`` are:
 	* ``parentUri`` (anyURI): the uri resource of the parent object this scanned instance belongs to
 	* ``platformType`` (string): the type of platform the scanned instance is hosted in
 	* ``ramSize`` (int): the size of the virtual memory detected on the source system
+	* ``overlayIncluded`` (boolean): a boolean indicating whether overlay files are included into the scans within this scanned instance
 	* ``scans``: the list of scan reports carried out on this live system (see :ref:`scan-object`)
 	* ``scansUri`` (anyURI): the uri resource to retrieve all the scan reports
 	* ``totalScans`` (int): the number of scans carried out on this live system

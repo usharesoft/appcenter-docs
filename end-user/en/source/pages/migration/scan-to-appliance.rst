@@ -2,24 +2,27 @@
 
 .. _migration-scan-import:
 
-Create an Appliance Template
-----------------------------
+Create an Appliance from a Scan
+-------------------------------
 
 You can create an appliance template from a scan. Once you create an appliance template packages and files that are known will be listed under ``OS profile``, while "unknown" packages and files will be listed under ``MySoftware``.
 
 To create an appliance template from a scan:
 
-From the Migration tab:
-	1. Go to the ``Migration`` tab > ``My Scans``.
-	2. Select the ``import`` button (downward arrow) to create an appliance template from the scan.
+From the ``Migration`` tab:
+	1. Go to ``My Scans``.
+	2. Select the ``import`` button (downward arrow) to create an appliance template from the scan. The following example is for Linux, but you can also import a Windows scan.
 
 	.. image:: /images/scan-import.png
 
 	3. Enter the appliance name and version.
 	4. Click ``import``.
 
-
 You can now generate a machine image and share it, as you would any other appliance template.
+
+.. note:: When you create a Windows appliance from scan, the applications and services will be visible under ``OS Profile`` on the ``Stack`` page.
+
+	.. image:: /images/scan-windows-appliance.png
 
 More importantly you can now change the contents of the original scanned system.  If you go to the ``Apps`` tab, the new appliance template will be listed in the ``Imported Appliances`` section.  Double-click on it to view the details or modify it.
 
@@ -91,9 +94,9 @@ This process can further be automated by using the command-line tool hammr (see 
 
 	1. Scan the original system (note the scan process can be launched by hammr too)
 	2. Import the scan as an appliance template (this step can be done by hammr)
-	3. Export the appliance template using hammr.  This will create an archive including a JSON file of all the meta-data.
-	4. Update manually the major version of the operating system in the JSON file.
-	5. Attempt to import using the new JSON file.  A new appliance template will be created with the new major operating system.  Note, you may need to iterate on this, if some packages listed in the JSON file are not found (due to potential package renaming).
+	3. Export the appliance template using hammr.  This will create an archive including a JSON or YAML file of all the meta-data.
+	4. Update manually the major version of the operating system in the JSON or YAML file.
+	5. Attempt to import using the new JSON or YAML file.  A new appliance template will be created with the new major operating system.  Note, you may need to iterate on this, if some packages listed in the JSON or YAML file are not found (due to potential package renaming).
 	6. Once the import is done, re-generate which would effectively migrate the system you scanned but with a major operating system upgrade.
 
 Qualification of any middleware and application software is strongly recommended.
@@ -102,6 +105,8 @@ Qualification of any middleware and application software is strongly recommended
 
 Modifying the Scan Overlay
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note:: This section only applies if you performed a scan with overlay.
 
 When you import a scan as an appliance template, the overlay created as part of the scan process is registered as a ``My Software`` component.  This ``My Software`` component is added to the appliance template.  
 

@@ -103,7 +103,9 @@ To add custom software components to an appliance:
 
 	10. From the ``Repository Packages`` page, you can set the packages with which your software is compatible. This page will only be visible if you have selected only one distribution. You can search for packages. Select and click the down arrow to add them. Click ``save``.
 
-	11. From the ``Boot Scripts`` page, upload any boot scripts you want to add to this software. You can either:
+	11. You can (optionally) restrict the distribution or target format that the software applies to, from the ``Restrictions`` page. The restriction rule is set as a regular expression. For more information, refer to :ref:`restriction-rules`. Click ``save``.
+
+	12. From the ``Boot Scripts`` page, upload any boot scripts you want to add to this software. You can either:
 		- Upload an existing boot script file by using the ``upload`` icon.
 		- Create a new boot script by clicking ``new``.
 
@@ -111,12 +113,42 @@ To add custom software components to an appliance:
 
 	In both cases, you must select the type. If you select ``first boot``, then the boot script will be launched once, the first time the instance is launched.  If you select ``every boot``, then the boot script will be launched every time the instance is rebooted. You must also set the boot order.
 
-	12. From the ``Licenses`` page, upload any licenses you want to add to this software. Click ``upload``, select your license and click ``save``.
-	13. Add the uploaded software component to the appliance.  Click on the ``Appliance Library`` to view your Appliance Library.  Double-click on the appliance template you want to add the software to.
-	14. Go to the ``Stack`` page and click on the ``My Software`` button in the toolbox.  
+	13. From the ``Licenses`` page, upload any licenses you want to add to this software. Click ``upload``, select your license and click ``save``.
+	14. Add the uploaded software component to the appliance.  Click on the ``Appliance Library`` to view your Appliance Library.  Double-click on the appliance template you want to add the software to.
+	15. Go to the ``Stack`` page and click on the ``My Software`` button in the toolbox.  
 
 		.. image:: /images/mysoftware.png
 
-	15. Select the software components you want to add and click the down arrow button. 
-	16. Click ``save`` to add this software component to your appliance template.
+	16. Select the software components you want to add and click the down arrow button. 
+	17. Click ``save`` to add this software component to your appliance template.
+
+.. _restriction-rules:
+
+Restricting Projects for Software Bundles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+UForge allows you to restrict projects for the files you add under ``My Software``.
+
+To set restriction rules: 
+
+	1. Under the ``Apps`` go to the ``Software Library`` page.
+	2. Select the sofware you want to modify.
+	3. Go to the ``Restrictions`` tab. Enter the restriction rule. The restriction rule is represented by a logical expression with format ``Object#field=value`` or ``Object#field!=value``, where:
+		* ``object`` is either ``Distribution`` or ``TargetFormat``
+		* for ``Distribution`` field is ``family``, ``pkgType``, ``name``, ``version`` or ``arch``. The ``version`` must be a major version.
+		* for ``TargetFormat`` field is ``name`` or ``type`` 
+		* ``value`` is the value you want to match with the fields. For example, ``CentOS`` for Distribution name, ``linux`` for Distribution family, ``x86_64`` for Distribution arch, ``VirtualBox`` for TargetFormat name, ``cloud`` for TargetFormat type.
+		* logical operator is ``||`` for OR and ``&&`` for AND
+
+For example, if the software bundle is designed only for distributions CentOS 7 x86_64 or Debian 8 x86_64, or for TargetFormat with type virtual, then you would note the Restriction rule as follows:: 
+
+	(Distribution#arch=x86_64 && ((Distribution#name=CentOS && Distribution#version=7) || (Distribution#name=Debian && Distribution#version=8))) || TargetFormat#type=virtual
+
+Once you have set a restriction rule, you will see a cube next to the software component, under the column ``Format dependent``.
+
+	.. image:: /images/mysoftware-restriction.png
+
+.. warning:: If your software bundle is limited to a certain target format and you generate an image in another format, your appliance will be generated but the software bundle will not be part of the final image. A note indicating this will appear when you select to generate the machine image, as in the following image.
+
+	.. image:: /images/mysoftware-removed.png
 

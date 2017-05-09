@@ -47,7 +47,7 @@ To add a new project:
 		* website information of where the project came from
 		* description
 
-	6. You can (optionally) restrict the distribution or target format that the project applies to, from the ``Restrictions`` page. The restriction rule is set as a regular expression. For more information, refer to :ref:``. Click ``save``.
+	6. You can (optionally) restrict the distribution or target format that the project applies to, from the ``Restrictions`` page. The restriction rule is set as a regular expression. For more information, refer to :ref:`restrict-distrib`. Click ``save``.
 
 		.. image:: /images/create-project-restrictions2.png
 
@@ -97,7 +97,7 @@ To set restriction rules for a project:
 
 For example, if the software bundle is designed only for distributions CentOS 7 x86_64 or Debian 8 x86_64, or for TargetFormat with type virtual, then you would note the Restriction rule as follows:: 
 
-	(Distribution#arch=x86_64 && ((Distribution#name=CentOS && Distribution#version=7) || (Distribution#name=Debian && Distribution#version=8)) || TargetFormat#type=virtual
+	(Distribution#arch=x86_64 && ((Distribution#name=CentOS && Distribution#version=7) || (Distribution#name=Debian && Distribution#version=8))) || TargetFormat#type=virtual
 
 .. note:: If your software bundle is limited to a certain target format and you generate an image in another format, your appliance will be generated but the software bundle will not be part of the final image.
 

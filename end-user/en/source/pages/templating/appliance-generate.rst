@@ -16,6 +16,10 @@ To generate a machine image:
 
 		.. note:: If you want to ignore dependency checking during image generation (for example because you have knowingly removed a package dependency that is not required in your environment), then you check the option ``ignore dependency checking warnings``. Note that this is an advanced option and should not be used systematically.
 
+		.. warning:: If your software bundle is limited to a certain target format and you generate an image in another format, your appliance will be generated but the software bundle will not be part of the final image.  A note indicating this will appear when you select to generate the machine image, as in the following image.
+
+	.. image:: /images/mysoftware-removed.png
+
 	6. You can set the disk size, then click the ``generate`` button to launch a generation in UForge for this appliance template. 
 
 		.. note:: Depending on the packages you install and the size of your software, make sure that the disk size is large enough to accommodate the software to be installed.  For Windows-based operating systems, it is advised to have a disk size of at least ``14GB`` for core versions, and at least ``20GB`` for full versions.

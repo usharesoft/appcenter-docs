@@ -21,6 +21,9 @@ To generate a machine image:
 		.. note:: Depending on the packages you install and the size of your software, make sure that the disk size is large enough to accommodate the software to be installed.  For Windows-based operating systems, it is advised to have a disk size of at least ``14GB`` for core versions, and at least ``20GB`` for full versions.
 
 The generation will take a few minutes to complete (depending on the number of packages in the appliance template and the disk size chosen). The generation progress is shown.
+
+.. note:: Some services are disabled or enabled depending on the target machine image being created (refer to :ref:`service-state`).
+
 Once the generation is complete, you can download the image locally, or for certain cloud formats register the machine image directly to the target environment using your cloud credentials.
 
 You will note that a package ``uforge-install-config`` is injected in the generated image. This file is responsible for: 
@@ -49,4 +52,42 @@ To generate a machine image:
 	5. As indicated in the pop-up, you need to click ``download`` to download the tar.gz.
 	6. Run the appropriate docker import command to create the image. The appliance and docker image name will depend on the name you have given them.
 	7. You should now be able to see the Docker image in your library.
+
+.. _service-state:
+
+Changes to Service State Based on Target
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When generating a machine image from a scan, certain services are disabled or enabled depending on the target machine image being created. The following changes are common to all formats:
+
+	* ``libvirtd`` disabled
+	* ``sshd`` enabled
+	* rewrite grub configuration and ``initramfs/initrd``
+
+If after all service modification, networking services are not enabled, then ``NetworkManager`` is enabled if the package is present, otherwise ``network`` is enabled.
+
+.. note:: ``NetworkManager`` is the name used by some operating systems which is the equivalent to ``network-manager``. The name ``network`` is used by some operating systems which is the equivalent to ``networking``.
+
+EC2 AMI Image
+
+	* ``hal`` disabled
+	* ``haddaemon`` disabled
+	* ``network`` enabled
+	* ``ip6tables`` disabled
+	* ``iptables`` disabled
+
+OpenStack Image
+
+	* ``hal`` disabled
+	* ``haddaemon`` disabled
+	* ``network`` enabled
+	* ``ip6tables`` disabled
+	* ``iptables`` disabled
+
+Microsoft Azure Image
+
+	* ``networkmanager`` disabled
+	* ``network`` enabled
+
+
 

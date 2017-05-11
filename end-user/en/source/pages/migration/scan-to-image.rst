@@ -7,7 +7,7 @@ Generate a Machine Image
 
 Once you have scanned a source system, you can generate a machine image directly from the scan report.
 
-.. note:: When generating a machine image from a scan, some services are disabled or enabled depending on the target machine image being created (refer to :ref:`migration-service-state`).
+.. note:: When generating a machine image, some services are disabled or enabled depending on the target machine image being created (refer to :ref:`service-state`).
 
 To create an image from a scan:
 

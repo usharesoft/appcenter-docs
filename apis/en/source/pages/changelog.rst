@@ -3,6 +3,22 @@
 Changelog
 =========
 
+3.7.fp5
+-------
+
+Release Date: 
+
+New Features
+~~~~~~~~~~~~
+* Administrators can now import a Windows based scan to create a golden image.  This allows administrators to simplify the procedures of creating golden images.
+
+Enhancements
+~~~~~~~~~~~~
+
+Bug Fixes
+~~~~~~~~~
+
+
 3.7.fp4
 -------
 

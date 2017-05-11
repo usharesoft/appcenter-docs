@@ -3,6 +3,14 @@
 Changelog
 =========
 
+3.7.fp5
+-------
+
+New Features
+~~~~~~~~~~~~
+* Add a mechanism to restrict the usage of a project (for Administrator) or software bundle (in MySoftware for users) based on a Distribution name, family, architecture or for an output format
+
+
 3.7.fp4
 -------
 

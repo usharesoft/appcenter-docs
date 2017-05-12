@@ -13,6 +13,8 @@ From the ``Migration`` tab:
 	1. Go to ``My Scans``.
 	2. Select the ``import`` button (downward arrow) to create an appliance template from the scan. The following example is for Linux, but you can also import a Windows scan.
 
+	.. note:: If you have administrator rights, for a Windows scan you can choose to import as appliance or import scan as a golden image. For more information, refer to the Admin guide.
+
 	.. image:: /images/scan-import.png
 
 	3. Enter the appliance name and version.

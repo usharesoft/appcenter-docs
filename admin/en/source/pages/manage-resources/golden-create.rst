@@ -2,8 +2,18 @@
 
 .. _create-golden-image:
 
-Creating a Golden Image
------------------------
+Creating a Golden Image Manually
+--------------------------------
+
+.. note:: A good knowledge of Microsoft Windows is required to create your own Golden Images manually. This method is more complexe than creating a Golden Image by scanning a Windows machine and importing the scan as Golden Image (:ref:`scan-to-golden`)
+
+Generating all the profiles available (in one language) takes roughly 4 to 7 hours depending on the machine/network performance. The Golden Image includes all updates at the moment when generated and therefore you will not need to run package updates later. 
+
+Once the Golden Image is created, you will need to
+
+	1. Save it to the proper location (as described in :ref:`store-updated-golden`). 
+	2. Store the golden images (all profiles in one language) as described in :ref:`store-updated-golden`. You will need about 40Gb of disk space on the UForge NAS. 
+	3. Add the Golden Image to your UForge AppCenter, as described in :ref:`add-golden-toAppCenter`.
 
 To create a new Golden Image, you will need to:
 

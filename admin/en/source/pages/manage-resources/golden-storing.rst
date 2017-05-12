@@ -3,9 +3,9 @@
 .. _store-updated-golden:
 
 Storing Golden Images on the NAS
---------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Each time you have a new Golden Image, you need to store them in an appropriate NAS location.
+Each time you create a new Golden Image manually, you need to store them in an appropriate NAS location.
 
 .. note:: To store the golden images (all profiles in one language) you will need about 40Gb of disk space on the UForge NAS.
 
@@ -33,9 +33,9 @@ For more detailed information, please refer to `official Fujitsu K5 IaaS Documen
 .. _add-golden-toAppCenter:
 
 Adding a Golden Image to UForge AppCenter
------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Once you have your Golden Image, you need to add it to your UForge AppCenter in order to be able to use the Windows version to create appliance templates. Your golden image must be in one of the following formats:
+Once you have created a Golden Image manually, you need to add it to your UForge AppCenter in order to be able to use the Windows version to create appliance templates. Your golden image must be in one of the following formats:
 
 	* raw.gz
 	* raw.zip
@@ -91,10 +91,10 @@ To add your Golden Image to UForge:
 
 .. _delete-golden:
 
-Deleting a Golden Image
------------------------
+Deleting a Golden Image Using the CLI
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In order to delete the golden image from your UForge, run the command ``org golden delete`` with the following arguments:
+In order to delete a golden image from your UForge, run the command ``org golden delete`` with the following arguments:
 
 *  ``--arch`` : The operating system architecture (i386, x86_64).
 *  ``--profileName`` : The name of the profile to delete

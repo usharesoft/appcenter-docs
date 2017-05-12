@@ -79,10 +79,10 @@ To add a new project:
 
 .. _restrict-distrib:
 
-Restricting Projects for Software Bundles
+Restricting Projects for OSes and Formats
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-UForge allows you to restrict projects for a set distribution or format type.
+Under ``Projects`` you can restrict the usage of a project based on a distribution name, family, architecture or for a specific machine image format.
 
 To set restriction rules for a project: 
 
@@ -94,6 +94,7 @@ To set restriction rules for a project:
 		* for ``TargetFormat`` field is ``name`` or ``type`` 
 		* ``value`` is the value you want to match with the fields. For example, ``CentOS`` for Distribution name, ``linux`` for Distribution family, ``x86_64`` for Distribution arch, ``VirtualBox`` for TargetFormat name, ``cloud`` for TargetFormat type.
 		* logical operator is ``||`` for OR and ``&&`` for AND
+		* carriage return is not authorize
 
 For example, if the software bundle is designed only for distributions CentOS 7 x86_64 or Debian 8 x86_64, or for TargetFormat with type virtual, then you would note the Restriction rule as follows:: 
 

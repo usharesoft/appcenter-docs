@@ -124,10 +124,10 @@ To add custom software components to an appliance:
 
 .. _restriction-rules:
 
-Restricting Projects for Software Bundles
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Restricting Software Components for OSes and Formats
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-UForge allows you to restrict projects for the files you add under ``My Software``.
+Under ``My Software`` you can restrict the usage of a software bundle based on a distribution name, family, architecture or for a specific machine image format.
 
 To set restriction rules: 
 
@@ -139,8 +139,9 @@ To set restriction rules:
 		* for ``TargetFormat`` field is ``name`` or ``type`` 
 		* ``value`` is the value you want to match with the fields. For example, ``CentOS`` for Distribution name, ``linux`` for Distribution family, ``x86_64`` for Distribution arch, ``VirtualBox`` for TargetFormat name, ``cloud`` for TargetFormat type.
 		* logical operator is ``||`` for OR and ``&&`` for AND
+		* carriage return is not authorized
 
-For example, if the software bundle is designed only for distributions CentOS 7 x86_64 or Debian 8 x86_64, or for TargetFormat with type virtual, then you would note the Restriction rule as follows:: 
+For example, if the software bundle is designed only for distributions CentOS 7 x86_64 or Debian 8 x86_64, or for image format with type virtual, then you would note the Restriction rule as follows:: 
 
 	(Distribution#arch=x86_64 && ((Distribution#name=CentOS && Distribution#version=7) || (Distribution#name=Debian && Distribution#version=8))) || TargetFormat#type=virtual
 

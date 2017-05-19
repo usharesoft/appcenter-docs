@@ -280,7 +280,7 @@ The following is a concrete example to begin the population of RedHat Enterprise
 
 	11. Create OS profile based on packages (minimal, server, etc.)::
 
-		$ /opt/UShareSoft/uforge/bin/runjob.py sorter_low_prio -d RHEL -v 7 -a x86_64
+		$ /opt/UShareSoft/uforge/bin/runjob.py sorter_low_prio -d RedHat -v 7 -a x86_64
 
 Adding DEB Type OSes
 --------------------

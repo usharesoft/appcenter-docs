@@ -189,7 +189,7 @@ To add your Golden Image to UForge:
 
 			* File and directory ownership should be ``tomcat:tomcat``.
 			* Permissions should be readable for all users
-			* Disk name must be unique in the ``/tmp/DISTORS/Windows`` file tree
+			* Disk name must be unique in the ``/tmp/DISTROS/Windows`` file tree
 
 	2. You must ensure that the Windows distribution exists on your UForge AppCenter. If it does not, run::
 

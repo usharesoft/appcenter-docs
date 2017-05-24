@@ -107,7 +107,9 @@ To create a new Golden Image, you will need to:
 
 			$ sysprep.exe /generalize /oobe /shutdown /unattend:c:\path-to-sysprep\Unattend.xml
 
-		.. note:: This will shutdown the machine. Do not boot the machine again!
+		.. warning:: This will shutdown the machine. Do not boot the machine again!
+
+		.. note:: If the ``unattend.xml`` is not properly configured, the setup initiated by sysprep may suspend or stop during processing. In this case, you need to connect to the system through a console, not by Remote Desktop Service, in order to read setup instructions. 
 
 	10. You can now compress the golden images by running:
 

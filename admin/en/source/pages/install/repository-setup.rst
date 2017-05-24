@@ -11,6 +11,7 @@ The UForge Repository is a storage area containing:
 	* Project catalog binaries
 	* User ``My Software`` binaries
 	* Generated images from users using the platform
+	* Data from user scans
 
 The operating system and project binaries are separated from the ``My Software`` binaries and the images generated.  
 

@@ -16,7 +16,7 @@ In order to create a Golden Image from scan:
 	3. Scan a Windows machine.
 	4. On the ``Migration`` page, select the scan you want to use as the base for your golden image.
 	5. Click on the ``import`` button.
-	6. Select ``import to golden image`` from the pop-up window and click ``import``.
+	6. Select ``import as golden image in your organization`` from the pop-up window and click ``import``.
 
 	.. image:: /images/import-to-golden.png
 

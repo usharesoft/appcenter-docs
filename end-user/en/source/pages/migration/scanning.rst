@@ -74,6 +74,8 @@ Scanning a Microsoft Windows Machine
 
 .. warning:: When scanning a Microsoft Windows machine, you must acquire Windows licenses in order to handle Windows OS in UForge and confirm usage conditions of cloud provider and virtualization software which you scan and migrate to.
 
+.. note:: It is not possible to scan a Windows "Core" system for all versions: 2008R2, 2012, 2012R2 and 2016.
+
 To carry out a scan, go to the ``Migration`` tab:
 
 	1. Click on ``scan`` in the top right.

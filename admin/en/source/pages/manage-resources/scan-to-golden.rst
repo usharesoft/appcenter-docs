@@ -26,6 +26,8 @@ In order to create a Golden Image from scan:
 
 	8. The progress will be shown. Once complete, the golden image will be visible under the ``Golden Images`` tab of the scan.
 
+	.. image:: /images/golden-image-list.png	
+
 Deleting a Golden Image Created from Scan
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

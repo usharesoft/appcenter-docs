@@ -20,11 +20,15 @@ To export an existing appliance:
 
 	.. image :: /images/export-appliance.png
 
-	3. This will start the export process.  
+	3. A pop-up will appear, allowing you to select the format you would like (yaml or json).
+
+	.. image :: /images/export-appliance-format.png
+
+	4.   Click ``export``. This will start the export process.
 
 	.. image :: /images/exporting-appliance.png
 
-	4. Once the export is complete, you will be prompted to download the archive file
+	5. Once the export is complete, you will be prompted to download the archive file
 
 	.. image :: /images/export-download.png
 

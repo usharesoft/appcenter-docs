@@ -10,7 +10,7 @@ Release Date:
 
 New Features
 ~~~~~~~~~~~~
-* Administrators can now import a Windows based scan to create a golden image.  This allows administrators to simplify the procedures of creating golden images.
+* Administrators can now create a golden image from the UI. Once a Windows scan is complete, the Administrator can import the scan as a golden image. This golden image will be available to users to create new Windows appliances.
 
 Enhancements
 ~~~~~~~~~~~~

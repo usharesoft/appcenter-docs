@@ -15,6 +15,7 @@ New Features
 * Support to create appliance templates based on Windows 2016 operating system
 * Ability to scan and migrate Windows 2016 instances
 * Application and services information now captured and displayed when scanning a Windows-based instance
+* Publication to VMware vCenter improved. UForge now publishes templates to vCenter, rather than instances. The datacenter information (ESXi hypervisor, datastore, network name, etc) are automatically retrieved by UForge and prefilled for publication to VCenter.
 
 Enhancements
 ~~~~~~~~~~~~

@@ -163,7 +163,7 @@ The query string is composed of one or more field-value pairs, each separated by
 REST API Examples
 -----------------
 
-The following examples for clarity use basic authentication to communicate with UForge.  As  this is an insecure request, this is not recommended for production use.  All response information is also ommitted.
+For clarity, the following examples use basic authentication to communicate with UForge.  As  this is an insecure request, this is not recommended for production use.  All response information is also ommitted.
 
 .. _apis-rest-get-user:
 
@@ -287,7 +287,7 @@ References:
 Retrieve Available OS Profiles for an Operating System
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Each appliance template has a notion of an OS profile.  This lists the operating system packages for the appliance template.  To help users to create OS profiles for an appliance template, each Operating System registered in the UForge platform has one one or more base OS profiles (also known as OS templates) the user can choose from to get started.  To retrieve the list of available OS profiles (or templates) for a particular operating system, use the following API resource:
+Each appliance template can contain an OS profile.  This lists the operating system packages for the appliance template.  To help users to create OS profiles for an appliance template, each Operating System registered in the UForge platform has one or more base OS profiles (also known as OS templates) the user can choose from to get started.  To retrieve the list of available OS profiles (or templates) for a particular operating system, use the following API resource:
 
 .. function:: GET /distributions/{id}/profiles
 
@@ -369,7 +369,7 @@ Example (retrieving all packages with the name ``nginx``)::
 
 	$ curl "http://10.1.2.206/api/distributions/1/pkgs&query=(name=='*nginx*'" -X GET -H "Authorization: Basic guest:guest_password" -H "Accept: application/xml" | tidy -xml -indent -quiet
 
-.. note:: wildcards can be used in FIQL queries.
+.. note:: Wildcards can be used in FIQL queries.
 
 References: 
 
@@ -382,7 +382,7 @@ References:
 Adding a Package to an Appliance's OS Profile (Linux Only)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Once an Appliance Template has an OS profile, you can add or remove operating system packages to it.  To add one or more packages, you will need the URI of the packages(s) you wish to add.  You can :ref:`search <apis-rest-add-os-pkg-search>` for packages to retrieve this information.
+Once an Appliance Template has an OS profile, you can add or remove operating system packages to it.  To add one or more packages, you will need the URI of the packages(s) you wish to add.  You can :ref:`search for packages <apis-rest-add-os-pkg-search>` for packages to retrieve this information.
 
 Use the following API resource to add or remove these packages to the OS profile of an Appliance Template:
 
@@ -390,7 +390,7 @@ Use the following API resource to add or remove these packages to the OS profile
 
 	* ``uid``: is the login of the user
 	* ``aid``: the id of the appliance template
-	* ``osid``: the id of the os profile where to add the packages
+	* ``osid``: the id of the os profile to which the packages should be added
 
 Example::
 
@@ -434,7 +434,7 @@ Software components can also be added to an Appliance Template.  This is done in
 
 	4. Add the software component to an appliance template.  Note, that this software component can be added to multiple appliance templates.
 
-To create the software component container, we use the following API resource:
+To create the software component container, use the following API resource:
 
 .. function:: POST /users/{uid}/mysoftware
 
@@ -455,7 +455,7 @@ The ``software.xml`` content (the request body):
 
 Once created, note down the ``artifactsUri`` of this software component.  This is the URI we need to use to register one or more artifact objects.
 
-Now we can create an artifact container.  To do this we use the ``uri`` of the software component.  The resource API is:
+Now we can create an artifact container.  To do this use the ``uri`` of the software component.  The resource API is:
 
 .. function:: POST /users/{uid}/mysoftware/{msid}/artifacts
 
@@ -484,7 +484,7 @@ The ``artifact.xml`` content (the request body):
 	    <subSoftwareArtifacts/>
 	</ns0:softwareFile>
 
-Now can actually upload the binary.  Note down the ``binaryUri`` of the newly created artifact object.  This is the resource uri we use to upload the file:
+Now you can upload the binary.  Note down the ``binaryUri`` of the newly created artifact object.  This is the resource uri you use to upload the file:
 
 . function:: POST /users/{uid}/mysoftware/{msid}/artifacts/{said}/bin/{fileName}
 
@@ -497,7 +497,7 @@ Example (uploading a RPM, but this can be any file type)::
 
 	$ curl "http://10.1.2.206/api/users/guest/mysoftware/918/artifacts/1078/bin/" -X POST -H "Authorization: Basic guest:guest_password" -H "Accept: application/xml" --data-binary "/path/to/file/zabbix-release-3.0-1.el6.noarch.rpm" | tidy -xml -indent -quiet
 
-Finally we can now add this software component to an appliance template.  The following resource API is used:
+Finally you can now add this software component to an appliance template.  The following resource API is used:
 
 . function:: PUT /users/{uid}/appliances/{aid}
 

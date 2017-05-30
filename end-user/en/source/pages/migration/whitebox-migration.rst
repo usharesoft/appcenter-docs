@@ -5,9 +5,7 @@
 Whitebox Migration Process
 --------------------------
 
-The goal of white box migration is to change the contents found during the scan of the live system prior to migration.  To carry out a white box migration, the user must import the scan report as an appliance template. The import process basically transforms the meta-data of the scan report to an appliance template.
-
-.. warning:: White box migration is not supported for Windows.  
+The goal of white box migration is to change the contents found during the scan of the live system prior to migration.  To carry out a white box migration, the user must import the scan report as an appliance template. The import process basically transforms the meta-data of the scan report to an appliance template. 
 
 As part of this transformation process, the scan information is mapped to one or more of the appliance template layers as follows:
 

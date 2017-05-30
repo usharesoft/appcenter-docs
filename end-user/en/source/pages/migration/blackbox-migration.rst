@@ -26,11 +26,9 @@ When you generate a machine image from the scan, all the information included in
 
 .. note:: If you plan to migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/solutions/cloud/k5/>`_, you must also do the following before scanning:
 
-	* Uninstall VMWare Tools (if installed).
-	* Retrieve Transport Agent Software from `K5 Support <mailto:FCSK5_GSD@ph.fujitsu.com>`_.
-	* Install Transport Agent Software.
-	* Disable NLA for RDP (Please refer to official Microsoft documentation `Configure Network Level Authentication for Remote Desktop Services Connections <https://technet.microsoft.com/en-us/library/cc732713(v=ws.11).aspx/>`_).
-	* Uninstall CloudBase-Init (if installed).
+	1. Uninstall VMWare Tools (if installed).
+	2. Disable NLA for RDP (Please refer to official Microsoft documentation `Configure Network Level Authentication for Remote Desktop Services Connections <https://technet.microsoft.com/en-us/library/cc732713(v=ws.11).aspx/>`_).
+	3. Uninstall CloudBase-Init (if installed).
 
 	For more detailed information, please refer to `official Fujitsu K5 IaaS Documentation <http://www.fujitsu.com/uk/Images/k5-iaas-features-handbook.pdf>`_.
 

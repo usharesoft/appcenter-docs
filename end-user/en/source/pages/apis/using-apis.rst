@@ -9,7 +9,7 @@ UForge API is a RESTful resource.
 
 The UForge API follows the design principles of Representational State Transfer (REST). UForge platform provides a set of resources (the API), each of which is referenced with a global identifier (URI). In order to manipulate these resources, clients communicate via the standard HTTP(S) protocol and exchange representations of these resources in a specific format. The documentation notes which formats are available for each method. The API presently supports XML and JSON. To get the results in the format of your choice, the ``Accept-Type`` header attribute is used in the request.
 
-To make the UForge API even easier to use, UForge has a Java SDK and Python SDK.  You can create the API for other languages.
+To make the UForge API easier to use, UForge has a Java SDK and Python SDK.  You can create the API for other languages.
 
 Communication with UForge is done via HTTP(S). For security reasons it is recommended to use HTTPS, however you may submit HTTP requests for debugging purposes. 
 
@@ -20,7 +20,7 @@ Communication with UForge is done via HTTP(S). For security reasons it is recomm
 
 API methods that require a particular HTTP method will return an error if you do not make your request with the correct one. All HTTP methods return codified response codes.
 
-For more information, refer to the `REST APIs documentation <apis:apis-index>`.
+For a complete list of all the REST interface, refer to the `REST APIs Reference documentation <apis:apis-index>`_.
 
 Response & Error Codes
 ----------------------
@@ -70,7 +70,7 @@ Note that you can use Basic Authentication by adding an extra HTTP header ``Auth
 
 All request URLs start with the hostname of where UForge is running, the port where UForge is listening for incoming requests, the service name and version number. This is known as the BASE URL. Such request URLs resemble the following sample::
 
-	https://myuforge.example.com:443/ufws-3.3
+	https://myuforge.example.com:443/api
 
 Even though UForge accepts HTTP requests, it is highly recommended for security reasons that HTTPS requests be used. HTTP requests should only be used for debugging purposes. Sensitive information will be exposed using HTTP.
 
@@ -85,33 +85,50 @@ Request Example
 The following is an example of a request sent to an UForge platform with hostname ``10.0.0.20`` `using cURL
 <http://curl.haxx.se/docs/manpage.html>`_ to get the user ``myUser``. Note that the response body (the user information) has been omitted here for clarity::
 
-	$ curl 'http://10.0.0.20:9090/ufws-3.3/users/myUser?apiKey=XX8Bs2prKPdFrKH_i4rsW7WR0f4FQ05IO7A8vuQUoNDino-7513mmEDecIAzpeMwWXZvnyZ6W0bJTKBwwc&signature=3qD1oxLwOI321BJ1pDZ6Dzmqbac%3D' -H "Accept: application/xml" -v
+	$ curl 'http://10.1.2.206/api/users/myUser?apiKey=XX8Bs2prKPdFrKH_i4rsW7WR0f4FQ05IO7A8vuQUoNDino-7513mmEDecIAzpeMwWXZvnyZ6W0bJTKBwwc&signature=3qD1oxLwOI321BJ1pDZ6Dzmqbac%3D' -H "Accept: application/xml" -v
 
-	* About to connect() to 10.0.0.20 port 9090 (#0)
-	* Trying 10.0.0.20... connected
-	* Connected to 10.0.0.20 (10.0.0.20) port 9090 (#0)
-	> GET /ufws-3.3/users/myUser HTTP/1.1
-	> User-Agent: curl/7.19.7 (universal-apple-darwin10.0) libcurl/7.19.7 OpenSSL/0.9.8r zlib/1.2.3
-	> Host: 10.0.0.20:9090
+	*   Trying 10.1.2.206...
+	* Connected to 10.1.2.206 (10.1.2.206) port 80 (#0)
+	> GET /api/users/guest HTTP/1.1
+	> Host: 10.1.2.206
+	> User-Agent: curl/7.42.1
 	> Accept: application/xml
-	>
 
 	< HTTP/1.1 200 OK
-	< X-Powered-By: Servlet/2.5
-	< Server: Sun GlassFish Enterprise Server v2.1.1
-	< Last-Modified: Thu, 21 Jul 2011 09:43:29 GMT
-	< ETag: "80f76a81b033572861260548dd748bb3"
-	< Content-Type: application/xml
+    < Date: Mon, 29 May 2017 14:28:19 GMT
+	< Server: Apache
+	< Last-Modified: Mon, 29 May 2017 08:49:24 GMT
+	< ETag: "837201f6b809de2aeedca4814e7a85e5"
+	< Content-Language: en
+	< version: 3.7.4-SNAPSHOT
+	< Content-Type: application/json
+	< Set-Cookie: JSESSIONID=708921B1F0C2AFA55262119F5E321FAF; Path=/ufws/; HttpOnly;HttpOnly;Secure
+	< Connection: close
 	< Transfer-Encoding: chunked
-	< Date: Thu, 21 Jul 2011 17:02:10 GMT
-	<
 
 The example illustrates the following:
 
-* a ``GET`` request is sent (cURL by default uses GET) on the resource: ``/ufws-3.0/users/myUser``
+* a ``GET`` request is sent (cURL by default uses GET) on the resource: ``/users/myUser``
 * an API key is used in this case for authorization
-* the ``Accept header`` is being used to request that the response be sent in XML. Note that, if this header is omitted, UForge sends the response in XML by default.
+* the ``Accept header`` is being used to request that the response be sent in ``XML``.
 * the response header includes ``ETag`` and ``Last-Modified`` allowing cache validation and a conditional GET requests.
+
+Response Body Types
+-------------------
+
+The API reponse types supported are ``XML`` or ``JSON``.  The ``Accept`` header is used in the request to determine which response type you would like.
+
+* For JSON, use: ``-H "Accept: application/json"``
+* For XML, use: ``-H "Accept: application/xml"``
+
+If no accept header is used, then ``XML`` is returned by default.
+
+For example, to retrieve the user information in JSON, the following request is used::
+
+	$ curl "http://10.1.2.206/api/users/guest" -X GET -u "guest:guest_password" -H "Accept: application/json"
+
+	.. note:: This example has used basic authentication (which is not advised).  Furthermore, the response body i.e. the user information has been omitted here for clarity.
+
 
 Using the API Keys
 ------------------
@@ -143,8 +160,462 @@ The query string is composed of one or more field-value pairs, each separated by
 	http://server/uripath?field1=value1&field2=value2&field3=value3
 
 
+REST API Examples
+-----------------
+
+The following examples for clarity use basic authentication to communicate with UForge.  As  this is an insecure request, this is not recommended for production use.  All response information is also ommitted.
+
+.. _apis-rest-get-user:
+
+Retrieving a User
+~~~~~~~~~~~~~~~~~
+
+To retrieve a user's profile information use the API resource:
+
+.. function:: GET /users/{uid}
+
+	* ``uid``: is the login of the user
+
+Example::
+
+	$ curl "http://10.1.2.206/api/users/guest" -X GET -H "Authorization: Basic guest:guest_password" -H "Accept: application/xml" | tidy -xml -indent -quiet
+
+References: 
+
+	* API referenc: `user_get <apis:user-get>`_
+
+.. _apis-rest-add-cloud-account:
+
+Adding a Cloud Account
+~~~~~~~~~~~~~~~~~~~~~~
+
+A cloud account is used to register machine images that have been generated from an appliance template.  To create a cloud account use the API resource:
+
+.. function:: POST /users/{uid}/accounts
+
+	* ``uid``: is the login of the user
+	* ``credAccount``: CredAccount object you wish to create in the request body
+
+Example::
+
+	$ curl "http://10.1.2.206/api/users/guest/accounts" -X POST -H "Authorization: Basic guest:guest_password" -H "Content-Type: application/xml" -H "Accept: application/xml" --data-binary "@representation.xml" | tidy -xml -indent -quiet
 
 
+The ``representation.xml`` content (the request body):
+
+.. code-block:: xml
+
+	<ns0:credAccount
+	    xmlns:ns0="http://www.usharesoft.com/uforge"
+	    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	    xsi:type="ns0:CredAccountOpenStack">
+	        <name>OpenStack John</name>
+	        <targetPlatform>
+	                <name>OpenStack</name>
+			<type>openstack</type>
+	        </targetPlatform>
+	        <glanceUrl>http://ip:9292</glanceUrl>
+	        <keystoneUrl>http://ip:5000</keystoneUrl>
+	        <login>username</login>
+	        <password>password</password>
+	        <keystoneVersion>v3</keystoneVersion>
+	</ns0:credAccount>
+
+References: 
+
+	* API reference: `cloudAccount_create <apis:cloudAccount-create>`_
+	* `CredAccount object <apis:credAccount-object>`_
+
+.. _apis-rest-get-appliances:
+
+Get User Appliance Templates
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To retrieve all the appliance templates for a particular user, use the following API resource:
+
+.. function:: GET /users/{uid}/appliances
+
+	* ``uid``: is the login of the user
+
+Example::
+
+	$ curl "http://10.1.2.206/api/users/guest/appliances" -X GET -H "Authorization: Basic guest:guest_password" -H "Accept: application/xml" | tidy -xml -indent -quiet
+
+References: 
+
+	* API resource `appliance_getAll <apis:appliance-getAll>`_
+
+.. _apis-rest-create-appliance:
+
+Create an Appliance Template
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+An Appliance Template contains the model of the software stack. The model includes all the operating system packages, middleware and application software for generating an image that can be provisioned on a virtual or cloud platform. To create an appliance template, you need to decide which operating system to build the template from, as well as the name and version.
+
+To create an Appliance Template, the following API resource is used:
+
+.. function:: POST /users/{uid}/appliances
+
+	* ``uid``: is the login of the user
+	* ``appliance``: Appliance template object you wish to create in the request body
+
+Example::
+
+	$ curl "http://10.1.2.206/api/users/guest/appliances" -X POST -H "Authorization: Basic guest:guest_password" -H "Content-Type: application/xml" -H "Accept: application/xml" --data-binary "@representation.xml" | tidy -xml -indent -quiet
 
 
+The ``representation.xml`` content (the request body):
 
+.. code-block:: xml
+
+	<ns0:appliance
+	    xmlns:ns0="http://www.usharesoft.com/uforge">
+	    <name>My Appliance</name>
+	    <version>1.0</version>
+	    <description>Appliance created with UForge API</description>
+	    <distributionUri>distributions/1</distributionUri>
+	    <orgUri>orgs/1</orgUri>
+	</ns0:appliance>
+
+References: 
+
+	* API resource `appliance_create <apis:appliance-create>`_
+	* `Appliance object <apis:appliance-object>`_
+
+.. _apis-rest-get-os-profiles:
+
+Retrieve Available OS Profiles for an Operating System
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Each appliance template has a notion of an OS profile.  This lists the operating system packages for the appliance template.  To help users to create OS profiles for an appliance template, each Operating System registered in the UForge platform has one one or more base OS profiles (also known as OS templates) the user can choose from to get started.  To retrieve the list of available OS profiles (or templates) for a particular operating system, use the following API resource:
+
+.. function:: GET /distributions/{id}/profiles
+
+	* ``id``: is the id of the Operating System
+
+Example::
+
+	$ curl "http://10.1.2.206/api/distributions/1/profiles" -X GET -H "Authorization: Basic guest:guest_password" -H "Accept: application/xml" | tidy -xml -indent -quiet
+
+
+References: 
+
+	* API resource `osTemplate_getAll <apis:osTemplate-getAll>`_
+	* `OS Profile object <apis:distribProfile-object>`_
+
+.. _apis-rest-add-os-profile:
+
+Add an OS Profile to an Appliance Template
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To add an OS profile (template) to an Appliance Template, firstly list all the OS profiles for the opertaing system (see :ref:`apis-rest-get-os-profiles`) and note down the ``name`` and ``URI`` of the profile you would like to add.  Then use the following API resource to add this OS profile:
+
+.. function:: POST /users/{uid}/appliances/{aid}/osprofile
+
+	* ``uid``: is the login of the user
+	* ``aid``: the id of the appliance template where to add the os profile
+	* ``OS Profile``: OS profile to add to the appliance template (in the request body)
+
+Example (Linux)::
+
+	$ curl "http://10.1.2.206/api/appliances/1616/osprofile" -X POST  -H "Authorization: Basic guest:guest_password" -H "Content-Type: application/xml" -H "Accept: application/xml" --data-binary "@distribprofile.xml" | tidy -xml -indent -quiet
+
+The ``distribprofile.xml`` content (the request body):
+
+.. code-block:: xml
+
+	<ns0:linuxProfile
+	    xmlns:ns0="http://www.usharesoft.com/uforge">
+	    <name>Minimal</name>
+	    <standardProfileUri>distribution/1/profiles/4</standardProfileUri>
+	</ns0:linuxProfile>
+
+Example (Windows)::
+
+	$ curl "http://10.1.2.206/api/appliances/1616/osprofile" -X POST  -H "Authorization: Basic guest:guest_password" -H "Content-Type: application/xml" -H "Accept: application/xml" --data-binary "@distribprofile.xml" | tidy -xml -indent -quiet
+
+The ``distribprofile.xml`` content (the request body):
+
+.. code-block:: xml
+
+	<ns0:windowsProfile
+	    xmlns:ns0="http://www.usharesoft.com/uforge">
+	    <name>Standard 2012 English with agent</name>
+	    <standardProfileUri>distribution/9/profiles/27</standardProfileUri>
+	</ns0:windowsProfile>	
+
+
+References: 
+
+	* API resource `applianceOSProfile_create <apis:applianceOSProfile-create>`_
+	* `Appliance object <apis:appliance-object>`_
+	* `Linux OS Profile object <apis:linuxProfile-object>`_
+	* `Windows OS Profile object <apis:windowsProfile-object>`_
+
+.. _apis-rest-add-os-pkg-search:
+
+Searching for Operating System Packages (Linux Only)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Registered Operating Systems in UForge have package repositories attached to them (Linux only).  You can search for packages in these repositories.  These packages can then be added to an Appliance's OS profile.  To search for packages, the following API resource is used:
+
+.. function:: GET /distributions/{id}/pkgs
+
+	* ``id``: is the id of the Operating System
+
+This would retrieve all the packages for this operating system.  To carry out a search, a ``search criteria`` is used.  This is based on FIQL, allowing you to search for packages based on different attribute values (including names, dates etc).
+
+Example (retrieving all packages with the name ``nginx``)::
+
+	$ curl "http://10.1.2.206/api/distributions/1/pkgs&query=(name=='*nginx*'" -X GET -H "Authorization: Basic guest:guest_password" -H "Accept: application/xml" | tidy -xml -indent -quiet
+
+.. note:: wildcards can be used in FIQL queries.
+
+References: 
+
+	* API resource `osPkg_getAll <apis:osPkg_getAll>`_
+	* `Package object <apis:package-object>`_
+
+
+.. _apis-rest-add-os-pkg:
+
+Adding a Package to an Appliance's OS Profile (Linux Only)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Once an Appliance Template has an OS profile, you can add or remove operating system packages to it.  To add one or more packages, you will need the URI of the packages(s) you wish to add.  You can :ref:`search <apis-rest-add-os-pkg-search>` for packages to retrieve this information.
+
+Use the following API resource to add or remove these packages to the OS profile of an Appliance Template:
+
+.. function:: PUT /users/{uid}/appliances/{aid}/osprofile/{osid}/pkgs
+
+	* ``uid``: is the login of the user
+	* ``aid``: the id of the appliance template
+	* ``osid``: the id of the os profile where to add the packages
+
+Example::
+
+	$ curl "http://10.1.2.206/api/appliances/1616/osprofile/2040/pkgs" -X PUT -H "Authorization: Basic guest:guest_password" -H "Accept: application/xml" --data-binary "@pkg.xml | tidy -xml -indent -quiet
+		
+The ``pkg.xml`` content (the request body):
+
+.. code-block:: xml
+
+	<ns0:packages xmlns:ns0="http://www.usharesoft.com/uforge">
+	    <addedPkgUris>
+	        <uri>distributions/1/pkgs/631993</uri>
+	    </addedPkgUris>
+	</ns0:packages>
+
+Removing the same package, the ``pkg.xml`` content would be (the request body):
+
+.. code-block:: xml
+
+	<ns0:packages xmlns:ns0="http://www.usharesoft.com/uforge">
+	    <deletedPkgUris>
+	        <uri>distributions/1/pkgs/631993</uri>
+	    </deletedPkgUris>
+	</ns0:packages>
+
+References: 
+
+	* API resource `applianceOSProfilePkg_updateAll <apis:applianceOSProfilePkg-updateAll>`_
+	* `Package object <apis:package-object>`_
+
+Adding Custom Software to an Appliance Template
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Software components can also be added to an Appliance Template.  This is done in four stages:
+
+	1. A software component container is created.  This is registered into your software library.
+
+	2. Create a software artifact container.  This is the meta-date container for an uploaded file
+
+	3. Upload the software files into this software artifact container.
+
+	4. Add the software component to an appliance template.  Note, that this software component can be added to multiple appliance templates.
+
+To create the software component container, we use the following API resource:
+
+.. function:: POST /users/{uid}/mysoftware
+
+	* ``uid``: is the login of the user
+
+Example::
+
+	$ curl "http://10.1.2.206/api/users/guest" -X POST -H "Authorization: Basic guest:guest_password" -H "Accept: application/xml" --data-binary "@software.xml | tidy -xml -indent -quiet
+		
+The ``software.xml`` content (the request body):
+
+.. code-block:: xml
+
+	<ns0:mySoftware xmlns:ns0="http://www.usharesoft.com/uforge">
+	    <name>Zabbix</name>
+	    <version>3.0.1</version>
+	</ns0:mySoftware>
+
+Once created, note down the ``artifactsUri`` of this software component.  This is the URI we need to use to register one or more artifact objects.
+
+Now we can create an artifact container.  To do this we use the ``uri`` of the software component.  The resource API is:
+
+.. function:: POST /users/{uid}/mysoftware/{msid}/artifacts
+
+	* ``uid``: is the login of the user
+	* ``msid``: the id of the software compnent created
+
+Example (uploading a RPM, but this can be any file type)::
+
+	$ curl "http://10.1.2.206/api//users/guest/mysoftware/918/artifacts" -X POST -H "Authorization: Basic guest:guest_password" -H "Accept: application/xml" --data-binary "@artifact.xml | tidy -xml -indent -quiet
+		
+The ``artifact.xml`` content (the request body):
+
+.. code-block:: xml
+
+	<ns0:softwareFile
+	    xmlns:ns0="http://www.usharesoft.com/uforge">
+	    <name>
+	        zabbix-release-3.0-1.el6.noarch.rpm
+	        </name>
+	    <fullName>
+	        zabbix-release-3.0-1.el6.noarch.rpm
+	        </fullName>
+	    <origName>
+	        zabbix-release-3.0-1.el6.noarch.rpm
+	        </origName>
+	    <subSoftwareArtifacts/>
+	</ns0:softwareFile>
+
+Now can actually upload the binary.  Note down the ``binaryUri`` of the newly created artifact object.  This is the resource uri we use to upload the file:
+
+. function:: POST /users/{uid}/mysoftware/{msid}/artifacts/{said}/bin/{fileName}
+
+	* ``uid``: is the login of the user
+	* ``msid``: the id of the software compnent created
+	* ``said``: the id of the software artifact
+	* ``fileName`` (optional): The filename to upload
+
+Example (uploading a RPM, but this can be any file type)::
+
+	$ curl "http://10.1.2.206/api/users/guest/mysoftware/918/artifacts/1078/bin/" -X POST -H "Authorization: Basic guest:guest_password" -H "Accept: application/xml" --data-binary "/path/to/file/zabbix-release-3.0-1.el6.noarch.rpm" | tidy -xml -indent -quiet
+
+Finally we can now add this software component to an appliance template.  The following resource API is used:
+
+. function:: PUT /users/{uid}/appliances/{aid}
+
+	* ``uid``: is the login of the user
+	* ``aid``: the id of the appliance template
+
+Example::
+
+	$ curl "http://10.1.2.206/api/users/guest/api/appliances/1616" -X PUT -H "Authorization: Basic guest:guest_password" -H "Accept: application/xml" --data-binary "@appliancesoftware.xml" | tidy -xml -indent -quiet
+
+The ``appliancesoftware.xml`` content (the request body):
+
+.. code-block:: xml
+
+	<ns0:appliance xmlns:ns0="http://www.usharesoft.com/uforge">
+	    <name>My Appliance</name>
+	    <version>1.0</version>
+	    <distributionUri>distributions/1</distributionUri>
+	    <orgUri>orgs/1</orgUri>
+	    <uri>users/guest/api/appliances/1616</uri>
+	    <mySoftwareList>
+	        <mySoftware>
+	            <name>Zabbix</name>
+	            <version>3.0.1</version>
+	            <uri>users/guest/mysoftware/918</uri>
+	        </mySoftware>
+	    </mySoftwareList>
+	</ns0:appliance>
+
+References: 
+
+	* Create software component resource `mySoftware_create <apis:mySoftware-create>`_
+	* Create software artifact resource `mySoftwareArtifact_add <apis:mySoftwareArtifact-add>`_
+	* Upload a binary file `mySoftwareArtifact_upload <apis:mySoftwareArtifact-upload>`_
+	* Add software component to an appliance template `appliance_update <apis:appliance-update>`_
+	* `Software Component object <apis:mysoftware-object>`_
+	* `Software Artifact object <apis:softwareartifact-object>`_
+	* `Appliance object <apis:appliance-object>`_
+
+Generate a Machine Image
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Machine images can be generated from appliance templates by using the following API resource:
+
+.. function:: POST /users/{uid}/appliances/{aid}/images
+
+	* ``uid``: is the login of the user
+	* ``aid``: the id of the appliance template
+
+Example (generating an OpenStack QCOW2 image)::
+
+	$ curl "http://10.1.2.206/api/users/guest/api/appliances/1616/images" -X POST -H "Authorization: Basic guest:guest_password" -H "Accept: application/xml" --data-binary "@generateimage.xml" | tidy -xml -indent -quiet
+
+The ``generateimage.xml`` content (the request body):
+
+.. code-block:: xml
+
+	<ns0:image xmlns:ns0="http://www.usharesoft.com/uforge">
+        <compress>false</compress>
+        <targetFormat>
+                <name>OpenStack QCOW2</name>
+        </targetFormat>
+        <installProfile>
+                <memorySize>512</memorySize>
+                <diskSize>2048</diskSize>
+        </installProfile>
+	</ns0:image>
+
+References: 
+
+	* Generate a machine image `machineImage_generate <apis:machineImage-generate>`_
+	* `Machine Image object <apis:image-object>`_
+
+
+Publish/Register a Machine Image to a Cloud Environment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Once a machine image has been generated, for certain formats, this machine image can be published (also known as registered) to a corresponding Cloud environment.
+
+To publish a machine image, the following API resource is used:
+
+.. function:: POST /users/{uid}/appliances/{aid}/images/{itid}/pimages
+
+	* ``uid``: is the login of the user
+	* ``aid``: the id of the appliance template
+	* ``itid``: the id of the generated machine image
+
+Example (publishing to OpenStack)::
+
+	$ curl "http://10.1.2.206/api/users/guest/api/appliances/1616/images/346/pimages" -X POST -H "Authorization: Basic guest:guest_password" -H "Accept: application/xml" --data-binary "@publishimage.xml" | tidy -xml -indent -quiet
+
+The ``publishimage.xml`` content (the request body):
+
+.. code-block:: xml
+
+	<ns0:publishImage xmlns:ns0="http://www.usharesoft.com/uforge"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:type="ns0:PublishImageOpenStack">
+	        <applianceUri>users/guest/api/appliances/1616</applianceUri>
+	        <credAccount xsi:type="ns0:CredAccountOpenStack">
+	                <targetPlatform>
+	                        <name>openstack</name>
+	                </targetPlatform>
+	                <glanceUrl>http://ip:9292</glanceUrl>
+	                <keystoneUrl>http://ip:5000</keystoneUrl>
+	                <login>username</login>
+	                <password>password</password>
+	                <keystoneVersion>v3</keystoneVersion>
+	        </credAccount>
+	        <imageUri>users/guest/api/appliances/1616/images/346</imageUri>
+	        <keystoneDomain>Keystone Domain Example</keystoneDomain>
+	        <keystoneProject>Keystone Project Example</keystoneProject>
+	        <displayName>Machine Image Name Example</displayName>
+	        <publicImage>false</publicImage>
+	</ns0:publishImage>
+
+References: 
+
+	* Publish a machine image `machineImage_publish <apis:machineImage_publish>`_
+	* `Machine Image object <apis:image-object>`_
+	* `Publish Machine Image object <apis:publishimage-object>`_

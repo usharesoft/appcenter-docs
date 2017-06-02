@@ -13,8 +13,6 @@ From the scan, you can then generate a new machine image that is compatible for 
 
 You can transform a scan to an appliance template.  By doing this, you have the opportunity to change the packages, files or configuration information prior to generating and registering a machine image.  This is known as “white box” migration.
 
-.. warning:: Whitebox migration is not supported for Windows.
-
 The five main steps of migration are as follows:
 
    1. The live system is "deep scanned", detecting all the files and configuration information.

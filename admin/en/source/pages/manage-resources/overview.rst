@@ -14,8 +14,8 @@ The following sections cover information regarding managing the UForge resources
    create-custom-os
    manage-formats
    windows
+   scan-to-golden
    golden-create
-   golden-storing
    manage-project-catalog
    manage-categories
    manage-milestone

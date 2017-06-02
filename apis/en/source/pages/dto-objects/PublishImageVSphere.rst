@@ -5,19 +5,17 @@
 PublishImageVSphere
 ===================
 
-Holds the information on the registration of a machine image to the VMware vSphere vCenter environment.
+Holds the information on the registration of a template to the VMware vSphere vCenter environment.
 
 Attributes
 ~~~~~~~~~~
 
 The list of attributes for ``PublishImageVSphere`` are:
 
-	* ``clusterName`` (string): the cluster name where to register the machine image
-	* ``datacenterName`` (string): the datacenter where to register the machine image
-	* ``datastore`` (string): the datastore where to register the machine image
-	* ``displayName`` (string): the public name of the registered machine image
+	* ``datastore`` (string): the datastore where to register the template
+	* ``displayName`` (string): the public name of the registered template
 	* ``esxHost`` (string): the hostname or IP address of the ESX server
-	* ``network`` (string): the network where to register the machine image
+	* ``network`` (string): the network where to register the template
 	* ``cloudId`` (string): the unique id for the machine image registered on the cloud environment
 	* ``imageUri`` (anyURI): the uri resource of the machine image
 	* ``publishLocation`` (string): the location of the registered machine image (e.g. region)

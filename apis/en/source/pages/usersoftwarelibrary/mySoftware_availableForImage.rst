@@ -1,61 +1,58 @@
 .. Copyright 2017 FUJITSU LIMITED
 
-.. _mySoftwareRestriction-add:
+.. _mySoftware-availableForImage:
 
-mySoftwareRestriction_add
--------------------------
+mySoftware_availableForImage
+----------------------------
 
-.. function:: POST /users/{uid}/mysoftware/{msid}/restrictions
+.. function:: POST /users/{uid}/mysoftware/{msid}/images
 
 .. sidebar:: Summary
 
 	* Method: ``POST``
 	* Response Code: ``201``
 	* Response Formats: ``application/xml`` ``application/json``
-	* Since: ``UForge 3.6``
+	* Since: ``UForge 3.7.4``
 
-Adds a new Bundle Restriction to a software component. 
+Gets the software component if it's available for the image that will be generated. * 
 
-Please refer to :ref:`bundlerestriction-object` for a complete list of all the ``bundle restriction`` attributes.
+The :ref:`mySoftware-object` object is returned if available for image by parsing the restriction rule (return null if not).
 
 Security Summary
 ~~~~~~~~~~~~~~~~
 
 * Requires Authentication: ``true``
-* Entitlements Required: ``software_upload``
+* Entitlements Required: ``appliance_create``
 
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the id of the :ref:`user-object`
+* ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``msid`` (required): the id of the :ref:`mySoftware-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A :ref:`bundleRestriction-object` object
+A :ref:`image-object` object
 
 Example Request
 ~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/users/{uid}/mysoftware/{msid}/restrictions" -X POST \
+	curl "https://uforge.example.com/api/users/{uid}/mysoftware/{msid}/images" -X POST \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
 
 Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:bundleRestriction xmlns:ns0="http://www.usharesoft.com/uforge">
-		<parentUri>users/{uid}/mysoftware/{msid}</parentUri>
-		<type>DISTRIBUTION</type>
-	</ns0:bundleRestriction>
 
 
 .. seealso::
 
 	 * :ref:`mySoftware-object`
+	 * :ref:`mySoftwareArtifact-add`
 	 * :ref:`mySoftwareArtifact-addChild`
 	 * :ref:`mySoftwareArtifact-addOrRemoveFileFromCache`
 	 * :ref:`mySoftwareArtifact-createFromRemoteServer`
@@ -79,12 +76,7 @@ Example of representation.xml content (the request body):
 	 * :ref:`mySoftwareLogo-download`
 	 * :ref:`mySoftwareLogo-downloadFile`
 	 * :ref:`mySoftwareLogo-upload`
-	 * :ref:`mySoftwareOs-getAll`
-	 * :ref:`mySoftwareRestrictionOs-getAll`
-	 * :ref:`mySoftwareRestriction-delete`
-	 * :ref:`mySoftwareRestriction-deleteAll`
-	 * :ref:`mySoftwareRestriction-get`
-	 * :ref:`mySoftwareRestriction-getAll`
+	 * :ref:`mySoftwareRestrictionOS-evaluate`
 	 * :ref:`mySoftwareRestriction-update`
 	 * :ref:`mySoftwareUsage-getAll`
 	 * :ref:`mySoftware-clone`
@@ -95,7 +87,6 @@ Example of representation.xml content (the request body):
 	 * :ref:`mySoftware-getAll`
 	 * :ref:`mySoftware-update`
 	 * :ref:`softwareBundleImport-get`
-	 * :ref:`softwareartifact-object`
 	 * :ref:`softwarebundleImportStatus-get`
 	 * :ref:`softwarebundleImport-upload`
 	 * :ref:`softwarebundle-import`

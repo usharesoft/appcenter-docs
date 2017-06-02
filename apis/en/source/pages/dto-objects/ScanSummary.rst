@@ -1,24 +1,17 @@
 .. Copyright 2017 FUJITSU LIMITED
 
-.. _scan-object:
+.. _scansummary-object:
 
-scan
-====
+scanSummary
+===========
 
-Holds all the meta-data of a scan. This is the report information after scanning a live system.
+Holds all the summary meta-data of a scan. This is the report information after scanning a live system.
 
 Attributes
 ~~~~~~~~~~
 
-The list of attributes for ``scan`` are:
+The list of attributes for ``scanSummary`` are:
 
-	* ``extraFiles``: a list of :ref:`scannedfile-object` files that are not part of any native package on the file system
-	* ``images``: a list of :ref:`image-object` objects that have been generated from this scan report
-	* ``imports``: a list of :ref:`scanimport-object` objects that have been imported from this scan report
-	* ``unixServices``: a list of :ref:`unixservice-object` objects that represent Unix services on the scanned machine
-	* ``winServices``: a list of :ref:`winservice-object` objects that represent Windows services on the scanned machine
-	* ``winApplications``: a list of :ref:`winMsiApplication-object` and :ref:`winStoreApplication-object` objects that represent Windows applications on the scanned machine
-	* ``packages``: the list of :ref:`package-object` objects listed in the scan report
 	* ``binariesExtracted`` (boolean): a boolean flag determining of the overall has been extracted by the platform
 	* ``binariesReceived`` (boolean): a boolean flag determining of the overall has been received by the platform
 	* ``error`` (boolean): a boolean flag to indicate an error during the scan process

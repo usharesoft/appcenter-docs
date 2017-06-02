@@ -1,20 +1,22 @@
 .. Copyright 2017 FUJITSU LIMITED
 
-.. _projectRestriction-get:
+.. _project-availableForImage:
 
-projectRestriction_get
-----------------------
+project_availableForImage
+-------------------------
 
-.. function:: GET /orgs/{oid}/projects/{pid}/restrictions/{brid}
+.. function:: POST /orgs/{oid}/projects/{pid}/images
 
 .. sidebar:: Summary
 
-	* Method: ``GET``
-	* Response Code: ``200 / 304``
+	* Method: ``POST``
+	* Response Code: ``201``
 	* Response Formats: ``application/xml`` ``application/json``
-	* Since: ``UForge 3.6``
+	* Since: ``UForge 3.7.4``
 
-Retrieves a bundle restriction for a project.
+Gets the project if it's available for the image that will be generated. 
+
+The :ref:`project-object` object is returned if available for image by parsing the restriction rule (return null if not).
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -25,22 +27,27 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``brid`` (required): the id of the :ref:`bundlerestriction-object`
 * ``pid`` (required): the id of the :ref:`project-object`
 * ``oid`` (required): the id of the :ref:`org-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-None
+A :ref:`image-object` object
 
 Example Request
 ~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/orgs/{oid}/projects/{pid}/restrictions/{brid}" -X GET \
-	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
+	curl "https://uforge.example.com/api/orgs/{oid}/projects/{pid}/images" -X POST \
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
+
+Example of representation.xml content (the request body):
+
+.. code-block:: xml
+
+
 
 .. seealso::
 
@@ -53,6 +60,7 @@ Example Request
 	 * :ref:`projectArtifact-deleteAll`
 	 * :ref:`projectArtifact-download`
 	 * :ref:`projectArtifact-downloadFile`
+	 * :ref:`projectArtifact-get`
 	 * :ref:`projectArtifact-getAll`
 	 * :ref:`projectArtifact-update`
 	 * :ref:`projectArtifact-updateAll`
@@ -61,16 +69,9 @@ Example Request
 	 * :ref:`projectLogo-download`
 	 * :ref:`projectLogo-downloadFile`
 	 * :ref:`projectLogo-upload`
-	 * :ref:`projectOs-getAll`
-	 * :ref:`projectRestrictionOs-getAll`
-	 * :ref:`projectRestriction-add`
-	 * :ref:`projectRestriction-delete`
-	 * :ref:`projectRestriction-deleteAll`
-	 * :ref:`projectRestriction-getAll`
+	 * :ref:`projectRestrictionOS-evaluate`
 	 * :ref:`projectRestriction-update`
 	 * :ref:`project-create`
 	 * :ref:`project-delete`
-	 * :ref:`project-get`
 	 * :ref:`project-getAll`
 	 * :ref:`project-update`
-	 * :ref:`softwareartifact-object`

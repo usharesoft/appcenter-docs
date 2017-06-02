@@ -25,13 +25,11 @@ To add a new project:
 
 	1. Under the Administration tab, click ``Projects``.
 
-	2. If you are an administrator to more than one organization, then you can choose the organization to administer from the drop-down menu.
-
-	3. Click on ``add project`` in the top right hand. 
+	2. Click on ``add project`` in the top right hand. 
 
 		.. note:: Projects are associated with a specific version of operating system. If a project supports more than one version of operating system, then you must re-create a new project for each operating system version. To automate the way projects are added and maintained, use the UForge APIs (for example to add the same project to multiple operating systems). 
 
-	4. Fill in the mandatory information including:
+	3. Fill in the mandatory information including:
 
 			* Name of the project
 			* Version
@@ -41,19 +39,19 @@ To add a new project:
 
 		.. image:: /images/create-project2.png
 
-	5. Click ``create``.
+	4. Click ``create``.
 
-	6. Optionally, you can add the following meta-data on the ``Overview`` tab:
+	5. Optionally, you can add the following meta-data on the ``Overview`` tab:
 	
 		* a logo for the project
 		* website information of where the project came from
 		* description
 
-	7. You can (optionally) restrict the distributions that the project applies to. On the ``Restrictions`` page select the distribution from the bottom list and click the upward arrow. Click ``save``.
+	6. You can (optionally) restrict the distribution or target format that the project applies to, from the ``Restrictions`` page. The restriction rule is set as a regular expression. For more information, refer to :ref:`restrict-distrib`. Click ``save``.
 
-		.. image:: /images/create-project-restrictions.png
+		.. image:: /images/create-project-restrictions2.png
 
-	8. You can add files by clicking ``upload``. If you want to add many files, you can create a folder and add files within the folder.
+	7. You can add files by clicking ``upload``. If you want to add many files, you can create a folder and add files within the folder.
 
 		.. image:: /images/create-project-files.png
 
@@ -61,14 +59,14 @@ To add a new project:
 
 		.. image:: /images/create-project-file-pull.png
 
-	9. You can add a license (optional). To do so, 
+	8. You can add a license (optional). To do so, 
 
 		a. Go to the ``License`` tab
 		b. Select the license type from the drop-down menu.
 		c. Click ``upload``.
 		d. Select the file and click ``open``.
 
-	10. You can add a bootscript (optional) on the ``Bootscript`` tab. 
+	9. You can add a bootscript (optional) on the ``Bootscript`` tab. 
 
 		a. Enter the name.
 		b. Select the type. If you select first boot, then the boot script will be launched once the first time the instance is launched. If you select every boot, then the boot script will be launched every time the instance is rebooted. 
@@ -77,7 +75,32 @@ To add a new project:
 
 		.. image:: /images/create-project-bootscript.png
 	
-	11. Click ``Save``.
+	10. Click ``Save``.
+
+.. _restrict-distrib:
+
+Restricting Projects for OSes and Formats
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Under ``Projects`` you can restrict the usage of a project based on a distribution name, family, architecture or for a specific machine image format.
+
+To set restriction rules for a project: 
+
+	1. Under the ``Administration`` tab, click ``Projects``.
+	2. Select the project you want to modify.
+	3. Go to the ``Restrictions`` tab. Enter the restriction rule. The restriction rule is represented by a logical expression with format ``Object#field=value`` or ``Object#field!=value``, where:
+		* ``object`` is either ``Distribution`` or ``TargetFormat``
+		* for ``Distribution`` field is ``family``, ``pkgType``, ``name``, ``version`` or ``arch``. The ``version`` must be a major version.
+		* for ``TargetFormat`` field is ``name`` or ``type`` 
+		* ``value`` is the value you want to match with the fields. For example, ``CentOS`` for Distribution name, ``linux`` for Distribution family, ``x86_64`` for Distribution arch, ``VirtualBox`` for TargetFormat name, ``cloud`` for TargetFormat type.
+		* logical operator is ``||`` for OR and ``&&`` for AND
+		* carriage return is not authorize
+
+For example, if the software bundle is designed only for distributions CentOS 7 x86_64 or Debian 8 x86_64, or for TargetFormat with type virtual, then you would note the Restriction rule as follows:: 
+
+	(Distribution#arch=x86_64 && ((Distribution#name=CentOS && Distribution#version=7) || (Distribution#name=Debian && Distribution#version=8))) || TargetFormat#type=virtual
+
+.. note:: If your software bundle is limited to a certain target format and you generate an image in another format, your appliance will be generated but the software bundle will not be part of the final image.
 
 .. _update-project:
 
@@ -89,9 +112,8 @@ UForge provides the default projects for the OSes provided.
 To modify the projects: 
 
 	1. Under the ``Administration`` tab, click ``Projects``.
-	2. If you are an administrator to more than one organization, then you can choose the organization to administer from the drop-down menu.
-	3. Projects are associated with a specific version of operating system. Click on the operating system you want to modify. You will see a list of all the projects that are part of the OS.
-	4. Click on the project you wish to edit.  At this stage you can change any of the meta-data and files uploaded.
+	2. You will see a list of all the projects that are part of the org.
+	3. Click on the project you wish to edit.  At this stage you can change any of the meta-data, restrictions and files uploaded.
 
 .. _delete-project:
 
@@ -105,9 +127,8 @@ When deleting projects from the catalog, it is important to understand that you 
 To delete the project:
 
 	1. Under the ``Administration`` tab, click ``Projects``.
-	2. If you are an administrator to more than one organization, then you can choose the organization to administer from the drop-down menu.
-	3. Projects are associated with a specific version of operating system. Click on the operating system you want to modify. You will see a list of all the projects that are part of the OS.
-	4. To delete the project can either: 
+	2. You will see a list of all the projects that are part of the org.
+	3. To delete the project can either: 
 
 	   click on the ``delete`` icon at the extreme right-hand side in the table for the project item.
 
@@ -129,10 +150,9 @@ Another way to remove a project from the project catalog is to mark the project 
 To mark a project as ``obsolete``:
 
 	1. Under the ``Administration`` tab, click ``Projects``.
-	2. If you are an administrator to more than one organization, then you can choose the organization to administer from the drop-down menu.
-	3. Projects are associated with a specific version of operating system. Click on the operating system you want to modify. You will see a list of all the projects that are part of the OS.
-	4. Click on the project to edit it.
-	5. Click on the ``obsolete`` icon at the top right-hand side of the project edit page. 
+	2. You will see a list of all the projects that are part of the org.
+	3. Click on the project to edit it.
+	4. Click on the ``obsolete`` icon at the top right-hand side of the project edit page. 
 
 	.. image:: /images/project-obsolete2.png
 

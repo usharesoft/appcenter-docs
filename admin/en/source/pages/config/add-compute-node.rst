@@ -61,7 +61,7 @@ You can add a new OAR compute node which was instantiated from UForge but which 
 
         .. code-block:: shell
 
-                UFORGE_PROXY_IGNORED=X.X.X.X|Y.Y.Y.Y|...|<oarnodeXIP>
+                UFORGE_PROXY_IGNORED=X.X.X.X,Y.Y.Y.Y,...,<oarnodeXIP>
 
 	10. Run the following commands on oarnodeX
 

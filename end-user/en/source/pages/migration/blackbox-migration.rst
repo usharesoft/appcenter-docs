@@ -5,7 +5,7 @@
 Blackbox Migration Process
 --------------------------
 
-The goal of black box migration is to reproduce a near identical copy of the currently running workload.  However, there will always be small differences between the two workloads after migration is complete.  When scanning a system the following information is detected:
+The goal of black box migration is to reproduce a near identical copy of the currently running workload.  However, there will always be small differences between the two workloads after migration is complete, notably some services are disabled or enabled depending on the target machine image being created (refer to :ref:`service-state`).  When scanning a system the following information is detected:
 
 	* all the files and packages on the system (including configuration information). If you have selected a scan without overlay, then extra files and specific configuration information will be detected but will not be included in the report.
 	* network settings including all NICs. Note that if the first card is static, it will be changed to DHCP.

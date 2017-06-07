@@ -196,6 +196,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`winstoreapplication-object`
 	* :ref:`winstoreapplications-object`
 	* :ref:`winservice-object`
+	* :ref:`unixservice-object`
 	* :ref:`winservices-object`
 	* :ref:`workspace-object`
 	* :ref:`workspaces-object`
@@ -393,6 +394,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     WinStoreApplication
     WinStoreApplications
     WinService
+    UnixService
     WinServices
     Workspace
     Workspaces

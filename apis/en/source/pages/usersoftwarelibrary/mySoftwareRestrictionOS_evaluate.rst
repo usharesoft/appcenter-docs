@@ -1,22 +1,24 @@
 .. Copyright 2017 FUJITSU LIMITED
 
-.. _mySoftwareRestriction-getAll:
+.. _mySoftwareRestrictionOS-evaluate:
 
-mySoftwareRestriction_getAll
-----------------------------
+mySoftwareRestrictionOS_evaluate
+--------------------------------
 
-.. function:: GET /users/{uid}/mysoftware/{msid}/restrictions
+.. function:: POST /users/{uid}/mysoftware/{msid}/restriction/{brid}/distributions
 
 .. sidebar:: Summary
 
-	* Method: ``GET``
-	* Response Code: ``200 / 304``
+	* Method: ``POST``
+	* Response Code: ``201``
 	* Response Formats: ``application/xml`` ``application/json``
-	* Since: ``UForge 3.6``
+	* Since: ``UForge 3.7``
 
-Retrieves all bundle restrictions for a software component. 
+Evaluate the restriction rule to retrieve all distributions for which the software component is designed for. 
 
-A list of :ref:`bundlerestriction-object` objects are returned.
+A list of :ref:`distribution-object` objects are returned. 
+
+.. note:: carriage return is not authorized in the restriction rule.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -29,19 +31,26 @@ URI Parameters
 
 * ``uid`` (required): the id of the :ref:`user-object`
 * ``msid`` (required): the id of the :ref:`mySoftware-object`
+* ``brid`` (required): the id of the :ref:`bundlerestriction-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-None
+A :ref:`bundleRestriction-object` object
 
 Example Request
 ~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/users/{uid}/mysoftware/{msid}/restrictions" -X GET \
-	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
+	curl "https://uforge.example.com/api/users/{uid}/mysoftware/{msid}/restriction/{brid}/distributions" -X POST \
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
+
+Example of representation.xml content (the request body):
+
+.. code-block:: xml
+
+
 
 .. seealso::
 
@@ -69,14 +78,9 @@ Example Request
 	 * :ref:`mySoftwareLogo-download`
 	 * :ref:`mySoftwareLogo-downloadFile`
 	 * :ref:`mySoftwareLogo-upload`
-	 * :ref:`mySoftwareOs-getAll`
-	 * :ref:`mySoftwareRestrictionOs-getAll`
-	 * :ref:`mySoftwareRestriction-add`
-	 * :ref:`mySoftwareRestriction-delete`
-	 * :ref:`mySoftwareRestriction-deleteAll`
-	 * :ref:`mySoftwareRestriction-get`
 	 * :ref:`mySoftwareRestriction-update`
 	 * :ref:`mySoftwareUsage-getAll`
+	 * :ref:`mySoftware-availableForImage`
 	 * :ref:`mySoftware-clone`
 	 * :ref:`mySoftware-create`
 	 * :ref:`mySoftware-delete`

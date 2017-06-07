@@ -12,7 +12,7 @@ orgOS_add
 	* Method: ``POST``
 	* Response Code: ``201``
 	* Response Formats: ``application/xml`` ``application/json``
-	* Since: ``UForge 3.2``
+	* Since: ``N/A``
 
 Registers a new operating system to an organization. 
 
@@ -46,11 +46,6 @@ Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:distribution xmlns:ns0="http://www.usharesoft.com/uforge">
-		<name>CentOS</name>
-		<version>6</version>
-		<arch>x86_64</arch>
-	</ns0:distribution>
 
 
 .. seealso::

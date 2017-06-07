@@ -29,7 +29,7 @@ URI Parameters
 
 * ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``eid`` (required): the id of the export ticket (provided after :ref:`appliance-export`)
-* ``aid`` (required): the id of the :ref:`appliance-object` to be exported
+* ``aid`` (required): the id of the :ref:`appliance-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

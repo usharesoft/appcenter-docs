@@ -1,9 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+           xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
            xmlns="http://www.usharesoft.com/uforge"
            attributeFormDefault="unqualified"
            elementFormDefault="unqualified"
-           targetNamespace="http://www.usharesoft.com/uforge">
+           targetNamespace="http://www.usharesoft.com/uforge"
+           jaxb:version="2.0">
 
     <xs:element name="abstractWinApplication" type="AbstractWinApplication"/>
 
@@ -316,6 +319,8 @@
     <xs:element name="targetPlatforms" type="TargetPlatforms"/>
 
     <xs:element name="uforgeError" type="UForgeError"/>
+
+    <xs:element name="unixService" type="UnixService"/>
 
     <xs:element name="user" type="User"/>
 
@@ -1539,24 +1544,14 @@
                             <xsd:documentation xml:lang="en">the uri resource of the parent object this bundle restriction belongs to</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
-                    <xs:element name="type" minOccurs="0">
+                    <xs:element name="restrictionRule" type="xs:string" minOccurs="0">
                         <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the bundle restriction type</xsd:documentation>
+                            <xsd:documentation xml:lang="en">the expression rule corresponding to restrictions</xsd:documentation>
                         </xsd:annotation>
-                        <xs:simpleType>
-                            <xs:restriction base="xs:string">
-                                <xs:enumeration value="DISTRIBUTION"/>
-                            </xs:restriction>
-                        </xs:simpleType>
                     </xs:element>
                     <xs:element name="distributionsUri" type="xs:anyURI" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the uri resource to retrieve all the operating system this bundle restriction is for</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="distributionUris" type="UriList" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the list of uri resources of each operating system this bundle restriction is for</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                 </xs:sequence>
@@ -4915,6 +4910,7 @@
                                 <xs:enumeration value="America/Bahia"/>
                                 <xs:enumeration value="America/Bahia_Banderas"/>
                                 <xs:enumeration value="America/Barbados"/>
+                                <xs:enumeration value="America/Belem"/>
                                 <xs:enumeration value="America/Belize"/>
                                 <xs:enumeration value="America/Blanc-Sablon"/>
                                 <xs:enumeration value="America/Boa_Vista"/>
@@ -5199,6 +5195,40 @@
                                 <xs:enumeration value="Europe/Zagreb"/>
                                 <xs:enumeration value="Europe/Zaporozhye"/>
                                 <xs:enumeration value="Europe/Zurich"/>
+                                <xs:enumeration value="GMT-14"/>
+                                <xs:enumeration value="GMT-13"/>
+                                <xs:enumeration value="GMT-12"/>
+                                <xs:enumeration value="GMT-11"/>
+                                <xs:enumeration value="GMT-10"/>
+                                <xs:enumeration value="GMT-9"/>
+                                <xs:enumeration value="GMT-8"/>
+                                <xs:enumeration value="GMT-7"/>
+                                <xs:enumeration value="GMT-6"/>
+                                <xs:enumeration value="GMT-5"/>
+                                <xs:enumeration value="GMT-4"/>
+                                <xs:enumeration value="GMT-3"/>
+                                <xs:enumeration value="GMT-2"/>
+                                <xs:enumeration value="GMT-1"/>
+                                <xs:enumeration value="GMT-0"/>
+                                <xs:enumeration value="GMT+0"/>
+                                <xs:enumeration value="GMT0"/>
+                                <xs:enumeration value="GMT+1"/>
+                                <xs:enumeration value="GMT+2"/>
+                                <xs:enumeration value="GMT+3"/>
+                                <xs:enumeration value="GMT+4"/>
+                                <xs:enumeration value="GMT+5"/>
+                                <xs:enumeration value="GMT+6"/>
+                                <xs:enumeration value="GMT+7"/>
+                                <xs:enumeration value="GMT+8"/>
+                                <xs:enumeration value="GMT+9"/>
+                                <xs:enumeration value="GMT+10"/>
+                                <xs:enumeration value="GMT+11"/>
+                                <xs:enumeration value="GMT+12"/>
+                                <xs:enumeration value="UCT"/>
+                                <xs:enumeration value="UTC"/>
+                                <xs:enumeration value="Universal"/>
+                                <xs:enumeration value="Greenwich"/>
+                                <xs:enumeration value="Zulu"/>
                                 <xs:enumeration value="Indian/Antananarivo"/>
                                 <xs:enumeration value="Indian/Chagos"/>
                                 <xs:enumeration value="Indian/Christmas"/>
@@ -8086,30 +8116,20 @@
     <xs:complexType name="PublishImageVSphere">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
-                Holds the information on the registration of a machine image to the VMware vSphere vCenter environment.
+                Holds the information on the registration of a template to the VMware vSphere vCenter environment.
             </xsd:documentation>
         </xsd:annotation>
         <xs:complexContent>
             <xs:extension base="PublishImage">
                 <xs:sequence>
-                    <xs:element name="clusterName" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the cluster name where to register the machine image</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="datacenterName" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the datacenter where to register the machine image</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
                     <xs:element name="datastore" type="xs:string" minOccurs="0">
                         <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the datastore where to register the machine image</xsd:documentation>
+                            <xsd:documentation xml:lang="en">the datastore where to register the template</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                     <xs:element name="displayName" type="xs:string" minOccurs="0">
                         <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the public name of the registered machine image</xsd:documentation>
+                            <xsd:documentation xml:lang="en">the public name of the registered template</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                     <xs:element name="esxHost" type="xs:string" minOccurs="0">
@@ -8119,7 +8139,7 @@
                     </xs:element>
                     <xs:element name="network" type="xs:string" minOccurs="0">
                         <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the network where to register the machine image</xsd:documentation>
+                            <xsd:documentation xml:lang="en">the network where to register the template</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                 </xs:sequence>
@@ -8691,6 +8711,16 @@
                             </xs:sequence>
                         </xs:complexType>
                     </xs:element>
+                    <xs:element name="unixServices" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">a list of :ref:`unixservice-object` objects that represent Unix services on the scanned machine</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="unixService" type="UnixService" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
 
                     <xs:element name="winServices" minOccurs="0">
                         <xsd:annotation>
@@ -8732,25 +8762,30 @@
     <xs:complexType name="ScanImport">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
-                Holds the information of the transformation process from a scan report to an appliance template.
+                Holds the information of the transformation process from a scan report to an appliance template or a golden image.
             </xsd:documentation>
         </xsd:annotation>
         <xs:complexContent>
             <xs:extension base="UForgeObject">
                 <xs:sequence>
-                    <xs:element name="applianceName" type="xs:string" minOccurs="0">
+                    <xs:element name="importedObjectName" type="xs:string" minOccurs="0">
                         <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the name of the imported appliance. This name won't be updated even if the name of the appliance gets changed</xsd:documentation>
+                            <xsd:documentation xml:lang="en">the name of the imported appliance or golden. This name won't be updated even if the name of the imported object gets changed</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
-                    <xs:element name="applianceUri" type="xs:anyURI" minOccurs="0">
+                    <xs:element name="importedObjectUri" type="xs:anyURI" minOccurs="0">
                         <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the URI of the imported appliance. This URI could be deprecated in case the template is deleted.</xsd:documentation>
+                            <xsd:documentation xml:lang="en">the URI of the imported appliance or golden. This URI could be deprecated in case the imported object is deleted.</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
-                    <xs:element name="applianceVersion" type="xs:string" minOccurs="0">
+                    <xs:element name="importedObjectVersion" type="xs:string" minOccurs="0">
                         <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the version of the imported appliance. This version won't be updated even if the version of the appliance gets changed</xsd:documentation>
+                            <xsd:documentation xml:lang="en">the version of the imported appliance or golden. This version won't be updated even if the version of the imported object gets changed</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="importedObjectDescription" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the description of the imported golden only. This description won't be updated even if the description of the imported golden gets changed</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                     <xs:element name="orgUri" type="xs:anyURI" minOccurs="0">
@@ -8771,6 +8806,11 @@
                     <xs:element name="uri" type="xs:anyURI" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the uri of the scan import</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="importedToGolden" type="xs:boolean" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">a boolean indicating if the imported object is a golden image. If set to false the imported object is an appliance template</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                 </xs:sequence>
@@ -9214,6 +9254,11 @@
                             <xsd:documentation xml:lang="en">the uri resource to retrieve all the imports</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
+                    <xs:element name="goldenImportsUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource to retrieve all the golden imports</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
                     <xs:element name="installProfile" type="InstallProfile" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the install profile of the scanned system</xsd:documentation>
@@ -9598,9 +9643,9 @@
                             <xsd:documentation xml:lang="en">the revision number of the software bundle</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
-                    <xs:element name="bundleRestrictionsUri" type="xs:anyURI" minOccurs="0">
+                    <xs:element name="bundleRestriction" type="BundleRestriction" minOccurs="0">
                         <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the uri resource to retrieve the restrictions for this software bundle</xsd:documentation>
+                            <xsd:documentation xml:lang="en">the restriction for this software bundle</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                     <xs:element name="artifactsUri" type="xs:anyURI" minOccurs="0">
@@ -9611,16 +9656,6 @@
                     <xs:element name="uri" type="xs:anyURI" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the uri resource of this software bundle object</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="distributionsUri" type="xs:anyURI" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the uri resource to retrieve all the operating system this software bundle is designed for</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="distributionUris" type="UriList" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the list of uri resources of each operating system this software bundle is designed for</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                     <xs:element name="exportUri" type="xs:anyURI" minOccurs="0">
@@ -9653,14 +9688,14 @@
                             <xsd:documentation xml:lang="en">the website URL of the maintainer</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
-                    <xs:element name="bundleRestrictionUris" type="UriList" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the list of uri resources of each restrictions for this software bundle</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
                     <xs:element name="softwareArtifactUris" type="UriList" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the list of uri resources for each software artifacts in the software bundle</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="formatDependent" type="xs:boolean" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">a boolean highlighting if the Software bundle is restricted on target format</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                 </xs:sequence>
@@ -11246,116 +11281,26 @@
                                 <xs:element name="datacentre" minOccurs="0" maxOccurs="unbounded">
                                     <xs:complexType>
                                         <xs:sequence>
-                                            <xs:element name="clusters" minOccurs="0">
+                                            <xs:element name="hosts" minOccurs="0">
                                                 <xs:complexType>
                                                     <xs:sequence>
-                                                        <xs:element name="cluster" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:element name="host" minOccurs="0" maxOccurs="unbounded">
                                                             <xs:complexType>
                                                                 <xs:sequence>
-                                                                    <xs:element name="cpu" type="PCpu" minOccurs="0"/>
-                                                                    <xs:element name="datastores" minOccurs="0">
+                                                                    <xs:element name="datastoresNames" minOccurs="0">
                                                                         <xs:complexType>
                                                                             <xs:sequence>
-                                                                                <xs:element name="datastore" minOccurs="0" maxOccurs="unbounded">
-                                                                                    <xs:complexType>
-                                                                                        <xs:sequence>
-                                                                                            <xs:element name="freespace" type="xs:string" minOccurs="0"/>
-                                                                                            <xs:element name="name" type="xs:string" minOccurs="0"/>
-                                                                                            <xs:element name="status" minOccurs="0">
-                                                                                                <xs:simpleType>
-                                                                                                    <xs:restriction base="xs:string">
-                                                                                                        <xs:enumeration value="green"/>
-                                                                                                        <xs:enumeration value="grey"/>
-                                                                                                        <xs:enumeration value="red"/>
-                                                                                                        <xs:enumeration value="yellow"/>
-                                                                                                    </xs:restriction>
-                                                                                                </xs:simpleType>
-                                                                                            </xs:element>
-                                                                                            <xs:element name="url" type="xs:string" minOccurs="0"/>
-                                                                                        </xs:sequence>
-                                                                                    </xs:complexType>
-                                                                                </xs:element>
-                                                                            </xs:sequence>
-                                                                        </xs:complexType>
-                                                                    </xs:element>
-                                                                    <xs:element name="hosts" minOccurs="0">
-                                                                        <xs:complexType>
-                                                                            <xs:sequence>
-                                                                                <xs:element name="host" minOccurs="0" maxOccurs="unbounded">
-                                                                                    <xs:complexType>
-                                                                                        <xs:sequence>
-                                                                                            <xs:element name="cpu" type="PCpu" minOccurs="0"/>
-                                                                                            <xs:element name="datastoresNames" minOccurs="0">
-                                                                                                <xs:complexType>
-                                                                                                    <xs:sequence>
-                                                                                                        <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-                                                                                                    </xs:sequence>
-                                                                                                </xs:complexType>
-                                                                                            </xs:element>
-                                                                                            <xs:element name="name" type="xs:string" minOccurs="0"/>
-                                                                                            <xs:element name="networksNames" minOccurs="0">
-                                                                                                <xs:complexType>
-                                                                                                    <xs:sequence>
-                                                                                                        <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-                                                                                                    </xs:sequence>
-                                                                                                </xs:complexType>
-                                                                                            </xs:element>
-                                                                                            <xs:element name="ram" type="PRam" minOccurs="0"/>
-                                                                                            <xs:element name="status" minOccurs="0">
-                                                                                                <xs:simpleType>
-                                                                                                    <xs:restriction base="xs:string">
-                                                                                                        <xs:enumeration value="green"/>
-                                                                                                        <xs:enumeration value="grey"/>
-                                                                                                        <xs:enumeration value="red"/>
-                                                                                                        <xs:enumeration value="yellow"/>
-                                                                                                    </xs:restriction>
-                                                                                                </xs:simpleType>
-                                                                                            </xs:element>
-                                                                                        </xs:sequence>
-                                                                                    </xs:complexType>
-                                                                                </xs:element>
+                                                                                <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
                                                                             </xs:sequence>
                                                                         </xs:complexType>
                                                                     </xs:element>
                                                                     <xs:element name="name" type="xs:string" minOccurs="0"/>
-                                                                    <xs:element name="networks" minOccurs="0">
+                                                                    <xs:element name="networksNames" minOccurs="0">
                                                                         <xs:complexType>
                                                                             <xs:sequence>
-                                                                                <xs:element name="network" minOccurs="0" maxOccurs="unbounded">
-                                                                                    <xs:complexType>
-                                                                                        <xs:sequence>
-                                                                                            <xs:element name="accessible" type="xs:boolean" minOccurs="0"/>
-                                                                                            <xs:element name="name" type="xs:string" minOccurs="0"/>
-                                                                                            <xs:element name="status" type="xs:string" minOccurs="0"/>
-                                                                                            <xs:element name="virtualMachines" minOccurs="0">
-                                                                                                <xs:complexType>
-                                                                                                    <xs:sequence>
-                                                                                                        <xs:element name="virtualMachine" minOccurs="0" maxOccurs="unbounded">
-                                                                                                            <xs:complexType>
-                                                                                                                <xs:sequence>
-                                                                                                                    <xs:element name="name" type="xs:string" minOccurs="0"/>
-                                                                                                                </xs:sequence>
-                                                                                                            </xs:complexType>
-                                                                                                        </xs:element>
-                                                                                                    </xs:sequence>
-                                                                                                </xs:complexType>
-                                                                                            </xs:element>
-                                                                                        </xs:sequence>
-                                                                                    </xs:complexType>
-                                                                                </xs:element>
+                                                                                <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
                                                                             </xs:sequence>
                                                                         </xs:complexType>
-                                                                    </xs:element>
-                                                                    <xs:element name="ram" type="PRam" minOccurs="0"/>
-                                                                    <xs:element name="status" minOccurs="0">
-                                                                        <xs:simpleType>
-                                                                            <xs:restriction base="xs:string">
-                                                                                <xs:enumeration value="green"/>
-                                                                                <xs:enumeration value="grey"/>
-                                                                                <xs:enumeration value="red"/>
-                                                                                <xs:enumeration value="yellow"/>
-                                                                            </xs:restriction>
-                                                                        </xs:simpleType>
                                                                     </xs:element>
                                                                 </xs:sequence>
                                                             </xs:complexType>
@@ -11364,16 +11309,6 @@
                                                 </xs:complexType>
                                             </xs:element>
                                             <xs:element name="name" type="xs:string" minOccurs="0"/>
-                                            <xs:element name="status" minOccurs="0">
-                                                <xs:simpleType>
-                                                    <xs:restriction base="xs:string">
-                                                        <xs:enumeration value="green"/>
-                                                        <xs:enumeration value="grey"/>
-                                                        <xs:enumeration value="red"/>
-                                                        <xs:enumeration value="yellow"/>
-                                                    </xs:restriction>
-                                                </xs:simpleType>
-                                            </xs:element>
                                         </xs:sequence>
                                     </xs:complexType>
                                 </xs:element>
@@ -11648,6 +11583,35 @@
                     <xs:element name="uri" type="xs:anyURI" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the resource uri of the service</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="UnixService">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Provides information of an Unix Service
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObject">
+                <xs:sequence>
+                    <xs:element name="serviceManager" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">The service manager</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="serviceName" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">The name of the service</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="serviceStatus" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">The status of the service</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                 </xs:sequence>

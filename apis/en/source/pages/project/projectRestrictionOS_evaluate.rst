@@ -1,32 +1,35 @@
 .. Copyright 2017 FUJITSU LIMITED
 
-.. _projectRestriction-add:
+.. _projectRestrictionOS-evaluate:
 
-projectRestriction_add
-----------------------
+projectRestrictionOS_evaluate
+-----------------------------
 
-.. function:: POST /orgs/{oid}/projects/{pid}/restrictions
+.. function:: POST /orgs/{oid}/projects/{pid}/restriction/{brid}/distributions
 
 .. sidebar:: Summary
 
 	* Method: ``POST``
 	* Response Code: ``201``
 	* Response Formats: ``application/xml`` ``application/json``
-	* Since: ``UForge 3.6``
+	* Since: ``UForge 3.7``
 
-Adds a new Bundle Restriction to a project. 
+Evaluate the restriction rule to retrieve all distributions for which the project is designed for. 
 
-Please refer to :ref:`bundlerestriction-object` for a complete list of all the ``bundle restriction`` attributes.
+A list of :ref:`distribution-object` objects are returned. 
+
+.. note:: carriage return is not authorized in the restriction rule.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
 
 * Requires Authentication: ``true``
-* Entitlements Required: ``software_upload``
+* Entitlements Required: ``appliance_create``
 
 URI Parameters
 ~~~~~~~~~~~~~~
 
+* ``brid`` (required): the id of the :ref:`bundlerestriction-object`
 * ``pid`` (required): the id of the :ref:`project-object`
 * ``oid`` (required): the id of the :ref:`org-object`
 
@@ -40,17 +43,13 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/orgs/{oid}/projects/{pid}/restrictions" -X POST \
+	curl "https://uforge.example.com/api/orgs/{oid}/projects/{pid}/restriction/{brid}/distributions" -X POST \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
 
 Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
-	<ns0:bundleRestriction xmlns:ns0="http://www.usharesoft.com/uforge">
-		<parentUri>orgs/{oid}/projects/{pid}</parentUri>
-		<type>DISTRIBUTION</type>
-	</ns0:bundleRestriction>
 
 
 .. seealso::
@@ -58,13 +57,13 @@ Example of representation.xml content (the request body):
 	 * :ref:`project-object`
 	 * :ref:`projectArtifact-addChild`
 	 * :ref:`projectArtifact-addOrRemoveFileFromCache`
+	 * :ref:`projectArtifact-create`
 	 * :ref:`projectArtifact-createFromRemoteServer`
 	 * :ref:`projectArtifact-delete`
 	 * :ref:`projectArtifact-deleteAll`
 	 * :ref:`projectArtifact-download`
 	 * :ref:`projectArtifact-downloadFile`
 	 * :ref:`projectArtifact-get`
-	 * :ref:`projectArtifact-getAll`
 	 * :ref:`projectArtifact-update`
 	 * :ref:`projectArtifact-updateAll`
 	 * :ref:`projectArtifact-upload`
@@ -72,13 +71,8 @@ Example of representation.xml content (the request body):
 	 * :ref:`projectLogo-download`
 	 * :ref:`projectLogo-downloadFile`
 	 * :ref:`projectLogo-upload`
-	 * :ref:`projectOs-getAll`
-	 * :ref:`projectRestrictionOs-getAll`
-	 * :ref:`projectRestriction-delete`
-	 * :ref:`projectRestriction-deleteAll`
-	 * :ref:`projectRestriction-get`
-	 * :ref:`projectRestriction-getAll`
 	 * :ref:`projectRestriction-update`
+	 * :ref:`project-availableForImage`
 	 * :ref:`project-create`
 	 * :ref:`project-delete`
 	 * :ref:`project-get`

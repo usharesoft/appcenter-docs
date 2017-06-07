@@ -1,11 +1,11 @@
 .. Copyright 2017 FUJITSU LIMITED
 
-.. _scanImportStatus-get:
+.. _scanImportToTemplate-getAll:
 
-scanImportStatus_get
---------------------
+scanImportToTemplate_getAll
+---------------------------
 
-.. function:: GET /users/{uid}/scannedinstances/{siid}/scans/{sid}/imports/status/
+.. function:: GET /users/{uid}/scannedinstances/{siid}/scans/{sid}/imports
 
 .. sidebar:: Summary
 
@@ -14,9 +14,9 @@ scanImportStatus_get
 	* Response Formats: ``application/xml`` ``application/json``
 	* Since: ``UForge 3.4``
 
-Retrieves all the scan import ticket statuses of a scan report that has been transformed or in the process of being transformed to an ``appliance``. 
+Retrieves all the scan import tickets of a scan report that has been transformed to an ``appliance``. 
 
-You can use the query parameter ``i`` to retrieve a subset of the status tickets.
+By importing a scan report a new ``appliance`` object is created to your ``Appliance Library``.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -41,7 +41,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/users/{uid}/scannedinstances/{siid}/scans/{sid}/imports/status/" -X GET \
+	curl "https://uforge.example.com/api/users/{uid}/scannedinstances/{siid}/scans/{sid}/imports" -X GET \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::
@@ -50,9 +50,9 @@ Example Request
 	 * :ref:`machinescan-api-resources`
 	 * :ref:`machinescaninstance-api-resources`
 	 * :ref:`scan-object`
-	 * :ref:`scanImport-cancel`
-	 * :ref:`scanImport-delete`
-	 * :ref:`scanImport-getAll`
-	 * :ref:`scan-import`
+	 * :ref:`scanImportToTemplateStatus-get`
+	 * :ref:`scanImportToTemplate-cancel`
+	 * :ref:`scanImportToTemplate-delete`
+	 * :ref:`scanImportToTemplate-import`
 	 * :ref:`scanimport-object`
 	 * :ref:`scannedinstance-object`

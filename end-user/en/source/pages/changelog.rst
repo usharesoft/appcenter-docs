@@ -3,6 +3,22 @@
 Changelog
 =========
 
+3.7.fp5
+-------
+
+Release Date: 
+
+New Features
+~~~~~~~~~~~~
+* Administrators can now create a golden image from the UI. Once a Windows scan is complete, the Administrator can import the scan as a golden image. This golden image will be available to users to create new Windows appliances.
+
+Enhancements
+~~~~~~~~~~~~
+
+Bug Fixes
+~~~~~~~~~
+
+
 3.7.fp4
 -------
 

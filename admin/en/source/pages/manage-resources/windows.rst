@@ -9,23 +9,18 @@ Microsoft Windows and UForge
 
 Within UForge, Microsoft Windows is treated differently from other Linux/UNIX operating systems. In fact, Windows is not bundled with packages. Consequently, it is not possible to create standard (package based) OS Profile as for all the other supported distributions.
 
-Instead, UForge uses a Golden Image as a profile. A Golden Image is an image that has been by the customer (see :ref:`create-golden-image`) that contains the basic installation of the Windows version and some extra files. You can generate Golden Images at any time.
+Instead, UForge uses a Golden Image as a profile. A Golden Image is an image that has been created by the customer (see :ref:`create-golden-image`) that contains the basic installation of the Windows version and some extra files. You can generate Golden Images at any time.
 
 A Golden Image can be between 5 to 10 Gb, depending on the selected version.
 
-You will need Golden Images to create Windows appliance templates. If you want to incorporate a Windows update, then you need to create and install a new set of Golden Images. You can create Golden Images yourself.
+You will need Golden Images to create Windows appliance templates. If you want to incorporate a Windows update, then you need to create a new set of Golden Images. You can create Golden Images yourself using two different methods:
 
-.. note:: A good knowledge of Microsoft Windows is required to create your own Golden Images.
-
-Generating all the profiles available (in one language) takes roughly 4 to 7 hours depending on the machine/network performance. You can regenerate Golden Images as often as you like, based on your individual needs. However, it is recommended that you regenerate Golden Image only for getting specific updates. The Golden Image includes all updates at the moment when generated and therefore you will not need to run package updates later. 
+	* scan a Windows machine and import it to UForge as a Golden Image (:ref:`scan-to-golden`)
+	* create the Golden Image manually and install it on UForge (:ref:`create-golden-image`)
 
 Within UForge, the Golden Image used when you create appliances will be the last Golden Image created. In future releases, the different Golden Images will appear as Milestones. 
 
-Once the Golden Image is created, you will need to
-
-	1. Save it to the proper location (as described in :ref:`store-updated-golden`). 
-	2. Store the golden images (all profiles in one language) as described in :ref:`store-updated-golden`. You will need about 40Gb of disk space on the UForge NAS. 
-	3. Add the Golden Image to your UForge AppCenter, as described in :ref:`add-golden-toAppCenter`.
+.. _windows-versions:
 
 Supported Microsoft Windows Versions
 ------------------------------------
@@ -57,20 +52,12 @@ Using Microsoft Windows Key Mechanism
 
 Microsoft Windows Operating System requires a key validation. UForge generates images without a key in it. Users have 30 days to enter their key once the Appliance is booted.
 
-
-Workflow for Windows Golden Image
----------------------------------
-
-The following graphic illustrates the workflow to obtain and install Windows Golden Images.
-
-.. image:: /images/golden-image-workflow.jpg
-
 .. _first-windows-install:
 
 First Installation of Microsoft Windows
 ---------------------------------------
 
-To install Microsoft Windows, follow the instructions below. This example is for Microsoft Windows Server 2008R2. If you wish to install for Microsoft Windows Server 2012, 2012R2 or 2016, replace the string ``Server2008R2`` with the version you want to install in all commands below. 
+To install Microsoft Windows, follow the instructions below. This example is for Microsoft Windows Server 2008R2. If you want to install for Microsoft Windows Server 2012, 2012R2 or 2016, replace the string ``Server2008R2`` with the version you want to install in all commands below. 
 
 	1.  First population of Windows::
 

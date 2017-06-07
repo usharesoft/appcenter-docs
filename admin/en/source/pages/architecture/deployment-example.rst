@@ -77,6 +77,25 @@ It may be more logical to group the DB, LDAP and Generation Cluster (scheduler) 
 
 .. note:: If you are using high availability and you choose to split the Webservice and SYNCOPE on separate nodes, then you need a shared NAD/SAN (/tmp/userdata). 
 
+Compute Node Hard Drive
+~~~~~~~~~~~~~~~~~~~~~~~
+
+In order to ensure best performance when generating machine images, it is recommended to use a local SSD.
+The size of the disk depends on the number of parallel image generations and the size of images.
+For example, if 4 generations of 60 GB Windows images are expected to run in parallel, disk size should be at least 240 GB.
+
+NAS/SAN
+~~~~~~~
+
+The NAS/SAN is a storage area which will typically contain UForge Repository data, such as:
+
+	* Operating system packages and updates
+	* Project catalog binaries
+	* User ``My Software`` binaries
+	* Generated images from users using the platform
+	* Data from user scans
+
+
 Security Options
 ----------------
 

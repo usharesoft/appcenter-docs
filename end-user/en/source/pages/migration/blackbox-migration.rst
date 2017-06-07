@@ -5,7 +5,7 @@
 Blackbox Migration Process
 --------------------------
 
-The goal of black box migration is to reproduce a near identical copy of the currently running workload.  However, there will always be small differences between the two workloads after migration is complete.  When scanning a system the following information is detected:
+The goal of black box migration is to reproduce a near identical copy of the currently running workload.  However, there will always be small differences between the two workloads after migration is complete, notably some services are disabled or enabled depending on the target machine image being created (refer to :ref:`service-state`).  When scanning a system the following information is detected:
 
 	* all the files and packages on the system (including configuration information). If you have selected a scan without overlay, then extra files and specific configuration information will be detected but will not be included in the report.
 	* network settings including all NICs. Note that if the first card is static, it will be changed to DHCP.
@@ -26,11 +26,9 @@ When you generate a machine image from the scan, all the information included in
 
 .. note:: If you plan to migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/solutions/cloud/k5/>`_, you must also do the following before scanning:
 
-	* Uninstall VMWare Tools (if installed).
-	* Retrieve Transport Agent Software from `K5 Support <mailto:FCSK5_GSD@ph.fujitsu.com>`_.
-	* Install Transport Agent Software.
-	* Disable NLA for RDP (Please refer to official Microsoft documentation `Configure Network Level Authentication for Remote Desktop Services Connections <https://technet.microsoft.com/en-us/library/cc732713(v=ws.11).aspx/>`_).
-	* Uninstall CloudBase-Init (if installed).
+	1. Uninstall VMWare Tools (if installed).
+	2. Disable NLA for RDP (Please refer to official Microsoft documentation `Configure Network Level Authentication for Remote Desktop Services Connections <https://technet.microsoft.com/en-us/library/cc732713(v=ws.11).aspx/>`_).
+	3. Uninstall CloudBase-Init (if installed).
 
 	For more detailed information, please refer to `official Fujitsu K5 IaaS Documentation <http://www.fujitsu.com/uk/Images/k5-iaas-features-handbook.pdf>`_.
 

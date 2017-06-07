@@ -6,10 +6,9 @@ Changelog
 3.7.fp5
 -------
 
-Release Date: 
-
 New Features
 ~~~~~~~~~~~~
+* Add a mechanism to restrict the usage of a project (for Administrator) or software bundle (in MySoftware for users) based on a Distribution name, family, architecture or for an output format
 * Administrators can now create a golden image from the UI. Once a Windows scan is complete, the Administrator can import the scan as a golden image. This golden image will be available to users to create new Windows appliances.
 
 Enhancements

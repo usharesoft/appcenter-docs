@@ -6,7 +6,7 @@ Changelog
 3.7.fp5
 -------
 
-Release Date: 2017-06-09
+Release Date: 2017-06-12
 
 New Features
 ~~~~~~~~~~~~
@@ -22,23 +22,18 @@ Bug Fixes
 * 7429 Error message is always logged in oar error log "unary operator expected" when generating Linux image.
 * 7361 Windows generation error when disk too small does not raise an understandable error message
 * 7620 db_modifs and postupdate modifs applied to several versions of UForge are not handled properly by update_mechanism
-* 7608 qtbase recipe fails during oe-lite compilation
 * 7758 On the generation UI pages, there is a CSS issue between headers and content
 * 7853 License of WS2008R2 is displayed on WS2012R2
 * 7771 Hover message on items in scan list is not internationalized
 * 7871 Updating the certificate of a google cred account generates a null pointer exception and "this should never happen, please updateTemplateInfo" in the UI
 * 7682 Published image tag summary displayed wrong tooltip
-* 7635 Password input field of artifact accounts
-* 7584 Fix bug Applications and Services for windows are not parsed correctly
-* 7767 Fix missing timezone data on branch master
+* 7635 The type of the password input field of artifact accounts is inconsistent in the UI
+* 7584 Applications and Services for Windows are not parsed correctly
+* 7767 Missing timezone data on branch master
 * 7897 500 error occurs in image generation using a template without a partition table
-* 7669 Bug in ScanActionHandler of eventcontroller
-* 6285 AWS publication is not working behing an external http proxy
+* 7669 The EventController service does not consume ScanAction event correctly
+* 6285 AWS publication is not working behind an external http proxy
 * 7630 Outscale publish connector is not working anymore
-* 7298 Import/Export Software bundle fails with "Permission denied error"
-* 7820 Cli rpm generation on Jenkins is failing
-* 6789 When booting a migrated instance, haldaemon starts although autostart setting is off in the source machine
-* 6331 Remove log messages not "Futjitsu way" compatible
 
 3.7.fp4
 -------

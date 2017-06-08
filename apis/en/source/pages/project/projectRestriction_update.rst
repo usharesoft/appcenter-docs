@@ -5,18 +5,20 @@
 projectRestriction_update
 -------------------------
 
-.. function:: PUT /orgs/{oid}/projects/{pid}/restrictions/{brid}
+.. function:: PUT /orgs/{oid}/projects/{pid}/restriction/{brid}
 
 .. sidebar:: Summary
 
 	* Method: ``PUT``
 	* Response Code: ``200``
 	* Response Formats: ``application/xml`` ``application/json``
-	* Since: ``UForge 3.6``
+	* Since: ``UForge 3.7``
 
 Updates the bundle restriction for a project. 
 
-This only updates the list of distributions for which the project is designed for
+This only updates the expression rule of the bundle restriction 
+
+.. note:: carriage return is not authorized in the restriction rule.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -27,7 +29,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``brid`` (required): the id of the :ref:`bundlerestriction-object`
+* ``brid`` (required): the id of the :ref:`bundlerestriction-object` to update
 * ``pid`` (required): the id of the :ref:`project-object`
 * ``oid`` (required): the id of the :ref:`org-object`
 
@@ -41,7 +43,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/orgs/{oid}/projects/{pid}/restrictions/{brid}" -X PUT \
+	curl "https://uforge.example.com/api/orgs/{oid}/projects/{pid}/restriction/{brid}" -X PUT \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
 
 Example of representation.xml content (the request body):
@@ -69,13 +71,8 @@ Example of representation.xml content (the request body):
 	 * :ref:`projectLogo-download`
 	 * :ref:`projectLogo-downloadFile`
 	 * :ref:`projectLogo-upload`
-	 * :ref:`projectOs-getAll`
-	 * :ref:`projectRestrictionOs-getAll`
-	 * :ref:`projectRestriction-add`
-	 * :ref:`projectRestriction-delete`
-	 * :ref:`projectRestriction-deleteAll`
-	 * :ref:`projectRestriction-get`
-	 * :ref:`projectRestriction-getAll`
+	 * :ref:`projectRestrictionOS-evaluate`
+	 * :ref:`project-availableForImage`
 	 * :ref:`project-create`
 	 * :ref:`project-delete`
 	 * :ref:`project-get`

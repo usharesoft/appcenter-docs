@@ -3,6 +3,21 @@
 Changelog
 =========
 
+3.7.fp5
+-------
+
+New Features
+~~~~~~~~~~~~
+* Add a mechanism to restrict the usage of a project (for Administrator) or software bundle (in MySoftware for users) based on a Distribution name, family, architecture or for an output format
+* Administrators can now create a golden image from the UI. Once a Windows scan is complete, the Administrator can import the scan as a golden image. This golden image will be available to users to create new Windows appliances.
+
+Enhancements
+~~~~~~~~~~~~
+
+Bug Fixes
+~~~~~~~~~
+
+
 3.7.fp4
 -------
 
@@ -15,6 +30,7 @@ New Features
 * Support to create appliance templates based on Windows 2016 operating system
 * Ability to scan and migrate Windows 2016 instances
 * Application and services information now captured and displayed when scanning a Windows-based instance
+* Publication to VMware vCenter improved. UForge now publishes templates to VMware vCenter, rather than instances. The datacenter information (ESXi hypervisor, datastore, network name, etc) is automatically retrieved by UForge and prefilled for publication to VMware VCenter.
 
 Enhancements
 ~~~~~~~~~~~~

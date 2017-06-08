@@ -1,9 +1,9 @@
 .. Copyright 2017 FUJITSU LIMITED
 
-.. _scan-import:
+.. _scanImportToTemplate-import:
 
-scan_import
------------
+scanImportToTemplate_import
+---------------------------
 
 .. function:: POST /users/{uid}/scannedinstances/{siid}/scans/{sid}/imports
 
@@ -16,9 +16,9 @@ scan_import
 
 Request to import a scan report to your ``Appliance Library``, creating a new ``appliance``. 
 
-This response body is an ``scan import ticket`` that provides the meta-data of the appliance to be created from the scan report.  The actual import is done asynchronously.  To poll the status of this import, use :ref:`scanImportStatus-get`. 
+This response body is an ``scan import ticket`` that provides the meta-data of the appliance to be created from the scan report.  The actual import is done asynchronously.  To poll the status of this import, use :ref:`scanImportToTemplateStatus-get`. 
 
-To cancel an import use :ref:`scanImport-cancel`
+To cancel an import use :ref:`scanImportToTemplate-cancel`
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -51,8 +51,8 @@ Example of representation.xml content (the request body):
 .. code-block:: xml
 
 	<ns0:scanImport xmlns:ns0="http://www.usharesoft.com/uforge">
-		<applianceName>Import Example</applianceName>
-		<applianceVersion>1.0</applianceVersion>
+		<importedObjectName>Import Example</importedObjectName>
+		<importedObjectVersion>1.0</importedObjectVersion>
 		<orgUri>orgs/1</orgUri>
 	</ns0:scanImport>
 
@@ -63,9 +63,9 @@ Example of representation.xml content (the request body):
 	 * :ref:`machinescan-api-resources`
 	 * :ref:`machinescaninstance-api-resources`
 	 * :ref:`scan-object`
-	 * :ref:`scanImportStatus-get`
-	 * :ref:`scanImport-cancel`
-	 * :ref:`scanImport-delete`
-	 * :ref:`scanImport-getAll`
+	 * :ref:`scanImportToTemplateStatus-get`
+	 * :ref:`scanImportToTemplate-cancel`
+	 * :ref:`scanImportToTemplate-delete`
+	 * :ref:`scanImportToTemplate-getAll`
 	 * :ref:`scanimport-object`
 	 * :ref:`scannedinstance-object`

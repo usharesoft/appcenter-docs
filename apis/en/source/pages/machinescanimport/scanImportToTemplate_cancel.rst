@@ -1,22 +1,20 @@
 .. Copyright 2017 FUJITSU LIMITED
 
-.. _scanImport-getAll:
+.. _scanImportToTemplate-cancel:
 
-scanImport_getAll
------------------
+scanImportToTemplate_cancel
+---------------------------
 
-.. function:: GET /users/{uid}/scannedinstances/{siid}/scans/{sid}/imports
+.. function:: DELETE /users/{uid}/scannedinstances/{siid}/scans/{sid}/imports/{iid}/status
 
 .. sidebar:: Summary
 
-	* Method: ``GET``
-	* Response Code: ``200 / 304``
+	* Method: ``DELETE``
+	* Response Code: ``204 / 200``
 	* Response Formats: ``application/xml`` ``application/json``
 	* Since: ``UForge 3.4``
 
-Retrieves all the scan import tickets of a scan report that has been transformed to an ``appliance``. 
-
-By importing a scan report a new ``appliance`` object is created to your ``Appliance Library``.
+Cancels the process to import a scan report to your ``Appliance Library``.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -29,6 +27,7 @@ URI Parameters
 
 * ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``siid`` (required): the id of the :ref:`scannedinstance-object`
+* ``iid`` (required): the id of the :ref:`scanimport-object`
 * ``sid`` (required): the id of the :ref:`scan-object`
 
 HTTP Request Body Parameters
@@ -41,7 +40,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/users/{uid}/scannedinstances/{siid}/scans/{sid}/imports" -X GET \
+	curl "https://uforge.example.com/api/users/{uid}/scannedinstances/{siid}/scans/{sid}/imports/{iid}/status" -X DELETE \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::
@@ -50,9 +49,9 @@ Example Request
 	 * :ref:`machinescan-api-resources`
 	 * :ref:`machinescaninstance-api-resources`
 	 * :ref:`scan-object`
-	 * :ref:`scanImportStatus-get`
-	 * :ref:`scanImport-cancel`
-	 * :ref:`scanImport-delete`
-	 * :ref:`scan-import`
+	 * :ref:`scanImportToTemplateStatus-get`
+	 * :ref:`scanImportToTemplate-delete`
+	 * :ref:`scanImportToTemplate-getAll`
+	 * :ref:`scanImportToTemplate-import`
 	 * :ref:`scanimport-object`
 	 * :ref:`scannedinstance-object`

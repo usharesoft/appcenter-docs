@@ -26,14 +26,9 @@ Project API Resources
 	* :ref:`projectLogo-download`: Downloads the logo file for the specified project
 	* :ref:`projectLogo-downloadFile`: Downloads the logo file for the specified project
 	* :ref:`projectLogo-upload`: Uploads a logo file for the specified project
-	* :ref:`projectOs-getAll`: Retrieves all the distributions where a project component can be used
-	* :ref:`projectRestrictionOs-getAll`: Retrieves all the distributions of the bundle restirction
-	* :ref:`projectRestriction-add`: Adds a new Bundle Restriction to a project
-	* :ref:`projectRestriction-delete`: Removes a bundle restriction for a project
-	* :ref:`projectRestriction-deleteAll`: Removes all the bundle restrictions for a project
-	* :ref:`projectRestriction-get`: Retrieves a bundle restriction for a project
-	* :ref:`projectRestriction-getAll`: Retrieves all bundle restrictions for a project
+	* :ref:`projectRestrictionOS-evaluate`: Evaluate the restriction rule to retrieve all distributions for which the project is designed for
 	* :ref:`projectRestriction-update`: Updates the bundle restriction for a project
+	* :ref:`project-availableForImage`: Gets the project if it's available for the image that will be generated
 	* :ref:`project-create`: Create a new project in the ``Project Catalog``
 	* :ref:`project-delete`: Removes a project from the ``Project Catalog``
 	* :ref:`project-get`: Retrieves the information of a project
@@ -65,14 +60,9 @@ Project API Resources
     projectLogo_download
     projectLogo_downloadFile
     projectLogo_upload
-    projectOs_getAll
-    projectRestrictionOs_getAll
-    projectRestriction_add
-    projectRestriction_delete
-    projectRestriction_deleteAll
-    projectRestriction_get
-    projectRestriction_getAll
+    projectRestrictionOS_evaluate
     projectRestriction_update
+    project_availableForImage
     project_create
     project_delete
     project_get

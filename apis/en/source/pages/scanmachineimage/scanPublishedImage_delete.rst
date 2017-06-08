@@ -28,7 +28,7 @@ URI Parameters
 * ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``siid`` (required): the id of the :ref:`scannedinstance-object`
 * ``itid`` (required): the id of the :ref:`image-object`
-* ``pitid`` (required): the id of the :ref:`publishimage-object` to delete
+* ``pitid`` (required): the id of the :ref:`publishimage-object`
 * ``sid`` (required): the id of the :ref:`scan-object`
 
 HTTP Request Body Parameters

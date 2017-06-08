@@ -5,18 +5,20 @@
 mySoftwareRestriction_update
 ----------------------------
 
-.. function:: PUT /users/{uid}/mysoftware/{msid}/restrictions/{brid}
+.. function:: PUT /users/{uid}/mysoftware/{msid}/restriction/{brid}
 
 .. sidebar:: Summary
 
 	* Method: ``PUT``
 	* Response Code: ``200``
 	* Response Formats: ``application/xml`` ``application/json``
-	* Since: ``UForge 3.6``
+	* Since: ``UForge 3.7``
 
-Updates the bundle restriction for a software component. 
+Updates the bundle restriction for a mySoftware. 
 
-This only updates the list of distributions for which the software component is designed for
+This only updates the expression rule of the bundle restriction 
+
+.. note:: carriage return is not authorized in the restriction rule.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -29,7 +31,7 @@ URI Parameters
 
 * ``uid`` (required): the id of the :ref:`user-object`
 * ``msid`` (required): the id of the :ref:`mySoftware-object`
-* ``brid`` (required): the id of the :ref:`bundlerestriction-object`
+* ``brid`` (required): the id of the :ref:`bundlerestriction-object` to update
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -41,7 +43,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/users/{uid}/mysoftware/{msid}/restrictions/{brid}" -X PUT \
+	curl "https://uforge.example.com/api/users/{uid}/mysoftware/{msid}/restriction/{brid}" -X PUT \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
 
 Example of representation.xml content (the request body):
@@ -76,18 +78,9 @@ Example of representation.xml content (the request body):
 	 * :ref:`mySoftwareLogo-download`
 	 * :ref:`mySoftwareLogo-downloadFile`
 	 * :ref:`mySoftwareLogo-upload`
-	 * :ref:`mySoftwareOs-getAll`
-	 * :ref:`mySoftwareRestrictionOs-getAll`
-	 * :ref:`mySoftwareRestrictionOs-getAll`
-	 * :ref:`mySoftwareRestriction-add`
-	 * :ref:`mySoftwareRestriction-delete`
-	 * :ref:`mySoftwareRestriction-delete`
-	 * :ref:`mySoftwareRestriction-deleteAll`
-	 * :ref:`mySoftwareRestriction-deleteAll`
-	 * :ref:`mySoftwareRestriction-get`
-	 * :ref:`mySoftwareRestriction-getAll`
-	 * :ref:`mySoftwareRestriction-update`
+	 * :ref:`mySoftwareRestrictionOS-evaluate`
 	 * :ref:`mySoftwareUsage-getAll`
+	 * :ref:`mySoftware-availableForImage`
 	 * :ref:`mySoftware-clone`
 	 * :ref:`mySoftware-create`
 	 * :ref:`mySoftware-delete`

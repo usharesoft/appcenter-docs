@@ -1,9 +1,9 @@
 .. Copyright 2017 FUJITSU LIMITED
 
-.. _scanImport-delete:
+.. _scanImportToTemplate-delete:
 
-scanImport_delete
------------------
+scanImportToTemplate_delete
+---------------------------
 
 .. function:: DELETE /users/{uid}/scannedinstances/{siid}/scans/{sid}/imports/{iid}
 
@@ -49,9 +49,9 @@ Example Request
 	 * :ref:`machinescan-api-resources`
 	 * :ref:`machinescaninstance-api-resources`
 	 * :ref:`scan-object`
-	 * :ref:`scanImportStatus-get`
-	 * :ref:`scanImport-cancel`
-	 * :ref:`scanImport-getAll`
-	 * :ref:`scan-import`
+	 * :ref:`scanImportToTemplateStatus-get`
+	 * :ref:`scanImportToTemplate-cancel`
+	 * :ref:`scanImportToTemplate-getAll`
+	 * :ref:`scanImportToTemplate-import`
 	 * :ref:`scanimport-object`
 	 * :ref:`scannedinstance-object`

@@ -15,6 +15,7 @@ The list of attributes for ``scan`` are:
 	* ``extraFiles``: a list of :ref:`scannedfile-object` files that are not part of any native package on the file system
 	* ``images``: a list of :ref:`image-object` objects that have been generated from this scan report
 	* ``imports``: a list of :ref:`scanimport-object` objects that have been imported from this scan report
+	* ``unixServices``: a list of :ref:`unixservice-object` objects that represent Unix services on the scanned machine
 	* ``winServices``: a list of :ref:`winservice-object` objects that represent Windows services on the scanned machine
 	* ``winApplications``: a list of :ref:`winMsiApplication-object` and :ref:`winStoreApplication-object` objects that represent Windows applications on the scanned machine
 	* ``packages``: the list of :ref:`package-object` objects listed in the scan report
@@ -26,6 +27,7 @@ The list of attributes for ``scan`` are:
 	* ``imagesUri`` (anyURI): the uri resource to retrieve all the machine images generated from this scan report
 	* ``osConfig`` (:ref:`osConfig-object`): `osconfig-object` of the scan
 	* ``importsUri`` (anyURI): the uri resource to retrieve all the imports
+	* ``goldenImportsUri`` (anyURI): the uri resource to retrieve all the golden imports
 	* ``installProfile`` (:ref:`installProfile-object`): the install profile of the scanned system
 	* ``installProfileUri`` (anyURI): the uri resource of the :ref:`installprofile-object`
 	* ``name`` (string): the scan name

@@ -6,17 +6,36 @@ Changelog
 3.7.fp5
 -------
 
+Release Date: 2017-06-12
+
 New Features
 ~~~~~~~~~~~~
 * Add a mechanism to restrict the usage of a project (for Administrator) or software bundle (in MySoftware for users) based on a Distribution name, family, architecture or for an output format
 * Administrators can now create a golden image from the UI. Once a Windows scan is complete, the Administrator can import the scan as a golden image. This golden image will be available to users to create new Windows appliances.
-
-Enhancements
-~~~~~~~~~~~~
+* Publication to VMware vCenter improved. UForge now publishes templates to VMware vCenter, rather than instances. The datacenter information (ESXi hypervisor, datastore, network name, etc) is automatically retrieved by UForge and prefilled for publication to VMware VCenter.
 
 Bug Fixes
 ~~~~~~~~~
-
+* 7560 Oracle Linux is treated as RHEL at scan
+* 7622 OpenSUSE generation Failed with default OS Profile due to package conflict.
+* 7423 CentOS 7.3 VBox image never ends up booting if '/' partition is a logical volume
+* 7429 Error message is always logged in oar error log "unary operator expected" when generating Linux image.
+* 7361 Windows generation error when disk too small does not raise an understandable error message
+* 7620 db_modifs and postupdate modifs applied to several versions of UForge are not handled properly by update_mechanism
+* 7758 On the generation UI pages, there is a CSS issue between headers and content
+* 7853 License of WS2008R2 is displayed on WS2012R2
+* 7771 Hover message on items in scan list is not internationalized
+* 7871 Updating the certificate of a google cred account generates a null pointer exception and "this should never happen, please updateTemplateInfo" in the UI
+* 7682 Published image tag summary displayed wrong tooltip
+* 7635 The type of the password input field of artifact accounts is inconsistent in the UI
+* 7584 Applications and Services for Windows are not parsed correctly
+* 7767 Missing timezone data on branch master
+* 7897 500 error occurs in image generation using a template without a partition table
+* 7669 The EventController service does not consume ScanAction event correctly
+* 6285 AWS publication is not working behind an external http proxy
+* 7630 Outscale publish connector is not working anymore
+* 6789 When booting a migrated instance, haldaemon starts although autostart setting is off in the source machine
+* 7298 Import/Export Software bundle fails with "Permission denied error"
 
 3.7.fp4
 -------
@@ -30,7 +49,6 @@ New Features
 * Support to create appliance templates based on Windows 2016 operating system
 * Ability to scan and migrate Windows 2016 instances
 * Application and services information now captured and displayed when scanning a Windows-based instance
-* Publication to VMware vCenter improved. UForge now publishes templates to VMware vCenter, rather than instances. The datacenter information (ESXi hypervisor, datastore, network name, etc) is automatically retrieved by UForge and prefilled for publication to VMware VCenter.
 
 Enhancements
 ~~~~~~~~~~~~

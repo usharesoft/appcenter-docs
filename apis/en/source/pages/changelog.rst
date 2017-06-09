@@ -34,6 +34,8 @@ Bug Fixes
 * 7669 The EventController service does not consume ScanAction event correctly
 * 6285 AWS publication is not working behind an external http proxy
 * 7630 Outscale publish connector is not working anymore
+* 6789 When booting a migrated instance, haldaemon starts although autostart setting is off in the source machine
+* 7298 Import/Export Software bundle fails with "Permission denied error"
 
 3.7.fp4
 -------

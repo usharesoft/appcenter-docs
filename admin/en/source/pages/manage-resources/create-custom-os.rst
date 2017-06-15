@@ -41,7 +41,7 @@ To edit your OS profile:
 
 		.. image:: /images/edit-os-profile.png
 
-		On this view you can see the distribution your OS profile is based on, the date you created the OS profile in UForge as well as the last time it was edited.	
+		On this view, for Windows, you can see the distribution your OS profile is based on, the date you created the OS profile in UForge (next to the OS profile name) as well as the last time it was edited.	
 
 	5. You can edit the name and description from the Overview page.
 	6. To modify the packages included in your profile, click OS Packages. The packages that you can add are listed in the top list. The bottom list is the list of packages that are currently part of the profile. Select the package(s) you want to add or remove to your OS profile and click ``save``. You can search for the package you want to add. 

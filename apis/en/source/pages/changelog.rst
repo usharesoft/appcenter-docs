@@ -3,6 +3,15 @@
 Changelog
 =========
 
+3.7.fp6
+-------
+Release Date: 2017-07-25
+
+Enhancements
+~~~~~~~~~~~~
+* Improved the information displayed in the banner when administering OS Profiles. Now the date the OS profile was created is displayed (for Windows), as well as the size and the associated distribution (for both Windows and Linux)
+
+
 3.7.fp5
 -------
 

@@ -30,6 +30,7 @@ Enhancements
 Bug Fixes
 ~~~~~~~~~
 
+* 7985 The UI in Stack > OS profile displays the latest version of the OS packages instead of the one used in the appliance template
 * 7634 Failed to delete together two or more artifact accounts with error
 * 7658 spelling mistakes on the API doc
 * 7404 Windows scan fail if is is executed according to portal
@@ -95,7 +96,7 @@ To install it, you will have to launch the following command::
 Bug Fixes
 ~~~~~~~~~
 
-* 6924 Canceling the K5 publication finishes with ERROR message.
+* 6924 Cancelling the K5 publication finishes with ERROR message
 * 6920 Incoherence in template and mysoftware revisions when sharing to workspace
 * 6899 Documentation mentions copyright in CSS customisation but copyright is not displayed
 * 6896 Multiple simultaneous scans failed with Lock wait timeout exceeded in ushare-distrotools
@@ -130,6 +131,36 @@ Bug Fixes
 * 6439 "SQL Error: 0, SQLState: null" occurs
 * 6036 The logo of the Software component of a template imported from collaboration is broken
 * 4251 User's scan count increases though the scan is cancelled if the user has unlimited scan quota
+
+* 7093 Generation fails with Debian 8 backports repo packages
+* 7075 mysoftware files are not copied on the filestystem when generating CentOS7 ISO images
+* 7038 Fail to generate Windows machineImage created from a VMDK format Golden Image
+* 7036 rpmgen -e (exclude dir list) option is not worikng
+* 6988 The scan status is not updated to "error" when the error occurs during uploading
+* 6985 UriBuilder does not encode pipe in a certain chars order and results scan error
+* 6982 Issue retrocompatibility with post update modif of AMI clean up
+* 6943 A file or directory name which includes a line feed (LF) is not present in the scan result
+* 6930 Cannot create unformatted logical volumes
+* 6928 version&release should be used instead of builddate for checking dependencies
+* 6915 Projects non-native files are ignored if my software has the same name
+* 6892 Debian dependency checker always ignores dependency error
+* 6891 WARP must generate the correct guestOS inside vmx when windows+vmware
+* 6801 Cannot download non-cached software using artifact accounts after the password is updated.
+* 6710 Dependency checker ignores selected version of "Essential" packages in os profile and causes generation error
+* 6681 Windows scan of a machine with 2 disks excluding 1 disk creates 2 disks in the meta data
+* 3193 Spider does not cleanup all temporary dirs in /tmp
+* 3131 Images of a deactivated user should not be downloadable
+* 6990 Upload a logo which is not png or jpg raises an error but erases the existing logo
+* 6972 After deleting a custom license in MySofware or Project, the icon done.svg still appears beside the upload button
+* 6945 "uforge org category delete" fails with two arguments
+* 6926 Inconstent update of template revision
+* 6901 Incorrect warning message when appliance has multidisk during generation of some formats
+* 6633 UForge root password can not be changed wrong message
+* 6624 Issue when adding PDF as custom license to project
+* 5994 My profile picture is not displayed on Activity Stream Workspace
+* 7045 If Scanned machine has a file named like "%%0E^0E4^0E407559%%footer.tpl.php", scanning fails
+* 6311 Scanning a Windows with disk exclude option does not work
+
 
 3.7-2
 -----

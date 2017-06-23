@@ -24,13 +24,15 @@ In order to publish a machine image to a cloud environment or container, you mus
 	4. Following the instructions, choose the account and fill in any additional information required.
 	5. Click ``publish``.
 
-	.. note:: Publishing an image to Amazon will launch an instance and therefore will be billed to the user account. Azure trial accounts are not supported for publishing images from UForge. Only full Azure accounts can be used. 
+	.. note:: Publishing an image to Amazon will be billed to the user account. Azure trial accounts are not supported for publishing images from UForge. Only full Azure accounts can be used. 
 
 	.. note:: Currently, publication to Docker are only supported for Docker Registry v2.
 
 	6. The publication will take a few minutes to complete (depending on the size of the image and the network connectivity between UForge and the target environment). The publication progress is shown. At the end of the publication, the machine image has been published by UForge to your target environment. The published image can be found in the target cloud environment or container.
 
 	UForge does not launch instances in the target cloud environment. If you wish to launch an instance from this machine image, you should go to your target cloud environment console for further actions.
+
+	.. note:: When you publish an image to Amazon, and you have the correct UForge entitlements, you will be able to launch your machine image directly from UForge using the ``Deploy`` option, without having to connect to Amazon. Refer to :ref:`deploy-machine-image`.
 
 	.. note:: When you publish an image to VMware, the result will be a template and not a virtual machine.
 

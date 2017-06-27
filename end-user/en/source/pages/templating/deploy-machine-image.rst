@@ -9,7 +9,7 @@ Deploying an Amazon Machine Image
 
 You can only deploy a machine image to Amazon if you have AMP installed. For more information, refer to the official `Cloudsoft AMP documentation <https://docs.cloudsoft.io/>`_
 
-In order to deploy a machine image to Amazon, you must already have credentials to access that environment setup on UForge. Azure trial accounts are not supported for publishing images from UForge. Only full Azure accounts can be used.
+In order to deploy a machine image to Amazon, you must already have credentials to access that environment setup on UForge. Trial accounts are not supported for publishing images from UForge. Only full Amazon accounts can be used.
 
 	1. If not already done, create an account for the target environment.  For more information, see :ref:`account-cloud-accounts`. 
 	2. Go to the appliance and click the ``Machine Images`` page. If you have not generated a machine image, you will need to do so as described in :ref:`appliance-generate-machine-image`.

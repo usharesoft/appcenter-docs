@@ -24,7 +24,7 @@ In order to publish a machine image to a cloud environment or container, you mus
 	4. Following the instructions, choose the account and fill in any additional information required.
 	5. Click ``publish``.
 
-	.. note:: Publishing an image to Amazon will be billed to the user account. Azure trial accounts are not supported for publishing images from UForge. Only full Azure accounts can be used. 
+	.. note:: Publishing an image to Amazon will be billed to the user account. Trial accounts are not supported for publishing images from UForge. Only full Amazon accounts can be used. 
 
 	.. note:: Currently, publication to Docker are only supported for Docker Registry v2.
 

@@ -7,7 +7,7 @@ Configuring Cloudsoft AMP
 
 Once your UForge platform deployment is complete you can configure Cloudsoft AMP in order to allow users to deploy published machine images directly to Amazon, without having to connect to their Amazon account. Before you start the configuration, ensure that you have:
 
-	* a running AMP server (version AMP-4.5.0 / Brooklyn 0.11.0) with groovy script enabled
+	* a running AMP server (from version AMP-4.5.0 / Brooklyn 0.11.0) with groovy script enabled
 	* a configured user in AMP server that will be used by UForge to connect
 
 

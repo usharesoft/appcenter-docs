@@ -26,3 +26,4 @@ This section assumes that you have completed the installation of your UForge pla
    self-signed-cert
    populate-db-OS
    proprietary-pkg
+   config-amp

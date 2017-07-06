@@ -5,19 +5,11 @@ Changelog
 3.7.fp6
 -------
 
-Release Date: 2017-07-17
-
-New Features
-~~~~~~~~~~~~
-* Introduce a new deployment feature which allows users to deploy published machine images directly to Amazon, without having to connect to their Amazon account.
-
-3.7.fp6
--------
-
 Release Date: 2017-07-24
 
 New Features
 ~~~~~~~~~~~~
+* Introduce a new deployment feature which allows users to deploy published machine images directly to Amazon, without having to connect to their Amazon account.
 * The scan of Windows is optimized by extracting only "used space" from target disks on the source system. "Free space" on target disks will not be copied by the scan.
 * Fujitsu Cloud Service K5 Germany region is supported.
 

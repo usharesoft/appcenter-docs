@@ -24,7 +24,7 @@ If you want to set up a mono-node POC (Proof of Concept) you should have the fol
    * 10 CPU
    * 16 GB memory
    * 150 GB local hard drive (standard or SSD)
-   * 300 GB SSD local hard drive (for the generation processes)
+   * 300 GB local hard drive (for the generation processes). SSD is preferred for performance reasons.
    * 1 additional NAS or disk for user data (size will depend on user data, it will store the generated images and scans - 1 TB is typically sufficient for a POC)
 
 .. _multi-node-example:

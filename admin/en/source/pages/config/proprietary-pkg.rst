@@ -74,4 +74,4 @@ For example, to add a Red Hat repository:
 
 	.. code-block:: shell
 
-		$ /opt/UShareSoft/uforge/bin/runjob.py sorter_low_prio -a x86_64 -d RHEL -v 6.5
+		$ /opt/UShareSoft/uforge/bin/distro_sorter.sh -a x86_64 -d RHEL -v 6.5

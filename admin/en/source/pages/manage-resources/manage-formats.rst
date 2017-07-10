@@ -104,5 +104,16 @@ To create a target format:
 
 		.. image:: /images/target-format-create.png
 
+Opening Ports for Publication to Specific Formats
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Depending on the target format your users will have access to, you may have to open specific ports.
+
+`VCenter`
+
+Publishing to VMWare VCenter has the following workflow. If your users will publish to VCenter, you should open port 443 in HTTPS.
+
+.. image:: /images/vcenter-publish-workflow.png
+
 
 

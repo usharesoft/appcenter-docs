@@ -199,7 +199,7 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 
 	11. Create OS profile based on packages (minimal, server, etc.)::
 
-		$ /opt/UShareSoft/uforge/bin/runjob.py sorter_low_prio -d CentOS -v 6.5 -a x86_64
+		$ /opt/UShareSoft/uforge/bin/distro_sorter.sh -d CentOS -v 6.5 -a x86_64
 
 .. _populate-rhel:
 
@@ -278,7 +278,7 @@ The following is a concrete example to begin the population of RedHat Enterprise
 
 	11. Create OS profile based on packages (minimal, server, etc.)::
 
-		$ /opt/UShareSoft/uforge/bin/runjob.py sorter_low_prio -d "RedHat" -v 7 -a x86_64
+		$ /opt/UShareSoft/uforge/bin/distro_sorter.sh -d "RedHat" -v 7 -a x86_64
 
 Adding DEB Type OSes
 --------------------
@@ -383,4 +383,4 @@ The following is a concrete example to begin the population of Ubuntu 10.04 64bi
 
 	11. Create OS profile based on packages (minimal, server, etc.)::
 
-		$ /opt/UShareSoft/uforge/bin/runjob.py sorter_low_prio -d Ubuntu -v 10.04 -a x86_64
+		$ /opt/UShareSoft/uforge/bin/distro_sorter.sh -d Ubuntu -v 10.04 -a x86_64

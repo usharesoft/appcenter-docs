@@ -5,6 +5,8 @@
 Installing from an ISO
 ----------------------
 
+.. note:: The ISO install will be done on /dev/sda. The ``kickstart`` automates the installation of the operating system on the first disk, which must be managed by either a SCSI or SATA controller.
+
 To install UForge from the ISO image:
 
 	1. Attach the ISO to a VM or burn the ISO to a DVD (for installing to a physical machine, note the machine will require to have a DVD disk drive).

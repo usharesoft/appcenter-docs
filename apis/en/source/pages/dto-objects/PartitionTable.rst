@@ -23,7 +23,7 @@ The list of attributes for ``partitionTable`` are:
 	* ``logicalVolumesUri`` (anyURI): the uri resource to retrieve the logical volumes in this partition table
 	* ``logicalVolumeUris`` (:ref:`UriList-object`): the list of uri resources for each logical volume in this partition table
 	* ``uri`` (anyURI): the uri resource of this partition table object
-	* ``created`` (dateTime): the created date of the object
+	* ``created`` (dateTime): the date the appliance template is created
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)
 	* ``lastModified`` (dateTime): the last modified date of this object

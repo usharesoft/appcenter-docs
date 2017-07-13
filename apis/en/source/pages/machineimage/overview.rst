@@ -13,6 +13,7 @@ Machine Image API Resources
 	* :ref:`machineImagePublishedStatus-getAll`: Retrieve the publish status of all the published machine images for an appliance
 	* :ref:`machineImagePublished-delete`: Removes a published machine image from an appliance
 	* :ref:`machineImagePublished-deleteAll`: Removes all published machine images for an appliance
+	* :ref:`machineImagePublished-deploy`: Deploy a new machine from an image published to a target environment
 	* :ref:`machineImagePublished-download`: Downloads a published machine image
 	* :ref:`machineImagePublished-get`: Retrieve a published machine image for an appliance
 	* :ref:`machineImagePublished-getAll`: Retrieve all the published machine images for an appliance
@@ -27,6 +28,7 @@ Machine Image API Resources
 	* :ref:`machineImage-getAll`: Returns all of the machine images of an appliance
 	* :ref:`machineImage-publish`: Request to publish (register) a generated machine image to a target cloud environment
 	* :ref:`machineImage-regenerate`: Request to re-generate a machine image from a previous generation request
+	* :ref:`scanPublishedImage-deploy`: Deploy a new machine from an image published to a target environment
 
 
 .. toctree::
@@ -40,6 +42,7 @@ Machine Image API Resources
     machineImagePublishedStatus_getAll
     machineImagePublished_delete
     machineImagePublished_deleteAll
+    machineImagePublished_deploy
     machineImagePublished_download
     machineImagePublished_get
     machineImagePublished_getAll
@@ -54,3 +57,4 @@ Machine Image API Resources
     machineImage_getAll
     machineImage_publish
     machineImage_regenerate
+    scanPublishedImage_deploy

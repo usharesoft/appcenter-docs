@@ -17,7 +17,7 @@ The list of attributes for ``milestone`` are:
 	* ``name`` (string): the name or title of the milestone
 	* ``source`` (string): the source of the Milestone. Reserved source : distribution (populated automatically by the platform population tools)
 	* ``uri`` (anyURI): the uri resource of this milestone object
-	* ``created`` (dateTime): the created date of the object
+	* ``created`` (dateTime): the date the appliance template is created
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)
 	* ``lastModified`` (dateTime): the last modified date of this object

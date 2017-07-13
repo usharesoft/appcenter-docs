@@ -26,7 +26,7 @@ The list of attributes for ``galleryTemplateStatistics`` are:
 	* ``uri`` (anyURI): the uri resource of this object
 	* ``voteStats``: a list of :ref:`votestat-object` providing the all the ratings by users
 	* ``voteStatsUri`` (anyURI): the uri resource to retrieve all the ratings by users for this appliance template
-	* ``created`` (dateTime): the created date of the object
+	* ``created`` (dateTime): the date the appliance template is created
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)
 	* ``lastModified`` (dateTime): the last modified date of this object

@@ -24,6 +24,7 @@ This documentation provides a description of UForge AppCenter RESTful interface.
     pages/appliancesoftwarecomponent/overview
     pages/artifactaccounts/overview
     pages/categories/overview
+    pages/deployments/overview
     pages/machineimage/overview
     pages/machinescan/overview
     pages/machinescanimport/overview

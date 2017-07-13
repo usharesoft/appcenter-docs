@@ -78,6 +78,8 @@ Scanning a Microsoft Windows Machine
 
 .. note:: It is not possible to scan a Windows "Core" system for all versions: 2008R2, 2012, 2012R2 and 2016.
 
+.. warning:: If the target filesystem is NTFS, the scan is optimized by extracting only "used space" from target disks on the source system. Some applications might hold their data on "free space," which is not used by the operating system. If the source system of the scan has such applications installed, these applications may not work correctly on a machine image generated from the scan. With the other filesystems, such as FAT, ReFS and so on, all the space including "free space" on target disks will be copied by the scan.
+
 To carry out a scan, go to the ``Migration`` tab:
 
 	1. Click on ``scan`` in the top right.

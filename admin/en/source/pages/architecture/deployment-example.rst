@@ -2,8 +2,8 @@
 
 .. _deployment-example:
 
-Deployment Example
-------------------
+Deployment Examples
+-------------------
 
 How to organize your UForge configuration depends on the specific customer needs.  This may include:
 
@@ -15,6 +15,46 @@ How to organize your UForge configuration depends on the specific customer needs
    * Whether UForge is exposed to 3rd party customers and partners, or for internal use only
 
 Note that UForge can be deployed on physical machines or on a virtual or cloud platform.  The word 'node' describes either the specification of a physical machine or a virtual machine instance running in the virtual or cloud environment.
+
+Mono Node Proof of Concept
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you want to set up a mono-node POC (Proof of Concept) you should have the following:
+
+   * 10 CPU
+   * 16 GB memory
+   * 150 GB local hard drive (standard or SSD)
+   * 300 GB local hard drive (for the generation processes). SSD is preferred for performance reasons.
+   * 1 additional NAS or disk for user data (size will depend on user data, it will store the generated images and scans - 1 TB is typically sufficient for a POC)
+
+.. _multi-node-example:
+
+Multi-node AppCenter
+~~~~~~~~~~~~~~~~~~~~
+
+The minimum software topology is described in :ref:`minimum-sw-topology`. The following is an overall recommentation, assuming you are grouping the nodes.
+
++-------------------+------------+----------+----------------+--------------------------------+
+| Node              | RAM        | CPU      | Hard Drive     | Comment                        |
++===================+============+==========+================+================================+
+| DB/LDAP/OAR       | 10 GB      | 4        | 100 GB         |                                |
++-------------------+------------+----------+----------------+--------------------------------+
+| Web Service       |  6 GB      | 4        | 15 GB          |                                |
++-------------------+------------+----------+----------------+--------------------------------+
+| UI (portal)       |  3 GB      | 2        | 15 GB          |                                |
++-------------------+------------+----------+----------------+--------------------------------+
+| Compute Node      | 6 GB       | 4        | 15 GB +        | Alternative is 1 TB SSD NAS    |
+| (2 identical)     |            |          | 500 GB SSD     | Shared between the 2 compute   |
+|                   |            |          |                | nodes.  This storage could be  |
+|                   |            |          |                | upgraded if needed             |
++-------------------+------------+----------+----------------+--------------------------------+
+| NAS distributions |            |          | 500 GB         |                                |
++-------------------+------------+----------+----------------+--------------------------------+
+| NAS user data     |            |          |  7 TB          |                                |
++-------------------+------------+----------+----------------+--------------------------------+
+
+.. note:: The size of the user data NAS depends on the expected size of the user data
+
 
 .. _network-topology:
 
@@ -71,7 +111,7 @@ For each of these components we recommend the following minimal (hardware or vir
 | NAS/SAN        | 2 GB       | 2          |                |                                |
 +----------------+------------+------------+----------------+--------------------------------+
 
-It may be more logical to group the DB, LDAP and Generation Cluster (scheduler) on one node. Typically you can also group the Webservice and SYNCOPE Webservice.
+It may be more logical to group the DB, LDAP and Generation Cluster (scheduler) on one node. Typically you can also group the Webservice and SYNCOPE Webservice. Refer to :ref:`multi-node-example`
 
 .. note:: When a user creates an appliance, the packages are stored locally in the UForge cache repository, which is stored on the DB. Therefore, depending on the number of appliances created and OS used, you may need to adjust the DB size.
 

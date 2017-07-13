@@ -499,7 +499,7 @@ Example (uploading a RPM, but this can be any file type)::
 
 Finally you can now add this software component to an appliance template.  The following resource API is used:
 
-. function:: PUT /users/{uid}/appliances/{aid}
+.. function:: PUT /users/{uid}/appliances/{aid}
 
 	* ``uid``: is the login of the user
 	* ``aid``: the id of the appliance template

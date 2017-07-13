@@ -3,14 +3,32 @@
 Changelog
 =========
 
+3.7.fp7
+-------
+
+Release Date: 2017-09-04
+
+New Features
+~~~~~~~~~~~~
+* Introduce a REST API for users to list files to synchronize to the target environment after a CentOS scan without overlay.
+
 3.7.fp6
 -------
-Release Date: 2017-07-25
+
+Release Date: 2017-07-24
+
+New Features
+~~~~~~~~~~~~
+* Introduce a new deployment feature which allows users to deploy published machine images directly to Amazon, without having to connect to their Amazon account.
+* The scan of Windows is optimized by extracting only "used space" from target disks on the source system. "Free space" on target disks will not be copied by the scan.
+* Fujitsu Cloud Service K5 Germany region is supported.
 
 Enhancements
 ~~~~~~~~~~~~
-* Improved the information displayed in the banner when administering OS Profiles. Now the date the OS profile was created is displayed (for Windows), as well as the size and the associated distribution (for both Windows and Linux)
+* Improved the information displayed in the banner when administering OS Profiles. Now the date the OS profile was created is displayed (for Windows only), as well as the size and the associated distribution (for both Windows and Linux)
 
+Bug Fixes
+~~~~~~~~~
 
 3.7.fp5
 -------

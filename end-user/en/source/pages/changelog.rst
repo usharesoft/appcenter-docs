@@ -23,6 +23,10 @@ New Features
 * The scan of Windows is optimized by extracting only "used space" from target disks on the source system. "Free space" on target disks will not be copied by the scan.
 * Fujitsu Cloud Service K5 Germany region is supported.
 
+Enhancements
+~~~~~~~~~~~~
+* Improved the information displayed in the banner when administering OS Profiles. Now the date the OS profile was created is displayed (for Windows only), as well as the size and the associated distribution (for both Windows and Linux)
+
 Bug Fixes
 ~~~~~~~~~
 

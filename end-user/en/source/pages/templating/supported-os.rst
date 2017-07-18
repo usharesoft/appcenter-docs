@@ -29,7 +29,7 @@ The following is a list of supported OSes that users can use as the guest operat
 | Scientific Linux | 5.2+, 6 (32bit and 64bit), 7 (64bit)     | 5.2+, 6 (32bit and 64bit), 7 (64bit)     |
 +------------------+------------------------------------------+------------------------------------------+
 | Ubuntu LTS       | 10.04 (Lucid), 12.04 (Precise),          | 10.04 (Lucid), 12.04 (Precise),          |
-|                  | 14.04 (Trusty) (32bit and 64bit)         | 14.04 (Trusty) (32bit and 64bit)         |
+|                  | 14.04 (Trusty), 16.04 (32bit and 64bit)  | 14.04 (Trusty), 16.04 (32bit and 64bit)  |
 +------------------+------------------------------------------+------------------------------------------+
 | Microsoft        | 2008R2, 2012, 2012R2, 2016               | 2008R2, 2012, 2012R2, 2016               |
 | Windows Server   |                                          |                                          |

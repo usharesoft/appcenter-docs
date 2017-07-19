@@ -35,7 +35,7 @@ Bug Fixes
 * 953 Cannot add a license in a MySoftware
 * 972 Internal error happens when clicking directory name ``{|}`` in Files & Folders in Migration
 * 982 debootstrap.log should be preserved
-* 1001 Publish Outscale change proxy instance ID configuration
+* 1001 Publish Outscale changes proxy instance ID configuration
 * 1003 Image generation fails for a CentOS 6.1 imported from scan and upgraded to the 6.5 milestone
 * 1061 /etc/ssh/sshd_config file is changed after the migration.
 * 1304 All POST and PUT API examples in the documentation miss Content-Type parameter
@@ -51,7 +51,7 @@ Bug Fixes
 * 6147 Generation fails when selinux packages are manually specified in a MySoftware
 * 6148 /etc/ssh/sshd_config modifications are ignored after a blackbox migration
 * 7431 Cannot generate debian 8 when /tmp partition is small and has large extra files
-* 7806 Scan comparison raises a 500 call failed error when clicking on a package modification of the comparator to allow sort by name and add condition when there are same scanned package name add some units test for scannedPkgComparators
+* 7806 Scan comparison raises a 500 call failed error when clicking on a package modification of the comparator
 * 7842 Cloud account password is saved as plain text in text file
 * 7915 cleanup_tickets.sh and cleanup_scans.sh do not delete Generated Images from Scans
 * 7986 The UI in Stack \u003e OS profile displays the latest version of the OS packages instead of the one used in the appliance template

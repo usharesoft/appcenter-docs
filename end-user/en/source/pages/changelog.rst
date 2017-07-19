@@ -11,6 +11,9 @@ Release Date: 2017-09-04
 New Features
 ~~~~~~~~~~~~
 * Introduce a REST API for users to list files to synchronize to the target environment after a CentOS scan without overlay.
+* Updated information to be entered in ``Credentials`` for Azure ARM connector.
+
+.. note:: If you have an existing Azure ARM account already setup in UForge, then you must update the credential information with the tenant id.
 
 3.7.fp6
 -------

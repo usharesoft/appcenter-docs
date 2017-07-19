@@ -206,6 +206,7 @@ New Features
 ~~~~~~~~~~~~
 
 * Support registration of machine images for Azure ARM and Azure Enterprise Accounts
+* Support for Ubuntu 16.04
 * Ability to register docker images built in UForge to DockerHub.  This includes managing credential information to authenticate against DockerHub.
 * In ``Projects`` or ``My Software`` can now provide restrictions to determine if they are compatible with a particular OS family, type or version.
 

@@ -38,7 +38,7 @@ The list of attributes for ``org`` are:
 	* ``workspacesUri`` (anyURI): the uri resource to retrieve all the workspaces registered to this organization
 	* ``repositoriesUri`` (anyURI): the uri resource to retrieve all the operating system repositories registered to this organization
 	* ``artifactAccountsUri`` (anyURI): the uri resource to retrieve all the artifact accounts registered to this organization
-	* ``created`` (dateTime): the created date of the object
+	* ``created`` (dateTime): the date the appliance template is created
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)
 	* ``lastModified`` (dateTime): the last modified date of this object

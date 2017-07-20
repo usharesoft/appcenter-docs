@@ -29,7 +29,7 @@ The list of attributes for ``osUser`` are:
 	* ``uri`` (anyURI): the uri resource of this user object
 	* ``userId`` (string): the unique id of this user (only used if ``userIdAuto == false``
 	* ``userIdAuto`` (boolean): boolean indicating whether the platform should automatically calculate the user's id
-	* ``created`` (dateTime): the created date of the object
+	* ``created`` (dateTime): the date the appliance template is created
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)
 	* ``lastModified`` (dateTime): the last modified date of this object

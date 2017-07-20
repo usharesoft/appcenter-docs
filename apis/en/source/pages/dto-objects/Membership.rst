@@ -24,7 +24,7 @@ The list of attributes for ``membership`` are:
 	* ``user`` (:ref:`userProfile-object`): the user being invited
 	* ``userEmail`` (string): the email of the user being invited
 	* ``userLogin`` (string): the username of the user being invited
-	* ``created`` (dateTime): the created date of the object
+	* ``created`` (dateTime): the date the appliance template is created
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)
 	* ``lastModified`` (dateTime): the last modified date of this object

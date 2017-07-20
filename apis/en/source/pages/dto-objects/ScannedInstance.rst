@@ -23,7 +23,7 @@ The list of attributes for ``scannedInstance`` are:
 	* ``scansUri`` (anyURI): the uri resource to retrieve all the scan reports
 	* ``totalScans`` (int): the number of scans carried out on this live system
 	* ``uri`` (anyURI): the uri resource of this scanned instance
-	* ``created`` (dateTime): the created date of the object
+	* ``created`` (dateTime): the date the appliance template is created
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)
 	* ``lastModified`` (dateTime): the last modified date of this object

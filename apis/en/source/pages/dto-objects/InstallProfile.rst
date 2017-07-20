@@ -43,7 +43,7 @@ The list of attributes for ``installProfile`` are:
 	* ``vagrantUser`` (string): the user to set for vagrant base boxes
 	* ``welcomeMsg`` (string): welcome message to display to the end user when provisioning an instance
 	* ``seLinuxMode`` (seLinuxMode): the SELinux mode (disabled/permissive/enforcing)
-	* ``created`` (dateTime): the created date of the object
+	* ``created`` (dateTime): the date the appliance template is created
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)
 	* ``lastModified`` (dateTime): the last modified date of this object

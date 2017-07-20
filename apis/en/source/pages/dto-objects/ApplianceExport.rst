@@ -21,7 +21,7 @@ The list of attributes for ``applianceExport`` are:
 	* ``parentUri`` (anyURI): the uri of the exported appliance
 	* ``status`` (:ref:`status-object`): the :ref:`status-object` object providing the current status of the export
 	* ``uri`` (anyURI): the uri resource of this appliance export
-	* ``created`` (dateTime): the created date of the object
+	* ``created`` (dateTime): the date the appliance template is created
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)
 	* ``lastModified`` (dateTime): the last modified date of this object

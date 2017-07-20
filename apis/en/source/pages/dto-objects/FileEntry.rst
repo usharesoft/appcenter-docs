@@ -25,7 +25,7 @@ The list of attributes for ``fileEntry`` are:
 	* ``size`` (long): the size (in bytes) of this file
 	* ``subEntries`` (long): the number of files if this file entry is a directory
 	* ``uri`` (string): the uri resource of this file entry object
-	* ``created`` (dateTime): the created date of the object
+	* ``created`` (dateTime): the date the appliance template is created
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)
 	* ``lastModified`` (dateTime): the last modified date of this object

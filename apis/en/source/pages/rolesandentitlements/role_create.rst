@@ -40,7 +40,7 @@ Example Request
 .. code-block:: bash
 
 	curl "https://uforge.example.com/api/orgs/{oid}/roles" -X POST \
-	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"-H "Content-type: application/xml" --data-binary "@representation.xml"
 
 Example of representation.xml content (the request body):
 

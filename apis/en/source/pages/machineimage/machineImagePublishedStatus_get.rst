@@ -53,6 +53,7 @@ Example Request
 	 * :ref:`machineImagePublishedStatus-getAll`
 	 * :ref:`machineImagePublished-delete`
 	 * :ref:`machineImagePublished-deleteAll`
+	 * :ref:`machineImagePublished-deploy`
 	 * :ref:`machineImagePublished-download`
 	 * :ref:`machineImagePublished-get`
 	 * :ref:`machineImagePublished-getAll`

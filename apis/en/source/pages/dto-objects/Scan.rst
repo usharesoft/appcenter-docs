@@ -45,7 +45,7 @@ The list of attributes for ``scan`` are:
 	* ``totalPackages`` (int): the number of native packages installed on the source machine
 	* ``uncompressedBinarySize`` (long): the size of all the overlays
 	* ``uri`` (anyURI): the uri of the scan
-	* ``created`` (dateTime): the created date of the object
+	* ``created`` (dateTime): the date the appliance template is created
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)
 	* ``lastModified`` (dateTime): the last modified date of this object

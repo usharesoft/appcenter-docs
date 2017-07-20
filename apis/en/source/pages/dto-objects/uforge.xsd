@@ -32,6 +32,8 @@
 
     <xs:element name="applianceStats" type="ApplianceStats"/>
 
+    <xs:element name="applianceSummary" type="ApplianceSummary"/>
+
     <xs:element name="artifactCredAccount" type="ArtifactCredAccount"/>
 
     <xs:element name="artifactCredAccounts" type="ArtifactCredAccounts"/>
@@ -77,6 +79,10 @@
     <xs:element name="credAccountResources" type="CredAccountResources"/>
 
     <xs:element name="credAccounts" type="CredAccounts"/>
+
+    <xs:element name="deployment" type="Deployment"/>
+
+    <xs:element name="deployments" type="Deployments"/>
 
     <xs:element name="disk" type="Disk"/>
 
@@ -137,6 +143,8 @@
     <xs:element name="linuxProfile" type="LinuxProfile"/>
 
     <xs:element name="linuxProfiles" type="LinuxProfiles"/>
+
+    <xs:element name="location" type="Location"/>
 
     <xs:element name="logicalGroup" type="LogicalGroup"/>
 
@@ -1129,6 +1137,36 @@
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:complexType name="ApplianceSummary">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Holds some meta-data information of an appliance template.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObject">
+                <xs:sequence>
+                    <xs:element name="name" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the name of the appliance template</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="version" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the version of the appliance template</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="uri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri of the appliance template</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
     </xs:complexType>
 
     <xs:complexType name="ArtifactCredAccount">
@@ -3041,6 +3079,83 @@
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the user password to use</xsd:documentation>
                         </xsd:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+
+    <xs:complexType name="Deployment">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Provides all the information of a deployment. A deployment is a set of one or more running instances (workloads).
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:sequence>
+            <xs:element name="uri" type="xs:anyURI" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">the uri of the deployment</xsd:documentation>
+                </xsd:annotation>
+            </xs:element>
+            <xs:element name="applicationId" type="xs:string" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">the application id of the deployment</xsd:documentation>
+                </xsd:annotation>
+            </xs:element>
+            <xs:element name="name" type="xs:string" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">the name of the deployment</xsd:documentation>
+                </xsd:annotation>
+            </xs:element>
+            <xs:element name="blueprintName" type="xs:string" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">the blueprint name used to do this deployment</xsd:documentation>
+                </xsd:annotation>
+            </xs:element>
+            <xs:element name="iconUrl" type="xs:anyURI" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">the icon url of the application deployed</xsd:documentation>
+                </xsd:annotation>
+            </xs:element>
+            <xs:element name="state" type="xs:string" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">the deployment state</xsd:documentation>
+                </xsd:annotation>
+            </xs:element>
+            <xs:sequence>
+                <xs:element name="instances" minOccurs="0">
+                    <xsd:annotation>
+                        <xsd:documentation xml:lang="en">the list of :ref:`instance-object` objects</xsd:documentation>
+                    </xsd:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="instance" type="Instance" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Deployments">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Provides a list of :ref:`deployment-object` objects.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObjects">
+                <xs:sequence>
+                    <xs:element name="deployments" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of :ref:`deployment-object` objects</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="deployment" type="Deployment" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
                     </xs:element>
                 </xs:sequence>
             </xs:extension>
@@ -5351,30 +5466,26 @@
         <xs:complexContent>
             <xs:extension base="UForgeObject">
                 <xs:sequence>
-                    <xs:element name="consoleUrl" type="xs:string" minOccurs="0"/>
-                    <xs:element name="credAccount" type="CredAccount" minOccurs="0"/>
                     <xs:element name="hardware" type="xs:string" minOccurs="0"/>
+                    <xs:element name="cores" type="xs:int" minOccurs="0"/>
+                    <xs:element name="memory" type="xs:int" minOccurs="0"/>
+                    <xs:element name="location" type="Location" minOccurs="0"/>
                     <xs:element name="hostname" type="xs:string" minOccurs="0"/>
-                    <xs:element name="installProfile" type="InstallProfile" minOccurs="0"/>
                     <xs:element name="instanceId" type="xs:string" minOccurs="0"/>
                     <xs:element name="name" type="xs:string" minOccurs="0"/>
-                    <xs:element name="nics" minOccurs="0">
-                        <xs:complexType>
-                            <xs:sequence>
-                                <xs:element name="nic" type="Nic" minOccurs="0" maxOccurs="unbounded"/>
-                            </xs:sequence>
-                        </xs:complexType>
+                    <xs:element name="applianceSummary" type="ApplianceSummary" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the appliance metadata of this instance</xsd:documentation>
+                        </xsd:annotation>
                     </xs:element>
-                    <xs:element name="parentUri" type="xs:anyURI" minOccurs="0"/>
+                    <xs:element name="scanSummary" type="ScanSummaryLight" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the scan metadata of this instance</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
                     <xs:element name="state" type="xs:string" minOccurs="0"/>
-                    <xs:element name="stateMsg" type="xs:string" minOccurs="0"/>
-                    <xs:element name="statesUri" type="xs:anyURI" minOccurs="0"/>
-                    <xs:element name="status" type="OpStatus" minOccurs="0"/>
-                    <xs:element name="statusUri" type="xs:anyURI" minOccurs="0"/>
-                    <xs:element name="tag" type="xs:string" minOccurs="0"/>
-                    <xs:element name="templateName" type="xs:string" minOccurs="0"/>
-                    <xs:element name="templateUri" type="xs:anyURI" minOccurs="0"/>
-                    <xs:element name="type" type="xs:string" minOccurs="0"/>
+                    <xs:element name="stateMessage" type="xs:string" minOccurs="0"/>
+                    <xs:element name="parentUri" type="xs:anyURI" minOccurs="0"/>
                     <xs:element name="uri" type="xs:anyURI" minOccurs="0"/>
                 </xs:sequence>
             </xs:extension>
@@ -5413,6 +5524,18 @@
         </xs:complexContent>
     </xs:complexType>
 
+
+    <xs:complexType name="InstanceVCloud">
+        <xs:complexContent>
+            <xs:extension base="Instance">
+                <xs:sequence>
+                    <xs:element name="description" type="xs:string" minOccurs="0"/>
+                    <xs:element name="platformVersion" type="xs:string" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
     <xs:complexType name="Instances">
         <xs:complexContent>
             <xs:extension base="UForgeObjects">
@@ -5428,18 +5551,6 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-
-    <xs:complexType name="InstanceVCloud">
-        <xs:complexContent>
-            <xs:extension base="Instance">
-                <xs:sequence>
-                    <xs:element name="description" type="xs:string" minOccurs="0"/>
-                    <xs:element name="platformVersion" type="xs:string" minOccurs="0"/>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-
 
     <xs:complexType name="IPAddress">
         <xsd:annotation>
@@ -5658,6 +5769,31 @@
                         <xs:element name="parameter" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
                     </xs:sequence>
                 </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Location">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Location where a deployed instance is running.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">the name of the location</xsd:documentation>
+                </xsd:annotation>
+            </xs:element>
+            <xs:element name="provider" type="xs:string" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">the cloud provider</xsd:documentation>
+                </xsd:annotation>
+            </xs:element>
+            <xs:element name="credentialsUri" type="xs:anyURI" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">the credentials URI used for this location</xsd:documentation>
+                </xsd:annotation>
             </xs:element>
         </xs:sequence>
     </xs:complexType>
@@ -9353,6 +9489,31 @@
         </xs:complexContent>
     </xs:complexType>
 
+    <xs:complexType name="ScanSummaryLight">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Holds some meta-data information of a scan.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObject">
+                <xs:sequence>
+                    <xs:element name="name" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the scan name</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="uri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri of the scan</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+
     <xs:complexType name="Service">
         <xs:complexContent>
             <xs:extension base="PkgGroup">
@@ -10602,7 +10763,7 @@
         <xs:sequence>
             <xs:element name="created" type="xs:dateTime" minOccurs="0">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en">the created date of the object</xsd:documentation>
+                    <xsd:documentation xml:lang="en">the date the appliance template is created</xsd:documentation>
                 </xsd:annotation>
             </xs:element>
             <xs:element name="dbId" type="xs:long" minOccurs="0">

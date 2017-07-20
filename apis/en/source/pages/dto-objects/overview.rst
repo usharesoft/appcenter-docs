@@ -19,6 +19,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`applianceimports-object`
 	* :ref:`appliances-object`
 	* :ref:`appliancestats-object`
+	* :ref:`appliancesummary-object`
 	* :ref:`artifactcredaccount-object`
 	* :ref:`artifactcredaccounts-object`
 	* :ref:`bootscript-object`
@@ -52,6 +53,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`credaccountvsphere-object`
 	* :ref:`credaccountk5-object`
 	* :ref:`credaccountdocker-object`
+	* :ref:`deployment-object`
+	* :ref:`deployments-object`
 	* :ref:`disk-object`
 	* :ref:`disks-object`
 	* :ref:`distribprofile-object`
@@ -79,6 +82,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`linuxprofile-object`
 	* :ref:`linuxprofiles-object`
 	* :ref:`localizedmessage-object`
+	* :ref:`location-object`
 	* :ref:`logicalgroup-object`
 	* :ref:`logicalgroups-object`
 	* :ref:`logicalvolume-object`
@@ -155,6 +159,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`scans-object`
 	* :ref:`scanstats-object`
 	* :ref:`scansummary-object`
+	* :ref:`scansummarylight-object`
 	* :ref:`servicestatus-object`
 	* :ref:`softwareartifact-object`
 	* :ref:`softwareartifacts-object`
@@ -217,6 +222,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     ApplianceImports
     Appliances
     ApplianceStats
+    ApplianceSummary
     ArtifactCredAccount
     ArtifactCredAccounts
     BootScript
@@ -250,6 +256,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     CredAccountVSphere
     CredAccountK5
     CredAccountDocker
+    Deployment
+    Deployments
     Disk
     Disks
     DistribProfile
@@ -277,6 +285,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     LinuxProfile
     LinuxProfiles
     LocalizedMessage
+    Location
     LogicalGroup
     LogicalGroups
     LogicalVolume
@@ -353,6 +362,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     Scans
     ScanStats
     ScanSummary
+    ScanSummaryLight
     ServiceStatus
     SoftwareArtifact
     SoftwareArtifacts

@@ -27,7 +27,7 @@ The list of attributes for ``status`` are:
 	* ``published`` (boolean): a boolean flag used to indicate if the job has finished (for publishing jobs)
 	* ``totalTime`` (dateTime): the total time the job has taken to complete
 	* ``uri`` (anyURI): the uri resource of this status object
-	* ``created`` (dateTime): the created date of the object
+	* ``created`` (dateTime): the date the appliance template is created
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)
 	* ``lastModified`` (dateTime): the last modified date of this object

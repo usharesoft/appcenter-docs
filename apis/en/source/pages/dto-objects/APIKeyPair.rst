@@ -21,7 +21,7 @@ The list of attributes for ``apiKeyPair`` are:
 	* ``publicKey`` (string): the public key string
 	* ``secretKey`` (string): the private key string
 	* ``uri`` (anyURI): the resource uri of the `APIKeyPair` object
-	* ``created`` (dateTime): the created date of the object
+	* ``created`` (dateTime): the date the appliance template is created
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)
 	* ``lastModified`` (dateTime): the last modified date of this object

@@ -21,7 +21,7 @@ The list of attributes for ``userProfile`` are:
 	* ``jobTitle`` (string): the user's job title
 	* ``photo`` (:ref:`logo-object`): the user's photo / avatar
 	* ``website`` (anyURI): the user's website
-	* ``created`` (dateTime): the created date of the object
+	* ``created`` (dateTime): the date the appliance template is created
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)
 	* ``lastModified`` (dateTime): the last modified date of this object

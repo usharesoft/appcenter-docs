@@ -21,7 +21,7 @@ The list of attributes for ``nic`` are:
 	* ``type``: the type of NIC
 	* ``order`` (int): the order of NIC
 	* ``uri`` (anyURI): the uri resource of this NIC
-	* ``created`` (dateTime): the created date of the object
+	* ``created`` (dateTime): the date the appliance template is created
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)
 	* ``lastModified`` (dateTime): the last modified date of this object

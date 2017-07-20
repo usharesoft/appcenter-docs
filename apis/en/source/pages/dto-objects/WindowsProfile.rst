@@ -30,7 +30,7 @@ The list of attributes for ``windowsProfile`` are:
 	* ``uri`` (anyURI): the uri resource of this os profile
 	* ``size`` (long): the total size of all the packages contained in this os profile
 	* ``version`` (string): the version of this os profile
-	* ``created`` (dateTime): the created date of the object
+	* ``created`` (dateTime): the date the appliance template is created
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)
 	* ``lastModified`` (dateTime): the last modified date of this object

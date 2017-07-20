@@ -17,7 +17,7 @@ The list of attributes for ``voteStat`` are:
 	* ``rating`` (float): the rating value
 	* ``uri`` (anyURI): the uri resource of this object
 	* ``user`` (:ref:`user-object`): the user information providing the rating (see :ref:`user-object`)
-	* ``created`` (dateTime): the created date of the object
+	* ``created`` (dateTime): the date the appliance template is created
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)
 	* ``lastModified`` (dateTime): the last modified date of this object

@@ -26,7 +26,7 @@ In order to publish a machine image to a cloud environment or container, you mus
 	.. note:: When publishing to Microsoft Azure Resource Manager you should note the following restrictions:
 
 		* The storage account must exist in your Microsoft account
-		* The container is mandatory. If the value your set does not match an existing container it will be created with the new name you have set.
+		* The container is mandatory. If the value you set does not match an existing container it will be created with the new name you have set.
 		* The blob and cloud image name must be unique. If they already exist, this will overwrite an existing one with the same name.
 		* The resource group is optional. If you enter a value here, it must already exist in your Microsoft account.
 

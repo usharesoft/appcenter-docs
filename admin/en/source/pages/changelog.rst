@@ -3,15 +3,6 @@
 Changelog
 =========
 
-3.7.fp7
--------
-
-Release Date: 2017-09-04
-
-New Features
-~~~~~~~~~~~~
-* Introduce a REST API for users to list files to synchronize to the target environment after a CentOS scan without overlay.
-
 3.7.fp6
 -------
 

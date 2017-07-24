@@ -32,7 +32,7 @@ In order to publish a machine image to a cloud environment or container, you mus
 
 	UForge does not launch instances in the target cloud environment. If you wish to launch an instance from this machine image, you should go to your target cloud environment console for further actions.
 
-	.. note:: When you publish an image to Amazon, and you have the correct UForge entitlements, you will be able to launch your machine image directly from UForge using the ``Deploy`` option, without having to connect to Amazon. Refer to :ref:`deploy-machine-image`.
+	.. note:: When you publish an image to Amazon or OpenStack, and you have the correct UForge entitlements, you will be able to launch your machine image directly from UForge using the ``Deploy`` option, without having to connect to your cloud platform. Refer to :ref:`deploy-machine-image`.
 
 	.. note:: When you publish an image to VMware, the result will be a template and not a virtual machine.
 

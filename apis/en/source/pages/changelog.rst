@@ -2,10 +2,11 @@
 
 Changelog
 =========
+
 3.7.fp6
 -------
 
-Release Date: 2017-07-24
+Release Date: 2017-07-25
 
 New Features
 ~~~~~~~~~~~~

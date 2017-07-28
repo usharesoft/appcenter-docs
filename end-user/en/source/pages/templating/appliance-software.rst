@@ -97,15 +97,11 @@ To add custom software components to an appliance:
 
 		.. image:: /images/extract-mysoftware.png
 
-	9. From the ``Restriction`` page, you can set the distributions with which your software is compatible. By default, all the distributions listed in the bottom table are compatible. If you want to remove a distribution from the list, select and click the up arrow and ``save``. 
+	9. You can (optionally) restrict the distribution or target format that the software applies to, from the ``Restrictions`` page. The restriction rule is set as a regular expression. For more information, refer to :ref:`restriction-rules`.
 
-		.. note:: If you remove all the distribution compatibility, the software will not be visible for any appliances.
+	10. From the ``Repository Packages`` page, you can set the packages with which your software is compatible. This page will only be visible if the restriction rule matches only one distribution. You can search for packages. Select and click the down arrow to add them. Click ``save``.
 
-	10. From the ``Repository Packages`` page, you can set the packages with which your software is compatible. This page will only be visible if you have selected only one distribution. You can search for packages. Select and click the down arrow to add them. Click ``save``.
-
-	11. You can (optionally) restrict the distribution or target format that the software applies to, from the ``Restrictions`` page. The restriction rule is set as a regular expression. For more information, refer to :ref:`restriction-rules`. Click ``save``.
-
-	12. From the ``Boot Scripts`` page, upload any boot scripts you want to add to this software. You can either:
+	11. From the ``Boot Scripts`` page, upload any boot scripts you want to add to this software. You can either:
 		- Upload an existing boot script file by using the ``upload`` icon.
 		- Create a new boot script by clicking ``new``.
 
@@ -113,14 +109,14 @@ To add custom software components to an appliance:
 
 	In both cases, you must select the type. If you select ``first boot``, then the boot script will be launched once, the first time the instance is launched.  If you select ``every boot``, then the boot script will be launched every time the instance is rebooted. You must also set the boot order.
 
-	13. From the ``Licenses`` page, upload any licenses you want to add to this software. Click ``upload``, select your license and click ``save``.
-	14. Add the uploaded software component to the appliance.  Click on the ``Appliance Library`` to view your Appliance Library.  Double-click on the appliance template you want to add the software to.
-	15. Go to the ``Stack`` page and click on the ``My Software`` button in the toolbox.  
+	12. From the ``Licenses`` page, upload any licenses you want to add to this software. Click ``upload``, select your license and click ``save``.
+	13. Add the uploaded software component to the appliance.  Click on the ``Appliance Library`` to view your Appliance Library.  Double-click on the appliance template you want to add the software to.
+	14. Go to the ``Stack`` page and click on the ``My Software`` button in the toolbox.
 
 		.. image:: /images/mysoftware.png
 
-	16. Select the software components you want to add and click the down arrow button. 
-	17. Click ``save`` to add this software component to your appliance template.
+	15. Select the software components you want to add and click the down arrow button.
+	16. Click ``save`` to add this software component to your appliance template.
 
 .. _restriction-rules:
 

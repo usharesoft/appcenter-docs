@@ -47,7 +47,7 @@ To add a new project:
 		* website information of where the project came from
 		* description
 
-	6. You can (optionally) restrict the distribution or target format that the project applies to, from the ``Restrictions`` page. The restriction rule is set as a regular expression. For more information, refer to :ref:`restrict-distrib`. Click ``save``.
+	6. You can (optionally) restrict the distribution or target format that the project applies to, from the ``Restrictions`` page. The restriction rule is set as a regular expression. For more information, refer to :ref:`restrict-distrib`.
 
 		.. image:: /images/create-project-restrictions2.png
 

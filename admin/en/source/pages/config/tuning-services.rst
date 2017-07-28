@@ -80,3 +80,104 @@ The following is an example of a profile that includes an override profile calle
     "include": "low_prio",
     "sudo": true
     },
+
+
+Tuning for Migration Projects
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When migrating Linux-based systems, UForge scans the filesystem.  In certain cases where the filesystem contains more than 300K files, you may require to increase the Java heap memory of some of the UForge services.  The example below illustrates increasing the Java heap memory to 3GB (or more).
+
+.. code-block:: javascript
+
+    "create_vm": {
+        "exec": "/opt/UShareSoft/uforge/tools/createimage/createvm.sh",
+        "sudo": false,
+        "ionice": {
+            "class": 2,
+            "level": 7
+        },
+        "jvm": {
+            "options": [
+                "-XX:MaxPermSize=512m",
+                "-Xmx3096m",
+                "-Xms512m"
+            ],
+            "sys-properties": {
+                "jna.library.path": "/opt/UShareSoft/uforge/lib",
+                "log.filename": "BuildImageEnv.log"
+            },
+            "proxy": true
+        },
+        "nice": {
+            "niceness": 15
+        }
+    },
+    "create_iso": {
+        "exec": "/opt/UShareSoft/uforge/tools/createimage/createiso.sh",
+        "sudo": false,
+        "ionice": {
+            "class": 2,
+            "level": 7
+        },
+        "jvm": {
+            "options": [
+                "-XX:MaxPermSize=512m",
+                "-Xmx3096m",
+                "-Xms512m"
+            ],
+            "sys-properties": {
+                "jna.library.path": "/opt/UShareSoft/uforge/lib",
+                "log.filename": "BuildImageEnv.log"
+            },
+            "proxy": true
+        },
+        "nice": {
+            "niceness": 15
+        }
+    },
+    "scan_vm_sudo": {
+        "exec": "/opt/UShareSoft/uforge/tools/migratevm/migratevm.sh",
+        "sudo": true,
+        "ionice": {
+            "class": 2,
+            "level": 7
+        },
+        "jvm": {
+            "options": [
+                "-XX:MaxPermSize=512m",
+                "-Xmx3096m",
+                "-Xms512m"
+            ],
+            "sys-properties": {
+                "jna.library.path": "/opt/UShareSoft/uforge/lib",
+                "log.filename": "ScansEnv.log"
+            },
+            "proxy": true
+        },
+        "nice": {
+            "niceness": 15
+        }
+    },
+    "webserver_uforge_services": {
+        "jvm": {
+            "options": [
+                "-Djava.awt.headless=true",
+                "-Dfile.encoding=UTF-8",
+                "-server",
+                "-Xms500m",
+                "-Xmx3096m",
+                "-XX:NewSize=256m",
+                "-XX:MaxNewSize=1024m",
+                "-XX:PermSize=64m",
+                "-XX:MaxPermSize=4096m"
+            ],
+            "sys-properties": {
+                "jna.library.path": "/opt/UShareSoft/uforge/lib"
+            },
+            "proxy": true
+        }
+    },
+
+
+
+

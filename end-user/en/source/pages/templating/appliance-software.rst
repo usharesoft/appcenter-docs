@@ -97,7 +97,7 @@ To add custom software components to an appliance:
 
 		.. image:: /images/extract-mysoftware.png
 
-	9. You can (optionally) restrict the distribution or target format that the software applies to, from the ``Restrictions`` page. The restriction rule is set as a regular expression. For more information, refer to :ref:`restriction-rules`.
+	9. Optionally, you can restrict the distribution or target format that the software applies to, from the ``Restrictions`` page. The restriction rule is set as a regular expression. For more information, refer to :ref:`restriction-rules`.
 
 	10. From the ``Repository Packages`` page, you can set the packages with which your software is compatible. This page will only be visible if the restriction rule matches only one distribution. You can search for packages. Select and click the down arrow to add them. Click ``save``.
 

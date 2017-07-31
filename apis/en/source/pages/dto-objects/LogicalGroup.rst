@@ -21,7 +21,7 @@ The list of attributes for ``logicalGroup`` are:
 	* ``partitionUri`` (anyURI): the uri resources for each partition this logical group uses
 	* ``partitionUris`` (:ref:`UriList-object`): the list of uri resources for each partition this logical group uses
 	* ``uri`` (anyURI): the uri resource of this logical group
-	* ``created`` (dateTime): the created date of the object
+	* ``created`` (dateTime): the date the appliance template is created
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)
 	* ``lastModified`` (dateTime): the last modified date of this object

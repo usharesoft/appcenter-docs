@@ -28,7 +28,7 @@ The list of attributes for ``pkgGroup`` are:
 	* ``uri`` (anyURI): the uri resource of this package group object
 	* ``version`` (string): the version information of this package group
 	* ``packages``: the list of packages in this group (see :ref:`package-object`)
-	* ``created`` (dateTime): the created date of the object
+	* ``created`` (dateTime): the date the appliance template is created
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)
 	* ``lastModified`` (dateTime): the last modified date of this object

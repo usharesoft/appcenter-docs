@@ -27,7 +27,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the user name (login name) of the :ref:`user-object` to remove
+* ``uid`` (required): the user name (login name) of the :ref:`user-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -40,7 +40,7 @@ Example Request
 .. code-block:: bash
 
 	curl "https://uforge.example.com/api/users/{uid}/accounts" -X POST \
-	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"-H "Content-type: application/xml" --data-binary "@representation.xml"
 
 Example of representation.xml content (the request body):
 
@@ -51,6 +51,7 @@ Example of representation.xml content (the request body):
 		<name>OpenStack Example</name>
 		<targetPlatform>
 			<name>OpenStack</name>
+			<type>openstack</type>
 		</targetPlatform>
 		<glanceUrl>http://ip:9292</glanceUrl>
 		<keystoneUrl>http://ip:5000</keystoneUrl>

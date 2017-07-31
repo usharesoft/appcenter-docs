@@ -16,7 +16,7 @@ apiKey_create
 
 Creates an API Key for the specified user. 
 
-.. note:: The :ref:`apikeypair-object` can be empty as only the description information is used.  The public and secret key information is generated automatically.
+.. note:: The :ref:`apikeypair-object` can be empty as only the description information is used.  The public and secret key information is generated automatically.  Though you must send an empty :ref:`apikeypair-object` in the request body.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -40,12 +40,13 @@ Example Request
 .. code-block:: bash
 
 	curl "https://uforge.example.com/api/users/{uid}/apikeys" -X POST \
-	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" --data-binary "@representation.xml"
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"-H "Content-type: application/xml" --data-binary "@representation.xml"
 
 Example of representation.xml content (the request body):
 
 .. code-block:: xml
 
+	<ns0:apiKeyPair xmlns:ns0="http://www.usharesoft.com/uforge"></ns0:apiKeyPair>
 
 
 .. seealso::

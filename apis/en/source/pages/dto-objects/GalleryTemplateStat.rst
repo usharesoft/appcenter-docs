@@ -17,7 +17,7 @@ The list of attributes for ``galleryTemplateStat`` are:
 	* ``parentUri`` (anyURI): the uri resource of the parent object (e.g. workspace)
 	* ``uri`` (anyURI): the uri resource of this object
 	* ``user`` (:ref:`user-object`): the login name of the user to track actions made on a :ref:`gallerytemplate-object`
-	* ``created`` (dateTime): the created date of the object
+	* ``created`` (dateTime): the date the appliance template is created
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)
 	* ``lastModified`` (dateTime): the last modified date of this object

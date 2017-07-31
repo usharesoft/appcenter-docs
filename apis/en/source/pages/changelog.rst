@@ -29,9 +29,35 @@ New Features
 Enhancements
 ~~~~~~~~~~~~
 * Improved the information displayed in the banner when administering OS Profiles. Now the date the OS profile was created is displayed (for Windows only), as well as the size and the associated distribution (for both Windows and Linux)
+* Support Linux multiple disks publication to AWS
 
 Bug Fixes
 ~~~~~~~~~
+* 851 After K5 Black box migration, some packages were updated
+* 884 uforge-scan.bin ignores option ``-e "/"``
+* 953 Cannot add a license in a MySoftware
+* 972 Internal error happens when clicking directory name ``{|}`` in Files & Folders in Migration
+* 982 debootstrap.log should be preserved
+* 1001 Publish Outscale changes proxy instance ID configuration
+* 1003 Image generation fails for a CentOS 6.1 imported from scan and upgraded to the 6.5 milestone
+* 1061 /etc/ssh/sshd_config file is changed after the migration.
+* 1304 All POST and PUT API examples in the documentation miss Content-Type parameter
+* 1305 API doc cloudAccount_create needs correcting
+* 1306 API doc for creating API key pair needs updating
+* 1317 Dashboard quotas are used more than 100%
+* 1353 Correct https_proxy that breaks perl cloud (openstack) connectors
+* 1393 Remove uforge-anytermd and remove its pid file after uninstalling uforge-install-config
+* 1402 Migrator Role does not allow to generate image from a Scan
+* 5447 Scanning a UForge server raises an internal server error and a Mapping error
+* 6084 Images list Cli command returns wrong OS name
+* 6127 The latest ``perl-Compress-Raw-Zlib`` package is not used
+* 6147 Generation fails when selinux packages are manually specified in a MySoftware
+* 6148 /etc/ssh/sshd_config modifications are ignored after a blackbox migration
+* 7431 Cannot generate debian 8 when /tmp partition is small and has large extra files
+* 7806 Scan comparison raises a 500 call failed error when clicking on a package modification of the comparator
+* 7842 Cloud account password is saved as plain text in text file
+* 7915 cleanup_tickets.sh and cleanup_scans.sh do not delete Generated Images from Scans
+* 7986 The UI in Stack \u003e OS profile displays the latest version of the OS packages instead of the one used in the appliance template
 
 3.7.fp5
 -------

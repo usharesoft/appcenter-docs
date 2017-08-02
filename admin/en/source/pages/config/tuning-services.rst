@@ -85,7 +85,7 @@ The following is an example of a profile that includes an override profile calle
 Tuning for Migration Projects
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When migrating Linux-based systems, UForge scans the filesystem.  In certain cases where the filesystem contains more than 300K files, you may require to increase the Java heap memory of some of the UForge services.  The example below illustrates increasing the Java heap memory to 3GB (or more).
+When migrating Linux-based systems, UForge scans the filesystem.  In certain cases where the filesystem contains more than 300K files, you may need to increase the Java heap memory of some of the UForge services.  The example below illustrates increasing the Java heap memory to 3GB (or more).
 
 .. code-block:: javascript
 

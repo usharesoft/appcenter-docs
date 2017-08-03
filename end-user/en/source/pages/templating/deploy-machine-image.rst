@@ -34,11 +34,11 @@ In order to deploy a machine image to Amazon, you must already have credentials 
 
 		.. image:: /images/machine-image-deploy-icon.png
 
-	8. In the pop-up window, enter the name of the deployment. Click on ``deploy``. This will connect to Amazon and launch your machine image instance. Once deployed, a green button will appear under the ``Status`` column.
+	8. In the pop-up window, enter the name of the deployment. Click on ``deploy``. This will connect to Amazon and launch your machine image instance. Once deployed, a Running logo will appear under the ``Status`` column.
 
 		.. image:: /images/machine-image-deploy-popup.png
 
-	9. From the ``Deployments`` page you can see the instances deployed on Amazon and their status. If the status is green it is up and running on Admazon. If it is red, there has been an issue during deployment and/or it is stopped.
+	9. From the ``Deployments`` page you can see the instances deployed on Amazon and their status.
 
 		.. image:: /images/machine-image-deploy-status.png
 

@@ -33,6 +33,8 @@ The generation will take a few minutes to complete (depending on the number of p
 
 Once the generation is complete, you can download the image locally, or for certain cloud formats register the machine image directly to the target environment using your cloud credentials.
 
+.. note:: For PXE, you cannot download the image but can launch it through an iPXE shell. For more information, refer to :ref:`PXE-image`.
+
 You will note that a package ``uforge-install-config`` is injected in the generated image. This file is responsible for: 
 
 	1. launching the dialog for the install profile configurations which are not automatic (keyboard, root password, licenses, time zone, static IP)
@@ -42,28 +44,10 @@ You will note that a package ``uforge-install-config`` is injected in the genera
 
 However, it is preferable to leave this file.
 
-.. _appliance-docker-image:
-
-Generating a Docker Image
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-To generate a machine image:
-	1. Go to the ``Apps`` tab.
-	2. Select the appliance from the ``Appliance Library``. 
-	3. Click on the ``generate`` button at the top right to display all possible image formats which can be generated. 
-	4. Choose ``Container``, then ``Docker`` image format. 
-	5. You can set the disk size, then click the ``generate`` button to launch a generation in UForge for this appliance template. The following pop-up will be displayed once the generation ends on the summary view.
-
-		.. image:: /images/docker-image-publish.png
-
-	5. As indicated in the pop-up, you need to click ``download`` to download the tar.gz.
-	6. Run the appropriate docker import command to create the image. The appliance and docker image name will depend on the name you have given them.
-	7. You should now be able to see the Docker image in your library.
-
 .. _service-state:
 
 Changes to Service State Based on Target
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When generating a machine image from a scan, certain services are disabled or enabled depending on the target machine image being created. The following changes are common to all formats:
 
@@ -96,5 +80,21 @@ Microsoft Azure Image
 	* ``networkmanager`` disabled
 	* ``network`` enabled
 
+.. _appliance-docker-image:
 
+Generating a Docker Image
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To generate a machine image:
+	1. Go to the ``Apps`` tab.
+	2. Select the appliance from the ``Appliance Library``. 
+	3. Click on the ``generate`` button at the top right to display all possible image formats which can be generated. 
+	4. Choose ``Container``, then ``Docker`` image format. 
+	5. You can set the disk size, then click the ``generate`` button to launch a generation in UForge for this appliance template. The following pop-up will be displayed once the generation ends on the summary view.
+
+		.. image:: /images/docker-image-publish.png
+
+	5. As indicated in the pop-up, you need to click ``download`` to download the tar.gz.
+	6. Run the appropriate docker import command to create the image. The appliance and docker image name will depend on the name you have given them.
+	7. You should now be able to see the Docker image in your library.
 

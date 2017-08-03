@@ -15,6 +15,7 @@ An appliance template is a meta-data description of an entire software stack.  T
    appliance-update
    appliance-osprofile
    appliance-generate
+   appliance-pxe-boot
    appliance-publish
    deploy-machine-image
    appliance-os-updates

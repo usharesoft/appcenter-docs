@@ -11,9 +11,9 @@ Release Date: 2017-09-04
 New Features
 ~~~~~~~~~~~~
 * Introduce a REST API for users to list files to synchronize to the target environment after a CentOS scan without overlay.
-* Microsoft Azure connector has been updated. Previously with UForge the machine image was publish as a "vhd" blob file in the Azure cloud Account. Now an image will be accessible in the cloud console from this blob file. In order to support this additional information must be entered in ``Credentials`` for Azure ARM connector.
+* Microsoft Azure connector has been updated. Previously with UForge the machine image was publish as a "vhd" blob file in the Azure cloud Account. Now an image will be accessible in the cloud console from this blob file. In order to support this additional information must be entered in ``Credentials`` for Microsoft Azure ARM connector.
 
-	.. note:: If you have an existing Azure ARM account already setup in UForge, then you must update the credential information with the tenant id.
+	.. note:: If you have an existing Microsoft Azure ARM account already setup in UForge, then you must update the credential information.
 
 3.7.fp6
 -------

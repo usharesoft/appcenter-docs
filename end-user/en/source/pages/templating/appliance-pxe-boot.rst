@@ -11,7 +11,7 @@ The PXE format can be used to install an OS through the network, based on a PXE 
 
 You can execute iPXE script provided by UForge directly from iPXE shell. To do so, first make sure that your CentOS-based image is created in PXE format.
 
-		.. note:: You must be in an iPXE shell. Most virtual machines already implement iPXE. 
+		.. note:: You must be in an iPXE shell. Most virtual machines already implement iPXE. Make sure that you have the latest version of iPXE installed.
 
 	1. Start your machine and boot it on the iPXE shell.
 	2. Make sure the network interface is configured by executing "dhcp" in the iPXE shell.

@@ -35,6 +35,11 @@ You can execute iPXE script provided by UForge directly from iPXE shell. To do s
 
 	5. You can then select the PXE image you want to launch.
 
+.. warning:: It is possible to have a kernel panic error during the installation. This is caused by a bug in the Linux kernel (fixed in 3.16). In that case, just restart the installation.
+
+.. warning:: When using Virtual Box, depending on the version, the installation can freeze. You may want to change your Virtual Box version to 5.1.26.
+
+
 Initializing the Boot Process Using a Customized ipxe.iso File
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -47,10 +52,10 @@ To do so, clone or download the ipxe open source project and build it. However, 
 
 		make EMBED=/home/user/scripts/myScript.ipxe
 
-	* You can activate the HTTPS protocol to download files. First, check in ``src/config/general.h`` that there is the line ``define DOWNLOAD_PROTO_HTTPS`` and not ``undef DOWNLOAD_PROTO_HTTPS``.
-	Then build the ``ipxe.iso`` by adding the argument: ``TRUST=/etc/ssl/certs/GeoTrust_Global_CA.pem``. To build iPXE with HTTPS enabled run:: 
+	* You can activate the HTTPS protocol to download files. First, check in ``src/config/general.h`` that there is the line ``define DOWNLOAD_PROTO_HTTPS`` and not ``undef DOWNLOAD_PROTO_HTTPS``. Then build the ``ipxe.iso`` by adding the argument: ``TRUST=/etc/ssl/certs/GeoTrust_Global_CA.pem``. To build iPXE with HTTPS enabled run:: 
 
 		make TRUST=/home/UShareSoft.com.crt
+
 
 More information about how to build your project can be found on `ipxe.org <http://ipxe.org/download>`_.
 
@@ -62,6 +67,11 @@ Once you are booting on ipxe.iso, the following screen should appear and the boo
 
 Enter your UForge IP, root context and credentials. Then select ``Connect``. You can then select the PXE image you want to launch.
 
+.. warning:: It is possible to have a kernel panic error during the installation. This is caused by a bug in the Linux kernel (fixed in 3.16). In that case, just restart the installation.
+
+.. warning:: When using Virtual Box, depending on the version, the installation can freeze. You may want to change your Virtual Box version to 5.1.26.
+
+
 Using a DHCP Server that Redirects to an iPXE Script
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -70,4 +80,8 @@ The options of a DHCP server can be modified so that it redirects to an iPXE scr
 	.. image:: /images/pxe-boot.png
 
 Enter your UForge IP, root context and credentials. Then select ``Connect``. You can then select the PXE image you want to launch.
+
+.. warning:: It is possible to have a kernel panic error during the installation. This is caused by a bug in the Linux kernel (fixed in 3.16). In that case, just restart the installation.
+
+.. warning:: When using Virtual Box, depending on the version, the installation can freeze. You may want to change your Virtual Box version to 5.1.26.
 

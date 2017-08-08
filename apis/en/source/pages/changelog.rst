@@ -11,6 +11,7 @@ Release Date: 2017-09-04
 New Features
 ~~~~~~~~~~~~
 * Introduce a REST API for users to list files to synchronize to the target environment after a CentOS scan without overlay.
+* Can create images in PXE format for CentOS.
 
 3.7.fp6
 -------

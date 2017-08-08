@@ -20,6 +20,8 @@ In order to publish a machine image to a cloud environment, you must already hav
 
 	6. The publication will take a few minutes to complete (depending on the size of the image and the network connectivity between UForge and the target cloud environment). The publication progress is shown. At the end of the publication, the machine image has been published by UForge to your target cloud environment. The published image can be found in the target cloud environment.
 
+	.. note:: If your publication to AWS fails this may be due to your security settings. Your default security group for AWS must allow SSH. Contact your administrator.
+
 	UForge does not launch instances in the target cloud environment. If you wish to launch an instance from this machine image, you should go to your target cloud environment console for further actions.
 
 	.. warning:: If your Fujitsu K5 publish failed, there may be data published to cloud, incurring costs, even if not visible on your cloud account. You should run a cleanup manually. Refer to `Chapter 2.7 Object storage <http://www.fujitsu.com/uk/Images/k5-iaas-api-reference-foundation-service.pdf>`_

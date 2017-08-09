@@ -125,7 +125,7 @@ Restricting Software Components for OSes and Formats
 
 Under ``My Software`` you can restrict the usage of a software bundle based on a distribution name, family, architecture or for a specific machine image format.
 
-To set restriction rules: 
+* To set restriction rules:
 
 	1. Under the ``Apps`` go to the ``Software Library`` page.
 	2. Select the sofware you want to modify.
@@ -148,4 +148,31 @@ Once you have set a restriction rule, you will see a cube next to the software c
 .. warning:: If your software bundle is limited to a certain target format and you generate an image in another format, your appliance will be generated but the software bundle will not be part of the final image. A note indicating this will appear when you select to generate the machine image, as in the following image.
 
 	.. image:: /images/mysoftware-removed.png
+
+* Restriction rule values:
+
+By using the command-line tool `hammr <http://hammr.io>`_, you're able to retrieve available distributions:
+
+.. code-block:: bash
+
+	$ hammr os list --url https://uforge.example.com/api -u username -p password
+
+.. note::
+	``Distribution`` fields possible values are:
+		* ``name``: `Name` column
+		* ``version``: `Version` column
+		* ``arch``: `Architecture` column
+		* ``family``: ``linux``, ``unix`` or ``windows``
+		* ``pkgType``: ``application/x-rpm`` or ``application/x-debian-package``
+
+By using the command-line tool `hammr <http://hammr.io>`_, you're able to retrieve available machine image formats:
+
+.. code-block:: bash
+
+	$ hammr format list --url https://uforge.example.com/api -u username -p password
+
+.. note::
+	``TargetFormat`` fields possible values are:
+		* ``name``: `Builder Type` column
+		* ``type``: ``cloud``, ``container``, ``physical`` or ``virtual``
 

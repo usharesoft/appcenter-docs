@@ -25,7 +25,7 @@ You can execute iPXE script provided by UForge directly from iPXE shell. To do s
 
 	or::
 
-		chain https://uforgeipxe.usharesoft.com/resources/ipxe-init
+		chain https://uforge.yourdomain.com/resources/ipxe-init
 
 	4. The following screen should appear and the boot process can be started.
 
@@ -37,7 +37,7 @@ You can execute iPXE script provided by UForge directly from iPXE shell. To do s
 
 .. warning:: It is possible to have a kernel panic error during the installation. This is caused by a bug in the Linux kernel (fixed in 3.16). In that case, just restart the installation.
 
-.. warning:: When using Virtual Box, depending on the version, the installation can freeze. You may want to change your Virtual Box version to 5.1.26.
+.. warning:: When using Virtual Box, depending on the version, the installation can freeze. You may want to upgrade VirtualBox (version >=5.1.26).
 
 
 Initializing the Boot Process Using a Customized ipxe.iso File
@@ -48,18 +48,18 @@ Most virtual machines already implement iPXE. You can customize to ease the use 
 The process of booting through iPXE can be started by using an ``ipxe.iso`` file. This file is built using the `iPXE open source project <http://git.ipxe.org/ipxe.git>`_.
 
 To do so, clone or download the ipxe open source project and build it. However, there are some parameters that can be used and combined:
-	* You can embed a script in ``ipxe.iso`` so that it automatically executes some iPSE commands when booting on it. We already provide a script that allows to select the UForge from which you want to download PXE images at: PATH_TO_THE_SCRIPT. For example:: 
+	* You can embed a script in ``ipxe.iso`` so that it automatically executes some iPXE commands when booting on it. We already provide a script that allows to select the UForge from which you want to download PXE images at: PATH_TO_THE_SCRIPT. For example:: 
 
 		make EMBED=/home/user/scripts/myScript.ipxe
 
-	* You can activate the HTTPS protocol to download files. First, check in ``src/config/general.h`` that there is the line ``define DOWNLOAD_PROTO_HTTPS`` and not ``undef DOWNLOAD_PROTO_HTTPS``. Then build the ``ipxe.iso`` by adding the argument: ``TRUST=/etc/ssl/certs/GeoTrust_Global_CA.pem``. To build iPXE with HTTPS enabled run:: 
+	* You can activate the HTTPS protocol to download files. First, check in ``src/config/general.h`` that there is the line ``define DOWNLOAD_PROTO_HTTPS`` and not ``undef DOWNLOAD_PROTO_HTTPS``. Then build the ``ipxe.iso`` by adding the argument: ``TRUST=/etc/ssl/certs/CertificateAuthority.pem``. To build iPXE with HTTPS enabled run:: 
 
-		make TRUST=/home/UShareSoft.com.crt
+		make TRUST=/home/uforge.yourdomain.com.crt
 
 
 More information about how to build your project can be found on `ipxe.org <http://ipxe.org/download>`_.
 
-The project must be build in /src and the resulting output is found at ``/src/bin/ipxe.iso``. This ISO can then be used through qemu, VirtualBox, vcenter or on a USB stick to boot using iPXE protocol.
+The project must be build in /src and the resulting output is found at ``/src/bin/ipxe.iso``. This ISO can then be used through qemu, VirtualBox, VMware vcenter or on a USB stick to boot using iPXE protocol.
 
 Once you are booting on ipxe.iso, the following screen should appear and the boot process can be started.
 
@@ -69,7 +69,7 @@ Enter your UForge IP, root context and credentials. Then select ``Connect``. You
 
 .. warning:: It is possible to have a kernel panic error during the installation. This is caused by a bug in the Linux kernel (fixed in 3.16). In that case, just restart the installation.
 
-.. warning:: When using Virtual Box, depending on the version, the installation can freeze. You may want to change your Virtual Box version to 5.1.26.
+.. warning:: When using Virtual Box, depending on the version, the installation can freeze. You may want to upgrade VirtualBox (version >=5.1.26).
 
 
 Using a DHCP Server that Redirects to an iPXE Script
@@ -83,5 +83,5 @@ Enter your UForge IP, root context and credentials. Then select ``Connect``. You
 
 .. warning:: It is possible to have a kernel panic error during the installation. This is caused by a bug in the Linux kernel (fixed in 3.16). In that case, just restart the installation.
 
-.. warning:: When using Virtual Box, depending on the version, the installation can freeze. You may want to change your Virtual Box version to 5.1.26.
+.. warning:: When using Virtual Box, depending on the version, the installation can freeze. You may want to upgrade VirtualBox (version >=5.1.26).
 

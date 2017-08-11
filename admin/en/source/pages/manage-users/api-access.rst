@@ -17,7 +17,7 @@ To grant API access to a user account you must create a role to which you will a
 
 	2. Assign this new role to the user::
 
-		$ uforge user role add --name new role --account kermit -u $ADMIN -p $PASS
+		$ uforge user role add --roles newrole --account kermit -u $ADMIN -p $PASS
 
 	3. Optionally you can set the number of API keys:
 

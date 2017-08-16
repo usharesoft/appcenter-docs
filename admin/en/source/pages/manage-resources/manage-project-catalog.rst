@@ -104,30 +104,28 @@ For example, if the project is designed only for distributions CentOS 7 x86_64 o
 
 * Restriction rule values:
 
-By using the command-line tool `hammr <http://hammr.io>`_, you're able to retrieve available distributions:
+By using the command-line tool `hammr <http://hammr.io>`_, you are able to retrieve available distributions:
 
 .. code-block:: bash
 
 	$ hammr os list --url https://uforge.example.com/api -u username -p password
 
-.. note::
-	``Distribution`` fields possible values are:
-		* ``name``: `Name` column
-		* ``version``: `Version` column
-		* ``arch``: `Architecture` column
-		* ``family``: ``linux``, ``unix`` or ``windows``
-		* ``pkgType``: ``application/x-rpm`` or ``application/x-debian-package``
+Where ``Distribution`` fields possible values are:
+	* ``name``: the value listed in the `Name` column
+	* ``version``: the value listed in the `Version` column
+	* ``arch``: the value listed in the `Architecture` column
+	* ``family``: can be one of the following ``linux``, ``unix`` or ``windows``
+	* ``pkgType``: can be either ``application/x-rpm`` or ``application/x-debian-package``
 
-By using the command-line tool `hammr <http://hammr.io>`_, you're able to retrieve available machine image formats:
+By using the command-line tool `hammr <http://hammr.io>`_, you are able to retrieve available machine image formats:
 
 .. code-block:: bash
 
 	$ hammr format list --url https://uforge.example.com/api -u username -p password
 
-.. note::
-	``TargetFormat`` fields possible values are:
-		* ``name``: `Builder Type` column
-		* ``type``: ``cloud``, ``container``, ``physical`` or ``virtual``
+Where ``TargetFormat`` fields possible values are:
+	* ``name``: the value listed in the `Builder Type` column
+	* ``type``: can be one of the following ``cloud``, ``container``, ``physical`` or ``virtual``
 
 .. _update-project:
 

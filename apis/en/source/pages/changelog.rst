@@ -3,6 +3,55 @@
 Changelog
 =========
 
+3.7-6
+-----
+
+Release Date: 2017-08-21
+
+Installation
+~~~~~~~~~~~~
+
+To be able to update a 3.7 UForge using the latest yum repo, you have to edit ``/etc/yum.repos.d/uforge-ee-centos.repo`` and replace ``stable/3.7/official/centos/releases/$releasever/$basearch/`` by ``test/3.7/centos/releases/$releasever/$basearch/``
+
+A compatible version of hammr is also available : 3.7-6
+
+This version is only compatible with UForge AppCenter 3.7-6
+
+To install it, you will have to launch the following command::
+
+	$ pip install hammr==3.7-6
+
+Enhancements
+~~~~~~~~~~~~
+
+* 6313 K5 Germany region now supported
+* 6314 K5 Spain, Finland and US regions now supported
+
+Bug Fixes
+~~~~~~~~~
+
+* 837 CentOS 7 minimal DESKTOP profile has a bad package dependency
+* 844 EventController unstable leads to error creating publish command for K5
+* 927 Image generation from CentOS 6.5 scan fails during ``Step: Installing Bootloader``
+* 946 Scanning failed at Phase 6 (heap memory in eventcontroller)
+* 1000 AWS publication is not working behing an external http proxy
+* 1004 Image generation fails for a CentOS 6.1 imported from scan and upgraded to the 6.5 milestone
+* 1227 The value of disk usage is incorrect after scan, generate, delete image, delete scan
+* 1339 Dashboard usage progress bars for appliance, generation and scans seem to fill the wrong way
+* 1358 Migrator Role does not allow to generate image from a scan
+* 1411 Importing fails when whitebox migration, ``++`` in a Software Bundle name is not supported
+* 5392 500 error occurs in image generation using a template without a partition table
+* 5430 Scan comparison raises a 500 call failed error when clicking on a package
+* 5452 Import/Export software bundle fails with ``Permission denied error``
+* 5453 The count of imported appliances from scan is incorrect in dashboard
+* 5527 Message text is not translated into Japanese in new scan binary download page
+* 5531 Enumeration error with trying to get the list of template with Hammr and UForge CLI
+* 5730 An error occurs when launching Service Management Tool from ``run`` -> ``services.msc
+* 6128 The latest ``perl-Compress-Raw-Zlib`` package is not used
+* 6353 Uploading boot scripts or my software using IE causes an error if the local directory path is included
+* 6560 Heap memory error when scanning VM with files number > 300K
+
+
 3.7-5
 -----
 

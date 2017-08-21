@@ -8,10 +8,14 @@ Changelog
 
 Release Date: 2017-08-21
 
-Installation
-~~~~~~~~~~~~
+Upgrading
+~~~~~~~~~
 
-To be able to update a 3.7 UForge using the latest yum repo, you have to edit ``/etc/yum.repos.d/uforge-ee-centos.repo`` and replace ``stable/3.7/official/centos/releases/$releasever/$basearch/`` by ``test/3.7/centos/releases/$releasever/$basearch/``
+In order to upgrade UForge to this latest patch, please update the packages by launching the following commands on each node:
+
+1) Execute : ``yum update uforge-common``
+2) Then execute : ``yum update uforge-gen uforge uforge-client uforge-cli``
+
 
 A compatible version of hammr is also available : 3.7-6
 

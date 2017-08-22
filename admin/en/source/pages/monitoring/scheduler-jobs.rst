@@ -16,7 +16,7 @@ To view the scheduler's current queue, log in to the oar scheduler node as root 
 
 This provides information on the jobs currently being executed as well as the jobs that are scheduled to be executed once a resource is free.  
 
-To view more details of a specific job, log in to the oar scheduler node as root and run the command oarstat and specify the JOB_ID:
+To view more details of a specific job, log in to the oar scheduler node as root and run the command oarstat and specify the ``JOB_ID``:
 
   .. code-block:: shell
 
@@ -54,10 +54,10 @@ To view more details of a specific job, log in to the oar scheduler node as root
 Viewing the Logs of a Job
 -------------------------
 
-The main logs of OAR are stored in: /var/log/oar.log
-Each job launched on the OAR cluster, whether it be an image generation or publish to a cloud, logs are stored for the job.  These include all the traces and error information during the execution of the job.  Each job has a unique ID provided to it, which can be recuperated using the “oarstat” command as shown in :ref:`scheduler-jobs`.
+The main logs of OAR are stored in: ``/var/log/oar.log``
+Each job launched on the OAR cluster, whether it be an image generation or publish to a cloud, logs are stored for the job.  These include all the traces and error information during the execution of the job.  Each job has a unique ID provided to it, which can be recuperated using the ``oarstat`` command as shown in :ref:`scheduler-jobs`.
 
-For jobs that generate an image, the log files are stored under: cd <user data mount point>/FactoryContainer/images/<job_name>
+For jobs that generate an image, the log files are stored under: ``cd <user data mount point>/FactoryContainer/images/<job_name>``
 
 For example:
 

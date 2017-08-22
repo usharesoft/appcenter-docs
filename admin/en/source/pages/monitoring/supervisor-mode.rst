@@ -5,7 +5,7 @@
 Using Supervisor Mode
 ---------------------
 
-UForge allows you to login as another user if you have supervisor access. Supervisor access rights are assigned by the UForge administrator. Once you have supervisor rights, you will see glasses icon in the top right of the UForge GUI banner.
+UForge allows you to login as another user if you have supervisor access. Supervisor access rights are assigned by the UForge administrator. Once you have supervisor rights, you will see the eye icon in the top right of the UForge GUI banner.
 
 .. warning:: Users with Supervisor Access will be able to log in as ANY of the users in the organization without entering a password. This right should be limited to support or managed services. Users with Supervisor Role needs to respect the privacy of the user data, according to current legislation.
 

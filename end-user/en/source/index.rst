@@ -11,11 +11,11 @@ Contents:
    :maxdepth: 2
 
    pages/getting-started
+   pages/myaccount/overview
+   pages/credentials/overview
    pages/templating/overview
    pages/migration/overview
    pages/collaboration/overview
-   pages/myaccount/overview
-   pages/credentials/overview
    
    pages/apis/using-apis
    pages/apis/using-java-sdk

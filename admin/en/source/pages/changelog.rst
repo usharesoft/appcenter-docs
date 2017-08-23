@@ -10,9 +10,10 @@ Release Date: 2017-09-04
 
 New Features
 ~~~~~~~~~~~~
-* Introduce a REST API for users to list files to synchronize to the target environment after a CentOS scan without overlay.
 * Fujitsu Cloud Service K5 US, Finland and Spain regions are supported.
 * Can create images in PXE format for CentOS.
+* Users can deploy instances from published machine images to OpenStack.
+* Introduce a REST API for users to list files to synchronize to the target environment after a CentOS scan without overlay.
 
 3.7.fp6
 -------

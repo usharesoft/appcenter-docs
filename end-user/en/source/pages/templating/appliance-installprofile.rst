@@ -5,7 +5,7 @@
 Updating the Install Profile
 ----------------------------
 
-The ``Install Profile`` on the ``Stack`` page allows you to customize the questions asked when the image is booted for the very first time (or during installation for an ISO image). The install profile is mandatory. However, the options you set will differ depending on if you appliance in Linux-based or Windows-based. Please refer to the appropriate section below.
+The ``Install Profile`` on the ``Stack`` page allows you to customize the questions asked when the image is booted for the very first time (or during installation for a physical image format). The install profile is mandatory. However, the options you set will differ depending on if you appliance in Linux-based or Windows-based. Please refer to the appropriate section below.
 
 Updating a Linux-based Install Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -5,7 +5,7 @@
 Configuring Cloudsoft AMP
 -------------------------
 
-Once your UForge platform deployment is complete you can configure Cloudsoft AMP in order to allow users to deploy published machine images directly to Amazon, without having to connect to their Amazon account. Before you start the configuration, ensure that you have:
+Once your UForge platform deployment is complete you can configure Cloudsoft AMP in order to allow users to deploy published machine images directly to Amazon or OpenStack, without having to connect to their cloud account. Before you start the configuration, ensure that you have:
 
 	* a running AMP server (from version AMP-4.5.0 / Brooklyn 0.11.0) with groovy script enabled
 	* a configured user in AMP server that will be used by UForge to connect
@@ -25,8 +25,7 @@ To configure AMP, do the following on each UForge webservice node:
 
 			$ /opt/UShareSoft/uforge-client/bin/uforge_ui_update.sh
 
-	3. At this point the deployment feature should be available for the root user. In order to allow other users to use this feature, give them the entitlement "deployments_access". For more information on entitlements refer to :ref:`create-roles`.
-http://docs.usharesoft.com/projects/appcenter-admin-guide/en/latest/pages/manage-users/api-access.html#granting-a-user-supervisor-rights
+	3. At this point the deployment feature should be available for the root user. In order to allow other users to use this feature, give them the entitlement ``deployments_access``. For more information on entitlements refer to :ref:`create-roles`.
 
 		.. code-block:: shell
 

@@ -30,9 +30,11 @@ In order to publish a machine image to a cloud environment or container, you mus
 
 	6. The publication will take a few minutes to complete (depending on the size of the image and the network connectivity between UForge and the target environment). The publication progress is shown. At the end of the publication, the machine image has been published by UForge to your target environment. The published image can be found in the target cloud environment or container.
 
+	.. note:: If your publication to AWS fails this may be due to your security settings. Your default security group for AWS must allow SSH. Contact your administrator.
+
 	UForge does not launch instances in the target cloud environment. If you wish to launch an instance from this machine image, you should go to your target cloud environment console for further actions.
 
-	.. note:: When you publish an image to Amazon, and you have the correct UForge entitlements, you will be able to launch your machine image directly from UForge using the ``Deploy`` option, without having to connect to Amazon. Refer to :ref:`deploy-machine-image`.
+	.. note:: When you publish an image to Amazon or OpenStack, and you have the correct UForge entitlements, you will be able to launch your machine image directly from UForge using the ``Deploy`` option, without having to connect to your cloud platform. Refer to :ref:`deploy-machine-image`.
 
 	.. note:: When you publish an image to VMware, the result will be a template and not a virtual machine.
 

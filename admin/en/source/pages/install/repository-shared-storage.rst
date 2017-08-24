@@ -27,7 +27,7 @@ To setup the shared storage:
 
 		.. code-block:: shell
 
-			mount 192.20.777.205:/appstore_qualif_data/ /mnt 
+			mount 192.20.777.205:/volume1/USER_DATA/ /mnt
 			su - tomcat 
 			cd /mnt
 

@@ -8,7 +8,7 @@ UForge Repository on Local Storage
 When using local storage, UForge must already be installed, but not configured.  Create two directories one for the operating system data and the other for all the user data (for example ``My Software`` and images generated).
 
 	1. Create the operating system directory, for example: ``/space/DISTROS``
-	2. Create the user data directory, for example: ``/space/USER_DATA`
+	2. Create the user data directory, for example: ``/space/USER_DATA``
 
 	3. If you want to create ISO images with UForge then you must copy the ISO skeleton files and mount them to your system, as follows:
 

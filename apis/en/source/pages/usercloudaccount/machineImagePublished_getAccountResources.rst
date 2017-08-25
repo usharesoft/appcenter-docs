@@ -1,33 +1,35 @@
 .. Copyright 2017 FUJITSU LIMITED
 
-.. _machineImage-get:
+.. _machineImagePublished-getAccountResources:
 
-machineImage_get
-----------------
+machineImagePublished_getAccountResources
+-----------------------------------------
 
-.. function:: GET /users/{uid}/appliances/{aid}/images/{itid}
+.. function:: GET /users/{uid}/appliances/{aid}/images/{itid}/pimages/{pitid}/accounts/{caid}/resources
 
 .. sidebar:: Summary
 
 	* Method: ``GET``
 	* Response Code: ``200 / 304``
 	* Response Formats: ``application/xml`` ``application/json``
-	* Since: ``UForge 1.0``
+	* Since: ``UForge 3.7.7``
 
-Retrieves the meta-data of a machine image.
+Retrieves any dynamic resource information from the target cloud environment.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
 
 * Requires Authentication: ``true``
-* Entitlements Required: ``appliance_create``
+* Entitlements Required: ``None``
 
 URI Parameters
 ~~~~~~~~~~~~~~
 
 * ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``itid`` (required): the id of the :ref:`image-object`
+* ``caid`` (required): the id of the :ref:`credaccount-object`
 * ``aid`` (required): the id of the :ref:`appliance-object`
+* ``pitid`` (required): the id of the :ref:`publishimage-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -39,23 +41,21 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/users/{uid}/appliances/{aid}/images/{itid}" -X GET \
+	curl "https://uforge.example.com/api/users/{uid}/appliances/{aid}/images/{itid}/pimages/{pitid}/accounts/{caid}/resources" -X GET \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::
 
 	 * :ref:`appliance-object`
-	 * :ref:`applianceImage-publish`
-	 * :ref:`image-object`
-	 * :ref:`imagepkgs-object`
-	 * :ref:`machineImageFile-download`
+	 * :ref:`credaccount-object`
+	 * :ref:`deployment-object`
 	 * :ref:`machineImageGeneration-cancel`
-	 * :ref:`machineImagePkg-getAll`
 	 * :ref:`machineImagePublish-cancel`
 	 * :ref:`machineImagePublishedStatus-get`
 	 * :ref:`machineImagePublishedStatus-getAll`
 	 * :ref:`machineImagePublished-delete`
 	 * :ref:`machineImagePublished-deleteAll`
+	 * :ref:`machineImagePublished-deploy`
 	 * :ref:`machineImagePublished-download`
 	 * :ref:`machineImagePublished-get`
 	 * :ref:`machineImagePublished-getAll`
@@ -66,6 +66,8 @@ Example Request
 	 * :ref:`machineImage-download`
 	 * :ref:`machineImage-downloadFile`
 	 * :ref:`machineImage-generate`
+	 * :ref:`machineImage-get`
 	 * :ref:`machineImage-getAll`
 	 * :ref:`machineImage-publish`
 	 * :ref:`machineImage-regenerate`
+	 * :ref:`publishimage-object`

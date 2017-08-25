@@ -15,7 +15,11 @@ Machine Scan API Resources
 	* :ref:`scanPackageFile-get`: Retrieves the list of files from a native package found from a scan
 	* :ref:`scanPackage-getAll`: Retrieves all the native package information from a scan report
 	* :ref:`scanPartition-upload`: Uploads an entire file partition
+	* :ref:`scanSync-create`: Creates a scanSync object
+	* :ref:`scanSync-get`: Gets the meta-data of the scanSync object
+	* :ref:`scanSync-getFiles`: Gets all full paths of files to be synchronized from a source to a target instance
 	* :ref:`scan-cancel`: Cancels the current processing of the scan report
+	* :ref:`scan-compare`: Provides the differences between two scans
 	* :ref:`scan-create`: Creates a new scan to a parent ``scanned instance``
 	* :ref:`scan-delete`: Removes a scan from a parent ``scanned instance``
 	* :ref:`scan-get`: Retrieves the meta-data of a scan
@@ -40,7 +44,11 @@ Machine Scan API Resources
     scanPackageFile_get
     scanPackage_getAll
     scanPartition_upload
+    scanSync_create
+    scanSync_get
+    scanSync_getFiles
     scan_cancel
+    scan_compare
     scan_create
     scan_delete
     scan_get

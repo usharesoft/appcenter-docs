@@ -15,7 +15,7 @@ Attributes
 The list of attributes for ``role`` are:
 
 	* ``name`` (string): the role name
-	* ``description`` (string): the role descrition
+	* ``description`` (string): the role description
 	* ``entitlements``: the list of entitlements this role contains (see :ref:`entitlement-object`
 	* ``created`` (dateTime): the date the appliance template is created
 	* ``dbId`` (long): the database id of the object

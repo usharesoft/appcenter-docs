@@ -11,12 +11,43 @@ Release Date: 2017-09-04
 New Features
 ~~~~~~~~~~~~
 * Fujitsu Cloud Service K5 US, Finland and Spain regions are supported.
-* Can create images in PXE format for CentOS.
-* Users can deploy instances from published machine images to OpenStack.
 * Introduce a REST API for users to list files to synchronize to the target environment after a CentOS scan without overlay.
+* Users can deploy instances from published machine images to OpenStack.
+* Can create images in PXE format for CentOS.
 * Microsoft Azure connector has been updated. Previously with UForge the machine image was publish as a "vhd" blob file in the Azure cloud Account. Now an image will be accessible in the cloud console from this blob file. In order to support this additional information must be entered in ``Credentials`` for Microsoft Azure ARM connector.
 
 	.. note:: If you have an existing Microsoft Azure ARM account already setup in UForge, then you must update the credential information.
+
+Enhancements
+~~~~~~~~~~~~
+* Improve UI text and tooltip message for K5 Project ID
+
+Bug Fixes
+~~~~~~~~~
+* 960 Failed to delete together two or more artifact accounts with error
+* 985 Error occurs in the uforge CLI images list if user has generations only from scan
+* 1323 Using AWS zone ap-south-1 (Mumbai) with the API raises a publication error
+* 1370 CLI command "uforge image list" results in SimpleFacetValueError when the keyboard is "jp"
+* 1419 Package kernel-PAE not recognized as a kernel when doing a black box migration
+* 6103 Modifying a used software component restriction rule raises an internal server error
+* 6108 Support /dev/cciss/cXdXpX disks that exist on HP server
+* 6133 AWS connector logs are set to DEBUG and should be set to NORMAL
+* 6157 Debian Scan: All the files are uploaded to UForge server when scanning with overlay
+* 6162 Tooltip when generating from scan (blackbox) mentions install profile changes
+* 6165 Comparing two scans, there are no strike-through on the delete files
+* 6235 Uploading boot scritps or my software using IE causes an error if the local directory path is included
+* 6261 UForge UI for Windows scan using the command line misses the -p parameter
+* 6386 Messaging bus consumer breaks down if cloud-init is installed on Uforge server
+* 6444 Error in NIC API examples, request URI is wrong
+* 6611 Error message when trying to delete a UForge OS profile milestone not self-explanatory
+* 6683 Heap memory error when scanning VM with huge files number
+* 6753 AWS publish failed in some circountances
+* 6760 uforge-install-config TUI does not appear when using K5 Console
+* 6768 Unable to build a package using rpmgen with a file located in /
+* 6853 Unable to rebuild RPM, using rpmgen, with hook scripts containing a commented spec file section tag like #%install
+* 6903 Outscale Publish final status never reached
+* 6906 yum is injected during blackbox migration
+* 6917 When cloning an appliance, the parentApplianceUri of the clone is null
 
 3.7.fp6
 -------

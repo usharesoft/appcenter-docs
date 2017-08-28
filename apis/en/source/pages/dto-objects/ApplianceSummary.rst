@@ -13,8 +13,8 @@ Attributes
 The list of attributes for ``applianceSummary`` are:
 
 	* ``version`` (string): the version of the appliance template
-	* ``name`` (string): the public tag name
-	* ``uri`` (anyURI): the uri resource of this tag object
+	* ``name`` (string): the name
+	* ``uri`` (anyURI): the uri
 	* ``created`` (dateTime): the date the appliance template is created
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)

@@ -10522,12 +10522,12 @@
                 <xs:sequence>
                     <xs:element name="name" type="xs:string" minOccurs="0">
                         <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the public tag name</xsd:documentation>
+                            <xsd:documentation xml:lang="en">the name</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                     <xs:element name="uri" type="xs:anyURI" minOccurs="0">
                         <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the uri resource of this tag object</xsd:documentation>
+                            <xsd:documentation xml:lang="en">the uri</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                 </xs:sequence>

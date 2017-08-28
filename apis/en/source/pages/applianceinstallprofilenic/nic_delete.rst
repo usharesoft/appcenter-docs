@@ -5,7 +5,7 @@
 nic_delete
 ----------
 
-.. function:: DELETE users/{uid}/appliances/{aid}/installProfile/{ipid}/nics/{nid}
+.. function:: DELETE /users/{uid}/appliances/{aid}/installProfile/{ipid}/nics/{nid}
 
 .. sidebar:: Summary
 
@@ -40,7 +40,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/apiusers/{uid}/appliances/{aid}/installProfile/{ipid}/nics/{nid}" -X DELETE \
+	curl "https://uforge.example.com/api/users/{uid}/appliances/{aid}/installProfile/{ipid}/nics/{nid}" -X DELETE \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::

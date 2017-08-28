@@ -1,22 +1,26 @@
 .. Copyright 2017 FUJITSU LIMITED
 
-.. _scanPartition-upload:
+.. _scanSync-create:
 
-scanPartition_upload
---------------------
+scanSync_create
+---------------
 
-.. function:: POST /users/{uid}/scannedinstances/{siid}/scans/{sid}/rawparts/{fileName}
+.. function:: POST /users/{uid}/scannedinstances/{siid}/scans/{sid}/sync
 
 .. sidebar:: Summary
 
 	* Method: ``POST``
 	* Response Code: ``201``
 	* Response Formats: ``application/xml`` ``application/json``
-	* Since: ``UForge 3.4``
+	* Since: ``UForge 3.7.7``
 
-Uploads an entire file partition.  This is used when scanning ``Windows`` based systems. 
+Creates a scanSync object. 
 
-.. warning:: This request is used by the ``uforge-scan`` binary, normally you should not use this request via APIs
+A ``scanSync`` is an object that contains all the information required to synchronize files from a source to a target instance (or machine or workload). 
+
+Please refer to :ref:`scansync-object` for a complete list of all the ``scanSync`` attributes. 
+
+.. note:: This POST request does not require any HTTP body. All the information is passed via the URL request.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -28,47 +32,37 @@ URI Parameters
 ~~~~~~~~~~~~~~
 
 * ``uid`` (required): the user name (login name) of the :ref:`user-object`
-* ``fileName`` (required): the file name of the partition to upload
 * ``siid`` (required): the id of the :ref:`scannedinstance-object`
 * ``sid`` (required): the id of the :ref:`scan-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The file to upload.
+None
 
 Example Request
 ~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/users/{uid}/scannedinstances/{siid}/scans/{sid}/rawparts/{fileName}" -X POST \
-	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"-H "Content-type: application/xml" --data-binary "@binaryFilePath"
+	curl "https://uforge.example.com/api/users/{uid}/scannedinstances/{siid}/scans/{sid}/sync" -X POST \
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::
 
 	 * :ref:`machinescaninstance-api-resources`
 	 * :ref:`scan-object`
 	 * :ref:`scanFileArchive-download`
-	 * :ref:`scanFile-getAll`
 	 * :ref:`scanInstallProfile-get`
-	 * :ref:`scanOverlay-download`
-	 * :ref:`scanOverlay-upload`
-	 * :ref:`scanOverlay-uploadChunk`
 	 * :ref:`scanPackageBinary-getAll`
-	 * :ref:`scanPackageFile-get`
 	 * :ref:`scanPackage-getAll`
-	 * :ref:`scanSync-create`
+	 * :ref:`scanPartition-upload`
 	 * :ref:`scanSync-get`
 	 * :ref:`scanSync-getFiles`
-	 * :ref:`scan-cancel`
-	 * :ref:`scan-compare`
 	 * :ref:`scan-create`
 	 * :ref:`scan-delete`
 	 * :ref:`scan-get`
-	 * :ref:`scan-multipartCreate`
 	 * :ref:`scannedInstanceScan-deleteAll`
 	 * :ref:`scannedInstanceScan-getAll`
 	 * :ref:`scannedinstance-object`
 	 * :ref:`scansync-object`
-	 * :ref:`userScan-getAll`

@@ -1,20 +1,18 @@
 .. Copyright 2017 FUJITSU LIMITED
 
-.. _appliancesummary-object:
+.. _scansync-object:
 
-applianceSummary
-================
+scanSync
+========
 
-Holds some meta-data information of an appliance template.
+Handles synchronization information for files belonging to a scan.
 
 Attributes
 ~~~~~~~~~~
 
-The list of attributes for ``applianceSummary`` are:
+The list of attributes for ``scanSync`` are:
 
-	* ``version`` (string): the version of the appliance template
-	* ``name`` (string): the name
-	* ``uri`` (anyURI): the uri
+	* ``uri`` (anyURI): the uri resource of this synchronization object
 	* ``created`` (dateTime): the date the appliance template is created
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)

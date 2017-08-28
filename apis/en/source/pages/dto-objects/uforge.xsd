@@ -256,6 +256,8 @@
 
     <xs:element name="scan" type="Scan"/>
 
+    <xs:element name="scanCompare" type="ScanCompare"/>
+
     <xs:element name="scanImport" type="ScanImport"/>
 
     <xs:element name="scanImports" type="ScanImports"/>
@@ -263,6 +265,10 @@
     <xs:element name="scannedFile" type="ScannedFile"/>
 
     <xs:element name="scannedFiles" type="ScannedFiles"/>
+
+    <xs:element name="scanSync" type="ScanSync"/>
+
+    <xs:element name="scanFilesToSynchronize" type="ScanFilesToSynchronize"/>
 
     <xs:element name="scannedPackage" type="ScannedPkg"/>
 
@@ -1147,21 +1153,11 @@
             </xsd:documentation>
         </xsd:annotation>
         <xs:complexContent>
-            <xs:extension base="UForgeObject">
+            <xs:extension base="SourceSummary">
                 <xs:sequence>
-                    <xs:element name="name" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the name of the appliance template</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
                     <xs:element name="version" type="xs:string" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the version of the appliance template</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="uri" type="xs:anyURI" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the uri of the appliance template</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                 </xs:sequence>
@@ -4542,6 +4538,7 @@
                                 <xs:enumeration value="hyper-v"/>
                                 <xs:enumeration value="hyperv2012"/>
                                 <xs:enumeration value="ISO"/>
+                                <xs:enumeration value="PXE"/>
                                 <xs:enumeration value="kvm"/>
                                 <xs:enumeration value="k5vmdk"/>
                                 <xs:enumeration value="lxc"/>
@@ -5473,20 +5470,12 @@
                     <xs:element name="hostname" type="xs:string" minOccurs="0"/>
                     <xs:element name="instanceId" type="xs:string" minOccurs="0"/>
                     <xs:element name="name" type="xs:string" minOccurs="0"/>
-                    <xs:element name="applianceSummary" type="ApplianceSummary" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the appliance metadata of this instance</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="scanSummary" type="ScanSummaryLight" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the scan metadata of this instance</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
+                    <xs:element name="sourceSummary" type="SourceSummary" minOccurs="0"/>
                     <xs:element name="state" type="xs:string" minOccurs="0"/>
                     <xs:element name="stateMessage" type="xs:string" minOccurs="0"/>
                     <xs:element name="parentUri" type="xs:anyURI" minOccurs="0"/>
                     <xs:element name="uri" type="xs:anyURI" minOccurs="0"/>
+                    <xs:element name="cloudProvider" type="xs:string" minOccurs="0"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -5517,7 +5506,9 @@
         <xs:complexContent>
             <xs:extension base="Instance">
                 <xs:sequence>
-                    <xs:element name="flavor" type="xs:string" minOccurs="0"/>
+                    <xs:element name="flavorId" type="xs:string" minOccurs="0"/>
+                    <xs:element name="networkId" type="xs:string" minOccurs="0"/>
+                    <xs:element name="region" type="xs:string" minOccurs="0"/>
                     <xs:element name="zone" type="xs:string" minOccurs="0"/>
                 </xs:sequence>
             </xs:extension>
@@ -6335,21 +6326,6 @@
         <xs:complexContent>
             <xs:extension base="CloudResources">
                 <xs:sequence>
-                    <xs:element name="regions" minOccurs="0">
-                        <xs:complexType>
-                            <xs:sequence>
-                                <xs:element name="region" minOccurs="0" maxOccurs="unbounded">
-                                    <xs:complexType>
-                                        <xs:complexContent>
-                                            <xs:extension base="CloudResources">
-                                                <xs:sequence/>
-                                            </xs:extension>
-                                        </xs:complexContent>
-                                    </xs:complexType>
-                                </xs:element>
-                            </xs:sequence>
-                        </xs:complexType>
-                    </xs:element>
                     <xs:element name="tenants" minOccurs="0">
                         <xs:complexType>
                             <xs:sequence>
@@ -6367,6 +6343,7 @@
                                                                 <xs:element name="regionEntities" minOccurs="0" maxOccurs="unbounded">
                                                                     <xs:complexType>
                                                                         <xs:sequence>
+                                                                            <xs:element name="regionName" type="xs:string" minOccurs="0"/>
                                                                             <xs:element name="flavors" minOccurs="0">
                                                                                 <xs:complexType>
                                                                                     <xs:sequence>
@@ -6431,7 +6408,23 @@
                                                                                     </xs:sequence>
                                                                                 </xs:complexType>
                                                                             </xs:element>
-                                                                            <xs:element name="regionName" type="xs:string" minOccurs="0"/>
+                                                                            <xs:element name="networks" minOccurs="0">
+                                                                                <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                        <xs:element name="network" minOccurs="0" maxOccurs="unbounded">
+                                                                                            <xs:complexType>
+                                                                                                <xs:complexContent>
+                                                                                                    <xs:extension base="CloudResources">
+                                                                                                        <xs:sequence>
+                                                                                                            <xs:element name="id" type="xs:string" minOccurs="0"/>
+                                                                                                        </xs:sequence>
+                                                                                                    </xs:extension>
+                                                                                                </xs:complexContent>
+                                                                                            </xs:complexType>
+                                                                                        </xs:element>
+                                                                                    </xs:sequence>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
                                                                         </xs:sequence>
                                                                     </xs:complexType>
                                                                 </xs:element>
@@ -8717,7 +8710,7 @@
                     </xs:element>
                     <xs:element name="description" type="xs:string" minOccurs="0">
                         <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the role descrition</xsd:documentation>
+                            <xsd:documentation xml:lang="en">the role description</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                     <xs:element name="entitlements" minOccurs="0">
@@ -8815,17 +8808,6 @@
         <xs:complexContent>
             <xs:extension base="ScanSummary">
                 <xs:sequence>
-                    <xs:element name="extraFiles" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">a list of :ref:`scannedfile-object` files that are not part of any native package on the file system</xsd:documentation>
-                        </xsd:annotation>
-                        <xs:complexType>
-                            <xs:sequence>
-                                <xs:element name="extraFile" type="ScannedFile" minOccurs="0" maxOccurs="unbounded"/>
-                            </xs:sequence>
-                        </xs:complexType>
-                    </xs:element>
-
                     <xs:element name="images" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">a list of :ref:`image-object` objects that have been generated from this scan report</xsd:documentation>
@@ -8894,6 +8876,59 @@
         </xs:complexContent>
     </xs:complexType>
 
+    <xs:complexType name="ScanCompare">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Holds all the results of a comparison between two scans.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObject">
+                <xs:sequence>
+
+                    <xs:element name="extraFiles" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">a list of :ref:`scannedfile-object` files that are not part of any native package on the file system</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="extraFile" type="ScannedFile" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+
+                    <xs:element name="filesUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">a uri resource to retrieve all the filesystem files reported by the scan process</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+
+                    <xs:element name="scanAUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri of the first scan to compare</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+
+                    <xs:element name="scanBUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri of the second scan to compare</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+
+                    <xs:element name="packages" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of :ref:`package-object` objects listed in the scan report</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="package" type="ScannedPkg" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
 
     <xs:complexType name="ScanImport">
         <xsd:annotation>
@@ -9037,6 +9072,44 @@
         </xs:complexContent>
     </xs:complexType>
 
+    <xs:complexType name="ScanSync">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Handles synchronization information for files belonging to a scan.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObject">
+                <xs:sequence>
+                    <xs:element name="uri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource of this synchronization object</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ScanFilesToSynchronize">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Provides a list of full paths of scanned files to be synchronized from the :ref:`scansync-object` object.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:sequence>
+            <xs:element name="scanFilesToSynchronize" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">the list of full paths of scanned files to be synchronized</xsd:documentation>
+                </xsd:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="fullPath" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
 
     <xs:complexType name="ScannedInstance">
         <xsd:annotation>
@@ -9405,6 +9478,11 @@
                             <xsd:documentation xml:lang="en">the uri resource of the :ref:`installprofile-object`</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
+                    <xs:element name="scanSyncUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource of the :ref:`scansync-object`</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
                     <xs:element name="name" type="xs:string" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the scan name</xsd:documentation>
@@ -9496,20 +9574,7 @@
             </xsd:documentation>
         </xsd:annotation>
         <xs:complexContent>
-            <xs:extension base="UForgeObject">
-                <xs:sequence>
-                    <xs:element name="name" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the scan name</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="uri" type="xs:anyURI" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the uri of the scan</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                </xs:sequence>
-            </xs:extension>
+            <xs:extension base="SourceSummary"/>
         </xs:complexContent>
     </xs:complexType>
 
@@ -10451,6 +10516,24 @@
         </xs:complexContent>
     </xs:complexType>
 
+    <xs:complexType name="SourceSummary" abstract="true">
+        <xs:complexContent>
+            <xs:extension base="UForgeObject">
+                <xs:sequence>
+                    <xs:element name="name" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the name</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="uri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
 
     <xs:complexType name="Tag">
         <xsd:annotation>

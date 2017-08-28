@@ -6,6 +6,7 @@ Machine Image API Resources
 ===========================
 
 	* :ref:`applianceImage-publish`: Request to publish (register) a generated machine image to a target cloud environment
+	* :ref:`machineImageFile-download`: Downloads a file of a generated PXE image
 	* :ref:`machineImageGeneration-cancel`: Cancels a running generation of a machine image
 	* :ref:`machineImagePkg-getAll`: Retrieves all the native packages contained in the machine image
 	* :ref:`machineImagePublish-cancel`: Cancels a running publish of a machine image to a target environment
@@ -28,6 +29,7 @@ Machine Image API Resources
 	* :ref:`machineImage-getAll`: Returns all of the machine images of an appliance
 	* :ref:`machineImage-publish`: Request to publish (register) a generated machine image to a target cloud environment
 	* :ref:`machineImage-regenerate`: Request to re-generate a machine image from a previous generation request
+	* :ref:`pxeBootScript-download`: Returns a pxe script listing all the images accessible to a given user
 	* :ref:`scanPublishedImage-deploy`: Deploy a new machine from an image published to a target environment
 
 
@@ -35,6 +37,7 @@ Machine Image API Resources
     :hidden:
 
     applianceImage_publish
+    machineImageFile_download
     machineImageGeneration_cancel
     machineImagePkg_getAll
     machineImagePublish_cancel
@@ -57,4 +60,5 @@ Machine Image API Resources
     machineImage_getAll
     machineImage_publish
     machineImage_regenerate
+    pxeBootScript_download
     scanPublishedImage_deploy

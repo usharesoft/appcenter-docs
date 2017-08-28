@@ -5,7 +5,7 @@
 deployment_terminate
 --------------------
 
-.. function:: DELETE /users/{uid}/deployments/{depid}
+.. function:: DELETE /users/{uid}/deployments/{did}
 
 .. sidebar:: Summary
 
@@ -26,7 +26,7 @@ URI Parameters
 ~~~~~~~~~~~~~~
 
 * ``uid`` (required): the user name (login name) of the :ref:`user-object`
-* ``depid`` (required): the ref of :ref:`deployment-object`
+* ``did`` (required): the ref of :ref:`deployment-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -38,7 +38,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/users/{uid}/deployments/{depid}" -X DELETE \
+	curl "https://uforge.example.com/api/users/{uid}/deployments/{did}" -X DELETE \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::

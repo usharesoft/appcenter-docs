@@ -1,20 +1,20 @@
 .. Copyright 2017 FUJITSU LIMITED
 
-.. _scan-delete:
+.. _scanSync-getFiles:
 
-scan_delete
------------
+scanSync_getFiles
+-----------------
 
-.. function:: DELETE /users/{uid}/scannedinstances/{siid}/scans/{sid}
+.. function:: GET /users/{uid}/scannedinstances/{siid}/scans/{sid}/sync/{ssid}/files
 
 .. sidebar:: Summary
 
-	* Method: ``DELETE``
-	* Response Code: ``204 / 200``
-	* Response Formats: 
-	* Since: ``UForge 3.4``
+	* Method: ``GET``
+	* Response Code: ``200 / 304``
+	* Response Formats: ``text/plain`` ``application/xml`` ``application/json``
+	* Since: ``UForge 3.7.7``
 
-Removes a scan from a parent ``scanned instance``.  The scan report and related uploaded overlays are deleted.
+Returns all full paths of files to be synchronized from a source to a target instance.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -27,7 +27,8 @@ URI Parameters
 
 * ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``siid`` (required): the id of the :ref:`scannedinstance-object`
-* ``sid`` (required): the id of the reference :ref:`scan-object`
+* ``ssid`` (required): the id of the :ref:`scansync-object`
+* ``sid`` (required): the id of the :ref:`scan-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -39,7 +40,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/users/{uid}/scannedinstances/{siid}/scans/{sid}" -X DELETE \
+	curl "https://uforge.example.com/api/users/{uid}/scannedinstances/{siid}/scans/{sid}/sync/{ssid}/files" -X GET \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::
@@ -47,25 +48,16 @@ Example Request
 	 * :ref:`machinescaninstance-api-resources`
 	 * :ref:`scan-object`
 	 * :ref:`scanFileArchive-download`
-	 * :ref:`scanFile-getAll`
 	 * :ref:`scanInstallProfile-get`
-	 * :ref:`scanOverlay-download`
-	 * :ref:`scanOverlay-upload`
-	 * :ref:`scanOverlay-uploadChunk`
 	 * :ref:`scanPackageBinary-getAll`
-	 * :ref:`scanPackageFile-get`
 	 * :ref:`scanPackage-getAll`
 	 * :ref:`scanPartition-upload`
 	 * :ref:`scanSync-create`
 	 * :ref:`scanSync-get`
-	 * :ref:`scanSync-getFiles`
-	 * :ref:`scan-cancel`
-	 * :ref:`scan-compare`
 	 * :ref:`scan-create`
+	 * :ref:`scan-delete`
 	 * :ref:`scan-get`
-	 * :ref:`scan-multipartCreate`
 	 * :ref:`scannedInstanceScan-deleteAll`
 	 * :ref:`scannedInstanceScan-getAll`
 	 * :ref:`scannedinstance-object`
 	 * :ref:`scansync-object`
-	 * :ref:`userScan-getAll`

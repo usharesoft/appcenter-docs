@@ -5,7 +5,7 @@
 scanFilesToSynchronize
 ======================
 
-Provides a list of full paths of scanned files to be synchronized retrieved from the :ref:`scansync-object` object.
+Provides a list of full paths of scanned files to be synchronized from the :ref:`scansync-object` object.
 
 Attributes
 ~~~~~~~~~~

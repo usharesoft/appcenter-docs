@@ -14,7 +14,7 @@ scanSync_get
 	* Response Formats: ``application/xml`` ``application/json``
 	* Since: ``UForge 3.7.7``
 
-Gets the meta-data of the scanSync object.
+Returns the meta-data of the scanSync object.
 
 Security Summary
 ~~~~~~~~~~~~~~~~

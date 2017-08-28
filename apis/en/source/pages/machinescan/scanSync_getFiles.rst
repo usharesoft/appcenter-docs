@@ -14,7 +14,7 @@ scanSync_getFiles
 	* Response Formats: ``text/plain`` ``application/xml`` ``application/json``
 	* Since: ``UForge 3.7.7``
 
-Gets all full paths of files to be synchronized from a source to a target instance.
+Returns all full paths of files to be synchronized from a source to a target instance.
 
 Security Summary
 ~~~~~~~~~~~~~~~~

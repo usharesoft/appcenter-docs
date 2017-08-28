@@ -14,7 +14,7 @@ machineImagePublished_getAccount
 	* Response Formats: ``application/xml`` ``application/json``
 	* Since: ``UForge 3.7.7``
 
-Retrieve the information of a cloud account.
+Returns the information of a cloud account.
 
 Security Summary
 ~~~~~~~~~~~~~~~~

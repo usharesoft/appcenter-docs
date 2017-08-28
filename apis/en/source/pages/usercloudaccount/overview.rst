@@ -15,10 +15,10 @@ User Cloud Account API Resources
 	* :ref:`cloudAccount-get`: Retrieve the information of a cloud account
 	* :ref:`cloudAccount-getAll`: Retrieves all the cloud accounts for an user
 	* :ref:`cloudAccount-update`: Updates the meta-data of a cloud account
-	* :ref:`machineImagePublished-getAccount`: Retrieve the information of a cloud account
-	* :ref:`machineImagePublished-getAccountResources`: Retrieves any dynamic resource information from the target cloud environment
-	* :ref:`scanPublishedImage-getAccount`: Retrieve the information of a cloud account
-	* :ref:`scanPublishedImage-getAccountResources`: Retrieves any dynamic resource information from the target cloud environment
+	* :ref:`machineImagePublished-getAccount`: Returns the information of a cloud account
+	* :ref:`machineImagePublished-getAccountResources`: Returns any dynamic resource information from the target cloud environment
+	* :ref:`scanPublishedImage-getAccount`: Returns the information of a cloud account
+	* :ref:`scanPublishedImage-getAccountResources`: Returns any dynamic resource information from the target cloud environment
 
 
 .. toctree::

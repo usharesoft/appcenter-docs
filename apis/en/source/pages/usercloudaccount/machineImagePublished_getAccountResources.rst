@@ -14,7 +14,7 @@ machineImagePublished_getAccountResources
 	* Response Formats: ``application/xml`` ``application/json``
 	* Since: ``UForge 3.7.7``
 
-Retrieves any dynamic resource information from the target cloud environment.
+Returns any dynamic resource information from the target cloud environment.
 
 Security Summary
 ~~~~~~~~~~~~~~~~

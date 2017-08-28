@@ -5,7 +5,7 @@
 Whitebox Migration Process
 --------------------------
 
-The goal of white box migration is to change the contents found during the scan of the live system prior to migration.  To carry out a white box migration, the user must import the scan report as an appliance template. The import process basically transforms the meta-data of the scan report to an appliance template. 
+The goal of white box migration is to change the contents found during the scan of the live system prior to migration (add, update or remove packages, for example, see below).  To carry out a white box migration, the user must import the scan report as an appliance template. The import process basically transforms the meta-data of the scan report to an appliance template. 
 
 As part of this transformation process, the scan information is mapped to one or more of the appliance template layers as follows:
 
@@ -35,5 +35,4 @@ Once the scan report has been imported as an appliance template, you can update 
 
 The generation process is slightly different between black box and white box migration. UForge is not generating a machine image from a scan report, rather from an appliance template. You can add and remove packages at will from the OS Profile layer.  Consequently package dependencies are calculated using the list of packages in the OS Profile. Any missing packages from the OS Profile are added prior to generating the machine image.  
 
-
-
+.. warning:: Although a whitebox migration is a perfect occasion to update the operating system, and to add, remove or update packages before generating a machine image, there may be cases where packages that were present on the scanned server have been removed or replaced in the newer version of the OS. Such packages will obviously not be present in UForge AppCenter's package repositories, and will therefore be added to a ``My Software`` component, instead of being added to the ``OS Profile``. So if you update the OS version upon performing a whitebox migration, and if there are such packages, please manually remove or replace them in the template, as instructed by the distribution vendor, before generating the machine image.

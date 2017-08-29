@@ -32,6 +32,11 @@ When you generate a machine image from the scan, all the information included in
 
 	For more detailed information, please refer to `official Fujitsu K5 IaaS Documentation <http://www.fujitsu.com/uk/Images/k5-iaas-features-handbook.pdf>`_.
 
+.. note:: If you plan to migrate a Linux instance onto `Microsoft Azure Cloud <https://azure.microsoft.com/en-us/>`_, you must also do the following before scanning:
+
+	1. Uninstall NetworkManager (if installed).
+	2. Uninstall the Microsoft Azure agent, i.e. WALinuxAgent and waagent packages (if installed).
+
 When you carry out black box migration (by generating a machine image directly from a scan), the following steps are carried out:
 
 	1. You are prompted to indicate if you want to change the overall disk size.

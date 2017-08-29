@@ -54,7 +54,6 @@ Bug Fixes
 * 6753 AWS publish failed in some circumstances
 * 6760 uforge-install-config TUI does not appear when using K5 Console
 * 6768 Unable to build a package using rpmgen with a file located in /
-* 6799 Instances on AWS do not pass status check anymore: status check 1/2 and impossibility to connect to the instance
 * 6853 Unable to rebuild RPM, using rpmgen, with hook scripts containing a commented spec file section tag like #%install
 * 6903 Outscale Publish final status never reached
 * 6906 yum is injected during blackbox migration

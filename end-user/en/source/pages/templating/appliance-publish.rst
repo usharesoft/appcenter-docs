@@ -21,7 +21,17 @@ In order to publish a machine image to a cloud environment or container, you mus
 
 		.. image:: /images/machine-image-publish.png
 
-	4. Following the instructions, choose the account and fill in any additional information required.
+	4. Following the instructions in the tooltips, choose the account and fill in any additional information required.
+
+	.. note:: When publishing to Microsoft Azure Resource Manager you should note the following restrictions:
+
+		* The storage account must exist in your Microsoft account
+		* The container is mandatory. If the value you set does not match an existing container it will be created with the new name you have set.
+		* The blob and cloud image name must be unique. If they already exist, this will overwrite an existing one with the same name.
+		* The resource group is optional. If you enter a value here, it must already exist in your Microsoft account.
+
+		.. image:: /images/machine-image-publish-arm.png
+
 	5. Click ``publish``.
 
 	.. note:: Publishing an image to Amazon will be billed to the user account. Trial accounts are not supported for publishing images from UForge. Only full Amazon accounts can be used. 
@@ -38,5 +48,5 @@ In order to publish a machine image to a cloud environment or container, you mus
 
 	.. note:: When you publish an image to VMware, the result will be a template and not a virtual machine.
 
-	.. warning:: If your Fujitsu K5 publish failed, there may be data published to cloud, incurring costs, even if not visible on your cloud account. You should run a cleanup manually. Refer to `Chapter 2.7 Object storage <http://www.fujitsu.com/uk/Images/k5-iaas-api-reference-foundation-service.pdf>`_
+	.. warning:: If your Fujitsu K5 publish failed, there may be data published to cloud, incurring costs, even if not visible on your cloud account. You should run a cleanup manually. Refer to Chapter 2.7 Object storage of the `FUJITSU Cloud Service K5 IaaS API Reference (Foundation Service) guide <https://k5-doc.jp-east-1.paas.cloud.global.fujitsu.com/doc/en/iaas/document/k5-iaas-api-reference-foundation-service.pdf>`_
 

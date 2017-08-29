@@ -44,7 +44,4 @@ In order to deploy a machine image to Amazon or to OpenStack, you must already h
 
 	.. note:: If you want to stop your deployment, you can do so by clicking on the delete (garbage) icon. This will stop it and remove the instance from your cloud.
 
-
-
-
-
+	.. warning:: Terminate an OpenStack deployment may fail due to `a known issue in AMP <https://issues.apache.org/jira/browse/JCLOUDS-1318>`_. Click again on the delete (garbage) icon to work around the issue.

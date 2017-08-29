@@ -38,6 +38,9 @@ To carry out a scan, go to the ``Migration`` tab:
 
 	3. Select ``Linux`` from the drop-down menu.
 	4. Leave ``Include overlay`` selected if you want to run a scan with overlay. This will return all the packages, files and configuration information of the source machine.
+
+		.. note:: If you do not include the overlay, all files needed to rebuild packages are still transferred to UForge, including the package configuration files. However, all "extra_files" are excluded from the scan.
+
 	5. If you want to exclude certain directories or files from the scan then click ``add`` and enter the directory path or full pathname of the file.
 	6. Click ``Next``. Follow the instructions on the UForge AppCenter GUI.
 

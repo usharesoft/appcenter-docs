@@ -56,6 +56,7 @@ Example Request
 	 * :ref:`scanPackage-getAll`
 	 * :ref:`scanPartition-upload`
 	 * :ref:`scan-cancel`
+	 * :ref:`scan-compare`
 	 * :ref:`scan-create`
 	 * :ref:`scan-delete`
 	 * :ref:`scan-get`

@@ -27,7 +27,7 @@ URI Parameters
 
 * ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``siid`` (required): the id of the :ref:`scannedinstance-object`
-* ``sid`` (required): the id of the :ref:`scan-object`
+* ``sid`` (required): the id of the reference :ref:`scan-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -56,11 +56,16 @@ Example Request
 	 * :ref:`scanPackageFile-get`
 	 * :ref:`scanPackage-getAll`
 	 * :ref:`scanPartition-upload`
+	 * :ref:`scanSync-create`
+	 * :ref:`scanSync-get`
+	 * :ref:`scanSync-getFiles`
 	 * :ref:`scan-cancel`
+	 * :ref:`scan-compare`
 	 * :ref:`scan-create`
 	 * :ref:`scan-get`
 	 * :ref:`scan-multipartCreate`
 	 * :ref:`scannedInstanceScan-deleteAll`
 	 * :ref:`scannedInstanceScan-getAll`
 	 * :ref:`scannedinstance-object`
+	 * :ref:`scansync-object`
 	 * :ref:`userScan-getAll`

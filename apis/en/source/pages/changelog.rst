@@ -10,8 +10,17 @@ Release Date: 2017-09-04
 
 New Features
 ~~~~~~~~~~~~
-* Introduce a REST API for users to list files to synchronize to the target environment after a CentOS scan without overlay.
 * Fujitsu Cloud Service K5 US, Finland and Spain regions are supported.
+* Can create images in PXE format for CentOS.
+* Users can deploy instances from published machine images to OpenStack.
+* Introduce a REST API for users to list files to synchronize to the target environment after a CentOS scan without overlay.
+<<<<<<< HEAD
+* Fujitsu Cloud Service K5 US, Finland and Spain regions are supported.
+=======
+* Microsoft Azure connector has been updated. Previously with UForge the machine image was publish as a "vhd" blob file in the Azure cloud Account. Now an image will be accessible in the cloud console from this blob file. In order to support this additional information must be entered in ``Credentials`` for Microsoft Azure ARM connector.
+
+	.. note:: If you have an existing Microsoft Azure ARM account already setup in UForge, then you must update the credential information.
+>>>>>>> ea76752b714af8fcf1a42ccd63b85f3ac8d20eb6
 
 3.7.fp6
 -------

@@ -28,7 +28,7 @@ URI Parameters
 ~~~~~~~~~~~~~~
 
 * ``uid`` (required): the user name (login name) of the :ref:`user-object`
-* ``fileName`` (required): the file name of the logo to upload
+* ``fileName`` (required): the file name of the logo
 * ``aid`` (required): the id of the :ref:`appliance-object`
 * ``logoId`` (required): the id of the :ref:`logo-object`
 

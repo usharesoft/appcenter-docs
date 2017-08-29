@@ -48,6 +48,7 @@ Example Request
 	 * :ref:`applianceImage-publish`
 	 * :ref:`image-object`
 	 * :ref:`imagepkgs-object`
+	 * :ref:`machineImageFile-download`
 	 * :ref:`machineImageGeneration-cancel`
 	 * :ref:`machineImagePkg-getAll`
 	 * :ref:`machineImagePublish-cancel`

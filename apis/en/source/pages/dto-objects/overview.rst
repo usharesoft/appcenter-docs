@@ -148,10 +148,13 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`roles-object`
 	* :ref:`route-object`
 	* :ref:`scan-object`
+	* :ref:`scancompare-object`
 	* :ref:`scanimport-object`
 	* :ref:`scanimports-object`
 	* :ref:`scannedfile-object`
 	* :ref:`scannedfiles-object`
+	* :ref:`scansync-object`
+	* :ref:`scanfilestosynchronize-object`
 	* :ref:`scannedinstance-object`
 	* :ref:`scannedinstances-object`
 	* :ref:`scannedpackage-object`
@@ -351,10 +354,13 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     Roles
     Route
     Scan
+    ScanCompare
     ScanImport
     ScanImports
     ScannedFile
     ScannedFiles
+    ScanSync
+    ScanFilesToSynchronize
     ScannedInstance
     ScannedInstances
     ScannedPkg

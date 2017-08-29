@@ -31,6 +31,8 @@ The (optional) parameter <uforge install type> can take the values uforge-ee or 
 
 .. note:: Before upgrading UForge, make sure that no cron jobs are running. For more information on cron jobs, refer to :ref:`watchdog-services`.
 
+.. note:: It is recommended to take a snapshot of all impacted VMs before starting the update procedure, in case you need to rollback.
+
 To update the platform, use the "yum" command-line tool as follows:
 
 .. note:: Running ``yum update`` may also update OS packages from CentOS official repository. You should accept all the updates because UForge is qualified based on the latest packages.

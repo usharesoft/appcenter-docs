@@ -84,7 +84,7 @@ Restricting Projects for OSes and Formats
 
 Under ``Projects`` you can restrict the usage of a project based on a distribution name, family, architecture or for a specific machine image format.
 
-To set restriction rules for a project: 
+* To set restriction rules for a project:
 
 	1. Under the ``Administration`` tab, click ``Projects``.
 	2. Select the project you want to modify.
@@ -96,11 +96,36 @@ To set restriction rules for a project:
 		* logical operator is ``||`` for OR and ``&&`` for AND
 		* carriage return is not authorize
 
-For example, if the software bundle is designed only for distributions CentOS 7 x86_64 or Debian 8 x86_64, or for TargetFormat with type virtual, then you would note the Restriction rule as follows:: 
+For example, if the project is designed only for distributions CentOS 7 x86_64 or Debian 8 x86_64, or for TargetFormat with type virtual, then you would note the Restriction rule as follows::
 
 	(Distribution#arch=x86_64 && ((Distribution#name=CentOS && Distribution#version=7) || (Distribution#name=Debian && Distribution#version=8))) || TargetFormat#type=virtual
 
-.. note:: If your software bundle is limited to a certain target format and you generate an image in another format, your appliance will be generated but the software bundle will not be part of the final image.
+.. note:: If your project is limited to a certain target format and you generate an image in another format, your appliance will be generated but the project will not be part of the final image.
+
+* Restriction rule values:
+
+By using the command-line tool `hammr <http://hammr.io>`_, you are able to retrieve available distributions:
+
+.. code-block:: bash
+
+	$ hammr os list --url https://uforge.example.com/api -u username -p password
+
+Where ``Distribution`` fields possible values are:
+	* ``name``: the value listed in the `Name` column
+	* ``version``: the value listed in the `Version` column
+	* ``arch``: the value listed in the `Architecture` column
+	* ``family``: can be one of the following ``linux``, ``unix`` or ``windows``
+	* ``pkgType``: can be either ``application/x-rpm`` or ``application/x-debian-package``
+
+By using the command-line tool `hammr <http://hammr.io>`_, you are able to retrieve available machine image formats:
+
+.. code-block:: bash
+
+	$ hammr format list --url https://uforge.example.com/api -u username -p password
+
+Where ``TargetFormat`` fields possible values are:
+	* ``name``: the value listed in the `Builder Type` column
+	* ``type``: can be one of the following ``cloud``, ``container``, ``physical`` or ``virtual``
 
 .. _update-project:
 

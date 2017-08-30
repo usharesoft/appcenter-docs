@@ -55,7 +55,7 @@ When generating a machine image from a scan, certain services are disabled or en
 	* ``sshd`` enabled
 	* rewrite grub configuration and ``initramfs/initrd``
 
-If after all service modification, networking services are not enabled, then ``NetworkManager`` is enabled if the package is present, otherwise ``network`` is enabled.
+If present, ``NetworkManager`` is enabled, otherwise ``network`` is enabled.
 
 .. note:: ``NetworkManager`` is the name used by some operating systems which is the equivalent to ``network-manager``. The name ``network`` is used by some operating systems which is the equivalent to ``networking``.
 
@@ -77,7 +77,6 @@ OpenStack Image
 
 Microsoft Azure Image
 
-	* ``networkmanager`` disabled
 	* ``network`` enabled
 
 .. _appliance-docker-image:

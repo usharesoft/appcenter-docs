@@ -24,23 +24,24 @@ Run a simple http request (using basic authentication) using curl
 	$ curl http://$UFORGE_GF_INTERNAL_IP:$UFORGE_GF_HTTP_PORT/$UFORGE_GF_WEBSVC_ROOT_CONTEXT/users/$UFORGE_WEBSVC_LOGIN -H "Authorization:Basic $UFORGE_WEBSVC_LOGIN:$UFORGE_WEBSVC_PASSWORD" 
 	--verbose
 
-	* About to connect() to 10.0.0.240 port 9090 (#0)
-	*   Trying 10.0.0.240... connected
-	* Connected to 10.0.0.240 (10.0.0.240) port 9090 (#0)
-	> GET /ufws-3.0/users/root HTTP/1.1
-	> User-Agent: curl/7.20.1 (x86_64-redhat-linux-gnu) libcurl/7.20.1 NSS/3.12.8.0 zlib/1.2.3 libidn/1.16 libssh2/1.2.4
-	> Host: 10.0.0.240:9090
+	*   Trying 10.0.0.207...
+	* Connected to 10.0.0.207 (10.0.0.207) port 8080 (#0)
+	> GET /ufws/users/root HTTP/1.1
+	> Host: 10.0.0.207:8080
+	> User-Agent: curl/7.43.0
 	> Accept: */*
 	> Authorization:Basic root:welcome
-	> 
+	>
 	< HTTP/1.1 200 OK
-	< X-Powered-By: Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.1 Java/Sun Microsystems Inc./1.6)
-	< Server: GlassFish Server Open Source Edition 3.1.1
-	< Last-Modified: Thu, 03 May 2012 08:32:18 GMT
-	< ETag: "ef286bf07b8d18928287e12cb122ccf2"
+	< Set-Cookie: JSESSIONID=77B407785AFC8F8FAE5120625F986F68; Path=/ufws/; HttpOnly
+	< Last-Modified: Wed, 30 Aug 2017 10:05:33 GMT
+	< ETag: "75cf28ed12f40a5c09b31bfe0dd2121d"
+	< Content-Language: en
+	< version: <UForge version>
 	< Content-Type: application/xml
-	< Content-Length: 5477
-	< Date: Thu, 03 May 2012 08:33:11 GMT
+	< Transfer-Encoding: chunked
+	< Date: Wed, 30 Aug 2017 10:08:10 GMT
+	< Server: Apache
 	...<rest of the body removed>
 
 **Step 2:** Check to see if the database is running

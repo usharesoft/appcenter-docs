@@ -3,6 +3,48 @@
 Changelog
 =========
 
+3.7-7
+-----
+
+Release Date: 2017-08-31
+
+Upgrading
+~~~~~~~~~
+
+In order to upgrade UForge to this latest patch, please update the packages by launching the following commands on each node:
+
+1) Execute : ``yum update uforge-common``
+2) Then execute : ``yum update uforge-gen uforge uforge-client uforge-cli``
+
+
+A compatible version of hammr is also available : 3.7-7
+
+This version is only compatible with UForge AppCenter 3.7-7
+
+To install it, you will have to launch the following command::
+
+	$ pip install hammr==3.7-7
+
+Enhancements
+~~~~~~~~~~~~
+
+* 6947 Amazon AWS: Ohio, Mumbai, London and Canada regions now supported
+
+Bug Fixes
+~~~~~~~~~
+
+* 6950 The eventcontroller boot order interfering with cloud-init
+* 6917 When cloning an appliance, the ``parentApplianceUri`` of the clone is null
+* 6906 ``yum`` package is injected during blackbox migration if not found in the source system in place of ``rpm`` package
+* 6853 Unable to rebuild RPM, using rpmgen, with hook scripts containing a commented spec file section tag like ``#%install``
+* 6824 Unable to build a package using rpmgen with a file located in /
+* 6765 Boot failed if there are more than 3 logical partitions
+* 6411 UForge UI for Windows scan using the command line misses the -p parameter
+* 6165 Comparing 2 scans, There are no strike-through on the delete files
+* 1419 kernel-PAE not recognized as a kernel when doing a black box migration
+* 1350 Support ``/dev/cciss/cXdXpX`` disks that exist on HP server + RHEL5.x environment 
+
+
 3.7-6
 -----
 
@@ -24,7 +66,6 @@ This version is only compatible with UForge AppCenter 3.7-6
 To install it, you will have to launch the following command::
 
 	$ pip install hammr==3.7-6
-	
 
 Enhancements
 ~~~~~~~~~~~~

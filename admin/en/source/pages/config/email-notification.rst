@@ -2,8 +2,8 @@
 
 .. _email-notification:
 
-Email Notification Service
---------------------------
+Configuring Email Notification Service
+--------------------------------------
 
 The UForge AppCenter provides an email notification service using RabbitMQ to notify the super-user administrator and users via email for certain types of information. 
 

@@ -23,6 +23,7 @@ The list of attributes for ``scanSummary`` are:
 	* ``goldenImportsUri`` (anyURI): the uri resource to retrieve all the golden imports
 	* ``installProfile`` (:ref:`installProfile-object`): the install profile of the scanned system
 	* ``installProfileUri`` (anyURI): the uri resource of the :ref:`installprofile-object`
+	* ``scanSyncUri`` (anyURI): the uri resource of the :ref:`scansync-object`
 	* ``name`` (string): the scan name
 	* ``overlayCrc`` (string): the crc of the scan overlay archive
 	* ``overlayImported`` (boolean): a boolean indicating whether the overlay has been imported on the platform

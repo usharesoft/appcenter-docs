@@ -1,53 +1,30 @@
 .. Copyright 2017 FUJITSU LIMITED
 
-.. _modify-external-endpoints:
+.. _modify-ip:
 
-Modifying the UForge Platform External URL Endpoints
-----------------------------------------------------
+Modifying the UForge IP
+-----------------------
 
-There are three external URL endpoints for the UForge platform, namely:
+You can modify the UForge IP on a mono-node deployment by changing all the occurences of <OLD IP> to <NEW IP> in the following files:
 
-	* URL endpoint to access the UForge Portal (user interface)
-	* URL endpoint to access directly the REST web service for command-line tools and REST API calls
-	* URL endpoint for cloud platforms to download machine images from UForge.  This URL endpoint is not used by end users, but only by cloud platforms that request to download machine images, rather than UForge uploading those machine images
+	* ``/etc/UShareSoft/uforge/uforge.conf``
+	* ``/var/opt/UShareSoft/uforge-client/gwt/uforge/templates/forge-config.xml``
+	* ``/etc/httpd/conf.d/uforge-ui.conf``
+	* ``/etc/squid/squid.conf``
 
-.. image:: /images/external-endpoints.png
+.. note:: You must then restart the services.
 
-These URL endpoints are automatically created based on the external hostname provided during the initial configuration of the UForge platform (see :ref:`configure-uforge`).  These URL endpoints can be changed by updating certain variables in the ``/etc/UShareSoft/uforge/uforge.conf`` file.
+For example:
 
-The UForge Portal URL endpoint is constructed using the following variables:
+1. Open file ``/etc/UShareSoft/uforge/uforge.conf`` and modify all occurences of the old IP to the new IP. For example: ``UFORGE_GF_INTERNAL_IP=10.1.2.207`` to: ``UFORGE_GF_INTERNAL_IP=192.168.1.10``
 
-	https://<UFORGE_PROXY_INFOS>/<UFORGE_UI_ROOT_CONTEXT>
+2. Open file ``/var/opt/UShareSoft/uforge-client/gwt/uforge/templates/forge-config.xml`` and modify all occurences of the old IP to the new IP. For example: ``<c:uForgeUrl>http://10.1.2.207:8080/ufws/</c:uForgeUrl>`` to ``<c:uForgeUrl>http://192.168.1.10:8080/ufws/</c:uForgeUrl>``.
 
-The URL endpoint for direct REST web service access is constructed using the following variables:
+3. Open file ``/etc/httpd/conf.d/uforge-ui.conf`` and modify all occurences of the old IP to the new IP. For example: ``ProxyPassMatch ^/uforge/resources(.*)$ http://10.1.2.207:8080/ufws$1`` to ``ProxyPassMatch ^/uforge/resources(.*)$ http://192.168.1.10:8080/ufws$1``
 
-	https://<UFORGE_PROXY_INFOS>/<UFORGE_API_ROOT_CONTEXT>
+4. Open file ``/etc/squid/squid.conf`` and modify all occurences of the old IP to the new IP. For example: and modify all occurences of the old IP to the new IP. For example: ``acl uforge_nodes src 10.1.2.207/32`` to ``acl uforge_nodes src 192.168.1.10/32``
 
-The download URL endpoint is constructed using the ``UFORGE_IAAS_DOWNLOAD_URL`` variable.
+5. Restart the services as follows::
 
-If you wish to use ``http`` rather than ``https`` (not recommended) then you require to set the following variable in the uforge.conf file::
-
-	UFORGE_PROXY_USE_SSL = false
-
-For example, if you set the following variables in ``uforge.conf``, will result in the following external URLs::
-
-	UFORGE_PROXY_INFOS = hq.example.com:5666
-	UFORGE_UI_ROOT_CONTEXT = /ui
-	UFORGE_API_ROOT_CONTEXT = /apis
-	UFORGE_IAAS_DOWNLOAD_URL = http://hq.example.com:5777/downloads
-	UFORGE_PROXY_USE_SSL = true
-
-Resulting external URLs::
-
-	* UForge Portal: https://hq.example.com:5666/ui
-	* REST URL endpoint: https://hq.example.com:5666/apis
-	* Machine Image downloads (for external cloud platforms): http://hq.example.com:5777/downloads
-
-To update the external URLs:
-
-	1. Update the ``/etc/UShareSoft/uforge/uforge.conf`` file for each node with the updated variables you wish.
-
-	2. Launch the following two scripts (if multi-node the following order should be respected: compute notes, db nodes, web service nodes)::
-
-		$ /opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh
-		$ /opt/UShareSoft/uforge-client/bin/uforge_ui_update.sh
+	$ /opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh
+	$ /opt/UShareSoft/uforge-client/bin/uforge_ui_update.sh

@@ -7,7 +7,7 @@ Creating a Golden Image from Scan
 
 The easiest method to install Golden Images on your UForge AppCenter is to create a golden image from a scanned Windows instance.
 
-Before you create a Golden Image from scan, you must have access to a machine which has the version of Windows installed which corresponds to the version of golden image you want to create. For example, if you want to create a golden image for Windows 2012R, then you must scan a machine with Windows 2012R installed. For more information on supported versions refer to :ref:`windows-versions`.
+Before you create a Golden Image from scan, you must have access to a machine which has the version of Windows installed which corresponds to the version of golden image you want to create. For example, if you want to create a golden image for Windows 2012R2, then you must scan a machine with Windows 2012R2 installed. For more information on supported versions refer to :ref:`windows-versions`.
 
 In order to create a Golden Image from scan:
 

@@ -12,7 +12,7 @@ scanPublishedImage_deploy
 	* Method: ``POST``
 	* Response Code: ``201``
 	* Response Formats: ``application/xml`` ``application/json``
-	* Since: ``UForge 3.7.fp6``
+	* Since: ``UForge 3.7.6``
 
 Deploy a new machine from an image published to a target environment.
 

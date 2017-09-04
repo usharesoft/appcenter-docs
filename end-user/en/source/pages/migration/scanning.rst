@@ -17,7 +17,6 @@ When you run a scan of a system, UForge AppCenter will differentiate between “
 
 Recommendations pre-scan:
 
-	* Pre-install or post-install scripts on the system you are about to scan should only use ascii character set
 	* Custom packages on the live system to be scanned should not contain references to package dependencies as relative path. They should be expressed as absolute paths.
 	* If custom packages are installed using ``--nodeps`` flag, the scan process will not detect these packages. When carrying out white box migration, UForge AppCenter will check for these dependencies. If they are custom packages that are not on the live system, the generation will fail. Therefore, it is recommended to provide a custom repository with all the necessary custom packages. Otherwise, they can be added after the scan to the appliance template in ``My software``.
 
@@ -38,6 +37,9 @@ To carry out a scan, go to the ``Migration`` tab:
 
 	3. Select ``Linux`` from the drop-down menu.
 	4. Leave ``Include overlay`` selected if you want to run a scan with overlay. This will return all the packages, files and configuration information of the source machine.
+
+		.. note:: If you do not include the overlay, all files needed to rebuild packages are still transferred to UForge, including the package configuration files. However, all "extra_files" are excluded from the scan.
+
 	5. If you want to exclude certain directories or files from the scan then click ``add`` and enter the directory path or full pathname of the file.
 	6. Click ``Next``. Follow the instructions on the UForge AppCenter GUI.
 
@@ -79,6 +81,14 @@ Scanning a Microsoft Windows Machine
 .. note:: It is not possible to scan a Windows "Core" system for all versions: 2008R2, 2012, 2012R2 and 2016.
 
 .. warning:: If the target filesystem is NTFS, the scan is optimized by extracting only "used space" from target disks on the source system. Some applications might hold their data on "free space," which is not used by the operating system. If the source system of the scan has such applications installed, these applications may not work correctly on a machine image generated from the scan. With the other filesystems, such as FAT, ReFS and so on, all the space including "free space" on target disks will be copied by the scan.
+
+.. note:: If you plan to migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/solutions/cloud/k5/>`_, you must also do the following before scanning:
+
+	1. Uninstall VMWare Tools (if installed).
+	2. Disable NLA for RDP (Please refer to official Microsoft documentation `Configure Network Level Authentication for Remote Desktop Services Connections <https://technet.microsoft.com/en-us/library/cc732713(v=ws.11).aspx/>`_).
+	3. Uninstall CloudBase-Init (if installed).
+
+	For more detailed information, please refer to `official Fujitsu K5 IaaS Documentation <http://www.fujitsu.com/uk/Images/k5-iaas-features-handbook.pdf>`_.
 
 To carry out a scan, go to the ``Migration`` tab:
 

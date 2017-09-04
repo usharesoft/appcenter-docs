@@ -12,7 +12,6 @@ Attributes
 
 The list of attributes for ``scan`` are:
 
-	* ``extraFiles``: a list of :ref:`scannedfile-object` files that are not part of any native package on the file system
 	* ``images``: a list of :ref:`image-object` objects that have been generated from this scan report
 	* ``imports``: a list of :ref:`scanimport-object` objects that have been imported from this scan report
 	* ``unixServices``: a list of :ref:`unixservice-object` objects that represent Unix services on the scanned machine
@@ -30,6 +29,7 @@ The list of attributes for ``scan`` are:
 	* ``goldenImportsUri`` (anyURI): the uri resource to retrieve all the golden imports
 	* ``installProfile`` (:ref:`installProfile-object`): the install profile of the scanned system
 	* ``installProfileUri`` (anyURI): the uri resource of the :ref:`installprofile-object`
+	* ``scanSyncUri`` (anyURI): the uri resource of the :ref:`scansync-object`
 	* ``name`` (string): the scan name
 	* ``overlayCrc`` (string): the crc of the scan overlay archive
 	* ``overlayImported`` (boolean): a boolean indicating whether the overlay has been imported on the platform

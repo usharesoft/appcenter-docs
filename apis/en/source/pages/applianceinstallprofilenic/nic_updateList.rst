@@ -5,7 +5,7 @@
 nic_updateList
 --------------
 
-.. function:: PUT users/{uid}/appliances/{aid}/installProfile/{ipid}/nics
+.. function:: PUT /users/{uid}/appliances/{aid}/installProfile/{ipid}/nics
 
 .. sidebar:: Summary
 
@@ -41,7 +41,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/apiusers/{uid}/appliances/{aid}/installProfile/{ipid}/nics" -X PUT \
+	curl "https://uforge.example.com/api/users/{uid}/appliances/{aid}/installProfile/{ipid}/nics" -X PUT \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"-H "Content-type: application/xml" --data-binary "@representation.xml"
 
 Example of representation.xml content (the request body):

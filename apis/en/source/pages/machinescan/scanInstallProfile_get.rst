@@ -55,7 +55,11 @@ Example Request
 	 * :ref:`scanPackageFile-get`
 	 * :ref:`scanPackage-getAll`
 	 * :ref:`scanPartition-upload`
+	 * :ref:`scanSync-create`
+	 * :ref:`scanSync-get`
+	 * :ref:`scanSync-getFiles`
 	 * :ref:`scan-cancel`
+	 * :ref:`scan-compare`
 	 * :ref:`scan-create`
 	 * :ref:`scan-delete`
 	 * :ref:`scan-get`
@@ -63,4 +67,5 @@ Example Request
 	 * :ref:`scannedInstanceScan-deleteAll`
 	 * :ref:`scannedInstanceScan-getAll`
 	 * :ref:`scannedinstance-object`
+	 * :ref:`scansync-object`
 	 * :ref:`userScan-getAll`

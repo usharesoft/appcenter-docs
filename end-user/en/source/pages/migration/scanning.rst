@@ -48,13 +48,17 @@ To carry out a scan, go to the ``Migration`` tab:
 	7. Download binary locally by clicking ``Download``.
 	8. Copy the binary on the target environment you want to migrate.
 	9. Open a terminal window and login to the target environment.
-	10. Run the scan command on the running target environment to start a scan of the system you want to migrate. Note the ``-o`` option in the scan command identifies that you will launch a scan with overlay. The binary identifies the packages, files and custom files on the system.
+	10. Run the scan command on the running target environment to start a scan of the system you want to migrate. Note the ``-o`` option in the scan command indicates that you will launch a scan with overlay. The binary identifies the packages, files and custom files on the system.
 
 		By default the scan data will be saved in ``/tmp``. You can modify the directory where the data will be saved using the ``-t`` option in order to ensure that there is enough space to save the scan data.
+
+		Use the ``-e`` option if you want to exclude certain files or directories from the scan.
 
 		You can also use API keys to run the command. In this case, in the command you copied, remove the password and enter the API keys using ``-a`` option for the public key and ``-s`` option for the secret key. For example::
 
 		./uforge-scan.[bin/exe] -u <username> -a <public-key> -s <secret-key> -U http://ip:port/ufws -n 'Test_scan'
+
+		.. note:: The ``-n`` option to indicate the scan name is mandatory. If a scan with this name already exists, the scan will be grouped under this name.
 
 	11. A report is sent to UForge AppCenter which can be used for migration. To view the progress, go back to the ``Migration`` tab and click ``ok``.
 
@@ -98,6 +102,12 @@ To carry out a scan, go to the ``Migration`` tab:
 	4. Select if you want to use the graphical user interface or the command line. Follow the instructions on the pop-up to download the scan binary.
 
 		.. image:: /images/migration-windows-scan-options2.png
+
+		When you run the ``uforge-scan.exe`` command the ``-n`` option to indicate the scan name is mandatory. If a scan with this name already exists, the scan will be grouped under this name.
+
+		By default the scan data will be saved in ``/tmp``. You can modify the directory where the data will be saved using the ``-t`` option in order to ensure that there is enough space to save the scan data.
+
+		Use the ``-e`` option if you want to exclude certain files or directories from the scan. Use ``-E`` option if you want to exclude a harddisk.
 
 	5. You can then launch the scan. The following image illustrates a windows scan with all of the possible options checked. They are described in the following steps.
 

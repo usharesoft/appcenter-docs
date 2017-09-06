@@ -3,6 +3,16 @@
 Changelog
 =========
 
+3.7.fp8
+-------
+
+Release Date: 2017-10-16
+
+New Features
+~~~~~~~~~~~~
+* Users can deploy instances from published machine images to Microsoft Azure ARM.
+
+
 3.7.fp7
 -------
 

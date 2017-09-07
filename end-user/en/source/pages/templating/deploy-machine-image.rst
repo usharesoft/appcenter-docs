@@ -5,11 +5,14 @@
 Deploying a Machine Image
 ---------------------------------
 
-.. note:: You cannot deploy a Windows based appliance using the Deploy feature.
+.. note:: Currently, you cannot deploy a Windows based appliance using the Deploy feature.
+
+.. note:: Currently, only machine images published on Amazon, OpenStack and Microsoft Azure Resource Manager can be deployed from UForge.
 
 You can only deploy a machine image if you have AMP installed. For more information, refer to the official `Cloudsoft AMP documentation <https://docs.cloudsoft.io/>`_
 
-In order to deploy a machine image to Amazon or to OpenStack, you must already have credentials to access that environment setup on UForge. For Amazon, only full accounts can be used, trial accounts are not supported for publishing images from UForge.
+In order to deploy a machine image, you must already have credentials to access that environment setup on UForge.
+For Amazon, only full accounts can be used, trial accounts are not supported for publishing images from UForge.
 
 	1. If not already done, create an account for the target environment.  For more information, see :ref:`account-cloud-accounts`.
 	2. Go to the appliance and click the ``Machine Images`` page. If you have not generated a machine image, you will need to do so as described in :ref:`appliance-generate-machine-image`.
@@ -26,7 +29,7 @@ In order to deploy a machine image to Amazon or to OpenStack, you must already h
 
 	5. Click ``publish``.
 
-	.. note:: Publishing an image to Amazon or OpenStack will be billed to the user account.
+	.. note:: Publishing an image will be billed to the user account.
 
 	6. The publication will take a few minutes to complete (depending on the size of the image and the network connectivity between UForge and the target environment). The publication progress is shown. At the end of the publication, the machine image has been published by UForge to your target environment.
 

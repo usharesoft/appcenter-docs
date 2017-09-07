@@ -11,7 +11,7 @@ Deploying a Machine Image
 
 You can only deploy a machine image if you have AMP installed. For more information, refer to the official `Cloudsoft AMP documentation <https://docs.cloudsoft.io/>`_
 
-In order to deploy a machine image, you must already have credentials to access that environment setup on UForge.
+The credentials to deploy a machine image are those used to publish it.
 For Amazon, only full accounts can be used, trial accounts are not supported for publishing images from UForge.
 
 	1. If not already done, create an account for the target environment.  For more information, see :ref:`account-cloud-accounts`.

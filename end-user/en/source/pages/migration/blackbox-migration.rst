@@ -32,10 +32,12 @@ When you generate a machine image from the scan, all the information included in
 
 	For more detailed information, please refer to `official Fujitsu K5 IaaS Documentation <http://www.fujitsu.com/uk/Images/k5-iaas-features-handbook.pdf>`_.
 
-.. note:: Currently, publications to Microsoft Azure platform <https://azure.microsoft.com/en-us/>`_ require to install WALinuxAgent 2.0.18 (for CentOS) or waagent 2.0.16 (for Debian and Ubuntu) which are not compatible with NetworkManager (or network-manager) package. Therefore, if you plan to migrate, you must also do the following before scanning:
+.. note:: Currently, publications to Microsoft Azure platform `<https://azure.microsoft.com/en-us/>`_ require to install WALinuxAgent 2.0.18 (for CentOS) or waagent 2.0.16 (for Debian and Ubuntu) which are not compatible with NetworkManager (or network-manager) package. Therefore, if you plan to migrate, you must also do the following before scanning:
 
 	1. Uninstall NetworkManager (if installed).
 	2. Uninstall the Microsoft Azure agent, i.e. WALinuxAgent and waagent packages (if installed).
+
+.. warning:: Ubuntu 14.04 migration for Microstoft Azure target platform is not supported by UForge.
 
 When you carry out black box migration (by generating a machine image directly from a scan), the following steps are carried out:
 

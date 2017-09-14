@@ -22,8 +22,6 @@ To view the details of a scanned Linux-based instance:
 
 	.. note:: The number of packages between your scanned system and the one in UForge AppCenter will differ for several reasons. First, if you had more than 1 kernel only 1 is imported into UForge AppCenter. Also, UForge AppCenter adds files for install configuration and install profile.
 
-	5. You can also get the instructions to synchronize your data in the ``Synchronization`` sub tab (refer to :ref:`data-synchronization`).
-
 Windows-based
 ~~~~~~~~~~~~~
 

@@ -17,13 +17,13 @@ In order to upgrade UForge to this latest patch, please update the packages by l
 2) Then execute : ``yum update uforge-gen uforge uforge-client uforge-cli``
 
 
-A compatible version of hammr is also available : 3.7-7
+A compatible version of hammr is also available : 3.7.0.7
 
 This version is only compatible with UForge AppCenter 3.7-7
 
 To install it, you will have to launch the following command::
 
-	$ pip install hammr==3.7-7
+	$ pip install hammr==3.7.0.7
 
 Enhancements
 ~~~~~~~~~~~~
@@ -59,13 +59,13 @@ In order to upgrade UForge to this latest patch, please update the packages by l
 2) Then execute : ``yum update uforge-gen uforge uforge-client uforge-cli``
 
 
-A compatible version of hammr is also available : 3.7-6
+A compatible version of hammr is also available : 3.7.0.6
 
 This version is only compatible with UForge AppCenter 3.7-6
 
 To install it, you will have to launch the following command::
 
-	$ pip install hammr==3.7-6
+	$ pip install hammr==3.7.0.6
 
 Enhancements
 ~~~~~~~~~~~~
@@ -108,13 +108,13 @@ Installation
 
 To be able to update a 3.7 UForge using the latest yum repo, you have to edit ``/etc/yum.repos.d/uforge-ee-centos.repo`` and replace ``stable/3.7/official/centos/releases/$releasever/$basearch/`` by ``test/3.7/centos/releases/$releasever/$basearch/``
 
-A compatible version of hammr is also available : 3.7-5
+A compatible version of hammr is also available : 3.7.0.5
 
 This version is only compatible with UForge AppCenter 3.7-5
 
 To install it, you will have to launch the following command::
 
-	$ pip install hammr==3.7-5
+	$ pip install hammr==3.7.0.5
 
 
 Enhancements

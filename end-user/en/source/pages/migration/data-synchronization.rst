@@ -2,8 +2,8 @@
 
 .. _data-synchronization:
 
-Synchronize Data of Target Environment with Scanned Machine
------------------------------------------------------------
+Synchronize Target Environment with Scanned Machine
+---------------------------------------------------
 
 At the end of the migration process, you can synchronize the running migrated instance with the source machine data.
 

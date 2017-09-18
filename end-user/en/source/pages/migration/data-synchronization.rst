@@ -2,10 +2,10 @@
 
 .. _data-synchronization:
 
-Synchronize Data With the Target Environment
---------------------------------------------
+Synchronize Data of Target Environment with Scanned Machine
+-----------------------------------------------------------
 
-At the end of the migration process, you can synchronize the source machine data with the running migrated instance.
+At the end of the migration process, you can synchronize the running migrated instance with the source machine data.
 
 .. warning:: This feature is only available for CentOS scans without overlay.
 

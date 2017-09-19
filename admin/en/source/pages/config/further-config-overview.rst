@@ -26,5 +26,6 @@ This section assumes that you have completed the installation of your UForge pla
    authentication-sso
    self-signed-cert
    populate-db-OS
+   update-PS-repo
    proprietary-pkg
    config-amp

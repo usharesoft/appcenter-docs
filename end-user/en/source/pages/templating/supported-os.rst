@@ -39,8 +39,6 @@ The following is a list of supported OSes that users can use as the guest operat
 
 .. warning:: If you intend to generate machine images for cloud environments, ensure that the operating system you are using in the machine image is correctly supported by the cloud environment.  For example, Microsoft Azure supports the following `operating systems <https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-endorsed-distros/>`_.
 
-.. warning:: For Oracle Cloud, UForge supports generation and registration of Linux machine images only.
-
 
 .. _notes-on-licensing:
 

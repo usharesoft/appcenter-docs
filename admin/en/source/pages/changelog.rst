@@ -10,7 +10,7 @@ Release Date: 2017-10-16
 
 New Features
 ~~~~~~~~~~~~
-* Support generation and registration of Linux machine images for Oracle Cloud.
+* Support generation and registration of machine images for Oracle Cloud.
 
 3.7.fp7
 -------

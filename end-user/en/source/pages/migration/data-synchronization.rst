@@ -7,7 +7,12 @@ Synchronize Target Environment with Scanned Machine
 
 At the end of the migration process, you can synchronize the running migrated instance with the source machine data.
 
-.. warning:: This feature is only available for CentOS scans without overlay.
+.. warning:: This feature is only available for scans without overlay of following Operating Systems:
+
+  * CentOS 6, 7
+  * Debian 8
+
+  For other Linux Operating Systems, you can use the uforge-sync tool but result is not guaranted.
 
 From the scan detail view, you can get the instructions to synchronize your data by clicking the ``Synchronize`` button.
 

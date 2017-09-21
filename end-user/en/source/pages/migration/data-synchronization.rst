@@ -12,8 +12,6 @@ At the end of the migration process, you can synchronize the running migrated in
   * CentOS 6, 7
   * Debian 8
 
-  For other Linux Operating Systems, you can use the uforge-sync tool but result is not guaranted.
-
 From the scan detail view, you can get the instructions to synchronize your data by clicking the ``Synchronize`` button.
 
 Download the uforge-sync Tool

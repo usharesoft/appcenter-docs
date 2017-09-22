@@ -3,6 +3,15 @@
 Changelog
 =========
 
+3.7.fp8
+-------
+
+Release Date: 2017-10-16
+
+New Features
+~~~~~~~~~~~~
+* Using uforge-sync binary, users can now synchronize the target environment with a CentOS scan (without overlay).
+
 3.7.fp7
 -------
 

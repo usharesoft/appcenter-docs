@@ -7,7 +7,7 @@ Synchronize Target Environment with Scanned Machine
 
 At the end of the migration process, you can synchronize the running migrated instance with the source machine data.
 
-.. warning:: This feature is only available for scans without overlay of following Operating Systems:
+.. warning:: This feature is only available for scans without overlay for the following Operating Systems:
 
   * CentOS 6, 7
   * Debian 8

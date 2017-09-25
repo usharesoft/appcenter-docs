@@ -10,7 +10,7 @@ At the end of the migration process, you can synchronize the running migrated in
 .. warning:: This feature is only available for scans without overlay for the following Operating Systems:
 
   * CentOS 6, 7
-  * Debian 8
+  * Debian 7, 8
 
 From the scan detail view, you can get the instructions to synchronize your data by clicking the ``Synchronize`` button.
 

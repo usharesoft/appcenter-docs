@@ -24,13 +24,13 @@ Consequently networking configuration files including ``/etc/hosts`` may be diff
 New Libraries Added
 ~~~~~~~~~~~~~~~~~~~
 
-Depending on the source and target environments, some packages or libraries are added to ensure that the system boot correctly on the target environment:
+Depending on the source and target environments, some packages or libraries are added to ensure that the system boots correctly on the target environment:
 
 	* For all white box migrations (see :ref:`migration-process-whitebox`): UForge injects ``uforge-install-config`` and ``uforge-install-profile`` packages.  These packages provides features provided by templating to prompt users for some additional information during the initial booting of the system (root password, keyboard, timezone etc based on the Install Profile settings) and the execution of any boot scripts saved as part of the appliance template.
 
 	* Para-virtualized Source -> Full Virtualized Target (Linux): UForge injects the ``kernel`` package and its dependent libraries to boot the system.
 
-	* Source -> Azure (Linux): UForge injects the Windows Azure linux agent ``walinuxagent``
+	* Source -> Azure (Linux): UForge injects the Windows Azure Linux agent ``walinuxagent``
 
 	* Source -> Azure (Windows): UForge injects ``Windows VM Agent.msi``
 
@@ -40,7 +40,7 @@ Depending on the source and target environments, some packages or libraries are 
 System Clock /etc/adjtime
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For Linux systems, the ``/etc/adjtime`` might be different between source and target systems.  The  Hardware Clock is usually not very accurate.  However, much of its inaccuracy is completely predictable - it gains or loses the same amount  of time every day.  This is called systematic drift.  The ``/etc/adjtime`` file keeps historical information on the clocks drift.  Changing hardware environments may change the contents of this file when hardware clock is adjusted (in many cases the kernel will automatically adjust the hardware clock periodically).
+For Linux systems, the ``/etc/adjtime`` might be different between source and target systems.  The  Hardware Clock is usually not very accurate.  However, much of its inaccuracy is completely predictable - it gains or loses the same amount  of time every day.  This is called systematic drift.  The ``/etc/adjtime`` file keeps historical information on the clock's drift.  Changing hardware environments may change the contents of this file when hardware clock is adjusted (in many cases the kernel will automatically adjust the hardware clock periodically).
 
 
 .. _service-state:

@@ -45,6 +45,20 @@ To apply the changes you made, run the following command. This will stop Tomcat,
 
 	$ /opt/UShareSoft/uforge-client/bin/uforge_ui_update.sh
 
+
+.. warning:: If you change ``UFORGE_URL``, you must have exactly the same value in ``UFORGE_PROXY_IGNORED`` list.
+    For example:
+    
+    .. code-block:: shell
+
+        UFORGE_URL=http://mydomain.com:8080/ufws/
+        UFORGE_PROXY_IGNORED=mydomain.com,127.0.0.1
+
+        #or
+
+        UFORGE_URL=http://<ip>:8080/ufws/
+        UFORGE_PROXY_IGNORED=<ip>,127.0.0.1
+
 .. _modify-ui-root:
 
 Modifying UForge Portal Application Root Context 

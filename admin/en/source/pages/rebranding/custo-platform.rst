@@ -41,9 +41,24 @@ To modify the UForge webservice URL, you can modify the following variable in th
 
 	``UFORGE_URL``
 
+.. warning:: The address used for ``UFORGE_URL`` must be listed in ``UFORGE_PROXY_IGNORED``.
+    For example:
+
+    .. code-block:: shell
+
+        UFORGE_URL=http://mydomain.com:8080/ufws/
+        UFORGE_PROXY_IGNORED=mydomain.com,127.0.0.1
+
+        #or
+
+        UFORGE_URL=http://<ip>:8080/ufws/
+        UFORGE_PROXY_IGNORED=<ip>,127.0.0.1
+
+
 To apply the changes you made, run the following command. This will stop Tomcat, integrate the changes and restart Tomcat::
 
 	$ /opt/UShareSoft/uforge-client/bin/uforge_ui_update.sh
+
 
 .. _modify-ui-root:
 

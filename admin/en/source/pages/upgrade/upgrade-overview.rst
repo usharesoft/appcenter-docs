@@ -125,10 +125,10 @@ Run the following CLI command in order to know if Squid is running:
 
 .. _redhat-mirror:
 
-Creating a Local Mirror for Red Hat Without Using Satellite Server
-------------------------------------------------------------------
+Creating a Local Mirror for Red Hat Without Using a Satellite Server
+--------------------------------------------------------------------
 
-You can create a local mirror of the latest updates for Red Hat Enterprise Linux without using satellite server. How this is set up will depend on your version of Red Hat Enterprise Linux.
+You can create a local mirror of the latest updates for Red Hat Enterprise Linux without using a satellite server. How this is set up will depend on your version of Red Hat Enterprise Linux.
 
 You can also refer to the Red Hat Knowledgebase solutions:
 	* `Migrating from RHN to RHSM in Red Hat Enterprise Linux <https://access.redhat.com/solutions/129723>`_.

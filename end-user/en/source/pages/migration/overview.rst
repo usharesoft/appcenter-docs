@@ -18,3 +18,4 @@ The following sub-sections describe in detail the scan steps and the differences
    migration-details
    scanning
    scan-view
+   source-target-diffs

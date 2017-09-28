@@ -20,3 +20,4 @@ From this page you can:
    scan-to-image
    scan-to-appliance
    scan-compare
+   data-synchronization

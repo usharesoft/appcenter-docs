@@ -175,7 +175,17 @@ With UForge you can create machine images in the following formats.
 |                                     | OpenStack VDI                                         |
 |                                     | OpenStack VHD                                         |
 +-------------------------------------+-------------------------------------------------------+
-| Oracle Cloud                        | none                                                  |
+| Oracle Cloud                        | - For OS versions supported by Oracle Cloud,          |
+|                                     |   refer to `FAQ at Oracle Cloud                       |
+|                                     |   <https://cloud.oracle.com/compute-classic/faq>`_    |
+|                                     | - Following OSes are not supported by UForge to       |
+|                                     |   publish to Oracle Cloud.                            |
+|                                     |                                                       |
+|                                     |   - Debian 8                                          |
+|                                     | - Supported subscriptions are                         |
+|                                     |   Metered Service Offerings.                          |
+|                                     |   Nonmetered Service Offerings are not supported by   |
+|                                     |   UForge.                                             |
 +-------------------------------------+-------------------------------------------------------+
 | SUSE Cloud                          | none                                                  |
 +-------------------------------------+-------------------------------------------------------+

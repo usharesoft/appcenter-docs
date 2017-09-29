@@ -94,6 +94,10 @@ The following is a list of specific UForge tool repositories that can be added. 
 
 		* http://distros-repository.usharesoft.com/usharesoft/rhel/6.2/x86_64/
 
+	``Oracle Linux`` (example version 6, arch x86_64)
+ 
+ 		* http://distros-repository.usharesoft.com/usharesoft/oraclelinux/6/x86_64/
+
 	``OpenSUSE`` (example version 12.1, arch x86_64): 
 
 		* http://distros-repository.usharesoft.com/usharesoft/opensuse/12.1/x86_64/
@@ -203,12 +207,12 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 
 .. _populate-rhel:
 
-Example for Adding RedHat Enterprise Linux
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Example for Adding Red Hat Enterprise Linux
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. note:: Before populating RedHat Enterprise Linux, you should complete the steps in :ref:`proprietary-pkg`, unless you have a Red Hat Satellite, in which case you should contact your Red Hat Satellite administrator for the Satellite repo URL. 
+.. note:: Before populating Red Hat Enterprise Linux, you should complete the steps in :ref:`proprietary-pkg`, unless you have a Red Hat Satellite, in which case you should contact your Red Hat Satellite administrator for the Satellite repo URL. 
 
-The following is a concrete example to begin the population of RedHat Enterprise Linux version 7, 64bit:
+The following is a concrete example to begin the population of Red Hat Enterprise Linux version 7, 64bit:
 
 	1. Connect to UForge:
 

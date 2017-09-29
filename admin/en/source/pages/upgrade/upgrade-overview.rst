@@ -166,8 +166,8 @@ Red Hat 7
 
 1. Install Red Hat Enterprise Linux 7.0 as any other installation.
 
-2. Register and subscribe your system to the Red Hat Customer Portal using Red Hat Subscription-Manager
-  A. Run the subscription managger with the RH Custom credential
+2. Register and subscribe your system to the Red Hat Customer Portal using Red Hat Subscription-Manager. Run the subscription manager with the RH Custom credential::
+
   # subscription-manager register –username –password –auto-attach
 
 3. Install your web server::

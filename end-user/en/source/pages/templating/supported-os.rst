@@ -22,6 +22,9 @@ The following is a list of supported OSes that users can use as the guest operat
 | Red Hat          |                                          |                                          |
 | Enterprise Linux*| 5.2+, 6 (32bit and 64bit), 7 (64bit)     | 5.2+, 6 (32bit and 64bit), 7 (64bit)     |
 +------------------+------------------------------------------+------------------------------------------+
+| Oracle Linux     | 5.2+ (32bit and 64bit), 6 (32bit and     | 5.2+ (32bit and 64bit), 6 (32bit and     |
+|                  | 64bit), 7 (64bit)                        | 64bit), 7 (64bit)                        |
++------------------+------------------------------------------+------------------------------------------+
 | Scientific Linux | 5.2+, 6 (32bit and 64bit), 7 (64bit)     | 5.2+, 6 (32bit and 64bit), 7 (64bit)     |
 +------------------+------------------------------------------+------------------------------------------+
 | Ubuntu LTS       | 10.04 (Lucid), 12.04 (Precise),          | 10.04 (Lucid), 12.04 (Precise),          |

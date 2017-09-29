@@ -44,41 +44,6 @@ You will note that a package ``uforge-install-config`` is injected in the genera
 
 However, it is preferable to leave this file.
 
-.. _service-state:
-
-Changes to Service State Based on Target
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-When generating a machine image from a scan, certain services are disabled or enabled depending on the target machine image being created. The following changes are common to all formats:
-
-	* ``libvirtd`` disabled
-	* ``sshd`` enabled
-	* rewrite grub configuration and ``initramfs/initrd``
-
-If after all service modification, networking services are not enabled, then ``NetworkManager`` is enabled if the package is present, otherwise ``network`` is enabled.
-
-.. note:: ``NetworkManager`` is the name used by some operating systems which is the equivalent to ``network-manager``. The name ``network`` is used by some operating systems which is the equivalent to ``networking``.
-
-EC2 AMI Image
-
-	* ``hal`` disabled
-	* ``haddaemon`` disabled
-	* ``network`` enabled
-	* ``ip6tables`` disabled
-	* ``iptables`` disabled
-
-OpenStack Image
-
-	* ``hal`` disabled
-	* ``haddaemon`` disabled
-	* ``network`` enabled
-	* ``ip6tables`` disabled
-	* ``iptables`` disabled
-
-Microsoft Azure Image
-
-	* ``networkmanager`` disabled
-	* ``network`` enabled
 
 .. _appliance-docker-image:
 

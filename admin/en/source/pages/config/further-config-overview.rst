@@ -10,7 +10,7 @@ This section assumes that you have completed the installation of your UForge pla
 .. toctree::
    :titlesonly:
 
-   modify-ip
+   modify-endpoints
    add-compute-node
    configure-ssl-cert
    config-smtp
@@ -22,8 +22,10 @@ This section assumes that you have completed the installation of your UForge pla
    tuning-services
    event-bus
    email-notification
+   modify-ip
    authentication-sso
    self-signed-cert
    populate-db-OS
+   update-OS-repo
    proprietary-pkg
    config-amp

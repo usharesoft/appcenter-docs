@@ -17,7 +17,6 @@ When you run a scan of a system, UForge AppCenter will differentiate between “
 
 Recommendations pre-scan:
 
-	* Pre-install or post-install scripts on the system you are about to scan should only use ascii character set
 	* Custom packages on the live system to be scanned should not contain references to package dependencies as relative path. They should be expressed as absolute paths.
 	* If custom packages are installed using ``--nodeps`` flag, the scan process will not detect these packages. When carrying out white box migration, UForge AppCenter will check for these dependencies. If they are custom packages that are not on the live system, the generation will fail. Therefore, it is recommended to provide a custom repository with all the necessary custom packages. Otherwise, they can be added after the scan to the appliance template in ``My software``.
 
@@ -49,13 +48,17 @@ To carry out a scan, go to the ``Migration`` tab:
 	7. Download binary locally by clicking ``Download``.
 	8. Copy the binary on the target environment you want to migrate.
 	9. Open a terminal window and login to the target environment.
-	10. Run the scan command on the running target environment to start a scan of the system you want to migrate. Note the ``-o`` option in the scan command identifies that you will launch a scan with overlay. The binary identifies the packages, files and custom files on the system.
+	10. Run the scan command on the running target environment to start a scan of the system you want to migrate. Note the ``-o`` option in the scan command indicates that you will launch a scan with overlay. The binary identifies the packages, files and custom files on the system.
 
 		By default the scan data will be saved in ``/tmp``. You can modify the directory where the data will be saved using the ``-t`` option in order to ensure that there is enough space to save the scan data.
+
+		Use the ``-e`` option if you want to exclude certain files or directories from the scan.
 
 		You can also use API keys to run the command. In this case, in the command you copied, remove the password and enter the API keys using ``-a`` option for the public key and ``-s`` option for the secret key. For example::
 
 		./uforge-scan.[bin/exe] -u <username> -a <public-key> -s <secret-key> -U http://ip:port/ufws -n 'Test_scan'
+
+		.. note:: The ``-n`` option to indicate the scan name is mandatory. If a scan with this name already exists, the scan will be grouped under this name.
 
 	11. A report is sent to UForge AppCenter which can be used for migration. To view the progress, go back to the ``Migration`` tab and click ``ok``.
 
@@ -83,6 +86,14 @@ Scanning a Microsoft Windows Machine
 
 .. warning:: If the target filesystem is NTFS, the scan is optimized by extracting only "used space" from target disks on the source system. Some applications might hold their data on "free space," which is not used by the operating system. If the source system of the scan has such applications installed, these applications may not work correctly on a machine image generated from the scan. With the other filesystems, such as FAT, ReFS and so on, all the space including "free space" on target disks will be copied by the scan.
 
+.. note:: If you plan to migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/solutions/cloud/k5/>`_, you must also do the following before scanning:
+
+	1. Uninstall VMWare Tools (if installed).
+	2. Disable NLA for RDP (Please refer to official Microsoft documentation `Configure Network Level Authentication for Remote Desktop Services Connections <https://technet.microsoft.com/en-us/library/cc732713(v=ws.11).aspx/>`_).
+	3. Uninstall CloudBase-Init (if installed).
+
+	For more detailed information, please refer to `official Fujitsu K5 IaaS Documentation <http://www.fujitsu.com/uk/Images/k5-iaas-features-handbook.pdf>`_.
+
 To carry out a scan, go to the ``Migration`` tab:
 
 	1. Click on ``scan`` in the top right.
@@ -91,6 +102,12 @@ To carry out a scan, go to the ``Migration`` tab:
 	4. Select if you want to use the graphical user interface or the command line. Follow the instructions on the pop-up to download the scan binary.
 
 		.. image:: /images/migration-windows-scan-options2.png
+
+		When you run the ``uforge-scan.exe`` command the ``-n`` option to indicate the scan name is mandatory. If a scan with this name already exists, the scan will be grouped under this name.
+
+		By default the scan data will be saved in ``/tmp``. You can modify the directory where the data will be saved using the ``-t`` option in order to ensure that there is enough space to save the scan data.
+
+		Use the ``-e`` option if you want to exclude certain files or directories from the scan. Use ``-E`` option if you want to exclude a harddisk.
 
 	5. You can then launch the scan. The following image illustrates a windows scan with all of the possible options checked. They are described in the following steps.
 

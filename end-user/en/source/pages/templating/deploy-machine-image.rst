@@ -3,13 +3,14 @@
 .. _deploy-machine-image:
 
 Deploying a Machine Image
----------------------------------
+--------------------------
 
-.. note:: You cannot deploy a Windows based appliance using the Deploy feature.
+.. note:: Currently, only Linux machine images published on Amazon, OpenStack and Microsoft Azure Resource Manager can be deployed from UForge. You cannot deploy a Windows based appliance.
 
-You can only deploy a machine image if you have AMP installed. For more information, refer to the official `Cloudsoft AMP documentation <https://docs.cloudsoft.io/>`_
+You can only deploy a machine image if you have AMP installed. For more information on installing AMP, refer to the official `Cloudsoft AMP documentation <https://docs.cloudsoft.io/>`_
 
-In order to deploy a machine image to Amazon or to OpenStack, you must already have credentials to access that environment setup on UForge. For Amazon, only full accounts can be used, trial accounts are not supported for publishing images from UForge.
+The credentials to deploy a machine image are those used to publish it.
+For Amazon, only full accounts can be used, trial accounts are not supported for publishing images from UForge.
 
 	1. If not already done, create an account for the target environment.  For more information, see :ref:`account-cloud-accounts`.
 	2. Go to the appliance and click the ``Machine Images`` page. If you have not generated a machine image, you will need to do so as described in :ref:`appliance-generate-machine-image`.
@@ -26,7 +27,7 @@ In order to deploy a machine image to Amazon or to OpenStack, you must already h
 
 	5. Click ``publish``.
 
-	.. note:: Publishing an image to Amazon or OpenStack will be billed to the user account.
+	.. note:: Publishing an image will be billed to the user account.
 
 	6. The publication will take a few minutes to complete (depending on the size of the image and the network connectivity between UForge and the target environment). The publication progress is shown. At the end of the publication, the machine image has been published by UForge to your target environment.
 
@@ -44,4 +45,26 @@ In order to deploy a machine image to Amazon or to OpenStack, you must already h
 
 	.. note:: If you want to stop your deployment, you can do so by clicking on the delete (garbage) icon. This will stop it and remove the instance from your cloud.
 
-	.. warning:: Terminate an OpenStack deployment may fail due to `a known issue in AMP <https://issues.apache.org/jira/browse/JCLOUDS-1318>`_. Click again on the delete (garbage) icon to work around the issue.
+	.. warning:: Terminating an OpenStack deployment may fail due to `a known issue in AMP <https://issues.apache.org/jira/browse/JCLOUDS-1318>`_. Click again on the delete (garbage) icon to work around the issue.
+
+.. _list-deployment:
+
+Listing Deployed Machine Images
+-------------------------------
+
+In order to view a list of the deployed machine images, go to the ``Deployments`` tab. A window similar to the following will appear.
+
+.. image:: /images/deployment-list.png
+
+From this window you can see the cloud platform the published machine image was deployed to, the name of the deployed instance, the location of the machine image published, the OS the machine image is based on and the state of the deployed instance on the cloud platform.
+
+	.. note:: If you want to stop your deployed instance, you can do so by clicking on the delete (garbage) icon. This will stop it and remove the instance from your cloud.
+
+If you click on the application name you will see the details of the instance that has been deployed, including the name of the appliance it is based on and the IP address of the machine.
+
+.. image:: /images/deployment-info.png
+
+If you click on the ``i`` next to the hostname, a popup will appear indicating the IP adress, the user name and the SSH key (if any). An example code will also be given to connect to your instance.
+
+.. image:: /images/deployment-info-popup.png
+

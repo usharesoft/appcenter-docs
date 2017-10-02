@@ -56,7 +56,7 @@ When generating a machine image from a scan, certain services are disabled or en
 	* rewrite grub configuration and ``initramfs/initrd``
 
 If present, ``NetworkManager`` is enabled, otherwise ``network`` is enabled.
-If there is no firewall on the source machine, ``iptables`` or ``ip6tables`` are always disabled. If a firewall is present on the source machine, services ``iptables`` or ``ip6tables`` will be enabled.
+If the user requested a firewall , services ``iptables`` or ``ip6tables`` will be enabled. Otherwise, ``iptables`` or ``ip6tables`` are always disabled.
 
 
 .. note:: ``NetworkManager`` is the name used by some operating systems which is the equivalent to ``network-manager``. The name ``network`` is used by some operating systems which is the equivalent to ``networking``.

@@ -10,7 +10,7 @@ Release Date: 2017-11-27
 
 Enhancements
 ~~~~~~~~~~~~
-* UForge server URL parameter of uforge-sync binary now expect the UForge API URL.
+* The uforge-sync binary now requires the API endpoint, to improve usability.
 
 3.7.fp8
 -------

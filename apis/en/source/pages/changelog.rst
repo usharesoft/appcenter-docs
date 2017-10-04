@@ -29,6 +29,7 @@ Enhancements
 ~~~~~~~~~~~~
 
 * 7596 Use parted tool to create disks/partitions during generation 
+*  966 Support Linux multiple disks publication to AWS
 
 Bug Fixes
 ~~~~~~~~~
@@ -38,7 +39,6 @@ Bug Fixes
 * 7514 Image generation failure from the scan when repository being updated with spider simultaneously
 * 7220 In several files user/group and permissions have been changed
 * 7197 Generation error when extracting overlay if size is bigger than / (root) partition
-* 7330 UID/GID greater than int32 is changed to int32 maximum after the migration.
 * 7313 /etc/sudoers is initialized after migration
 * 7129 sshd_config file is changed after the migration
 * 6765 Boot failed if there are more than 3 logical partitions. 
@@ -46,7 +46,6 @@ Bug Fixes
 * 7282 Error when specifying a directory of more than depth 1 in mount points in install profile
 * 6973 Scan comparison show two packages with different version instead to see package's target scan
 * 6849 Keep disk order and partition number after migration. 
-*  966 support Linux multiple disks publication to AWS
 
 3.7-7
 -----

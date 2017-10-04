@@ -23,7 +23,7 @@ This version is only compatible with UForge AppCenter 3.7-8
 
 To install it, you will have to launch the following command::
 
-	$ pip install hammr==3.7-8
+	$ pip install hammr==3.7.0.8
 
 Enhancements
 ~~~~~~~~~~~~

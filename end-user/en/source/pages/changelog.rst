@@ -3,6 +3,51 @@
 Changelog
 =========
 
+3.7-8
+-----
+
+Release Date: 2017-10-04
+
+Upgrading
+~~~~~~~~~
+
+In order to upgrade UForge to this latest patch, please update the packages by launching the following commands on each node:
+
+1) Execute : ``yum update uforge-common``
+2) Then execute : ``yum update uforge-gen uforge uforge-client uforge-cli``
+
+
+A compatible version of hammr is also available : 3.7-8
+
+This version is only compatible with UForge AppCenter 3.7-8
+
+To install it, you will have to launch the following command::
+
+	$ pip install hammr==3.7-8
+
+Enhancements
+~~~~~~~~~~~~
+
+* 7596 Use parted tool to create disks/partitions during generation 
+
+Bug Fixes
+~~~~~~~~~
+
+* 7644 Images built by UForge on CentOS 7.4 repos fail to boot
+* 7592 Modified scan package files with root read-only permissions are not migrated
+* 7514 Image generation failure from the scan when repository being updated with spider simultaneously
+* 7220 In several files user/group and permissions have been changed
+* 7197 Generation error when extracting overlay if size is bigger than / (root) partition
+* 7330 UID/GID greater than int32 is changed to int32 maximum after the migration.
+* 7313 /etc/sudoers is initialized after migration
+* 7129 sshd_config file is changed after the migration
+* 6765 Boot failed if there are more than 3 logical partitions. 
+* 6951 When a scan source CentOS 7 machine has "/boot/grub/grub.conf", the generated image does not boot
+* 7282 Error when specifying a directory of more than depth 1 in mount points in install profile
+* 6973 Scan comparison show two packages with different version instead to see package's target scan
+* 6849 Keep disk order and partition number after migration. 
+*  966 support Linux multiple disks publication to AWS
+
 3.7-7
 -----
 

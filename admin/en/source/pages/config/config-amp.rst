@@ -25,12 +25,9 @@ To configure AMP, do the following on each UForge webservice node:
 
 			$ /opt/UShareSoft/uforge-client/bin/uforge_ui_update.sh
 
-	3. At this point the deployment feature should be available for the root user. In order to allow other users to use this feature, give them the entitlement "deployments_access". For more information on entitlements refer to :ref:`create-roles`.
-http://docs.usharesoft.com/projects/appcenter-admin-guide/en/latest/pages/manage-users/api-access.html#granting-a-user-supervisor-rights
+	3. At this point the deployment feature should be available for the root user. In order to allow other users to use this feature, give them the entitlement "deployments_access". For more information on entitlements refer to :ref:`create-roles` and :ref:`supervisor-rights`.
 
 		.. code-block:: shell
 
 			role create --name launcher --entitlement deployments_access
 			user role add --roles launcher --account someUser
-
-

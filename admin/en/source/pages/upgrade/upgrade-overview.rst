@@ -168,7 +168,7 @@ Red Hat 7
 
 2. Register and subscribe your system to the Red Hat Customer Portal using Red Hat Subscription-Manager. Run the subscription manager with the RH Custom credential::
 
-  # subscription-manager register –username –password –auto-attach
+    subscription-manager register –username –password –auto-attach
 
 3. Install your web server::
 

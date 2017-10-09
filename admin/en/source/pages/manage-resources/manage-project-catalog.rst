@@ -94,7 +94,7 @@ Under ``Projects`` you can restrict the usage of a project based on a distributi
 		* for ``TargetFormat`` field is ``name`` or ``type`` 
 		* ``value`` is the value you want to match with the fields. For example, ``CentOS`` for Distribution name, ``linux`` for Distribution family, ``x86_64`` for Distribution arch, ``VirtualBox`` for TargetFormat name, ``cloud`` for TargetFormat type.
 		* logical operator is ``||`` for OR and ``&&`` for AND
-		* carriage return is not authorize
+		* carriage return is not authorized
 
 For example, if the project is designed only for distributions CentOS 7 x86_64 or Debian 8 x86_64, or for TargetFormat with type virtual, then you would note the Restriction rule as follows::
 

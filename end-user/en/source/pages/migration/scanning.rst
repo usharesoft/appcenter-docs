@@ -119,7 +119,7 @@ To carry out a scan, go to the ``Migration`` tab:
 
 	#.  Fill in the Scanned Instance Name
 
-		.. note:: Scan name can only contain letters from the english alphabet, numbers, spaces and the following characters ._\-. all other characters are not supported at this time.
+		.. note:: Scan name can be mix of alphanumeric characters, spaces and the following special characters `._-` all other characters are not supported at this time.
 
 	#. Optionally you can select ``Use local storage``. This means that the scan will be not be done in streaming but in 2 phases. First the data will be stored on a temporary storage drive during the scan process. This temporary storage can be a local directory or a virtual space on the network. It must be at least half the size of the machine you want to scan.
 

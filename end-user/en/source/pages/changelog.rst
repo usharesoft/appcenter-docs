@@ -3,15 +3,6 @@
 Changelog
 =========
 
-3.7.fp9
--------
-
-Release Date: 2017-11-27
-
-Enhancements
-~~~~~~~~~~~~
-* The uforge-sync binary now requires the API endpoint, to improve usability.
-
 3.7.fp8
 -------
 

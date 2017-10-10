@@ -30,7 +30,7 @@ Once the ``uforge-sync`` binary has been copied to the source machine, you can l
 
 .. code-block:: bash
 
-    $ chmod +x ./uforge-sync.bin ; ./uforge-sync.bin -U http://10.1.2.206/api -u guest \
+    $ chmod +x ./uforge-sync.bin ; ./uforge-sync.bin -U http://10.1.2.206 -u guest \
     -n users/guest/scannedinstances/1/scans/1 -d 11.12.13.14 -i ~/.ssh/id_rsa
 
 The following are mandatory parameters:

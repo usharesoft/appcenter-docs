@@ -10,6 +10,7 @@ Release Date: 2017-10-16
 
 New Features
 ~~~~~~~~~~~~
+* Support generation and registration of machine images for Oracle Cloud with the metered service subscriptions.
 * Using uforge-sync binary, users can now synchronize the target environment with scans (without overlay) of CentOS 6, 7 and Debian 7, 8 systems.
 
 3.7.fp7

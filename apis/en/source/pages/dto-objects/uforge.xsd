@@ -2567,14 +2567,24 @@
         <xs:complexContent>
             <xs:extension base="CredAccount">
                 <xs:sequence>
-                    <xs:element name="accountName" type="xs:string" minOccurs="0">
+                    <xs:element name="tenantId" type="xs:string" minOccurs="0">
                         <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the storage account name to use</xsd:documentation>
+                            <xsd:documentation xml:lang="en">the tenant id to use</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
-                    <xs:element name="accountKey" type="xs:string" minOccurs="0">
+                    <xs:element name="subscriptionId" type="xs:string" minOccurs="0">
                         <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the storage account access key to use</xsd:documentation>
+                            <xsd:documentation xml:lang="en">the subscription id to use</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="applicationId" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the application id to use</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="applicationKey" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the application key to use</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                 </xs:sequence>
@@ -3081,6 +3091,34 @@
         </xs:complexContent>
     </xs:complexType>
 
+    <xs:complexType name="CredAccountOracle">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Holds specific account information for the Oracle Cloud platform.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="CredAccount">
+                <xs:sequence>
+                    <xs:element name="login" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the user login name to use</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="password" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the user password to use</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="domainName" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the identity domain to use</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
 
     <xs:complexType name="Deployment">
         <xsd:annotation>
@@ -4549,6 +4587,7 @@
                                 <xs:enumeration value="openstackvhd"/>
                                 <xs:enumeration value="openstackvmdk"/>
                                 <xs:enumeration value="outscale"/>
+                                <xs:enumeration value="oracleraw"/>
                                 <xs:enumeration value="ovf"/>
                                 <xs:enumeration value="ovf09"/>
                                 <xs:enumeration value="qcow2"/>
@@ -5476,6 +5515,9 @@
                     <xs:element name="parentUri" type="xs:anyURI" minOccurs="0"/>
                     <xs:element name="uri" type="xs:anyURI" minOccurs="0"/>
                     <xs:element name="cloudProvider" type="xs:string" minOccurs="0"/>
+                    <xs:element name="sshKeyName" type="xs:string" minOccurs="0"/>
+                    <xs:element name="loginUser" type="xs:string" minOccurs="0"/>
+                    <xs:element name="winrmAddress" type="xs:string" minOccurs="0"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -5486,6 +5528,18 @@
             <xs:extension base="Instance">
                 <xs:sequence>
                     <xs:element name="instanceType" type="xs:string" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="InstanceAzureResourceManager">
+        <xs:complexContent>
+            <xs:extension base="Instance">
+                <xs:sequence>
+                    <xs:element name="userName" type="xs:string" minOccurs="0"/>
+                    <xs:element name="userPassword" type="xs:string" minOccurs="0"/>
+                    <xs:element name="userSshKey" type="xs:string" minOccurs="0"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -5514,7 +5568,6 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-
 
     <xs:complexType name="InstanceVCloud">
         <xs:complexContent>
@@ -7858,14 +7911,29 @@
         <xs:complexContent>
             <xs:extension base="PublishImage">
                 <xs:sequence>
+                    <xs:element name="storageAccount" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the storageAccount where this machine image is registered</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
                     <xs:element name="container" type="xs:string" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the container where this machine image is registered</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
+                    <xs:element name="resourceGroup" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the resourceGroup where this machine image is registered</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
                     <xs:element name="blob" type="xs:string" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the blob of the published machine image</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="displayName" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the cloud name for this machine image</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                 </xs:sequence>
@@ -8327,6 +8395,30 @@
                     <xs:element name="tagName" type="xs:string" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the tag name to use when registering the machine image</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="PublishImageOracle">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Holds the information on the registration of a machine image to the Oracle Cloud environment.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="PublishImage">
+                <xs:sequence>
+                    <xs:element name="computeEndPoint" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the compute EndPoint URL to use when publishing the machine image</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="displayName" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the public name of the machine image</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                 </xs:sequence>
@@ -10623,6 +10715,7 @@
                                 <xs:enumeration value="vsphere"/>
                                 <xs:enumeration value="k5"/>
                                 <xs:enumeration value="docker"/>
+                                <xs:enumeration value="oracle"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -10738,6 +10831,7 @@
                                 <xs:enumeration value="vsphere"/>
                                 <xs:enumeration value="k5"/>
                                 <xs:enumeration value="docker"/>
+                                <xs:enumeration value="oracle"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>

@@ -96,10 +96,10 @@ Scanning a Microsoft Windows Machine
 
 To carry out a scan, go to the ``Migration`` tab:
 
-	1. Click on ``scan`` in the top right.
-	2. Enter a name for the scan of the target system you want to migrate.
-	3. Select ``Windows`` from the drop-down menu and click next.
-	4. Select if you want to use the graphical user interface or the command line. Follow the instructions on the pop-up to download the scan binary.
+	#. Click on ``scan`` in the top right.
+	#. Enter a name for the scan of the target system you want to migrate.
+	#. Select ``Windows`` from the drop-down menu and click next.
+	#. Select if you want to use the graphical user interface or the command line. Follow the instructions on the pop-up to download the scan binary.
 
 		.. image:: /images/migration-windows-scan-options2.png
 
@@ -109,22 +109,24 @@ To carry out a scan, go to the ``Migration`` tab:
 
 		Use the ``-e`` option if you want to exclude certain files or directories from the scan. Use ``-E`` option if you want to exclude a harddisk.
 
-	5. You can then launch the scan. The following image illustrates a windows scan with all of the possible options checked. They are described in the following steps.
+	#. You can then launch the scan. The following image illustrates a windows scan with all of the possible options checked. They are described in the following steps.
 
 		.. image:: /images/migration-scan-windows2.png
 
-	6. Optionally you can use API keys. In this case, check ``Use API keys authentication`` and enter the public and secret key information.
+	#. Optionally you can use API keys. In this case, check ``Use API keys authentication`` and enter the public and secret key information.
 
-	7. If you want to set up a proxy, check ``Proxy authentication required`` and enter the proxy information.
+	#. If you want to set up a proxy, check ``Proxy authentication required`` and enter the proxy information.
 
-	8. Optionally you can select ``Use local storage``. This means that the scan will be not be done in streaming but in 2 phases. First the data will be stored on a temporary storage drive during the scan process. This temporary storage can be a local directory or a virtual space on the network. It must be at least half the size of the machine you want to scan.
+	#.  Fill in the Scanned Instance Name
 
-	.. note:: If you are using local storage you will have to launch a script at the end to upload the archive to UForge AppCenter later.
+		.. note:: Scan name can be mix of alphanumeric characters, spaces and the following special characters `._-` all other characters are not supported at this time.
 
-	9. If you want to exclude certain directories or files from the scan then click ``add`` and enter the directory path or full pathname of the file.
+	#. Optionally you can select ``Use local storage``. This means that the scan will be not be done in streaming but in 2 phases. First the data will be stored on a temporary storage drive during the scan process. This temporary storage can be a local directory or a virtual space on the network. It must be at least half the size of the machine you want to scan.
 
-	10. Click ``scan`` to launch the scan. A report is sent to UForge AppCenter which can be used for migration. To view the progress, go back to the ``Migration`` tab and click ``ok``.
+		.. note:: If you are using local storage you will have to launch a script at the end to upload the archive to UForge AppCenter later.
 
-	11. To view the details of a scan, click on the scan and refer to :ref:`migration-view-scan`.
-	
+	#. If you want to exclude certain directories or files from the scan then click ``add`` and enter the directory path or full pathname of the file.
 
+	#. Click ``scan`` to launch the scan. A report is sent to UForge AppCenter which can be used for migration. To view the progress, go back to the ``Migration`` tab and click ``ok``.
+
+	#. To view the details of a scan, click on the scan and refer to :ref:`migration-view-scan`.

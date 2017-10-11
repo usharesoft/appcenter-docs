@@ -44,7 +44,6 @@ You will note that a package ``uforge-install-config`` is injected in the genera
 
 However, it is preferable to leave this file.
 
-
 .. _appliance-docker-image:
 
 Generating a Docker Image

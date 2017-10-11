@@ -5,9 +5,9 @@
 Configuring UForge
 ------------------
 
-Once the installation is complete on all the nodes you wish to use for the UForge AppCenter, you are now ready to configure all the UForge AppCenter services.  This is done via the UForge Deployment Wizard that helps guide you through the final steps of the installation process.
+Once the installation is complete on all the nodes you need for the UForge AppCenter, you are now ready to configure all the UForge AppCenter services.  This is done via the UForge Deployment Wizard that guides you through the final steps of the installation process.
 
-.. note:: The LVM VolGroup Name name should be unique. The default when installing UForge will have a format similar to ``vg_uss_150910-lv_uss_150910``. If your scanned instance has the same volume group name, or if you set up advanced partitioning with the same name, you will get an error when migrating.
+.. note:: The name of ``LVM VolGroup Name`` must be unique. The default when installing UForge will have a format similar to ``vg_uss_150910-lv_uss_150910``. If your scanned instance has the same volume group name, or if you set up advanced partitioning with the same name, you will get an error when migrating.
 
 Launching Deployment Wizard
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -16,7 +16,7 @@ To launch the UForge Deployment Wizard, use your browser and go to one of the no
 
 	http://<ip address of the node>:9998/deployments
 
-.. note:: The deployment wizard is still using Flex technology, therefore you will require to have flash player installed on your browser.  Steps are being taken to remove this dependency in future versions of the product.
+.. note:: The deployment wizard uses Flex technology, therefore you will need flash player installed on your browser.  Steps are being taken to remove this dependency in future versions of the product.
 
 Fill in the wizard, note that all the fields are mandatory.
 
@@ -40,7 +40,7 @@ Fill in the wizard, note that all the fields are mandatory.
 
 	10. Enter the Web Server IP address, external hostname and the database IP address.
 
-		.. note:: The external hostname is used to construct two external URL endpoints.  The first as the external URL endpoint of the user interface, and the other for REST API calls and command-line usage.  The external hostname should normally be a fully qualified hostname.  For example, if the external hostname is uf.example.com, then the following URL endpoints are created:
+		.. note:: The external hostname is used to construct two external URL endpoints.  The first as the external URL endpoint of the user interface, and the other for REST API calls and command-line usage.  The external hostname should normally be a fully qualified hostname.  For example, if the external hostname is ``uf.example.com``, then the following URL endpoints are created:
 
 			* User interface URL endpoint: https://uf.example.com/uforge
 			* Command-line URL endpoint: https://uf.example.com/apis
@@ -48,7 +48,7 @@ Fill in the wizard, note that all the fields are mandatory.
 			These external URL endpoints can be changed after the initial configuration is complete, refer to :ref:`modify-external-endpoints` for more information.
 
 
-	11. Select if OS and image storage should be local or remote. OS storage will be used for distributions, which image storage will include user data such as images, projects, mysoftware and other user data created with UForgeNow.
+	11. Select if OS and image storage should be local or remote. OS storage will be used for distributions, which image storage will include user data such as images, projects, mysoftware and other user data created with UForge.
 
 		* If you choose to use a remote storage, indicate the NFS server with mount point and you should enter the full path for the OS directory e.g. ``/DISTROS``.
 		* If you select remote storage for the image store, you have to make sure that the path ``USER_DATA`` exists, with the correct permissions i.e. tomcat:tomcat. Refer to :ref:`repository-shared-storage`, step 4, Check mount points, for more details.
@@ -61,7 +61,7 @@ Fill in the wizard, note that all the fields are mandatory.
 
 	14. Once the deployment is complete, click ``Finish``. 
 
-.. warning:: As part of the deployment phase, the wizard logs all the steps of the configuration.  These logs though include the administration passwords and other sensitive data you have used to configure this platform.  It is important that these logs do not remain on the machine once the deployment is over.  To do this:
+.. warning:: As part of the deployment phase, the wizard logs all the steps of the configuration.  These logs include the administration passwords and other sensitive data you have used to configure this platform.  It is important that these logs do not remain on the machine once the deployment is finished.  To do this:
 
 	.. code-block:: bash
 
@@ -92,5 +92,5 @@ Configuring NTP
 
 Some cloud platforms will reject uploading machine images, if the HTTP request date is in the future of the target cloud platform.  To ensure proper function of UForge, please edit 'server' directives in ``/etc/ntp.conf`` if UForge servers cannot connect to NTP servers on the internet.
 
-.. warning:: If you wish to contact NTP servers on the internet, then port 123 (UDP) should be opened on your firewall.
+.. warning:: If you want to contact NTP servers on the internet, then port 123 (UDP) should be opened on your firewall.
 

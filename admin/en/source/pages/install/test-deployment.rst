@@ -5,13 +5,13 @@
 Testing the Deployment
 ----------------------
 
-Once the configuration phase is complete, you may wish to carry out some basic sanity tests to ensure that the UForge AppCenter is running normally:
+Once the configuration phase is complete, you should carry out some basic sanity tests to ensure that the UForge AppCenter is running normally:
 
 **Step 1:** Check if the web service is operational
 
-Use the values in the uforge.conf to contact the web service and expect a ``200 OK`` response.
+Use the values in the ``uforge.conf`` to contact the web service and expect a ``200 OK`` response.
 
-Get the values from the uforge.conf and add them to some environment variables (you could also just manually view the uforge.conf)
+Get the values from the ``uforge.conf`` and add them to some environment variables (you could also manually view the uforge.conf)
 
 .. code-block:: shell
 
@@ -45,14 +45,14 @@ Run a simple http request (using basic authentication) using curl
 
 **Step 2:** Check to see if the database is running
 
-The database service should be running and available on the port ``3306`` and that the database table is present. The Percona Server instance should have ``usharedb`` and ``oar``
+The database service should be running and available on the port ``3306`` and the database table is present. The Percona Server instance should have ``usharedb`` and ``oar``
 
 .. code-block:: shell
 
 	$ service mysql status
 	MySQL running (22661)                                      [  OK  ]
 
-Get the values from the auth.conf and add them to some environment variables (you could also just manually view the auth.conf)
+Get the values from the ``auth.conf`` and add them to some environment variables (you could also manually view the auth.conf)
 
 .. code-block:: shell
 

@@ -32,6 +32,9 @@ To add a new project:
 	3. Fill in the mandatory information including:
 
 			* Name of the project
+
+			.. note:: If you are creating a project with specific VirtIO drivers which will allow users to publish Windows images to Red Hat, then the name must begin with ``UForgeWinDrivers``.
+
 			* Version
 			* Project tag
 			* Category

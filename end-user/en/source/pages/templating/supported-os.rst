@@ -19,12 +19,11 @@ The following is a list of supported OSes that users can use as the guest operat
 +------------------+------------------------------------------+------------------------------------------+
 | Open SUSE        | 11.3, 11.4, 12.1, 12.2 (32bit and 64bit) | 11.3, 11.4, 12.1, 12.2 (32bit and 64bit) |
 +------------------+------------------------------------------+------------------------------------------+
-| Pidora           | 18 to 21                                 | Not Supported                            |
-+------------------+------------------------------------------+------------------------------------------+
-| Raspbian         | 7                                        | Not Supported                            |
-+------------------+------------------------------------------+------------------------------------------+
 | Red Hat          |                                          |                                          |
 | Enterprise Linux*| 5.2+, 6 (32bit and 64bit), 7 (64bit)     | 5.2+, 6 (32bit and 64bit), 7 (64bit)     |
++------------------+------------------------------------------+------------------------------------------+
+| Oracle Linux     | 5.2+ (32bit and 64bit), 6 (32bit and     | 5.2+ (32bit and 64bit), 6 (32bit and     |
+|                  | 64bit), 7 (64bit)                        | 64bit), 7 (64bit)                        |
 +------------------+------------------------------------------+------------------------------------------+
 | Scientific Linux | 5.2+, 6 (32bit and 64bit), 7 (64bit)     | 5.2+, 6 (32bit and 64bit), 7 (64bit)     |
 +------------------+------------------------------------------+------------------------------------------+
@@ -174,6 +173,16 @@ With UForge you can create machine images in the following formats.
 |                                     | OpenStack VMDK                                        |
 |                                     | OpenStack VDI                                         |
 |                                     | OpenStack VHD                                         |
++-------------------------------------+-------------------------------------------------------+
+| Oracle Cloud                        | - For OS versions supported by Oracle Cloud,          |
+|                                     |   refer to `FAQ at Oracle Cloud                       |
+|                                     |   <https://cloud.oracle.com/compute-classic/faq>`_    |
+|                                     | - Debian 8 is not supported by UForge for publication |
+|                                     |   to Oracle Cloud.                                    |
+|                                     | - Supported subscriptions are                         |
+|                                     |   Metered Service Offerings.                          |
+|                                     |   Nonmetered Service Offerings are not supported by   |
+|                                     |   UForge.                                             |
 +-------------------------------------+-------------------------------------------------------+
 | SUSE Cloud                          | none                                                  |
 +-------------------------------------+-------------------------------------------------------+

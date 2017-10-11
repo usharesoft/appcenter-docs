@@ -14,6 +14,37 @@ New Features
 * Users can deploy instances from published machine images to Microsoft Azure ARM.
 * Support generation and registration of machine images for Oracle Cloud with the metered service subscriptions.
 
+Enhancements
+~~~~~~~~~~~~
+* 6855 Improved deploy button tooltip in Dashboard view
+* 6859 Replace spinner by ProcessStepWidget for OpenStack
+
+Bug Fixes
+~~~~~~~~~
+* 1311 Error "WELD-ENV-002002: Weld SE container was already shut down" can be displayed in the portal when generation failed
+* 6196 Image generation failure from the scan when repository being updated with spider simultaneously
+* 6359 Scan comparison show two packages with different version instead of package's target scan
+* 6669 Installing UForge AppCenter in a root context other than /uforge breaks some features
+* 6862 All fields in deployment tables should be displayed entirely
+* 6957 When scaning a RHEL machine, UForge portal UI displays a big RHEL Logo in IE
+* 7004 /etc/sudoers is reinitialized after migration
+* 7016 CentOS images from blackbox migration fail to start on Microsoft Azure: no WALinuxAgent installed
+* 7076 Generation error when extracting overlay if size is bigger than / (root) partition
+* 7109 Tooltip of source used on a deployments is wrong if come from a scan
+* 7114 Protect Deploy Activity from incomplete publish image
+* 7149 When scanning Windows 2012 R2 and blackboxing it to VirtualBox, Windows requires to change admin password at first boot
+* 7150 Error when specifying a directory of more than depth 1 in mount points in install profile
+* 7164 Blackbox migration of debian 7, 8 and ubuntu 14 does not boot on major clouds due to DHCP ipv6 activation
+* 7184 NetworkManager package is present in "server" profile and the generation does not work with Azure
+* 7194 CentOS 5.11 scan fails at phase 4/7 by segmentation fault
+* 7253 Scan fails with SQL Error: 1205, SQLState: HY000 when running two scans concurrently
+* 7408 CentOS whiteBox migration to Microsoft Azure: wrong version of WALinuxAgent selected
+* 7510 CentOS 7.4 and Oracle Linux 7.4 fail to boot
+* 7673 Generation of a migrated debian 8 fails randomly
+* 7686 Whitebox migration : multinic method of second interface is disabled instead of static or manual
+* 7697 File System type not set properly for logical partitions
+* 7711 Outscale cloud: cannot see and publish in new regions
+
 3.7.fp7
 -------
 

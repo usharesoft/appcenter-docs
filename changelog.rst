@@ -22,8 +22,8 @@ Enhancements
 Bug Fixes
 ~~~~~~~~~
 * 1311 Error "WELD-ENV-002002: Weld SE container was already shut down" can be displayed in the portal when generation failed
-* 6196 Image generation failure from the scan when repository being updated with spider simultaneously
-* 6359 Scan comparison show two packages with different version instead of package's target scan
+* 6196 Image generation from a scan fails when the repository is updated by the spider simultaneously
+* 6359 Scan comparison shows two packages with different versions instead of package's target scan
 * 6669 Installing UForge AppCenter in a root context other than /uforge breaks some features
 * 6862 All fields in deployment tables should be displayed entirely
 * 6957 When scaning a RHEL machine, UForge portal UI displays a big RHEL Logo in IE

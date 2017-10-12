@@ -27,7 +27,7 @@ URI Parameters
 
 * ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``siid`` (required): the id of the :ref:`scannedinstance-object`
-* ``sid`` (required): the id of the reference :ref:`scan-object`
+* ``sid`` (required): the id of the :ref:`scan-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

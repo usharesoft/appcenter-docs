@@ -19,6 +19,7 @@ Enhancements
 ~~~~~~~~~~~~
 * Improved deploy button tooltip in Dashboard view
 * Replace spinner by ProcessStepWidget for OpenStack
+* UForge users can inject specific VirtIO drivers for Windows appliances
 
 Bug Fixes
 ~~~~~~~~~

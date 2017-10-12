@@ -43,6 +43,14 @@ System Clock /etc/adjtime
 For Linux systems, the ``/etc/adjtime`` might be different between source and target systems.  The  Hardware Clock is usually not very accurate.  However, much of its inaccuracy is completely predictable - it gains or loses the same amount  of time every day.  This is called systematic drift.  The ``/etc/adjtime`` file keeps historical information on the clock's drift.  Changing hardware environments may change the contents of this file when hardware clock is adjusted (in many cases the kernel will automatically adjust the hardware clock periodically).
 
 
+File System Table (/etc/fstab)
+~~~~~~~~~~~~~~~~~
+UForge regenerates this file during machine image generation.  Hardware and device mappings may differ between source and target environments.  For example, ``/dev/xvda`` could be translated to ``/dev/sda``.
+
+File system options (general, dump and check options) are not supported by UForge today.  Consequently during a migration these values will be reset to their system defaults.
+
+Furthermore, a ``cdrom`` mount point is added by UForge to permit some cloud platform tools to work correctly.
+
 .. _service-state:
 
 Service State

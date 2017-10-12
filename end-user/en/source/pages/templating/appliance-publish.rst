@@ -15,7 +15,7 @@ Publishing a Machine Image
 
 In order to publish a machine image to a cloud environment or container, you must already have credentials to access that environment. 
 
-.. note:: If you want to publish a Windows image to Red Hat Linux you need to inject specific VirtIO drivers. See the specific procedure documented in :ref:`publish-win-to-rh`.
+.. note:: If you want to publish a Windows image to KVM on Red Hat Linux you need to inject specific VirtIO drivers. See the specific procedure documented in :ref:`publish-win-to-rh`.
 
 	1. If not already done, create an account for the target environment.  For more information, see :ref:`account-cloud-accounts`. 
 	2. Go to the appliance and click the ``Machine Images`` page. If you have not generated a machine image, you will need to do so as described in :ref:`appliance-generate-machine-image`.
@@ -54,14 +54,26 @@ In order to publish a machine image to a cloud environment or container, you mus
 
 .. _publish-win-to-rh:
 
-Publishing a Windows Image to Red Hat
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Publishing a Windows Image to KVM on Red Hat Linux
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. note:: If you want to publish a Windows image to Red Hat Linux you need to inject specific VirtIO drivers. 
+.. note:: If you want to publish a Windows image to KVM on Red Hat Linux you need to inject specific VirtIO drivers. 
 
 	#. In order to add the specific drivers, the Red Hat VirtIO drivers can be either added to AppCenter as a Project if it has been added to your AppCenter by the administrator, or using MySoftware. 
 
 		.. note:: If you create a specific VirtIO driver (refer to :ref:`appliance-mysoftware` for more information), the software bundle MUST have a prefixed name ``UForgeWinDrivers``.
+
+	The following files should be included in your software bundle:
+
+		* viostor.sys
+		* viostor.inf
+		* viostor.cat
+		* vioscsi.sys
+		* vioscsi.inf
+		* vioscsi.cat
+		* netkvm.sys
+		* netkvm.inf
+		* netkvm.cat
 
 	#. When creating your appliance template, add the Project or MySoftware bundle that contains the VirtIO drivers.
 

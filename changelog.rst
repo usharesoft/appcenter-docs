@@ -12,7 +12,7 @@ New Features
 ~~~~~~~~~~~~
 * Using uforge-sync binary, users can now synchronize the target environment with scans (without overlay) of CentOS 6, 7, Red Hat Enterprise Linux 6, 7 and Debian 7, 8 systems.
 * Microsoft Azure connector has been updated. Previously with UForge the machine image was publish as a "vhd" blob file in the Azure cloud Account. Now an image will be accessible in the cloud console from this blob file. In order to support this additional information must be entered in ``Credentials`` for Microsoft Azure ARM connector.
-* Users can deploy instances from published machine images to Microsoft Azure ARM.
+* Users can deploy Linux instances from published machine images to Microsoft Azure ARM.
 * Support generation and registration of machine images for Oracle Cloud with the metered service subscriptions.
 
 Enhancements
@@ -20,6 +20,7 @@ Enhancements
 * Improved deploy button tooltip in Dashboard view
 * Replace spinner by ProcessStepWidget for OpenStack
 * UForge users can inject specific VirtIO drivers for Windows appliances
+* Amazon AWS connector can now publish Windows images with multiple disks
 
 Bug Fixes
 ~~~~~~~~~
@@ -27,6 +28,7 @@ Bug Fixes
 * 6196 Image generation from a scan fails when the repository is updated by the spider simultaneously
 * 6359 Scan comparison shows two packages with different versions instead of package's target scan
 * 6669 Installing UForge AppCenter in a root context other than /uforge breaks some features
+* 6848 Disk order and partition number are not kept after migration
 * 6862 All fields in deployment tables should be displayed entirely
 * 6957 When scaning a RHEL machine, UForge portal UI displays a big RHEL Logo in IE
 * 7004 /etc/sudoers is reinitialized after migration
@@ -46,6 +48,7 @@ Bug Fixes
 * 7686 Whitebox migration : multinic method of second interface is disabled instead of static or manual
 * 7697 File System type not set properly for logical partitions
 * 7711 Outscale cloud: cannot see and publish in new regions
+
 
 3.7.fp7
 -------

@@ -12,8 +12,10 @@ New Features
 ~~~~~~~~~~~~
 * Using uforge-sync binary, users can now synchronize the target environment with scans (without overlay) of CentOS 6, 7, Red Hat Enterprise Linux 6, 7 and Debian 7, 8 systems.
 * Microsoft Azure connector has been updated. Previously with UForge the machine image was publish as a "vhd" blob file in the Azure cloud Account. Now an image will be accessible in the cloud console from this blob file. In order to support this additional information must be entered in ``Credentials`` for Microsoft Azure ARM connector.
-* Users can deploy Linux instances from published machine images to Microsoft Azure ARM.
 * Support generation and registration of machine images for Oracle Cloud with the metered service subscriptions.
+* Users can deploy Linux instances from published machine images to Microsoft Azure ARM.
+
+	.. note:: If you have an existing Microsoft Azure ARM account already setup in UForge, then you must update the credential information.
 
 Enhancements
 ~~~~~~~~~~~~
@@ -62,8 +64,6 @@ New Features
 * Introduce a REST API for users to list files to synchronize to the target environment after a CentOS scan without overlay.
 * Users can deploy instances from published machine images to OpenStack.
 * Images can be created in PXE format for CentOS.
-
-	.. note:: If you have an existing Microsoft Azure ARM account already setup in UForge, then you must update the credential information.
 
 Enhancements
 ~~~~~~~~~~~~

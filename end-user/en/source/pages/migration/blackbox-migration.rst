@@ -10,7 +10,7 @@ The goal of black box migration is to reproduce a near identical copy of the cur
 	* all the files and packages on the system (including configuration information). If you have selected a scan without overlay, then extra files and specific configuration information will be detected but will not be included in the report.
 	* network settings including all NICs. Note that if the first card is static, it will be changed to DHCP.
 	* root and user password (encrypted)
-	* timezone
+	* timezone. As part of the generation, UForge will use the same timezone as the original system. UForge creates a symbolic link for ``/etc/localtime`` that point to the timezone set in ``/usr/share/zoneinfo``.
 	* keyboard settings
 	* kernel parameters
 	* users and groups

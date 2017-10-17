@@ -5,7 +5,7 @@
 Hosting Proprietary Packages
 ----------------------------
 
-Proprietary packages, such as RedHat Enterprise Linux are not delivered as part of the UForge repository. You must have the original ISO images of the operating system in questions and follow the steps below.
+Proprietary packages, such as RedHat Enterprise Linux are not delivered as part of the UForge repository. You must have the original ISO images of the operating system in question and follow the steps below.
 
 .. warning:: If you populate UForge AppCenter with Red Hat Enterprise Linux using an ISO, only the package versions in the ISO image will be known to UForge AppCenter. If you later scan a Red Hat Enterprise Linux machine with package versions more recent than those of the ISO, the scan will succeed, but will be extremely inefficient since all packages will have to be rebuilt. Therefore, if you have access to a Red Hat Satellite, then adding the Red Hat Enterprise Linux repository exposed by the Red Hat Satellite is a better option.
 

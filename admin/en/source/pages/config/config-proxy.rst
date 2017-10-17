@@ -7,7 +7,7 @@ Configuring UForge Behind Enterprise Proxy
 
 Once your UForge platform deployment is complete you can configure it behind your enterprise proxy if you have not already done so with the deployment wizard.  You can configure UForge to use both an HTTP(S) and/or a SOCKS5 proxy.
 
-.. note:: If you have a proxy and you wish to register machine images to AWS, you will require to configure UForge to use a SOCKS5 server.
+.. note:: If you have a proxy and you want to register machine images to AWS, you must configure UForge to use a SOCKS5 server.
 
 To configure UForge to use a proxy:
 

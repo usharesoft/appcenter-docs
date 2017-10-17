@@ -5,23 +5,23 @@
 Adding a Compute Node
 ---------------------
 
-You can add a new OAR compute node which was instantiated from UForge but which was not configured as part of the initial deployment as follows. 
+You can add a new OAR compute node which was instantiated from UForge but not configured as part of the initial deployment. 
 
 	1. Make a snapshot of the UForge Server (to be able to come back to the state without the additional OAR compute node). 
 
-	2. Initial setup: ``oar-server`` and ``oarnode1`` to ``oarnodeN`` already configured.  Name oarnodeX and IP-oarnodeX respectively the name and IP address of the new node to be added to the UForge "cluster". 
+	2. Initial setup: ``oar-server`` and ``oarnode1`` to ``oarnodeN`` already configured.  Name ``oarnodeX`` and ``IP-oarnodeX`` respectively the name and IP address of the new node to be added to the UForge cluster. 
 
 	.. note:: The following commands are run on the first existing oarnode, for example oarnode1 until stated otherwise.
 
-	3. Copy over ``/etc/hosts`` from oarnode1 to oarnodeX with mods
+	3. Copy over ``/etc/hosts`` from oarnode1 to oarnodeX with modification.
 
-	4. Get first local network interface (eth0)
+	4. Get first local network interface (eth0).
 
 	.. code-block:: shell
 
 		ITF=`cat /proc/net/dev | grep : | cut -d ':' -f 1|grep -v lo | tr -d ' '| head -1`
 
-	5. Get IP address associated with this interface
+	5. Get IP address associated with this interface.
 
 	.. code-block:: shell
 
@@ -35,7 +35,7 @@ You can add a new OAR compute node which was instantiated from UForge but which 
 		sed -e 's/\<oarnode1\>/oarnodeX/g' /etc/hosts | awk -v ip=$IP -v name=oarnode1
 		'{print}END{printf "%s %s\n",ip,name}' | ssh IP-oarnodeX dd of=/etc/hosts
 
-	7. Copy over uforge.conf file and others
+	7. Copy over ``uforge.conf`` file and others.
 
 	.. code-block:: shell
 
@@ -44,7 +44,7 @@ You can add a new OAR compute node which was instantiated from UForge but which 
 		rsync /etc/ssh/sshd_config IP-oarnodeX:/etc/ssh
 		rsync -a ~oar/.ssh IP-oarnodeX:~oar
 
-	8. Run the following commands on all oarnode1 .. oarnodeN and oar-server but **not** oarnodeX. This adds new node in all machines /etc/hosts
+	8. Run the following commands on all oarnode1 .. oarnodeN and oar-server but **not** oarnodeX. This adds new node in all machines ``/etc/hosts``.
 
 	.. code-block:: shell
 
@@ -57,7 +57,7 @@ You can add a new OAR compute node which was instantiated from UForge but which 
 	    	rm -f /tmp/hosts.NEW
 		fi 
         
-        9. Edit /etc/UShareSoft/uforge/uforge.conf on all oarnode1 .. oarnodeN, oar-server and oarnodeX. Add the oarnodeX IP at the end of UFORGE_PROXY_IGNORED variable.
+        9. Edit ``/etc/UShareSoft/uforge/uforge.conf`` on all oarnode1 .. oarnodeN, oar-server and oarnodeX. Add the oarnodeX IP at the end of UFORGE_PROXY_IGNORED variable.
 
         .. code-block:: shell
 

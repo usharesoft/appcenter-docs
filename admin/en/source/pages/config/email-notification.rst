@@ -114,6 +114,6 @@ Therefore to change an email template:
 		$ mkdir -p /var/opt/UShareSoft/uforge/tmpl
 		$ cp /opt/UShareSoft/uforge/tmpl/AppStoreNotificationNewComment.tmpl /var/opt/UShareSoft/uforge/tmpl
 
-	5. Instantiate the following changes by running the following command::
+	5. Instantiate the changes by running the following command::
 
 		$ /opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh

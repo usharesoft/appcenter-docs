@@ -22,7 +22,7 @@ For example:
 
 3. Open file ``/etc/httpd/conf.d/uforge-ui.conf`` and modify all occurences of the old IP to the new IP. For example: ``ProxyPassMatch ^/uforge/resources(.*)$ http://10.1.2.207:8080/ufws$1`` to ``ProxyPassMatch ^/uforge/resources(.*)$ http://192.168.1.10:8080/ufws$1``
 
-4. Open file ``/etc/squid/squid.conf`` and modify all occurences of the old IP to the new IP. For example: and modify all occurences of the old IP to the new IP. For example: ``acl uforge_nodes src 10.1.2.207/32`` to ``acl uforge_nodes src 192.168.1.10/32``
+4. Open file ``/etc/squid/squid.conf`` and modify all occurences of the old IP to the new IP. For example: ``acl uforge_nodes src 10.1.2.207/32`` to ``acl uforge_nodes src 192.168.1.10/32``
 
 5. Restart the services as follows::
 

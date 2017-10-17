@@ -51,9 +51,9 @@ The following browser versions are officially supported when using the user inte
 Language Selection for the Graphical User Interface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The UForge UI is accessible in different languages. You can select the language using the round flag options at the top right-hand of the UI, next to the sign-in button. 
+The UForge UI is accessible in different languages. You can select the language using the the drop-down menu at the top right-hand of the UI, next to the sign-in button. 
 
-.. image:: /images/uforge-ui-language.png
+.. image:: /images/uforge-ui-language2.png
 
 .. note:: The language choice is saved at the level of the browser and not of the user account. 
 

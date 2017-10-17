@@ -5,7 +5,7 @@
 Differences between Source and Target Instances
 -----------------------------------------------
 
-The goal of blackbox migration is to create an "identical" copy of the source system and run it on a new target environment.  The word identical though is slightly misleading, as there are small differences that must be carried out to ensure the migrated sysem correctly boots and runs on the target environment.  This section highlights these differences.
+The goal of blackbox migration is to create an "identical" copy of the source system and run it on a new target environment.  The word identical though is slightly misleading, as there are small differences that must be carried out to ensure the migrated system correctly boots and runs on the target environment.  This section highlights these differences.
 
 
 IP Address and MAC Addresses
@@ -79,3 +79,9 @@ Microsoft Azure Image
 
 	* ``network`` enabled
 
+Red Hat vs CentOS packages
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In addition to the above, there are other minor differences that may be noticed between source and target instances. One of them is that if CentOS packages have been installed on a Red Hat server, with the same functionnality and the same version number as equivalent existing Red Hat packages, then after migration, these CentOS packages will be replaced by their Red Hat counterparts, because the vendor information present in RPM packages is not accounted for during migration: only the package name and version number are.
+
+This is not an actual limitation of UForge, as installing non-RedHat packages on a RedHat server, or replacing Red Hat packages by CentOS packages, is highly discouraged, because it voids the warranty and allows Red Hat not to accept support requests for this machine.

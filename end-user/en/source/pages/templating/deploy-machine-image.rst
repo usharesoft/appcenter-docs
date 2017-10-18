@@ -56,15 +56,15 @@ In order to view a list of the deployed machine images, go to the ``Deployments`
 
 .. image:: /images/deployment-list.png
 
-From this window you can see the cloud platform the published machine image was deployed to, the name of the deployed instance, the location of the machine image published, the OS the machine image is based on and the state of the deployed instance on the cloud platform.
+From this window you can see the cloud platform the published machine image was deployed to, the name of the deployed instance, the location of the machine image published, the source machine image (Appliance or Scan) and the state of the deployed instance on the cloud platform.
 
 	.. note:: If you want to stop your deployed instance, you can do so by clicking on the delete (garbage) icon. This will stop it and remove the instance from your cloud.
 
-If you click on the application name you will see the details of the instance that has been deployed, including the name of the appliance it is based on and the IP address of the machine.
+If you click on the application name you will see the details of the instance that has been deployed, including the name of the instance and the IP address of the machine.
 
 .. image:: /images/deployment-info.png
 
-If you click on the ``i`` next to the hostname, a popup will appear indicating the IP adress, the user name and the SSH key (if any). An example code will also be given to connect to your instance.
+If you click on the ``i`` next to the hostname, a popup will appear indicating the IP address, the user name and the SSH key (if any). An example code will also be given to connect to your instance.
 
 .. image:: /images/deployment-info-popup.png
 

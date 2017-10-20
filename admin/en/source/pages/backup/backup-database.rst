@@ -29,7 +29,7 @@ MariaDB holds both UForge and IDM data. All this information is located under:
 
 By copying this information, you are taking a snapshot of the entire database. 
 
-LDAP (OpenDJ) has its own tool for doing backup, called ``backup``.  To ensure data consistency across the entire platform, we recommend you backup all the databases at the same time.  Here is an example of how to back up the MariaDB (holding IDM and UForge information) and LDAP databases.  Note, we are also stopping the web service instances, this ensures we do not generate connection error messages in the logs:
+LDAP (OpenDJ) has its own tool for doing backup, called ``backup``.  To ensure data consistency across the entire platform, we recommend you backup all the databases at the same time.  Here is an example of how to back up the MariaDB (containing IDM and UForge information) and LDAP databases.  Note, we are also stopping the web service instances; this ensures we do not generate connection error messages in the logs:
 
 .. code-block:: shell
 
@@ -58,7 +58,7 @@ If using remote backup, add:
 	$ rsync /tmp/$f root@<BACKUP-DESTINATION>
 	$ rsync /tmp/$l root@<BACKUP-DESTINATION>
 
-This only works if the database instance is stopped to ensure a consistent dump of the database. Otherwise you get a corrupt, inconsistent backup.
+.. warning:: This only works if the database instance is stopped to ensure a consistent dump of the database. Otherwise you get a corrupt, inconsistent backup.
 
 The issue with this method is if you have only one database instance, then you are effectively stopping your service to do the backup. To overcome this you need to use replication, for example master-slave.
 
@@ -70,7 +70,7 @@ The issue with this method is if you have only one database instance, then you a
 Basic Restore
 -------------
 
-Restoring the database is a simple copy using rsync back to the database directory. Note the use of slashes (/ ) is important.  You should stop the web service to ensure we do not generate connection error messages in the logs.
+Restoring the database is a simple copy using rsync back to the database directory. Note the use of slashes (/ ) is important.  You should stop the web service to avoid creating connection error messages in the logs.
 
 .. code-block:: shell
 
@@ -95,7 +95,7 @@ To restore the SAN mountpoint:
 	$ rsync /<SAN-MOUNTPOINT-BACKUP-DESTINATION>/<ldap tarball> /tmp
 	$ rsync /<SAN-MOUNTPOINT-BACKUP-DESTINATION>/<mysql tarball> /tmp
 
-To restore Remote backup:
+To restore remote backup:
 
 .. code-block:: shell
 

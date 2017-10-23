@@ -37,14 +37,14 @@ To add access to a format to an organization, you must:
 
 	1. Create a target format category using  ``uforge org category create``
 	2. Create target format using  ``uforge org targetformat create``
-	3. If the target format type is Cloud, create a target platform using ``uforge org targetplatform create``. This target platform is necessary to publish image generated with the target format. The target platform will allow to create a cloud account associated
+	3. If the target format type is Cloud, create a target platform using ``uforge org targetplatform create``. This target platform is necessary to publish image generated with the target format. The target platform must have a cloud account associated.
 	4. If the target format type is Cloud, add the target format to the target platform using  ``uforge org targetplatform addTargetFormat``.
 	5. (Optional) Add the format to a subscription profile using  ``uforge subscription targetFormat add``. To add a target platform use either: 
 
 		* ``uforge subscription targetformat add``
 		* ``uforge subscription targetplatform add``
 
-	.. note:: In order to force the changes to apply to all users (even those already created), use the option ``--allusers``. For example: 
+	.. note:: In order to apply the changes to all users (even those already created), use the option ``--allusers``. For example: 
 
 	.. code-block:: shell
 
@@ -99,7 +99,7 @@ To create a target format:
 	6. Optionally you can click on the plus (+) to add a logo.
 	7. If you do not want the target format to be visible immediately, click on the check box next to ``Enable`` to deselect.
 	8. On the ``Tooltips`` page enter the Credentials, image and publish information.
-	9. On the ``Target Platforms`` page you can attach your target format to a target platform. To add the target format to a target platform, select the target platform from the botton table and click the up arrow. Your target format will be attached to all the target platforms listed in the top table will be part of the part format you are creating.
+	9. On the ``Target Platforms`` page you can attach your target format to a target platform. To add the target format to a target platform, select the target platform from the botton table and click the up arrow. Your target format will be attached to all the target platforms listed in the top table.
 	10. Click next to complete.
 
 		.. image:: /images/target-format-create.png

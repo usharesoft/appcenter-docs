@@ -5,7 +5,7 @@
 Deploying a Machine Image
 --------------------------
 
-.. note:: Currently, only Linux machine images published on Amazon, OpenStack and Microsoft Azure Resource Manager can be deployed from UForge. You cannot deploy a Windows based appliance.
+.. note:: Currently, only Linux machine images published on Amazon, OpenStack, Cloudstack and Microsoft Azure Resource Manager can be deployed from UForge. You cannot deploy a Windows based appliance.
 
 You can only deploy a machine image if you have AMP installed. For more information on installing AMP, refer to the official `Cloudsoft AMP documentation <https://docs.cloudsoft.io/>`_
 
@@ -44,6 +44,10 @@ For Amazon, only full accounts can be used, trial accounts are not supported for
 		.. image:: /images/machine-image-deploy-status.png
 
 	.. note:: If you want to stop your deployment, you can do so by clicking on the delete (garbage) icon. This will stop it and remove the instance from your cloud.
+
+	.. note:: Deployment on Cloudstack platform does not handle the possibility to give a floating IP to a virtual machine.
+
+	.. warning:: All deployed virtual machines using this procedure will have ssh port (22) open in their security group.
 
 	.. warning:: Terminating an OpenStack deployment may fail due to `a known issue in AMP <https://issues.apache.org/jira/browse/JCLOUDS-1318>`_. Click again on the delete (garbage) icon to work around the issue.
 

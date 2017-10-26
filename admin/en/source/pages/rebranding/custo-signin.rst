@@ -55,7 +55,7 @@ This allows you to create a dedicated external sign up page outside this user in
 Removing the Sign Up Page
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you wish to hide the text ``Need an account? Sign up`` then change the following attribute to ``false``:
+If you want to hide the text ``Need an account? Sign up`` then change the following attribute to ``false``:
 
 .. code-block:: xml
 
@@ -66,7 +66,7 @@ If you wish to hide the text ``Need an account? Sign up`` then change the follow
 Removing User and Password Caching
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-By default, the Sign In page allows the user to click a check box to remember previous sign in credentials.  This is the check box labelled ``Remember Me``.  if you wish to remove this checkbox from the Sign In page, then update the following attribute to ``false``:
+By default, the Sign In page allows the user to click a check box to remember previous sign in credentials.  This is the check box labelled ``Remember Me``.  If you want to remove this checkbox from the Sign In page, then set the following attribute to ``false``:
 
 .. code-block:: xml
 

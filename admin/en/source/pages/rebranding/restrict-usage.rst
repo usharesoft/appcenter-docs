@@ -5,9 +5,9 @@
 Restricting Formats
 -------------------
 
-UForge Portal allows users to generate the templates provided to all the formats the user has access to. In certain circumstances, you may wish to restrict the formats shown to the user.  To restrict the available machine image formats in the UI you rquire to update the ``config.xml`` file.
+UForge Portal allows users to generate the templates provided to all the formats the user has access to. In certain circumstances, you may want to restrict the formats shown to the user.  To restrict the available machine image formats in the UI you must update the ``config.xml`` file.
 
-To disable a format in the UI configuration, find the ``<t:target>`` section of the machine image format you wish to disable, then either add or change the value of the ``<t:enabled>`` tag.  For example if you wish to deactivate OpenStack, then the following changes should be made to the configuration file:
+To disable a format in the UI configuration, find the ``<t:target>`` section of the machine image format you want to disable, then either add or change the value of the ``<t:enabled>`` tag.  For example to deactivate OpenStack, the following changes should be made to the configuration file:
 
 .. code-block:: xml 
 
@@ -19,7 +19,7 @@ To disable a format in the UI configuration, find the ``<t:target>`` section of 
     </t:target>
                     	
 
-If you wish to hide a format completely, then update the ``<t:visible>`` tag to ``false``.
+To hide a format completely, then update the ``<t:visible>`` tag to ``false``.
 
 .. note:: Restricting formats for specific users can also been done through RBAC in the platform.
 
@@ -28,7 +28,7 @@ If you wish to hide a format completely, then update the ``<t:visible>`` tag to 
 Restricting the Cloud Accounts
 ------------------------------
 
-When using the UForge Portal, all the cloud account types are displayed. You can restrict the cloud accounts that are visible by updating the config.xml file of the UI.  To hide a specific cloud format, find the ``<t:account`` section of the account type you wish to hide, then update the ``<t:visible>`` tag to ``false``.  For example, if you wish to remove the CloudStack account type, then the following changes should be made to the configuration file:
+When using the UForge Portal, all the cloud account types are displayed. You can restrict the cloud accounts that are visible by updating the config.xml file of the UI.  To hide a specific cloud format, find the ``<t:account`` section of the account type you want to hide, then set the ``<t:visible>`` tag to ``false``.  For example, to remove the CloudStack account type, the following changes should be made to the configuration file:
 
 .. code-block:: xml 
 

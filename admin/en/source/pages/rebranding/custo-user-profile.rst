@@ -5,7 +5,7 @@
 Restricting Change Password
 ---------------------------
 
-If you wish to remove the ability for a user to change their password in the ``User Profile`` section of the user interface, then update the following attribute in the ``<c:client>`` section to ``false``:
+If you want to remove the ability for a user to change their password in the ``User Profile`` section of the user interface, then set the following attribute in the ``<c:client>`` section to ``false``:
 
 .. code-block:: xml
 
@@ -14,13 +14,13 @@ If you wish to remove the ability for a user to change their password in the ``U
 Restricting User Profile Usage
 ------------------------------
 
-If you wish to manage user information (email, etc) outside the user interface, then you can restrict the user profile to ``read only``. 
+If you want to manage user information (email, etc) outside the user interface, then you can restrict the user profile to ``read only``. 
 
 .. code-block:: xml
 
 	<c:editUserProfile>false</c:editUserProfile> 
 
-To hide completely the ``User Profile`` section of the user interface, update the following attribute to ``false``:
+To hide completely the ``User Profile`` section of the user interface, set the following attribute to ``false``:
 
 .. code-block:: xml
 

@@ -77,7 +77,7 @@ For example to set the quota of images a user can generate to 10 per month::
 Setting a Quota for Migration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can set a limit to number of scans a given user can run. This quota includes both scan generation and scan appliance generation. This limit can be reset monthly.
+You can set a limit to the number of scans a given user can run. This quota includes both scan generation and scan appliance generation. This limit can be reset monthly.
 
 	* The option ``--type`` must be set to ``scan``.
 	* The option ``--limit`` determines the quota. 
@@ -91,7 +91,7 @@ For example to set the number of scans the user can run to 5 per month::
 Setting the Overlay Limit
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can set the maximum size of the scan overlay. The overlay includes all the files in MySoftware and all other non-native files. This limit is set in the uforge.conf file. You must add the parameter::
+You can set the maximum size of the scan overlay. The overlay includes all the files in MySoftware and all other non-native files. This limit is set in the ``uforge.conf`` file. You must add the parameter::
 
 	UFORGE_SCAN_OVERLAY_MAX_SIZE = maximum size in octets
 
@@ -104,7 +104,7 @@ For example, to set the limit de 10G (10 x 1024 x 1024 x 1024)::
 Setting a Quota for Disk Usage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can set a limit to the disk space a user can use. Disk space usage includes: mysoftware uploads, bootscripts, images generations, scans etc.
+You can set a limit to the disk space a user can use. Disk space usage includes: MySoftware uploads, bootscripts, images generations, scans etc.
 
 	* The option ``--type`` must be set to ``diskusage``
 	* The option ``--limit`` determines the quota in bytes. For disk usage, the quota is expressed in bytes. 

@@ -43,7 +43,7 @@ For Amazon, only full accounts can be used, trial accounts are not supported for
 
 		.. image:: /images/machine-image-deploy-status.png
 
-	.. warning:: All deployed virtual machines using this procedure will have ssh port (22) open in their security group.
+	.. note:: All deployed virtual machines using this procedure will have ssh port (22) open in their security group.
 
 	.. note:: If you want to stop your deployment, you can do so by clicking on the delete (garbage) icon. This will stop it and remove the instance from your cloud.
 

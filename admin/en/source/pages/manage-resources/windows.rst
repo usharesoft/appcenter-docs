@@ -74,6 +74,37 @@ To install Microsoft Windows, follow the instructions below. This example is for
 
 .. note:: UForge does not manage Windows updates as it does for Linux. Each time you want to have an update for Windows, you will need to create and install a new set of Golden Images.
 
+
+.. _windows-licenses:
+
+Windows Licences
+----------------
+
+When UForge AppCenter is installed, default license files for Windows Server are installed under ``/tmp/DISTROS/USS/licenses/win_license.html``. They are default licenses which are not the official legally binding licenses and should be replaced with the appropriate licenses:
+
+	* for cloud service provider, their SPLA End User License Terms should be used;
+	* for in-house enterprise installations of UForge AppCenter, the enterprise license agreement document with Microsoft should be used.
+
+In order replace the licence agreement with the correct one, you will need to do the following for each of the Windows versions (Server2008R2, Server2012, Server2012R2 and Server2016):
+
+	#. Create an html file containing the appropriate license agreement.
+	#. Overwrite the file on the UForge server under the directory ``/tmp/DISTROS/USS/licenses``.
+
+The following table lists the Windows Server version and the corresponding license file name:
+
++------------------+---------------------------------------------------------------+
+| Version          | Location                                                      |
++==================+===============================================================+
+| Server2008R2     | file:/tmp/DISTROS/USS/licenses/win_license.html               |
++------------------+---------------------------------------------------------------+
+| Server2012       | file:/tmp/DISTROS/USS/licenses/win_license2012.html           |
++------------------+---------------------------------------------------------------+
+| Server2012R2     | file:/tmp/DISTROS/USS/licenses/win_license2012R2.html         |
++------------------+---------------------------------------------------------------+
+| Server2016       | file:/tmp/DISTROS/USS/licenses/win_license2016.html           |
++------------------+---------------------------------------------------------------+
+
+
 Listing Existing Golden Images
 ------------------------------
 

@@ -5,20 +5,20 @@
 Configure Apache and Tomcat Web Services to use SSL Certificate
 ------------------------------------------------------------------
 
-It is highly recommended that all communication with UForge is done via HTTPS.  After the initial installation of UForge, neither the HTTP server (Apache) nor the application server (Tomcat) have yet been configured to use a SSL certificate and allow HTTPS.
+It is highly recommended that all communication with UForge is done via HTTPS.  After the initial installation of UForge, neither the HTTP server (Apache) nor the application server (Tomcat) have yet been configured to use an SSL certificate and allow HTTPS.
 
 To configure both servers to use an SSL certificate:
 
-	1. Log in as root to the machine running the UForge Apache and Tomcat Web Services.
+	#. Log in as ``root`` to the machine running the UForge Apache and Tomcat Web Services.
 
-	2. Copy the SSL certificate files locally to the machine.  Note that you should have three or four files, for example: 
+	#. Copy the SSL certificate files locally to the machine.  Note that you should have three or four files, for example: 
 
 		* SSLCertificateFile: server.crt.pem
 		* SSLCertificateKeyFile: server.key.pem
 		* SSLCACertificateFile: CA.crt.pem
 		* SSLCertificateChainFile: intermediate.CA.crt.pem (this one is optional)
 	
-		You need to build a self contained certificate as follows:
+	#.	You need to build a self contained certificate as follows:
 
 		.. code-block:: shell
 
@@ -56,14 +56,14 @@ To configure both servers to use an SSL certificate:
 
 		If this is not the case, refer to the OpenSSL documentation on how to convert certificate and key files from one format to another.
 
-	3. Put the following entries in ``/etc/httpd/conf.d/ssl.conf``:
+	#. Put the following entries in ``/etc/httpd/conf.d/ssl.conf``:
 
 		* SSLCertificateFile ``/etc/pki/tls/certs/server.crt.pem``
 		* SSLCertificateKeyFile ``/etc/pki/tls/private/server.key.pem`` 
 		* SSLCertificateChainFile ``/etc/pki/tls/certs/intermediate.CA.crt.pem`` 
 		* SSLCACertificateFile ``/etc/pki/tls/certs/CA.crt.pem``
 
-	4. Verify the permissions and ownerships of these files
+	#. Verify the permissions and ownerships of these files:
 
 		.. code-block:: shell
 
@@ -73,7 +73,7 @@ To configure both servers to use an SSL certificate:
 			drwxr-xr-x. 2 root root 4096 Sep 25 12:05 /etc/pki/tls/private/ 
 			-rw-------. 1 root root  887 Sep 25 12:05 /etc/pki/tls/private/server.key.pem 
 
-	5. (Re)start the httpd server:
+	#. (Re)start the httpd server:
 
 		.. code-block:: shell
 
@@ -81,7 +81,7 @@ To configure both servers to use an SSL certificate:
 
 	If the server does not start, this may be because of a bad certificate, key or CA certificate file. In this case, check the appropriate logs in ``/var/log/httpd``.
 
-	6. Verify the validity of the certificates:
+	#. Verify the validity of the certificates:
 
 		.. code-block:: shell
 
@@ -109,13 +109,13 @@ To configure both servers to use an SSL certificate:
 		    	Verify return code: 21 (unable to verify the first certificate) 
 			---
 
-	7. Verify the certificate:
+	#. Verify the certificate:
 
 		.. code-block:: shell
 
 			$ openssl s_client -showcerts -connect <ip-of-the-uforge-web-service-machine>:<port>
 
-	Or you can also use same openssl client command used for the Apache server in step 6.
+	Or you can use same openssl client command used for the Apache server in the previous step.
 
 	To verify that the new certificate is correct and if the Tomcat service is accessible from the outside, go to `http://www.digicert.com/help/ <http://www.digicert.com/help/>`_ and type the public name or IP address of your web service. 
 

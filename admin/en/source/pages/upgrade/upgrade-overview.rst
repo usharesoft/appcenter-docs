@@ -5,11 +5,11 @@
 Updating an Existing UForge Deployment
 --------------------------------------
 
-All the UForge components are delivered as native RPM packages. We maintain a custom repository of the UForge platform. All updates are added to this repository. The update mechanism of a remote UForge platform uses the standard “yum” command-line package management utility.
+All the UForge components are delivered as native RPM packages. We maintain a custom repository of the UForge platform. All updates are added to this repository. The update mechanism of a remote UForge platform uses the standard ``yum`` command-line package management utility.
 
 .. image:: /images/uforge-update-repo.jpg
 
-In order to interact with the official package repository, you must already have an active UForge license (stored in Fujitsu's database) and corresponding authentication credentials, set during the initial install of the platform. The authentication credentials are stored in the uforge.conf file and used in the uforge-ee.repo file. To view these files:
+In order to interact with the official package repository, you must already have an active UForge license (stored in Fujitsu's database) and corresponding authentication credentials, set during the initial install of the platform. The authentication credentials are stored in the ``uforge.conf`` file and used in the ``uforge-ee.repo`` file. To view these files:
 
 .. code-block:: shell
 
@@ -21,13 +21,13 @@ In order to interact with the official package repository, you must already have
 
 The request to update uses these credentials via HTTPS to Fujitsu who then determines whether you have the access rights to update the platform.
 
-You must also have set up the yum repo file to authorize UForge updates using configure_yum_repos.sh as follows:
+You must also have set up the yum repo file to authorize UForge updates using ``configure_yum_repos.sh`` as follows:
 
 .. code-block:: shell
 
 	$ /opt/UShareSoft/uforge/conf/configure_yum_repos.sh -u <uss account user> -p <uss account password> -t <uforge install type>
 
-The (optional) parameter <uforge install type> can take the values uforge-ee or uforge-dev. By default uforge-ee is used.
+The (optional) parameter <uforge install type> is either ``uforge-ee`` or ``uforge-dev``. By default ``uforge-ee`` is used.
 
 .. note:: Before upgrading UForge, make sure that no cron jobs are running. For more information on cron jobs, refer to :ref:`watchdog-services`.
 
@@ -115,9 +115,8 @@ Run the following CLI command in order to know if Squid is running:
 	.. code-block:: shell
 
 		$ service squid status
-		
 	
-	If squid is stopped, run the following command-line
+If squid is stopped, run the following command-line
 	
 	.. code-block:: shell
 
@@ -219,7 +218,7 @@ As the UForge Web Services are RESTful, clients communicate via the standard HTT
 
 All UForge requests (with some exceptions) require authentication information as part of the request. There are several ways to communicate with UForge:
 
-	* Using API keys – A public and secret key is used to construct the URL.  This URL will contain public key and a signature that authenticates the request.
+	* Using API keys – A public and secret key is used to construct the URL.  This URL will contain a public key and a signature that authenticates the request.
 	* Basic Authentication – Where the login name and password are provided in the requesting HTTP(S) headers.
 	* Custom – UForge provides AuthN and AuthZ modules that can be customized to provide other authentication mechanisms (refer to Customizing UForge Authentication for SSO).
 

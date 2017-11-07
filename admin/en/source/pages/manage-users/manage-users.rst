@@ -5,7 +5,7 @@
 Managing User Accounts
 ----------------------
 
-When managing user accounts, the administrator must have administration privileges for the organization where the user account is part of or where the member will be created. 
+When managing user accounts, the administrator must have administration privileges for the organization the user is part of or where the member will be created. 
 
 .. _create-user:
 
@@ -16,7 +16,7 @@ When a user account is created, the account is added to the specified organizati
 
 .. note:: Since a subscription code is required to create a user, the UForge administrator must first create these subscription profiles, and add the organization administrator (or another user) to the admin list.
 
-To create a user account:
+To create a user account use ``uforge user create`` with the arguments as follows:
 
 .. code-block:: shell
 
@@ -31,7 +31,7 @@ Disabling a User Account
 
 Once disabled, the user no longer has access to the UForge platform.
 
-To disable a user account:
+To disable a user account use ``uforge user disable`` and specify the user account:
 
 .. code-block:: shell
 

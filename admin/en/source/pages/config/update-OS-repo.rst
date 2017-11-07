@@ -23,7 +23,7 @@ The following section give an example for updating CentOS. They can be adjusted 
 		The ``–-name`` specified here is the “tagname” that will be shown in the UI when creating an appliance.
 		The ``--repoUrl`` can be either ``http://`` or ``file://``.
 
-		.. warning:: You must use the ``--officiallySupported`` flag for all the default repositories of officially supported OSes (for a list of supported OSes, refer to :ref: `uforge-supported-os-formats`). Do not use ``--officiallySupported`` for repositories that are not part of the core distribution, such as epel or VMware tools. When generating a machine image, packages tagged as ``--officiallySupported`` are installed first, before other packages.
+		.. warning:: You must use the ``--officiallySupported`` flag for all the default repositories of officially supported OSes. For a list of supported OSes, refer to the User Guide. Do not use ``--officiallySupported`` for repositories that are not part of the core distribution, such as epel or VMware tools. When generating a machine image, packages tagged as ``--officiallySupported`` are installed first, before other packages.
 
 2. Attach repository to the distribution as follows for each repository (your own repository and the UShareSoft tool repository)::
 

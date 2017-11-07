@@ -65,7 +65,7 @@ Adding or Updating a Resource
 
 To add or update a resource, first log in to the oar scheduler node as ``root``.
 
-To add a resource to compute node ``node1`` allowing to generate an image:
+To add a resource to compute node ``node1`` and allow image generation (``nature=0``):
 
 .. code-block:: shell
 
@@ -76,7 +76,7 @@ To add a resource to compute node ``node1`` allowing to generate an image:
 	state : Alive
 	properties : deploy=NO, besteffort=YES, cpuset=0, desktop_computing=NO, nature=0, network_address=vm, type=default, cm_availability=0
 
-To change a current resource (resource_id: 92) to a different job type (for example publish images)::
+To change a current resource (resource_id: 92) to a different job type (for example publish images, which is nature ID 1)::
 
 	$ oarnodesetting -h node1 -r 92 -p nature=1;
 
@@ -103,7 +103,7 @@ This being said, it is not the role of UForge to replace the role of the schedul
 
 So, by default, when a new OAR job is launched, it is processed on one OAR node until the number of simultaneous executions exceeds the set value, and the next OAR node is used when the number of simultaneous executions exceeds the set value.
 
-If you wish to have a round robin assignation of jobs, you can change the OAR configuration as follows.
+If you want to have a round robin assignation of jobs, you can change the OAR configuration as follows.
 
 	1. In the oar-server node (and only on the node where oar-server runs, not on the other compute nodes), edit ``/etc/oar/oar.conf``.
 
@@ -115,7 +115,7 @@ If you wish to have a round robin assignation of jobs, you can change the OAR co
 
 		SCHEDULER_RESOURCE_ORDER="resource_id ASC"
 
-	3. Restart the oar-server: service oar-server restart. In this case we will order the job scheduling by resource_id in ascending order. This will work only if your oarnodesetting are populated by nature and server.
+	3. Restart the oar-server using the command: ``service oar-server restart``. The following example orders the job scheduling by ``resource_id`` in ascending order. This will work only if your oarnodesetting are populated by nature and server.
 
 	.. code-block:: shell
 
@@ -150,7 +150,7 @@ If you wish to have a round robin assignation of jobs, you can change the OAR co
 		properties : deploy=NO, besteffort=YES, cpuset=0, desktop_computing=NO, available_upto=0, nature=1, network_address=oarnode2, last_available_upto=0, type=default
 		[...]
 
-	In this example, if you look the nature=0 (in the properties). We have:
+	In this example, if you look the ``nature=0`` (in the properties). You have:
 
 	.. code-block:: shell
 
@@ -160,7 +160,7 @@ If you wish to have a round robin assignation of jobs, you can change the OAR co
 		oarnode2 = id 4
 		[...]
 
-	and for nature=1, we have:
+	For ``nature=1``, you have:
 
 	.. code-block:: shell
 
@@ -169,7 +169,7 @@ If you wish to have a round robin assignation of jobs, you can change the OAR co
 		oarnode1 = id 236
 		[...]
 
-	In this case the first generation will be handled by the ``oarnode1`` and the second by the ``oarnode2`` (same for other types, publication is 1, scan is 3, etc.
+	In this case the first generation will be handled by the ``oarnode1`` and the second by the ``oarnode2`` (same for other types, publication is 1, scan is 3, etc.)
 
 
 .. _delete-job:

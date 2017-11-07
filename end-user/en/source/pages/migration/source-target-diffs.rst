@@ -17,7 +17,7 @@ When a live machine is scanned the networking is treated differently depending o
 
 	* Dynamic (DHCP) IP Addresses: In this case, the operating system resets the networking information at boot time. When the new machine instance is provisioned, the instance will send a request to the local cloud DHCP service to get a new IP address.
 
-Consequently networking configuration files including ``/etc/hosts`` may be different bwetween the source and target systems.
+Consequently networking configuration files including ``/etc/hosts`` may be different between the source and target systems.
 
 
 Network Device Name

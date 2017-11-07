@@ -25,11 +25,11 @@ The URL endpoint for direct REST web service access is constructed using the fol
 
 The download URL endpoint is constructed using the ``UFORGE_IAAS_DOWNLOAD_URL`` variable.
 
-If you wish to use ``http`` rather than ``https`` (not recommended) then you require to set the following variable in the uforge.conf file::
+If you want to use ``http`` rather than ``https`` (even though this is not recommended) then you must set the following variable in the ``uforge.conf`` file::
 
 	UFORGE_PROXY_USE_SSL = false
 
-For example, if you set the following variables in ``uforge.conf``, will result in the following external URLs::
+For example, if you set the following variables in ``uforge.conf``::
 
 	UFORGE_PROXY_INFOS = hq.example.com:5666
 	UFORGE_UI_ROOT_CONTEXT = /ui
@@ -37,7 +37,7 @@ For example, if you set the following variables in ``uforge.conf``, will result 
 	UFORGE_IAAS_DOWNLOAD_URL = http://hq.example.com:5777/downloads
 	UFORGE_PROXY_USE_SSL = true
 
-Resulting external URLs::
+The external URLs will appear as follows::
 
 	* UForge Portal: https://hq.example.com:5666/ui
 	* REST URL endpoint: https://hq.example.com:5666/apis

@@ -57,7 +57,7 @@ You would use the following command:
 
 .. code-block:: shell
 
-	$ uforge user targetformat disable --targetFormats "OpenStack VHD" --account kermit --url https://uforge.usharesoft.com:443 -u $ADMIN -p $PASS
+	$ uforge user targetformat ensable --targetFormats "OpenStack VHD" --account kermit --url https://uforge.usharesoft.com:443 -u $ADMIN -p $PASS
 
 
 Disabling User Access to Formats

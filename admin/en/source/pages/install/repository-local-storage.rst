@@ -12,9 +12,9 @@ When using local storage, UForge must already be installed, but not configured. 
 
 	3. If you want to create ISO images with UForge then you must copy the ISO skeleton files and mount them to your system, as follows:
 
-		a) Download the ISO that corresponds to the distributions you want. These are divided into two seperate ISOs:
+		a) Download the ISO that corresponds to the open source distributions you want. These are divided into two seperate ISOs:
 			* CentOS, Debian, Ubuntu
-			* Scientific Linux, Open SUSE
+			* Scientific Linux, Open SUSE, Oracle Linux
 
 		.. code-block:: shell
 
@@ -30,7 +30,7 @@ When using local storage, UForge must already be installed, but not configured. 
 
 			# mount -o loop /space/DISTROS/uforge-centos-debian-ubuntu-iso-installers-latest.iso /mnt
 
-		.. note:: The example above will mount Centos, Debian and Ubuntu, but the same could be done for Scientific Linux and Open SUSE by modifying the path.
+		.. note:: The example above will mount Centos, Debian and Ubuntu, but the same could be done for other open source distributions by modifying the path.
 
 
 		c) Copy the content of the ISO::

@@ -19,6 +19,12 @@ When a live machine is scanned the networking is treated differently depending o
 
 Consequently networking configuration files including ``/etc/hosts`` may be different bwetween the source and target systems.
 
+
+Network Device Name
+~~~~~~~~~~~~~~~~~~~
+
+Currently, the network device name is renamed after a blackbox migration. The new device name will be ``eth0``, regardeless of the name prior to the migration.
+
 .. _generation-libraries-added:
 
 New Libraries Added

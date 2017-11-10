@@ -34,7 +34,7 @@ Adding Formats to a Specific User
 To add access to a format for a specific user,  you must follow these steps:
 
 	1. Ensure the target format exists for the organization. For a list of formats that are part of the organization, use the command ``uforge org targetformat list``. 
-	2. Enable the format for the user using ``uforge user targetformat enable``.
+	2. Enable the format for the user using ``uforge user targetFormat enable``.
 
 
 Enabling Access to a Format
@@ -57,15 +57,15 @@ You would use the following command:
 
 .. code-block:: shell
 
-	$ uforge user targetformat ensable --targetFormats "OpenStack VHD" --account kermit --url https://uforge.usharesoft.com:443 -u $ADMIN -p $PASS
+	$ uforge user targetformat enable --targetFormats "OpenStack VHD" --account kermit --url https://uforge.usharesoft.com:443 -u $ADMIN -p $PASS
 
 
 Disabling User Access to Formats
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To disable access to one or more formats for a specific user  (in this example “kermit”), you must specify the format name with option ``--targetformats``, as follows:
+To disable access to one or more formats for a specific user  (in this example “kermit”), you must specify the format name with option ``--targetFormats``, as follows:
 
 .. code-block:: shell
 
-	$ uforge user targetformat disable --targetformats "OVF or OVA" QCOW2 VirtualBox --account kermit --url https://uforge.usharesoft.com:443 -u $ADMIN -p $PASS
+	$ uforge user targetformat disable --targetFormats "OVF or OVA" QCOW2 VirtualBox --account kermit --url https://uforge.usharesoft.com:443 -u $ADMIN -p $PASS
 	

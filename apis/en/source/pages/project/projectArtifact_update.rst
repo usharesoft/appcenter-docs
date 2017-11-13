@@ -29,7 +29,7 @@ URI Parameters
 
 * ``pid`` (required): the id of the :ref:`project-object`
 * ``oid`` (required): the id of the :ref:`org-object`
-* ``said`` (required): the id of the :ref:`softwareartifact-object`
+* ``said`` (required): the id of the :ref:`softwareartifact-object` to update
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

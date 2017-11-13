@@ -3495,6 +3495,7 @@
                                 <xs:enumeration value="Oracle Linux"/>
                                 <xs:enumeration value="RedHat Enterprise Linux"/>
                                 <xs:enumeration value="Scientific Linux"/>
+                                <xs:enumeration value="SUSE Linux Enterprise Server"/>
                                 <xs:enumeration value="Ubuntu"/>
                                 <xs:enumeration value="Windows"/>
                             </xs:restriction>
@@ -6897,6 +6898,16 @@
                     <xs:element name="uri" type="xs:anyURI" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the uri resource of this group object</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="password" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the group password</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="encrypted" type="xs:boolean" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">boolean indicating that the password string is encrypted</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                 </xs:sequence>

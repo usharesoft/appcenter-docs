@@ -33,4 +33,5 @@ You can add or modify the appliance logo as follows:
 
 	1. Click on the appliance to modify.
 	2. From the ``Overview`` page click on the square and plus (+) image on the left hand-side.
-	3. Select the image you want to use as the logo. The format must be .jpg, .jpeg or .png.
+	3. Select the image you want to use as the logo. The format must be .jpg, .jpeg or .png. The image is saved automatically.
+

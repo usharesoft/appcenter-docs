@@ -70,7 +70,7 @@ LINUX is a registered trademark of Linus Torvalds.
 
 Microsoft and Windows are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.
 
-Oracle, GlassFish, Java, and all Java-based trademarks and logos are trademarks or registered trademarks of Oracle Corporation and/or its affiliates.
+Oracle, Java, and all Java-based trademarks and logos are trademarks or registered trademarks of Oracle Corporation and/or its affiliates.
 
 Apache Ant, Ant, and Apache are trademarks of The Apache Software Foundation.
 
@@ -81,8 +81,7 @@ Other company names and product names are trademarks or registered trademarks of
 Copyright FUJITSU LIMITED 2017
 ==============================
 
-All rights reserved, including those of translation into other languages. No part of this manual may be reproduced
-            in any form whatsoever without the written permission of FUJITSU LIMITED
+All rights reserved, including those of translation into other languages. No part of this manual may be reproduced in any form whatsoever without the written permission of FUJITSU LIMITED
 
 High Risk Activity
 ==================

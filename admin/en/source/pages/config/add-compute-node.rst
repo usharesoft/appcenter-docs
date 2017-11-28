@@ -9,7 +9,10 @@ You can add a new OAR compute node which was instantiated from UForge but which 
 
 	1. Make a snapshot of the UForge Server (to be able to come back to the state without the additional OAR compute node). 
 
-	2. Initial setup: ``oar-server`` and ``oarnode1`` to ``oarnodeN`` already configured.  Name oarnodeX and IP-oarnodeX respectively the name and IP address of the new node to be added to the UForge "cluster". 
+	2. Initial setup: ``oar-server`` and ``oarnode1`` to ``oarnodeN`` already configured.  Initialise two variables as follows:
+
+		* OARNODEX=oarnodeX. Replace ``X`` in ``oarnodeX`` with the number of the new node to be added
+		* IPoarnodeX=10.0.0.123. Replace ``10.0.0.123`` with the local IP address of the new node to be added
 
 	.. note:: The following commands are run on the first existing oarnode, for example oarnode1 until stated otherwise.
 
@@ -32,24 +35,22 @@ You can add a new OAR compute node which was instantiated from UForge but which 
 
 	.. code-block:: shell
 
-		sed -e 's/\<oarnode1\>/oarnodeX/g' /etc/hosts | awk -v ip=$IP -v name=oarnode1
-		'{print}END{printf "%s %s\n",ip,name}' | ssh IP-oarnodeX dd of=/etc/hosts
+		sed -e "s/\<oarnode1\>/$oarnodeX/g" /etc/hosts | awk -v ip=$IP -v name=oarnode1 '{print}END{printf "%s %s\n",ip,name}' | ssh $IPoarnodeX dd of=/etc/hosts
 
 	7. Copy over uforge.conf file and others
 
 	.. code-block:: shell
 
-		rsync -a /etc/UShareSoft/uforge/uforge.conf IP-oarnodeX:/etc/UShareSoft/uforge/
-		rsync /etc/oar/oar.conf IP-oarnodeX:/etc/oar/
-		rsync /etc/ssh/sshd_config IP-oarnodeX:/etc/ssh
-		rsync -a ~oar/.ssh IP-oarnodeX:~oar
+		rsync -a /etc/UShareSoft/uforge/uforge.conf $IPoarnodeX:/etc/UShareSoft/uforge/
+		rsync /etc/oar/oar.conf $IPoarnodeX:/etc/oar/
+		rsync /etc/ssh/sshd_config $IPoarnodeX:/etc/ssh
+		rsync -a ~oar/.ssh $IPoarnodeX:~oar
 
 	8. Run the following commands on all oarnode1 .. oarnodeN and oar-server but **not** oarnodeX. This adds new node in all machines /etc/hosts
 
 	.. code-block:: shell
 
-		awk 'BEGIN{d=1}/\<oarnodeX\>/ {d=0}{print}END{if(d==1){print "IP-oarnodeX
-		oarnodeX"}}' /etc/hosts > /tmp/hosts.NEW
+		awk -v newoar="$oarnodeX" -v newip="$IPoarnodeX" 'BEGIN{d=1}/\<{print newoar\>/ {d=0}{print}END{if(d==1){print newip " " newoar}}' /etc/hosts > /tmp/hosts.NEW
 		diff -q /tmp/hosts.NEW /etc/hosts >/dev/null
 		if [ $? -ne 0 ]; then
 	    	rsync -a /etc/hosts /etc/hosts.SVG-`date +"%Y-%m-%d"`
@@ -57,11 +58,15 @@ You can add a new OAR compute node which was instantiated from UForge but which 
 	    	rm -f /tmp/hosts.NEW
 		fi 
         
+<<<<<<< HEAD
         9. Edit /etc/UShareSoft/uforge/uforge.conf on all oarnode1 .. oarnodeN, oar-server and oarnodeX. Add the oarnodeX IP at the end of UFORGE_PROXY_IGNORED variable.
+=======
+    9. Edit ``/etc/UShareSoft/uforge/uforge.conf`` on all oarnode1 .. oarnodeN, oar-server and oarnodeX. Add the oarnodeX IP at the end of UFORGE_PROXY_IGNORED variable.
+>>>>>>> d8dc520... update adding compute node procedure
 
         .. code-block:: shell
 
-                UFORGE_PROXY_IGNORED=X.X.X.X,Y.Y.Y.Y,...,<oarnodeXIP>
+                UFORGE_PROXY_IGNORED=X.X.X.X,Y.Y.Y.Y,...,<IPoarnodeX>
 
 	10. Run the following commands on oarnodeX
 
@@ -84,13 +89,13 @@ You can add a new OAR compute node which was instantiated from UForge but which 
 		service sshd restart
 		/opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh -f >/dev/null 2>&1
 
-	11. Run the following commands on oar-server to create new resources on oarnodeX from existing oarnode1 resources
+	11. Run the following commands on oar-server to create new resources on oarnodeX from existing oarnode1 resources. In the following command, replace ``oarnodeX`` with the name of the new oar node.
 
 	.. code-block:: shell
 
 		/usr/bin/oarnodes | /bin/awk '/network_address=oarnode1/
 		{s=$0;gsub(".*nature=","",s);gsub(",.*","",s);printf "/usr/sbin/oarnodesetting
-		-a -h oarnode3 -p cpuset=0,nature=%s\n",s}' | sh
+		-a -h oarnodeX -p cpuset=0,nature=%s\n",s}' | sh
 
 You can also use a remote disk space of the compute node to generate multiple machine images in parallel by mounting the ``/space`` directory with a NAS or SAN.
 

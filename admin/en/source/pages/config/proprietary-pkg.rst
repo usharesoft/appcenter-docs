@@ -15,7 +15,7 @@ To add a RedHat repository using your ISO:
 
 	2. Create the appropriate directory layout under ``/tmp/USER_DATA/repos/`` for example: ``/tmp/USER_DATA/repos/RHEL/6.5/x86_64/``
 
-	3. Copy all the contents of the DVD into ``/tmp/USER_DATA/repos/RHEL/6.5/x86_64/``
+	3. Copy all the content of the DVD into ``/tmp/USER_DATA/repos/RHEL/6.5/x86_64/`` using the ``rsync -a`` command.
 	
 	4. If the repository does not already contain a repodata folder, you must create it inside the package directory:
 

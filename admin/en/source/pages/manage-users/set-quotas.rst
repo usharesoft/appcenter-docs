@@ -95,7 +95,7 @@ You can set the maximum size of the scan overlay. The overlay includes all the f
 
 	UFORGE_SCAN_OVERLAY_MAX_SIZE = maximum size in octets
 
-For example, to set the limit de 10G (10 x 1024 x 1024 x 1024)::
+For example, to set the limit to 10GB (10 x 1024 x 1024 x 1024)::
 
 	UFORGE_SCAN_OVERLAY_MAX_SIZE=10737418240
 

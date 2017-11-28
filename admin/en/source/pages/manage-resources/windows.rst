@@ -44,7 +44,6 @@ Restrictions
 The following UForge features are not supported with appliances based on Microsoft Windows: 
 
 	* Package selection at the OS level (however, users can add software via MySoftware or Projects)
-	* Windows migration possible as blackbox only
 	* Windows ISO format not supported
 
 Using Microsoft Windows Key Mechanism

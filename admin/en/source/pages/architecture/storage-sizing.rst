@@ -9,7 +9,12 @@ The UForge AppCenter requires a variable amount of storage, depending, among oth
 
 Local storage is used for installing the UForge service software and free disk space for log files.  
 
-.. warning:: Logs for UForge, OpenDJ, Tomcat, and syncope are stored under /opt and NOT under /var. Under /var/log you will find a symlink to the /var location where the logs are stored. Therefore you should allow enough space under /var for these logs.
+	.. warning:: Logs for OpenDJ are stored under ``/opt/OpenDJ/logs`` and general usage logs for Tomcat and syncope are stored in subdirectories of ``/var``:
+
+		* ``/opt/Tomcat/logs`` is a symlink to ``/var/log/tomcat``
+		* ``/opt/syncope/log`` is a symlink to ``/var/log/tomcat/syncope``
+
+		Therefore, it is important to make sure there is enough space available under ``/opt`` and ``/var.``
 
 The SQL Store uses the local storage to store all the database meta-data. Finally a compute node used to generate an image requires local free disk space to generate one or more images from an appliance template.
 

@@ -16,6 +16,12 @@ Enhancements
 ~~~~~~~~~~~~
 * The uforge-sync binary now requires the API endpoint, to improve usability.
 
+Bug Fixes
+~~~~~~~~~
+
+Known issues
+~~~~~~~~~~~~
+* In some situation, deployment in CloudStack could failed if the ClouStack image is duplicated into different zones.
 
 
 3.7.fp8

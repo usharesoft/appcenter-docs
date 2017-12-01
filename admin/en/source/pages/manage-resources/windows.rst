@@ -49,7 +49,7 @@ The following UForge features are not supported with appliances based on Microso
 Using Microsoft Windows Key Mechanism
 -------------------------------------
 
-Microsoft Windows Operating System requires a key validation. UForge generates images without a key in it. Users have 30 days to enter their key once the Appliance is booted.
+UForge generates images without a licence key. Microsoft Windows Server operating systems may be used without an activated licence for a certain period of time, with no functional limitation, but it is the responsibility of users to enter a licence key and to activate it if they want to keep using the server beyond this period.
 
 .. _first-windows-install:
 

@@ -28,4 +28,5 @@ This section assumes that you have completed the installation of your UForge pla
    populate-db-OS
    update-OS-repo
    proprietary-pkg
+   populate-iso
    config-amp

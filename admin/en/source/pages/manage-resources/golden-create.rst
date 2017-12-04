@@ -32,15 +32,6 @@ To create a new Golden Image, you will need to:
 		* Extra software installation
 		* User creation
 
-        .. note:: If you plan migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/solutions/cloud/k5/>`_, you must also do the following before scanning:
-
-                * Retrieve Transport Agent Software from `K5 Support <mailto:FCSK5_GSD@ph.fujitsu.com>`_.
-                * Install Transport Agent Software.
-                * Disable NLA for RDP (Please refer to official Microsoft documentation `Configure Network Level Authentication for Remote Desktop Services Connections <https://technet.microsoft.com/en-us/library/cc732713(v=ws.11).aspx/>`_).
-
-                For more detailed information, please refer to `official Fujitsu K5 IaaS Documentation <https://k5-doc.jp-east-1.paas.cloud.global.fujitsu.com/doc/en/iaas/document/k5-iaas-features-handbook.pdf>`__.
-
-
 	4. Optionally, you can free several gigabytes of space by cleaning up Windows updates installers.
 
 		.. warning:: After this optimization you may not be able to uninstall some of the Windows updates.

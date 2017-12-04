@@ -31,7 +31,7 @@ Log in to one of the UForge instances:
 	| CentOS         | 5.7             | i386         |   X    |    X    |    X    | 2011-08-29       |
 	.... rest omitted for clarity
 
-All the open source operating system versions are delivered as part of the UForge repository. Proprietary operating systems such as RedHat Enterprise Linux or older operating system versions (that have been EOL'd) are not; therefore it is the responsibility of the end customer (or reseller if they have correct agreements in place to re-distribute an operating system) to have the original ISO images of the operating system in questions.
+All the open source operating system versions are delivered as part of the UForge repository. Proprietary operating systems such as Red Hat Enterprise Linux or older operating system versions (that have been EOL'd) are not; therefore it is the responsibility of the end customer (or reseller if they have correct agreements in place to re-distribute an operating system) to have the original ISO images of the operating system in questions.
 
 .. note:: You can only add an operating system version that is officially supported by the UForge AppCenter and has been certified by Fujitsu.  
 
@@ -63,7 +63,7 @@ Login to one of the UForge instances:
 Adding an OS to an Organization
 -------------------------------
 
-Older operating system versions (that for example have been EOL'd) or proprietary operating systems such as RedHat Enterprise Linux are not automatically populated at the installation phase. Population of such operating system versions must be done manually after the initial installation of UForge is complete.
+Older operating system versions (that for example have been EOL'd) or proprietary operating systems such as Red Hat Enterprise Linux are not automatically populated at the installation phase. Population of such operating system versions must be done manually after the initial installation of UForge is complete.
 
 .. note:: You can only add an operating system version that is officially supported by the UForge platform and has been certified by Fujitsu. 
 
@@ -112,7 +112,7 @@ In order to add the OS to a specific distribution, you will need to specify ``--
 
 	4. Launch Spider and other population steps. Refer to :ref:`populate-db-os`.
 
-When adding CentOS, Debian and RedHat, the major versions are automatically marked as Milestones when the distribution is added to the platform. For more information on Milestones, refer to :ref:`manage-milestone`.
+When adding CentOS, Debian and Red Hat, the major versions are automatically marked as Milestones when the distribution is added to the platform. For more information on Milestones, refer to :ref:`manage-milestone`.
 
 .. _updating-repo:
 

@@ -17,7 +17,7 @@ The operating system and project binaries are separated from the ``My Software``
 
 .. warning:: When new projects are populated by the administrator after the initial install, they are copied in the same location as ``My Software`` and generated images.
 
-The UForge Setup Disk contains all the operating system and default project binaries information that needs to be copied to the UForge Repository. This repository can be shared storage or in the case where the entire UForge platform is being installed on one machine, can be on the local disk.  
+The UForge Setup Disk contains all the operating system information that needs to be copied to the UForge Repository. This repository can be shared storage or in the case where the entire UForge platform is being installed on one machine, can be on the local disk.  
 
 If you want to have the UForge Repository setup on a local disk, you must first install UForge prior to setting up UForge Repository. Otherwise, if this is shared storage, the UForge Repository can be setup independently.
 
@@ -25,5 +25,5 @@ The UForge Repository must be setup properly prior to completing the final confi
 
 You can set up the UForge Repository either:
 
-	* on a shared storage
-	* on a local storage
+	* on a shared storage. Refer to :ref:`repository-shared-storage`.
+	* on a local storage. Refer to :ref:`repository-local-storage`.

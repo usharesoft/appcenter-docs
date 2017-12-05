@@ -2,8 +2,8 @@
 
 .. _manage-resources:
 
-Manage Resources
-================
+Managing Resources
+==================
 
 The following sections cover information regarding managing the UForge resources.
 

@@ -39,7 +39,7 @@ LDAP (OpenDJ) has its own tool for doing backup, called ``backup``.  To ensure d
 	$ l="$f-ldap-backup.tgz" #what to name ldap backups
 	$ f="$f-mysql-backup.tgz" #what to name backups
 	$ tar -czf /tmp/$f /var/lib/mysql/*
-	$ /opt/OpenDJ/bin/backup -a -c -d /tmp/ldap_backup
+	$ /opt/opendj/bin/backup -a -c -d /tmp/ldap_backup
 	$ tar -czf /tmp/$l /tmp/ldap_backup
 	$ service mysql start
 	$ service tomcat start
@@ -79,10 +79,10 @@ Restoring the database is a simple copy using rsync back to the database directo
 	$ service mysql stop
 	$ cd /tmp
 	$ tar -xvf /tmp/<ldap tarball>
-	$ /opt/OpenDJ/bin/restore -d /tmp/<ldap dir>/userRoot
-	$ /opt/OpenDJ/bin/restore -d /tmp/<ldap dir>/tasks
-	$ /opt/OpenDJ/bin/restore -d /tmp/<ldap dir>/config
-	$ /opt/OpenDJ/bin/restore -d /tmp/<ldap dir>/schema
+	$ /opt/opendj/bin/restore -d /tmp/<ldap dir>/userRoot
+	$ /opt/opendj/bin/restore -d /tmp/<ldap dir>/tasks
+	$ /opt/opendj/bin/restore -d /tmp/<ldap dir>/config
+	$ /opt/opendj/bin/restore -d /tmp/<ldap dir>/schema
 	$ tar -xvf /tmp/<mysql tarball>
 	$ rsync -a --delete-before /tmp/<mysql dir>/* /var/lib/mysql/
 	$ service OpenDJ start

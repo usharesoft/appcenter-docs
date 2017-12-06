@@ -2,8 +2,8 @@
 
 .. _config-ssl-cert:
 
-Configure Apache and Tomcat Web Services to use SSL Certificate
-------------------------------------------------------------------
+Configuring Apache and Tomcat Web Services to use SSL Certificate
+-----------------------------------------------------------------
 
 It is highly recommended that all communication with UForge is done via HTTPS.  After the initial installation of UForge, neither the HTTP server (Apache) nor the application server (Tomcat) have yet been configured to use an SSL certificate and allow HTTPS.
 

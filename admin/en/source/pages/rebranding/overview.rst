@@ -7,7 +7,6 @@ Rebranding Your UForge GUI
 
 The following sections cover information regarding rebranding elements of the UForge GUI. Most customizations are done using the ``config.xml`` and ``forge-config.xml`` files located in: ``/var/opt/UShareSoft/uforge-client/gwt/uforge/templates``. This is a relative path.
 
->>>>>>> ab63746... specify the correct config files
 Once you have completed your changes, you will need to run the following command. This will stop Tomcat, integrate the changes and restart Tomcat::
 
 	$ /opt/UShareSoft/uforge-client/bin/uforge_ui_update.sh

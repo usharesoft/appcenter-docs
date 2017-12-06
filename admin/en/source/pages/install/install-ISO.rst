@@ -10,25 +10,25 @@ Installing from an ISO
 To install UForge from the ISO image:
 
 	1. Attach the ISO to a VM or burn the ISO to a DVD (for installing to a physical machine, note the machine will require a DVD disk drive).
-	2. Boot the system from the ISO.
-	3. Choose the default menu proposed by the installer.
-	4. Choose the keyboard layout you want to use.
+	2. Boot the system from the ISO. The following main window will be displayed.
 
-	.. image:: /images/install-keyboard-select.png
+	.. image:: /images/install-centos7.png
 
-	5. Set the timezone.
+	3. Click on ``Date & Time``. Select a timezone and click ``Done``.
+	4. Click on ``Keyboard``. Choose the keyboard layout you want to use and click ``Done``.
+	5. Click on ``Network & Host name``. Using the top right toggle set it to ``On``.
 
-	.. image:: /images/install-timezone-select.png
+	.. image:: /images/install-networkon.png
 
-	6. Set the root linux password.
+	6. Click ``Begin Installation`` in the bottom right. The following window will be displayed.
 
-	.. image:: /images/install-password-set.png
+	.. image:: /images/install-centos7-pw.png
 
-	7. Wait for the install to finish, then reboot the system and detach the ISO from the VM or remove the DVD from the disk drive.
+	7. Click ``Root Password``. Set the root password and click ``Done``.
 
-	.. image:: /images/install-reboot.png
+	8. Wait for the install to finish (this can take a while), then click ``Reboot`` to reboot the system
 
-	8. Once the system reboots, accepts the EULA license agreement, select the keyboard and timezone.
+	9. Once the system reboots, accept the EULA license agreement, select your network configuration (DHCP or manual), select the desired timezone. Then, click ``Accept all and continue``.
 	
 For a multi-node installation, repeat these steps for every physical or VM instance you want to install.  
 The installation phase is complete, you are now ready to configure the UForge AppCenter, see :ref:`configure-uforge`.

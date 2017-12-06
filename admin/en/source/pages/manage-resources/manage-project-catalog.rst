@@ -7,7 +7,7 @@ Managing the Project Catalog
 
 A Project Catalog is a collection of software components that are available for UForge users to use when building their server templates. A project is one software component. A project includes files, binaries or native packages and may have an EULA (End User License Agreement).  
 
-Each organization within the UForge platform has a project catalog, and each member of the organization has access to the project catalog, allowing them to add any of the projects to their server templates. The contents of the project catalog, however, can only be updated and managed by the administrators of the organization where the project catalog belongs. An organization administrator can:
+Each organization within the UForge platform has a project catalog, and each member of the organization has access to the project catalog, allowing them to add projects to their appliances. The contents of the project catalog can be updated and managed by administrators, in order to be adapted to the users of the organization. As the administrator, you can:
 
 	* add new projects to the catalog
 	* update existing projects to the catalog

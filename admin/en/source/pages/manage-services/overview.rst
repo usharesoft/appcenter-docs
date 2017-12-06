@@ -2,8 +2,8 @@
 
 .. _manage-services:
 
-Manage Services
-===============
+Managing Services
+=================
 
 The following sections cover information regarding managing the UForge services.
 

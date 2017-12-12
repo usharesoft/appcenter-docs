@@ -59,6 +59,8 @@ Fill in the wizard, note that all the fields are mandatory.
 
 		.. note:: The deployment may take a few hours, depending on the number of operating systems you have chosen.
 
+		.. note:: If the deployment starts but seems to hang (for example it remains in the ``Starting`` mode in the progress bar, or never goes beyond ``Initializing``), there may be an error in the data entered into the wizard. In order to resume the deployment, log into the AppCenter server, and run the following command: ``service oas-deploy restart``. You can then re-load the deployment URL in your browser, correct the data which was wrong and click ``Deploy`` again.
+
 	14. Once the deployment is complete, click ``Finish``. 
 
 .. warning:: As part of the deployment phase, the wizard logs all the steps of the configuration.  These logs include the administration passwords and other sensitive data you have used to configure this platform.  It is important that these logs do not remain on the machine once the deployment is finished.  To do this:

@@ -12,7 +12,7 @@ UForge provides a set of OS profiles. If you want to create another OS profile, 
 To create a new OS profile:
 
 	1. Under the ``Administration`` tab, click ``OS Profiles``.
-	2. Double-click on the operating system you want to administer.  This will provide the current list of profiles this operating system has.  
+	2. Click on the operating system you want to administer.  This will provide the current list of profiles this operating system has.  
 	3. Select the profile which will serve as the base for your custom OS profile and click create.
 
 		.. image:: /images/create-os-profile.png

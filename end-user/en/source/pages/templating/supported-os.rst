@@ -159,7 +159,7 @@ With UForge you can create machine images in the following formats.
 |                                     | Flexiant OVA - VMWare                                 |
 |                                     | Flexiant QCOW2 - KVM/Xen/VMWare                       |
 +-------------------------------------+-------------------------------------------------------+
-| Fujitsu K5                          | RedHat Enterprise Linux not supported                 |
+| Fujitsu K5                          | Red Hat Enterprise Linux not supported                |
 +-------------------------------------+-------------------------------------------------------+
 | Google Compute Engine               | none                                                  |
 +-------------------------------------+-------------------------------------------------------+

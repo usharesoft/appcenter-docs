@@ -21,7 +21,7 @@ Bug Fixes
 
 Known issues
 ~~~~~~~~~~~~
-* In some situation, deployment in CloudStack could failed if the ClouStack image is duplicated into different zones.
+* In some situation, deployment in CloudStack could fail if the CloudStack image is duplicated in different zones.
 
 
 3.7.fp8

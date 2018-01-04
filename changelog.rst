@@ -3,14 +3,26 @@
 Changelog
 =========
 
-3.7.fp9
+3.8.fp1
 -------
 
-Release Date: 2017-11-27
+Release Date: 2018-01-08
+
+New Features
+~~~~~~~~~~~~
+* Users can deploy Linux instances from published machine images to Apache CloudStack.
 
 Enhancements
 ~~~~~~~~~~~~
 * The uforge-sync binary now requires the API endpoint, to improve usability.
+
+Bug Fixes
+~~~~~~~~~
+
+Known issues
+~~~~~~~~~~~~
+* In some situation, deployment in CloudStack could fail if the CloudStack image is duplicated in different zones.
+
 
 3.7.fp8
 -------

@@ -24,6 +24,7 @@ Contents:
    pages/monitoring/overview
    pages/tools/overview
    pages/rebranding/overview
+   pages/licensing
    pages/changelog
 
 .. _trademarks:
@@ -37,13 +38,11 @@ LINUX is a registered trademark of Linus Torvalds.
 
 Microsoft and Windows are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.
 
-Oracle, GlassFish, Java, and all Java-based trademarks and logos are trademarks or registered trademarks of Oracle Corporation and/or its affiliates.
+Oracle, Java, and all Java-based trademarks and logos are trademarks or registered trademarks of Oracle Corporation and/or its affiliates.
 
 Apache Ant, Ant, and Apache are trademarks of The Apache Software Foundation.
 
 Red Hat Enterprise Linux is a trademark of Red Hat.
-
-MySQL and the MySQL logo are the servicemarks, trademarks, or registered trademarks owned by Oracle Corporation Inc.
 
 UNIX is a registered trademark of the Open Group in the United States and in other countries.
 

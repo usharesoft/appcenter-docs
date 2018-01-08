@@ -62,6 +62,9 @@ To add custom software components to an appliance:
 	1. From the ``Apps`` tab, click on ``Software Library`` in the top left hand side of the UI.  This opens your private Software Library.  
 	2. Click on the ``add software`` in the top right hand side.
 	3. You are now prompted for the name, version and maintainer of the software component you would like to add. You can also set a tag and category. Click ``create`` to complete.
+
+		.. note:: If you want to create specific software bundle with the VirtIO drivers which will allow you to publish Windows images to Red Hat, then the name must begin with ``UForgeWinDrivers``.
+
 	4. The software ``Overview`` page will now open. You can modify the name and version, and add a description.
 	5. To upload the files, go to the ``Files`` page. 
 
@@ -73,11 +76,15 @@ To add custom software components to an appliance:
 
 	.. image:: /images/mysoftware-folder-edit.png
 
+	.. warning:: Folders are not supported if you are uploading VirtIO drivers for publishing Windows images to Red Hat. 
+
 	You can now upload the files as follows:
 			a. Click ``upload`` to select the files you want to add and click ``open``.
 			b. Click ``fetch`` to set an archive location where the files should be retrieved. When using the ``fetch`` option you can indicate a remote URL or artifact account (for information on artifact accounts, refer to :ref:`account-artifact-account`). You can also select to have the files uploaded to the UForge by checking ``use cache``. 
 
 		.. image:: /images/fetch-mysoftware.png 
+
+	.. warning:: If you are uploading VirtIO drivers for publishing Windows images to Red Hat, archive files such as zip or tar are not supported.
 
 	6. Optionally, you can modify the ``default install path`` that will be used. If you have modified the name of your appliance, it may not be reflected in the install path.
 

@@ -1,21 +1,20 @@
 .. Copyright 2017 FUJITSU LIMITED
 
-.. _credaccountazureresourcemanager-object:
+.. _credaccountoracle-object:
 
-CredAccountAzureResourceManager
-===============================
+CredAccountOracle
+=================
 
-Holds specific account information for the new Microsoft Azure cloud platform: Azure Resource Manager.
+Holds specific account information for the Oracle Cloud platform.
 
 Attributes
 ~~~~~~~~~~
 
-The list of attributes for ``CredAccountAzureResourceManager`` are:
+The list of attributes for ``CredAccountOracle`` are:
 
-	* ``tenantId`` (string): the tenant id to use
-	* ``subscriptionId`` (string): the subscription id to use
-	* ``applicationId`` (string): the application id to use
-	* ``applicationKey`` (string): the application key to use
+	* ``login`` (string): the user login name to use
+	* ``password`` (string): the user password to use
+	* ``domainName`` (string): the identity domain to use
 	* ``name`` (string): the name of the cloud account
 	* ``parentUri`` (anyURI): the uri resource of the parent object this cloud account is attached to
 	* ``uri`` (anyURI): the uri resource of this cloud account

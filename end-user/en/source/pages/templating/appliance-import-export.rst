@@ -9,6 +9,8 @@ You can import and export appliance templates.  When exporting, an archive is cr
 
 Likewise, an archive can be imported to the UForge platform, creating a new appliance template in your ``Appliance Library`` under the ``Imported Appliances`` section.
 
+.. warning:: If you want to export an appliance template with software bundles in UForge 3.7 and import it in UForge 3.8 or more, you will need to modify your template to make it compatible. Refer to :ref:`appliance-update-37-import`.
+
 Exporting
 ~~~~~~~~~
 
@@ -100,3 +102,25 @@ For example, in order to remove some OS section fields before importing your Win
 	10. Click ``import``. This will start the import process. 
 
 You can also remove the OS Profile from the UI by going to the ``Stack`` page of the appliance before exporting.
+
+.. _appliance-update-37-import:
+
+Updating a 3.7 Appliance Template Before Exporting For 3.8
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When you export an appliance in UForge 3.7 that contains software bundles, and import it to UForge 3.8, you will encounter compatibility issues. In order to import the template, you must modify the file containing the description of your appliance (``template.yml`` or ``template.json``).
+
+In this file, there is a section ``bundles``, that contains a subsection ``oses``. You need to remove the entire content of the subsection ``oses``, and replace it by a section ``restrictionRule``. Refer to :ref:`restriction-rules` for detailed documentation about restriction rules.
+
+For exemple, if your ``oses`` subsection is like this::
+
+    - name: "CentOS"
+      version: "7"
+      arch: "x86_64"
+    - name: "Debian"
+      version: "8"
+      arch: "x86_64"
+
+Then you need to write this restriction rule instead::
+
+    (Distribution#name=CentOS && Distribution#version=7 && Distribution#arch=x86_64) || (Distributioon#name=Debian && Distribution#version=8 && Distribution#arch=x86_64)

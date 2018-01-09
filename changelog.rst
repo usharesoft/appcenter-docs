@@ -3,6 +3,15 @@
 Changelog
 =========
 
+3.8.fp2
+-------
+
+Release Date: 2018-02-26
+
+Compatibility issues
+~~~~~~~~~~~~~~~~~~~~
+* The import / export of appliance templates to UForge 3.7 to UForge 3.8 may not work if the template contains software bundles. Please refer to this section :ref:`appliance-update-37-import` to make your template compatible.
+
 3.8.fp1
 -------
 

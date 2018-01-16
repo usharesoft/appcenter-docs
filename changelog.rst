@@ -18,7 +18,7 @@ Enhancements
 ~~~~~~~~~~~~
 * The uforge-sync binary now requires the API endpoint, to improve usability.
 * Enhance UI headers for Apps and Migration tab.
-* Add french internationalization.
+* Add French internationalization.
 
 Bug Fixes
 ~~~~~~~~~
@@ -28,7 +28,7 @@ Bug Fixes
 * 1416 Portal - MySoftware - Files - package file path not restored
 * 6769 The presence of a malformed filename in the source filesystem causes the scan to hang badly (segmentation fault)
 * 7019 Filename vCneter.log spelled wrong. Should be vCenter.log.
-* 7021 Backslash not properly escaped in credentials causes vCenter publish to fail
+* 7021 Backslash not properly escaped in credentials causes VMware vCenter publish to fail
 * 7087 UTC and ARC settings in /etc/sysconfig/clock has been changed during blackbox migration
 * 7112 In a blackbox migration  /etc/USharesoft/ files are not deleted
 * 7134 'org repo delete' fails frequently and the error message is confusing
@@ -38,14 +38,14 @@ Bug Fixes
 * 7214 Popup have an unexpected scroll bar
 * 7275 Error message does not include any information when publish to AWS failed.
 * 7284 Directories/files changed during blackbox migration
-* 7416 packages of custom repo still visible even after repo detach
+* 7416 Packages of custom repo still visible even after repo detach
 * 7422 Windows automatically shuts down after being instantiated on AWS.
-* 7423 the UI view for searching and adding an OS package to a template shows too many versions
+* 7423 The UI view for searching and adding an OS package to a template shows too many versions
 * 7659 Blackbox migration of CentOS7.2 on fresh forge failed "Detaching loop"
 * 7680 /etc/sysconfig/clock file is added in Blackbox and Whitebox migration
 * 7684 /etc/sysconfig/kernel is modified after  Blackbox and Whitebox migration
 * 7687 Hammr deploy OpenStack retrieval timed out
-* 7712 viewing bootscript of a cloned template raises a 404 error
+* 7712 Viewing bootscript of a cloned template raises a 404 error
 * 7730 Uploading several files to a Software bundle randomly leads to 500 error
 * 7738 Bad concatenation in kernel parameters after two blackbox of a debian appliance
 * 7747 The field for disk size at generation for AWS should be in GiB
@@ -64,26 +64,26 @@ Bug Fixes
 * 8064 Software bundles are not extracted in the correct directory
 * 8072 UNIX group ID is not taken into account when import a template
 * 8076 "500 call failed error" when uploading a boot script to a project catalog
-* 8097 vCenter publish fails in multiple vlan/vnic environment
+* 8097 VMware vCenter publish fails in multiple vlan/vnic environment
 * 8102 Display explicit error message when template has no partition
 * 8146 Typo in Artifact account in the creation page
-* 8180 Folders where vCenter templates will be published are changed randomly
-* 8189 scan of CentOS 7 fails with message "Unable to rebuild package dialog 1.2 x86_64"
+* 8180 Folders where VMware vCenter templates will be published are changed randomly
+* 8189 Scan of CentOS 7 fails with message "Unable to rebuild package dialog 1.2 x86_64"
 * 8192 OpenStack generation from scan fails with message Installed packages more than expected (240 > 237)
 * 8214 When moving from Name to Version with the tab key, the Version box becomes red (error)
 * 8306 Export, Import and Scan features does not work when UForge user login contains '@'
 * 8321 Image generation of a CentOS 6.7 scan from ISO fails in grub installation
-* 8322 Publishing a compressed image failed on VCenter
+* 8322 Publishing a compressed image failed on VMware vCenter
 * 8326 The order of NICs is changed by exporting/importing a template appliance
 * 8346 Update error message about RHEL not supported for K5 in UForge
 * 8417 Windows image generation from a legacy golden fails without displaying the Details if required disk is too small
 * 8433 Name and downloadId missing in the download URL for appliances generated from a template
 * 8476 uforge-cli command template info throws AttributeError: NoneType for Windows Appliances
-* 8512 generation does not finish if there are volume groups though it was cancelled or got an error
+* 8512 Generation does not finish if there are volume groups though it was cancelled or got an error
 * 8649 Only one architecture of an OS package is kept when there were multiple in the imported template
 * 8655 Estimated size of Windows templates is 0 B
 * 8889 uforge-cli command template info throws AttributeError for Windows Appliances
-* 8898  Publish on OVH Openstack does not work
+* 8898 Publish on OVH Openstack does not work
 
 Known issues
 ~~~~~~~~~~~~

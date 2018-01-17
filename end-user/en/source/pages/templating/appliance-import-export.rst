@@ -66,7 +66,7 @@ To import an archive:
 Updating a Windows Appliance Before Import
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When you import a Windows appliance, UForge checks if the golden image used to create the appliance exists on the UForge. If it does not exist, the import will fail. In order to import the template, you must export the appliance and remove the OS profile.
+When you import a Windows appliance, UForge checks if the golden image used to create the appliance exists on the UForge server. If it does not exist, the import will fail. In order to import the template, you must export the appliance and remove the OS profile.
 
 For example, in order to remove some OS section fields before importing your Windows appliance:
 
@@ -112,7 +112,7 @@ When you export an appliance in UForge 3.7 that contains software bundles, and i
 
 In this file, there is a section ``bundles``, that contains a subsection ``oses``. You need to remove the entire content of the subsection ``oses``, and replace it by a section ``restrictionRule``. Refer to :ref:`restriction-rules` for detailed documentation about restriction rules.
 
-For exemple, if your ``oses`` subsection is like this::
+For example, if your ``oses`` subsection is like this::
 
     - name: "CentOS"
       version: "7"
@@ -129,7 +129,7 @@ When you export a Windows appliance in UForge 3.7, you will also encounter compa
 
 In this file, there is a section ``os`` that contains various information and in particular the profile name. The new 3.8 template is now having additional fields, ``windowsEdition``, ``windowsType`` and ``windowsLanguage`` that you need to fulfill to be able to import the template.
 
-For exemple, if your ``os`` section is like this::
+For example, if your ``os`` section is like this::
 
 			name: "Windows"
 			version: "Server2012R2"
@@ -148,11 +148,11 @@ Then you should add the following fields::
 			windowsType: "full"
 			windowsLanguage: "English"
 
-The profile should be existing on the target UForge, otherwise you must delete the ``profile`` field and import the template like this::
+The profile should exist on the target UForge platform, otherwise you must delete the ``profile`` field and import the template like this::
 
 			name: "Windows"
 			version: "Server2012R2"
 			arch: "x86_64"
 			updateTo: "12-19-2016 10:32:07 GMT"
 
-Thus, your appliance will be imported and you will be able to setup manually in the UI the OSProfile.
+Thus, your appliance will be imported and you will be able to setup the OSProfile manually in the UI.

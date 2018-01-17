@@ -3,15 +3,6 @@
 Changelog
 =========
 
-3.8.fp2
--------
-
-Release Date: 2018-02-26
-
-Compatibility issues
-~~~~~~~~~~~~~~~~~~~~
-* The import / export of appliance templates to UForge 3.7 to UForge 3.8 may not work if the template contains software bundles. Please refer to this section :ref:`appliance-update-37-import` to make your template compatible.
-
 3.8.fp1
 -------
 
@@ -32,6 +23,9 @@ Known issues
 ~~~~~~~~~~~~
 * In some situation, deployment in CloudStack could fail if the CloudStack image is duplicated in different zones.
 
+Compatibility issues
+~~~~~~~~~~~~~~~~~~~~
+* The import / export of appliance templates to UForge 3.7 to UForge 3.8 may not work if the template contains software bundles. Please refer to this section :ref:`appliance-update-37-import` to make your template compatible.
 
 3.7.fp8
 -------
@@ -255,7 +249,7 @@ Bug Fixes
 * 6960 Simultaneous scans of two ``CentOS 7.3`` machines fails
 * 6932 When cloning an imported appliance and exporting, the wrong page is displayed
 * 6748 Unable to download a generated machine image via the UI twice
-* 5977 When resetting password, the information message to indicate that an email  has been sent is badly positioned 
+* 5977 When resetting password, the information message to indicate that an email  has been sent is badly positioned
 * 5907 When inviting a collaborator to a workspace, email textbox is case insensitive
 * 5074 Bad vertical aligned text in expandable button
 
@@ -268,7 +262,7 @@ Release Date: 2017-03-21
 New Features
 ~~~~~~~~~~~~
 
-* Users can now import a Windows based scan, creating an appliance template.  This allows users to update the appliance template prior to migration. 
+* Users can now import a Windows based scan, creating an appliance template.  This allows users to update the appliance template prior to migration.
 * Users can specify to run ``sysprep`` as part of a machine image generation for Windows-based appliances that have been imported from a Scan.  This allows users to provide a new administrator password as part of the install profile.
 * Ability to trigger Repository updates manually via an API call.
 
@@ -351,7 +345,7 @@ Compatibility Issues
 
 Migrating to UForge 3.7-2 will have the following compatibility issues:
 
-* any Windows golden image that use a non-standard Edition (for example ``Windows K5`` instead of the official ``Standard``, ``Enterprise``, ``Webserver`` or ``Database``) will be changed to ``Standard`` edition. A warning will be added to the log files. If you would like to change the Edition of the golden image, you should re-register the golden image with ``org golden create`` command. 
+* any Windows golden image that use a non-standard Edition (for example ``Windows K5`` instead of the official ``Standard``, ``Enterprise``, ``Webserver`` or ``Database``) will be changed to ``Standard`` edition. A warning will be added to the log files. If you would like to change the Edition of the golden image, you should re-register the golden image with ``org golden create`` command.
 
 .. warning:: Fujitsu is not legally responsible for any damage or loss caused by the possible inconsistency between the assumed and the actual Editions.
 
@@ -415,7 +409,7 @@ New Features
 ~~~~~~~~~~~~
 
 * Multi-NIC support for Linux based appliance templates.
-* Driver injection improvements (internal mechanism) for Windows-based appliance templates. 
+* Driver injection improvements (internal mechanism) for Windows-based appliance templates.
 
 Bug Fixes
 ~~~~~~~~~
@@ -515,7 +509,7 @@ RFEs
 * Added directory icon when displaying all the files for software/project files view
 * When deleting a folder, the confirm message should be more explicit (that all sub folders and files will also be deleted)
 * Better explanation of the "cached" option for software/project files in the UI
-* Managing licenses for software/project components; there is now an explicit delet button to remove an uploaded license file 
+* Managing licenses for software/project components; there is now an explicit delet button to remove an uploaded license file
 
 Bug Fixes
 ~~~~~~~~~

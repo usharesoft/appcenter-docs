@@ -123,7 +123,7 @@ For example, if your ``oses`` subsection is like this::
 
 Then you need to write this restriction rule instead::
 
-    (Distribution#name=CentOS && Distribution#version=7 && Distribution#arch=x86_64) || (Distributioon#name=Debian && Distribution#version=8 && Distribution#arch=x86_64)
+    (Distribution#name=CentOS && Distribution#version=7 && Distribution#arch=x86_64) || (Distribution#name=Debian && Distribution#version=8 && Distribution#arch=x86_64)
 
 When you export a Windows appliance in UForge 3.7, you will also encounter compatibility issues. In order to import the template, you must modify the file containing the description of your appliance (``template.yml`` or ``template.json``).
 

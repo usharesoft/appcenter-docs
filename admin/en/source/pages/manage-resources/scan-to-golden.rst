@@ -35,7 +35,7 @@ To delete a golden image you created from scan:
 
 	1. Go to the ``OS Profile`` tab on the ``Administration`` page.
 	2. Select the operating system for which the golden image was created.
-	3. Click on the delete icon next to the golden image you want to create.
+	3. Click on the delete icon next to the golden image you want to remove.
 
 	.. image:: /images/delete-golden.png
 

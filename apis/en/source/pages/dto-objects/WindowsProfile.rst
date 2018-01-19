@@ -13,7 +13,7 @@ Attributes
 The list of attributes for ``windowsProfile`` are:
 
 	* ``edition``: the edition of the operating system for this os profile
-	* ``goldenUri`` (anyURI): the uri resource to retrieve the golden machine image for this os profile
+	* ``goldenPath`` (anyURI): the uri resource to retrieve the golden machine image for this os profile
 	* ``partitionTable`` (:ref:`partitionTable-object`): the partition table of the os profile (see :ref:`partitiontable-object`).
 	* ``type``: the type of the operating system for this os profile
 	* ``language`` (string): the language of the attached golden machine image

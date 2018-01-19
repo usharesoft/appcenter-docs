@@ -33,8 +33,8 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``wid`` (required): the id of the :ref:`workspace-object`
-* ``oid`` (required): the id of the :ref:`org-object`
+* ``wid`` (required): the Workspace id
+* ``oid`` (required): the Organization id
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

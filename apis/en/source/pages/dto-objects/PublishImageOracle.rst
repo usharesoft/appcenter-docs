@@ -1,22 +1,19 @@
 .. Copyright 2017 FUJITSU LIMITED
 
-.. _publishimageazureresourcemanager-object:
+.. _publishimageoracle-object:
 
-PublishImageAzureResourceManager
-================================
+PublishImageOracle
+==================
 
-Holds the information on the registration of a machine image to the Microsoft Azure Resource Manager environment.
+Holds the information on the registration of a machine image to the Oracle Cloud environment.
 
 Attributes
 ~~~~~~~~~~
 
-The list of attributes for ``PublishImageAzureResourceManager`` are:
+The list of attributes for ``PublishImageOracle`` are:
 
-	* ``storageAccount`` (string): the storageAccount where this machine image is registered
-	* ``container`` (string): the container where this machine image is registered
-	* ``resourceGroup`` (string): the resourceGroup where this machine image is registered
-	* ``blob`` (string): the blob of the published machine image
-	* ``displayName`` (string): the cloud name for this machine image
+	* ``computeEndPoint`` (string): the compute EndPoint URL to use when publishing the machine image
+	* ``displayName`` (string): the public name of the machine image
 	* ``cloudId`` (string): the unique id for the machine image registered on the cloud environment
 	* ``imageUri`` (anyURI): the uri resource of the machine image
 	* ``publishLocation`` (string): the location of the registered machine image (e.g. region)

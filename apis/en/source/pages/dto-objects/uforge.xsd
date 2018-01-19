@@ -3142,6 +3142,11 @@
                     <xsd:documentation xml:lang="en">the name of the deployment</xsd:documentation>
                 </xsd:annotation>
             </xs:element>
+            <xs:element name="creationDate" type="xs:dateTime" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">the date of the deployment</xsd:documentation>
+                </xsd:annotation>
+            </xs:element>
             <xs:element name="blueprintName" type="xs:string" minOccurs="0">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en">the blueprint name used to do this deployment</xsd:documentation>
@@ -3495,6 +3500,7 @@
                                 <xs:enumeration value="Oracle Linux"/>
                                 <xs:enumeration value="RedHat Enterprise Linux"/>
                                 <xs:enumeration value="Scientific Linux"/>
+                                <xs:enumeration value="SUSE Linux Enterprise Server"/>
                                 <xs:enumeration value="Ubuntu"/>
                                 <xs:enumeration value="Windows"/>
                             </xs:restriction>
@@ -5509,6 +5515,7 @@
                     <xs:element name="hostname" type="xs:string" minOccurs="0"/>
                     <xs:element name="instanceId" type="xs:string" minOccurs="0"/>
                     <xs:element name="name" type="xs:string" minOccurs="0"/>
+                    <xs:element name="creationDate" type="xs:dateTime" minOccurs="0"/>
                     <xs:element name="sourceSummary" type="SourceSummary" minOccurs="0"/>
                     <xs:element name="state" type="xs:string" minOccurs="0"/>
                     <xs:element name="stateMessage" type="xs:string" minOccurs="0"/>
@@ -5551,6 +5558,9 @@
                 <xs:sequence>
                     <xs:element name="group" type="xs:string" minOccurs="0"/>
                     <xs:element name="offeringName" type="xs:string" minOccurs="0"/>
+                    <xs:element name="zoneId" type="xs:string" minOccurs="0"/>
+                    <xs:element name="networkId" type="xs:string" minOccurs="0"/>
+                    <xs:element name="floatingIpAddress" type="xs:boolean" minOccurs="0"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -6897,6 +6907,16 @@
                     <xs:element name="uri" type="xs:anyURI" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the uri resource of this group object</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="password" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the group password</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="encrypted" type="xs:boolean" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">boolean flag to determine if the group password string is encrypted</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                 </xs:sequence>
@@ -8685,16 +8705,6 @@
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the date this repository last received a package update</xsd:documentation>
                         </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="repositoryUpdates" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the list of :ref:`repositoryupdate-object` holding information each time the repository was requested to be updated</xsd:documentation>
-                        </xsd:annotation>
-                        <xs:complexType>
-                            <xs:sequence>
-                                <xs:element name="repositoryUpdate" type="RepositoryUpdate" minOccurs="0" maxOccurs="unbounded"/>
-                            </xs:sequence>
-                        </xs:complexType>
                     </xs:element>
                     <xs:element name="officiallySupported" type="xs:boolean" minOccurs="0">
                         <xsd:annotation>
@@ -11723,7 +11733,7 @@
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
-                    <xs:element name="goldenUri" type="xs:anyURI" minOccurs="0">
+                    <xs:element name="goldenPath" type="xs:anyURI" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the uri resource to retrieve the golden machine image for this os profile</xsd:documentation>
                         </xsd:annotation>

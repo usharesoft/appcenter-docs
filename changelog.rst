@@ -6,23 +6,92 @@ Changelog
 3.8.fp1
 -------
 
-Release Date: 2018-01-08
+Release Date: 2018-01-22
 
 New Features
 ~~~~~~~~~~~~
 * Users can deploy Linux instances from published machine images to Apache CloudStack.
+* Support for Debian 9 "stretch".
+* Fujitsu Cloud Service K5 jp-east-2 region is supported.
 
 Enhancements
 ~~~~~~~~~~~~
 * The uforge-sync binary now requires the API endpoint, to improve usability.
+* Enhance UI headers for Apps and Migration tab.
+* Add French internationalization.
 
 Bug Fixes
 ~~~~~~~~~
+* 835 Refresh the generation page causes a 500 call failed
+* 1060 Files permissions changes after blackbox migration
+* 1064 Timezone is always reset to Europe/London after a blackbox migration.
+* 1416 Portal - MySoftware - Files - package file path not restored
+* 6769 The presence of a malformed filename in the source filesystem causes the scan to hang badly (segmentation fault)
+* 7019 Filename vCneter.log spelled wrong. Should be vCenter.log.
+* 7021 Backslash not properly escaped in credentials causes VMware vCenter publish to fail
+* 7087 UTC and ARC settings in /etc/sysconfig/clock has been changed during blackbox migration
+* 7112 In a blackbox migration  /etc/USharesoft/ files are not deleted
+* 7134 'org repo delete' fails frequently and the error message is confusing
+* 7187 Parameters in /etc/fstab has been changed during blackbox generation
+* 7193 /etc/gshadow has been changed during the blackbox migration
+* 7196 /etc/shadow lock and 'no password' options not taken into account during migration
+* 7214 Popup have an unexpected scroll bar
+* 7275 Error message does not include any information when publish to AWS failed.
+* 7284 Directories/files changed during blackbox migration
+* 7416 Packages of custom repo still visible even after repo detach
+* 7422 Windows automatically shuts down after being instantiated on AWS.
+* 7423 The UI view for searching and adding an OS package to a template shows too many versions
+* 7659 Blackbox migration of CentOS7.2 on fresh forge failed "Detaching loop"
+* 7680 /etc/sysconfig/clock file is added in Blackbox and Whitebox migration
+* 7684 /etc/sysconfig/kernel is modified after  Blackbox and Whitebox migration
+* 7687 Hammr deploy OpenStack retrieval timed out
+* 7712 Viewing bootscript of a cloned template raises a 404 error
+* 7730 Uploading several files to a Software bundle randomly leads to 500 error
+* 7738 Bad concatenation in kernel parameters after two blackbox of a debian appliance
+* 7747 The field for disk size at generation for AWS should be in GiB
+* 7748 Unsupported AWS region are displayed in the publish view (cn-north-1, us-gov-west-1)
+* 7758 UForge cli takes minutes to manipulate repositories
+* 7785 Scan on CentOS 7.4 with LVM fails silently and causes generation error.
+* 7819 uforge-sync does not resolve fully qualified names for AppCenter endpoint
+* 7869 Enabled Firewall  becomes disabled after Scan and Import
+* 7904 Publishing a Docker image fails in slow network environment
+* 7935 uforge-scan output is not proper english
+* 7940 Version of uforge-scan is not consistent with version of UForge platform it has been downloaded from
+* 8054 "UForge critical error" e-mail is sent after a successful scan import
+* 8055 "C:\fakepath" is displayed when selecting an appliance archive to import
+* 8062 Publishing a compressed image failed on OpenStack
+* 8063 UForge update logs show WELD "Exception in thread"
+* 8064 Software bundles are not extracted in the correct directory
+* 8072 UNIX group ID is not taken into account when import a template
+* 8076 "500 call failed error" when uploading a boot script to a project catalog
+* 8097 VMware vCenter publish fails in multiple vlan/vnic environment
+* 8102 Display explicit error message when template has no partition
+* 8146 Typo in Artifact account in the creation page
+* 8180 Folders where VMware vCenter templates will be published are changed randomly
+* 8189 Scan of CentOS 7 fails with message "Unable to rebuild package dialog 1.2 x86_64"
+* 8192 OpenStack generation from scan fails with message Installed packages more than expected (240 > 237)
+* 8214 When moving from Name to Version with the tab key, the Version box becomes red (error)
+* 8306 Export, Import and Scan features does not work when UForge user login contains '@'
+* 8321 Image generation of a CentOS 6.7 scan from ISO fails in grub installation
+* 8322 Publishing a compressed image failed on VMware vCenter
+* 8326 The order of NICs is changed by exporting/importing a template appliance
+* 8346 Update error message about RHEL not supported for K5 in UForge
+* 8417 Windows image generation from a legacy golden fails without displaying the Details if required disk is too small
+* 8433 Name and downloadId missing in the download URL for appliances generated from a template
+* 8476 uforge-cli command template info throws AttributeError: NoneType for Windows Appliances
+* 8512 Generation does not finish if there are volume groups though it was cancelled or got an error
+* 8649 Only one architecture of an OS package is kept when there were multiple in the imported template
+* 8655 Estimated size of Windows templates is 0 B
+* 8889 uforge-cli command template info throws AttributeError for Windows Appliances
+* 8898 Publish on OVH Openstack does not work
 
 Known issues
 ~~~~~~~~~~~~
 * In some situation, deployment in CloudStack could fail if the CloudStack image is duplicated in different zones.
 
+Compatibility issues
+~~~~~~~~~~~~~~~~~~~~
+* The import / export of appliance templates from UForge 3.7 to UForge 3.8 may not work if the template contains software bundles. Please refer to this section :ref:`appliance-update-37-import` to make your template compatible.
 
 3.7.fp8
 -------
@@ -246,7 +315,7 @@ Bug Fixes
 * 6960 Simultaneous scans of two ``CentOS 7.3`` machines fails
 * 6932 When cloning an imported appliance and exporting, the wrong page is displayed
 * 6748 Unable to download a generated machine image via the UI twice
-* 5977 When resetting password, the information message to indicate that an email  has been sent is badly positioned 
+* 5977 When resetting password, the information message to indicate that an email  has been sent is badly positioned
 * 5907 When inviting a collaborator to a workspace, email textbox is case insensitive
 * 5074 Bad vertical aligned text in expandable button
 
@@ -259,7 +328,7 @@ Release Date: 2017-03-21
 New Features
 ~~~~~~~~~~~~
 
-* Users can now import a Windows based scan, creating an appliance template.  This allows users to update the appliance template prior to migration. 
+* Users can now import a Windows based scan, creating an appliance template.  This allows users to update the appliance template prior to migration.
 * Users can specify to run ``sysprep`` as part of a machine image generation for Windows-based appliances that have been imported from a Scan.  This allows users to provide a new administrator password as part of the install profile.
 * Ability to trigger Repository updates manually via an API call.
 
@@ -342,7 +411,7 @@ Compatibility Issues
 
 Migrating to UForge 3.7-2 will have the following compatibility issues:
 
-* any Windows golden image that use a non-standard Edition (for example ``Windows K5`` instead of the official ``Standard``, ``Enterprise``, ``Webserver`` or ``Database``) will be changed to ``Standard`` edition. A warning will be added to the log files. If you would like to change the Edition of the golden image, you should re-register the golden image with ``org golden create`` command. 
+* any Windows golden image that use a non-standard Edition (for example ``Windows K5`` instead of the official ``Standard``, ``Enterprise``, ``Webserver`` or ``Database``) will be changed to ``Standard`` edition. A warning will be added to the log files. If you would like to change the Edition of the golden image, you should re-register the golden image with ``org golden create`` command.
 
 .. warning:: Fujitsu is not legally responsible for any damage or loss caused by the possible inconsistency between the assumed and the actual Editions.
 
@@ -406,7 +475,7 @@ New Features
 ~~~~~~~~~~~~
 
 * Multi-NIC support for Linux based appliance templates.
-* Driver injection improvements (internal mechanism) for Windows-based appliance templates. 
+* Driver injection improvements (internal mechanism) for Windows-based appliance templates.
 
 Bug Fixes
 ~~~~~~~~~
@@ -506,7 +575,7 @@ RFEs
 * Added directory icon when displaying all the files for software/project files view
 * When deleting a folder, the confirm message should be more explicit (that all sub folders and files will also be deleted)
 * Better explanation of the "cached" option for software/project files in the UI
-* Managing licenses for software/project components; there is now an explicit delet button to remove an uploaded license file 
+* Managing licenses for software/project components; there is now an explicit delet button to remove an uploaded license file
 
 Bug Fixes
 ~~~~~~~~~

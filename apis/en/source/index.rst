@@ -57,6 +57,7 @@ This documentation provides a description of UForge AppCenter RESTful interface.
     pages/workspacemembers/overview
     pages/workspacetemplate/overview
     pages/workspacetemplatecomments/overview
+    pages/licensing
     pages/changelog
 
 .. _trademarks:
@@ -81,7 +82,8 @@ Other company names and product names are trademarks or registered trademarks of
 Copyright FUJITSU LIMITED 2017
 ==============================
 
-All rights reserved, including those of translation into other languages. No part of this manual may be reproduced in any form whatsoever without the written permission of FUJITSU LIMITED
+All rights reserved, including those of translation into other languages. No part of this manual may be reproduced
+            in any form whatsoever without the written permission of FUJITSU LIMITED
 
 High Risk Activity
 ==================

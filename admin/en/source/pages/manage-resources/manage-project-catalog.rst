@@ -11,8 +11,8 @@ Each organization within the UForge platform has a project catalog, and each mem
 
 	* add new projects to the catalog
 	* update existing projects to the catalog
-	* mark a project obsolete.
-	* delete a project.
+	* mark a project obsolete
+	* delete a project
 
 You can also create custom OS profiles to include specific packages to an existing (standard) OS profile. See :ref:`create-custom-os`.
 
@@ -23,7 +23,7 @@ Adding a Project
 
 To add a new project: 
 
-	1. Under the Administration tab, click ``Projects``.
+	1. Under the ``Administration`` tab, click ``Projects``.
 
 	2. Click on ``add project`` in the top right hand. 
 
@@ -69,7 +69,7 @@ To add a new project:
 	9. You can add a bootscript (optional) on the ``Bootscript`` tab. 
 
 		a. Enter the name.
-		b. Select the type. If you select first boot, then the boot script will be launched once the first time the instance is launched. If you select every boot, then the boot script will be launched every time the instance is rebooted. 
+		b. Select the type. If you select first boot, then the boot script will be launched only once, the first time the instance is launched. If you select every boot, then the boot script will be launched every time the instance is rebooted. 
 		c. Set the boot order.
 		d. Enter the boot script.
 
@@ -153,15 +153,14 @@ To delete the project:
 
 	1. Under the ``Administration`` tab, click ``Projects``.
 	2. You will see a list of all the projects that are part of the org.
-	3. To delete the project can either: 
+	3. To delete the project you can either: 
 
-	   click on the ``delete`` icon at the extreme right-hand side in the table for the project item.
+	   * Click on the ``delete`` icon at the extreme right-hand side in the table for the project item.
 
 	   .. image:: /images/project-table-delete.png
 
-	   or
 
-	   click on the project item to edit it, then click on the ``delete`` icon at the top right-hand side of the project edit page. 
+	   * Click on the project item to edit it, then click on the ``delete`` icon at the top right-hand side of the project edit page. 
 
 	   .. image:: /images/project-delete2.png
 

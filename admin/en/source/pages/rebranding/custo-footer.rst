@@ -51,9 +51,9 @@ If ``<c:target>blank</c:target>`` or ``<c:target>_blank</c:target>`` are used wi
 Adding Terms of Use or Privacy Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you wish to add your own "Terms of Use" or "Privacy Policy", you MUST include the unchanged UShareSoft Terms of Use and Privacy Policy as part of it. 
+.. note:: If you want to add your own "Terms of Use" or "Privacy Policy", you MUST include the unchanged UShareSoft Terms of Use and Privacy Policy as part of it. 
 
-To modify the Terms of Use or Privacy Policy, go to the sections under <c:footer> and enter the path to the new terms of use and/or privacy policy. You can also modify the link text if you wish:
+To modify the Terms of Use or Privacy Policy, go to the sections under ``<c:footer>`` and enter the path to the new terms of use and/or privacy policy. You can also modify the link text.
 
 .. code-block:: xml 
 

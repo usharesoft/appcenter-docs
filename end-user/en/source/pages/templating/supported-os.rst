@@ -10,7 +10,8 @@ The following is a list of supported OSes that users can use as the guest operat
 +------------------+------------------------------------------+------------------------------------------+
 | OS               | Factory                                  | Migration                                |
 +==================+==========================================+==========================================+
-| CentOS           | 5.2+, 6 (32bit and 64bit), 7 (64bit)     | 5.2+, 6 (32bit and 64bit), 7 (64bit)     |
+| CentOS           | 5.2+ (32bit and 64bit), 6 (32bit         | 5.2+ (32bit and 64bit), 6 (32bit         |
+|                  | 64bit), 7 (64bit)                        |                                          |
 +------------------+------------------------------------------+------------------------------------------+
 | Debian           | 6 (Squeeze), 7 (Wheezy), 8 (Jessie)      | 6 (Squeeze), 7 (Wheezy), 8 (Jessie)      |
 |                  | (32bit and 64bit)                        | (32bit and 64bit)                        |
@@ -19,8 +20,8 @@ The following is a list of supported OSes that users can use as the guest operat
 +------------------+------------------------------------------+------------------------------------------+
 | Open SUSE        | 11.3, 11.4, 12.1, 12.2 (32bit and 64bit) | 11.3, 11.4, 12.1, 12.2 (32bit and 64bit) |
 +------------------+------------------------------------------+------------------------------------------+
-| Red Hat          |                                          |                                          |
-| Enterprise Linux*| 5.2+, 6 (32bit and 64bit), 7 (64bit)     | 5.2+, 6 (32bit and 64bit), 7 (64bit)     |
+| Red Hat          | 5.2+ (32bit and 64bit),                  | 5.2+ (32bit and 64bit),                  |
+| Enterprise Linux*| 6 (32bit and 64bit), 7 (64bit)           | 6 (32bit and 64bit), 7 (64bit)           |
 +------------------+------------------------------------------+------------------------------------------+
 | Oracle Linux     | 5.2+ (32bit and 64bit), 6 (32bit and     | 5.2+ (32bit and 64bit), 6 (32bit and     |
 |                  | 64bit), 7 (64bit)                        | 64bit), 7 (64bit)                        |
@@ -158,7 +159,7 @@ With UForge you can create machine images in the following formats.
 |                                     | Flexiant OVA - VMWare                                 |
 |                                     | Flexiant QCOW2 - KVM/Xen/VMWare                       |
 +-------------------------------------+-------------------------------------------------------+
-| Fujitsu K5                          | none                                                  |
+| Fujitsu K5                          | Red Hat Enterprise Linux not supported                |
 +-------------------------------------+-------------------------------------------------------+
 | Google Compute Engine               | none                                                  |
 +-------------------------------------+-------------------------------------------------------+

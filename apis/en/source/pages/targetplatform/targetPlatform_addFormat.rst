@@ -1,4 +1,4 @@
-.. Copyright 2017 FUJITSU LIMITED
+.. Copyright 2018 FUJITSU LIMITED
 
 .. _targetPlatform-addFormat:
 

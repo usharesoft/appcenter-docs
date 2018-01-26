@@ -63,7 +63,7 @@ When generating a machine image from a scan, certain services are disabled or en
 If present, ``NetworkManager`` is enabled, otherwise ``network`` is enabled.
 If the user requested a firewall , services ``iptables`` or ``ip6tables`` will be enabled. Otherwise, ``iptables`` or ``ip6tables`` are always disabled.
 
-.. note:: ``NetworkManager`` is the name used by some operating systems which is the equivalent to ``network-manager``. The name ``network`` is used by some operating systems which is the equivalent to ``networking``.
+.. note:: ``NetworkManager`` is the name used by some operating systems which is equivalent to ``network-manager``. The name ``network`` is used by some operating systems which is equivalent to ``networking``.
 
 EC2 AMI Image
 
@@ -89,6 +89,6 @@ Microsoft Azure Image
 Red Hat vs CentOS Packages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In addition to the above, there are other minor differences between source and target instances after migration. If CentOS packages have been installed on a Red Hat server, with the same functionnality and the same version number as equivalent existing Red Hat packages, then after migration, these CentOS packages will be replaced by their Red Hat counterparts, because the vendor information present in RPM packages is not accounted for during migration: only the package name and version number are.
+In addition to the above, there are other minor differences between source and target instances after migration. If CentOS packages have been installed on a Red Hat server, with the same functionality and the same version number as equivalent existing Red Hat packages, then after migration, these CentOS packages will be replaced by their Red Hat counterparts, because the vendor information present in RPM packages is not accounted for during migration: only the package name and version number are.
 
 .. warning:: Installing non-RedHat packages on a RedHat server, or replacing Red Hat packages by CentOS packages, is strongly discouraged, because it voids the warranty. Red Hat can refuse support requests on a modified machine.

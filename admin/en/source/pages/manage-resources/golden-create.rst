@@ -56,7 +56,7 @@ To create a new Golden Image, you will need to:
 
 				$ sdelete -z C:
 
-   		b. After finishing the golden image (after sysprep at the last step), but before compressing the .raw with gzip or lrzip, perform the following command to the .raw virtual disk image:
+   		b. After finishing the golden image (after sysprep at the last step), but before compressing the .raw with gzip or lrzip, perform the following command on the .raw virtual disk image:
 
 			.. code-block:: shell
 
@@ -282,7 +282,7 @@ The following is an example of an unattend file to be used when creating a golde
 		    </settings>
 		</unattend>
 
-	.. note:: ``<ProductKey>`` element in the unattend file may not be mandatory. Whether the element is necessary or not depends on the type of the installation medium you used for the system. For example, the Volume License media do not require any <ProductKey> element in the unattend file. Please refer to Microsoft's documents for details.
+	.. note:: ``<ProductKey>`` element in the unattend file may not be mandatory. Whether the element is necessary or not depends on the type of installation media you used for the system. For example, the Volume License media does not require any <ProductKey> element in the unattend file. Please refer to Microsoft documentation for details.
 
 	.. note:: Elements for the locale and the language in the unattend file should have appropriate values in accordance with the language of the target OS. The following example shows the elements and their values for Japanese Windows.
 
@@ -351,7 +351,7 @@ The following is an example of an unattend file to be used when creating a golde
 		    </settings>
 		</unattend>
 
-	.. note:: ``<ProductKey>`` element in the unattend file may not be mandatory. Whether the element is necessary or not depends on the type of the installation medium you used for the system. For example, the Volume License media do not require any <ProductKey> element in the unattend file. Please refer to Microsoft's documents for details.
+	.. note:: ``<ProductKey>`` element in the unattend file may not be mandatory. Whether the element is necessary or not depends on the type of the installation media you used for the system. For example, the Volume License media does not require any <ProductKey> element in the unattend file. Please refer to Microsoft documentation for details.
 
 	.. note:: Elements for the locale and the language in the unattend file should have appropriate values in accordance with the language of the target OS. The following example shows the elements and their values for Japanese Windows.
 

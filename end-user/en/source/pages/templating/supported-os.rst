@@ -13,12 +13,15 @@ The following is a list of supported OSes that users can use as the guest operat
 | CentOS           | 5.2+ (32bit and 64bit), 6 (32bit         | 5.2+ (32bit and 64bit), 6 (32bit         |
 |                  | 64bit), 7 (64bit)                        |                                          |
 +------------------+------------------------------------------+------------------------------------------+
-| Debian           | 6 (Squeeze), 7 (Wheezy), 8 (Jessie)      | 6 (Squeeze), 7 (Wheezy), 8 (Jessie)      |
-|                  | (32bit and 64bit)                        | (32bit and 64bit)                        |
+| Debian           | 6 (Squeeze), 7 (Wheezy), 8 (Jessie),     | 6 (Squeeze), 7 (Wheezy), 8 (Jessie),     |
+|                  | 9 (Stretch) (32bit and 64bit)            | 9 (Stretch) (32bit and 64bit)            |
 +------------------+------------------------------------------+------------------------------------------+
 | Fedora           | 8 to 22                                  | 8 to 22                                  |
 +------------------+------------------------------------------+------------------------------------------+
-| Open SUSE        | 11.3, 11.4, 12.1, 12.2 (32bit and 64bit) | 11.3, 11.4, 12.1, 12.2 (32bit and 64bit) |
+| Open SUSE Linux  | 11.3, 11.4, 12.1, 12.2, 12.3             | 11.3, 11.4, 12.1, 12.2, 12.3             |
+| Enterprise Server| (32bit and 64bit)                        | (32bit and 64bit)                        |
++------------------+------------------------------------------+------------------------------------------+
+| Open SUSE Leap   | 42.1 42.2 42.3 (32 and 64 bit)           | 42.1 42.2 42.3 (32 and 64 bit)           |
 +------------------+------------------------------------------+------------------------------------------+
 | Red Hat          | 5.2+ (32bit and 64bit),                  | 5.2+ (32bit and 64bit),                  |
 | Enterprise Linux*| 6 (32bit and 64bit), 7 (64bit)           | 6 (32bit and 64bit), 7 (64bit)           |

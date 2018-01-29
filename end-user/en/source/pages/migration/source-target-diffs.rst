@@ -48,6 +48,10 @@ System Clock /etc/adjtime
 
 For Linux systems, the ``/etc/adjtime`` might be different between source and target systems.  The  Hardware Clock is usually not very accurate.  However, much of its inaccuracy is completely predictable - it gains or loses the same amount  of time every day.  This is called systematic drift.  The ``/etc/adjtime`` file keeps historical information on the clock's drift.  Changing hardware environments may change the contents of this file when hardware clock is adjusted (in many cases the kernel will automatically adjust the hardware clock periodically).
 
+Contents of /etc/fstab File
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Some differences may arise between the scanned server and the generated template in the contents of the ``/etc/fstab`` file. In particular, lines pertaining to NFS (Network FileSystem) mounts are not kept during a migration, because the machine images resulting from the migration would have to be instanciated on the same network as the source machine, with similar network parameters, which cannot always be the case. This also avoids the situations where the inability to mount an NFS share would prevent the (generated) server from booting.
 
 .. _service-state:
 

@@ -15,7 +15,7 @@ Publishing a Machine Image
 
 In order to publish a machine image to a cloud environment or container, you must already have credentials to access that environment. 
 
-.. note:: If you want to publish a Windows image to KVM on Red Hat Linux you need to inject specific VirtIO drivers. See the specific procedure documented in :ref:`publish-win-to-rh`.
+		.. note:: If you want to publish a Windows image to KVM on Red Hat Linux you need to inject specific VirtIO drivers. See the specific procedure documented in :ref:`publish-win-to-rh`.
 
 	1. If not already done, create an account for the target environment.  For more information, see :ref:`account-cloud-accounts`. 
 	2. Go to the appliance and click the ``Machine Images`` page. If you have not generated a machine image, you will need to do so as described in :ref:`appliance-generate-machine-image`.
@@ -36,9 +36,9 @@ In order to publish a machine image to a cloud environment or container, you mus
 
 	5. Click ``publish``.
 
-	.. note:: Publishing an image to Amazon will be billed to the user account. Trial accounts are not supported for publishing images from UForge. Only full Amazon accounts can be used. 
+	.. note:: Publishing an image to Amazon and Outscale will be billed to the user account. Trial Amazon accounts are not supported for publishing images from UForge. Only full Amazon accounts can be used. 
 
-	.. note:: Currently, publication to Docker are only supported for Docker Registry v2.
+	.. note:: Currently, publications to Docker are only supported for Docker Registry v2.
 
 	6. The publication will take a few minutes to complete (depending on the size of the image and the network connectivity between UForge and the target environment). The publication progress is shown. At the end of the publication, the machine image has been published by UForge to your target environment. The published image can be found in the target cloud environment or container.
 

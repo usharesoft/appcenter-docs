@@ -1,5 +1,7 @@
 .. Copyright 2017 FUJITSU LIMITED
 
+.. _endUserDoc-index:
+
 Welcome to the UForge AppCenter User Documentation
 ==================================================
 

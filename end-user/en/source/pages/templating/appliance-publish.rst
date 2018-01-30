@@ -15,6 +15,8 @@ Publishing a Machine Image
 
 In order to publish a machine image to a cloud environment or container, you must already have credentials to access that environment. 
 
+		.. note:: If you want to publish a Windows image to KVM on Red Hat Linux you need to inject specific VirtIO drivers. See the specific procedure documented in :ref:`publish-win-to-rh`.
+
 	1. If not already done, create an account for the target environment.  For more information, see :ref:`account-cloud-accounts`. 
 	2. Go to the appliance and click the ``Machine Images`` page. If you have not generated a machine image, you will need to do so as described in :ref:`appliance-generate-machine-image`.
 	3. Click on the arrow pointing to the right to publish your image.
@@ -34,13 +36,13 @@ In order to publish a machine image to a cloud environment or container, you mus
 
 	5. Click ``publish``.
 
-	.. note:: Publishing an image to Amazon will be billed to the user account. Trial accounts are not supported for publishing images from UForge. Only full Amazon accounts can be used. 
+	.. note:: Publishing an image to Amazon and Outscale will be billed to the user account. Trial Amazon accounts are not supported for publishing images from UForge. Only full Amazon accounts can be used. 
 
-	.. note:: Currently, publication to Docker are only supported for Docker Registry v2.
+	.. note:: Currently, publications to Docker are only supported for Docker Registry v2.
 
 	6. The publication will take a few minutes to complete (depending on the size of the image and the network connectivity between UForge and the target environment). The publication progress is shown. At the end of the publication, the machine image has been published by UForge to your target environment. The published image can be found in the target cloud environment or container.
 
-	.. note:: If your publication to AWS fails this may be due to your security settings. Your default security group for AWS must allow SSH. Contact your administrator.
+	.. note:: If your publication to AWS or Outscale fails with a message ``Unable to connect to proxy``, this may be due to your security settings on your AWS or Outscale account. Your default security group in your AWS or Outscale account must allow SSH from UForge AppCenter compute nodes. You may need to contact your administrator to obtain the IP addresses of the compute nodes in the case of a multi-node deployment of AppCenter.
 
 	UForge does not launch instances in the target cloud environment. If you wish to launch an instance from this machine image, you should go to your target cloud environment console for further actions.
 

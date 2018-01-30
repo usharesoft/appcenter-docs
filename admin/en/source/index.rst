@@ -1,5 +1,6 @@
 .. Copyright 2017 FUJITSU LIMITED
    
+.. _adminDoc-index:
 
 Welcome to UForge AppCenter Admin Documentation
 ===============================================

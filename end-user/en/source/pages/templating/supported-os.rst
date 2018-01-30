@@ -185,6 +185,8 @@ With UForge you can create machine images in the following formats.
 |                                     |   Nonmetered Service Offerings are not supported by   |
 |                                     |   UForge.                                             |
 +-------------------------------------+-------------------------------------------------------+
+| Outscale                            | none                                                  |
++-------------------------------------+-------------------------------------------------------+
 | SUSE Cloud                          | none                                                  |
 +-------------------------------------+-------------------------------------------------------+
 | VMware vCloud Director              | Supported hardware types:                             |

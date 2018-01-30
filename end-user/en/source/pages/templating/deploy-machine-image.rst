@@ -5,7 +5,7 @@
 Deploying a Machine Image
 --------------------------
 
-.. note:: Currently, only Linux machine images published on Amazon, OpenStack, Cloudstack and Microsoft Azure Resource Manager can be deployed from UForge. You cannot deploy a Windows based appliance.
+.. note:: Currently, Linux machine images published on Amazon, OpenStack, Cloudstack and Microsoft Azure Resource Manager can be deployed from UForge. For Windows based appliances deploy from UForge is supported only for the images published on Amazon.
 
 You can only deploy a machine image if you have AMP installed. For more information on installing AMP, refer to the official `Cloudsoft AMP documentation <https://docs.cloudsoft.io/>`_
 
@@ -43,7 +43,9 @@ For Amazon, only full accounts can be used, trial accounts are not supported for
 
 		.. image:: /images/machine-image-deploy-status.png
 
-	.. note:: All deployed virtual machines using this procedure will have ssh port (22) open in their security group.
+	.. note:: All deployed Linux virtual machines using this procedure will have ssh port (22) open in their security group.
+
+	.. note:: For Windows images, RDP port (3389) and WinRM port (5985) need to be opened in Firewall Settings.
 
 	.. note:: If you want to stop your deployment, you can do so by clicking on the delete (garbage) icon. This will stop it and remove the instance from your cloud.
 
@@ -66,7 +68,13 @@ If you click on the application name you will see the details of the instance th
 
 .. image:: /images/deployment-info.png
 
-If you click on the ``i`` next to the hostname, a popup will appear indicating the IP address, the user name and the SSH key (if any). An example code will also be given to connect to your instance.
+If you click on the ``i`` next to the hostname, a popup will appear indicating the IP address, the user name and some additional informations based on the operating system to show how to connect to that instance:
+
+For Linux instances the SSH key (if any) and an example code will also be given to connect to your instance.
 
 .. image:: /images/deployment-info-popup.png
+
+For Windows instances a link for downloading RDP file is provided:
+
+.. image:: /images/deployment-rdp-popup.png
 

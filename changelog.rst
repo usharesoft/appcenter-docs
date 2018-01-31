@@ -17,6 +17,8 @@ New Features
 		* This new feature is available under the "Migrations" tab. This tab already existed. This previous tab has been renamed "Scans".
 		* This feature is currently available for the following platforms : Fujitsu K5, Microsoft Azure, VMware vCenter, Openstack and SUSE Cloud.
 
+* Users can deploy Windows instances from published machine images to AWS.
+
 3.8.fp1
 -------
 

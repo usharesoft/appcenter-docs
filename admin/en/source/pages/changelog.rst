@@ -1,7 +1,52 @@
-.. Copyright 2017 FUJITSU LIMITED
+.. Copyright 2018 FUJITSU LIMITED
 
 Changelog
 =========
+
+3.7-9
+-----
+
+Release Date: 2018-01-31
+
+Upgrading
+~~~~~~~~~
+
+In order to upgrade UForge to this latest patch, please update the packages by launching the following commands on each node:
+
+1) Execute : ``yum update uforge-common``
+2) Then execute : ``yum update uforge-gen uforge uforge-client uforge-cli``
+
+
+A compatible version of hammr is also available : 3.7-9
+
+This version is only compatible with UForge AppCenter 3.7-9
+
+To install it, you will have to launch the following command::
+
+	$ pip install hammr==3.7.0.9
+
+Bug Fixes
+~~~~~~~~~
+
+* 8954 Ubuntu 14.04 generation fails with stack overflow error
+* 8953 Software bundles are not extracted in the correct directory
+* 8956 Ubuntu population is taking more than 1 day
+* 8913 generation does not finish if there are volume groups though it was cancelled or got an error
+* 8910 CPU usage of Dozer thread sticks to over 99% and never ends
+* 8472 cli commands "image list", "pimages list" and "template list" fail in some cases
+* 7997 UTC and ARC settings in ``/etc/sysconfig/clock`` has been changed during blackbox migration
+* 7996 Whitebox image generation failure with "non encrypted password" error.
+* 7915 Group name displayed in the logs of * scan binary.
+* 7754 ``/etc/gshadow`` has been changed during the blackbox migration
+* 7719 ``/etc/sysconfig/clock file`` is added in Blackbox and Whitebox migration
+* 7766 Generation of a migrated debian 8 fails (random)
+* 7734 Parameters in ``/etc/fstab`` has been changed during blackbox generation
+* 7324 The presence of a malformed filename causes the scan to hang badly (segmentation fault)
+* 7707 /etc/shadow lock and 'no password' options not taken into account during migration
+* 7677 'org repo delete' fails frequently and the error message is confusing
+* 7501 A letter ``'&'`` in comment field of ``/etc/passwd`` file changed to ``&amp;`` after migration
+* 7543 On Redhat-like systems, changes on files and directories in filesystem package are not taken into account by uforge-scan
+
 
 3.7-8
 -----

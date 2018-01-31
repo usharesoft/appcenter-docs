@@ -47,6 +47,8 @@ For Amazon, only full accounts can be used, trial accounts are not supported for
 
 	.. note:: For Windows images, RDP port (3389) and WinRM port (5985) need to be opened in Firewall Settings.
 
+	.. note:: For all deployed Windows virtual machines, if WinRM service is not enabled by default, then it will be activated during the deployment process.
+
 	.. note:: If you want to stop your deployment, you can do so by clicking on the delete (garbage) icon. This will stop it and remove the instance from your cloud.
 
 	.. warning:: Terminating an OpenStack deployment may fail due to `a known issue in AMP <https://issues.apache.org/jira/browse/JCLOUDS-1318>`_. Click again on the delete (garbage) icon to work around the issue.

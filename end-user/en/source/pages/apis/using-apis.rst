@@ -20,7 +20,7 @@ Communication with UForge is done via HTTP(S). For security reasons it is recomm
 
 API methods that require a particular HTTP method will return an error if you do not make your request with the correct one. All HTTP methods return codified response codes.
 
-For a complete list of all the REST interface, refer to the `REST APIs Reference documentation <apis:apis-index>`_.
+For a complete list of all the REST interface, refer to the :ref:`REST APIs Reference documentation <apis:apis-index>`.
 
 Response & Error Codes
 ----------------------
@@ -44,7 +44,7 @@ The following codes indicate a successful connection. The response may also incl
 
 Error Codes
 ~~~~~~~~~~~
-The 4xx codes are intended for cases where the client seems to have erred, and the 5xx codes for the cases where the server identifies that the server has erred. It is impossible to distinguish these cases in general, so the difference is only informational. The UForge platform will attempt to provide a detailed error message to help the client diagnose the problem.
+The 4xx codes are intended for cases where the client seems to have erred, and the 5xx codes for cases where the server identifies that the server has erred. It is impossible to distinguish these cases in general, so the difference is only informational. The UForge platform will attempt to provide a detailed error message to help the client diagnose the problem.
 
 * ``400 Bad Request``: The request has bad syntax or was inherently impossible to satisfy.
 * ``401 Unauthorized``: The request did not provide an acceptable authorization parameter. The client should retry the request with a suitable Authorization header.
@@ -77,12 +77,12 @@ Even though UForge accepts HTTP requests, it is highly recommended for security 
 The Request Headers
 ~~~~~~~~~~~~~~~~~~~
 
-UForge expects certain headers containing authentication information to be present as part of the URL request. UForge also accepts other header information, for example, to specify response content type and caching.
+UForge expects certain headers containing authentication information be present as part of the URL request. UForge also accepts other header information, for example, to specify response content type and caching.
 
 Request Example
 ~~~~~~~~~~~~~~~
 
-The following is an example of a request sent to an UForge platform with hostname ``10.0.0.20`` `using cURL
+The following is an example of a request sent to a UForge platform with hostname ``10.0.0.20`` `using cURL
 <http://curl.haxx.se/docs/manpage.html>`_ to get the user ``myUser``. Note that the response body (the user information) has been omitted here for clarity::
 
 	$ curl 'http://10.1.2.206/api/users/myUser?apiKey=XX8Bs2prKPdFrKH_i4rsW7WR0f4FQ05IO7A8vuQUoNDino-7513mmEDecIAzpeMwWXZvnyZ6W0bJTKBwwc&signature=3qD1oxLwOI321BJ1pDZ6Dzmqbac%3D' -H "Accept: application/xml" -v
@@ -111,7 +111,7 @@ The example illustrates the following:
 * a ``GET`` request is sent (cURL by default uses GET) on the resource: ``/users/myUser``
 * an API key is used in this case for authorization
 * the ``Accept header`` is being used to request that the response be sent in ``XML``.
-* the response header includes ``ETag`` and ``Last-Modified`` allowing cache validation and a conditional GET requests.
+* the response header includes ``ETag`` and ``Last-Modified`` allowing cache validation and a conditional GET request.
 
 Response Body Types
 -------------------
@@ -127,7 +127,7 @@ For example, to retrieve the user information in JSON, the following request is 
 
 	$ curl "http://10.1.2.206/api/users/guest" -X GET -u "guest:guest_password" -H "Accept: application/json"
 
-	.. note:: This example has used basic authentication (which is not advised).  Furthermore, the response body i.e. the user information has been omitted here for clarity.
+.. note:: This example uses basic authentication (which is not advised).  Furthermore, the response body i.e. the user information has been omitted here for clarity.
 
 
 Using the API Keys
@@ -182,7 +182,8 @@ Example::
 
 References: 
 
-	* API referenc: `user_get <apis:user-get>`_
+	* API reference: :ref:`user_get <apis:user-get>`
+
 
 .. _apis-rest-add-cloud-account:
 
@@ -223,8 +224,8 @@ The ``representation.xml`` content (the request body):
 
 References: 
 
-	* API reference: `cloudAccount_create <apis:cloudAccount-create>`_
-	* `CredAccount object <apis:credAccount-object>`_
+	* API reference: :ref:`cloudAccount_create <apis:cloudAccount-create>`
+	* :ref:`CredAccount object <apis:credAccount-object>`
 
 .. _apis-rest-get-appliances:
 
@@ -243,16 +244,16 @@ Example::
 
 References: 
 
-	* API resource `appliance_getAll <apis:appliance-getAll>`_
+	* API resource: :ref:`appliance_getAll <apis:appliance-getAll>`
 
 .. _apis-rest-create-appliance:
 
 Create an Appliance Template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-An Appliance Template contains the model of the software stack. The model includes all the operating system packages, middleware and application software for generating an image that can be provisioned on a virtual or cloud platform. To create an appliance template, you need to decide which operating system to build the template from, as well as the name and version.
+An appliance template contains the model of the software stack. The model includes all the operating system packages, middleware and application software for generating an image that can be provisioned on a virtual or cloud platform. To create an appliance template, you need to decide which operating system to build the template from, as well as the name and version.
 
-To create an Appliance Template, the following API resource is used:
+To create an appliance template, the following API resource is used:
 
 .. function:: POST /users/{uid}/appliances
 
@@ -279,8 +280,8 @@ The ``representation.xml`` content (the request body):
 
 References: 
 
-	* API resource `appliance_create <apis:appliance-create>`_
-	* `Appliance object <apis:appliance-object>`_
+	* API resource: :ref:`appliance_create <apis:appliance-create>`
+	* :ref:`Appliance object <apis:appliance-object>`
 
 .. _apis-rest-get-os-profiles:
 
@@ -300,20 +301,20 @@ Example::
 
 References: 
 
-	* API resource `osTemplate_getAll <apis:osTemplate-getAll>`_
-	* `OS Profile object <apis:distribProfile-object>`_
+	* API resource :ref:`osTemplate_getAll <apis:osTemplate-getAll>`
+	* :ref:`OS Profile object <apis:distribProfile-object>`
 
 .. _apis-rest-add-os-profile:
 
 Add an OS Profile to an Appliance Template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To add an OS profile (template) to an Appliance Template, firstly list all the OS profiles for the opertaing system (see :ref:`apis-rest-get-os-profiles`) and note down the ``name`` and ``URI`` of the profile you would like to add.  Then use the following API resource to add this OS profile:
+To add an OS profile (template) to an appliance template, first list all the OS profiles for the opertaing system (see :ref:`apis-rest-get-os-profiles`) and note the ``name`` and ``URI`` of the profile you would like to add.  Then use the following API resource to add this OS profile:
 
 .. function:: POST /users/{uid}/appliances/{aid}/osprofile
 
 	* ``uid``: is the login of the user
-	* ``aid``: the id of the appliance template where to add the os profile
+	* ``aid``: the id of the appliance template where the os profile will be added
 	* ``OS Profile``: OS profile to add to the appliance template (in the request body)
 
 Example (Linux)::
@@ -347,17 +348,17 @@ The ``distribprofile.xml`` content (the request body):
 
 References: 
 
-	* API resource `applianceOSProfile_create <apis:applianceOSProfile-create>`_
-	* `Appliance object <apis:appliance-object>`_
-	* `Linux OS Profile object <apis:linuxProfile-object>`_
-	* `Windows OS Profile object <apis:windowsProfile-object>`_
+	* API resource :ref:`applianceOSProfile_create <apis:applianceOSProfile-create>`
+	* :ref:`Appliance object <apis:appliance-object>`
+	* :ref:`Linux OS Profile object <apis:linuxProfile-object>`
+	* :ref:`Windows OS Profile object <apis:windowsProfile-object>`
 
 .. _apis-rest-add-os-pkg-search:
 
 Searching for Operating System Packages (Linux Only)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Registered Operating Systems in UForge have package repositories attached to them (Linux only).  You can search for packages in these repositories.  These packages can then be added to an Appliance's OS profile.  To search for packages, the following API resource is used:
+Registered Operating Systems in UForge have package repositories attached to them (Linux only).  You can search for packages in these repositories.  These packages can then be added to an appliance's OS profile.  To search for packages, the following API resource is used:
 
 .. function:: GET /distributions/{id}/pkgs
 
@@ -373,8 +374,8 @@ Example (retrieving all packages with the name ``nginx``)::
 
 References: 
 
-	* API resource `osPkg_getAll <apis:osPkg_getAll>`_
-	* `Package object <apis:package-object>`_
+	* API resource :ref:`osPkg_getAll <apis:osPkg-getAll>`
+	* :ref:`Package object <apis:package-object>`
 
 
 .. _apis-rest-add-os-pkg:
@@ -382,9 +383,9 @@ References:
 Adding a Package to an Appliance's OS Profile (Linux Only)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Once an Appliance Template has an OS profile, you can add or remove operating system packages to it.  To add one or more packages, you will need the URI of the packages(s) you wish to add.  You can :ref:`search for packages <apis-rest-add-os-pkg-search>` for packages to retrieve this information.
+Once an Appliance Template has an OS profile, you can add or remove operating system packages to it.  To add one or more packages, you will need the URI of the packages(s) you wish to add.  You can :ref:`search for packages <apis-rest-add-os-pkg-search>` to retrieve this information.
 
-Use the following API resource to add or remove these packages to the OS profile of an Appliance Template:
+Use the following API resource to add or remove these packages to the OS profile of an appliance template:
 
 .. function:: PUT /users/{uid}/appliances/{aid}/osprofile/{osid}/pkgs
 
@@ -418,21 +419,21 @@ Removing the same package, the ``pkg.xml`` content would be (the request body):
 
 References: 
 
-	* API resource `applianceOSProfilePkg_updateAll <apis:applianceOSProfilePkg-updateAll>`_
-	* `Package object <apis:package-object>`_
+	* API resource :ref:`applianceOSProfilePkg_updateAll <apis:applianceOSProfilePkg-updateAll>`
+	* :ref:`Package object <apis:package-object>`
 
 Adding Custom Software to an Appliance Template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Software components can also be added to an Appliance Template.  This is done in four stages:
+Software components can also be added to an appliance template.  This is done in four stages:
 
 	1. A software component container is created.  This is registered into your software library.
 
-	2. Create a software artifact container.  This is the meta-date container for an uploaded file
+	2. Create a software artifact container.  This is the meta-data container for an uploaded file.
 
 	3. Upload the software files into this software artifact container.
 
-	4. Add the software component to an appliance template.  Note, that this software component can be added to multiple appliance templates.
+	4. Add the software component to an appliance template.  Note that this software component can be added to multiple appliance templates.
 
 To create the software component container, use the following API resource:
 
@@ -460,7 +461,7 @@ Now we can create an artifact container.  To do this use the ``uri`` of the soft
 .. function:: POST /users/{uid}/mysoftware/{msid}/artifacts
 
 	* ``uid``: is the login of the user
-	* ``msid``: the id of the software compnent created
+	* ``msid``: the id of the software component created
 
 Example (uploading a RPM, but this can be any file type)::
 
@@ -486,10 +487,10 @@ The ``artifact.xml`` content (the request body):
 
 Now you can upload the binary.  Note down the ``binaryUri`` of the newly created artifact object.  This is the resource uri you use to upload the file:
 
-. function:: POST /users/{uid}/mysoftware/{msid}/artifacts/{said}/bin/{fileName}
+.. function:: POST /users/{uid}/mysoftware/{msid}/artifacts/{said}/bin/{fileName}
 
 	* ``uid``: is the login of the user
-	* ``msid``: the id of the software compnent created
+	* ``msid``: the id of the software component created
 	* ``said``: the id of the software artifact
 	* ``fileName`` (optional): The filename to upload
 
@@ -529,13 +530,13 @@ The ``appliancesoftware.xml`` content (the request body):
 
 References: 
 
-	* Create software component resource `mySoftware_create <apis:mySoftware-create>`_
-	* Create software artifact resource `mySoftwareArtifact_add <apis:mySoftwareArtifact-add>`_
-	* Upload a binary file `mySoftwareArtifact_upload <apis:mySoftwareArtifact-upload>`_
-	* Add software component to an appliance template `appliance_update <apis:appliance-update>`_
-	* `Software Component object <apis:mysoftware-object>`_
-	* `Software Artifact object <apis:softwareartifact-object>`_
-	* `Appliance object <apis:appliance-object>`_
+	* Create software component resource :ref:`mySoftware_create <apis:mySoftware-create>`
+	* Create software artifact resource :ref:`mySoftwareArtifact_add <apis:mySoftwareArtifact-add>`
+	* Upload a binary file :ref:`mySoftwareArtifact_upload <apis:mySoftwareArtifact-upload>`
+	* Add software component to an appliance template :ref:`appliance_update <apis:appliance-update>`
+	* :ref:`Software Component object <apis:mysoftware-object>`
+	* :ref:`Software Artifact object <apis:softwareartifact-object>`
+	* :ref:`Appliance object <apis:appliance-object>`
 
 Generate a Machine Image
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -568,8 +569,8 @@ The ``generateimage.xml`` content (the request body):
 
 References: 
 
-	* Generate a machine image `machineImage_generate <apis:machineImage-generate>`_
-	* `Machine Image object <apis:image-object>`_
+	* Generate a machine image :ref:`machineImage_generate <apis:machineImage-generate>`
+	* :ref:`Machine Image object <apis:image-object>`
 
 
 Publish/Register a Machine Image to a Cloud Environment
@@ -616,6 +617,6 @@ The ``publishimage.xml`` content (the request body):
 
 References: 
 
-	* Publish a machine image `machineImage_publish <apis:machineImage_publish>`_
-	* `Machine Image object <apis:image-object>`_
-	* `Publish Machine Image object <apis:publishimage-object>`_
+	* Publish a machine image :ref:`machineImage_publish <apis:applianceImage-publish>`
+	* :ref:`Machine Image object <apis:image-object>`
+	* :ref:`Publish Machine Image object <apis:publishimage-object>`

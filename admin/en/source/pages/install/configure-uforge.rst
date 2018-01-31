@@ -94,5 +94,9 @@ Configuring NTP
 
 Some cloud platforms will reject uploading machine images, if the HTTP request date is in the future of the target cloud platform.  To ensure proper function of UForge, please edit 'server' directives in ``/etc/ntp.conf`` if UForge servers cannot connect to NTP servers on the internet.
 
-.. warning:: If you want to contact NTP servers on the internet, then port 123 (UDP) should be opened on your firewall.
+.. note:: If you want to contact NTP servers on the internet, then port 123 (UDP) should be opened on your firewall.
+
+.. note:: If you have deployed UForge AppCenter and believe that ntp is not correctly setup, check if the log file ``/var/log/UShareSoft/oas-deploy/logs/deployment/UForgeDeploy.pl/latestOASlog/<IP ADDRESS OF NODE>/NodeSetup.pl_4.log`` contains the error: ``[OAS ERRR] Unable to configure ntpd service``.
+
+	If this is the case, make sure that you configure ntp with an ntp server accessible from your environment (UForge uses pool.ntp.org by default). Assuming this ntp server has FQDN accessible.ntp.server, then run the command: ``ntpdate accessible.ntp.server``
 

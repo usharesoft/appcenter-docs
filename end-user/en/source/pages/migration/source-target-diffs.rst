@@ -48,6 +48,10 @@ System Clock /etc/adjtime
 
 For Linux systems, the ``/etc/adjtime`` might be different between source and target systems.  The  Hardware Clock is usually not very accurate.  However, much of its inaccuracy is completely predictable - it gains or loses the same amount  of time every day.  This is called systematic drift.  The ``/etc/adjtime`` file keeps historical information on the clock's drift.  Changing hardware environments may change the contents of this file when hardware clock is adjusted (in many cases the kernel will automatically adjust the hardware clock periodically).
 
+Contents of /etc/fstab File
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Some differences may arise between the scanned server and the generated template in the contents of the ``/etc/fstab`` file. In particular, lines pertaining to NFS (Network FileSystem) mounts are not kept during a migration, because the machine images resulting from the migration would have to be instanciated on the same network as the source machine, with similar network parameters, which cannot always be the case. This also avoids the situations where the inability to mount an NFS share would prevent the (generated) server from booting.
 
 .. _service-state:
 
@@ -63,7 +67,7 @@ When generating a machine image from a scan, certain services are disabled or en
 If present, ``NetworkManager`` is enabled, otherwise ``network`` is enabled.
 If the user requested a firewall , services ``iptables`` or ``ip6tables`` will be enabled. Otherwise, ``iptables`` or ``ip6tables`` are always disabled.
 
-.. note:: ``NetworkManager`` is the name used by some operating systems which is the equivalent to ``network-manager``. The name ``network`` is used by some operating systems which is the equivalent to ``networking``.
+.. note:: ``NetworkManager`` is the name used by some operating systems which is equivalent to ``network-manager``. The name ``network`` is used by some operating systems which is equivalent to ``networking``.
 
 EC2 AMI Image
 
@@ -89,6 +93,6 @@ Microsoft Azure Image
 Red Hat vs CentOS Packages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In addition to the above, there are other minor differences between source and target instances after migration. If CentOS packages have been installed on a Red Hat server, with the same functionnality and the same version number as equivalent existing Red Hat packages, then after migration, these CentOS packages will be replaced by their Red Hat counterparts, because the vendor information present in RPM packages is not accounted for during migration: only the package name and version number are.
+In addition to the above, there are other minor differences between source and target instances after migration. If CentOS packages have been installed on a Red Hat server, with the same functionality and the same version number as equivalent existing Red Hat packages, then after migration, these CentOS packages will be replaced by their Red Hat counterparts, because the vendor information present in RPM packages is not accounted for during migration: only the package name and version number are.
 
 .. warning:: Installing non-RedHat packages on a RedHat server, or replacing Red Hat packages by CentOS packages, is strongly discouraged, because it voids the warranty. Red Hat can refuse support requests on a modified machine.

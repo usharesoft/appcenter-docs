@@ -3,6 +3,15 @@
 Changelog
 =========
 
+3.8.fp2
+-------
+
+Release Date: 2018-03-05
+
+New Features
+~~~~~~~~~~~~
+* Users can deploy Windows instances from published machine images to AWS.
+
 3.8.fp1
 -------
 

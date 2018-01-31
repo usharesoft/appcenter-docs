@@ -25,4 +25,5 @@ Once you have completed your changes, you will need to run the following command
    restrict-usage
    custo-css
    custo-platform
+   custo-dictionary
    custo-troubleshoot

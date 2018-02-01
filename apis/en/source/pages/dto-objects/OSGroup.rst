@@ -18,6 +18,8 @@ The list of attributes for ``osGroup`` are:
 	* ``sudo`` (int): a flag to configure sudoers parameters (0 : no sudo, 1: sudo, 2: sudo without password)
 	* ``systemGroup`` (boolean): flag to determine if this is a system group
 	* ``uri`` (anyURI): the uri resource of this group object
+	* ``password`` (string): the group password
+	* ``encrypted`` (boolean): boolean indicating that the password string is encrypted
 	* ``created`` (dateTime): the date the appliance template is created
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)

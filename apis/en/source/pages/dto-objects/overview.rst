@@ -53,6 +53,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`credaccountvsphere-object`
 	* :ref:`credaccountk5-object`
 	* :ref:`credaccountdocker-object`
+	* :ref:`credaccountoracle-object`
 	* :ref:`deployment-object`
 	* :ref:`deployments-object`
 	* :ref:`disk-object`
@@ -135,6 +136,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`publishimagevsphere-object`
 	* :ref:`publishimagek5-object`
 	* :ref:`publishimagedocker-object`
+	* :ref:`publishimageoracle-object`
 	* :ref:`publishimages-object`
 	* :ref:`quota-object`
 	* :ref:`quotas-object`
@@ -259,6 +261,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     CredAccountVSphere
     CredAccountK5
     CredAccountDocker
+    CredAccountOracle
     Deployment
     Deployments
     Disk
@@ -341,6 +344,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     PublishImageVSphere
     PublishImageK5
     PublishImageDocker
+    PublishImageOracle
     PublishImages
     Quota
     Quotas

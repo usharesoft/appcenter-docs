@@ -19,7 +19,7 @@ The UForge platform can be deployed on physical machines or in a virtualized or 
 
 .. image:: /images/UForge-architecture_2.jpg
 
-**UForge Server.** The UForge Server is a RESTful (Representational State Transfer) web service built on top of Java and using the JSR-311 reference implementation (project Jersey).  UForge Server is based on the design principles of REST and Resource Orientated Architecture (ROA).  Resources are references with a unique global identifier (URI).  UForge Server uses the semantics of the HTTP protocol to manipulate these resources. The HTTP response codes are used to determine whether a user's request was treated successfully or not.
+**UForge Server.** The UForge Server is a RESTful (Representational State Transfer) web service built on top of Java and using the JSR-311 reference implementation (project Jersey).  UForge Server is based on the design principles of REST and Resource Oriented Architecture (ROA).  Resources are references with a unique global identifier (URI).  UForge Server uses the semantics of the HTTP protocol to manipulate these resources. The HTTP response codes are used to determine whether a user's request was treated successfully or not.
 
 Information is returned to the client in either XML or JSON, depending on the ``Accept-Type`` header attribute used by the client.  If no ``Accept-Type`` header is provided, XML is returned by default.
 To ensure security, communication with the UForge Server is done via HTTPS.

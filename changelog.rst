@@ -11,7 +11,9 @@ Release Date: 2018-01-22
 New Features
 ~~~~~~~~~~~~
 * Users can deploy Linux instances from published machine images to Apache CloudStack.
-* Support for Debian 9 "stretch".
+* SLES 11 and 12 operating system supported for all features (templating and migration)
+* OpenSUSE 42.x operating system supported for all features (templating and migration)
+* Debian 9 (Stretch) operating system supported for all features (templating and migration)
 * Fujitsu Cloud Service K5 jp-east-2 region is supported.
 
 Enhancements
@@ -19,6 +21,7 @@ Enhancements
 * The uforge-sync binary now requires the API endpoint, to improve usability.
 * Enhance UI headers for Apps and Migration tab.
 * Add French internationalization.
+
 
 Bug Fixes
 ~~~~~~~~~

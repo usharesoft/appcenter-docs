@@ -32,3 +32,10 @@ To install UForge from the ISO image:
 	
 For a multi-node installation, repeat these steps for every physical or VM instance you want to install.  
 The installation phase is complete, you are now ready to configure the UForge AppCenter, see :ref:`configure-uforge`.
+
+Post-Installation Cleanup
+-------------------------
+
+To finalize the deployment phase, you should remove all the bits that helped to complete the deployment of UForge. To do so, run the following command on all the nodes composing the platform::
+
+	yum erase -y uforge-deploy uforge-studio-common-libs uforge-studio-runtime uforge-studio-perl uforge-studio-java-jre uforge-studio-php uforge-studio-tcl uforge-studio-lighttpd

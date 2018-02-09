@@ -6,14 +6,11 @@ Changelog
 3.8.fp1
 -------
 
-Release Date: 2018-01-22
+Release Date: 2018-02-01
 
 New Features
 ~~~~~~~~~~~~
 * Users can deploy Linux instances from published machine images to Apache CloudStack.
-* SLES 11 and 12 operating system supported for all features (templating and migration)
-* OpenSUSE 42.x operating system supported for all features (templating and migration)
-* Debian 9 (Stretch) operating system supported for all features (templating and migration)
 * Fujitsu Cloud Service K5 jp-east-2 region is supported.
 
 Enhancements
@@ -42,7 +39,6 @@ Bug Fixes
 * 7275 Error message does not include any information when publish to AWS failed.
 * 7284 Directories/files changed during blackbox migration
 * 7416 Packages of custom repo still visible even after repo detach
-* 7422 Windows automatically shuts down after being instantiated on AWS.
 * 7423 The UI view for searching and adding an OS package to a template shows too many versions
 * 7659 Blackbox migration of CentOS7.2 on fresh forge failed "Detaching loop"
 * 7680 /etc/sysconfig/clock file is added in Blackbox and Whitebox migration
@@ -54,10 +50,8 @@ Bug Fixes
 * 7747 The field for disk size at generation for AWS should be in GiB
 * 7748 Unsupported AWS region are displayed in the publish view (cn-north-1, us-gov-west-1)
 * 7758 UForge cli takes minutes to manipulate repositories
-* 7785 Scan on CentOS 7.4 with LVM fails silently and causes generation error.
 * 7819 uforge-sync does not resolve fully qualified names for AppCenter endpoint
 * 7869 Enabled Firewall  becomes disabled after Scan and Import
-* 7904 Publishing a Docker image fails in slow network environment
 * 7935 uforge-scan output is not proper english
 * 7940 Version of uforge-scan is not consistent with version of UForge platform it has been downloaded from
 * 8054 "UForge critical error" e-mail is sent after a successful scan import
@@ -65,26 +59,18 @@ Bug Fixes
 * 8062 Publishing a compressed image failed on OpenStack
 * 8063 UForge update logs show WELD "Exception in thread"
 * 8064 Software bundles are not extracted in the correct directory
-* 8072 UNIX group ID is not taken into account when import a template
 * 8076 "500 call failed error" when uploading a boot script to a project catalog
 * 8097 VMware vCenter publish fails in multiple vlan/vnic environment
 * 8102 Display explicit error message when template has no partition
 * 8146 Typo in Artifact account in the creation page
 * 8180 Folders where VMware vCenter templates will be published are changed randomly
-* 8189 Scan of CentOS 7 fails with message "Unable to rebuild package dialog 1.2 x86_64"
 * 8192 OpenStack generation from scan fails with message Installed packages more than expected (240 > 237)
 * 8214 When moving from Name to Version with the tab key, the Version box becomes red (error)
 * 8306 Export, Import and Scan features does not work when UForge user login contains '@'
-* 8321 Image generation of a CentOS 6.7 scan from ISO fails in grub installation
 * 8322 Publishing a compressed image failed on VMware vCenter
 * 8326 The order of NICs is changed by exporting/importing a template appliance
-* 8346 Update error message about RHEL not supported for K5 in UForge
-* 8417 Windows image generation from a legacy golden fails without displaying the Details if required disk is too small
-* 8433 Name and downloadId missing in the download URL for appliances generated from a template
 * 8476 uforge-cli command template info throws AttributeError: NoneType for Windows Appliances
-* 8512 Generation does not finish if there are volume groups though it was cancelled or got an error
 * 8649 Only one architecture of an OS package is kept when there were multiple in the imported template
-* 8655 Estimated size of Windows templates is 0 B
 * 8889 uforge-cli command template info throws AttributeError for Windows Appliances
 * 8898 Publish on OVH Openstack does not work
 
@@ -95,6 +81,43 @@ Known issues
 Compatibility issues
 ~~~~~~~~~~~~~~~~~~~~
 * The import / export of appliance templates from UForge 3.7 to UForge 3.8 may not work if the template contains software bundles. Please refer to this section :ref:`appliance-update-37-import` to make your template compatible.
+
+
+3.8
+---
+
+Release Date: 2018-02-01
+
+New Features
+~~~~~~~~~~~~
+
+* SLES 11 and 12 operating system supported for all features (templating and migration)
+* OpenSUSE 42.x operating system supported for all features (templating and migration)
+* Debian 9 (Stretch) operating system supported for all features (templating and migration)
+
+For other features, please refer to 3.7.fp8 release notes
+
+
+Bug Fixes
+~~~~~~~~~
+
+* 8656 Estimated size of Windows templates is 0 B
+* 8653 Generation fails for an imported Windows template built on a "Scan To Golden" profile
+* 8578 Generation does not finish if there are volume groups though it was cancelled or got an error
+* 8577 Image generation of a CentOS 6.7 scan from ISO fails in grub installation
+* 8507 Update error message about RHEL not supported for K5 in UForge
+* 8505 Publishing a Docker image fails in slow network environment
+* 8501 Export, import and scan features do not work when UForge user login contains ``@``
+* 8486 Image generated from a CentOS 7.1 scan from ISO fails to boot showing the grub shell
+* 8499 UNIX group ID is not taken into account when import a template
+* 8437 Name and downloadId missing in the download URL for appliances generated from a template
+* 8417 Windows image generation from a legacy golden fails without displaying the details if required disk is too small
+* 8309 Windows automatically shuts down after being instantiated on AWS
+* 8270 Scan of CentOS 7 fails with message ``Unable to rebuild package dialog 1.2 x86_64`` on 3.8 
+* 8094 Whitebox image generation failure with ``non encrypted password`` error
+* 8078 Add arch selection, in order to allow install of package with multiple architectures
+* 7831 Scan on CentOS 7.4 with LVM fails silently and causes generation error
+
 
 3.7.fp8
 -------

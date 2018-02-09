@@ -6,7 +6,7 @@ Changelog
 3.8.fp1
 -------
 
-Release Date: 2018-01-22
+Release Date: 2018-02-01
 
 New Features
 ~~~~~~~~~~~~

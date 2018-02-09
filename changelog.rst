@@ -1,7 +1,77 @@
-.. Copyright 2017 FUJITSU LIMITED
+.. Copyright 2018 FUJITSU LIMITED
 
 Changelog
 =========
+
+3.8-1
+-----
+
+Release Date: 2018-02-10
+
+Bug Fixes
+~~~~~~~~~
+
+* 9087 Folders where vCenter templates will be published are changed randomly
+* 9086 Files permissions changes after blackbox migration
+* 9076 UForge cli takes minutes to manipulate repositories
+* 8614 [RHEL7/CentOS7] ``/boot/grub2/device.map`` is cleared during Blackbox/Whitebox Migration
+* 9023 Software bundles are not extracted in the correct directory
+* 8411 Ubuntu 14.04 generation fails with stack overflow error
+* 8955 Ubuntu population is taking more than 1 day
+* 8726 Review and fix Java options in ``services_conf.json``
+* 8843 Docker publishing cannot be canceled
+* 8874 CPU usage of Dozer thread sticks to over 99% and never ends
+* 8875 ``user enable`` uforge-cli command always resets password
+* 8920 Add scan import to golden cancel webservice
+* 8754 uforge-cli command template info throws ``AttributeError`` for Windows Appliances
+* 8866 Despite deleting the golden images, the files of the golden image are not deleted in the file system
+* 8923 Publish on OVH Openstack does not work
+* 8848 ComboBox in portal appears empty after selection with firefox
+* 8720 Scanning CentOS 6 generated with UForge results in an error
+* 8744 Disk usage increases when uploading twice the same file for limited quota user
+* 8502 Publishing a compressed image failed on VMware vCenter
+* 8749 uforge-cli command ``template info`` throws ``AttributeError: NoneType`` for Windows Appliances
+* 8734 Display explicit error message when template has no partition
+* 8755 ``InstallProfile`` file is deleted by ``cleanup_tickets.sh``
+* 8337 Order of nics lost on appliance import
+* 8063 UForge update logs show ``WELD Exception in thread``
+
+
+3.8
+---
+
+Release Date: 2018-02-01
+
+New Features
+~~~~~~~~~~~~
+
+* SLES 11 and 12 operating system supported for all features (templating and migration)
+* OpenSUSE 42.x operating system supported for all features (templating and migration)
+* Debian 9 (Stretch) operating system supported for all features (templating and migration)
+
+For other features, please refer to 3.7.fp8 release notes
+
+
+Bug Fixes
+~~~~~~~~~
+
+* 8656 Estimated size of Windows templates is 0 B
+* 8653 Generation fails for an imported Windows template built on a "Scan To Golden" profile
+* 8578 Generation does not finish if there are volume groups though it was cancelled or got an error
+* 8577 Image generation of a CentOS 6.7 scan from ISO fails in grub installation
+* 8507 Update error message about RHEL not supported for K5 in UForge
+* 8505 Publishing a Docker image fails in slow network environment
+* 8501 Export, import and scan features do not work when UForge user login contains ``@``
+* 8486 Image generated from a CentOS 7.1 scan from ISO fails to boot showing the grub shell
+* 8499 UNIX group ID is not taken into account when import a template
+* 8437 Name and downloadId missing in the download URL for appliances generated from a template
+* 8417 Windows image generation from a legacy golden fails without displaying the details if required disk is too small
+* 8309 Windows automatically shuts down after being instantiated on AWS
+* 8270 Scan of CentOS 7 fails with message ``Unable to rebuild package dialog 1.2 x86_64`` on 3.8 
+* 8094 Whitebox image generation failure with ``non encrypted password`` error
+* 8078 Add arch selection, in order to allow install of package with multiple architectures
+* 7831 Scan on CentOS 7.4 with LVM fails silently and causes generation error
+
 
 3.7.fp8
 -------

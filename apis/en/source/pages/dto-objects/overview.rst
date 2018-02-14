@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2017 FUJITSU LIMITED
 
 .. _dto-objects:
 
@@ -69,6 +69,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`gallerytemplates-object`
 	* :ref:`gallerytemplatestat-object`
 	* :ref:`gallerytemplatestatistics-object`
+	* :ref:`generationstage-object`
 	* :ref:`image-object`
 	* :ref:`imageformat-object`
 	* :ref:`imageformats-object`
@@ -91,6 +92,9 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`logo-object`
 	* :ref:`membership-object`
 	* :ref:`memberships-object`
+	* :ref:`migration-object`
+	* :ref:`migrations-object`
+	* :ref:`migrationstage-object`
 	* :ref:`milestone-object`
 	* :ref:`milestones-object`
 	* :ref:`mysoftware-object`
@@ -114,11 +118,13 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`partition-object`
 	* :ref:`partitions-object`
 	* :ref:`partitiontable-object`
+	* :ref:`pipeline-object`
 	* :ref:`package-object`
 	* :ref:`pkggroup-object`
 	* :ref:`packages-object`
 	* :ref:`project-object`
 	* :ref:`projects-object`
+	* :ref:`publicationstage-object`
 	* :ref:`publishimage-object`
 	* :ref:`publishimageabiquo-object`
 	* :ref:`publishimageaws-object`
@@ -162,6 +168,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`scannedpackage-object`
 	* :ref:`scannedpackages-object`
 	* :ref:`scans-object`
+	* :ref:`scanstage-object`
 	* :ref:`scanstats-object`
 	* :ref:`scansummary-object`
 	* :ref:`scansummarylight-object`
@@ -176,6 +183,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`softwarefiles-object`
 	* :ref:`sshkey-object`
 	* :ref:`sshkeys-object`
+	* :ref:`stage-object`
 	* :ref:`statdatapoint-object`
 	* :ref:`statdatapoints-object`
 	* :ref:`statticket-object`
@@ -277,6 +285,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     GalleryTemplates
     GalleryTemplateStat
     GalleryTemplateStatistics
+    GenerationStage
     Image
     ImageFormat
     ImageFormats
@@ -299,6 +308,9 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     Logo
     Membership
     Memberships
+    Migration
+    Migrations
+    MigrationStage
     Milestone
     Milestones
     MySoftware
@@ -322,11 +334,13 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     Partition
     Partitions
     PartitionTable
+    Pipeline
     Pkg
     PkgGroup
     PkgList
     Project
     Projects
+    PublicationStage
     PublishImage
     PublishImageAbiquo
     PublishImageAws
@@ -370,6 +384,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     ScannedPkg
     ScannedPkgs
     Scans
+    ScanStage
     ScanStats
     ScanSummary
     ScanSummaryLight
@@ -384,6 +399,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     SoftwareFiles
     SSHKey
     SSHKeys
+    Stage
     StatDataPoint
     StatDataPoints
     StatTicket

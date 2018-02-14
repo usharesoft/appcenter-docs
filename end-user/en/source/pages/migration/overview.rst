@@ -5,9 +5,14 @@
 Migrating Live Workloads
 ========================
 
-UForge AppCenter offers the capability to migrate a live system. UForge Migration will "deep scan" a live system and report back the meta-data of every file and package that makes up the running workload. It also allows you to change or add individual components prior to the final migration.
+UForge AppCenter offers the capability to migrate a live system using two different methods:
 
-The following sub-sections describe in detail the scan steps and the differences between black box and white box migration:
+* using ``Scans``. In this case there are three steps to migration: scan, generate and publish. Each step is done seperately by the user. When using scan to migrate, you can modify the appliance prior to the final migration.
+* using ``Migration``. This automated process is only possible for Linux and certain target platforms.
+
+In both cases, UForge will "deep scan" a live system and report back the meta-data of every file and package that makes up the running workload.
+
+The following sub-sections describe in detail the different steps, requirements and limitations of ``Scans`` and ``Migrations``:
 
 .. toctree::
    :maxdepth: 1
@@ -18,4 +23,5 @@ The following sub-sections describe in detail the scan steps and the differences
    migration-details
    scanning
    scan-view
+   automatic-migration
    source-target-diffs

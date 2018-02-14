@@ -9,16 +9,16 @@ You can create an appliance template from a scan. Once you create an appliance t
 
 To create an appliance template from a scan:
 
-From the ``Migration`` tab:
-	1. Go to ``My Scans``.
-	2. Select the ``import`` button (downward arrow) to create an appliance template from the scan. The following example is for Linux, but you can also import a Windows scan.
+From the ``Scans`` tab:
+	1. Click on the scan from which you want to generate an image.
+	2. Select the ``import`` button (downward arrow) at the top right to create an appliance template from the scan. The following example is for Linux, but you can also import a Windows scan.
 
 	.. note:: If you have administrator rights, for a Windows scan you can choose to import as appliance or import scan as a golden image. For more information, refer to the Admin guide.
 
-	.. image:: /images/scan-import.png
+	.. image:: /images/scan-import2.png
 
 	3. Enter the appliance name and version.
-	4. Click ``import``.
+	4. Click ``import``. The progress will be shown under the ``Imports`` tab. Once complete you can find the appliance also under the ``Apps`` tab, under ``Imported Appliances``.
 
 You can now generate a machine image and share it, as you would any other appliance template.
 

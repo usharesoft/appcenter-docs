@@ -14,7 +14,7 @@ In order to create a Golden Image from scan:
 	1. Install and configure Windows. For more information refer to :ref:`first-windows-install`.
 	2. Install and configure applications.
 	3. Scan a Windows machine.
-	4. On the ``Migration`` page, select the scan you want to use as the base for your golden image.
+	4. On the ``Scans`` page, select the scan you want to use as the base for your golden image.
 	5. Click on the ``import`` button.
 	6. Select ``import as golden image in your organization`` from the pop-up window and click ``import``.
 
@@ -39,4 +39,4 @@ To delete a golden image you created from scan:
 
 	.. image:: /images/delete-golden.png
 
-.. note:: From the ``Golden Images`` tab on the ``Migration`` page you also have an option to delete. However, this does not delete the golden image from UForge, only the metadata. Therefore, when you want to create an appliance, the golden image will still appear under the OS Profile list.
+.. note:: From the ``Golden Images`` tab on the ``Scans`` page you also have an option to delete. However, this does not delete the golden image from UForge, only the metadata. Therefore, when you want to create an appliance, the golden image will still appear under the OS Profile list.

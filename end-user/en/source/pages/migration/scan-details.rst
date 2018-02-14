@@ -12,15 +12,21 @@ Linux-based
 
 To view the details of a scanned Linux-based instance:
 
-	1. Go to the ``Migration`` tab and click ``My Scans``.
-	2. Click on the scan. All of the packages and non-native files will be listed.
+	1. Go to the ``Scans`` tab.
+	2. Click on the scan to view the details. 
 
-	.. image:: /images/scan-details.png
+	.. image:: /images/scan-view-details.png
 
-	3. You can also filter the packages that have been modified (UForge AppCenter compares the packages scanned with its repo) by checking ``Only show the packages with changes``.
-	4. To view the more details of a package, click on the package name and then the arrow.
+	3. All of the packages and non-native files are listed under the ``Packages`` tab.
+
+	.. image:: /images/scan-packages.png
+
+	4. You can also filter the packages that have been modified (UForge AppCenter compares the packages scanned with its repo) by checking ``Only show the packages with changes``.
+	5. To view the more details of a package, click on the package name and then the arrow.
 
 	.. note:: The number of packages between your scanned system and the one in UForge AppCenter will differ for several reasons. First, if you had more than 1 kernel only 1 is imported into UForge AppCenter. Also, UForge AppCenter adds files for install configuration and install profile.
+
+	6. From this page you can now import as appliance (:ref:`migration-scan-import`) or generate an image (:ref:`migration-scan-generate`).
 
 Windows-based
 ~~~~~~~~~~~~~
@@ -29,8 +35,8 @@ Windows-based
 
 To view the details of a scanned Windows-based instance:
 
-	1. Go to the ``Migration`` tab and click ``My Scans``.
-	2. Click on the scan.
+	1. Go to the ``Scans`` tab.
+	2. Click on the scan to view the details.
 	3. To view the Windows applications, go to the ``Applications`` tab.
 
 	.. image:: /images/scan-windows-applications.png

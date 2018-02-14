@@ -2,8 +2,8 @@
 
 .. _migration-process-details:
 
-Migration Process In Detail
----------------------------
+Migration Using Scan Process
+----------------------------
 
 The entire migration process has 5 main steps.  These are:
 
@@ -12,6 +12,11 @@ The entire migration process has 5 main steps.  These are:
 	3. The results are used to build an archive. The extra files are only included in the archive if the user is performing a scan with overlay. The archive is sent back to the platform.
 	4. The archive is uncompressed, and the information is stored in the database as a ``Scan``.
 	5. The scan can be used to generate machine images (black box migration) or imported to create a new appliance template (white box migration). The generated machine image can then be published to the target environment and instances can be provisioned.
+
+.. _migration-prereq:
+
+Migration Pre-requisites
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 In order to migrate a system, it must meet the following conditions:
 
@@ -100,10 +105,10 @@ Once the image is generated, it is possible to push it to a remote environment. 
 
 .. _migration-process-import:
 
-Import to an Appliance Template (Whitebox Migration)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Import Scan to an Appliance Template
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-At this stage, the scan is used to create a new appliance template.  This allows you to change and modify the contents of the machine that has been scanned.
+Once complete, the scan can be used to create a new appliance template.  This allows you to change and modify the contents of the machine that has been scanned.
 
 The process of importing:
 

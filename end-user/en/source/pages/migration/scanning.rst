@@ -28,7 +28,7 @@ Scanning a Linux Machine
 .. warning:: When scanning a Linux machine, you have to check whether the licenses of OS and software which the source machine contains allow you to use them on the destination server which you are migrating to. For more detail, refer to :ref:`notes-on-licensing`.
 
 
-To carry out a scan, go to the ``Migration`` tab:
+To carry out a scan, go to the ``Scans`` tab:
 
 	1. Click on ``scan`` in the top right.
 	2. Enter a name for the scan of the target system you want to migrate.
@@ -60,7 +60,7 @@ To carry out a scan, go to the ``Migration`` tab:
 
 		.. note:: The ``-n`` option to indicate the scan name is mandatory. If a scan with this name already exists, the scan will be grouped under this name.
 
-	11. A report is sent to UForge AppCenter which can be used for migration. To view the progress, go back to the ``Migration`` tab and click ``ok``.
+	11. A report is sent to UForge AppCenter which can be used for migration. To view the progress, go back to the ``Scans`` page.
 
 	.. note:: The duration of the scan depends on: 
 
@@ -71,6 +71,7 @@ To carry out a scan, go to the ``Migration`` tab:
 		Scans of typical simple target environments can last about 5 to 15 minutes. In the case of larger and more complex target environments, together with poorer bandwidth, one can experience durations of up to one hour.
 
 	12. To view the details of a scan, click on the scan and refer to :ref:`migration-view-scan`.
+	13. To complete your migration, you will need to generate a machine image and publish it. Refer to :ref:`migration-scan-generate`.
 
 .. note:: Image generation will fail when migrating if the source server has the same LVM volume group name as the UForge server's one. It will fail also if the volume group name set in the Partitioning Table is the same as the name of LVM volume group in UForge server.
 
@@ -94,7 +95,7 @@ Scanning a Microsoft Windows Machine
 
 	For more detailed information, please refer to `official Fujitsu K5 IaaS Documentation <http://www.fujitsu.com/uk/Images/k5-iaas-features-handbook.pdf>`_.
 
-To carry out a scan, go to the ``Migration`` tab:
+To carry out a scan, go to the ``Scans`` tab:
 
 	#. Click on ``scan`` in the top right.
 	#. Enter a name for the scan of the target system you want to migrate.
@@ -109,7 +110,7 @@ To carry out a scan, go to the ``Migration`` tab:
 
 		Use the ``-e`` option if you want to exclude certain files or directories from the scan. Use ``-E`` option if you want to exclude a harddisk.
 
-	#. You can then launch the scan. The following image illustrates a windows scan with all of the possible options checked. They are described in the following steps.
+	#. You can then launch the scan. The following image illustrates a Windows scan with all of the possible options checked. They are described in the following steps.
 
 		.. image:: /images/migration-scan-windows2.png
 
@@ -117,7 +118,7 @@ To carry out a scan, go to the ``Migration`` tab:
 
 	#. If you want to set up a proxy, check ``Proxy authentication required`` and enter the proxy information.
 
-	#.  Fill in the Scanned Instance Name
+	#.  Fill in the ``Scanned Instance Name``.
 
 		.. note:: Scan name can be mix of alphanumeric characters, spaces and the following special characters `._-` all other characters are not supported at this time.
 
@@ -127,6 +128,8 @@ To carry out a scan, go to the ``Migration`` tab:
 
 	#. If you want to exclude certain directories or files from the scan then click ``add`` and enter the directory path or full pathname of the file.
 
-	#. Click ``scan`` to launch the scan. A report is sent to UForge AppCenter which can be used for migration. To view the progress, go back to the ``Migration`` tab and click ``ok``.
+	#. Click ``scan`` to launch the scan. A report is sent to UForge AppCenter which can be used for migration. To view the progress, go back to the ``Scans`` page.
 
 	#. To view the details of a scan, click on the scan and refer to :ref:`migration-view-scan`.
+
+	#. To complete your migration, you will need to generate a machine image and publish it. Refer to :ref:`migration-scan-generate`.

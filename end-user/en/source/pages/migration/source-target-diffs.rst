@@ -5,7 +5,7 @@
 Differences between Source and Target Instances
 -----------------------------------------------
 
-The goal of blackbox migration is to create an "identical" copy of the source system and run it on a new target environment.  The word identical though is slightly misleading, as there are small differences that must be carried out to ensure the migrated system correctly boots and runs on the target environment.  This section highlights these differences.
+The goal of migration is to create an "identical" copy of the source system and run it on a new target environment.  The word identical though is slightly misleading, as there are small differences that must be carried out to ensure the migrated system correctly boots and runs on the target environment.  This section highlights these differences.
 
 
 IP Address and MAC Addresses
@@ -13,7 +13,7 @@ IP Address and MAC Addresses
 
 When a live machine is scanned the networking is treated differently depending on whether the IP address is static or DHCP.
 
-	* Static IP Addresses: We keep the current information detected during the scan. During the generation phase, this networking information is also kept. Consequently, the new machine instance has the same static IP address set.  If you require to change the static IP address, then the current recommendation is to use white box migration. By importing the scan report into an appliance template, you will have access to the ``Install Profile`` allowing you to change NIC settings prior to the generation process.
+	* Static IP Addresses: UForge keeps the information detected during the scan. During the generation phase, this networking information is also kept. Consequently, the new machine instance has the same static IP address set.  If you need to change the static IP address, then you should refer to Advanced Migration procedure. By importing the scan report into an appliance template, you will have access to the ``Install Profile`` allowing you to change NIC settings prior to the generation process.
 
 	* Dynamic (DHCP) IP Addresses: In this case, the operating system resets the networking information at boot time. When the new machine instance is provisioned, the instance will send a request to the local cloud DHCP service to get a new IP address.
 

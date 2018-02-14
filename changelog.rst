@@ -3,6 +3,20 @@
 Changelog
 =========
 
+3.8.fp2
+-------
+
+Release Date: 2018-03-05
+
+New Features
+~~~~~~~~~~~~
+* The migration process (scan, generate and publish) can now be automated by using a simple and intuitive work-flow in the user interface. The user simply creates a new migration through the interface, launches it from the server to migrate and follows the overall status.
+
+	.. note::
+
+		* This new feature is available under the "Migrations" tab. This tab already existed. This previous tab has been renamed "Scans".
+		* This feature is currently available for the following platforms : Fujitsu K5, Microsoft Azure, VMware vCenter, Openstack and SUSE Cloud.
+
 3.8.fp1
 -------
 

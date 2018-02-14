@@ -7,7 +7,7 @@ Managing Cloud Accounts
 
 In order to publish an image to a cloud using UForge AppCenter, you will need to add your cloud credentials to UForge. You must have a cloud account prior to setting up your credentials on the platform. Have all the information for your cloud account on hand before starting.
 
-.. note:: If you are an Amazon IAM user you will need to generate an X.509 Certificate following `these instructions <http://www.dowdandassociates.com/blog/content/howto-generate-an-x-dot-509-certificate-for-an-amazon-iam-user/>`_ prior to creating your Microsoft Azure classic cloud account on UForge.
+		.. note:: If you are an Amazon IAM user you will need to generate an X.509 Certificate following `these instructions <http://www.dowdandassociates.com/blog/content/howto-generate-an-x-dot-509-certificate-for-an-amazon-iam-user/>`_ prior to creating your Amazon cloud account on UForge.
 
 	1. Go to the ``Credentials`` tab in the left-hand sidebar.
 	2. Go to ``Cloud Account``.
@@ -17,7 +17,7 @@ In order to publish an image to a cloud using UForge AppCenter, you will need to
 
 	4. Scroll over any given field for more information on the mandatory information to provide for a given cloud account.
 
-	.. note:: In order to set up the credentials for an Amazon ARM account, there are a number of steps you must complete first. For more information refer to :ref:`azure-account`.
+	.. note:: In order to set up the credentials for an Microsoft ARM account, there are a number of steps you must complete first. For more information refer to :ref:`azure-account`.
 
 	5. Click ``Create`` to complete.
 
@@ -26,7 +26,7 @@ In order to publish an image to a cloud using UForge AppCenter, you will need to
 Setting up a Microsoft Azure Resource Manager Account
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you want to publish images to Microsoft ARM, you must first set up the correct Azure ARM credentials in UForge. To do so, first, from your Microsoft Azure account you will need to:
+If you want to publish images to Microsoft ARM, you must first set up the correct Microsoft ARM credentials in UForge. To do so, first, from your Microsoft Azure account you will need to:
 
 	1. Create an Azure Active Directory application (as described in the `official Microsoft Azure documentation related to Azure Active Directory creation <https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal#create-an-azure-active-directory-application>`_).
 	2. Get the subscription ID from your Microsoft Azure account.

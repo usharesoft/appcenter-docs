@@ -148,8 +148,6 @@ With UForge you can create machine images in the following formats.
 +-------------------------------------+-------------------------------------------------------+
 | Amazon AWS                          | none                                                  |
 +-------------------------------------+-------------------------------------------------------+
-| Azure Resource Manager              | Ubuntu <= 12.04 not supported                         |
-+-------------------------------------+-------------------------------------------------------+
 | Cloudstack                          | Target formats:                                       |
 |                                     | CloudStack VMWare (OVA)                               |
 |                                     | CloudStack Citrix Xen (VHD)                           |

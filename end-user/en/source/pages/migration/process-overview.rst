@@ -2,10 +2,10 @@
 
 .. _migration-process-overview:
 
-Migration Process Overview
---------------------------
+Migrating Using Scan Overview
+-----------------------------
 
-To migrate a live workload to a new target environment, you first copy the uforge-scan binary to the target environment and launch the binary.  This binary analyzes the live system and sends back a report. You can select two types of scan: scan or scan with overlay. A scan will scan the target environment, but will only return the system packages and configuration known to UForge. A scan with overlay will include an overlay report which details all the extra files, packages or specific configuration. 
+To migrate a live workload to a new target environment using UForge's scan capability, you first copy the uforge-scan binary to the target environment and launch the binary.  This binary analyzes the live system and sends back a report. You can select two types of scan: scan or scan with overlay. A scan will scan the target environment, but will only return the system packages and configuration known to UForge. A scan with overlay will include an overlay report which details all the extra files, packages or specific configuration. 
 
 .. note:: Scan with overlay is only supported for Linux-based machines.
 

@@ -31,6 +31,8 @@ You can re-configure the scheduler to have different scheduling policies for dif
 +-------------------------------------------+-----------------+
 | Update_repos_pkgs.sh (Spider) (cron job)  |     5           |
 +-------------------------------------------+-----------------+
+| Migration Job Type                        |     6           |
++-------------------------------------------+-----------------+
 
 By default UForge (during the deployment) populates oarnodesetting, and uses the "overflow" mode. If you want to modify this, refer to :ref:`changing-oar-config`.
 

@@ -59,7 +59,7 @@ For Amazon, only full accounts can be used, trial accounts are not supported for
 
 	.. warning:: Terminating an OpenStack deployment may fail due to `a known issue in AMP <https://issues.apache.org/jira/browse/JCLOUDS-1318>`_. Click again on the delete (garbage) icon to work around the issue.
 
-    .. warning:: For Windows Server 2008R2, you will need to run a commande in ``PowerShell`` on the source machine before scanning ``winrm set winrm/config/service '@{AllowUnencrypted="true"}'``. This command will disable WinRM encryption over HTTP which is not supported by AMP. More information can be found on the Cloudsoft AMP documentation, in section `WinRM Connectivity Diagnostics <https://docs.cloudsoft.io/blueprints/base-blueprints/winrm/client.html#winrm-connectivity-diagnostics>`_.
+    .. warning:: For Windows Server 2008R2, you will need to run a command in ``PowerShell`` on the source machine before scanning ``winrm set winrm/config/service '@{AllowUnencrypted="true"}'``. This command will disable WinRM encryption over HTTP which is not supported by AMP. More information can be found on the Cloudsoft AMP documentation, in section `WinRM Connectivity Diagnostics <https://docs.cloudsoft.io/blueprints/base-blueprints/winrm/client.html#winrm-connectivity-diagnostics>`_.
 
 .. _list-deployment:
 

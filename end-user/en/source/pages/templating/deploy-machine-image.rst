@@ -49,7 +49,7 @@ For Amazon, only full accounts can be used, trial accounts are not supported for
 
 		.. image:: /images/machine-image-deploy-status.png
 
-	.. note:: Using this procedure, all deployed Linux virtual machines will have ssh port (22) open in their security group. All deployed Windows virtual machines will have RDP port (3389) and WinRM ports (5985, 5986) openned in their security group.
+	.. note:: Using this procedure, all deployed Linux virtual machines will have ssh port (22) open in their security group. All deployed Windows virtual machines will have RDP port (3389) and WinRM ports (5985, 5986) open in their security group.
 
 	.. note:: If you click on the delete (garbage) icon, this will stop your deployed instance and remove it from your cloud.
 

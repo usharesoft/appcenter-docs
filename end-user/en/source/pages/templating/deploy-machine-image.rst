@@ -37,21 +37,29 @@ For Amazon, only full accounts can be used, trial accounts are not supported for
 
 	8. In the deploy view, enter the name of the deployment. Click on ``deploy``. This will connect to cloud platform and launch your machine image instance. Once deployed, a green button will appear under the ``Status`` column.
 
-		.. image:: /images/machine-image-deploy-popup.png
+    For Linux images, you will need to input the ``Instance Name``, ``Minimal number of cores`` and ``Minumal RAM`` values
+
+		.. image:: /images/machine-image-deploy-popup-linux.png
+
+    For Windows images, you will need to supply an additional ``User name`` and ``User password`` for an administrator account to be used for ``WinRM``
+        
+		.. image:: /images/machine-image-deploy-popup-windows.png
 
 	9. From the ``Deployments`` page you can see the instances deployed and their status. If the status is green it is up and running. If it is red, there has been an issue during deployment and/or it is stopped.
 
 		.. image:: /images/machine-image-deploy-status.png
 
-	.. note:: All deployed Linux virtual machines using this procedure will have ssh port (22) open in their security group.
+	.. note:: Using this procedure, all deployed Linux virtual machines will have ssh port (22) opened in their security group. All deployed Windows virtual machines will have RDP port (3389) and WinRM ports (5985, 5986) opened in their security group.
 
-	.. note:: For Windows images, RDP port (3389) and WinRM port (5985) need to be opened in Firewall Settings.
+	.. note:: For Windows images, if you have customized firewall settings then the following TCP ports need to be opened: 3389 (RDP) and 5985 (WinRM) 
 
 	.. note:: For all deployed Windows virtual machines, if WinRM service is not enabled by default, then it will be activated during the deployment process.
 
 	.. note:: If you want to stop your deployment, you can do so by clicking on the delete (garbage) icon. This will stop it and remove the instance from your cloud.
 
 	.. warning:: Terminating an OpenStack deployment may fail due to `a known issue in AMP <https://issues.apache.org/jira/browse/JCLOUDS-1318>`_. Click again on the delete (garbage) icon to work around the issue.
+
+    .. warning:: For Windows Server 2008R2, you will need to run a command in ``PowerShell`` on the source machine before scanning ``winrm set winrm/config/service '@{AllowUnencrypted="true"}'``. This command will disable WinRM encryption over HTTP which is not supported by AMP. More information can be found on the Cloudsoft AMP documentation, in section `WinRM Connectivity Diagnostics <https://docs.cloudsoft.io/blueprints/base-blueprints/winrm/client.html#winrm-connectivity-diagnostics>`_.
 
 .. _list-deployment:
 

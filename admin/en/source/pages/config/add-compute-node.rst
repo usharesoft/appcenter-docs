@@ -58,11 +58,7 @@ You can add a new OAR compute node which was instantiated from UForge but which 
 	    	rm -f /tmp/hosts.NEW
 		fi 
         
-<<<<<<< HEAD
-        9. Edit /etc/UShareSoft/uforge/uforge.conf on all oarnode1 .. oarnodeN, oar-server and oarnodeX. Add the oarnodeX IP at the end of UFORGE_PROXY_IGNORED variable.
-=======
     9. Edit ``/etc/UShareSoft/uforge/uforge.conf`` on all oarnode1 .. oarnodeN, oar-server and oarnodeX. Add the oarnodeX IP at the end of UFORGE_PROXY_IGNORED variable.
->>>>>>> d8dc520... update adding compute node procedure
 
         .. code-block:: shell
 

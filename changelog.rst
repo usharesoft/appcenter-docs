@@ -20,6 +20,12 @@ Enhancements
 * Enhance UI headers for Apps and Migration tab.
 * Add French internationalization.
 
+Migrating to 3.8
+~~~~~~~~~~~~~~~~
+
+For specificities relating to migrating a 3.7 or 3.7.fpx to 3.8 please refer to :ref:`migrate-to38`.
+
+
 Bug Fixes
 ~~~~~~~~~
 * 835 Refresh the generation page causes a 500 call failed

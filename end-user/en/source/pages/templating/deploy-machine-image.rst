@@ -45,7 +45,7 @@ For Amazon, only full accounts can be used, trial accounts are not supported for
         
 		.. image:: /images/machine-image-deploy-popup-windows.png
 
-        .. warning:: Some combinations of ``Minimal number of cores`` and ``Minimal RAM`` might not work for some regions due to `a known issue im AMP <https://issues.apache.org/jira/browse/BROOKLYN-582>`_. To work around this issue, please select a different value of ``cores`` and/or ``RAM``, or retry with a different region.  
+        .. warning:: Some combinations of ``Minimal number of cores`` and ``Minimal RAM`` might not work for some regions due to `a known issue im AMP <https://issues.apache.org/jira/browse/BROOKLYN-582>`_. To work around this issue, please select a different value for ``cores`` and/or ``RAM``, or retry with a different region.  
 
 	9. From the ``Deployments`` page you can see the instances deployed and their status. If the status is green it is up and running. If it is red, there has been an issue during deployment and/or it is stopped.
 

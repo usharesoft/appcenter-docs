@@ -37,13 +37,15 @@ For Amazon, only full accounts can be used, trial accounts are not supported for
 
 	8. In the deploy view, enter the name of the deployment. Click on ``deploy``. This will connect to cloud platform and launch your machine image instance. Once deployed, a green button will appear under the ``Status`` column.
 
-    For Linux images, you will need to input the ``Instance Name``, ``Minimal number of cores`` and ``Minumal RAM`` values
+    For Linux images, you will need to input the ``Instance Name``, ``Minimal number of cores`` and ``Minimal RAM`` values
 
 		.. image:: /images/machine-image-deploy-popup-linux.png
 
     For Windows images, you will need to supply an additional ``User name`` and ``User password`` for an administrator account to be used for ``WinRM``
         
 		.. image:: /images/machine-image-deploy-popup-windows.png
+
+        .. warning:: Some combinations of ``Minimal number of cores`` and ``Minimal RAM`` might not work for some regions due to `a known issue im AMP <https://issues.apache.org/jira/browse/BROOKLYN-582>`_. To work around this issue, please select a different value of ``cores`` and/or ``RAM``, or retry with a different region.  
 
 	9. From the ``Deployments`` page you can see the instances deployed and their status. If the status is green it is up and running. If it is red, there has been an issue during deployment and/or it is stopped.
 

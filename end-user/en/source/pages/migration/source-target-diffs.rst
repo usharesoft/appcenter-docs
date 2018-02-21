@@ -44,10 +44,10 @@ For Linux systems, the ``/etc/adjtime`` might be different between source and ta
 
 
 File System Table (/etc/fstab)
-~~~~~~~~~~~~~~~~~
-UForge regenerates this file during machine image generation.  Hardware and device mappings may differ between source and target environments.  For example, ``/dev/xvda`` could be translated to ``/dev/sda``.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+UForge regenerates the /etc/fstab file during machine image generation.  Hardware and device mappings may differ between source and target environments.  For example, ``/dev/xvda`` could be translated to ``/dev/sda``.
 
-File system options (general, dump and check options) are not supported by UForge today.  Consequently during a migration these values will be reset to their system defaults.
+File system options (general, dump and check options) are not supported by UForge.  Consequently during a migration these values will be reset to their system defaults.
 
 Furthermore, a ``cdrom`` mount point is added by UForge to permit some cloud platform tools to work correctly.
 

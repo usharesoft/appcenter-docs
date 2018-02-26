@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2017 FUJITSU LIMITED
 
 .. _mySoftwareArtifact-download:
 

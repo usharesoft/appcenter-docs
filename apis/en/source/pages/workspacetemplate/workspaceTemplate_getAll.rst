@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2017 FUJITSU LIMITED
 
 .. _workspaceTemplate-getAll:
 
@@ -29,8 +29,8 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``wid`` (required): the Workspace id
-* ``oid`` (required): the Organization id
+* ``wid`` (required): the id of the :ref:`workspace-object`
+* ``oid`` (required): the id of the :ref:`org-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

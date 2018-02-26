@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2017 FUJITSU LIMITED
 
 .. _cloudAccountResources-get:
 
@@ -22,7 +22,7 @@ Security Summary
 ~~~~~~~~~~~~~~~~
 
 * Requires Authentication: ``true``
-* Entitlements Required: ``image_publish``
+* Entitlements Required: ``image_publish,migration_publish``
 
 URI Parameters
 ~~~~~~~~~~~~~~

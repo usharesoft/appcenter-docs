@@ -18,9 +18,9 @@ Adds a new boot script object to an appliance.
 
 This is just the meta-data of the boot script file.  Once created, you can upload the boot script file using :ref:`applianceBootScript-upload` 
 
-Boot scripts have two types:     
+Boot scripts have two types: 
 
-- ``firstboot``: declaring that this boot script should only be executed once on the first time the instance     is provisioned     
+- ``firstboot``: declaring that this boot script should only be executed once on the first time the instance is provisioned 
 
 - ``everyboot``: declaring that this boot script should be executed every time the instance is rebooted. 
 

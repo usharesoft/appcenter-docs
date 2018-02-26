@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2017 FUJITSU LIMITED
 
 .. _os-update:
 
@@ -27,7 +27,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``id`` (required): the id of the :ref:`distribution-object`
+* ``id`` (required): the id of the :ref:`org-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

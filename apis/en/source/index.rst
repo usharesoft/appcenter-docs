@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2017 FUJITSU LIMITED
 
 .. _apis-index:
 
@@ -28,6 +28,7 @@ This documentation provides a description of UForge AppCenter RESTful interface.
     pages/categories/overview
     pages/deployments/overview
     pages/machineimage/overview
+    pages/machinemigration/overview
     pages/machinescan/overview
     pages/machinescanimport/overview
     pages/machinescaninstance/overview

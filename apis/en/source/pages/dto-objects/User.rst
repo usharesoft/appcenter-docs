@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2017 FUJITSU LIMITED
 
 .. _user-object:
 
@@ -42,6 +42,7 @@ The list of attributes for ``user`` are:
 	* ``gender`` (string): the user's gender
 	* ``homePhone`` (string): the user's home phone number
 	* ``lang`` (string): the user's preferred language
+	* ``migrationsUri`` (anyURI): the uri resource to retrieve all the migrations for the user (see :ref:`migration-object`)
 	* ``mobilePhone`` (string): the user's mobile phone number
 	* ``mySoftwareLibraryUris`` (:ref:`UriList-object`): the list of uri resources for each software component the user has in their software library
 	* ``name`` (string): the user's first name

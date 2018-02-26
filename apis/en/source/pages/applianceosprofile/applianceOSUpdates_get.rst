@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2017 FUJITSU LIMITED
 
 .. _applianceOSUpdates-get:
 
@@ -14,7 +14,7 @@ applianceOSUpdates_get
 	* Response Formats: ``application/xml`` ``application/json``
 	* Since: ``UForge 2.1``
 
-Retrieves a list of possible package updates for all the packages contained in an OS profile.  The available updates are calculated based on one or more timestamps provided as part of the request.  This includes:     - ``from``: the start date on where to calculate available updates     - ``to``: the end date on where to calculate available updates     - ``at``: a specific date on where to calculate available updates
+Retrieves a list of possible package updates for all the packages contained in an OS profile.  The available updates are calculated based on one or more timestamps provided as part of the request.  This includes: - ``from``: the start date on where to calculate available updates - ``to``: the end date on where to calculate available updates - ``at``: a specific date on where to calculate available updates
 
 Security Summary
 ~~~~~~~~~~~~~~~~

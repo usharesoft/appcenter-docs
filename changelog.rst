@@ -96,7 +96,7 @@ Known issues
 
 Compatibility issues
 ~~~~~~~~~~~~~~~~~~~~
-* The import / export of appliance templates from UForge 3.7 to UForge 3.8 may not work if the template contains software bundles. Please refer to this section :ref:`appliance-update-37-import` to make your template compatible.
+* The import / export of appliance templates from UForge 3.7 to UForge 3.8 may not work if the template contains software bundles. Please refer to the section Importing and Exporting Templates (Updating a 3.7 Appliance) to make your template compatible.
 
 
 3.8

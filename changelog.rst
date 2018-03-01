@@ -3,6 +3,47 @@
 Changelog
 =========
 
+3.8-2
+-----
+
+Release Date: 2018-03-05
+
+Bug Fixes
+~~~~~~~~~
+* 9281 a logical group disappears after removing an LVM disk
+* 9277 removed partitions from a volume group still remain in the group
+* 9310 Group name displayed in the logs of uforge-scan binary
+* 9179 Overlapping text in the summary view of an appliance template
+* 9226 "Request timeout" is be shown during a generation and requires refreshing the screen
+* 8996 script machine_infos.sh fails
+* 9186 If user role is only Migrator, an error occurs in cloud account selection of publish image
+* 9221 uforge 3.8 yum repo is incorrect
+* 9046 Shell injection, the user can execute command as tomcat user when calling publish api
+* 9318 uforge_update.sh fails with SQL error in db_modifs_170929-02.sql
+* 9199 Service mysql restart display FAILED message
+* 9047 Time Zone in the scanned server has been changed into Install Profile in a template on Whitebox Migration
+* 9092 iptables rules have been changed - whitebox migration
+* 9166 No need to call reset_eventcontroller.sh in the crontab anymore
+* 8443 Missing /opt/Tomcat/.bashrc file
+* 9027 template imported from scan fails to generate
+* 8743 When user quota limit of appliance is set, importing or creating a template with hammr raises count by 2
+* 9016 [Server-side]don't write a firewall param if the template is Windows
+* 9312 Scanning a CentOS 7 server with a CD in the drive causes an additional hard disk to be added
+* 8931 [Server-side]Add the Timezone param to uforge-install-config.conf
+* 9309 RHEL 7 and 6 should be supported in K5 format
+* 9009 After a file upload error, the value of consumed diskusage increases when the quota is changed to unlimit
+* 9127 CleanUp deployment list groovy script to avoid using rawLocalConfigBag or localBag
+
+Known issues
+~~~~~~~~~~~~
+
+* 9379 Deploy of a scan sles 11 on Amazon AWS does not work: impossible to connect
+* 9363 SLES generation for Azure format does not work (no platform tools injected)
+* 8638 License cannot be changed in the clone Software
+* 9365 Wrong display in installation when booting a Centos7 app interactive with ufic-4.0-1
+* 1416 Portal - MySoftware - Files - package file path not restored
+
+
 3.8-1
 -----
 

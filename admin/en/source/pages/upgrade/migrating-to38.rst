@@ -18,14 +18,14 @@ A separate set of scripts and associated README.txt file is available on the `US
 		* Use the same organisation name (UFORGE_DEFAULT_ORG_NAME info) as the one defined in ``/etc/UShareSoft/auth.conf on the <source_db>``
 		* Use the same admin password (UFORGE_DB_ADMIN_PASSWORD info) as the one defined in ``/etc/UShareSoft/auth.conf on the <source_db>``
 
-	2. On the <source_db> run the following commands:
+	2. The source UForge DB server has to be upgraded to the last 3.7 version. On the <source_db> run the following commands:
 
 	.. code-block:: shell
 
 		# yum update -y uforge-common
 		# yum update -y uforge-gen uforge uforge-cli uforge-client
 
-	3. On the <source_ws> run the following commands:
+	3. The source UForge Web Service server has to be upgraded to the last 3.7 version. On the <source_ws> run the following commands:
 
 	.. code-block:: shell 
 
@@ -33,7 +33,7 @@ A separate set of scripts and associated README.txt file is available on the `US
 		# yum update -y uforge-gen uforge uforge-cli uforge-client
 		# service tomcat stop
 
-	4. On <source_db> run the following commands:
+	4. Once both platforms are ready, on <source_db> run the following commands:
 
 	.. code-block:: shell
 
@@ -45,20 +45,20 @@ A separate set of scripts and associated README.txt file is available on the `US
 		# /opt/OpenDJ/bin/export-ldif -l uforge-export.ldif -n userRoot
 		# rsync  -avl -H -F --progress /tmp/USER_DATA/ root@<target_db>:/tmp/USER_DATA/
 
-	5. On <target_db > run the following commands:
+	5. Once the previous rsync command has finished oar-server and opendj services have to be stopped. On <target_db > run the following commands:
 
 	.. code-block:: shell
 
 		# systemctl stop oar-server
 		# service opendj stop
 
-	6. On <target_ws> run the following command:
+	6. Once oar-server and opendj are stoppen you need to stop Tomcat. On <target_ws> run the following command:
 
 	.. code-block:: shell
 
 		# service tomcat stop
 
-	7. On <target_db > run the following commands:
+	7. The DB on <target_db> server has to be reset. Tun the following commands:
 
 	.. code-block:: shell
 
@@ -78,7 +78,7 @@ A separate set of scripts and associated README.txt file is available on the `US
 			# /opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh 2>&1 | tee -a /tmp/USER_DATA/uforge_update_db_3.8.log
 		fi
 
-	8. On <target_ws> run the following commands:
+	8. Once the DB is reset, Tomcat has to be started. On <target_ws> run the following commands:
 
 	.. code-block:: shell
 
@@ -97,6 +97,13 @@ A separate set of scripts and associated README.txt file is available on the `US
 			<c:uForgeUrl>http://10.2.1.11:8080/ufws/</c:uForgeUrl>
 
 		c) Replace the old web service node IP address with the IP address of the new web service node.
+
+	10. If you detect an issue, please contact support@usharesoft.com with the following files:
+
+		* The standard output of the command
+		* The result of running the ``ifconfig`` command
+		* The ``/etc/hosts`` file
+		* The name of the current node
 
 
 

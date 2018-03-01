@@ -87,7 +87,7 @@ A separate set of scripts and associated README.txt file is available on the `US
 		# rm /tmp/USER_DATA/db_backup_3.7.sql
 		# rm /tmp/USER_DATA/uforge-export.ldif
 
-	9. If you have customized the UI you will need to follow these additional steps before migration to 3.8. This step applies to all the customization files in ``/var/opt/UShareSoft/uforge-client/gwt/uforge/templates`` (as decribed in), as well as ``config.xml``, ``forge-config.xml``, and css directory (in case of css customisation):
+	9. If you have customized the UI you will need to follow these additional steps before migration to 3.8. This step applies to all the customization files in ``/var/opt/UShareSoft/uforge-client/gwt/uforge/templates`` (as decribed in), as well as ``config.xml``, ``forge-config.xml``, and css directory (in case of css customisation). Do the following on <target_ui>:
 
 		a) rsync the customised files from the UI node of the source UForge AppCenter to the UI node of the target AppCenter.
 		b) Edit file forge-config.xml, line
@@ -97,6 +97,11 @@ A separate set of scripts and associated README.txt file is available on the `US
 			<c:uForgeUrl>http://10.2.1.11:8080/ufws/</c:uForgeUrl>
 
 		c) Replace the old web service node IP address with the IP address of the new web service node.
+		d) Launch the command 
+
+			.. code-block:: shell
+
+			/opt/UShareSoft/uforge-client/bin/uforge_ui_update.sh
 
 	10. If you detect an issue, please contact support@usharesoft.com with the following files:
 

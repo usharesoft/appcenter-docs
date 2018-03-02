@@ -17,6 +17,53 @@ New Features
 		* This new feature is available under the "Migrations" tab. This tab already existed. This previous tab has been renamed "Scans".
 		* This feature is currently available for the following platforms : Fujitsu K5, Microsoft Azure, VMware vCenter, Openstack and SUSE Cloud.
 
+Enhancements
+~~~~~~~~~~~~
+* 9004 As a user, I would like to have my appliance revision incremented when I modify an attached SoftwareBundle
+* 5994 Provide a way to offuscate and reveal passwords in the UI
+* 9054 RHEL 7 and 6 should be supported in K5 format
+
+Bug Fixes
+~~~~~~~~~
+* 9091 iptables rules have been changed - whitebox migration
+* 8721 Scanning CentOS 6 generated with UForge results in an error
+* 8648 The Deployment Wizard should block non-numeric inputs on the Proxy Port
+* 8646 Debian 9 missing in the deployment wizard
+* 8745 Disk usage increases when uploading twice the same file for limited quota user
+* 9178 Overlapping text in the summary view of an appliance template
+* 8664 systemd-tmpfiles-clean.timer clears /tmp thus removes the symlinks and breaks AppCenter
+* 8613 [RHEL7/CentOS7] /boot/grub2/device.map is cleared during Blackbox/Whitebox Migration
+* 8222 Software bundles are not extracted in the correct directory
+* 8847 ComboList in portal appears empty after selection with firefox
+* 8921 Add scan import to golden cancel webservice
+* 9024 Outscale image generation limited to 10 GB disk size
+* 8701 UForge deployment fails behind proxy because of unaccessible ntp server
+* 8422 openssh bits in uforge template do not need to be sticky anymore
+* 9198 Service mysql restart display FAILED message
+* 8865 Despite deleting the golden images, the files of the golden image are not deleted in the file system
+* 9053 user login and password are sent to the user in the same e-mail message
+* 8842 Docker publishing cannot be canceled
+* 9010 After a file upload error, the value of consumed diskusage increases when the quota is changed to unlimit
+* 8412 Ubuntu 14.04 generation fails with stack overflow error
+* 7493 [KDDI] A letter '&' in comment field of /etc/passwd file changed to '&amp;' after migration
+* 8873 CPU usage of Dozer thread sticks to over 99% and never ends
+* 8995 script machine_infos.sh fails
+* 9045 Shell injection, the user can execute command as tomcat user when calling publish api
+* 9026 template imported from scan fails to generate
+* 8899 openssh package version has been changed after a white box migration
+* 9185 If user role is only Migrator, an error occurs in cloud account selection of publish image
+* 9165 No need to call reset_eventcontroller.sh in the crontab anymore
+* 9125 After Black box migration, Firewall setting changes to enable in Cent OS 6.
+* 9257 Error occurs when migrating to Hyper-V of Windows Server 2012 R2
+* 9108 [Server-side]Add the Timezone param to uforge-install-config.conf
+* 9089 [Server-side]don't write a firewall param if the template is Windows
+* 8320 "user enable" uforge-cli command always resets password
+* 8987 "Request timeout" is be shown during a generation and requires refreshing the screen
+* 8444 Missing /opt/Tomcat/.bashrc file
+* 9144 a logical group disappears after removing an LVM disk
+* 9175 removed partitions from a volume group still remain in the group
+* 9210 Scanning a CentOS 7 server with a CD in the drive causes an additional hard disk to be added
+
 3.8.fp1
 -------
 
@@ -127,7 +174,7 @@ Bug Fixes
 * 8437 Name and downloadId missing in the download URL for appliances generated from a template
 * 8417 Windows image generation from a legacy golden fails without displaying the details if required disk is too small
 * 8309 Windows automatically shuts down after being instantiated on AWS
-* 8270 Scan of CentOS 7 fails with message ``Unable to rebuild package dialog 1.2 x86_64`` on 3.8 
+* 8270 Scan of CentOS 7 fails with message ``Unable to rebuild package dialog 1.2 x86_64`` on 3.8
 * 8094 Whitebox image generation failure with ``non encrypted password`` error
 * 8078 Add arch selection, in order to allow install of package with multiple architectures
 * 7831 Scan on CentOS 7.4 with LVM fails silently and causes generation error

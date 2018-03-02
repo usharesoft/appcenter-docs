@@ -49,6 +49,8 @@ However, it is preferable to leave this file.
 Generating a Docker Image
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. note:: You cannot generate a Docker image from a Windows template or a Windows scan.
+
 To generate a machine image:
 	1. Go to the ``Apps`` tab.
 	2. Select the appliance from the ``Appliance Library``. 

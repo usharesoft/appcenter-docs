@@ -17,8 +17,6 @@ New Features
 		* This new feature is available under the "Migrations" tab. This tab already existed. This previous tab has been renamed "Scans".
 		* This feature is currently available for the following platforms : Fujitsu K5, Microsoft Azure, VMware vCenter, Openstack and SUSE Cloud.
 
-* Users can deploy Windows instances from published machine images to AWS.
-
 Enhancements
 ~~~~~~~~~~~~
 * 9004 As a user, I would like to have my appliance revision incremented when I modify an attached SoftwareBundle
@@ -27,7 +25,6 @@ Enhancements
 
 Bug Fixes
 ~~~~~~~~~
-
 * 9091 iptables rules have been changed - whitebox migration
 * 8721 Scanning CentOS 6 generated with UForge results in an error
 * 8648 The Deployment Wizard should block non-numeric inputs on the Proxy Port
@@ -144,7 +141,7 @@ Known issues
 
 Compatibility issues
 ~~~~~~~~~~~~~~~~~~~~
-* The import / export of appliance templates from UForge 3.7 to UForge 3.8 may not work if the template contains software bundles. Please refer to this section :ref:`appliance-update-37-import` to make your template compatible.
+* The import / export of appliance templates from UForge 3.7 to UForge 3.8 may not work if the template contains software bundles. Please refer to the section Importing and Exporting Templates (Updating a 3.7 Appliance) to make your template compatible.
 
 
 3.8

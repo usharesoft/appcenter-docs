@@ -20,7 +20,7 @@ Retrieves all the scanned instances.
 
 A list of :ref:`scannedinstance-object` objects are returned. 
 
-You can use a set of ``query parameters`` to retrieve a subset of these scanned instances.  This includes:     - ``name``: retrieves the scanned instance with a specific name     - ``ids``: retrieves a list of scanned instances that matches the id list provided     - ``index``:     - ``max``:     - ``orderBy``: a field name contained in :ref:`scannedinstance-object` to order by     - ``asc``: boolean to determine to sort the list in ``ascending`` order (if ``false``, sort in ``descending``     order)
+You can use a set of ``query parameters`` to retrieve a subset of these scanned instances.  This includes: - ``name``: retrieves the scanned instance with a specific name - ``ids``: retrieves a list of scanned instances that matches the id list provided - ``index``: - ``max``: - ``orderBy``: a field name contained in :ref:`scannedinstance-object` to order by - ``asc``: boolean to determine to sort the list in ``ascending`` order (if ``false``, sort in ``descending`` order)
 
 Security Summary
 ~~~~~~~~~~~~~~~~

@@ -31,8 +31,7 @@ To view these cron jobs, log in to the oar scheduler node as root and view the c
 
 	$ crontab -l
 	*/5 * * * * /opt/UShareSoft/uforge/cron/reset_oar_resources.sh
-	10 2 * * * /opt/UShareSoft/uforge/cron/cleanup_tickets.sh
-	10 3 * * * /opt/UShareSoft/uforge/cron/cleanup_scans.sh
+	10 2 * * * /opt/UShareSoft/uforge/cron/cleanup_userdata.sh
 	42 * * * * /opt/UShareSoft/uforge/cron/update_repos_pkgs.sh
 	05 * * * * /opt/UShareSoft/uforge/cron/update_repos_local_cache.sh
 	1 8 * * * /opt/UShareSoft/uforge/cron/drop_caches.sh
@@ -55,7 +54,7 @@ This needs to be launched on a regular basis to avoid having issues with the OAR
 This job executes very quickly and does not take resources on the machine.
 It is set by default to 5 minutes but this can be changed.
 
-``10 2 * * * /opt/UShareSoft/uforge/cron/cleanup_tickets.sh``
+``10 2 * * * /opt/UShareSoft/uforge/cron/cleanup_userdata.sh``
 
 When a user deletes a machine image persisted on the NAS, only the metadata is removed from the database to avoid using a webservice thread to delete the file. This could take time and should be done asynchronously. 
 
@@ -65,9 +64,7 @@ This job could potentially take a long time and be IO-intensive. It is highly re
 
 This script could be launched several times in a day depending on the size of the infrastructure. For example, if the NAS is not big and if there are a lot of images created and deleted per day, it might be good to launch it several times a day.
 
-``10 3 * * * /opt/UShareSoft/uforge/cron/cleanup_scans.sh``
-
-Same as for ``/opt/UShareSoft/uforge/cron/cleanup_tickets.sh``
+``10 2 * * * /opt/UShareSoft/uforge/cron/cleanup_userdata.sh``
 
 ``42 * * * * /opt/UShareSoft/uforge/cron/update_repos_pkgs.sh``
 

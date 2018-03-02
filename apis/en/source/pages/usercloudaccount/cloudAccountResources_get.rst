@@ -22,7 +22,7 @@ Security Summary
 ~~~~~~~~~~~~~~~~
 
 * Requires Authentication: ``true``
-* Entitlements Required: ``image_publish``
+* Entitlements Required: ``image_publish,migration_publish``
 
 URI Parameters
 ~~~~~~~~~~~~~~

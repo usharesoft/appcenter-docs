@@ -16,7 +16,7 @@ applianceBootScript_deleteAll
 
 Removes all of the boot scripts attached to an appliance.  This includes any boot script file that has been uploaded. 
 
-A list of ``query parameters`` can be used to delete a subset of boot scripts.  The list of boot scripts to delete are expressed as a list of query parameters:     - ``name``: delete a boot script that matches a name     - ``id``: delete a boot script that matches the boot script id     - ``type``: delete a boot script that matches a boot script type 
+A list of ``query parameters`` can be used to delete a subset of boot scripts.  The list of boot scripts to delete are expressed as a list of query parameters: - ``name``: delete a boot script that matches a name - ``id``: delete a boot script that matches the boot script id - ``type``: delete a boot script that matches a boot script type 
 
 For example, the following query parameters requests to delete boot scripts that have the name ``bootscript1.sh``, ``bootscript2.sh`` and a boot script that has the id ``23``: 
 

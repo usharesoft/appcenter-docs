@@ -148,7 +148,7 @@ With UForge you can create machine images in the following formats.
 +-------------------------------------+-------------------------------------------------------+
 | Amazon AWS                          | none                                                  |
 +-------------------------------------+-------------------------------------------------------+
-| Azure Resource Manager              | Ubuntu <= 12.04 not supported                         |
+| Microsoft Azure                     | Ubuntu <= 12.04 not supported                         |
 +-------------------------------------+-------------------------------------------------------+
 | Cloudstack                          | Target formats:                                       |
 |                                     | CloudStack VMWare (OVA)                               |
@@ -167,8 +167,6 @@ With UForge you can create machine images in the following formats.
 | Fujitsu K5                          | Red Hat Enterprise Linux not supported                |
 +-------------------------------------+-------------------------------------------------------+
 | Google Compute Engine               | none                                                  |
-+-------------------------------------+-------------------------------------------------------+
-| Microsoft Azure                     | none                                                  |
 +-------------------------------------+-------------------------------------------------------+
 | Nimbula                             | Target formats:                                       |
 |                                     | Nimbula ESX                                           |

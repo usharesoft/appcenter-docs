@@ -3,6 +3,15 @@
 Changelog
 =========
 
+3.8.fp3
+-------
+
+Release Date: 2018-04-16
+
+Enhancements
+~~~~~~~~~~~~
+* 9057 Remove End-of-life Microsoft Azure Classic
+
 3.8.fp2
 -------
 

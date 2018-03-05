@@ -9,7 +9,7 @@ If you want to remove the ability for a user to change their password in the ``U
 
 .. code-block:: xml
 
-	<c:showUserProfile>false</c:showUserProfile>
+	<c:showChangePassword>false</c:showChangePassword>
 
 Restricting User Profile Usage
 ------------------------------

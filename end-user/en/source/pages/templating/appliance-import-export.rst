@@ -34,6 +34,8 @@ To export an existing appliance:
 
 The equivalent export feature is available when editing an appliance template.
 
+.. note:: An exported template of Windows does not contain "Activation Key" in order to avoid sharing such a sensitive information unintentionally.
+
 .. _appliance-import:
 
 Importing

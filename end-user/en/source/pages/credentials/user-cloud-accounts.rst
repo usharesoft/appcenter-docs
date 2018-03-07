@@ -17,7 +17,7 @@ In order to publish an image to a cloud using UForge AppCenter, you will need to
 
 	4. Scroll over any given field for more information on the mandatory information to provide for a given cloud account.
 
-	.. note:: In order to set up the credentials for an Microsoft Azure account, there are a number of steps you must complete first. For more information refer to :ref:`azure-account`.
+	.. note:: In order to set up the credentials for a Microsoft Azure account, there are a number of steps you must complete first. For more information refer to :ref:`azure-account`.
 
 	5. Click ``Create`` to complete.
 
@@ -38,6 +38,6 @@ Then you will need to fill in your credential information in UForge. To do so:
 
 	1. Go to the ``Credentials`` tab in the left-hand sidebar.
 	2. Go to ``Cloud Account``.
-	3. Select the ``Microsoft Azure`` from the ``Add account`` drop-down menu at the top right.
+	3. Select ``Microsoft Azure`` from the ``Add account`` drop-down menu at the top right.
 
 	.. image:: /images/cloud-account-azure.png

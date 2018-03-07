@@ -1363,149 +1363,6 @@
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="AzureResources">
-        <xs:complexContent>
-            <xs:extension base="CloudResources">
-                <xs:sequence>
-                    <xs:element name="management" minOccurs="0">
-                        <xs:complexType>
-                            <xs:sequence>
-                                <xs:element name="affinityGroups" minOccurs="0">
-                                    <xs:complexType>
-                                        <xs:sequence>
-                                            <xs:element name="affinityGroup" minOccurs="0" maxOccurs="unbounded">
-                                                <xs:complexType>
-                                                    <xs:sequence>
-                                                        <xs:element name="description" type="xs:string" minOccurs="0"/>
-                                                        <xs:element name="locationId" type="xs:string" minOccurs="0"/>
-                                                        <xs:element name="name" type="xs:string" minOccurs="0"/>
-                                                    </xs:sequence>
-                                                </xs:complexType>
-                                            </xs:element>
-                                        </xs:sequence>
-                                    </xs:complexType>
-                                </xs:element>
-                                <xs:element name="certificates" minOccurs="0">
-                                    <xs:complexType>
-                                        <xs:sequence>
-                                            <xs:element name="certificate" minOccurs="0" maxOccurs="unbounded">
-                                                <xs:complexType>
-                                                    <xs:sequence>
-                                                        <xs:element name="data" type="xs:string" minOccurs="0"/>
-                                                        <xs:element name="publicKey" type="xs:string" minOccurs="0"/>
-                                                        <xs:element name="thumbPrint" type="xs:string" minOccurs="0"/>
-                                                    </xs:sequence>
-                                                </xs:complexType>
-                                            </xs:element>
-                                        </xs:sequence>
-                                    </xs:complexType>
-                                </xs:element>
-                                <xs:element name="locations" minOccurs="0">
-                                    <xs:complexType>
-                                        <xs:sequence>
-                                            <xs:element name="location" minOccurs="0" maxOccurs="unbounded">
-                                                <xs:complexType>
-                                                    <xs:sequence>
-                                                        <xs:element name="name" type="xs:string" minOccurs="0"/>
-                                                        <xs:element name="services" minOccurs="0">
-                                                            <xs:complexType>
-                                                                <xs:sequence>
-                                                                    <xs:element name="service" minOccurs="0" maxOccurs="unbounded">
-                                                                        <xs:simpleType>
-                                                                            <xs:restriction base="xs:string">
-                                                                                <xs:enumeration value="Compute"/>
-                                                                                <xs:enumeration value="HighMemory"/>
-                                                                                <xs:enumeration value="PersistentVMRole"/>
-                                                                                <xs:enumeration value="Storage"/>
-                                                                            </xs:restriction>
-                                                                        </xs:simpleType>
-                                                                    </xs:element>
-                                                                </xs:sequence>
-                                                            </xs:complexType>
-                                                        </xs:element>
-                                                        <xs:element name="vmRolesSizesIds" minOccurs="0">
-                                                            <xs:complexType>
-                                                                <xs:sequence>
-                                                                    <xs:element name="vmRoleSizeId" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-                                                                </xs:sequence>
-                                                            </xs:complexType>
-                                                        </xs:element>
-                                                        <xs:element name="webWorkersRolesSizesIds" minOccurs="0">
-                                                            <xs:complexType>
-                                                                <xs:sequence>
-                                                                    <xs:element name="webWorkerRoleSizeId" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-                                                                </xs:sequence>
-                                                            </xs:complexType>
-                                                        </xs:element>
-                                                    </xs:sequence>
-                                                </xs:complexType>
-                                            </xs:element>
-                                        </xs:sequence>
-                                    </xs:complexType>
-                                </xs:element>
-                                <xs:element name="rolesSizes" minOccurs="0">
-                                    <xs:complexType>
-                                        <xs:sequence>
-                                            <xs:element name="roleSize" minOccurs="0" maxOccurs="unbounded">
-                                                <xs:complexType>
-                                                    <xs:sequence>
-                                                        <xs:element name="maxDataDiskCount" type="xs:int" minOccurs="0"/>
-                                                        <xs:element name="memoryMB" type="xs:int" minOccurs="0"/>
-                                                        <xs:element name="name" type="xs:string" minOccurs="0"/>
-                                                        <xs:element name="nbCores" type="xs:int" minOccurs="0"/>
-                                                        <xs:element name="virtualMachineRoleSuited" type="xs:boolean" minOccurs="0"/>
-                                                        <xs:element name="webWorkerRoleSuited" type="xs:boolean" minOccurs="0"/>
-                                                    </xs:sequence>
-                                                </xs:complexType>
-                                            </xs:element>
-                                        </xs:sequence>
-                                    </xs:complexType>
-                                </xs:element>
-                            </xs:sequence>
-                        </xs:complexType>
-                    </xs:element>
-                    <xs:element name="storage" minOccurs="0">
-                        <xs:complexType>
-                            <xs:sequence>
-                                <xs:element name="accounts" minOccurs="0">
-                                    <xs:complexType>
-                                        <xs:sequence>
-                                            <xs:element name="account" minOccurs="0" maxOccurs="unbounded">
-                                                <xs:complexType>
-                                                    <xs:sequence>
-                                                        <xs:element name="affinityGroup" type="xs:string" minOccurs="0"/>
-                                                        <xs:element name="endpoints" minOccurs="0">
-                                                            <xs:complexType>
-                                                                <xs:sequence>
-                                                                    <xs:element name="uri" type="xs:anyURI" minOccurs="0" maxOccurs="unbounded"/>
-                                                                </xs:sequence>
-                                                            </xs:complexType>
-                                                        </xs:element>
-                                                        <xs:element name="locationId" type="xs:string" minOccurs="0"/>
-                                                        <xs:element name="name" type="xs:string" minOccurs="0"/>
-                                                        <xs:element name="replicated" type="xs:boolean" minOccurs="0"/>
-                                                        <xs:element name="uri" type="xs:anyURI" minOccurs="0"/>
-                                                    </xs:sequence>
-                                                </xs:complexType>
-                                            </xs:element>
-                                        </xs:sequence>
-                                    </xs:complexType>
-                                </xs:element>
-                                <xs:element name="locationsIds" minOccurs="0">
-                                    <xs:complexType>
-                                        <xs:sequence>
-                                            <xs:element name="locationId" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-                                        </xs:sequence>
-                                    </xs:complexType>
-                                </xs:element>
-                            </xs:sequence>
-                        </xs:complexType>
-                    </xs:element>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-
     <xs:complexType name="UForgeURIAbleObject">
         <xs:complexContent>
             <xs:extension base="UForgeObject">
@@ -1768,9 +1625,6 @@
                         </xsd:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:enumeration value="azureCertKey"/>
-                                <xs:enumeration value="azurePublishSettings"/>
-                                <xs:enumeration value="azureRSAKey"/>
                                 <xs:enumeration value="ec2KeyPairPrivateKey"/>
                                 <xs:enumeration value="ec2PrivateKey"/>
                                 <xs:enumeration value="eucCert"/>
@@ -2557,25 +2411,6 @@
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
                 Holds specific account information for the Microsoft Azure cloud platform.
-            </xsd:documentation>
-        </xsd:annotation>
-        <xs:complexContent>
-            <xs:extension base="CredAccountCert">
-                <xs:sequence>
-                    <xs:element name="accountName" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the account name to use</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-
-    <xs:complexType name="CredAccountAzureResourceManager">
-        <xsd:annotation>
-            <xsd:documentation xml:lang="en">
-                Holds specific account information for the new Microsoft Azure cloud platform: Azure Resource Manager.
             </xsd:documentation>
         </xsd:annotation>
         <xs:complexContent>
@@ -5585,7 +5420,7 @@
         </xs:complexContent>
     </xs:complexType>
 
-    <xs:complexType name="InstanceAzureResourceManager">
+    <xs:complexType name="InstanceAzure">
         <xs:complexContent>
             <xs:extension base="Instance">
                 <xs:sequence>
@@ -8042,35 +7877,10 @@
         </xs:complexContent>
     </xs:complexType>
 
-
     <xs:complexType name="PublishImageAzure">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
                 Holds the information on the registration of a machine image to the Microsoft Azure environment.
-            </xsd:documentation>
-        </xsd:annotation>
-        <xs:complexContent>
-            <xs:extension base="PublishImage">
-                <xs:sequence>
-                    <xs:element name="region" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the region where this machine image is registered</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="storageAccount" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the storage account used to register this machine image</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-
-    <xs:complexType name="PublishImageAzureResourceManager">
-        <xsd:annotation>
-            <xsd:documentation xml:lang="en">
-                Holds the information on the registration of a machine image to the Microsoft Azure Resource Manager environment.
             </xsd:documentation>
         </xsd:annotation>
         <xs:complexContent>
@@ -11919,9 +11729,9 @@
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
-                    <xs:element name="goldenPath" type="xs:anyURI" minOccurs="0">
+                    <xs:element name="importedGolden" type="xs:boolean" minOccurs="0">
                         <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the uri resource to retrieve the golden machine image for this os profile</xsd:documentation>
+                            <xsd:documentation xml:lang="en">boolean indicating if this os profile was created from an imported scan</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                     <xs:element name="partitionTable" type="PartitionTable" minOccurs="0">

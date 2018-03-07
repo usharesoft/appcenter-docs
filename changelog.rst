@@ -45,7 +45,7 @@ Bug Fixes
 * 8842 Docker publishing cannot be canceled
 * 9010 After a file upload error, the value of consumed diskusage increases when the quota is changed to unlimit
 * 8412 Ubuntu 14.04 generation fails with stack overflow error
-* 7493 [KDDI] A letter '&' in comment field of /etc/passwd file changed to '&amp;' after migration
+* 7493 A letter '&' in comment field of /etc/passwd file changed to '&amp;' after migration
 * 8873 CPU usage of Dozer thread sticks to over 99% and never ends
 * 8995 script machine_infos.sh fails
 * 9045 Shell injection, the user can execute command as tomcat user when calling publish api

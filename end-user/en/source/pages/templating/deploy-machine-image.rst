@@ -45,7 +45,7 @@ For Amazon, only full accounts can be used, trial accounts are not supported for
 
 	.. note:: All deployed virtual machines using this procedure will have ssh port (22) open in their security group.
 
-	.. note:: If you want to stop your deployment, you can do so by clicking on the delete (garbage) icon. This will stop it and remove the instance from your cloud.
+	.. note:: If you click on the delete (garbage) icon, this will stop your deployed instance and remove it from your cloud.
 
 	.. warning:: Terminating an OpenStack deployment may fail due to `a known issue in AMP <https://issues.apache.org/jira/browse/JCLOUDS-1318>`_. Click again on the delete (garbage) icon to work around the issue.
 
@@ -60,7 +60,7 @@ In order to view a list of the deployed machine images, go to the ``Deployments`
 
 From this window you can see the cloud platform the published machine image was deployed to, the name of the deployed instance, the location of the machine image published, the source machine image (Appliance or Scan) and the state of the deployed instance on the cloud platform.
 
-	.. note:: If you want to stop your deployed instance, you can do so by clicking on the delete (garbage) icon. This will stop it and remove the instance from your cloud.
+	.. note:: If you click on the delete (garbage) icon, this will stop your deployed instance and remove it from your cloud.
 
 If you click on the application name you will see the details of the instance that has been deployed, including the name of the instance and the IP address of the machine.
 

@@ -9,11 +9,11 @@ As scans are just meta-data, you can compare two scans to determine their differ
 
 .. warning:: This is only supported for Linux based source instances.
 
-From the ``Scans`` tab:
+From the ``Re-platform`` tab on the ``Migrations`` page:
 
-	1. Click on the ``compare`` button (balance icon) at the top right hand side of the ``Scans`` page.
+	1. Click on the ``compare`` button (balance icon) at the top right hand side of the ``Re-platform`` page.
 
-	.. image:: /images/scan-compare-icon.png
+	.. image:: /images/scan-compare-icon2.png
 
 	2. Select the source and target scan. 
 

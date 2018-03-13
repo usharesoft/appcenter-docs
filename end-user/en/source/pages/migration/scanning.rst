@@ -5,7 +5,7 @@
 Scanning the Source System
 --------------------------
 
-The first step in migrating your system is running a scan of the target system. This identifies the meta-data of every file and package that makes up the running workload.
+The first step in migrating your system is running a scan of the target system from the ``Re-platform`` tab on the ``Migrations`` page. This identifies the meta-data of every file and package that makes up the running workload.
 
 You must have root access on the target system in order to complete the scan, as you will need to copy and run a binary file on the target system.
 
@@ -13,7 +13,7 @@ You must have root access on the target system in order to complete the scan, as
 
 When you run a scan of a system, UForge AppCenter will differentiate between “known” data (OS packages and files that are already part of UForge AppCenter repository) and files that are “unknown”. 
 
-.. warning:: Any pre-install or post-install scripts on the system you are about to scan should only use ascii character set. Otherwise UForge AppCenter will return a scan error: ``DB Error – invalid characters``.
+.. warning:: Any pre-install or post-install scripts on the system you are about to scan should only use ascii characters. Otherwise UForge AppCenter will return a scan error: ``DB Error – invalid characters``.
 
 Recommendations pre-scan:
 
@@ -27,8 +27,7 @@ Scanning a Linux Machine
 
 .. warning:: When scanning a Linux machine, you have to check whether the licenses of OS and software which the source machine contains allow you to use them on the destination server which you are migrating to. For more detail, refer to :ref:`notes-on-licensing`.
 
-
-To carry out a scan, go to the ``Scans`` tab:
+To carry out a scan, go to ``Re-platform`` tab on the ``Migrations`` page:
 
 	1. Click on ``scan`` in the top right.
 	2. Enter a name for the scan of the target system you want to migrate.
@@ -60,7 +59,7 @@ To carry out a scan, go to the ``Scans`` tab:
 
 		.. note:: The ``-n`` option to indicate the scan name is mandatory. If a scan with this name already exists, the scan will be grouped under this name.
 
-	11. A report is sent to UForge AppCenter which can be used for migration. To view the progress, go back to the ``Scans`` page.
+	11. A report is sent to UForge AppCenter which can be used for migration. To view the progress, go back to the ``Re-platform`` page.
 
 	.. note:: The duration of the scan depends on: 
 
@@ -97,7 +96,7 @@ Scanning a Microsoft Windows Machine
 
 	For more detailed information, please refer to `official Fujitsu K5 IaaS Documentation <http://www.fujitsu.com/uk/Images/k5-iaas-features-handbook.pdf>`_.
 
-To carry out a scan, go to the ``Scans`` tab:
+To carry out a scan, go to the ``Re-platform`` tab on the ``Migrations`` page:
 
 	#. Click on ``scan`` in the top right.
 	#. Enter a name for the scan of the target system you want to migrate.
@@ -120,9 +119,9 @@ To carry out a scan, go to the ``Scans`` tab:
 
 	#. If you want to set up a proxy, check ``Proxy authentication required`` and enter the proxy information.
 
-	#.  Fill in the ``Scanned Instance Name``.
+	#. Fill in the ``Scanned Instance Name``.
 
-		.. note:: Scan name can be mix of alphanumeric characters, spaces and the following special characters `._-` all other characters are not supported at this time.
+		.. note:: Scan name can be mix of alphanumeric characters, spaces and the following special characters `._-`. All other characters are not supported at this time.
 
 	#. Optionally you can select ``Use local storage``. This means that the scan will be not be done in streaming but in 2 phases. First the data will be stored on a temporary storage drive during the scan process. This temporary storage can be a local directory or a virtual space on the network. It must be at least half the size of the machine you want to scan.
 

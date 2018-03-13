@@ -2,10 +2,10 @@
 
 .. _migration-process-overview:
 
-Migrating Using Scan Overview
------------------------------
+Migrating Using Re-Platform
+---------------------------
 
-To migrate a live workload to a new target environment using UForge's scan capability, you first copy the uforge-scan binary to the target environment and launch the binary.  This binary analyzes the live system and sends back a report. You can select two types of scan: scan or scan with overlay. A scan will scan the target environment, but will only return the system packages and configuration known to UForge. A scan with overlay will include an overlay report which details all the extra files, packages or specific configuration. 
+To migrate a live workload to a new target environment using UForge's ``Re-platform`` capability, you first copy the uforge-scan binary to the target environment and launch the binary.  This binary analyzes the live system and sends back a report. You can select two types of scan: scan or scan with overlay. A scan will scan the target environment, but will only return the system packages and configuration known to UForge. A scan with overlay will include an overlay report which details all the extra files, packages or specific configuration. 
 
 .. note:: Scan with overlay is only supported for Linux-based machines.
 
@@ -13,7 +13,7 @@ From the scan, you can then generate a new machine image that is compatible for 
 
 You can transform a scan to an appliance template.  By doing this, you have the opportunity to change the packages, files or configuration information prior to generating and registering a machine image.  This is known as “white box” migration.
 
-The five main steps of migration are as follows:
+The five main steps of migration using ``Re-platform`` are as follows:
 
    1. The live system is "deep scanned", detecting all the files and configuration information.
    2. The scan report and overlay is sent to UForge AppCenter.

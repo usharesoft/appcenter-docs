@@ -5,7 +5,7 @@
 Whitebox Migration Process
 --------------------------
 
-The goal of white box migration is to change the contents found during the scan of the live system prior to migration (add, update or remove packages, for example).  To carry out a white box migration, the user must import the scan report as an appliance template. The import process basically transforms the meta-data of the scan report to an appliance template. 
+The goal of white box migration is to change the contents found during the scan of the live system prior to migration (add, update or remove packages, for example).  To carry out a white box migration, the user must import the scan report as an appliance template. The import process on the ``Re-platform`` tab basically transforms the meta-data of the scan report to an appliance template. 
 
 As part of this transformation process, the scan information is mapped to one or more of the appliance template layers as follows:
 
@@ -33,7 +33,7 @@ As part of this transformation process, the scan information is mapped to one or
 
 Once the scan report has been imported as an appliance template, you can update the content prior to generating a machine image.
 
-The generation process is slightly different between black box and white box migration. UForge is not generating a machine image from a scan report, rather from an appliance template. You can add and remove packages at will from the OS Profile layer.  Consequently package dependencies are calculated using the list of packages in the OS Profile. Any missing packages from the OS Profile are added prior to generating the machine image.  
+The generation process is slightly different between blackbox and whitebox migration. Using ``Re-platform``, UForge is not generating a machine image from a scan report, rather from an appliance template. You can add and remove packages at will from the OS Profile layer.  Consequently package dependencies are calculated using the list of packages in the OS Profile. Any missing packages from the OS Profile are added prior to generating the machine image.  
 
 
 

@@ -9,7 +9,7 @@ You can create an appliance template from a scan. Once you create an appliance t
 
 To create an appliance template from a scan:
 
-From the ``Scans`` tab:
+From the ``Re-platform`` tab on the ``Migrations`` page:
 	1. Click on the scan from which you want to generate an image.
 	2. Select the ``import`` button (downward arrow) at the top right to create an appliance template from the scan. The following example is for Linux, but you can also import a Windows scan.
 
@@ -60,7 +60,7 @@ If you want to modify configuration information of a scanned system, there are s
 	2. Using boot scripts
 	3. Integrate with a Configuration Management platform
 
-In each case, you must import the scan as an appliance template (white box migration).
+In each case, you must import the scan as an appliance template.
 
 **Solution #1**: Using pre-install and post-install scripts in the package mechanism:  RPM and DEB package mechanism allows you to register scripts that are executed at various moments during the installation of the package.  By packaging your middleware or application binaries as a native package you can register such scripts.  These scripts are automatically taken into account as part of the machine image generation process.  These packages can be added into the appliance template – either in a custom repository known by UForge AppCenter (in this case the packages are displayed as part of the repository and are added in OS Profile) or as part of a Project or My Software component.
 
@@ -92,14 +92,7 @@ For a list of supported OSes for Migration, see the table in :ref:`uforge-suppor
 
 Major OS versions, for example upgrading from CentOS 5.0 to CentOS 6.0 is not supported automatically, though as we have the complete list of operating system packages from the scan, a new appliance template can be constructed with the new operating system version.  
 
-This process can further be automated by using the command-line tool hammr (see `hammr.io <http://www.hammr.io>`_).  This tool allows you to create identical machine images from a single configuration file (in JSON).  The procedure would be to:
-
-	1. Scan the original system (note the scan process can be launched by hammr too)
-	2. Import the scan as an appliance template (this step can be done by hammr)
-	3. Export the appliance template using hammr.  This will create an archive including a JSON or YAML file of all the meta-data.
-	4. Update manually the major version of the operating system in the JSON or YAML file.
-	5. Attempt to import using the new JSON or YAML file.  A new appliance template will be created with the new major operating system.  Note, you may need to iterate on this, if some packages listed in the JSON or YAML file are not found (due to potential package renaming).
-	6. Once the import is done, re-generate which would effectively migrate the system you scanned but with a major operating system upgrade.
+This process can further be automated by using the command-line tool hammr (see `hammr.io <http://www.hammr.io>`_).  Hammr allows you to create identical machine images from a single configuration file (in JSON or YAML). For more information refer to the `hammr documenation <http://www.hammr.io>`_. 
 
 Qualification of any middleware and application software is strongly recommended.
 

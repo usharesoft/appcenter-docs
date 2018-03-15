@@ -11,7 +11,7 @@ The entire migration process using ``Re-platform`` (previously referred to as ''
 	2. Report the scan results to UForge AppCenter, where the platform analyzes the report. The scan differentiates between known packages and extra files. 
 	3. The results are used to build an archive. The extra files are only included in the archive if the user is performing a scan with overlay. The archive is sent back to the platform.
 	4. The archive is uncompressed, and the information is stored in the database as a ``Scan``.
-	5. The scan can be used to generate machine images (also known as blackbox migration) or imported to create a new appliance template (also known as whitebox migration). The generated machine image can then be published to the target environment and instances can be provisioned.
+	5. The scan can be used to generate machine images (also known as black box migration) or imported to create a new appliance template (also known as whitebox migration). The generated machine image can then be published to the target environment and instances can be provisioned.
 
 .. _migration-prereq:
 

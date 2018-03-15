@@ -15,7 +15,7 @@ To create an image from a scan:
 	2. Click on the scan to view details.
 	3. Click on the ``generate`` icon in the top right.
 
-	.. image:: /images/scan-generate-image2.png
+	.. image:: /images/replatform-generate.png
 
 	4. Select the image format you want.
 	5. Click ``Generate``.

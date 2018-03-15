@@ -23,7 +23,7 @@ Consequently networking configuration files including ``/etc/hosts`` may be diff
 Network Device Name
 ~~~~~~~~~~~~~~~~~~~
 
-Currently, the network device name is renamed after a blackbox migration. The new device name will be ``eth0``, regardeless of the name prior to the migration.
+Currently, the network device name is renamed after a black box migration. The new device name will be ``eth0``, regardeless of the name prior to the migration.
 
 .. _generation-libraries-added:
 

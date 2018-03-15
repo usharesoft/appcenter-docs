@@ -15,7 +15,7 @@ From the ``Re-platform`` tab on the ``Migrations`` page:
 
 	.. note:: If you have administrator rights, for a Windows scan you can choose to import as appliance or import scan as a golden image. For more information, refer to the Admin guide.
 
-	.. image:: /images/scan-import2.png
+	.. image:: /images/replatform-import.png
 
 	3. Enter the appliance name and version.
 	4. Click ``import``. The progress will be shown under the ``Imports`` tab. Once complete you can find the appliance also under the ``Apps`` tab, under ``Imported Appliances``.

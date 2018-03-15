@@ -15,11 +15,11 @@ To view the details of a scanned Linux-based instance:
 	1. Go to the ``Re-platform`` tab on the ``Migrations`` page.
 	2. Click on the scan to view the details. 
 
-	.. image:: /images/scan-view-details.png
+	.. image:: /images/scan-view-details2.png
 
 	3. All of the packages and non-native files are listed under the ``Packages`` tab.
 
-	.. image:: /images/scan-packages.png
+	.. image:: /images/scan-packages2.png
 
 	4. You can also filter the packages that have been modified (UForge AppCenter compares the packages scanned with its repo) by checking ``Only show the packages with changes``.
 	5. To view the details of a package, click on the package name and then the arrow.

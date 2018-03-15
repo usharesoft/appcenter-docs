@@ -2,8 +2,8 @@
 
 .. _migration-process-blackbox:
 
-Blackbox Migration Process
---------------------------
+Black box Migration Process
+---------------------------
 
 The goal of black box migration (either using ``Re-platform`` or ``Lift & Shift``) is to reproduce a near identical copy of the currently running workload.  However, there will always be small differences between the two workloads after migration is complete, notably some services are disabled or enabled depending on the target machine image being created (refer to :ref:`service-state`). For more information on the differences after migration, refer to :ref:`source-target-diffs`. 
 

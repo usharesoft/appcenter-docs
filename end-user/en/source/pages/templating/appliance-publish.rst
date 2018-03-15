@@ -52,3 +52,32 @@ In order to publish a machine image to a cloud environment or container, you mus
 
 	.. warning:: If your Fujitsu K5 publish failed, there may be data published to cloud, incurring costs, even if not visible on your cloud account. You should run a cleanup manually. Refer to Chapter 2.7 Object storage of the `FUJITSU Cloud Service K5 IaaS API Reference (Foundation Service) guide <https://k5-doc.jp-east-1.paas.cloud.global.fujitsu.com/doc/en/iaas/document/k5-iaas-api-reference-foundation-service.pdf>`_
 
+.. _publish-win-to-rh:
+
+Publishing a Windows Image to KVM on Red Hat Linux
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note:: If you want to publish a Windows image to KVM on Red Hat Linux you need to inject specific VirtIO drivers.
+
+       #. In order to add the specific drivers, the Red Hat VirtIO drivers can be either added to AppCenter as a Project if it has been added to your AppCenter by the administrator, or using MySoftware.
+
+               .. note:: If you create a specific VirtIO driver (refer to :ref:`appliance-mysoftware` for more information), the software bundle MUST have a prefixed name ``UForgeWinDrivers``.
+
+       The following files should be included in your software bundle:
+
+               * viostor.sys
+               * viostor.inf
+               * viostor.cat
+               * vioscsi.sys
+               * vioscsi.inf
+               * vioscsi.cat
+               * netkvm.sys
+               * netkvm.inf
+               * netkvm.cat
+
+       #. When creating your appliance template, add the Project or MySoftware bundle that contains the VirtIO drivers.
+
+       #. Generate the machine image.
+
+       #. Publish the machine image.
+

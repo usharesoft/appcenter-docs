@@ -3,6 +3,15 @@
 Changelog
 =========
 
+3.8.fp3
+-------
+
+Release Date: 2018-04-16
+
+Enhancements
+~~~~~~~~~~~~
+* "Migrations" tab now contains both automated migration and scan features, available under "Lift & Shift" and "Re-platform" sub menus
+
 3.8.fp2
 -------
 

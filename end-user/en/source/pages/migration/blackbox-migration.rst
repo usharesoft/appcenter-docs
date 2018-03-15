@@ -2,15 +2,15 @@
 
 .. _migration-process-blackbox:
 
-Blackbox Migration Process
---------------------------
+Black box Migration Process
+---------------------------
 
-The goal of black box migration (either using ``Scans`` or ``Migrations``) is to reproduce a near identical copy of the currently running workload.  However, there will always be small differences between the two workloads after migration is complete, notably some services are disabled or enabled depending on the target machine image being created (refer to :ref:`service-state`). For more information on the difference after migration, refer to :ref:`source-target-diffs`. 
+The goal of black box migration (either using ``Re-platform`` or ``Lift & Shift``) is to reproduce a near identical copy of the currently running workload.  However, there will always be small differences between the two workloads after migration is complete, notably some services are disabled or enabled depending on the target machine image being created (refer to :ref:`service-state`). For more information on the differences after migration, refer to :ref:`source-target-diffs`. 
 
 If you wish to do a black box migration, you can do so following 2 methods:
 
-	* by running a scan through the ``Scans`` tab
-	* by using an automatic process from the ``Migrations`` tab. Refer to :ref:`migration-automatic`.
+	* by running a scan through the ``Re-platform`` tab
+	* by using an automatic process from the ``Lift & Shift`` tab. Refer to :ref:`migration-automatic`.
 
 In both cases, UForge will proceed by scanning the system you want to migrate, and detect the following information:
 
@@ -67,4 +67,4 @@ When you generate a machine image directly from a scan, the following steps are 
 		- Applies any specific libraries or configuration depending on the machine image format chosen (e.g for AWS UForge adds the required AWS libraries)
 
 	4. Register the new machine image to the target environment.
-	5. You can provision one or more instances from the machine image. Each instance being a near identical workload from the original. For information on the difference after migration, refer to :ref:`source-target-diffs`. 
+	5. You can provision one or more instances from the machine image. Each instance being a near identical workload from the original. For information on the differences after migration, refer to :ref:`source-target-diffs`. 

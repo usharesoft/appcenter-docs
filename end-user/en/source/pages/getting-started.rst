@@ -20,15 +20,14 @@ The UForge Portal has the following pages, accessible from the left-hand sidebar
 	* ``Apps``: This is where your appliances are created and listed. You also go to this page to add custom software, update packages in appliances, and create images, among other things.
 	* ``Deployments``: This area lists published images that have at least one instance running on Amazon, OpenStack, Cloudstack and Microsoft Azure Resource Manager. This menu is only visible if you have the correct entitlements. Contact your UForge administrator for more information.
 	* ``Collaboration``: This is a private area where you can share appliances with other users who are part of your workspace. These users must be invited and join your workspace. They can be part of your organization or part or another organization.
-	* ``Scans``: This is where you can launch a scan of a live system in order to migrate, view the results, or compare scans.
-	* ``Migration``: This is where you can launch an automated migration.
+	* ``Migrations``: This is where you can launch a migration or scan.
 	* ``Credentials``: This is where you manage your cloud account information, SSH keys and API keys.
 	* ``Profile``: This is your UForge account information.
 	* ``Administration``: (only for administrators of platform).  Provides administration tasks including operating system and formats management.
 
 .. warning:: Depending upon your access rights one or more of these tabs may not be visible.
 
-.. image:: /images/uforge-sidebar-migrate.png
+.. image:: /images/uforge-sidebar-migrate2.png
 
 .. _uforge-supported-browsers:
 

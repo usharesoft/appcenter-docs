@@ -12,20 +12,27 @@ If your current UForge root user password matches those requirements, you do not
 
 A separate set of scripts and associated README.txt file is available on the `UShareSoft repository <http://https://repository.usharesoft.com/downloads/changePasswordScripts.tar.gz>`_.
 
-	1. Deploy UForge 3.8 with the same topology as the original UForge 3.7 one to migrate, using the CentOS 7 UForge in a box ISO
+	#. Deploy UForge 3.8 with the same topology as the original UForge 3.7 one to migrate, using the CentOS 7 UForge in a box ISO
 
 		* Deploy without any OS and format
 		* Use the same organisation name (UFORGE_DEFAULT_ORG_NAME info) as the one defined in ``/etc/UShareSoft/auth.conf on the <source_db>``
 		* Use the same admin password (UFORGE_DB_ADMIN_PASSWORD info) as the one defined in ``/etc/UShareSoft/auth.conf on the <source_db>``
 
-	2. The source UForge DB server has to be upgraded to the last 3.7 version. On the <source_db> run the following commands:
+	#. Upgrade your UForge to the latest 3.8 patch, for each node of the platform (if multi-node the following order should be respected: compute notes, db nodes, web service and UI nodes).
 
 	.. code-block:: shell
 
 		# yum update -y uforge-common
 		# yum update -y uforge-gen uforge uforge-cli uforge-client
 
-	3. The source UForge Web Service server has to be upgraded to the last 3.7 version. On the <source_ws> run the following commands:
+	#. The source UForge DB server has to be upgraded to the last 3.7 version. On the <source_db> run the following commands:
+
+	.. code-block:: shell
+
+		# yum update -y uforge-common
+		# yum update -y uforge-gen uforge uforge-cli uforge-client
+
+	#. The source UForge Web Service server has to be upgraded to the last 3.7 version. On the <source_ws> run the following commands:
 
 	.. code-block:: shell 
 
@@ -33,7 +40,7 @@ A separate set of scripts and associated README.txt file is available on the `US
 		# yum update -y uforge-gen uforge uforge-cli uforge-client
 		# service tomcat stop
 
-	4. Once both platforms are ready, on <source_db> run the following commands:
+	#. Once both platforms are ready, on <source_db> run the following commands:
 
 	.. code-block:: shell
 
@@ -45,20 +52,20 @@ A separate set of scripts and associated README.txt file is available on the `US
 		# /opt/OpenDJ/bin/export-ldif -l uforge-export.ldif -n userRoot
 		# rsync  -avl -H -F --progress /tmp/USER_DATA/ root@<target_db>:/tmp/USER_DATA/
 
-	5. Once the previous rsync command has finished oar-server and opendj services have to be stopped. On <target_db > run the following commands:
+	#. Once the previous rsync command has finished oar-server and opendj services have to be stopped. On <target_db > run the following commands:
 
 	.. code-block:: shell
 
 		# systemctl stop oar-server
 		# service opendj stop
 
-	6. Once oar-server and opendj are stoppen you need to stop Tomcat. On <target_ws> run the following command:
+	#. Once oar-server and opendj are stoppen you need to stop Tomcat. On <target_ws> run the following command:
 
 	.. code-block:: shell
 
 		# service tomcat stop
 
-	7. The DB on <target_db> server has to be reset. Tun the following commands:
+	#. The DB on <target_db> server has to be reset. Tun the following commands:
 
 	.. code-block:: shell
 
@@ -78,7 +85,7 @@ A separate set of scripts and associated README.txt file is available on the `US
 			# /opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh 2>&1 | tee -a /tmp/USER_DATA/uforge_update_db_3.8.log
 		fi
 
-	8. Once the DB is reset, Tomcat has to be started. On <target_ws> run the following commands:
+	#. Once the DB is reset, Tomcat has to be started. On <target_ws> run the following commands:
 
 	.. code-block:: shell
 
@@ -87,7 +94,7 @@ A separate set of scripts and associated README.txt file is available on the `US
 		# rm /tmp/USER_DATA/db_backup_3.7.sql
 		# rm /tmp/USER_DATA/uforge-export.ldif
 
-	9. If you have customized the UI you will need to follow these additional steps before migration to 3.8. This step applies to all the customization files in ``/var/opt/UShareSoft/uforge-client/gwt/uforge/templates`` (as decribed in), as well as ``config.xml``, ``forge-config.xml``, and css directory (in case of css customisation). Do the following on <target_ui>:
+	#. If you have customized the UI you will need to follow these additional steps before migration to 3.8. This step applies to all the customization files in ``/var/opt/UShareSoft/uforge-client/gwt/uforge/templates`` (as decribed in), as well as ``config.xml``, ``forge-config.xml``, and css directory (in case of css customisation). Do the following on <target_ui>:
 
 		a) rsync the customised files from the UI node of the source UForge AppCenter to the UI node of the target AppCenter.
 		b) Edit file forge-config.xml, line
@@ -103,7 +110,7 @@ A separate set of scripts and associated README.txt file is available on the `US
 
 			/opt/UShareSoft/uforge-client/bin/uforge_ui_update.sh
 
-	10. If you detect an issue, please contact support@usharesoft.com with the following files:
+	#. If you detect an issue, please contact support@usharesoft.com with the following files:
 
 		* The standard output of the command
 		* The result of running the ``ifconfig`` command

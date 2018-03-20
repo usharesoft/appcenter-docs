@@ -68,4 +68,3 @@ When using UForge, you have to comply with the license agreement of OSes and sof
 
 	* Handling Microsoft Windows
 		UForge user must acquire Windows license in order to handle Windows OSes in UForge. When publishing Windows OS image or scanning Windows server, you have to confirm usage conditions of cloud provider and virtualization software which you publish to or scan.
-

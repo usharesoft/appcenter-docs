@@ -27,6 +27,7 @@ With UForge you can create machine images in the following formats.
 |                                     | 4 (ESXi >=3.x)                                        |
 |                                     | 7 (ESXi >=4.x)                                        |
 |                                     | 9 (ESXi >=5.x)                                        |
+|                                     | 11 (ESXi>=6.x)                                        |
 +-------------------------------------+-------------------------------------------------------+
 | QCOW2                               | none                                                  |
 +-------------------------------------+-------------------------------------------------------+
@@ -44,6 +45,7 @@ With UForge you can create machine images in the following formats.
 |                                     | 4 (ESXi >=3.x)                                        |
 |                                     | 7 (ESXi >=4.x)                                        |
 |                                     | 9 (ESXi >=5.x)                                        |
+|                                     | 11 (ESXi>=6.x)                                        |
 |                                     | For Windows, ensure your HW version is the most up to |
 |                                     | date for the ESXi host                                |
 +-------------------------------------+-------------------------------------------------------+
@@ -51,6 +53,7 @@ With UForge you can create machine images in the following formats.
 |                                     | 4 (ESXi >=3.x)                                        |
 |                                     | 7 (ESXi >=4.x)                                        |
 |                                     | 9 (ESXi >=5.x)                                        |
+|                                     | 11 (ESXi>=6.x)                                        |
 +-------------------------------------+-------------------------------------------------------+
 | Vagrant                             | none                                                  |
 +-------------------------------------+-------------------------------------------------------+

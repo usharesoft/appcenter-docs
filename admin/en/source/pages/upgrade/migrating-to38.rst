@@ -20,10 +20,10 @@ A separate set of scripts and associated README.txt file is available on the `US
 
 	#. Upgrade your UForge to the latest 3.8 patch, for each node of the platform (if multi-node the following order should be respected: compute notes, db nodes, web service and UI nodes).
  
- 	.. code-block:: shell
- 
- 		# yum update -y uforge-common
- 		# yum update -y uforge-gen uforge uforge-cli uforge-client
+	 	.. code-block:: shell
+	 
+	 		# yum update -y uforge-common
+	 		# yum update -y uforge-gen uforge uforge-cli uforge-client
 
  	#. To upgrade from UForge 3.8 to a 3.8.fpx, you have to do the following on each node composing the topology. The following order should be respected: compute notes, db nodes, web service and UI nodes:
 
@@ -37,72 +37,72 @@ A separate set of scripts and associated README.txt file is available on the `US
 
 	#. The source UForge DB server has to be upgraded to the last 3.7 version. On the <source_db> run the following commands:
 
-	.. code-block:: shell
+		.. code-block:: shell
 
-		# yum update -y uforge-common
-		# yum update -y uforge-gen uforge uforge-cli uforge-client
+			# yum update -y uforge-common
+			# yum update -y uforge-gen uforge uforge-cli uforge-client
 
 	#. The source UForge Web Service server has to be upgraded to the last 3.7 version. On the <source_ws> run the following commands:
 
-	.. code-block:: shell 
+		.. code-block:: shell 
 
-		# yum update -y uforge-common
-		# yum update -y uforge-gen uforge uforge-cli uforge-client
-		# service tomcat stop
+			# yum update -y uforge-common
+			# yum update -y uforge-gen uforge uforge-cli uforge-client
+			# service tomcat stop
 
 	#. Once both platforms are ready, on <source_db> run the following commands:
 
-	.. code-block:: shell
+		.. code-block:: shell
 
-		# service oar-server stop
-		# service OpenDJ  stop
-		# cd /tmp/USER_DATA
-		# source /etc/UShareSoft/auth.conf
-		# mysqldump -u${UFORGE_DB_ADMIN_LOGIN} -p${UFORGE_DB_ADMIN_PASSWORD} --routines --triggers --databases oar syncope uauthdb usharedb > db_backup_3.7.sql
-		# /opt/OpenDJ/bin/export-ldif -l uforge-export.ldif -n userRoot
-		# rsync  -avl -H -F --progress /tmp/USER_DATA/ root@<target_db>:/tmp/USER_DATA/
+			# service oar-server stop
+			# service OpenDJ  stop
+			# cd /tmp/USER_DATA
+			# source /etc/UShareSoft/auth.conf
+			# mysqldump -u${UFORGE_DB_ADMIN_LOGIN} -p${UFORGE_DB_ADMIN_PASSWORD} --routines --triggers --databases oar syncope uauthdb usharedb > db_backup_3.7.sql
+			# /opt/OpenDJ/bin/export-ldif -l uforge-export.ldif -n userRoot
+			# rsync  -avl -H -F --progress /tmp/USER_DATA/ root@<target_db>:/tmp/USER_DATA/
 
 	#. Once the previous rsync command has finished oar-server and opendj services have to be stopped. On <target_db > run the following commands:
 
-	.. code-block:: shell
+		.. code-block:: shell
 
-		# systemctl stop oar-server
-		# service opendj stop
+			# systemctl stop oar-server
+			# service opendj stop
 
 	#. Once oar-server and opendj are stoppen you need to stop Tomcat. On <target_ws> run the following command:
 
-	.. code-block:: shell
+		.. code-block:: shell
 
-		# service tomcat stop
+			# service tomcat stop
 
 	#. The DB on <target_db> server has to be reset. Tun the following commands:
 
-	.. code-block:: shell
+		.. code-block:: shell
 
-		# source /etc/UShareSoft/auth.conf
-		# echo "DROP DATABASE usharedb;" | mysql -u${UFORGE_DB_ADMIN_LOGIN} -p${UFORGE_DB_ADMIN_PASSWORD}
-		# echo "DROP DATABASE oar;" | mysql -u${UFORGE_DB_ADMIN_LOGIN} -p${UFORGE_DB_ADMIN_PASSWORD}
-		# echo "DROP DATABASE syncope;" | mysql -u${UFORGE_DB_ADMIN_LOGIN} -p${UFORGE_DB_ADMIN_PASSWORD}
-		# echo "DROP DATABASE uauthdb;" | mysql -u${UFORGE_DB_ADMIN_LOGIN} -p${UFORGE_DB_ADMIN_PASSWORD}
-		# cd /tmp/USER_DATA
-		# mysql -u${UFORGE_DB_ADMIN_LOGIN} -p${UFORGE_DB_ADMIN_PASSWORD} < db_backup_3.7.sql
-		# service mysql restart
-		# oar-database --setup (answer y to the question)
-		# /opt/opendj/bin/import-ldif -l uforge-export.ldif -n userRoot
-		# systemctl start oar-server
-		# service opendj start
-		if ( <target_db> != <target_ws> )
-			# /opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh 2>&1 | tee -a /tmp/USER_DATA/uforge_update_db_3.8.log
-		fi
+			# source /etc/UShareSoft/auth.conf
+			# echo "DROP DATABASE usharedb;" | mysql -u${UFORGE_DB_ADMIN_LOGIN} -p${UFORGE_DB_ADMIN_PASSWORD}
+			# echo "DROP DATABASE oar;" | mysql -u${UFORGE_DB_ADMIN_LOGIN} -p${UFORGE_DB_ADMIN_PASSWORD}
+			# echo "DROP DATABASE syncope;" | mysql -u${UFORGE_DB_ADMIN_LOGIN} -p${UFORGE_DB_ADMIN_PASSWORD}
+			# echo "DROP DATABASE uauthdb;" | mysql -u${UFORGE_DB_ADMIN_LOGIN} -p${UFORGE_DB_ADMIN_PASSWORD}
+			# cd /tmp/USER_DATA
+			# mysql -u${UFORGE_DB_ADMIN_LOGIN} -p${UFORGE_DB_ADMIN_PASSWORD} < db_backup_3.7.sql
+			# service mysql restart
+			# oar-database --setup (answer y to the question)
+			# /opt/opendj/bin/import-ldif -l uforge-export.ldif -n userRoot
+			# systemctl start oar-server
+			# service opendj start
+			if ( <target_db> != <target_ws> )
+				# /opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh 2>&1 | tee -a /tmp/USER_DATA/uforge_update_db_3.8.log
+			fi
 
 	#. Once the DB is reset, Tomcat has to be started. On <target_ws> run the following commands:
 
-	.. code-block:: shell
+		.. code-block:: shell
 
-		# service tomcat start
-		# /opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh 2>&1 | tee -a /tmp/USER_DATA/uforge_update_ws_3.8.log
-		# rm /tmp/USER_DATA/db_backup_3.7.sql
-		# rm /tmp/USER_DATA/uforge-export.ldif
+			# service tomcat start
+			# /opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh 2>&1 | tee -a /tmp/USER_DATA/uforge_update_ws_3.8.log
+			# rm /tmp/USER_DATA/db_backup_3.7.sql
+			# rm /tmp/USER_DATA/uforge-export.ldif
 
 	#. If you have customized the UI you will need to follow these additional steps before migration to 3.8. This step applies to all the customization files in ``/var/opt/UShareSoft/uforge-client/gwt/uforge/templates`` (as decribed in), as well as ``config.xml``, ``forge-config.xml``, and css directory (in case of css customisation). Do the following on <target_ui>:
 
@@ -111,14 +111,14 @@ A separate set of scripts and associated README.txt file is available on the `US
 
 			.. code-block:: shell
 
-			<c:uForgeUrl>http://10.2.1.11:8080/ufws/</c:uForgeUrl>
+				<c:uForgeUrl>http://10.2.1.11:8080/ufws/</c:uForgeUrl>
 
 		c) Replace the old web service node IP address with the IP address of the new web service node.
 		d) Launch the command 
 
 			.. code-block:: shell
 
-			/opt/UShareSoft/uforge-client/bin/uforge_ui_update.sh
+				/opt/UShareSoft/uforge-client/bin/uforge_ui_update.sh
 
 	#. If you detect an issue, please contact support@usharesoft.com with the following files:
 

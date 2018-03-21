@@ -72,9 +72,9 @@ Updating a Windows-based Install Profile
 
 You can define the following as part of a Windows-based appliance install profile:
 
-* ``Sysprep``: Allows you to indicate that sysprep should be run on first boot. If you do not select to run sysprep, you cannot set a Admin root login as ``Administrator`` option will not be visible.
+* ``Sysprep``: Allows you to indicate that sysprep should be run on first boot. If you do not select to run sysprep, you cannot set an Administrator password as ``Administrator`` option will not be visible.
 * ``Activation Key``: You can set the Windows Activation Key. If it is not entered in the Install Profile, the default key will be used for a 30-day trial period once the appliance is booted.
-* ``Administrator``: To set the administrator root login. Can be one of ``Ask during installation``, ``None`` or ``Set automatically``. Note that this option is visible only if you have selected to run sysprep under ``Sysprep`` option.
+* ``Administrator``: To set the administrator password. Can be one of ``Ask during installation``, ``None`` or ``Set automatically``. Note that this option is visible only if you have selected to run sysprep under ``Sysprep`` option.
 * ``Network``: You can set the internet settings. The default is ``set automatically``. See :ref:`appliance-multinic`
 * ``Partitioning``: You can modify the disk and swap size for the automatic set up, select ``ask during install``, or set up ``Advanced Partitioning`` (for several disks). For more information see :ref:`appliance-install-profile-partitioning`.
 * ``Time Zone``: default is ``set automatically to London``.

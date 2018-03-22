@@ -9,6 +9,7 @@ UForge is a scalable multi-tenant platform.  UForge can be split into the follow
 
 	* UForge Server – This contains all the business logic of UForge, handling all incoming user requests.
 	* Meta-data SQL Store – A database holding all the configuration information and data of the platform.
+	* Secret Manager - A dedicated service to store user's secrets in a secure way
 	* LDAP Service – LDAP holding user authentication and access information
 	* IDM Service – Authentication and authorization module
 	* Generation Cluster – A grid engine for scheduling and executing image generations
@@ -46,6 +47,8 @@ This IDM Service can be extended to provide a wider identity and access manageme
 
 By default MariaDB is used as the SQL Store.
 
+**Secret Manager.** This is a tool for securely accessing secrets, and we are currently using Vault. A secret is anything that you want to tightly control access to, such as API keys, passwords, or certificates. A global token is used by the UForge Server to store secrets and generate tokens for external use such as publication, deployment ...
+
 **Generation Cluster.**  Image generation is I/O intensive and may take several minutes to complete.  Consequently an HPC cluster is used to execute image generation jobs.  There are two parts to this cluster:
 
 	* One or more compute nodes to execute a generation job
@@ -81,8 +84,8 @@ Infrastructure Setup
 
 UForge can be installed either on physical machines or in a virtual or cloud environment.  The minimal installation requirements for UForge are:
 
-	* One physical or virtual machine where UForge will be installed 
-	* A NAS or SAN for storage 
+	* One physical or virtual machine where UForge will be installed
+	* A NAS or SAN for storage
 
 UForge AppCenter Node Prerequisites
 -----------------------------------
@@ -92,7 +95,7 @@ The UForge AppCenter components can be run on one physical or virtual machine, o
 The UForge AppCenter requires the following hardware:
 
 	* CPU: 64-bit, 8 or more cores
-	* RAM: 16GB or more 
+	* RAM: 16GB or more
 	* Local Hard Drive: 400GB
 	* NAS/SAN Storage: 200 GB (though this might be much more depending upon the usage)
 

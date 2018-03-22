@@ -9,7 +9,7 @@ UForge is a scalable multi-tenant platform.  UForge can be split into the follow
 
 	* UForge Server – This contains all the business logic of UForge, handling all incoming user requests.
 	* Meta-data SQL Store – A database holding all the configuration information and data of the platform.
-	* Secret Manager - A dedicated service to store user's secrets in a secure way
+	* Secret Manager - A dedicated service to store user's confidential information, such as password, login ... in a secure way.
 	* LDAP Service – LDAP holding user authentication and access information
 	* IDM Service – Authentication and authorization module
 	* Generation Cluster – A grid engine for scheduling and executing image generations
@@ -48,6 +48,7 @@ This IDM Service can be extended to provide a wider identity and access manageme
 By default MariaDB is used as the SQL Store.
 
 **Secret Manager.** This is a tool for securely accessing secrets, and we are currently using Vault. A secret is anything that you want to tightly control access to, such as API keys, passwords, or certificates. A global token is used by the UForge Server to store secrets and generate tokens for external use such as publication, deployment ...
+These secrets are stored and encrypted on the disk at ``/var/lib/vault`` by using the Filesystem storage backend of Vault.
 
 **Generation Cluster.**  Image generation is I/O intensive and may take several minutes to complete.  Consequently an HPC cluster is used to execute image generation jobs.  There are two parts to this cluster:
 

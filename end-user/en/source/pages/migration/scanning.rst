@@ -40,7 +40,7 @@ To carry out a scan, go to the ``Migration`` tab:
 
 		.. note:: If you do not include the overlay, all files needed to rebuild packages are still transferred to UForge, including the package configuration files. However, all "extra_files" are excluded from the scan.
 
-	5. If you want to exclude certain directories or files from the scan then click add and enter the directory path or full pathname of the file..
+	5. If you want to exclude certain directories or files from the scan then click ``add`` and enter the directory path or full pathname of the file.
 
 	6. Click ``Next``. Follow the instructions on the UForge AppCenter GUI.
 

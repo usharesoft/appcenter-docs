@@ -41,6 +41,7 @@ To carry out a scan, go to the ``Migration`` tab:
 		.. note:: If you do not include the overlay, all files needed to rebuild packages are still transferred to UForge, including the package configuration files. However, all "extra_files" are excluded from the scan.
 
 	5. If you want to exclude certain directories or files from the scan then click ``add`` and enter the directory path or full pathname of the file.
+
 	6. Click ``Next``. Follow the instructions on the UForge AppCenter GUI.
 
 		.. image:: /images/migration-code.png
@@ -125,8 +126,8 @@ To carry out a scan, go to the ``Migration`` tab:
 
 		.. note:: If you are using local storage you will have to launch a script at the end to upload the archive to UForge AppCenter later.
 
-	#. If you want to exclude certain directories or files from the scan then click ``add`` and enter the directory path or full pathname of the file.
+	#. If you want to exclude certain partitions from the scan then check the boxes accordingly in the section ``Disks or Partitions to exclude``.
 
-	#. Click ``scan`` to launch the scan. A report is sent to UForge AppCenter which can be used for migration. To view the progress, go back to the ``Migration`` tab and click ``ok``.
+	#. Click ``Scan`` to launch the scan. A report is sent to UForge AppCenter which can be used for migration. To view the progress, go back to the ``Migrations`` page.
 
 	#. To view the details of a scan, click on the scan and refer to :ref:`migration-view-scan`.

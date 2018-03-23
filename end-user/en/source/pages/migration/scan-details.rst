@@ -25,7 +25,10 @@ To view the details of a scanned Linux-based instance:
 Windows-based
 ~~~~~~~~~~~~~
 
-.. note:: The details of the scan are for information purposes only. They cannot be modified.
+.. note:: The details of the scan are for information purposes only. They cannot be modified. The following applications in your scanned system are listed in the Applications tab.
+
+	* Applications displayed in Control Panel > Programs and Features page
+	* Windows Store applications
 
 To view the details of a scanned Windows-based instance:
 

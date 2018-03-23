@@ -120,9 +120,9 @@ To carry out a scan, go to the ``Re-platform`` tab on the ``Migrations`` page:
 
 		.. note:: Scan name can be mix of alphanumeric characters, spaces and the following special characters `._-`. All other characters are not supported at this time.
 
-	#. Optionally you can select ``Use local storage``. This means that the scan will be not be done in streaming but in 2 phases. First the data will be stored on a temporary storage drive during the scan process. This temporary storage can be a local directory or a virtual space on the network. It must be at least half the size of the machine you want to scan.
+	#. Optionally you can select ``Use local storage``. This means that the scan will be not be done in streaming but in 2 phases. First the data will be stored on a temporary storage drive during the scan process. This temporary storage can be a local directory or a virtual space on the network. It can also be on the same partition that is being scanned (provided there is enough space available). It must be at least half the size of the machine you want to scan.
 
-		.. note:: If you are using local storage you will have to launch a script at the end to upload the archive to UForge AppCenter later.
+		.. note:: If you are using local storage, UForge AppCenter will generate a script for you named ``upload_raw_partition_images.bat`` that you will have to launch at the end, to upload the archive to UForge AppCenter once the scan is complete.
 
 	#. If you want to exclude certain partitions from the scan then check the boxes accordingly in the section ``Disks or Partitions to exclude``.
 

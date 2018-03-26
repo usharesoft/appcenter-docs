@@ -11,6 +11,7 @@ Release Date: 2018-04-16
 Enhancements
 ~~~~~~~~~~~~
 * "Migrations" tab now contains both automated migration and scan features, available under "Lift & Shift" and "Re-platform" sub menus
+* 9057 Remove End-of-life Microsoft Azure Classic
 
 3.8.fp2
 -------

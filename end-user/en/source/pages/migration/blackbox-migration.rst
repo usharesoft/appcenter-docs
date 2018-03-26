@@ -47,7 +47,7 @@ When you generate a machine image from the scan, all the information included in
 	1. Uninstall NetworkManager (if installed).
 	2. Uninstall the Microsoft Azure agent, i.e. WALinuxAgent and waagent packages (if installed).
 
-.. warning:: Ubuntu 14.04 migration for Microstoft Azure target platform is not supported by UForge.
+.. warning:: Ubuntu 14.04 migration for Microsoft Azure target platform is not supported by UForge.
 
 When you generate a machine image directly from a scan, the following steps are carried out:
 

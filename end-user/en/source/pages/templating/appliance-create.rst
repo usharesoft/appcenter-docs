@@ -77,6 +77,6 @@ To create a Windows Appliance:
 
 .. note:: For Windows, with Software bundle whose name begins with ``UForgeWinDrivers``, you can specify drivers to be installed in a generated machine image.
 
-.. note:: A binary called ``UShareInstallConfig`` is embedded at generation time, which helps the final user of the Appliance do the last-mile configuration.
+.. note:: A binary called ``uforge-install-config`` is embedded at generation time, which helps the final user of the Appliance do the last-mile configuration.
 
-.. note:: A Windows appliance created using a golden image will not list the appliances and services under ``Stack`` ``OS Profile``.
+.. note:: A Windows appliance created using a golden image will not list the applications and services under ``Stack`` ``OS Profile``.

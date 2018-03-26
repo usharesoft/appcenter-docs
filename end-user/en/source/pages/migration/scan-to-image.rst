@@ -11,11 +11,11 @@ Once you have scanned a source system, you can generate a machine image directly
 
 To create an image from a scan:
 
-	1. Go to the ``Scans`` tab.
+	1. Go to the ``Re-platform`` tab on the ``Migrations`` page.
 	2. Click on the scan to view details.
 	3. Click on the ``generate`` icon in the top right.
 
-	.. image:: /images/scan-generate-image2.png
+	.. image:: /images/replatform-generate.png
 
 	4. Select the image format you want.
 	5. Click ``Generate``.

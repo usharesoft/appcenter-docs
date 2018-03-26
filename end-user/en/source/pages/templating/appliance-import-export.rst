@@ -36,6 +36,8 @@ To export an existing appliance:
 
 The equivalent export feature is available when editing an appliance template.
 
+.. note:: An exported Windows-based template does not contain the "Activation Key" to ensure this data remains confidential.
+
 .. _appliance-import:
 
 Importing
@@ -127,9 +129,9 @@ Then you need to write this restriction rule instead::
 
 When you export a Windows appliance in UForge 3.7, you will also encounter compatibility issues. In order to import the template, you must modify the file containing the description of your appliance (``template.yml`` or ``template.json``).
 
-In this file, there is a section ``os`` that contains various information and in particular the profile name. The new 3.8 template is now having additional fields, ``windowsEdition``, ``windowsType`` and ``windowsLanguage`` that you need to fulfill to be able to import the template.
+In this file, there is a section ``os`` that contains various information and in particular the profile name. The new 3.8 template now has the following additional fields: ``windowsEdition``, ``windowsType`` and ``windowsLanguage``. You will need to add these fields to be able to import the template.
 
-For example, if your ``os`` section is like this::
+For example, if your ``os`` section is like this for 3.7::
 
 			name: "Windows"
 			version: "Server2012R2"
@@ -137,7 +139,7 @@ For example, if your ``os`` section is like this::
 			updateTo: "12-19-2016 10:32:07 GMT"
 			profile: "Standard Full English"
 
-Then you should add the following fields::
+Then you should update it with the new fields, and it should look something like::
 
 			name: "Windows"
 			version: "Server2012R2"

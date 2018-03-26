@@ -12,10 +12,10 @@ Attributes
 
 The list of attributes for ``CredAccountAzure`` are:
 
-	* ``accountName`` (string): the account name to use
-	* ``baseCertificatesUri`` (anyURI): the uri resource to get all the certificates for this cloud account
-	* ``certificates``: a list of certificate files (see :ref:`certificate-object`)
-	* ``certificateUris`` (:ref:`UriList-object`): a list of uri resources for the :ref:`certificate-object` objects
+	* ``tenantId`` (string): the tenant id to use
+	* ``subscriptionId`` (string): the subscription id to use
+	* ``applicationId`` (string): the application id to use
+	* ``applicationKey`` (string): the application key to use
 	* ``name`` (string): the name of the cloud account
 	* ``parentUri`` (anyURI): the uri resource of the parent object this cloud account is attached to
 	* ``uri`` (anyURI): the uri resource of this cloud account

@@ -2,15 +2,15 @@
 
 .. _migration-process-blackbox:
 
-Blackbox Migration Process
---------------------------
+Black box Migration Process
+---------------------------
 
-The goal of black box migration (either using ``Scans`` or ``Migrations``) is to reproduce a near identical copy of the currently running workload.  However, there will always be small differences between the two workloads after migration is complete, notably some services are disabled or enabled depending on the target machine image being created (refer to :ref:`service-state`). For more information on the difference after migration, refer to :ref:`source-target-diffs`. 
+The goal of black box migration (either using ``Re-platform`` or ``Lift & Shift``) is to reproduce a near identical copy of the currently running workload.  However, there will always be small differences between the two workloads after migration is complete, notably some services are disabled or enabled depending on the target machine image being created (refer to :ref:`service-state`). For more information on the differences after migration, refer to :ref:`source-target-diffs`. 
 
 If you wish to do a black box migration, you can do so following 2 methods:
 
-	* by running a scan through the ``Scans`` tab
-	* by using an automatic process from the ``Migrations`` tab. Refer to :ref:`migration-automatic`.
+	* by running a scan through the ``Re-platform`` tab
+	* by using an automatic process from the ``Lift & Shift`` tab. Refer to :ref:`migration-automatic`.
 
 In both cases, UForge will proceed by scanning the system you want to migrate, and detect the following information:
 
@@ -38,11 +38,7 @@ When you generate a machine image from the scan, all the information included in
 
 .. warning:: Currently, UForge is not able to migrate the Yum repository GPG keys. This means that the user will have to accept the repository GPG key when the user installs or updates a package. The user will have to do this only once per repository.
 
-.. note:: If you plan to migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/solutions/cloud/k5/>`_, you must also do the following before scanning:
-
-	1. Uninstall VMWare Tools (if installed).
-	2. Disable NLA for RDP (Please refer to official Microsoft documentation `Configure Network Level Authentication for Remote Desktop Services Connections <https://technet.microsoft.com/en-us/library/cc732713(v=ws.11).aspx/>`_).
-	3. Uninstall CloudBase-Init (if installed).
+.. note:: If you plan to migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/solutions/cloud/k5/>`_, you must also uninstall CloudBase-Init (if installed) before scanning.
 
 	For more detailed information, refer to `official Fujitsu K5 IaaS Documentation <http://www.fujitsu.com/uk/Images/k5-iaas-features-handbook.pdf>`_.
 
@@ -51,7 +47,7 @@ When you generate a machine image from the scan, all the information included in
 	1. Uninstall NetworkManager (if installed).
 	2. Uninstall the Microsoft Azure agent, i.e. WALinuxAgent and waagent packages (if installed).
 
-.. warning:: Ubuntu 14.04 migration for Microstoft Azure target platform is not supported by UForge.
+.. warning:: Ubuntu 14.04 migration for Microsoft Azure target platform is not supported by UForge.
 
 When you generate a machine image directly from a scan, the following steps are carried out:
 
@@ -67,4 +63,4 @@ When you generate a machine image directly from a scan, the following steps are 
 		- Applies any specific libraries or configuration depending on the machine image format chosen (e.g for AWS UForge adds the required AWS libraries)
 
 	4. Register the new machine image to the target environment.
-	5. You can provision one or more instances from the machine image. Each instance being a near identical workload from the original. For information on the difference after migration, refer to :ref:`source-target-diffs`. 
+	5. You can provision one or more instances from the machine image. Each instance being a near identical workload from the original. For information on the differences after migration, refer to :ref:`source-target-diffs`. 

@@ -5,7 +5,7 @@
 Deploying a Machine Image
 --------------------------
 
-.. note:: Currently, Linux machine images published on Amazon, OpenStack, Cloudstack and Microsoft Azure Resource Manager can be deployed from UForge. For Windows based appliances, deploy is supported only for the images published on Amazon.
+.. note:: Currently, only Linux machine images published on Amazon, OpenStack, Cloudstack and Microsoft Azure can be deployed from UForge. You cannot deploy a Windows based appliance.
 
 You can only deploy a machine image if you have AMP installed. For more information on installing AMP, refer to the official `Cloudsoft AMP documentation <https://docs.cloudsoft.io/>`_
 
@@ -37,31 +37,17 @@ For Amazon, only full accounts can be used, trial accounts are not supported for
 
 	8. In the deploy view, enter the name of the deployment. Click on ``deploy``. This will connect to cloud platform and launch your machine image instance. Once deployed, a green button will appear under the ``Status`` column.
 
-    For Linux images, you will need to input the ``Instance Name``, ``Minimal number of cores`` and ``Minimal RAM`` values
-
-		.. image:: /images/machine-image-deploy-popup-linux.png
-
-    For Windows images, you will need to supply an additional ``User name`` and ``User password`` for an administrator account to be used for ``WinRM``
-        
-		.. image:: /images/machine-image-deploy-popup-windows.png
-
-        .. warning:: Some combinations of ``Minimal number of cores`` and ``Minimal RAM`` might not work for some regions due to `a known issue im AMP <https://issues.apache.org/jira/browse/BROOKLYN-582>`_. To work around this issue, please select a different value for ``cores`` and/or ``RAM``, or retry with a different region.  
+		.. image:: /images/machine-image-deploy-popup.png
 
 	9. From the ``Deployments`` page you can see the instances deployed and their status. If the status is green it is up and running. If it is red, there has been an issue during deployment and/or it is stopped.
 
 		.. image:: /images/machine-image-deploy-status.png
 
-	.. note:: Using this procedure, all deployed Linux virtual machines will have ssh port (22) opened in their security group. All deployed Windows virtual machines will have RDP port (3389) and WinRM ports (5985, 5986) opened in their security group.
-
-	.. note:: For Windows images, if you have customized firewall settings then the following TCP ports need to be opened: 3389 (RDP) and 5985 (WinRM) 
-
-	.. note:: For all deployed Windows virtual machines, if WinRM service is not enabled by default, then it will be activated during the deployment process.
+	.. note:: All deployed virtual machines using this procedure will have ssh port (22) open in their security group.
 
 	.. note:: If you want to stop your deployment, you can do so by clicking on the delete (garbage) icon. This will stop it and remove the instance from your cloud.
 
 	.. warning:: Terminating an OpenStack deployment may fail due to `a known issue in AMP <https://issues.apache.org/jira/browse/JCLOUDS-1318>`_. Click again on the delete (garbage) icon to work around the issue.
-
-    .. warning:: For Windows Server 2008R2, you will need to run a command in ``PowerShell`` on the source machine before scanning ``winrm set winrm/config/service '@{AllowUnencrypted="true"}'``. This command will disable WinRM encryption over HTTP which is not supported by AMP. More information can be found on the Cloudsoft AMP documentation, in section `WinRM Connectivity Diagnostics <https://docs.cloudsoft.io/blueprints/base-blueprints/winrm/client.html#winrm-connectivity-diagnostics>`_.
 
 .. _list-deployment:
 
@@ -80,13 +66,7 @@ If you click on the application name you will see the details of the instance th
 
 .. image:: /images/deployment-info.png
 
-If you click on the ``i`` next to the hostname, a popup will appear indicating the IP address, the user name and some additional informations based on the operating system to show how to connect to that instance:
-
-For Linux instances the SSH key (if any) and an example code will also be given to connect to your instance.
+If you click on the ``i`` next to the hostname, a popup will appear indicating the IP address, the user name and the SSH key (if any). An example code will also be given to connect to your instance.
 
 .. image:: /images/deployment-info-popup.png
-
-For Windows instances a link for downloading RDP file is provided:
-
-.. image:: /images/deployment-rdp-popup.png
 

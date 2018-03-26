@@ -12,8 +12,11 @@ Attributes
 
 The list of attributes for ``PublishImageAzure`` are:
 
-	* ``region`` (string): the region where this machine image is registered
-	* ``storageAccount`` (string): the storage account used to register this machine image
+	* ``storageAccount`` (string): the storageAccount where this machine image is registered
+	* ``container`` (string): the container where this machine image is registered
+	* ``resourceGroup`` (string): the resourceGroup where this machine image is registered
+	* ``blob`` (string): the blob of the published machine image
+	* ``displayName`` (string): the cloud name for this machine image
 	* ``cloudId`` (string): the unique id for the machine image registered on the cloud environment
 	* ``imageUri`` (anyURI): the uri resource of the machine image
 	* ``publishLocation`` (string): the location of the registered machine image (e.g. region)

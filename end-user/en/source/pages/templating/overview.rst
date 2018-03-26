@@ -9,6 +9,7 @@ An appliance template is a meta-data description of an entire software stack.  T
    :titlesonly:
 
    supported-os
+   supported-image-type
    appliance-create
    appliance-search
    appliance-view-details

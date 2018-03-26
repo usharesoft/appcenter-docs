@@ -38,7 +38,6 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`credaccountabiquo-object`
 	* :ref:`credaccountaws-object`
 	* :ref:`credaccountazure-object`
-	* :ref:`credaccountazureresourcemanager-object`
 	* :ref:`credaccountcert-object`
 	* :ref:`credaccountcloudstack-object`
 	* :ref:`credaccounteuca-object`
@@ -129,7 +128,6 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`publishimageabiquo-object`
 	* :ref:`publishimageaws-object`
 	* :ref:`publishimageazure-object`
-	* :ref:`publishimageazureresourcemanager-object`
 	* :ref:`publishimagecloudstack-object`
 	* :ref:`publishimageeuca-object`
 	* :ref:`publishimageflexiant-object`
@@ -254,7 +252,6 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     CredAccountAbiquo
     CredAccountAws
     CredAccountAzure
-    CredAccountAzureResourceManager
     CredAccountCert
     CredAccountCloudStack
     CredAccountEuca
@@ -345,7 +342,6 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     PublishImageAbiquo
     PublishImageAws
     PublishImageAzure
-    PublishImageAzureResourceManager
     PublishImageCloudStack
     PublishImageEuca
     PublishImageFlexiant

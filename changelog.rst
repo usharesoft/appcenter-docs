@@ -10,6 +10,7 @@ Release Date: 2018-04-16
 
 Enhancements
 ~~~~~~~~~~~~
+* "Migrations" tab now contains both automated migration and scan features, available under "Lift & Shift" and "Re-platform" sub menus
 * 9057 Remove End-of-life Microsoft Azure Classic
 
 3.8.fp2
@@ -54,7 +55,7 @@ Bug Fixes
 * 8842 Docker publishing cannot be canceled
 * 9010 After a file upload error, the value of consumed diskusage increases when the quota is changed to unlimit
 * 8412 Ubuntu 14.04 generation fails with stack overflow error
-* 7493 [KDDI] A letter '&' in comment field of /etc/passwd file changed to '&amp;' after migration
+* 7493 A letter '&' in comment field of /etc/passwd file changed to '&amp;' after migration
 * 8873 CPU usage of Dozer thread sticks to over 99% and never ends
 * 8995 script machine_infos.sh fails
 * 9045 Shell injection, the user can execute command as tomcat user when calling publish api
@@ -166,6 +167,11 @@ New Features
 * Debian 9 (Stretch) operating system supported for all features (templating and migration)
 
 For other features, please refer to 3.7.fp8 release notes
+
+Migrating to 3.8
+~~~~~~~~~~~~~~~~
+
+For specificities relating to migrating a 3.7 or 3.7.fpx to 3.8 please refer to :ref:`migrate-to38`.
 
 
 Bug Fixes

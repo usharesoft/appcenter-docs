@@ -11,11 +11,11 @@ Settings regarding the secret manager are stored in ``/etc/UShareSoft/uforge/ufo
 	* VAULT_PROTO=<The protocol to access Vault server eg: http or https>
 	* VAULT_HOST=<The URL to access Vault server eg: http://vault-instance.com>
 	* VAULT_PORT=<The port number used to communicate with Vault eg: 8200>
-	* VAULT_TOKEN_FILE_PATH=<The file containing the token that the UForge Server should use eg: /etc/UShareSoft/uforge/uforge_vault_token>
+	* VAULT_TOKEN_FILE_PATH=<The file containing the token that the UForge Server should use eg: /etc/UShareSoft/vault/root_token>
 	* VAULT_PREFIX=<The prefix used for UForge Server secrets. This will allow multiple UForge servers to use the same Vault server. Should be alpha-numeric without special characters eg: uforge1521559085>
+
+	.. note:: During installation the keys to unseal vault and the root token are stored in separated files at ``/etc/UShareSoft/vault/``. We currently use the root token in order to facilitate the token management and we recommend you to not use this Vault instance for managing other secrets than UForge.
 
 The Vault server must be unsealed and accessible in order to be used by UForge Server.
 
-Vault is by default installed with UForge and we do not support the use of external Vault.
-
-.. note:: During installation the keys to unseal vault and the root token are stored in separated files at ``/etc/UShareSoft/vault/`` 
+Vault is by default installed with UForge and we currently support only this one.

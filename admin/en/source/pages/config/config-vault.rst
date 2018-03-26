@@ -17,3 +17,5 @@ Settings regarding the secret manager are stored in ``/etc/UShareSoft/uforge/ufo
 The Vault server must be unsealed and accessible in order to be used by UForge Server.
 
 Vault is by default installed with UForge and we do not support the use of external Vault.
+
+.. note:: During installation the keys to unseal vault and the root token are stored in separated files at ``/etc/UShareSoft/vault/`` 

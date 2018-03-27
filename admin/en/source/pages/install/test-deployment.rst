@@ -49,7 +49,7 @@ The database service should be running and available on the port ``3306`` and th
 
 .. code-block:: shell
 
-	$ service mysql status
+	$ systemctl status mysql
 	MySQL running (22661)                                      [  OK  ]
 
 Get the values from the ``auth.conf`` and add them to some environment variables (you could also manually view the auth.conf)

@@ -1,20 +1,22 @@
 .. Copyright 2018 FUJITSU LIMITED
 
-.. _machineImageGeneration-cancel:
+.. _platformTool-getSoftware:
 
-machineImageGeneration_cancel
------------------------------
+platformTool_getSoftware
+------------------------
 
-.. function:: DELETE /users/{uid}/appliances/{aid}/images/{itid}/status
+.. function:: GET /orgs/{oid}/platformtools/{ptid}/pkgs
 
 .. sidebar:: Summary
 
-	* Method: ``DELETE``
-	* Response Code: ``204 / 200``
+	* Method: ``GET``
+	* Response Code: ``200 / 304``
 	* Response Formats: ``application/xml`` ``application/json``
-	* Since: ``UForge 1.0``
+	* Since: ``UForge 3.8.3``
 
-Cancels a running generation of a machine image.
+Retrieves a list of software components (libs, drivers etc) that will be automatically injected when generating a machine image for this target environment. 
+
+A list of :ref:`packages-object` objects are returned.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -25,9 +27,8 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the user name (login name) of the :ref:`user-object`
-* ``itid`` (required): the id of the :ref:`image-object`
-* ``aid`` (required): the id of the :ref:`appliance-object`
+* ``oid`` (required): the id of the :ref:`org-object`
+* ``sbid`` (required): the id of the :ref:`softwarebundle-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -39,15 +40,16 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/users/{uid}/appliances/{aid}/images/{itid}/status" -X DELETE \
+	curl "https://uforge.example.com/api/orgs/{oid}/platformtools/{ptid}/pkgs" -X GET \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::
 
-	 * :ref:`appliance-object`
 	 * :ref:`applianceImage-publish`
 	 * :ref:`image-object`
 	 * :ref:`imagepkgs-object`
+	 * :ref:`machineImageFile-download`
+	 * :ref:`machineImageGeneration-cancel`
 	 * :ref:`machineImagePkg-getAll`
 	 * :ref:`machineImagePublish-cancel`
 	 * :ref:`machineImagePublishedStatus-get`
@@ -69,5 +71,6 @@ Example Request
 	 * :ref:`machineImage-getPlatformTools`
 	 * :ref:`machineImage-publish`
 	 * :ref:`machineImage-regenerate`
-	 * :ref:`scanImage-getPlatformTools`
-	 * :ref:`status-object`
+	 * :ref:`org-object`
+	 * :ref:`packages-object`
+	 * :ref:`softwarebundle-object`

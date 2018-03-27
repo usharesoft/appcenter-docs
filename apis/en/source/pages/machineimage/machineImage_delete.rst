@@ -66,5 +66,7 @@ Example Request
 	 * :ref:`machineImage-generate`
 	 * :ref:`machineImage-get`
 	 * :ref:`machineImage-getAll`
+	 * :ref:`machineImage-getPlatformTools`
 	 * :ref:`machineImage-publish`
 	 * :ref:`machineImage-regenerate`
+	 * :ref:`scanImage-getPlatformTools`

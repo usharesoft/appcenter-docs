@@ -14,7 +14,7 @@ machineImage_platformTools
 	* Response Formats: ``application/xml`` ``application/json``
 	* Since: ``UForge 3.8.3``
 
-Retrieves platform tools that matches to the appliance and image format.
+Retrieves the platform tools that match the appliance and image format.
 
 Security Summary
 ~~~~~~~~~~~~~~~~

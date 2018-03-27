@@ -14,7 +14,7 @@ scanImage_platformTools
 	* Response Formats: ``application/xml`` ``application/json``
 	* Since: ````
 
-Retrieves platform tools that matches to the scan image.
+Retrieves platform tools that match the scan image.
 
 Security Summary
 ~~~~~~~~~~~~~~~~

@@ -7,7 +7,8 @@ Configuring Secret Manager
 
 By default the secret manager is already configured. UForge accesses Vault by using a token stored in ``/etc/UShareSoft/uforge/uforge_vault_token``. This token should be able to read, write and create tokens on Vault.
 
-Settings regarding the secret manager are stored in ``/etc/UShareSoft/uforge/uforge.conf`` :
+Settings regarding the secret manager are stored in ``/etc/UShareSoft/uforge/uforge.conf``:
+
 	* VAULT_PROTO=<The protocol to access Vault server eg: http or https>
 	* VAULT_HOST=<The URL to access Vault server eg: http://vault-instance.com>
 	* VAULT_PORT=<The port number used to communicate with Vault eg: 8200>

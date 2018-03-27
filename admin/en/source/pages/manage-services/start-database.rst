@@ -14,18 +14,18 @@ Stopping the Database
 
 .. code-block:: shell
 
-  $ service mysql stop
+  $ systemctl stop mysql
 
 Starting the Database
 ~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: shell
 
-  $ service mysql start
+  $ systemctl start mysql
 
 Restarting the Database
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: shell
 
-  $ service mysql restart
+  $ systemctl restart mysql

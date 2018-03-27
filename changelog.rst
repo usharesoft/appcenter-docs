@@ -8,6 +8,10 @@ Changelog
 
 Release Date: 2018-04-16
 
+New Features
+~~~~~~~~~~~~
+* The automated migration process is now available for all supported platforms
+
 Enhancements
 ~~~~~~~~~~~~
 * "Migrations" tab now contains both automated migration and scan features, available under "Lift & Shift" and "Re-platform" sub menus

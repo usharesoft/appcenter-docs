@@ -5,7 +5,7 @@
 platformTool_getSoftware
 ------------------------
 
-.. function:: GET /orgs/{oid}/platformtools/{ptid}/pkgs
+.. function:: GET /orgs/{oid}/platformtools/{sbid}/pkgs
 
 .. sidebar:: Summary
 
@@ -40,7 +40,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/orgs/{oid}/platformtools/{ptid}/pkgs" -X GET \
+	curl "https://uforge.example.com/api/orgs/{oid}/platformtools/{sbid}/pkgs" -X GET \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::

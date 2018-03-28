@@ -89,5 +89,7 @@ Example of representation.xml content (the request body):
 	 * :ref:`machineImage-downloadFile`
 	 * :ref:`machineImage-get`
 	 * :ref:`machineImage-getAll`
+	 * :ref:`machineImage-getPlatformTools`
 	 * :ref:`machineImage-publish`
 	 * :ref:`machineImage-regenerate`
+	 * :ref:`scanImage-getPlatformTools`

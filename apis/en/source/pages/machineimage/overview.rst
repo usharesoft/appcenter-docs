@@ -27,9 +27,12 @@ Machine Image API Resources
 	* :ref:`machineImage-generate`: Request to generate a machine image from an appliance
 	* :ref:`machineImage-get`: Retrieves the meta-data of a machine image
 	* :ref:`machineImage-getAll`: Returns all of the machine images of an appliance
+	* :ref:`machineImage-getPlatformTools`: Retrieves the platform tools that match the appliance and image format
 	* :ref:`machineImage-publish`: Request to publish (register) a generated machine image to a target cloud environment
 	* :ref:`machineImage-regenerate`: Request to re-generate a machine image from a previous generation request
+	* :ref:`platformTool-getSoftware`: Retrieves a list of software components (libs, drivers etc) that will be automatically injected when generating a machine image for this target environment
 	* :ref:`pxeBootScript-download`: Returns a pxe script listing all the images accessible to a given user
+	* :ref:`scanImage-getPlatformTools`: Retrieves a list of software components (libs, drivers etc) for the scanned system that will be automatically injected when generating a machine image for this target environment
 	* :ref:`scanPublishedImage-deploy`: Deploy a new machine from an image published to a target environment
 
 
@@ -58,7 +61,10 @@ Machine Image API Resources
     machineImage_generate
     machineImage_get
     machineImage_getAll
+    machineImage_getPlatformTools
     machineImage_publish
     machineImage_regenerate
+    platformTool_getSoftware
     pxeBootScript_download
+    scanImage_getPlatformTools
     scanPublishedImage_deploy

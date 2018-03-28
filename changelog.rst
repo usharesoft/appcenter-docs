@@ -14,6 +14,7 @@ New Features
 
 Enhancements
 ~~~~~~~~~~~~
+* Visualise all the software (libraries, drivers or packages) that is automatically injected by UForge during the generation of a machine image for a specific target cloud environment.
 * "Migrations" tab now contains both automated migration and scan features, available under "Lift & Shift" and "Re-platform" sub menus
 * Allow users to delete multiple migrations
 * 9057 Remove End-of-life Microsoft Azure Classic

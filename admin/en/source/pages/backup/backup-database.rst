@@ -34,14 +34,14 @@ LDAP (OpenDJ) has its own tool for doing backup, called ``backup``.  To ensure d
 .. code-block:: shell
 
 	$ service tomcat stop
-	$ service mysql stop
+	$ systemctl stop mysql
 	$ f=$(date +%y%m%d)
 	$ l="$f-ldap-backup.tgz" #what to name ldap backups
 	$ f="$f-mysql-backup.tgz" #what to name backups
 	$ tar -czf /tmp/$f /var/lib/mysql/*
 	$ /opt/opendj/bin/backup -a -c -d /tmp/ldap_backup
 	$ tar -czf /tmp/$l /tmp/ldap_backup
-	$ service mysql start
+	$ systemctl start msql
 	$ service tomcat start
 
 If using SAN mountpoint, add:
@@ -76,7 +76,7 @@ Restoring the database is a simple copy using rsync back to the database directo
 
 	$ service tomcat stop
 	$ service OpenDJ stop
-	$ service mysql stop
+	$ systemctl stop mysql
 	$ cd /tmp
 	$ tar -xvf /tmp/<ldap tarball>
 	$ /opt/opendj/bin/restore -d /tmp/<ldap dir>/userRoot
@@ -86,7 +86,7 @@ Restoring the database is a simple copy using rsync back to the database directo
 	$ tar -xvf /tmp/<mysql tarball>
 	$ rsync -a --delete-before /tmp/<mysql dir>/* /var/lib/mysql/
 	$ service OpenDJ start
-	$ service mysql start
+	$ systemctl start mysql
 
 To restore the SAN mountpoint:
 

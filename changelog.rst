@@ -10,7 +10,7 @@ Release Date: 2018-04-16
 
 New Features
 ~~~~~~~~~~~~
-* The automated migration process is now available for all supported platforms
+* The automated migration process is now available for Windows and all supported platforms
 
 Enhancements
 ~~~~~~~~~~~~

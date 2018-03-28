@@ -8,6 +8,10 @@ Changelog
 
 Release Date: 2018-04-16
 
+New Features
+~~~~~~~~~~~~
+* The automated migration process is now available for all supported platforms
+
 Enhancements
 ~~~~~~~~~~~~
 * Visualise all the software (libraries, drivers or packages) that is automatically injected by UForge during the generation of a machine image for a specific target cloud environment.

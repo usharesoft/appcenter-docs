@@ -9410,6 +9410,18 @@
         <xs:complexContent>
             <xs:extension base="MigrationStage">
                 <xs:sequence>
+                    <xs:element name="family" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the family type for the operating system of the scan</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="linux"/>
+                                <xs:enumeration value="unix"/>
+                                <xs:enumeration value="windows"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
                     <xs:element name="scannedInstanceUri" type="xs:anyURI" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the uri resource of the scannedInstance</xsd:documentation>

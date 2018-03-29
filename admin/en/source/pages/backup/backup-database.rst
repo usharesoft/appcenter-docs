@@ -30,7 +30,7 @@ MariaDB holds both UForge and IDM data. All this information is located under:
 
 By copying this information, you are taking a snapshot of the entire database.
 
-The secret manager also saves secrets on the filesystem at ``/var/lib/vault`` and this folder must also be backed up on a regular basis.
+The secret manager also saves secrets on the filesystem at ``/var/lib/vault`` and this folder must also be backed up on a regular basis. This should be performed during a time frame where there is no user activity to ensure Vault data integrity.
 
 LDAP (OpenDJ) has its own tool for doing backup, called ``backup``.  To ensure data consistency across the entire platform, we recommend you backup all the databases at the same time.  Here is an example of how to back up the MariaDB (containing IDM and UForge information) and LDAP databases.  Note, we are also stopping the web service instances; this ensures we do not generate connection error messages in the logs:
 

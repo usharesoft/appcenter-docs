@@ -38,6 +38,7 @@ The minimum software topology is described in :ref:`minimum-sw-topology`. The fo
 | Node              | RAM        | CPU      | Hard Drive     | Comment                        |
 +===================+============+==========+================+================================+
 | DB/LDAP/OAR       | 10 GB      | 4        | 100 GB         |                                |
+| Secret Manager    |            |          |                |                                |
 +-------------------+------------+----------+----------------+--------------------------------+
 | Web Service       |  6 GB      | 4        | 15 GB          |                                |
 +-------------------+------------+----------+----------------+--------------------------------+
@@ -115,7 +116,7 @@ It may be more logical to group the DB, LDAP and Generation Cluster (scheduler) 
 
 .. note:: When a user creates an appliance, the packages are stored locally in the UForge cache repository, which is stored on the DB. Therefore, depending on the number of appliances created and OS used, you may need to adjust the DB size.
 
-.. note:: If you are using high availability and you choose to split the Webservice and SYNCOPE on separate nodes, then you need a shared NAD/SAN (/tmp/userdata).
+.. note:: If you are using high availability and you choose to split the Webservice and SYNCOPE on separate nodes, then you need a shared NAS/SAN (/tmp/userdata).
 
 Compute Node Hard Drive
 ~~~~~~~~~~~~~~~~~~~~~~~

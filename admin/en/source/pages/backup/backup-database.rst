@@ -5,10 +5,11 @@
 UForge Databases Basic Backup
 -----------------------------
 
-UForge has three databases to store all its data, namely:
+UForge has four databases to store all its data, namely:
 
 	* LDAP (OpenDJ) for storing user credential information
 	* IDM (Syncope using MariaDB) for storing user entitlements and roles
+	* Secret Manager (Vault) for storing user's secrets.
 	* UForge (MariaDB) for storing everything else for UForge features.
 
 MariaDB provides many different types of backup methods you can choose from, including:
@@ -27,7 +28,9 @@ MariaDB holds both UForge and IDM data. All this information is located under:
 
 	``/var/lib/mysql``
 
-By copying this information, you are taking a snapshot of the entire database. 
+By copying this information, you are taking a snapshot of the entire database.
+
+The secret manager is also saving secrets on the filesystem at ``/var/lib/vault`` and this folder must also be backed up on a regular basis.
 
 LDAP (OpenDJ) has its own tool for doing backup, called ``backup``.  To ensure data consistency across the entire platform, we recommend you backup all the databases at the same time.  Here is an example of how to back up the MariaDB (containing IDM and UForge information) and LDAP databases.  Note, we are also stopping the web service instances; this ensures we do not generate connection error messages in the logs:
 
@@ -101,4 +104,3 @@ To restore remote backup:
 
 	$ rsync root@<BACKUP-DESTINATION>/<ldap tarball> /tmp
 	$ rsync root@<BACKUP-DESTINATION>/<mysql tarball> /tmp
-

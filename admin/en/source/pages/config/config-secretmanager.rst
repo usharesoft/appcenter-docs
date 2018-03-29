@@ -5,7 +5,7 @@
 Configuring Secret Manager
 --------------------------
 
-By default the secret manager is already configured. UForge accesses Vault by using a token stored in ``/etc/UShareSoft/uforge/uforge_vault_token``. This token should be able to read, write and create tokens on Vault.
+By default the secret manager is already configured and installed on the database node. UForge accesses Vault by using a token stored in a file and given in **uforge.conf**. This token should be able to read, write and create tokens on Vault.
 
 Settings regarding the secret manager are stored in ``/etc/UShareSoft/uforge/uforge.conf``:
 

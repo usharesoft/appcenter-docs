@@ -8,9 +8,16 @@ Changelog
 
 Release Date: 2018-04-16
 
+New Features
+~~~~~~~~~~~~
+* The automated migration process is now available for all supported platforms
+
 Enhancements
 ~~~~~~~~~~~~
+* Visualise all the software (libraries, drivers or packages) that is automatically injected by UForge during the generation of a machine image for a specific target cloud environment.
 * "Migrations" tab now contains both automated migration and scan features, available under "Lift & Shift" and "Re-platform" sub menus
+* Allow users to delete multiple migrations
+* 9057 Remove End-of-life Microsoft Azure Classic
 
 3.8.fp2
 -------
@@ -166,6 +173,11 @@ New Features
 * Debian 9 (Stretch) operating system supported for all features (templating and migration)
 
 For other features, please refer to 3.7.fp8 release notes
+
+Migrating to 3.8
+~~~~~~~~~~~~~~~~
+
+For specificities relating to migrating a 3.7 or 3.7.fpx to 3.8 please refer to :ref:`migrate-to38`.
 
 
 Bug Fixes

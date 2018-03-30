@@ -11,6 +11,7 @@ Proprietary packages, such as Red Hat Enterprise Linux or SUSE Linux are not del
  	* Create a local mirror, as described in :ref:`redhat-mirror` and :ref:`suse-mirror`.
 	* Install the OSes from the original ISO, as described in :ref:`rhel-iso`.
 
+
 .. _redhat-mirror:
 
 Creating a Local Mirror for Red Hat Without Using a Satellite Server
@@ -47,7 +48,8 @@ Red Hat 5 and 6
 
 7. Create a local mirror following the procedure described on the `Red Hat Knowledgebase <https://access.redhat.com/solutions/23016>`_.
 
-8. Add RedHat Enterprise Linux to your AppCenter. For detailed instructions, refer to :ref:`populate-rhel`.
+8. Add Red Hat Enterprise Linux to your AppCenter. For detailed instructions, refer to :ref:`populate-rhel`.
+
 
 Red Hat 7
 ~~~~~~~~~
@@ -68,7 +70,7 @@ Red Hat 7
 
 6. Create a local mirror following the procedure described on the `Red Hat Knowledgebase <https://access.redhat.com/solutions/23016>`_.
 
-7. Add RedHat Enterprise Linux to your AppCenter. For detailed instructions, refer to :ref:`populate-rhel`.
+7. Add Red Hat Enterprise Linux to your AppCenter. For detailed instructions, refer to :ref:`populate-rhel`.
 
 .. _suse-mirror:
 

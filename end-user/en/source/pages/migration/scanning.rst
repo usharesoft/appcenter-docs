@@ -40,6 +40,7 @@ To carry out a scan, go to ``Re-platform`` tab on the ``Migrations`` page:
 		.. note:: If you do not include the overlay, all files needed to rebuild packages are still transferred to UForge, including the package configuration files. However, all "extra_files" are excluded from the scan.
 
 	5. If you want to exclude certain directories or files from the scan then click ``add`` and enter the directory path or full pathname of the file.
+
 	6. Click ``Next``. Follow the instructions on the UForge AppCenter GUI.
 
 		.. image:: /images/migration-code.png
@@ -88,11 +89,7 @@ Scanning a Microsoft Windows Machine
 
 .. warning:: For Windows Server 2008R2, you will need to run a command in ``PowerShell`` on the source machine before scanning ``winrm set winrm/config/service '@{AllowUnencrypted="true"}'``. This command will disable WinRM encryption over HTTP which is not supported by AMP. More information can be found on the Cloudsoft AMP documentation, in section `WinRM Connectivity Diagnostics <https://docs.cloudsoft.io/blueprints/base-blueprints/winrm/client.html#winrm-connectivity-diagnostics>`_.
 
-.. note:: If you plan to migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/solutions/cloud/k5/>`_, you must also do the following before scanning:
-
-	1. Uninstall VMWare Tools (if installed).
-	2. Disable NLA for RDP (Please refer to official Microsoft documentation `Configure Network Level Authentication for Remote Desktop Services Connections <https://technet.microsoft.com/en-us/library/cc732713(v=ws.11).aspx/>`_).
-	3. Uninstall CloudBase-Init (if installed).
+.. note:: If you plan to migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/services/hybrid-cloud/k5/>`_, you must uninstall CloudBase-Init (if installed) before scanning.
 
 	For more detailed information, please refer to `official Fujitsu K5 IaaS Documentation <http://www.fujitsu.com/uk/Images/k5-iaas-features-handbook.pdf>`_.
 
@@ -123,13 +120,13 @@ To carry out a scan, go to the ``Re-platform`` tab on the ``Migrations`` page:
 
 		.. note:: Scan name can be mix of alphanumeric characters, spaces and the following special characters `._-`. All other characters are not supported at this time.
 
-	#. Optionally you can select ``Use local storage``. This means that the scan will be not be done in streaming but in 2 phases. First the data will be stored on a temporary storage drive during the scan process. This temporary storage can be a local directory or a virtual space on the network. It must be at least half the size of the machine you want to scan.
+	#. Optionally you can select ``Use local storage``. This means that the scan will be not be done in streaming but in 2 phases. First the data will be stored on a temporary storage drive during the scan process. This temporary storage can be a local directory or a virtual space on the network. It can also be on the same partition that is being scanned (provided there is enough space available). It must be at least half the size of the machine you want to scan.
 
-		.. note:: If you are using local storage you will have to launch a script at the end to upload the archive to UForge AppCenter later.
+		.. note:: If you are using local storage, UForge AppCenter will generate a script for you named ``upload_raw_partition_images.bat`` that you will have to launch at the end, to upload the archive to UForge AppCenter once the scan is complete.
 
-	#. If you want to exclude certain directories or files from the scan then click ``add`` and enter the directory path or full pathname of the file.
+	#. If you want to exclude certain partitions from the scan then check the boxes accordingly in the section ``Disks or Partitions to exclude``.
 
-	#. Click ``scan`` to launch the scan. A report is sent to UForge AppCenter which can be used for migration. To view the progress, go back to the ``Scans`` page.
+	#. Click ``Scan`` to launch the scan. A report is sent to UForge AppCenter which can be used for migration. To view the progress, go back to the ``Scans`` page.
 
 	#. To view the details of a scan, click on the scan and refer to :ref:`migration-view-scan`.
 

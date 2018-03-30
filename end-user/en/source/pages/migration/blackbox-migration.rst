@@ -38,11 +38,7 @@ When you generate a machine image from the scan, all the information included in
 
 .. warning:: Currently, UForge is not able to migrate the Yum repository GPG keys. This means that the user will have to accept the repository GPG key when the user installs or updates a package. The user will have to do this only once per repository.
 
-.. note:: If you plan to migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/solutions/cloud/k5/>`_, you must also do the following before scanning:
-
-	1. Uninstall VMWare Tools (if installed).
-	2. Disable NLA for RDP (Please refer to official Microsoft documentation `Configure Network Level Authentication for Remote Desktop Services Connections <https://technet.microsoft.com/en-us/library/cc732713(v=ws.11).aspx/>`_).
-	3. Uninstall CloudBase-Init (if installed).
+.. note:: If you plan to migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/solutions/cloud/k5/>`_, you must also uninstall CloudBase-Init (if installed) before scanning.
 
 	For more detailed information, refer to `official Fujitsu K5 IaaS Documentation <http://www.fujitsu.com/uk/Images/k5-iaas-features-handbook.pdf>`_.
 
@@ -51,7 +47,7 @@ When you generate a machine image from the scan, all the information included in
 	1. Uninstall NetworkManager (if installed).
 	2. Uninstall the Microsoft Azure agent, i.e. WALinuxAgent and waagent packages (if installed).
 
-.. warning:: Ubuntu 14.04 migration for Microstoft Azure target platform is not supported by UForge.
+.. warning:: Ubuntu 14.04 migration for Microsoft Azure target platform is not supported by UForge.
 
 When you generate a machine image directly from a scan, the following steps are carried out:
 

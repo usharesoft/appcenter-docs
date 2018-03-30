@@ -11,15 +11,17 @@ Once your UForge platform deployment is complete you can configure Cloudsoft AMP
 	* a configured user in AMP server that will be used by UForge to connect
 
 
-To configure AMP, do the following on each UForge webservice node:
+To configure AMP:
 
-	1. In ``/etc/UShareSoft/uforge/uforge.conf`` uncomment and complete the following lines:
+	1. On each UForge webservice node and the UI node, in ``/etc/UShareSoft/uforge/uforge.conf`` uncomment and complete the following lines:
 
 		* AMP_API_ENDPOINT=<The URL to access AMP server eg: http://amp-instance.com:8081/v1>
 		* AMP_API_USER=<The AMP user password that uforge should connect with>
 		* AMP_API_PASSWORD=<The AMP user password>
 
-	2. Run the following command on all the nodes:
+        .. note:: If you want to connect to your AMP server with HTTPS instead of HTTP, you can follow `Cloudosft AMP documentation  <https://docs.cloudsoft.io/operations/configuration/https.html>`_ to configure it. In this case your AMP_API_ENDPOINT should use the secure URL eg: https://amp-instance.com:8443/v1.
+
+	2. Run the following command on the UI node:
 
 		.. code-block:: shell
 

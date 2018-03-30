@@ -14,4 +14,3 @@ Once you have an installed and fully functional UForge AppCenter, you may wish t
    migrating-to38
    uforge-downgrade
    retrieve-data
-

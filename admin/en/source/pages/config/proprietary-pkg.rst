@@ -3,13 +3,13 @@
 .. _proprietary-pkg:
 
 Hosting Proprietary Packages
-----------------------------
+============================
 
-Proprietary packages, such as Red Hat Enterprise Linux are not delivered as part of the UForge repository. You have several options possible in order to create a repository:
+Proprietary packages, such as Red Hat Enterprise Linux or SUSE Linux are not delivered as part of the UForge repository. There are several options to use these packages with your UForge. You can:
 
-	* Create a Red Hat Satellite or SUSE Manager
-	* Create a local mirror (refer to :ref:`redhat-mirror`)
-	* Install the packages from an ISO image (refer to :ref:`rh-iso`).
+	* Create an enterprise repo
+ 	* Create a local mirror, as described in :ref:`redhat-mirror` and :ref:`suse-mirror`.
+	* Install the OSes from the original ISO, as described in :ref:`rhel-iso`.
 
 
 .. _redhat-mirror:
@@ -50,6 +50,7 @@ Red Hat 5 and 6
 
 8. Add Red Hat Enterprise Linux to your AppCenter. For detailed instructions, refer to :ref:`populate-rhel`.
 
+
 Red Hat 7
 ~~~~~~~~~
 
@@ -71,10 +72,21 @@ Red Hat 7
 
 7. Add Red Hat Enterprise Linux to your AppCenter. For detailed instructions, refer to :ref:`populate-rhel`.
 
-.. _rh-iso:
+.. _suse-mirror:
 
-Installing Proprietary Packages from ISO
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Creating a Local Mirror for SUSE
+--------------------------------
+
+To create a local mirror for SUSE, refer to official SUSE documentation. 
+You must then declare the URL in UForge using ``org repo create``. The method is similar to the one used for Red Hat Enterprise Linux :ref:`populate-rhel`.
+
+
+.. _rhel-iso:
+
+Populating Red Hat Enterprise Linux Using ISO
+---------------------------------------------
+
+You must have the original ISO images of the operating system in question and follow the steps below.
 
 .. warning:: If you populate UForge AppCenter with Red Hat Enterprise Linux using an ISO, only the package versions in the ISO image will be known to UForge AppCenter. If you later scan a Red Hat Enterprise Linux machine with package versions more recent than those of the ISO, the scan will succeed, but will be extremely inefficient since all packages will have to be rebuilt. Therefore, if you have access to a Red Hat Satellite, then adding the Red Hat Enterprise Linux repository exposed by the Red Hat Satellite is a better option.
 

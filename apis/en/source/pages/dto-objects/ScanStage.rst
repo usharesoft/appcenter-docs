@@ -12,6 +12,7 @@ Attributes
 
 The list of attributes for ``scanStage`` are:
 
+	* ``family``: the family type for the operating system of the scan
 	* ``scannedInstanceUri`` (anyURI): the uri resource of the scannedInstance
 	* ``pipelineUri`` (anyURI): the uri of the parent pipeline
 	* ``created`` (dateTime): the date the appliance template is created

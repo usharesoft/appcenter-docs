@@ -7,8 +7,6 @@ Migrating Using Automatic Process
 
 You can use the ``Lift & Shift`` tab on the ``Migrations`` page to complete a migration automatically. When you run an automatic migration, you cannot modify any of the elements of the system (this is also referred to as "black box migration").
 
-.. note:: Automated migration using ``Lift & Shift`` is only supported for Linux.
-
 .. note:: White box migration using the ``Lift & Shift`` tab is not currently possible. Refer to :ref:`migration-scan` if you want to run a white box migration. 
 
 The automatic migration process includes the following steps:
@@ -19,8 +17,6 @@ The automatic migration process includes the following steps:
 
 Launching an Automatic Migration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. note:: Automated migration using ``Lift & Shift`` is only supported for Linux.
 
 All pre-requisites listed for migration using a scan are also applicable to ``Lift & Shift`` (refer to :ref:`migration-prereq`).
 

@@ -3,6 +3,15 @@
 Changelog
 =========
 
+3.8.fp4
+-------
+
+Release Date: 2018-05-28
+
+New Features
+~~~~~~~~~~~~
+* The automated migration process is now available for Windows
+
 3.8.fp3
 -------
 
@@ -10,7 +19,7 @@ Release Date: 2018-04-16
 
 New Features
 ~~~~~~~~~~~~
-* The automated migration process is now available for Windows and all supported platforms
+* The automated migration process is now available for all supported platforms
 
 Enhancements
 ~~~~~~~~~~~~

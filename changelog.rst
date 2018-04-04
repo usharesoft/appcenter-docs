@@ -11,6 +11,7 @@ Release Date: 2018-05-28
 New Features
 ~~~~~~~~~~~~
 * The automated migration process is now available for Windows
+* Cloud credentials are now stored in a new secret holder (Vault) in order to improve security
 
 3.8.fp3
 -------

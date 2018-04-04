@@ -3,6 +3,33 @@
 Changelog
 =========
 
+3.8-3
+-----
+
+Release Date: 2018-04-04
+
+Bug Fixes
+~~~~~~~~~
+* 9703 Cannot connect via ssh after a whitebox migration of RHEL 7.3
+* 9760 When migrating RHEL5 that have kernel-PAE instead of kernel, kernel package is added
+* 9715 CentOS 6 generation failed when the format is KVM based
+* 9597 Error provisioning on Azure fails due to No DVD device
+* 9567 Error message in UI when using wrong AWS credentials is incorrect
+* 9459 NIC configuration disappears on install profile in an imported appliance from a CentOS5.7 scan
+* 9450 openssh package version has been changed after a white box migration
+* 9363 SLES generation for Azure format does not work (no platform tools injected)
+* 9252 Unable to do a Debian 8 blackbox migration to Microsoft Azure
+* 9138 Partitions in LVM logical groups/volumes appear in wrong order if a group's name is changed
+* 9084 Remove obsolete Squid directives from /etc/squid/squid.conf
+* 9052 If a user's home directory is in a multiple levels folder hierarchy, the user creation fails
+* 8418 Boot scripts cannot be found in the cloned templates
+* 8318 When importing an appliance, Firewall is set to "Ask during installation"
+* 8212 Exported Windows templates does not have Activation Key
+* 8097 vCenter publish fails in multiple vlan/vnic environment
+* 1338 Ubuntu 16.04 image generation requires debootstrap to be of version at least 1.0.85 and does not support "proposed" packages
+* 1330 After Blackbox Migration, RHEL5.3 were updated to RHEL5.5
+
+
 3.8-2
 -----
 
@@ -12,7 +39,7 @@ Bug Fixes
 ~~~~~~~~~
 * 9281 a logical group disappears after removing an LVM disk
 * 9277 removed partitions from a volume group still remain in the group
-* 9310 Group name displayed in the logs of uforge-scan binary
+* 9310 Group name displayed in the logs of * scan binary
 * 9179 Overlapping text in the summary view of an appliance template
 * 9226 "Request timeout" is be shown during a generation and requires refreshing the screen
 * 8996 script machine_infos.sh fails
@@ -29,7 +56,7 @@ Bug Fixes
 * 8743 When user quota limit of appliance is set, importing or creating a template with hammr raises count by 2
 * 9016 [Server-side]don't write a firewall param if the template is Windows
 * 9312 Scanning a CentOS 7 server with a CD in the drive causes an additional hard disk to be added
-* 8931 [Server-side]Add the Timezone param to uforge-install-config.conf
+* 8931 [Server-side]Add the Timezone param to * install-config.conf
 * 9309 RHEL 7 and 6 should be supported in K5 format
 * 9009 After a file upload error, the value of consumed diskusage increases when the quota is changed to unlimit
 * 9127 CleanUp deployment list groovy script to avoid using rawLocalConfigBag or localBag
@@ -62,16 +89,16 @@ Bug Fixes
 * 8726 Review and fix Java options in ``services_conf.json``
 * 8843 Docker publishing cannot be canceled
 * 8874 CPU usage of Dozer thread sticks to over 99% and never ends
-* 8875 ``user enable`` uforge-cli command always resets password
+* 8875 ``user enable`` * cli command always resets password
 * 8920 Add scan import to golden cancel webservice
-* 8754 uforge-cli command template info throws ``AttributeError`` for Windows Appliances
+* 8754 * cli command template info throws ``AttributeError`` for Windows Appliances
 * 8866 Despite deleting the golden images, the files of the golden image are not deleted in the file system
 * 8923 Publish on OVH Openstack does not work
 * 8848 ComboBox in portal appears empty after selection with firefox
 * 8720 Scanning CentOS 6 generated with UForge results in an error
 * 8744 Disk usage increases when uploading twice the same file for limited quota user
 * 8502 Publishing a compressed image failed on VMware vCenter
-* 8749 uforge-cli command ``template info`` throws ``AttributeError: NoneType`` for Windows Appliances
+* 8749 * cli command ``template info`` throws ``AttributeError: NoneType`` for Windows Appliances
 * 8734 Display explicit error message when template has no partition
 * 8755 ``InstallProfile`` file is deleted by ``cleanup_tickets.sh``
 * 8337 Order of nics lost on appliance import
@@ -126,7 +153,7 @@ Release Date: 2017-10-16
 
 New Features
 ~~~~~~~~~~~~
-* Using uforge-sync binary, users can now synchronize the target environment with scans (without overlay) of CentOS 6, 7, Red Hat Enterprise Linux 6, 7 and Debian 7, 8 systems.
+* Using * sync binary, users can now synchronize the target environment with scans (without overlay) of CentOS 6, 7, Red Hat Enterprise Linux 6, 7 and Debian 7, 8 systems.
 * Microsoft Azure connector has been updated. Previously with UForge the machine image was publish as a "vhd" blob file in the Azure cloud Account. Now an image will be accessible in the cloud console from this blob file. In order to support this additional information must be entered in ``Credentials`` for Microsoft Azure ARM connector.
 * Support generation and registration of machine images for Oracle Cloud with the metered service subscriptions.
 * Users can deploy Linux instances from published machine images to Microsoft Azure ARM.
@@ -214,7 +241,7 @@ Bug Fixes
 * 6614 UForge web service response (401 unauthorized) is not RFC compliant
 * 6683 Heap memory error when scanning VM with huge files number
 * 6753 AWS publish failed in some circumstances
-* 6760 uforge-install-config TUI does not appear when using K5 Console
+* 6760 * install-config TUI does not appear when using K5 Console
 * 6768 Unable to build a package using rpmgen with a file located in /
 * 6853 Unable to rebuild RPM, using rpmgen, with hook scripts containing a commented spec file section tag like #%install
 * 6903 Outscale Publish final status never reached
@@ -240,7 +267,7 @@ Enhancements
 Bug Fixes
 ~~~~~~~~~
 * 851 After K5 Black box migration, some packages were updated
-* 884 uforge-scan.bin ignores option ``-e "/"``
+* 884 * scan.bin ignores option ``-e "/"``
 * 953 Cannot add a license in a MySoftware
 * 972 Internal error happens when clicking directory name ``{|}`` in Files & Folders in Migration
 * 982 debootstrap.log should be preserved
@@ -252,7 +279,7 @@ Bug Fixes
 * 1306 API doc for creating API key pair needs updating
 * 1317 Dashboard quotas are used more than 100%
 * 1353 Correct https_proxy that breaks perl cloud (openstack) connectors
-* 1393 Remove uforge-anytermd and remove its pid file after uninstalling uforge-install-config
+* 1393 Remove * anytermd and remove its pid file after uninstalling * install-config
 * 1402 Migrator Role does not allow to generate image from a Scan
 * 5447 Scanning a UForge server raises an internal server error and a Mapping error
 * 6084 Images list Cli command returns wrong OS name
@@ -555,8 +582,8 @@ Bug Fixes
 * 6517 Impossible to know which publish image on UForge corresponds to which Image in K5 portal
 * 6515 CentOS 6 images can be accessed with SSH on K5
 * 6513 Validation for K5 publish view is not properly handled
-* 6511 Launching uforge-scan.exe from command prompt still fails if the file path includes Japanese characters
-* 6507 The ``uforge-install-config`` binary for windows does not start because ``uforge-install-profile-1-1.noarch.zip`` does not contain the correct directory structure.
+* 6511 Launching * scan.exe from command prompt still fails if the file path includes Japanese characters
+* 6507 The ``* install-config`` binary for windows does not start because ``* install-profile-1-1.noarch.zip`` does not contain the correct directory structure.
 * 6505 The ``no_console`` file is not created for Windows.
 * 6504 Problem with OpenDJ port 4444 usage in several UForge config scripts
 * 6503 The ``uforge.conf.ORIG`` contains plain passwords with very weak permission
@@ -616,7 +643,7 @@ Bug Fixes
 * 5896 Deployment fails due to NIC settings
 * 5892 Deployment fails when using eth1
 * 5843 "org category delete" raises an error
-* 5777 Launching uforge-scan.exe from command prompt fails with an error if the file path to the binary includes Japanese characters.
+* 5777 Launching * scan.exe from command prompt fails with an error if the file path to the binary includes Japanese characters.
 * 5762 Cannot register the third disk with a VirtualBox image
 * 5756 New users, the defaukt country is: Abkhasia
 * 5754 opening the Dashboard > Generations page first shows progress bar for all publications
@@ -628,7 +655,7 @@ Bug Fixes
 * 5647 Keyboard and kernel parameters are not taken into the scan report on CentOS 7 scan.
 * 5635 Broken incremental scan for windows 2012R2
 * 5627 Cancelling scan via ctrl+c is not correctly displayed in the UI
-* 5625 uforge-scan does not respect bandwidth limit
+* 5625 * scan does not respect bandwidth limit
 * 5623 When the image of CentOS7 is generated, RPM-GPG-KEY-CentOS import read fails
 * 5621 rpmgen fails to build package if file path in %file includes space.
 * 5570 Impossible to delete an incremental scan

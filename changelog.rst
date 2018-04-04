@@ -3,6 +3,33 @@
 Changelog
 =========
 
+3.8-3
+-----
+
+Release Date: 2018-04-04
+
+Bug Fixes
+~~~~~~~~~
+* 9703 Cannot connect via ssh after a whitebox migration of RHEL 7.3
+* 9760 When migrating RHEL5 that have kernel-PAE instead of kernel, kernel package is added
+* 9715 CentOS 6 generation failed when the format is KVM based
+* 9597 Error provisioning on Azure fails due to No DVD device
+* 9567 Error message in UI when using wrong AWS credentials is incorrect
+* 9459 NIC configuration disappears on install profile in an imported appliance from a CentOS5.7 scan
+* 9450 openssh package version has been changed after a white box migration
+* 9363 SLES generation for Azure format does not work (no platform tools injected)
+* 9252 Unable to do a Debian 8 blackbox migration to Microsoft Azure
+* 9138 Partitions in LVM logical groups/volumes appear in wrong order if a group's name is changed
+* 9084 Remove obsolete Squid directives from /etc/squid/squid.conf
+* 9052 If a user's home directory is in a multiple levels folder hierarchy, the user creation fails
+* 8418 Boot scripts cannot be found in the cloned templates
+* 8318 When importing an appliance, Firewall is set to "Ask during installation"
+* 8212 Exported Windows templates does not have Activation Key
+* 8097 vCenter publish fails in multiple vlan/vnic environment
+* 1338 Ubuntu 16.04 image generation requires debootstrap to be of version at least 1.0.85 and does not support "proposed" packages
+* 1330 After Blackbox Migration, RHEL5.3 were updated to RHEL5.5
+
+
 3.8-2
 -----
 

@@ -123,4 +123,4 @@ Run the following CLI command in order to know if Squid is running:
 
 		$ service squid start
 
-.. note:: When you're upgrading from UForge 3.8.FP2 or an earlier version there is an additional step to be done by hand due if you're in a multi-node environment. You have to copy the file ``/etc/UShareSoft/vault/root_token`` from database node to web service node. This file will be used to configure access to the secret manager.
+.. note:: When you're upgrading from UForge 3.8.FP2 or an earlier version there is an additional step to be done manually if you are in a multi-node environment. You have to copy the file ``/etc/UShareSoft/vault/root_token`` from database node to web service node. This file will be used to configure access to the secret manager.

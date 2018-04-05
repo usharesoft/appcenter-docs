@@ -47,7 +47,7 @@ This IDM Service can be extended to provide a wider identity and access manageme
 
 By default MariaDB is used as the SQL Store.
 
-**Secret Manager.** This is a tool for securely accessing secrets, and we are currently using Vault. A secret is anything that you want to tightly control access to, such as API keys, passwords, or certificates. A global token is used by the UForge Server to store secrets and generate tokens for external use such as publication, deployment ...
+**Secret Manager.** This is a tool for securely accessing confidential data using Vault. A secret is anything that you want to tightly control access to, such as API keys, passwords, or certificates. A global token is used by the UForge Server to store secrets and generate tokens for external use such as publication, deployment ...
 These secrets are stored and encrypted on the disk at ``/var/lib/vault`` by using the Filesystem storage backend of Vault. This component is by default installed on the same node as the **SQL Store**.
 
 **Generation Cluster.**  Image generation is I/O intensive and may take several minutes to complete.  Consequently an HPC cluster is used to execute image generation jobs.  There are two parts to this cluster:

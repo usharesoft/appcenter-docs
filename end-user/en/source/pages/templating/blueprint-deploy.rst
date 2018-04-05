@@ -16,7 +16,7 @@ To deploy a blueprint:
 	#. Enter the ``Name`` of the deployment.  
 	#. Select the cloud account you want to use to deploy the blueprint. 
 
-	#. From the drop-down menu, select the ``Region`` in which the blueprint should be deployed. This should be the same region used to publish the applications that are included in the blueprint.
+	#. From the drop-down menu, select the ``Region`` in which the blueprint should be deployed. This should be the same region used to publish the appliances that are included in the blueprint.
 	#. Click on ``deploy`` in the top right. Once you launch the deployment, you will be redirected to the ``Deployments`` page. From here you can see the status of the deployment.
 
 		.. image:: /images/blueprint-deploy-status.png

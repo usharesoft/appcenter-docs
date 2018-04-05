@@ -27,9 +27,9 @@ To create a new blueprint:
 
 		.. note:: If you click on the appliance name in the ``Services`` section, you will be redirected to the appliance details under ``Apps``.
 
-	7. You can modify the information under ``Service configuration``. Any extra configuration information should be entered using YAML. If you make any modifications to the service configuration, click the checkmark to save.
+	7. You can modify the information under ``Service configuration``. Any extra configuration information should be entered using YAML. If you make any modifications to the service configuration, remember to save.
 
 	8. Once you have created your blueprint, it will be automatically saved under the ``Blueprint Library``.
 
-	.. note:: If you update any of the appliances used in the blueprint once the blueprint is created, this will NOT update the blueprint.
+	.. note:: If you update any of the appliances used in the blueprint once the blueprint is created, this will be updated in the blueprint also. However, if your blueprint is already deployed, the changes will not be in the deployed blueprint.
 

@@ -162,7 +162,7 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 
 				Success: Created repository with url [http://vault.centos.org/6.5/os/x86_64/] to default organization
 
-		The ``–-name`` specified here is the “tagname” that will be shown in the UI when creating an appliance.
+		The ``--name`` specified here is the “tagname” that will be shown in the UI when creating an appliance.
 		The ``--repoUrl`` can be either ``http://`` or ``file://``.
 
 		.. warning:: You must use the ``--officiallySupported`` flag for all the default repositories of officially supported OSes (for a list of supported OSes, refer to :ref: `uforge-supported-os-formats`). Do not use ``--officiallySupported`` for repositories that are not part of the core distribution, such as epel or VMware tools. When generating a machine image, packages tagged as ``--officiallySupported`` are installed first, before other packages. 
@@ -184,7 +184,7 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 
 		$ uforge org repo os attach --name CentOS --arch x86_64 --version 6.5 --repoIds 354 -u $ADMIN -p $PASS
 	
-	   The ``–-repoIds`` specified here are the space-separated “id” of previously created repositories, shown by command ``uforge org repo list -u $ADMIN -p $PASS``.
+	   The ``--repoIds`` specified here are the space-separated “id” of previously created repositories, shown by command ``uforge org repo list -u $ADMIN -p $PASS``.
 
 	9. Populate repository packages:
 
@@ -246,7 +246,7 @@ The following is a concrete example to begin the population of Red Hat Enterpris
 
 			$ uforge org repo create --name "RedHat 7" --repoUrl http://<your-repo> --type RPM --officiallySupported -u $ADMIN -p $PASS
 
-		The ``–-name`` specified here is the “tagname” that will be shown in the UI when creating an appliance.
+		The ``--name`` specified here is the “tagname” that will be shown in the UI when creating an appliance.
 		The ``--repoUrl`` can be either ``http://`` or ``file://``.
 
 		.. warning:: You must use the ``--officiallySupported`` flag for all officially supported OSes. If you do not include this argument the packages will not appear in the install profile of appliances built with the corresponding operating system. Do not use ``--officiallySupported`` for distributions that are part of the core distribution. For example, epel or vmwatools are not officially part of the distribution, therefore you should not use ``--officiallySupported`` when adding such repositories.
@@ -265,7 +265,7 @@ The following is a concrete example to begin the population of Red Hat Enterpris
 
 		$ uforge org repo os attach --name "RedHat Enterprise Linux" --arch x86_64 --version 7 --repoIds 432 -u $ADMIN -p $PASS
 	
-	   The ``–-repoIds`` specified here are the space-separated “id” of previously created repositories, shown by command ``uforge org repo list -u $ADMIN -p $PASS``.
+	   The ``--repoIds`` specified here are the space-separated “id” of previously created repositories, shown by command ``uforge org repo list -u $ADMIN -p $PASS``.
 
 	9. Populate repository packages:
 
@@ -336,7 +336,7 @@ The following is a concrete example to begin the population of Ubuntu 10.04 64bi
 
 			$ uforge org repo create --name "Ubuntu x86_64 lucid-updates" --repoUrl "[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/lucid-updates/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-updates multiverse restricted universe main" --type DEB --officiallySupported -u $ADMIN -p $PASS
 
-		The ``–-name`` specified here is the “tagname” that will be shown in the UI when creating an appliance.
+		The ``--name`` specified here is the “tagname” that will be shown in the UI when creating an appliance.
 		The ``--repoUrl`` can be either ``http://`` or ``file://``.
 
 		.. warning:: You must use the ``--officiallySupported`` flag for all officially supported OSes. If you do not include this argument the packages will not appear in the install profile of appliances built with the corresponding operating system. Do not use ``--officiallySupported`` for distributions that are part of the core distribution. For example, epel or vmwatools are not officially part of the distribution, therefore you should not use ``--officiallySupported`` when adding such repositories.
@@ -370,7 +370,7 @@ The following is a concrete example to begin the population of Ubuntu 10.04 64bi
 
 		$ uforge org repo os attach --name Ubuntu --arch x86_64 --version 10.04 --repoIds 354 -u $ADMIN -p $PASS
 	
-	   The ``–-repoIds`` specified here are the space-separated “id” of previously created repositories, shown by command ``uforge org repo list -u $ADMIN -p $PASS``.
+	   The ``--repoIds`` specified here are the space-separated “id” of previously created repositories, shown by command ``uforge org repo list -u $ADMIN -p $PASS``.
 
 	9. Populate repository packages:
 

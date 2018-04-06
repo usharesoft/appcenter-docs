@@ -5,26 +5,60 @@
 Modifying the UForge IP
 -----------------------
 
-You can modify the UForge IP on a mono-node deployment by changing all the occurences of <OLD IP> to <NEW IP> in the following files:
+To modify the UForge IP you will need to:
+
+1. Stop the following services:
+
+	.. code-block:: shell
+
+		service tomcat stop 
+		service oar-server stop 
+		service squid stop
+		service rabbitmq-server stop 
+		service eventcontroller stop
+
+2. Clean the squid cache as follows:
+
+	.. code-block:: shell
+
+		[root@db ~]# grep cache_dir /etc/squid/squid.conf
+		cache_dir ufs /data/proxy 10000 16 256
+		[root@db ~]# rm -rf /data/proxy/*
+
+3. Modify all occurences of the old IP to the new IP in the following files:
 
 	* ``/etc/UShareSoft/uforge/uforge.conf``
 	* ``/var/opt/UShareSoft/uforge-client/gwt/uforge/templates/forge-config.xml``
 	* ``/etc/httpd/conf.d/uforge-ui.conf``
 	* ``/etc/squid/squid.conf``
 
-.. note:: You must then restart the services.
-
 For example:
 
-1. Open file ``/etc/UShareSoft/uforge/uforge.conf`` and modify all occurences of the old IP to the new IP. For example: ``UFORGE_GF_INTERNAL_IP=10.1.2.207`` to: ``UFORGE_GF_INTERNAL_IP=192.168.1.10``
+	.. code-block:: shell
 
-2. Open file ``/var/opt/UShareSoft/uforge-client/gwt/uforge/templates/forge-config.xml`` and modify all occurences of the old IP to the new IP. For example: ``<c:uForgeUrl>http://10.1.2.207:8080/ufws/</c:uForgeUrl>`` to ``<c:uForgeUrl>http://192.168.1.10:8080/ufws/</c:uForgeUrl>``.
+		sed -i.bak "s/192\.168\.2\.177/192.168.2.200/g" /etc/UShareSoft/uforge/uforge.conf /var/opt/UShareSoft/uforge-client/gwt/uforge/templates/forge-config.xml /etc/httpd/conf.d/uforge-ui.conf /etc/squid/squid.conf
 
-3. Open file ``/etc/httpd/conf.d/uforge-ui.conf`` and modify all occurences of the old IP to the new IP. For example: ``ProxyPassMatch ^/uforge/resources(.*)$ http://10.1.2.207:8080/ufws$1`` to ``ProxyPassMatch ^/uforge/resources(.*)$ http://192.168.1.10:8080/ufws$1``
+4. Modify all occurences of the old IP to the new IP in the following files: 
 
-4. Open file ``/etc/squid/squid.conf`` and modify all occurences of the old IP to the new IP. For example: ``acl uforge_nodes src 10.1.2.207/32`` to ``acl uforge_nodes src 192.168.1.10/32``
+	* ``/etc/sysconfig/network-scripts/ifcfg-ens160``
+	* ``/etc/hosts``
 
-5. Restart the services as follows::
+For exemple: 
+
+	.. code-block:: shell
+
+		sed -i "s/192\.168\.2\.177/192.168.2.200/g" /etc/sysconfig/network-scripts/ifcfg-ens160 /etc/hosts
+
+5. Restart the network service::
+
+	service network restart
+
+.. note:: You will need to open a new terminal and connect to the machine using the new IP.
+
+6. Restart the services as follows::
 
 	$ /opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh
 	$ /opt/UShareSoft/uforge-client/bin/uforge_ui_update.sh
+	$ service oar-server start
+
+.. note:: While oar-server is down, root user may receive emails with an error message about UForge cron execution.

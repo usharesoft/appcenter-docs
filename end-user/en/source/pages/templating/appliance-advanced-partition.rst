@@ -11,18 +11,20 @@ You can configure advanced partitioning as part of your appliance template in th
 Advanced Partitioning for Linux
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The following example assumes that you want to build the following partitions, with a virtual hard drive of 20 GB.::
+The following example assumes that you want to build the following partitions, with a virtual hard drive of 20 GB.
 
-	part /boot –fstype=ext4 –size=500 –ondisk=sda
-	part pv.1 –grow –size=1 –ondisk=sda
-	volgroup ROOTVG –pesize=4096 pv.1
-	logvol / –fstype=ext4 –name=LogVolROOT –vgname=ROOTVG –size=3072
-	logvol swap –name=LogVolSWAP –vgname=ROOTVG –size=1024
-	logvol /usr –fstype=ext4 –name=LogVolUSR –vgname=ROOTVG –size=5120
-	logvol /var –fstype=ext4 –name=LogVolVAR –vgname=ROOTVG –size=1024
-	logvol /home –fstype=ext4 –name=LogVolHOME –vgname=ROOTVG –size=5120
-	logvol /tmp –fstype=ext4 –name=LogVolTMP –vgname=ROOTVG –size=1024
-	logvol /opt –fstype=ext4 –name=LogVolOPT –vgname=ROOTVG –size=1024
+.. code-block:: shell
+
+	part /boot -fstype=ext4 -size=500 -ondisk=sda
+	part pv.1 -grow -size=1 -ondisk=sda
+	volgroup ROOTVG -pesize=4096 pv.1
+	logvol / -fstype=ext4 -name=LogVolROOT -vgname=ROOTVG -size=3072
+	logvol swap -name=LogVolSWAP -vgname=ROOTVG -size=1024
+	logvol /usr -fstype=ext4 -name=LogVolUSR -vgname=ROOTVG -size=5120
+	logvol /var -fstype=ext4 -name=LogVolVAR -vgname=ROOTVG -size=1024
+	logvol /home -fstype=ext4 -name=LogVolHOME -vgname=ROOTVG -size=5120
+	logvol /tmp -fstype=ext4 -name=LogVolTMP -vgname=ROOTVG -size=1024
+	logvol /opt -fstype=ext4 -name=LogVolOPT -vgname=ROOTVG -size=1024
 
 To set advanced partitioning for an appliance template:
 	1. Select the appliance you want to modify.

@@ -46,6 +46,13 @@ In order to run a migration:
 
 	.. image:: /images/migration-status.png
 
+	From the status page you can view more detailed information about the appliance scanned by clicking: 
+
+		* ``Details`` for more information about the appliances, including the cloud ID, cloud account used for publication, etc. 
+		* ``View Scan Details`` which will bring you to the details of the scan appliance on the ``Re-platform`` page. From here you can see all the packages and files that are part of the appliance.
+		* ``View Generations Details`` which will bring you to the ``Generations`` page. This page lists ALL generations (not just from this migration). From here you can launch a publish.
+		* ``View Publication Details`` which will bring you to the ``Generations`` page.
+
 Viewing Details of an Automatic Migration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

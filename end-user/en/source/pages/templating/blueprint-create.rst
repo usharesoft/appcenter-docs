@@ -21,7 +21,7 @@ To create a new blueprint:
 
 	5. Click on the appliances you want to add to the blueprint. If you add the same appliance twice, it will be saved with the same name with ``_n+1`` added at the end. You can edit the name of the appliances in the ``Service configuration`` section.
 
-	6. You should now see the a window similar to the following.
+	6. You should now see a window similar to the following.
 
 		.. image:: /images/blueprint-services.png
 

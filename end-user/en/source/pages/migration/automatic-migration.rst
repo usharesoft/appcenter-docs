@@ -44,3 +44,11 @@ In order to run a migration:
 	11. Click ``next`` to view the migration status.
 	12. You can return to the ``Lift & Shift`` page to view the status of your migrations.
 
+	.. image:: /images/migration-status.png
+
+Viewing Details of an Automatic Migration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Once your automatic migration has completed, you can view the details of the status and details of the machine migrated from the ``Lift & Shift`` tab on the ``Migrations`` page.
+
+

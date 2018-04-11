@@ -11,6 +11,8 @@ Release Date: 2018-05-28
 New Features
 ~~~~~~~~~~~~
 * The automated migration process is now available for Windows
+* Introduce the new Blueprint module which allows users to create and deploy multi-node applications. This release currently supports Linux and Amazon AWS only.
+
 
 3.8.fp3
 -------

@@ -42,7 +42,7 @@ In order to run a migration:
 	9. Open a terminal window and login to the target environment.
 	10. Launch the migrate command on the running target environment to start the migration.
 
-		.. note:: You can exclude non-native files and directories using ``-e`` parameter.
+		.. note:: For Linux migration, you can exclude non-native files and directories using ``-e`` parameter. This is not supported for Windows.
 
 	11. Click ``next`` to view the migration status.
 	12. You can return to the ``Lift & Shift`` page to view the status of your migrations.

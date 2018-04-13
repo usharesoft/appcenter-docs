@@ -3,6 +3,15 @@
 Changelog
 =========
 
+3.8.fp3
+-------
+
+Release Date: 2018-04-16
+
+New Features
+~~~~~~~~~~~~
+* Windows system with an extended partition is now supported for scanning, generation of images and templating.
+
 3.8.fp2
 -------
 

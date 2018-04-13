@@ -12,6 +12,10 @@ New Features
 ~~~~~~~~~~~~
 * The automated migration process is now available for Windows
 
+Enhancements
+~~~~~~~~~~~~
+* Improve the migration details page in the user interface
+
 3.8.fp3
 -------
 

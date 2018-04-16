@@ -21,7 +21,7 @@ Enhancements
 
 Restrictions
 ~~~~~~~~~~~~
-* Because of the following issue, the image generation of Linux system to migrate to K5 is restricted.
+* Currently the image generation of Linux system for K5 migration fails. This is due to a known issue during dependency checking.
   9941 Image generatin for K5 failed while checking the dependencies
 
 3.8.fp2

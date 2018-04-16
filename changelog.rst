@@ -20,6 +20,11 @@ Enhancements
 * Allow users to delete multiple migrations
 * 9057 Remove End-of-life Microsoft Azure Classic
 
+Restrictions
+~~~~~~~~~~~~
+* Currently the image generation of Linux system for K5 migration fails. This is due to a known issue during dependency checking.
+  9941 Image generation for K5 failed while checking the dependencies
+
 Bug Fixes
 ~~~~~~~~~
 * 9937 Segmentation fault when generating a machine image

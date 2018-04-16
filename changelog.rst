@@ -11,6 +11,7 @@ Release Date: 2018-05-28
 New Features
 ~~~~~~~~~~~~
 * The automated migration process is now available for Windows
+* New option to exclude some files and directories when migrating a live machine
 
 3.8.fp3
 -------

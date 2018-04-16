@@ -21,6 +21,7 @@ Enhancements
 
 Bug Fixes
 ~~~~~~~~~
+* 9937 segmentation fault when generating a machine image
 * 9762 Default chunk size for publishing to K5 is too low and leads to K5 error
 * 9411 When scaning a machine, UForge portal UI displays a big OS Logo in IE fix the logo size in the header + allow to debug CSS from remote computers
 * 9771 Docker image format should not be proposed for Windows migrations

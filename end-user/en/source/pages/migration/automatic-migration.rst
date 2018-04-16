@@ -15,6 +15,8 @@ The automatic migration process includes the following steps:
 	2. Generate a machine image from the scan result.
 	3. Publish the generated machine image to the selected target environment.
 
+.. _migration-launch:
+
 Launching an Automatic Migration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -43,4 +45,25 @@ In order to run a migration:
 	10. Launch the migrate command on the running target environment to start the migration.
 	11. Click ``next`` to view the migration status.
 	12. You can return to the ``Lift & Shift`` page to view the status of your migrations.
+
+	.. image:: /images/migration-status.png
+
+	From the status page you can view more detailed information about the appliance scanned. Refer to :ref:`migration-details`.
+
+.. _migration-details:
+
+Viewing Details of an Automatic Migration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Once your automatic migration has completed, you can view the details of the status and details of the machine migrated from the ``Lift & Shift`` tab on the ``Migrations`` page.
+
+	.. image:: /images/migration-details.png
+
+From the status page you can view more detailed information about the appliance scanned by clicking: 
+
+		* ``Details`` for more information about the published appliance. This will include the cloud ID, cloud account used for publication, if the publication succeeded. 
+		* ``View Scan Details`` which will bring you to the details of the scan appliance on the ``Re-platform`` page. From here you can see all the packages and files that are part of the appliance.
+		* ``View Generations Details`` which will bring you to the ``Generations`` page. This page lists ALL generations (not just from this migration). From here you can launch a publish.
+		* ``View Publication Details`` which will bring you to the ``Generations`` page.
+
 

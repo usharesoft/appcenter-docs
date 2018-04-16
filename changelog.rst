@@ -10,7 +10,7 @@ Release Date: 2018-04-16
 
 New Features
 ~~~~~~~~~~~~
-* Windows system with an extended partition is now supported for scanning, generation of images and templating.
+* Windows system with an extended partition is now supported for templating, image generation, and scanning.
 
 3.8.fp2
 -------

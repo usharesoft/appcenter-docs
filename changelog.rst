@@ -10,6 +10,7 @@ Release Date: 2018-04-16
 
 New Features
 ~~~~~~~~~~~~
+* Windows system with an extended partition is now supported for templating, image generation, and scanning.
 * The automated migration process is now available for all supported platforms
 
 Enhancements

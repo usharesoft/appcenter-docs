@@ -23,9 +23,9 @@ Bug Fixes
 ~~~~~~~~~
 * 9937 Segmentation fault when generating a machine image
 * 9762 Default chunk size for publishing to K5 is too low and leads to K5 error
-* 9411 When scaning a machine, UForge portal UI displays a big OS Logo in IE fix the logo size in the header + allow to debug CSS from remote computers
+* 9411 When scanning a machine, UForge portal UI displays a big OS Logo. Fix the logo size in the header and allow to debug CSS from remote computers
 * 9771 Docker image format should not be proposed for Windows migrations
-* 9781 When selecting Azure platform, AWS or K5 for generation, an unknown servor error is displayed
+* 9781 When selecting Azure platform, AWS or K5 for generation, an unknown server error is displayed
 * 9424 When a migration is deleted, the error message of the migration tool is not relevant
 * 9641 Delete account with a certificate, after a publish, fails
 * 9639 Wrong URI for Scan installProfile

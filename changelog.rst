@@ -21,7 +21,7 @@ Enhancements
 
 Bug Fixes
 ~~~~~~~~~
-* 9937 segmentation fault when generating a machine image
+* 9937 Segmentation fault when generating a machine image
 * 9762 Default chunk size for publishing to K5 is too low and leads to K5 error
 * 9411 When scaning a machine, UForge portal UI displays a big OS Logo in IE fix the logo size in the header + allow to debug CSS from remote computers
 * 9771 Docker image format should not be proposed for Windows migrations
@@ -31,19 +31,17 @@ Bug Fixes
 * 9639 Wrong URI for Scan installProfile
 * 9657 Unable to publish Docker images to Azure Containers
 * 9615 Generation dashboard is in error after a Migration Generation Stage has completed
-* 8917 After Blackbox Migration, RHEL5.3 were updated to RHEL5.5.
-* 9598 provisioning on Azure fails due to No DVD device
+* 8917 After Blackbox Migration, RHEL5.3 is updated to RHEL5.5.
+* 9598 Provisioning on Azure fails due to No DVD device
 * 9582 SLES generation for Azure format does not work (no platform tools injected)
 * 9258 Unable to do a Debian 8 blackbox migration to Microsoft Azure
 * 9074 Improve error handling in getCredAccountResources service
-* 9188 partitions in LVM logical groups/volumes appear in wrong order if a group's name is changed
+* 9188 Partitions in LVM logical groups/volumes appear in wrong order if a group's name is changed
 * 9532 When importing an appliance, Firewall is set to Ask during installation
 * 9502 NIC configuration disappears on install profile in an imported appliance from a CentOS5.7 scan
-* 8682 if the root context is not modified in the deployment wizard, the page redirected to at the end is / which is forbidden
+* 8682 If the root context is not modified in the deployment wizard, the page redirected to at the end is / which is forbidden
 * 9081 "should contains" to be replaced with "should contain" in bootscript name in UI
-* 9500 Fix random should_delete_build_query_params test
-* 9498 ow2stack.org is down and an IT test use it Temporary remove the tests
-* 6200 fix scan installProfile URI
+* 6200 Fix scan installProfile URI
 * 8973 Ubuntu 16.04 image generation requires debootstrap to be of version at least 1.0.85 and does not support "proposed" packages
 * 9094 If a user's home directory is in a multiple levels folder hierarchy, the user creation fails
 * 8951 Remove GoldenPath field from uforge.xsd

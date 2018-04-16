@@ -9,17 +9,17 @@ As scans are just meta-data, you can compare two scans to determine their differ
 
 .. warning:: This is only supported for Linux based source instances.
 
-From the ``Scans`` tab:
+From the ``Re-platform`` tab on the ``Migrations`` page:
 
-	1. Click on the ``compare`` button (balance icon) at the top right hand side of the ``Scans`` page.
+	1. Click on the ``compare`` button (balance icon) at the top right hand side of the ``Re-platform`` page.
 
-	.. image:: /images/scan-compare-icon.png
+	.. image:: /images/replatform-compare-icon.png
 
 	2. Select the source and target scan. 
 
 		.. warning:: The source and target scan must be of the same type. For example, if the source scan is a scan with overlay, then it must be compared to a scan with overlay. Similarly, a scan without overlay can only be compared to a scan without overlay.
 
-	.. image:: /images/scan-compare2.png
+	.. image:: /images/replatform-compare.png
 
 	3. Click ``compare``.
 

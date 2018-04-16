@@ -11,6 +11,45 @@ Release Date: 2018-04-16
 New Features
 ~~~~~~~~~~~~
 * Windows system with an extended partition is now supported for templating, image generation, and scanning.
+* The automated migration process is now available for all supported platforms
+
+Enhancements
+~~~~~~~~~~~~
+* Visualise all the software (libraries, drivers or packages) that is automatically injected by UForge during the generation of a machine image for a specific target cloud environment.
+* "Migrations" tab now contains both automated migration and scan features, available under "Lift & Shift" and "Re-platform" sub menus
+* Allow users to delete multiple migrations
+* 9057 Remove End-of-life Microsoft Azure Classic
+
+Bug Fixes
+~~~~~~~~~
+* 9937 Segmentation fault when generating a machine image
+* 9762 Default chunk size for publishing to K5 is too low and leads to K5 error
+* 9411 When scanning a machine, UForge portal UI displays a big OS Logo. Fix the logo size in the header and allow to debug CSS from remote computers
+* 9771 Docker image format should not be proposed for Windows migrations
+* 9781 When selecting Azure platform, AWS or K5 for generation, an unknown server error is displayed
+* 9424 When a migration is deleted, the error message of the migration tool is not relevant
+* 9641 Delete account with a certificate, after a publish, fails
+* 9639 Wrong URI for Scan installProfile
+* 9657 Unable to publish Docker images to Azure Containers
+* 9615 Generation dashboard is in error after a Migration Generation Stage has completed
+* 8917 After Blackbox Migration, RHEL5.3 is updated to RHEL5.5.
+* 9598 Provisioning on Azure fails due to No DVD device
+* 9582 SLES generation for Azure format does not work (no platform tools injected)
+* 9258 Unable to do a Debian 8 blackbox migration to Microsoft Azure
+* 9074 Improve error handling in getCredAccountResources service
+* 9188 Partitions in LVM logical groups/volumes appear in wrong order if a group's name is changed
+* 9532 When importing an appliance, Firewall is set to Ask during installation
+* 9502 NIC configuration disappears on install profile in an imported appliance from a CentOS5.7 scan
+* 8682 If the root context is not modified in the deployment wizard, the page redirected to at the end is / which is forbidden
+* 9081 "should contains" to be replaced with "should contain" in bootscript name in UI
+* 6200 Fix scan installProfile URI
+* 8973 Ubuntu 16.04 image generation requires debootstrap to be of version at least 1.0.85 and does not support "proposed" packages
+* 9094 If a user's home directory is in a multiple levels folder hierarchy, the user creation fails
+* 8951 Remove GoldenPath field from uforge.xsd
+* 9176 Please remove obsolete Squid directives from /etc/squid/squid.conf
+* 7937 Debian dependency checker returns too much detailed message when failed.
+* 8371 Add SYSPREP setting in windows yml template
+* 9317 uforge_update.sh fails with SQL error in db_modifs_180130-01.sql
 
 3.8.fp2
 -------
@@ -166,6 +205,11 @@ New Features
 * Debian 9 (Stretch) operating system supported for all features (templating and migration)
 
 For other features, please refer to 3.7.fp8 release notes
+
+Migrating to 3.8
+~~~~~~~~~~~~~~~~
+
+For specificities relating to migrating a 3.7 or 3.7.fpx to 3.8 please refer to :ref:`migrate-to38`.
 
 
 Bug Fixes

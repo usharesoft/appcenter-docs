@@ -14,7 +14,7 @@ migration_delete
 	* Response Formats: 
 	* Since: ``UForge 3.8.2``
 
-Delete a running migration.
+Delete a finished migration.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -44,4 +44,5 @@ Example Request
 .. seealso::
 
 	 * :ref:`migration-object`
+	 * :ref:`migration-deleteAll`
 	 * :ref:`migrationstage-object`

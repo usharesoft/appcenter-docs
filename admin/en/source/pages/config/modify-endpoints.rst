@@ -47,7 +47,7 @@ To update the external URLs:
 
 	1. Update the ``/etc/UShareSoft/uforge/uforge.conf`` file for each node with the updated variables you wish.
 
-	2. Launch the following two scripts (if multi-node the following order should be respected: compute notes, db nodes, web service nodes)::
+	2. Launch the following two scripts (if multi-node the following order should be respected: compute notes, db nodes, web service, and UI nodes)::
 
 		$ /opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh
 		$ /opt/UShareSoft/uforge-client/bin/uforge_ui_update.sh

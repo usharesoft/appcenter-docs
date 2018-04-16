@@ -2,16 +2,16 @@
 
 .. _migration-process-details:
 
-Migration Using Scan Process
+Migration Using Re-platform
 ----------------------------
 
-The entire migration process has 5 main steps.  These are:
+The entire migration process using ``Re-platform`` (previously referred to as ''scan'') has 5 main steps.  These are:
 
 	1. Scan the source machine.
 	2. Report the scan results to UForge AppCenter, where the platform analyzes the report. The scan differentiates between known packages and extra files. 
 	3. The results are used to build an archive. The extra files are only included in the archive if the user is performing a scan with overlay. The archive is sent back to the platform.
 	4. The archive is uncompressed, and the information is stored in the database as a ``Scan``.
-	5. The scan can be used to generate machine images (black box migration) or imported to create a new appliance template (white box migration). The generated machine image can then be published to the target environment and instances can be provisioned.
+	5. The scan can be used to generate machine images (also known as black box migration) or imported to create a new appliance template (also known as whitebox migration). The generated machine image can then be published to the target environment and instances can be provisioned.
 
 .. _migration-prereq:
 
@@ -22,7 +22,7 @@ In order to migrate a system, it must meet the following conditions:
 
 	* The operating system must be in one of the supported formats (refer to :ref:`uforge-supported-os-formats`). 
 
-	.. note:: Your scan will take longer if not all minor versions of a distribution are install in your UForge AppCenter. For example, if you scan a CentOS 6.8 machine, but your AppCenter has only been populated with packages up to CentOS 6.7, then the AppCenter will use the machine's yum repo to download the missing packages. As a result, the scan will take longer before completing.
+	.. note:: Your scan will take longer if not all minor versions of a distribution are install in your UForge AppCenter. For example, if you scan a CentOS 6.8 machine, but your AppCenter has only been populated with packages up to CentOS 6.7, then the AppCenter will use the machine's yum repo to download the missing packages. As a result, the scan will take longer to complete.
 
 	* The image formats must be in supported formats (refer to :ref:`supported-image-formats`)
 	* For Windows, the partition format must be NTFS
@@ -81,14 +81,14 @@ UForge AppCenter retrieves and extracts the overlay sent by the uforge-scan bina
 
 The analysis and overlay processes are now finished. All the scan metadata remain in UForge AppCenter until the scan gets deleted.
 
-You can now carry out a black box or a white box migration.  For black box migration, you generate a new machine image from the scan.  For white box migration, you must first import the scan as an appliance template.
+You can now either generate a new machine image from the scan or import the scan as an appliance template.
 
 .. _migration-process-generate:
 
-Generate an Image (Black Box Migration)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Generate an Image from Scan
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-At this stage, the scan report is used to generate a new machine image.  The generation tool:
+When you generate a new machine image from a scan, the generation tool:
 
 	1. Returns all the packages discovered on the scan target and installs them.
 	2. Takes the overlay and applies it on top of the built system (for scan with overlay).

@@ -5,7 +5,7 @@
 Deploying a Machine Image
 --------------------------
 
-.. note:: Currently, only Linux machine images published on Amazon, OpenStack, Cloudstack and Microsoft Azure Resource Manager can be deployed from UForge. You cannot deploy a Windows based appliance.
+.. note:: Currently, only Linux machine images published on Amazon, OpenStack, Cloudstack and Microsoft Azure can be deployed from UForge. You cannot deploy a Windows based appliance.
 
 You can only deploy a machine image if you have AMP installed. For more information on installing AMP, refer to the official `Cloudsoft AMP documentation <https://docs.cloudsoft.io/>`_
 

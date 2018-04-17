@@ -11,9 +11,9 @@ Release Date: 2018-05-28
 New Features
 ~~~~~~~~~~~~
 * The automated migration process is now available for Windows
+* Cloud credentials are now stored in a new secret manager (Vault) in order to improve security
 * New option to exclude some files and directories when migrating a live machine
 * Introduce the new Blueprint module which allows users to create and deploy multi-node applications. This release currently supports Linux and Amazon AWS only.
-
 
 Enhancements
 ~~~~~~~~~~~~

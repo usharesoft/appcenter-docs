@@ -30,3 +30,4 @@ This section assumes that you have completed the installation of your UForge pla
    proprietary-pkg
    populate-iso
    config-amp
+   config-secretmanager

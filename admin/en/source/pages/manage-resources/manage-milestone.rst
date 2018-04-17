@@ -26,4 +26,4 @@ In order to create a milestone called “beta” for Debian, run:
 
 .. code-block:: shell
 
-	# uforge os milestone add --dname Debian --darch i386 --dversion 6 --date 2014-01-01 12:00:00 --name beta –u $ADMIN -p $PASS
+	# uforge os milestone add --dname Debian --darch i386 --dversion 6 --date 2014-01-01 12:00:00 --name beta -u $ADMIN -p $PASS

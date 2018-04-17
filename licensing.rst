@@ -115,7 +115,7 @@ in any form whatsoever without the written permission of FUJITSU LIMITED
 * libXext: http://www.x.org
 * libXt: http://www.x.org
 * libX11: http://www.x.org
-* lib magic	1.0.0	
+* lib magic	1.0.0
 * lvm2-devel
 * log4j: http://logging.apache.org/log4j/1.2/
 
@@ -158,6 +158,7 @@ in any form whatsoever without the written permission of FUJITSU LIMITED
 * URL Rewrite filter: http://tuckey.org/urlrewrite/
 * util-linux-ng
 
+* Vault: https://www.vaultproject.io/
 * VMware vijava: http://vijava.sourceforge.net/
 * VMware SDK: https://developercenter.vmware.com/web/sdk/5.5.0/vcloud-java
 

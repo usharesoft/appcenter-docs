@@ -35,6 +35,6 @@ To disable a user account use ``uforge user disable`` and specify the user accou
 
 .. code-block:: shell
 
-	# uforge user disable --account kermit –-url https://uforge.usharesoft.com:443 -u $ADMIN -p $PASS
+	# uforge user disable --account kermit --url https://uforge.usharesoft.com:443 -u $ADMIN -p $PASS
 	Getting user [kermit] ...
 	Success: User kermit has been de-activated

@@ -53,6 +53,14 @@ Contents of /etc/fstab File
 
 Some differences may arise between the scanned server and the generated template in the contents of the ``/etc/fstab`` file. In particular, lines pertaining to NFS (Network FileSystem) mounts are not kept during a migration, because the machine images resulting from the migration would have to be instanciated on the same network as the source machine, with similar network parameters, which cannot always be the case. This also avoids the situations where the inability to mount an NFS share would prevent the (generated) server from booting.
 
+File System Table (/etc/fstab)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+UForge regenerates the /etc/fstab file during machine image generation.  Hardware and device mappings may differ between source and target environments.  For example, ``/dev/xvda`` could be translated to ``/dev/sda``.
+
+File system options (general, dump and check options) are not supported by UForge.  Consequently during a migration these values will be reset to their system defaults.
+
+Furthermore, a ``cdrom`` mount point is added by UForge to permit some cloud platform tools to work correctly.
+
 .. _service-state:
 
 Service State

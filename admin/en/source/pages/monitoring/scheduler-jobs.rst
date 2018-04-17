@@ -20,7 +20,7 @@ To view more details of a specific job, log in to the oar scheduler node as root
 
   .. code-block:: shell
 
-    $ oarstat --job 5725 –-full
+    $ oarstat --job 5725 --full
     Job_Id: 5725
         job_array_id = 5725
         job_array_index = 1

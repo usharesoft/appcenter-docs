@@ -20,7 +20,7 @@ The following section give an example for updating CentOS. They can be adjusted 
 
 			Success: Created repository with url [http://vault.centos.org/6.5/os/x86_64/] to default organization
 
-		The ``–-name`` specified here is the “tagname” that will be shown in the UI when creating an appliance.
+		The ``--name`` specified here is the “tagname” that will be shown in the UI when creating an appliance.
 		The ``--repoUrl`` can be either ``http://`` or ``file://``.
 
 		.. warning:: You must use the ``--officiallySupported`` flag for all the default repositories of officially supported OSes. For a list of supported OSes, refer to the User Guide. Do not use ``--officiallySupported`` for repositories that are not part of the core distribution, such as epel or VMware tools. When generating a machine image, packages tagged as ``--officiallySupported`` are installed first, before other packages.
@@ -29,7 +29,7 @@ The following section give an example for updating CentOS. They can be adjusted 
 
 	$ uforge org repo os attach --name CentOS --arch x86_64 --version 6.5 --repoIds 354 -u $ADMIN -p $PASS
 	
-   The ``–-repoIds`` specified here are the space-separated “id” of previously created repositories, shown by command ``uforge org repo list -u $ADMIN -p $PASS``.
+   The ``--repoIds`` specified here are the space-separated “id” of previously created repositories, shown by command ``uforge org repo list -u $ADMIN -p $PASS``.
 
 3. Populate repository packages:
 

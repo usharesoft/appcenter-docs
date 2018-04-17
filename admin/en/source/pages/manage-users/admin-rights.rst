@@ -15,4 +15,4 @@ There are two steps in granting a user Administrator privileges; you must:
 
 	2. Assign the user as administrator to a specific organization. If no organization is provided, then the default organization is used::
 
-		$ uforge user admin promote –-account <username> --org <org name> -u $ADMIN -p $PASS
+		$ uforge user admin promote --account <username> --org <org name> -u $ADMIN -p $PASS

@@ -5,7 +5,7 @@
 scanInstallProfile_get
 ----------------------
 
-.. function:: GET /users/{uid}/scannedinstances/{siid}/scans/{sid}/installprofile
+.. function:: GET /users/{uid}/scannedinstances/{siid}/scans/{sid}/installProfile
 
 .. sidebar:: Summary
 
@@ -39,7 +39,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/users/{uid}/scannedinstances/{siid}/scans/{sid}/installprofile" -X GET \
+	curl "https://uforge.example.com/api/users/{uid}/scannedinstances/{siid}/scans/{sid}/installProfile" -X GET \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::

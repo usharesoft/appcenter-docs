@@ -39,23 +39,23 @@ To update the platform, use the "yum" command-line tool as follows:
 
 .. code-block:: shell
 
-	$ yum update 
+	$ yum update
 
 	Loaded plugins: presto
-	UForge-ee-uforge                                               |  951 B     00:00     
-	UForge-ee-uforge/primary                                       | 1.9 kB     00:00     
-	UForge-ee-uforge                                                                                           
+	UForge-ee-uforge                                               |  951 B     00:00
+	UForge-ee-uforge/primary                                       | 1.9 kB     00:00
+	UForge-ee-uforge
 	                                                                                   4/4
-	UForge-ee-uforge-client                                        |  951 B     00:00     
-	UForge-ee-uforge-client/primary                                | 1.0 kB     00:00     
-	UForge-ee-uforge-client                                                                                       
+	UForge-ee-uforge-client                                        |  951 B     00:00
+	UForge-ee-uforge-client/primary                                | 1.0 kB     00:00
+	UForge-ee-uforge-client
 	                                                                                   4/4
-	fedora/metalink                                                     | 2.6 kB     00:00     
-	fedora                                                              | 4.3 kB     00:00     
-	fedora/primary_db                                                   |  13 MB     00:36     
-	updates/metalink                                                    | 1.9 kB     00:00     
-	updates                                                             | 4.7 kB     00:00     
-	updates/primary_db                                                  | 6.4 MB     00:21     
+	fedora/metalink                                                     | 2.6 kB     00:00
+	fedora                                                              | 4.3 kB     00:00
+	fedora/primary_db                                                   |  13 MB     00:36
+	updates/metalink                                                    | 1.9 kB     00:00
+	updates                                                             | 4.7 kB     00:00
+	updates/primary_db                                                  | 6.4 MB     00:21
 	Setting up Update Process
 	Resolving Dependencies
 	--> Running transaction check
@@ -115,14 +115,12 @@ Run the following CLI command in order to know if Squid is running:
 	.. code-block:: shell
 
 		$ service squid status
-		
-	
+
+
 	If squid is stopped, run the following command-line
-	
+
 	.. code-block:: shell
 
-		$ service squid start	
+		$ service squid start
 
-
-
-
+.. note:: When you're upgrading from UForge 3.8.FP2 or an earlier version there is an additional step to be done manually if you are in a multi-node environment. You have to copy the file ``/etc/UShareSoft/vault/root_token`` from database node to web service node. This file will be used to configure access to the secret manager.

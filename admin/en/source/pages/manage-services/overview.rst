@@ -12,3 +12,4 @@ The following sections cover information regarding managing the UForge services.
 
    start-webservice
    start-database
+   start-secretmanager

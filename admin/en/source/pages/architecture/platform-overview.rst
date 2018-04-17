@@ -9,6 +9,7 @@ UForge is a scalable multi-tenant platform.  UForge can be split into the follow
 
 	* UForge Server – This contains all the business logic of UForge, handling all incoming user requests.
 	* Meta-data SQL Store – A database holding all the configuration information and data of the platform.
+	* Secret Manager - A dedicated service to store user's confidential information, such as password, login ... in a secure way.
 	* LDAP Service – LDAP holding user authentication and access information
 	* IDM Service – Authentication and authorization module
 	* Generation Cluster – A grid engine for scheduling and executing image generations
@@ -17,7 +18,7 @@ UForge is a scalable multi-tenant platform.  UForge can be split into the follow
 
 The UForge platform can be deployed on physical machines or in a virtualized or cloud environment.
 
-.. image:: /images/UForge-architecture_2.jpg
+.. image:: /images/arch-uforge-vault.png
 
 **UForge Server.** The UForge Server is a RESTful (Representational State Transfer) web service built on top of Java and using the JSR-311 reference implementation (project Jersey).  UForge Server is based on the design principles of REST and Resource Oriented Architecture (ROA).  Resources are references with a unique global identifier (URI).  UForge Server uses the semantics of the HTTP protocol to manipulate these resources. The HTTP response codes are used to determine whether a user's request was treated successfully or not.
 
@@ -45,6 +46,9 @@ This IDM Service can be extended to provide a wider identity and access manageme
 	* Third party project software components
 
 By default MariaDB is used as the SQL Store.
+
+**Secret Manager.** This is a tool for securely accessing confidential data using Vault. A secret is anything that you want to tightly control access to, such as API keys, passwords, or certificates. A global token is used by the UForge Server to store secrets and generate tokens for external use such as publication, deployment ...
+These secrets are stored and encrypted on the disk at ``/var/lib/vault`` by using the Filesystem storage backend of Vault. This component is by default installed on the same node as the **SQL Store**.
 
 **Generation Cluster.**  Image generation is I/O intensive and may take several minutes to complete.  Consequently an HPC cluster is used to execute image generation jobs.  There are two parts to this cluster:
 
@@ -81,8 +85,8 @@ Infrastructure Setup
 
 UForge can be installed either on physical machines or in a virtual or cloud environment.  The minimal installation requirements for UForge are:
 
-	* One physical or virtual machine where UForge will be installed 
-	* A NAS or SAN for storage 
+	* One physical or virtual machine where UForge will be installed
+	* A NAS or SAN for storage
 
 UForge AppCenter Node Prerequisites
 -----------------------------------
@@ -92,7 +96,7 @@ The UForge AppCenter components can be run on one physical or virtual machine, o
 The UForge AppCenter requires the following hardware:
 
 	* CPU: 64-bit, 8 or more cores
-	* RAM: 16GB or more 
+	* RAM: 16GB or more
 	* Local Hard Drive: 400GB
 	* NAS/SAN Storage: 200 GB (though this might be much more depending upon the usage)
 

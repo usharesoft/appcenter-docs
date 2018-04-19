@@ -62,9 +62,9 @@ html:
 
 .PHONY: htmlwerror
 htmlwerror:
-		cd apis/en && make htmlwerror
-		cd end-user/en && make htmlwerror
-		cd admin/en && make htmlwerror
+	cd apis/en && make htmlwerror
+	cd end-user/en && make htmlwerror
+	cd admin/en && make htmlwerror
 
 .PHONY: dirhtml
 dirhtml:

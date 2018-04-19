@@ -60,9 +60,9 @@ html:
 
 .PHONY: htmlwerror
 htmlwerror:
-		$(SPHINXBUILD) -W -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
-		@echo
-		@echo "Build finished. No warning. The HTML pages are in $(BUILDDIR)/html."
+	$(SPHINXBUILD) -W -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
+	@echo
+	@echo "Build finished. No warning. The HTML pages are in $(BUILDDIR)/html."
 
 .PHONY: dirhtml
 dirhtml:

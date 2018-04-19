@@ -109,6 +109,5 @@ In addition to the above, there are other minor differences between source and t
 GRUB2 Core Image
 ~~~~~~~~~~~~~~~~
 
-GRUB2 is always re-installed when migrating a Linux system.
-Thus, some files in the folder ``/boot/grub2`` might be different between source and target.
+GRUB2 is always re-installed when migrating a Linux system. Therefore, some files in the folder ``/boot/grub2`` might be different between source and target.
 This is especially true for ``/boot/grub2/i386-pc/core.img`` since UForge installs GRUB2, regardless of the source machine configuration, with the following modules: ``biosdisk linux boot part_msdos lvm ext2 gettext xfs``.

@@ -214,7 +214,7 @@ For other features, please refer to 3.7.fp8 release notes
 Migrating to 3.8
 ~~~~~~~~~~~~~~~~
 
-For specificities relating to migrating a 3.7 or 3.7.fpx to 3.8 please refer to :ref:`migrate-to38`.
+For specificities relating to migrating a 3.7 or 3.7.fpx to 3.8 please refer to the section Migrating UForge from 3.7 to 3.8 in the Admin guide.
 
 
 Bug Fixes

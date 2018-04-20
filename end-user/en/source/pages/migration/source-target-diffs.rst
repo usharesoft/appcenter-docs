@@ -106,8 +106,8 @@ In addition to the above, there are other minor differences between source and t
 .. warning:: Installing non-Red Hat packages on a Red Hat server, or replacing Red Hat packages by CentOS packages, is strongly discouraged, because it voids the warranty. Red Hat can refuse support requests on a modified machine.
 
 
-GRUB2 Core Image
-~~~~~~~~~~~~~~~~
+GRUB2
+~~~~~
 
 GRUB2 is always re-installed when migrating a Linux system. Therefore, some files in the folder ``/boot/grub2`` might be different between source and target.
 This is especially true for ``/boot/grub2/i386-pc/core.img`` since UForge installs GRUB2, regardless of the source machine configuration, with the following modules: ``biosdisk linux boot part_msdos lvm ext2 gettext xfs``.

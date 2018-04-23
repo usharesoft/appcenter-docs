@@ -20,7 +20,9 @@ The list of attributes for ``user`` are:
 	* ``applianceUris`` (:ref:`UriList-object`): the list of uri resources for each appliance template this user is managing
 	* ``baseApiKeysUri`` (anyURI): the uri resource to retrieve the user's api keys
 	* ``baseAppliancesUri`` (anyURI): the uri resource to retrieve the user's appliance templates
+	* ``baseBlueprintsUri`` (anyURI): the uri resource to retrieve the user's blueprint templates
 	* ``baseCredAccountsUri`` (anyURI): the uri resource to retrieve the user's cloud accounts
+	* ``baseDeploymentsUri`` (anyURI): the uri resource to retrieve the user's deployments
 	* ``baseDistributionsUri`` (anyURI): the uri resource to retrieve the operating systems the user has access to
 	* ``baseFormatsUri`` (anyURI): the uri resource to retrieve the primitive formats the user has access to
 	* ``baseTargetPlatformsUri`` (anyURI): the uri resource to retrieve the target platforms the user has access to

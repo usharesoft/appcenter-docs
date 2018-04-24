@@ -22,6 +22,11 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`appliancesummary-object`
 	* :ref:`artifactcredaccount-object`
 	* :ref:`artifactcredaccounts-object`
+	* :ref:`blueprint-object`
+	* :ref:`blueprintdeployment-object`
+	* :ref:`blueprintdeploymentaws-object`
+	* :ref:`blueprintservice-object`
+	* :ref:`blueprintsummary-object`
 	* :ref:`bootscript-object`
 	* :ref:`bootscripts-object`
 	* :ref:`bundlerestriction-object`
@@ -188,6 +193,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`stattickets-object`
 	* :ref:`subscriptionprofile-object`
 	* :ref:`subscriptionprofiles-object`
+	* :ref:`sourcesummary-object`
 	* :ref:`tag-object`
 	* :ref:`targetformat-object`
 	* :ref:`targetformats-object`
@@ -236,6 +242,11 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     ApplianceSummary
     ArtifactCredAccount
     ArtifactCredAccounts
+    Blueprint
+    BlueprintDeployment
+    BlueprintDeploymentAws
+    BlueprintService
+    BlueprintSummary
     BootScript
     BootScripts
     BundleRestriction
@@ -402,6 +413,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     StatTickets
     SubscriptionProfile
     SubscriptionProfiles
+    SourceSummary
     Tag
     TargetFormat
     TargetFormats

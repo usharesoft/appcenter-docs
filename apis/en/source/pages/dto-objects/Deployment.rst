@@ -19,5 +19,6 @@ The list of attributes for ``deployment`` are:
 	* ``blueprintName`` (string): the blueprint name used to do this deployment
 	* ``iconUrl`` (anyURI): the icon url of the application deployed
 	* ``state`` (string): the deployment state
+	* ``sourceSummary`` (:ref:`sourceSummary-object`): the deployment source (Blueprint, Appliance or Scan)
 
 

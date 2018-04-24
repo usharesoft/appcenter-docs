@@ -87,6 +87,8 @@ Tuning for Migration Projects
 
 When migrating Linux-based systems, UForge scans the filesystem.  In certain cases where the filesystem contains more than 300K files, you may need to increase the Java heap memory of some UForge services.  The example below illustrates increasing the Java heap memory to 3GB (or more).
 
+.. note:: On multi-node UForge platforms, this modification must be done on the compute nodes.
+
 .. code-block:: javascript
 
     "create_vm": {

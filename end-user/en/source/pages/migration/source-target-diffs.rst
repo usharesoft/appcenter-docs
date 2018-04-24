@@ -104,3 +104,10 @@ Red Hat vs CentOS Packages
 In addition to the above, there are other minor differences between source and target instances after migration. If CentOS packages have been installed on a Red Hat server, with the same functionality and the same version number as equivalent existing Red Hat packages, then after migration, these CentOS packages will be replaced by their Red Hat counterparts, because the vendor information present in RPM packages is not accounted for during migration: only the package name and version number are.
 
 .. warning:: Installing non-Red Hat packages on a Red Hat server, or replacing Red Hat packages by CentOS packages, is strongly discouraged, because it voids the warranty. Red Hat can refuse support requests on a modified machine.
+
+
+GRUB2
+~~~~~
+
+GRUB2 is always re-installed when migrating a Linux system. Therefore, some files in the folder ``/boot/grub2`` might be different between source and target.
+This is especially true for ``/boot/grub2/i386-pc/core.img`` since UForge installs GRUB2, regardless of the source machine configuration, with the following modules: ``biosdisk linux boot part_msdos lvm ext2 gettext xfs``.

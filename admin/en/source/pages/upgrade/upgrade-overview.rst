@@ -13,5 +13,4 @@ Once you have an installed and fully functional UForge AppCenter, you may wish t
    upgrade
    migrating-to38
    uforge-downgrade
-   redhat-mirror
    retrieve-data

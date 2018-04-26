@@ -30,6 +30,7 @@ Bug Fixes
 * 9733 Use public IP address instead of private one in the security group rule when publishing to AWS
 * 9918 UI freeze in Google Chrome when entering the 'Stack' tab
 * 9940 Cannot publish to azure with existing account through REST API
+* 9941 Image generation for K5 failed while checking the dependencies
 * 10099 Boot scripts cannot be found in the cloned MySoftware
 
 3.8.fp3

@@ -19,8 +19,8 @@ You can view the details of an appliance template, generate images from them and
 
 .. _appliancesearch:
 
-Filtering Appliance Templates
-------------------------------
+Searching Appliance Templates
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To find a particular appliance template you can: 
 

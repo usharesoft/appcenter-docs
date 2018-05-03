@@ -14,7 +14,7 @@ cloudAccount_delete
 	* Response Formats: 
 	* Since: ``UForge 2.0``
 
-Removes a cloud account from an user.
+Removes a cloud account from a user.
 
 Security Summary
 ~~~~~~~~~~~~~~~~

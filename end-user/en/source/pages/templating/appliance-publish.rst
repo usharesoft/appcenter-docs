@@ -50,12 +50,12 @@ In order to publish a machine image to a cloud environment or container, you mus
 
 	.. note:: When you publish an image to VMware, the result will be a template and not a virtual machine.
 
-	.. note:: When you publish an image to OpenShift Online, you need to configure your deployment before running it. Go to you OpenShift Online platform, Applications tab then Deployments. Select your deployment, and go to Actions -> Edit YAML. In the section ``spec - containers - image``, add the following lines:
+	.. note:: When you publish an image to OpenShift Online, you need to configure your image entrypoint in order to run it. Go to you OpenShift Online platform, Applications tab then Deployments. Select your deployment, and go to Actions -> Edit YAML. In the section ``spec - containers - image``, add the following lines:
 
  		``command:``
-			``- 'yes'``
+			``- 'myentrypoint.sh'``
 
-		Your image is now ready to be run.
+		Your image is now ready to be run and will execute the entrypoint provided.
 
 
 	.. warning:: If your Fujitsu K5 publish failed, there may be data published to cloud, incurring costs, even if not visible on your cloud account. You should run a cleanup manually. Refer to Chapter 2.7 Object storage of the `FUJITSU Cloud Service K5 IaaS API Reference (Foundation Service) guide <https://k5-doc.jp-east-1.paas.cloud.global.fujitsu.com/doc/en/iaas/document/k5-iaas-api-reference-foundation-service.pdf>`_

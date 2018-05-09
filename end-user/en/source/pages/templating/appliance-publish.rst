@@ -55,7 +55,7 @@ In order to publish a machine image to a cloud environment or container, you mus
  		``command:``
 			``- 'myentrypoint.sh'``
 
-		Your image is now ready to be run and will execute the entrypoint provided.
+		Your image is now ready to be run and will execute, by a non root user, the entrypoint provided.
 
 
 	.. warning:: If your Fujitsu K5 publish failed, there may be data published to cloud, incurring costs, even if not visible on your cloud account. You should run a cleanup manually. Refer to Chapter 2.7 Object storage of the `FUJITSU Cloud Service K5 IaaS API Reference (Foundation Service) guide <https://k5-doc.jp-east-1.paas.cloud.global.fujitsu.com/doc/en/iaas/document/k5-iaas-api-reference-foundation-service.pdf>`_

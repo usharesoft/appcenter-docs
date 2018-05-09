@@ -43,7 +43,7 @@ Example Request
 .. code-block:: bash
 
 	curl "https://uforge.example.com/api/users/{uid}/bundleimports/{sbid}/uploads" -X POST \
-	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"-H "Content-type: application/xml" --data-binary "@binaryFilePath"
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml" -H "Content-type: application/xml" --data-binary "@binaryFilePath"
 
 .. seealso::
 

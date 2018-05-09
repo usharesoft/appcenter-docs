@@ -53,7 +53,9 @@ In order to publish a machine image to a cloud environment or container, you mus
 	.. note:: When you publish an image to OpenShift Online, you need to configure your image entrypoint in order to run it. Go to you OpenShift Online platform, Applications tab then Deployments. Select your deployment, and go to Actions -> Edit YAML. In the section ``spec - containers - image``, add the following lines:
 
  		``command:``
-			``- 'myentrypoint.sh'``
+			``- sh``
+                ``args:``
+                        ``- myentrypoint.sh``
 
 		Your image is now ready to be run and will execute, by a non root user, the entrypoint provided.
 

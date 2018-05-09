@@ -5,6 +5,8 @@
 Modifying the UForge IP
 -----------------------
 
+.. note:: This procedure is only valid for mono node UForge platforms.
+
 To modify the UForge IP you will need to:
 
 1. Stop the following services:

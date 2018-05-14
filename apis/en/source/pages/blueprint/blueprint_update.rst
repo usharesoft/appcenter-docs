@@ -56,9 +56,9 @@ Example of representation.xml content (the request body):
 				<minCores>2</minCores>
 				<minMemory>512</minMemory>
 				<config>
-                 brooklyn.config:
-                   http.port: 80
-              </config>
+ brooklyn.config:
+ http.port: 80
+ </config>
 				<applianceSummary>
 					<uri>users/guest/appliance/204</uri>
 				</applianceSummary>

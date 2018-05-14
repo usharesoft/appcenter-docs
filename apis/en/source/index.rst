@@ -1,6 +1,6 @@
-.. Copyright 2018 FUJITSU LIMITED
-
 .. _apis-index:
+
+.. Copyright 2018 FUJITSU LIMITED
 
 Welcome to UForge AppCenter REST APIs Documentation
 ===================================================

@@ -3159,6 +3159,30 @@
         </xs:complexContent>
     </xs:complexType>
 
+    <xs:complexType name="CredAccountOpenShift">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Holds specific account information for a OpenShift Registry platform.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="CredAccount">
+                <xs:sequence>
+                    <xs:element name="registryUrl" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the OpenShift Registry URL to use</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="token" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the authentication token to use</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
     <xs:complexType name="CredAccountOracle">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
@@ -8596,6 +8620,18 @@
         </xs:complexContent>
     </xs:complexType>
 
+    <xs:complexType name="PublishImageOpenShift">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Holds the information on the registration of a machine image to OpenShift Registry.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="PublishImageDocker">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
     <xs:complexType name="PublishImageOracle">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
@@ -11069,6 +11105,7 @@
                                 <xs:enumeration value="k5"/>
                                 <xs:enumeration value="docker"/>
                                 <xs:enumeration value="oracle"/>
+                                <xs:enumeration value="openshift"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>

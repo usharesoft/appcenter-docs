@@ -51,7 +51,7 @@ In order to run a migration:
 
 	.. image:: /images/migration-status2.png
 
-	.. note:: You should note that if you cancel a migration, this will stop the process of migration at the step currently being done. Therefore, for example, if the image generation is complete, it will be visible on your platform. Also, if publication has started, this may incur costs. You should check your cloud account. For more details on the constraints of publishind an image, refer to :ref:`appliance-publish-machine-image`.
+	.. note:: You should note that if you cancel a migration, this will stop the process of migration at the step currently being done. Therefore, for example, if the image generation is complete, it will be visible on your platform. Also, if publication has started, this may incur costs. You should check your cloud account. For more details on the constraints of publishing an image, refer to :ref:`appliance-publish-machine-image`.
 
 	From the status page you can view more detailed information about the appliance scanned. Refer to :ref:`migration-details`.
 

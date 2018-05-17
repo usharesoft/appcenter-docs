@@ -3,7 +3,7 @@
 # Checking if the running process is "/bin/sh"
 # If it's "/bin/sh" then the user is executing the file directly
 # We want the user to source the file instead (source ./venv.sh or . ./venv.sh)
-if ps -p $$ --no-headers -o cmd | grep -q "^/bin/sh "; then
+if ps -p $$ --no-headers -o cmd | grep -q "^/bin/bash "; then
     echo "Please source the command instead of executing it:"
     echo "  source $0"
     exit 1

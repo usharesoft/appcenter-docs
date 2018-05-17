@@ -3,6 +3,15 @@
 Changelog
 =========
 
+3.8.fp5
+-------
+
+Release Date: 2018-07-09
+
+New Features
+~~~~~~~~~~~~
+* Allow users to cancel running migrations
+
 3.8.fp4
 -------
 

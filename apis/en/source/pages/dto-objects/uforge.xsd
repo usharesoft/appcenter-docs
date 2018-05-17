@@ -6254,6 +6254,11 @@
                             </xs:sequence>
                         </xs:complexType>
                     </xs:element>
+                    <xs:element name="cancellable" type="xs:boolean" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">a boolean highlighting if the Migration is cancellable or not</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>

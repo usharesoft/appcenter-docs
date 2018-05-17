@@ -1,20 +1,20 @@
 .. Copyright 2018 FUJITSU LIMITED
 
-.. _migration-delete:
+.. _migration-cancel:
 
-migration_delete
+migration_cancel
 ----------------
 
-.. function:: DELETE /users/{uid}/migrations/{mid}
+.. function:: DELETE /users/{uid}/migrations/{mid}/status
 
 .. sidebar:: Summary
 
 	* Method: ``DELETE``
 	* Response Code: ``204 / 200``
-	* Response Formats: 
-	* Since: ``UForge 3.8.2``
+	* Response Formats: ``application/xml`` ``application/json``
+	* Since: ``UForge 3.8.5``
 
-Delete a finished migration.
+Cancel a running Migration.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -38,12 +38,14 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/users/{uid}/migrations/{mid}" -X DELETE \
+	curl "https://uforge.example.com/api/users/{uid}/migrations/{mid}/status" -X DELETE \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::
 
 	 * :ref:`migration-object`
-	 * :ref:`migration-cancel`
-	 * :ref:`migration-deleteAll`
-	 * :ref:`migrationstage-object`
+	 * :ref:`migrationStatus-get`
+	 * :ref:`migration-create`
+	 * :ref:`migration-get`
+	 * :ref:`status-object`
+	 * :ref:`user-object`

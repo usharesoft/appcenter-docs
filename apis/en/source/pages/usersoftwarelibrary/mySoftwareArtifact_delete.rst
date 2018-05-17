@@ -27,7 +27,7 @@ URI Parameters
 
 * ``uid`` (required): the id of the :ref:`user-object`
 * ``msid`` (required): the id of the :ref:`mySoftware-object`
-* ``said`` (required): the id of the :ref:`softwareartifact-object`
+* ``said`` (required): the id of the :ref:`softwareartifact-object` to update
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

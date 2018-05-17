@@ -13,6 +13,7 @@ Attributes
 The list of attributes for ``migration`` are:
 
 	* ``stages``: the list of stages to perform the pipeline (see :ref:`stage-object`)
+	* ``cancellable`` (boolean): a boolean highlighting if the Migration is cancellable or not
 	* ``tag`` (string): the tag information
 	* ``name`` (string): the pipeline name
 	* ``status`` (:ref:`status-object`): the status of the pipeline

@@ -11,6 +11,7 @@ Release Date: 2018-07-09
 New Features
 ~~~~~~~~~~~~
 * Allow users to cancel running migrations
+* BTRFS filesystem support
 
 3.8.fp4
 -------

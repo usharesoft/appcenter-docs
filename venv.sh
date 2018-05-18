@@ -9,10 +9,15 @@ if ps -p $$ --no-headers -o cmd | grep -q "^/bin/bash "; then
     exit 1
 fi
 
-BASEDIR=$(dirname $(readlink -f "$0"))
-if [ -d "$BASEDIR/.venv" ]; then
+BASEDIR=$(pwd)
+
+if [ ! -f "$BASEDIR/venv.sh" ]; then
+    echo "Please run this script at the root of the appcenter-docs directory"
+    return 1
+elif [ -d "$BASEDIR/.venv" ]; then
     echo "Existing virtual environment found."
     source $BASEDIR/.venv/bin/activate
+    pip install -r $BASEDIR/requirements.txt -q
 else
     echo "==================================================================="
     echo "Installing new virtual environment, this will take a few minutes..."
@@ -21,18 +26,17 @@ else
 fi
 
 function validate-param() {
-    case "$1" in
-        "apis" | "admin" | "end-user")
-            return 0
-            ;;
-        *)
-            echo 'Required parameter: "end-user", "admin", or "apis"'
-            return 1
-            ;;
-    esac
+    if [[ "$1" == "admin" || "$1" == "apis" || "$1" == "end-user" ]]; then
+       return 0
+   else
+       echo "Required parameter: 'end-user', 'admin', or 'apis'"
+       return 1
+   fi
 }
 
-function make-doc() { validate-param $1 && pushd $BASEDIR/$1/en && make clean html && popd }
+function make-doc() {
+    validate-param $1 && pushd "$BASEDIR/$1/en" && make clean htmlwerror && popd
+}
 
 function serve-doc() {
     validate-param $1 && echo "ctrl-C to stop the server " && pushd $BASEDIR/$1/en/build/html &&
@@ -65,26 +69,26 @@ function copy-uforge-api() {
     else
         echo "Copy aborted."
     fi
-
 }
 
-echo
-echo "\e[1mumake-doc\e[0m can be used to generate the doc html:"
-echo "  make-doc apis"
-echo "  make-doc admin"
-echo "  make-doc end-user"
-echo
-echo "\e[1muserve-doc\e[0m can be used to serve the generated html for local consultation:"
-echo "  serve-doc apis"
-echo "  serve-doc admin"
-echo "  serve-doc end-user"
-echo
-echo "\e[1mucopy-uforge-api [uforge-dir]\e[0m can be used to copy uforge generated API files to update apis doc:"
-echo "  copy-uforge-api ../uforge"
-echo "  \e[2m# the above is the default value\e[0m"
-echo "  copy-uforge-api"
-echo
-echo "The recommended order of generation is \e[1mapis\e[0m -> \e[1madmin\e[0m -> \e[1mend-user\e[0m"
-echo
-echo "To exit the virtual environment, execute 'deactivate'"
-echo "To remove the virtual environment, delete the directory '.venv'"
+echo -e
+echo -e "\e[1mmake-doc\e[0m can be used to generate the doc html:"
+echo -e "  make-doc apis"
+echo -e "  make-doc admin"
+echo -e "  make-doc end-user"
+echo -e
+echo -e "\e[1mserve-doc\e[0m can be used to serve the generated html for local consultation:"
+echo -e "  serve-doc apis"
+echo -e "  serve-doc admin"
+echo -e "  serve-doc end-user"
+echo -e
+echo -e "\e[1mcopy-uforge-api [uforge-dir]\e[0m can be used to copy uforge generated API files to update apis doc:"
+echo -e "  copy-uforge-api ../uforge"
+echo -e "  \e[2m# the above is the default value\e[0m"
+echo -e "  copy-uforge-api"
+echo -e
+echo -e "The recommended order of generation is \e[1mapis\e[0m -> \e[1madmin\e[0m -> \e[1mend-user\e[0m"
+echo -e
+echo -e "To exit the virtual environment, execute 'deactivate'"
+echo -e "To remove the virtual environment, delete the directory '.venv'"
+echo -e "If your virtual environment stops working, try deleting '.venv', 'deactivate' and rerun this script"

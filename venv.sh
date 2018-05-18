@@ -17,7 +17,6 @@ if [ ! -f "$BASEDIR/venv.sh" ]; then
 elif [ -d "$BASEDIR/.venv" ]; then
     echo "Existing virtual environment found."
     source $BASEDIR/.venv/bin/activate
-    pip install -r $BASEDIR/requirements.txt -q
 else
     echo "==================================================================="
     echo "Installing new virtual environment, this will take a few minutes..."

@@ -90,7 +90,7 @@ Restoring the database is a simple copy using rsync back to the database directo
 .. code-block:: shell
 
 	$ systemctl stop tomcat
-	$ systemctl stop OpenDJ
+	$ systemctl stop opendj
 	$ systemctl stop mysql
 	$ systemctl stop vault
 	$ cd /tmp
@@ -103,7 +103,7 @@ Restoring the database is a simple copy using rsync back to the database directo
 	$ tar -xvf /tmp/<vault tarball>
 	$ rsync -a --delete-before /tmp/<mysql dir>/* /var/lib/mysql/
 	$ rsync -a --delete-before /tmp/<vault dir>/* /var/lib/vault/
-	$ systemctl start OpenDJ
+	$ systemctl start opendj
 	$ systemctl start vault
 	$ systemctl start mysql
 	$ systemctl start tomcat

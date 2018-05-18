@@ -11,6 +11,7 @@ Release Date: 2018-07-09
 New Features
 ~~~~~~~~~~~~
 * Allow users to cancel running migrations
+* Support API generation and publication to OpenShift Online (compatible with Hammr CLI)
 
 3.8.fp4
 -------

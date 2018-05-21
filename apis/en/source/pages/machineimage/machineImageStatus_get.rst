@@ -26,7 +26,7 @@ URI Parameters
 ~~~~~~~~~~~~~~
 
 * ``uid`` (required): the user name (login name) of the :ref:`user-object`
-* ``itid`` (required): the id of the :ref:`image-object`
+* ``itid`` (required): the id of the :ref:`image-object` to cancel
 * ``aid`` (required): the id of the :ref:`appliance-object`
 
 HTTP Request Body Parameters

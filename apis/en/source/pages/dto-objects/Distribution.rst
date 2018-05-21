@@ -17,6 +17,7 @@ The list of attributes for ``distribution`` are:
 	* ``baseMilestonesUri`` (anyURI): the uri resource to retrieve the milestones for this operating system
 	* ``basePkgsUri`` (anyURI): the uri resource to retrieve all the packages contained in this operating system
 	* ``baseProfilesUri`` (anyURI): the uri resource to retrieve all the os profile templates (see :ref:`distribprofile-object`)
+	* ``baseRepositoriesUri`` (anyURI): the uri resource to retrieve all the distribution repositories (see :ref:`repository-object`)
 	* ``baseGoldensUri`` (anyURI): the uri resource to retrieve the base machine images (for Microsoft Windows only)
 	* ``company`` (:ref:`company-object`): the company information of this operating system (see :ref:`company-object`
 	* ``description`` (string): the description of this operating system

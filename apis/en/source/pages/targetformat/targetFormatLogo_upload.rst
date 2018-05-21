@@ -25,7 +25,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``fileName`` (required): the name of the logo binary
+* ``fileName`` (required): the file name of the logo to upload
 * ``oid`` (required): the id of the :ref:`org-object`
 * ``tfid`` (required): the id of the :ref:`targetformat-object`
 * ``logoId`` (required): the id of the target format :ref:`logo-object`

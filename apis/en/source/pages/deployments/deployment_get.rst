@@ -30,7 +30,7 @@ URI Parameters
 ~~~~~~~~~~~~~~
 
 * ``uid`` (required): the user name (login name) of the :ref:`user-object`
-* ``did`` (required): the ref of :ref:`deployment-object`
+* ``did`` (required): the id of the :ref:`deployment-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

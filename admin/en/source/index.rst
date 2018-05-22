@@ -25,6 +25,7 @@ Contents:
    pages/monitoring/overview
    pages/tools/overview
    pages/rebranding/overview
+   pages/gdpr/overview
    pages/changelog
 
 .. _trademarks:

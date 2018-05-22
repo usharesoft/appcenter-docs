@@ -3162,7 +3162,7 @@
     <xs:complexType name="CredAccountOpenShift">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
-                Holds specific account information for a OpenShift Registry platform.
+                Holds specific account information for an OpenShift Registry platform.
             </xsd:documentation>
         </xsd:annotation>
         <xs:complexContent>

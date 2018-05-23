@@ -8,6 +8,8 @@ Supported Machine Image Types
 
 With UForge you can create machine images in the following formats.
 
+.. note:: UForge 3.8 fp5 onwards no longer supports Abiquo, Eucalyptus, Flexiant and Nimbula. When upgrading UForge all images, published images, credential accounts and migrations using these formats will be deleted.
+
 +-------------------------------------+-------------------------------------------------------+
 | Physical Format                     | Additional information                                |
 +=====================================+=======================================================+
@@ -73,11 +75,6 @@ With UForge you can create machine images in the following formats.
 +-------------------------------------+-------------------------------------------------------+
 | Cloud                               | Additional information                                |
 +=====================================+=======================================================+
-| Abiquo                              | Supported hardware types:                             |
-|                                     | 4 (ESXi >=3.x)                                        |
-|                                     | 7 (ESXi >=4.x)                                        |
-|                                     | 9 (ESXi >=5.x)                                        |
-+-------------------------------------+-------------------------------------------------------+
 | Amazon AWS                          | none                                                  |
 +-------------------------------------+-------------------------------------------------------+
 | Microsoft Azure                     | Ubuntu <= 12.04 not supported                         |
@@ -87,22 +84,9 @@ With UForge you can create machine images in the following formats.
 |                                     | CloudStack Citrix Xen (VHD)                           |
 |                                     | CloudStack KVM (QCOW2)                                |
 +-------------------------------------+-------------------------------------------------------+
-| Eucalyptus                          | Target formats:                                       |
-|                                     | Eucalyptus KVM                                        |
-|                                     | Eucalyptus Xen                                        |
-+-------------------------------------+-------------------------------------------------------+
-| Flexiant                            | Target formats:                                       |
-|                                     | Flexiant RAW - KVM/Xen                                |
-|                                     | Flexiant OVA - VMWare                                 |
-|                                     | Flexiant QCOW2 - KVM/Xen/VMWare                       |
-+-------------------------------------+-------------------------------------------------------+
 | Fujitsu K5                          | Red Hat Enterprise Linux not supported                |
 +-------------------------------------+-------------------------------------------------------+
 | Google Compute Engine               | none                                                  |
-+-------------------------------------+-------------------------------------------------------+
-| Nimbula                             | Target formats:                                       |
-|                                     | Nimbula ESX                                           |
-|                                     | Nimbula KVM                                           |
 +-------------------------------------+-------------------------------------------------------+
 | OpenStack                           | Target formats:                                       |
 |                                     | OpenStack QCOW2                                       |

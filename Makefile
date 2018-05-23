@@ -23,6 +23,7 @@ I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
 	@echo "  html       to make standalone HTML files"
+	@echo "  htmlwerror to make standalone HTML files. Treats all warnings as errors."
 	@echo "  dirhtml    to make HTML files named index.html in directories"
 	@echo "  singlehtml to make a single large HTML file"
 	@echo "  pickle     to make pickle files"
@@ -58,6 +59,12 @@ html:
 	cd apis/en && make html
 	cd end-user/en && make html
 	cd admin/en && make html
+
+.PHONY: htmlwerror
+htmlwerror:
+	cd apis/en && make htmlwerror
+	cd end-user/en && make htmlwerror
+	cd admin/en && make htmlwerror
 
 .PHONY: dirhtml
 dirhtml:

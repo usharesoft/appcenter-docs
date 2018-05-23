@@ -3,6 +3,23 @@
 Changelog
 =========
 
+3.8-4
+-----
+
+Release Date: 2018-05-23
+
+Bug Fixes
+~~~~~~~~~
+* 10385 Unable to boot a migrated RHEL5-like machine that was a guest VM in a Xen hypervisor
+* 10320 Unable to boot RHEL-like distributions using GRUB1 and kernel-xen
+* 10177 The generation fail during blackbox migration of RHEL5.3 on XenServer
+* 10088 Windows VirtIO drivers should not be injected to AWS and Azure images
+* 9928  /etc/sysconfig/kernel is modified after Blackbox and Whitebox migration
+* 9742  publishing to AWS sticks during security group creation
+* 9644  As a user, I would like to control the network bandwidth during Windows scan
+* 9595  Unable to migrate a Windows machine with Extended partition 
+
+
 3.8-3
 -----
 

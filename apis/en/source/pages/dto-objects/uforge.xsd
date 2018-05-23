@@ -56,6 +56,14 @@
 
     <xs:element name="bootScripts" type="BootScripts"/>
 
+    <xs:element name="btrfsStoragePool" type="BtrfsStoragePool"/>
+
+    <xs:element name="btrfsStoragePools" type="BtrfsStoragePools"/>
+
+    <xs:element name="btrfsSubvolume" type="BtrfsSubvolume"/>
+
+    <xs:element name="btrfsSubvolumes" type="BtrfsSubvolumes"/>
+
     <xs:element name="bundleRestriction" type="BundleRestriction"/>
 
     <xs:element name="bundleRestrictions" type="BundleRestrictions"/>
@@ -1649,6 +1657,194 @@
         </xs:complexContent>
     </xs:complexType>
 
+    <xs:complexType name="BtrfsStoragePool">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Describes a btrfs storage pool in a partitioning table. A volume group creates a pool of disk space from a
+                collection of disks or partitions. This volume group can then be partitioned via a logical volume.
+
+                .. note:: Only partitions and LVM logical volumes of type btrfs can be added to a btrfs storage pool
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObject">
+                <xs:sequence>
+                    <xs:element name="dataRaid" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the data RAID level of this btrfs storage pool</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="label" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the label of this btrfs storage pool</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="metadataRaid" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the metadata RAID level of this btrfs storage pool</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="partitionTableUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource of the partition table object (see :ref:`partitiontable-object`)</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="partitionsUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resources for each partition this btrfs storage pool uses</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="partitionUris" type="UriList" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of uri resources for each partition this btrfs storage pool uses</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="raidType" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the RAID type for data and metadata</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="dup"/>
+                                <xs:enumeration value="single"/>
+                                <xs:enumeration value="raid0"/>
+                                <xs:enumeration value="raid1"/>
+                                <xs:enumeration value="raid5"/>
+                                <xs:enumeration value="raid6"/>
+                                <xs:enumeration value="raid10"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="uri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource of this btrfs storage pool</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="BtrfsStoragePools">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Provides a list of :ref:`btrfsstoragepool-object` objects.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObjects">
+                <xs:sequence>
+                    <xs:element name="btrfsStoragePools" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of :ref:`btrfsstoragepool-object` objects</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="btrfsStoragePool" type="BtrfsStoragePool" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="BtrfsSubvolume">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Describes a btrfs subvolume in a partitioning table. A btrfs subvolume describes the way a ``btrfs storage pool`` should
+                be partitioned.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObject">
+                <xs:sequence>
+                    <xs:element name="btrfsStoragePoolUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource of the btrfs storage pool this subvolume uses</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="compress" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the compression method of this btrfs storage pool</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="compressType" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the compression method type</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="no"/>
+                                <xs:enumeration value="lzo"/>
+                                <xs:enumeration value="zlib"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="mpoint" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the mount point if no subvolumes</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="partitionTableUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource of the partition table object (see :ref:`partitiontable-object`)</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="uri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource of this btrfs subvolumes object</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="subvolumes" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of subvolumes (partitions), see :ref:`partition-object`</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="subvolume" type="Partition" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="subvolumesUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource to retrieve the list of subvolumes (partitions)</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="subvolumeUris" type="UriList" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of uri resources of the subvolume objects (partitions)</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="BtrfsSubvolumes">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Provides a list of :ref:`btrfssubvolume-object` objects.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObjects">
+                <xs:sequence>
+                    <xs:element name="btrfsSubvolumes" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of :ref:`btrfssubvolume-object` objects</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="btrfsSubvolume" type="BtrfsSubvolume" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
     <xs:complexType name="BundleRestriction">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
@@ -3162,7 +3358,7 @@
     <xs:complexType name="CredAccountOpenShift">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
-                Holds specific account information for a OpenShift Registry platform.
+                Holds specific account information for an OpenShift Registry platform.
             </xsd:documentation>
         </xsd:annotation>
         <xs:complexContent>
@@ -7407,6 +7603,11 @@
         <xs:complexContent>
             <xs:extension base="UForgeObject">
                 <xs:sequence>
+                    <xs:element name="defaultSubvolume" type="xs:boolean" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">boolean indicating whether this partition is default subvolume</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
                     <xs:element name="dumpLocation" type="xs:string" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the location of the partition's dump file</xsd:documentation>
@@ -7418,6 +7619,7 @@
                         </xsd:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
+                                <xs:enumeration value="btrfs"/>
                                 <xs:enumeration value="ext2"/>
                                 <xs:enumeration value="ext3"/>
                                 <xs:enumeration value="ext4"/>
@@ -7544,6 +7746,46 @@
         <xs:complexContent>
             <xs:extension base="UForgeObject">
                 <xs:sequence>
+                    <xs:element name="btrfsStoragePools" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of btrfs storage pools for this partition table (see :ref:`btrfsstoragepool-object`)</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="btrfsStoragePool" type="BtrfsStoragePool" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="btrfsStoragePoolsUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource to retrieve the btrfs storage pools in this partition table</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="btrfsStoragePoolUris" type="UriList" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of uri resources for each btrfs storage pool in this partition table</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="btrfsSubvolumes" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of btrfs subvolumes (partitions) in this partition table</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="btrfsSubvolume" type="BtrfsSubvolume" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="btrfsSubvolumesUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource to retrieve the btrfs subvolumes in this partition table</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="btrfsSubvolumeUris" type="UriList" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of uri resources for each btrfs subvolume in this partition table</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
                     <xs:element name="disks" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the list of disks this partition table has (see :ref:`disk-object`)</xsd:documentation>

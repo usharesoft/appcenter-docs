@@ -29,6 +29,10 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`blueprintsummary-object`
 	* :ref:`bootscript-object`
 	* :ref:`bootscripts-object`
+	* :ref:`btrfsstoragepool-object`
+	* :ref:`btrfsstoragepools-object`
+	* :ref:`btrfssubvolume-object`
+	* :ref:`btrfssubvolumes-object`
 	* :ref:`bundlerestriction-object`
 	* :ref:`bundlerestrictions-object`
 	* :ref:`categories-object`
@@ -251,6 +255,10 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     BlueprintSummary
     BootScript
     BootScripts
+    BtrfsStoragePool
+    BtrfsStoragePools
+    BtrfsSubvolume
+    BtrfsSubvolumes
     BundleRestriction
     BundleRestrictions
     Categories

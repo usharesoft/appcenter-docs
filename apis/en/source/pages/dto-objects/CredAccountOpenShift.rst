@@ -5,7 +5,7 @@
 CredAccountOpenShift
 ====================
 
-Holds specific account information for a OpenShift Registry platform.
+Holds specific account information for an OpenShift Registry platform.
 
 Attributes
 ~~~~~~~~~~

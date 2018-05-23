@@ -29,7 +29,7 @@ URI Parameters
 
 * ``uid`` (required): the id of the :ref:`user-object`
 * ``msid`` (required): the id of the :ref:`mySoftware-object`
-* ``said`` (required): the id of the :ref:`softwareartifact-object` to get
+* ``said`` (required): the id of the :ref:`softwareartifact-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

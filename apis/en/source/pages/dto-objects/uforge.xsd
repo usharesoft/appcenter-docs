@@ -3542,6 +3542,11 @@
                             <xsd:documentation xml:lang="en">the uri resource to retrieve all the os profile templates (see :ref:`distribprofile-object`)</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
+                    <xs:element name="baseRepositoriesUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource to retrieve all the distribution repositories (see :ref:`repository-object`)</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
                     <xs:element name="baseProhibitedFormatsUri" type="xs:anyURI" minOccurs="0"/>
                     <xs:element name="baseProhibitedTargetFormatsUri" type="xs:anyURI" minOccurs="0"/>
                     <xs:element name="baseServicesUri" type="xs:anyURI" minOccurs="0"/>

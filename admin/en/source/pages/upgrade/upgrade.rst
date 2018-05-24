@@ -33,8 +33,6 @@ The (optional) parameter <uforge install type> can take the values ``uforge-ee``
 
 .. note:: It is recommended to take a snapshot of all impacted VMs before starting the update procedure, in case you need to rollback.
 
-.. note:: UForge 3.8 fp5 onwards no longer supports Abiquo, Eucalyptus, Flexiant and Nimbula. When upgrading UForge all user images, published images, credential accounts and migrations using these formats will be deleted.
-
 To update the platform, use the "yum" command-line tool as follows:
 
 .. note:: Running ``yum update`` may also update OS packages from CentOS official repository. You should accept all the updates because UForge is qualified based on the latest packages.

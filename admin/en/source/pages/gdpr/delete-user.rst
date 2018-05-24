@@ -88,6 +88,7 @@ UForge sorts certain credential information. The following may or may not exist 
 	* SSH key. Use ``sshKey_delete`` to delete an ssh key from the specified user ssh keys.
  
 Deleting a User from a Workspace
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A user may be part of user workspaces. In order to remove a user from a workspace, use ``workspaceMember_delete``
 

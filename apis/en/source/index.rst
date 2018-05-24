@@ -1,5 +1,4 @@
 .. _apis-index:
-
 .. Copyright 2018 FUJITSU LIMITED
 
 Welcome to UForge AppCenter REST APIs Documentation
@@ -19,6 +18,7 @@ This documentation provides a description of UForge AppCenter RESTful interface.
     pages/applianceinstallprofilenic/overview
     pages/applianceinstallusersandgroups/overview
     pages/applianceosprofile/overview
+    pages/appliancepartitiontable/overview
     pages/appliancepartitiontabledisk/overview
     pages/appliancepartitiontablediskpartition/overview
     pages/appliancepartitiontablelogicalgroup/overview
@@ -33,6 +33,7 @@ This documentation provides a description of UForge AppCenter RESTful interface.
     pages/machinescan/overview
     pages/machinescanimport/overview
     pages/machinescaninstance/overview
+    pages/misc/overview
     pages/os/overview
     pages/osmilestone/overview
     pages/ostemplate/overview

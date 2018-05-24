@@ -1,22 +1,22 @@
 .. Copyright 2018 FUJITSU LIMITED
 
-.. _partitionTableLogicalGroup-create:
+.. _partitionTableBtrfsStoragePool-create:
 
-partitionTableLogicalGroup_create
----------------------------------
+partitionTableBtrfsStoragePool_create
+-------------------------------------
 
-.. function:: POST users/{uid}/appliances/{aid}/installProfile/{ipid}/pt/{ptid}/groups
+.. function:: POST users/{uid}/appliances/{aid}/installProfile/{ipid}/pt/{ptid}/pools
 
 .. sidebar:: Summary
 
 	* Method: ``POST``
 	* Response Code: ``201``
 	* Response Formats: ``application/xml`` ``application/json``
-	* Since: ``UForge 2.1``
+	* Since: ``UForge 3.8.5``
 
-Creates a new logical group in a partitioning table. 
+Creates a new btrfs storage pool in a partitioning table. 
 
-Please refer to :ref:`logicalgroup-object` for a complete list of all the ``logical group`` attributes.
+Please refer to :ref:`btrfsstoragepool-object` for a complete list of all the ``btrfs storage pool`` attributes.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -34,14 +34,14 @@ URI Parameters
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A :ref:`logicalGroup-object` object
+A :ref:`btrfsStoragePool-object` object
 
 Example Request
 ~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/apiusers/{uid}/appliances/{aid}/installProfile/{ipid}/pt/{ptid}/groups" -X POST \
+	curl "https://uforge.example.com/apiusers/{uid}/appliances/{aid}/installProfile/{ipid}/pt/{ptid}/pools" -X POST \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"-H "Content-type: application/xml" --data-binary "@representation.xml"
 
 Example of representation.xml content (the request body):
@@ -55,11 +55,9 @@ Example of representation.xml content (the request body):
 	 * :ref:`appliance-object`
 	 * :ref:`appliancepartitiontabledisk-api-resources`
 	 * :ref:`appliancepartitiontablediskpartition-api-resources`
-	 * :ref:`appliancepartitiontablelogicalvolume-api-resources`
-	 * :ref:`logicalgroup-object`
-	 * :ref:`partitionTableLogicalGroup-delete`
-	 * :ref:`partitionTableLogicalGroup-deleteAll`
-	 * :ref:`partitionTableLogicalGroup-get`
-	 * :ref:`partitionTableLogicalGroup-getAll`
-	 * :ref:`partitionTableLogicalGroup-update`
+	 * :ref:`btrfsstoragepool-object`
+	 * :ref:`partitionTableBtrfsStoragePool-delete`
+	 * :ref:`partitionTableBtrfsStoragePool-deleteAll`
+	 * :ref:`partitionTableBtrfsStoragePool-getAll`
+	 * :ref:`partitionTableBtrfsStoragePool-update`
 	 * :ref:`partitiontable-object`

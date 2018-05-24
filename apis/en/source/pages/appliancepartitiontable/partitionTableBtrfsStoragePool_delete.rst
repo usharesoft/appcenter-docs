@@ -1,20 +1,20 @@
 .. Copyright 2018 FUJITSU LIMITED
 
-.. _partitionTableLogicalVolume-deleteAll:
+.. _partitionTableBtrfsStoragePool-delete:
 
-partitionTableLogicalVolume_deleteAll
+partitionTableBtrfsStoragePool_delete
 -------------------------------------
 
-.. function:: DELETE users/{uid}/appliances/{aid}/installProfile/{ipid}/pt/{ptid}/volumes
+.. function:: DELETE users/{uid}/appliances/{aid}/installProfile/{ipid}/pt/{ptid}/pools/{plid}
 
 .. sidebar:: Summary
 
 	* Method: ``DELETE``
 	* Response Code: ``204 / 200``
 	* Response Formats: 
-	* Since: ``UForge 2.1``
+	* Since: ``UForge 3.8.5``
 
-Removes all the logical volumes from a partitioning table.
+Removes a btrfs storage pool from a partitioning table.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -25,7 +25,8 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the user name (login name) of the :ref:`user-object` that created the appliance
+* ``uid`` (required): the user name (login name) of the :ref:`user-object` that has created the appliance
+* ``plid`` (required): the id of the :ref:`btrfsstoragepool-object`
 * ``ptid`` (required): the id of the :ref:`partitiontable-object`
 * ``aid`` (required): the id of the :ref:`appliance-object`
 
@@ -39,7 +40,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/apiusers/{uid}/appliances/{aid}/installProfile/{ipid}/pt/{ptid}/volumes" -X DELETE \
+	curl "https://uforge.example.com/apiusers/{uid}/appliances/{aid}/installProfile/{ipid}/pt/{ptid}/pools/{plid}" -X DELETE \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::
@@ -47,11 +48,9 @@ Example Request
 	 * :ref:`appliance-object`
 	 * :ref:`appliancepartitiontabledisk-api-resources`
 	 * :ref:`appliancepartitiontablediskpartition-api-resources`
-	 * :ref:`appliancepartitiontablelogicalgroup-api-resources`
-	 * :ref:`logicalvolume-object`
-	 * :ref:`partitionTableLogicalVolume-create`
-	 * :ref:`partitionTableLogicalVolume-delete`
-	 * :ref:`partitionTableLogicalVolume-get`
-	 * :ref:`partitionTableLogicalVolume-getAll`
-	 * :ref:`partitionTableLogicalVolume-update`
+	 * :ref:`btrfsstoragepool-object`
+	 * :ref:`partitionTableBtrfsStoragePool-create`
+	 * :ref:`partitionTableBtrfsStoragePool-deleteAll`
+	 * :ref:`partitionTableBtrfsStoragePool-getAll`
+	 * :ref:`partitionTableBtrfsStoragePool-update`
 	 * :ref:`partitiontable-object`

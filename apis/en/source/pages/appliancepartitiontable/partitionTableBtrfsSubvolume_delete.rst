@@ -1,20 +1,20 @@
 .. Copyright 2018 FUJITSU LIMITED
 
-.. _partitionTableLogicalVolume-delete:
+.. _partitionTableBtrfsSubvolume-delete:
 
-partitionTableLogicalVolume_delete
-----------------------------------
+partitionTableBtrfsSubvolume_delete
+-----------------------------------
 
-.. function:: DELETE users/{uid}/appliances/{aid}/installProfile/{ipid}/pt/{ptid}/volumes/{vid}
+.. function:: DELETE users/{uid}/appliances/{aid}/installProfile/{ipid}/pt/{ptid}/subvolumes/{svid}
 
 .. sidebar:: Summary
 
 	* Method: ``DELETE``
 	* Response Code: ``204 / 200``
 	* Response Formats: 
-	* Since: ``UForge 2.1``
+	* Since: ``UForge 3.8.5``
 
-Removes a logical volume from a partitioning table.
+Removes a btrfs subvolume from a partitioning table.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -25,8 +25,8 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``vid`` (required): the id of the :ref:`logicalvolume-object`
 * ``uid`` (required): the user name (login name) of the :ref:`user-object` that created the appliance
+* ``svid`` (required): the id of the :ref:`btrfssubvolume-object`
 * ``ptid`` (required): the id of the :ref:`partitiontable-object`
 * ``aid`` (required): the id of the :ref:`appliance-object`
 
@@ -40,7 +40,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/apiusers/{uid}/appliances/{aid}/installProfile/{ipid}/pt/{ptid}/volumes/{vid}" -X DELETE \
+	curl "https://uforge.example.com/apiusers/{uid}/appliances/{aid}/installProfile/{ipid}/pt/{ptid}/subvolumes/{svid}" -X DELETE \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::
@@ -48,11 +48,10 @@ Example Request
 	 * :ref:`appliance-object`
 	 * :ref:`appliancepartitiontabledisk-api-resources`
 	 * :ref:`appliancepartitiontablediskpartition-api-resources`
-	 * :ref:`appliancepartitiontablelogicalgroup-api-resources`
-	 * :ref:`logicalvolume-object`
-	 * :ref:`partitionTableLogicalVolume-create`
-	 * :ref:`partitionTableLogicalVolume-deleteAll`
-	 * :ref:`partitionTableLogicalVolume-get`
-	 * :ref:`partitionTableLogicalVolume-getAll`
-	 * :ref:`partitionTableLogicalVolume-update`
+	 * :ref:`btrfssubvolume-object`
+	 * :ref:`partitionTableBtrfsSubvolume-create`
+	 * :ref:`partitionTableBtrfsSubvolume-deleteAll`
+	 * :ref:`partitionTableBtrfsSubvolume-get`
+	 * :ref:`partitionTableBtrfsSubvolume-getAll`
+	 * :ref:`partitionTableBtrfsSubvolume-update`
 	 * :ref:`partitiontable-object`

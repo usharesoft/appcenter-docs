@@ -1,22 +1,22 @@
 .. Copyright 2018 FUJITSU LIMITED
 
-.. _partitionTableLogicalVolume-getAll:
+.. _partitionTableBtrfsSubvolume-getAll:
 
-partitionTableLogicalVolume_getAll
-----------------------------------
+partitionTableBtrfsSubvolume_getAll
+-----------------------------------
 
-.. function:: GET users/{uid}/appliances/{aid}/installProfile/{ipid}/pt/{ptid}/volumes
+.. function:: GET users/{uid}/appliances/{aid}/installProfile/{ipid}/pt/{ptid}/subvolumes
 
 .. sidebar:: Summary
 
 	* Method: ``GET``
 	* Response Code: ``200 / 304``
 	* Response Formats: ``application/xml`` ``application/json``
-	* Since: ``UForge 2.1``
+	* Since: ``UForge 3.8.5``
 
-Retrieves all the logical volumes for a partitioning table. 
+Retrieves all the btrfs subvolumes for a partitioning table. 
 
-A list of :ref:`logicalvolume-object` objects are returned.
+A list of :ref:`btrfssubvolume-object` objects are returned.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -41,7 +41,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/apiusers/{uid}/appliances/{aid}/installProfile/{ipid}/pt/{ptid}/volumes" -X GET \
+	curl "https://uforge.example.com/apiusers/{uid}/appliances/{aid}/installProfile/{ipid}/pt/{ptid}/subvolumes" -X GET \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::
@@ -49,11 +49,10 @@ Example Request
 	 * :ref:`appliance-object`
 	 * :ref:`appliancepartitiontabledisk-api-resources`
 	 * :ref:`appliancepartitiontablediskpartition-api-resources`
-	 * :ref:`appliancepartitiontablelogicalgroup-api-resources`
-	 * :ref:`logicalvolume-object`
-	 * :ref:`partitionTableLogicalVolume-create`
-	 * :ref:`partitionTableLogicalVolume-delete`
-	 * :ref:`partitionTableLogicalVolume-deleteAll`
-	 * :ref:`partitionTableLogicalVolume-get`
-	 * :ref:`partitionTableLogicalVolume-update`
+	 * :ref:`btrfssubvolume-object`
+	 * :ref:`partitionTableBtrfsSubvolume-create`
+	 * :ref:`partitionTableBtrfsSubvolume-delete`
+	 * :ref:`partitionTableBtrfsSubvolume-deleteAll`
+	 * :ref:`partitionTableBtrfsSubvolume-get`
+	 * :ref:`partitionTableBtrfsSubvolume-update`
 	 * :ref:`partitiontable-object`

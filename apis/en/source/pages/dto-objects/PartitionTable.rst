@@ -12,6 +12,12 @@ Attributes
 
 The list of attributes for ``partitionTable`` are:
 
+	* ``btrfsStoragePools``: the list of btrfs storage pools for this partition table (see :ref:`btrfsstoragepool-object`)
+	* ``btrfsStoragePoolsUri`` (anyURI): the uri resource to retrieve the btrfs storage pools in this partition table
+	* ``btrfsStoragePoolUris`` (:ref:`UriList-object`): the list of uri resources for each btrfs storage pool in this partition table
+	* ``btrfsSubvolumes``: the list of btrfs subvolumes (partitions) in this partition table
+	* ``btrfsSubvolumesUri`` (anyURI): the uri resource to retrieve the btrfs subvolumes in this partition table
+	* ``btrfsSubvolumeUris`` (:ref:`UriList-object`): the list of uri resources for each btrfs subvolume in this partition table
 	* ``disks``: the list of disks this partition table has (see :ref:`disk-object`)
 	* ``disksUri`` (anyURI): the uri resource to retrieve the disks for this partition table
 	* ``diskUris`` (:ref:`UriList-object`): the list of uris for each disk of the partition table

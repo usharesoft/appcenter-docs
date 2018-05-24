@@ -8,7 +8,6 @@ Supported Machine Image Types
 
 With UForge you can create machine images in the following formats.
 
-.. note:: UForge 3.8 fp5 onwards no longer supports Abiquo, Eucalyptus, Flexiant and Nimbula. When upgrading UForge all images, published images, credential accounts and migrations using these formats will be deleted.
 
 +-------------------------------------+-------------------------------------------------------+
 | Physical Format                     | Additional information                                |

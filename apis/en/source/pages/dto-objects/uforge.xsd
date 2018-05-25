@@ -2754,6 +2754,11 @@
                             <xsd:documentation xml:lang="en">the target platform (see :ref:`targetplatform-object`) this cloud account is for</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
+                    <xs:element name="secretsMissing" type="xs:boolean" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">a boolean flag to indicate that the secrets of this credAccount are missing and left empty in this object</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>

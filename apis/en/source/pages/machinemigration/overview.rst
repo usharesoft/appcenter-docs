@@ -6,6 +6,7 @@ Machine Migration API Resources
 ===============================
 
 	* :ref:`migrationStatus-get`: Retrieve the current status of a Migration
+	* :ref:`migration-cancel`: Cancel a running Migration
 	* :ref:`migration-create`: Creates a migration
 	* :ref:`migration-delete`: Delete a finished migration
 	* :ref:`migration-deleteAll`: Delete all finished migrations created by a particular user
@@ -17,6 +18,7 @@ Machine Migration API Resources
     :hidden:
 
     migrationStatus_get
+    migration_cancel
     migration_create
     migration_delete
     migration_deleteAll

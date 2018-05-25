@@ -27,7 +27,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the id of the User
+* ``uid`` (required): the user name (login name) of the :ref:`user-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -57,9 +57,9 @@ Example of representation.xml content (the request body):
 				<minCores>2</minCores>
 				<minMemory>512</minMemory>
 				<config>
-                 brooklyn.config:
-                   http.port: 80
-              </config>
+ brooklyn.config:
+ http.port: 80
+ </config>
 				<applianceSummary>
 					<uri>users/guest/appliance/204</uri>
 				</applianceSummary>

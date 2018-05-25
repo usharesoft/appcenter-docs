@@ -27,7 +27,7 @@ URI Parameters
 
 * ``uid`` (required): the user name (login name) of the :ref:`user-object` that has created the appliance
 * ``ipid`` (required): the id of the :ref:`installprofile-object`
-* ``osgid`` (required): the id of the :ref:`osgroup-object` to delete
+* ``osgid`` (required): the id of the :ref:`osgroup-object`
 * ``aid`` (required): the id of the :ref:`appliance-object`
 
 HTTP Request Body Parameters

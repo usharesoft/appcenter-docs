@@ -25,7 +25,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``id`` (required): the id of the :ref:`org-object`
+* ``id`` (required): the id of the :ref:`distribution-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

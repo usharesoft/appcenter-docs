@@ -26,7 +26,7 @@ URI Parameters
 ~~~~~~~~~~~~~~
 
 * ``uid`` (required): the user name (login name) of the :ref:`user-object`
-* ``akid`` (required): the id of the :ref:`apikeypair-object`
+* ``akid`` (required): the id of the :ref:`apikeypair-object` to delete
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

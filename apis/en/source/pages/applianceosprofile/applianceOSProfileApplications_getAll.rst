@@ -25,7 +25,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the user name (login name) of the :ref:`user-object`
+* ``uid`` (required): the user name (login name) of the :ref:`user-object` that has created the appliance
 * ``osid`` (required): the id of the :ref:`windowsprofile-object`
 * ``aid`` (required): the id of the :ref:`appliance-object`
 

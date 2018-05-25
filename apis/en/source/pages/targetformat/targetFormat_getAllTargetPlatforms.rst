@@ -28,7 +28,7 @@ URI Parameters
 ~~~~~~~~~~~~~~
 
 * ``oid`` (required): the id of the :ref:`org-object`
-* ``tfid`` (required): the id of the :ref:`targetformat-object`
+* ``tfid`` (required): the id of the :ref:`targetformat-object` to add
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

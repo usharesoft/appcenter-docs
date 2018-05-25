@@ -25,7 +25,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the user name (login name) of the :ref:`user-object`
+* ``uid`` (required): the user name (login name) of the :ref:`user-object` to add or update
 * ``oid`` (required): the id of the :ref:`org-object`
 
 HTTP Request Body Parameters

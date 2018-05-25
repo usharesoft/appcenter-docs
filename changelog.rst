@@ -11,6 +11,7 @@ Release Date: 2018-07-09
 New Features
 ~~~~~~~~~~~~
 * Allow users to cancel running migrations
+* API user can now publish to OpenShift Online from a Docker image (compatible with Hammr CLI)
 * BTRFS filesystem support
 
 3.8.fp4

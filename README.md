@@ -27,6 +27,28 @@ The html files are in the build directory for each sub-project, for example, the
 
 You can also build each guide individually, note though the end user guide and admin guide depend on the API guide.
 
+### Building in a separate virtualenv
+
+Launch the [venv.sh](blob/master/venv.sh) script to prepare the virtualenv or to activate it:
+
+    $ source ./venv.sh
+    
+Compile the docs with the `make-doc` function:
+
+    $ make-doc apis
+    $ make-doc end-user
+    $ make-doc admin
+
+Launch a local web server to view the compiled doc with the `serve-doc` function:
+
+    $ serve-doc apis
+    $ serve-doc end-user
+    $ serve-doc admin
+
+Terminate the virtual env with `deactivate` command:
+
+    $ deactivate
+
 ### Contributions Welcome!
 
 If you find a typo or you feel like you can improve the content of the documentation, we welcome contributions and comments. Feel free to open issues or pull requests like any normal GitHub project.

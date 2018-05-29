@@ -89,6 +89,8 @@ When migrating Linux-based systems, UForge scans the filesystem.  In certain cas
 
 .. note:: On multi-node UForge platforms, this modification must be done on the compute nodes.
 
+.. note:: If you modify the amount of memory dedicated to the Java Virtual Machine in the ``webserver_uforge_services`` section of the ``services_conf.json`` file, you must restart Tomcat webserver in order for the modification to be effective.
+
 .. code-block:: javascript
 
     "create_vm": {

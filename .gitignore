@@ -2,4 +2,4 @@ static
 build
 
 .DS_Store
-
+.venv

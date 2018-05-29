@@ -60,7 +60,7 @@ To create a Windows Appliance:
 
 	8. Optionally you can add partitions.
 		a. Click on ``Partitioning`` and select ``Advanced Partitioning``.
-		b. Click on the green + sign at the top.
+		b. Click on the + sign at the top right.
 		c. You can modify the name and partition type
 		d. Select the filesystem to ``ntfs`` and mount point to ``D:`` (for example).
 		e. Enter the size. The install disk should be 12 Gb for core versions and not less than 32Gb for the full version.

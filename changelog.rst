@@ -14,6 +14,10 @@ New Features
 * API user can now publish to OpenShift Online from a Docker image (compatible with Hammr CLI)
 * BTRFS filesystem support
 
+Deprecated Features
+~~~~~~~~~~~~~~~~~~~
+* Remove support of following formats: Abiquo, Eucalyptus, Flexiant, Nimbula
+
 3.8.fp4
 -------
 

@@ -25,7 +25,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the id of the :ref:`user-object`
+* ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``bpid`` (required): the id of the :ref:`blueprint-object`
 
 HTTP Request Body Parameters

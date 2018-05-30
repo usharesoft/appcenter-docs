@@ -44,15 +44,11 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`companies-object`
 	* :ref:`company-object`
 	* :ref:`credaccount-object`
-	* :ref:`credaccountabiquo-object`
 	* :ref:`credaccountaws-object`
 	* :ref:`credaccountazure-object`
 	* :ref:`credaccountcert-object`
 	* :ref:`credaccountcloudstack-object`
-	* :ref:`credaccounteuca-object`
-	* :ref:`credaccountflexiant-object`
 	* :ref:`credaccountgoogle-object`
-	* :ref:`credaccountnimbula-object`
 	* :ref:`credaccountopenstack-object`
 	* :ref:`credaccountoutscale-object`
 	* :ref:`credaccounts-object`
@@ -135,14 +131,10 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`projects-object`
 	* :ref:`publicationstage-object`
 	* :ref:`publishimage-object`
-	* :ref:`publishimageabiquo-object`
 	* :ref:`publishimageaws-object`
 	* :ref:`publishimageazure-object`
 	* :ref:`publishimagecloudstack-object`
-	* :ref:`publishimageeuca-object`
-	* :ref:`publishimageflexiant-object`
 	* :ref:`publishimagegoogle-object`
-	* :ref:`publishimagenimbula-object`
 	* :ref:`publishimageopenstack-object`
 	* :ref:`publishimageoutscale-object`
 	* :ref:`publishimagesusecloud-object`
@@ -270,15 +262,11 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     Companies
     Company
     CredAccount
-    CredAccountAbiquo
     CredAccountAws
     CredAccountAzure
     CredAccountCert
     CredAccountCloudStack
-    CredAccountEuca
-    CredAccountFlexiant
     CredAccountGoogle
-    CredAccountNimbula
     CredAccountOpenStack
     CredAccountOutscale
     CredAccounts
@@ -361,14 +349,10 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     Projects
     PublicationStage
     PublishImage
-    PublishImageAbiquo
     PublishImageAws
     PublishImageAzure
     PublishImageCloudStack
-    PublishImageEuca
-    PublishImageFlexiant
     PublishImageGoogle
-    PublishImageNimbula
     PublishImageOpenStack
     PublishImageOutscale
     PublishImageSuseCloud

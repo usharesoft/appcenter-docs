@@ -86,3 +86,21 @@ You can choose to hide the option that allows the user to reset the password fro
 This is useful if you have your own authentication mechanism and do not want UForge users to be able to change the password in UForge, since their credentials are managed somewhere else.
 
 .. note:: When setting this value to ``false``, this also hides password management for the user on the ``User Profile`` section of the user interface.
+
+Modifying or Hiding the Opt In Message for Sign Up
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+As part of GDPR, you require to inform your users what information you store and how that information is used (stated in your privacy policy and terms of use).  The sign up page provides an opt-in checkbox and message.  You can change the default message by updating the ``signUpOptInText`` in section ``<c:client>``:
+
+ .. code-block:: xml 
+
+	<c:signUpOptInText>I accept the Terms of Use and to receive emails regarding upgrades and maintenance.</c:signUpOptInText>
+
+You may also hide this message by updating the ``showOptIn`` attribute in the same section to ``false``.
+
+.. code-block:: xml 
+
+	<c:showOptIn>true</c:showOptIn>
+
+
+

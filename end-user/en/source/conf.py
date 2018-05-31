@@ -46,6 +46,10 @@ else:
         'rst2pdf.pdfbuilder',
     ]
 
+# Add custom stylesheet
+def setup(app):
+    app.add_stylesheet('css/extra.css')
+    
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 

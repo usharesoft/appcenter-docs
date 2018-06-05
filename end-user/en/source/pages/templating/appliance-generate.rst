@@ -7,6 +7,8 @@ Generating a Machine Image
 
 Once an appliance template has been created, you can generate a machine image that packages the stack to run on a particular virtual, cloud, container or physical environment. For a complete list of supported machine image formats, refer to :ref:`supported-image-formats`.
 
+.. note:: If you want to generate a K5 image or an OpenStack image, the appliance partition should contain only 1 disk.
+
 To generate a machine image:
 	1. Go to the ``Apps`` tab.
 	2. Select the appliance from the ``Appliance Library``. 

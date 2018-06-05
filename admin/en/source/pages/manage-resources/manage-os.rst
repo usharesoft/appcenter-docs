@@ -80,8 +80,6 @@ This must be done for each version of an OS. For example CentOS 6.5 i386. It is 
 
 For example, to add CentOS 6.5 i386 to the default org:
 
-In order to add the OS to a specific distribution, you will need to specify ``--org <value>`` for each of the commands in the steps below.
-
 	1. Add the distribution to the organization, using the official name and version.
 
 	.. code-block :: shell
@@ -102,7 +100,7 @@ In order to add the OS to a specific distribution, you will need to specify ``--
 		+------+----------------+------------+---------------------------------------------+-------+
 		|  355 |                | CentOSplus | http://vault.centos.org/6.5/centosplus/i386 | RPM   |               
 
-	3. Attach the repository to the distribution
+	3. Attach the repository to the distribution.
 
 	.. code-block :: shell
 

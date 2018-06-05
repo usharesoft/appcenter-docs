@@ -7,8 +7,6 @@ Managing Cloud Accounts
 
 In order to publish an image to a cloud using UForge AppCenter, you will need to add your cloud credentials to UForge. You must have a cloud account prior to setting up your credentials on the platform. Have all the information for your cloud account on hand before starting.
 
-		.. note:: If you are an Amazon IAM user you will need to generate an X.509 Certificate following `these instructions <http://www.dowdandassociates.com/blog/content/howto-generate-an-x-dot-509-certificate-for-an-amazon-iam-user/>`_ prior to creating your Amazon cloud account on UForge.
-
 	1. Go to the ``Credentials`` tab in the left-hand sidebar.
 	2. Go to ``Cloud Account``.
 	3. Select the type of account you want to create from the ``Add account`` drop-down menu at the top right. 

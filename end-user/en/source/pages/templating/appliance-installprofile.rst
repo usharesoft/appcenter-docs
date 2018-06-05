@@ -17,6 +17,9 @@ You can define the following as part of a Linux-based appliance install profile:
 * ``Network``: You can set the internet settings. The default is ``set automatically``. See :ref:`appliance-multinic`
 * ``Security``: You can activate or deactivate the firewall present in the filesystem when launching the appliance (regardless of whether the firewall is iptables or other). Firewall is set to ``Off`` by default. You can also set the SELinux configuration here.
 * ``Partitioning``: You can modify the disk and swap size for the automatic set up, select ``ask during install``, or set up ``Advanced Partitioning`` (for several disks). For more information see :ref:`appliance-install-profile-partitioning`.
+
+	.. note:: If you want to generate a K5 image or an OpenStack image, the appliance partition should contain only 1 disk.
+
 * ``Kernel``. You can add kernel parameters by clicking plus, entering data and click ``save``.
 * ``Keyboard``: default is ``ask during installation``. You can choose ``set automatically`` and select the keyboard from the drop down menu.
 * ``Licenses``: default is ``accept licenses during installation``.

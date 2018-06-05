@@ -28,11 +28,8 @@ To hide a format completely, then update the ``<t:visible>`` tag to ``false``.
 Restricting the Cloud Accounts
 ------------------------------
 
-<<<<<<< HEAD
-When using the UForge Portal, all the cloud account types are displayed. You can restrict the cloud accounts that are visible by updating the config.xml file of the UI.  To hide a specific cloud format, find the ``<t:account`` section of the account type you want to hide, then set the ``<t:visible>`` tag to ``false``.  For example, to remove the CloudStack account type, the following changes should be made to the configuration file:
-=======
-When using the UForge Portal, all the cloud account types are displayed. You can restrict the cloud accounts that are visible by updating the ``/var/opt/UShareSoft/uforge-client/gwt/uforge/templates/forge-config.xml`` file of the UI.  To hide a specific cloud format, find the ``<t:account`` section of the account type you want to hide, then set the ``<t:visible>`` tag to ``false``.  For example, to remove the CloudStack account type, the following changes should be made to the configuration file:
->>>>>>> 4baed941e1ae13f7c504cf5f5795eaa01b0e21a1
+When using the UForge Portal, all the cloud account types to which the user has access are displayed. You can restrict the cloud accounts that are visible by updating the ``/var/opt/UShareSoft/uforge-client/gwt/uforge/templates/forge-config.xml`` file of the UI.  To hide a specific cloud format, find the ``<t:account`` section of the account type you want to hide, then set the ``<t:visible>`` tag to ``false``.  For example, to remove the CloudStack account type, the following changes should be made to the configuration file:
+
 
 .. code-block:: xml 
 

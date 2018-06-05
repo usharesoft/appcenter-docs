@@ -94,7 +94,7 @@ As part of GDPR, you require to inform your users what information you store and
 
  .. code-block:: xml 
 
-	<c:signUpOptInText>I accept the Terms of Use and to receive emails regarding upgrades and maintenance.</c:signUpOptInText>
+	<c:signUpOptInText>I accept the Terms of Use and agree to receive emails regarding upgrades and maintenance.</c:signUpOptInText>
 
 You may also hide this message by updating the ``showOptIn`` attribute in the same section to ``false``.
 

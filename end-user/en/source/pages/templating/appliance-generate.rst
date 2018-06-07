@@ -58,7 +58,7 @@ To generate a machine image:
 	2. Select the appliance from the ``Appliance Library``. 
 	3. Click on the ``generate`` button at the top right to display all possible image formats which can be generated. 
 	4. Choose ``Container``, then ``Docker`` image format. 
-	5. Enter the Docker entrypoint in exec form. For example ``/user/sbin/httpd -dforeground``.
+	5. Enter the Docker entrypoint in exec form. For example ``["/usr/sbin/httpd", "-DFOREGROUND"]``.
 	6. Click the ``generate`` button to launch a generation in UForge for this appliance template. 
 	7. Once the generation is complete, the Docker image will be listed in your library under ``Machine Images``.
 	8. The following pop-up will be displayed if you click on the download icon.

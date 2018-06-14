@@ -24,7 +24,7 @@ As part of this transformation process, the scan information is mapped to one or
 
 .. warning:: All other information found in the scan is not used (reset) and the ``Install Profile`` default information is used.  This includes:
 
-	* Networking information (IP address).  Furthermore, appliance templates do not support multiple NICs, therefore only the first NIC is taken into consideration.
+	* Networking information (IP address).  In the case of Windows systems, or with NIC cards managed with NetworkManager, only the first NIC is taken into consideration.
 	* SSH keys.  You will need to manually add the ssh keys to the install profile.  
 
 .. warning:: Currently, UForge is not able to migrate the Yum repository GPG keys. This means that the user will have to accept the repository GPG key when the user installs or updates a package. The user will have to do this only once per repository.

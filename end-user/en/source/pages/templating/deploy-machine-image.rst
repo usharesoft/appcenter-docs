@@ -53,15 +53,15 @@ For Amazon, only full accounts can be used, trial accounts are not supported for
 
 	.. note:: If you click on the delete (garbage) icon, this will stop your deployed instance and remove it from your cloud.
 
-	.. note:: For Windows images, if you have customized firewall settings then the following TCP ports need to be opened: 3389 (RDP) and 5985 (WinRM) 
+	.. note:: For Windows images, if you have customized firewall settings then the following TCP ports need to be opened: 3389 (RDP) and 5985 (WinRM).
+
+	.. note:: For Windows images, it is recommended to make sure that there are no pending Microsoft updates when you scan the source system for deployment.
 
 	.. note:: For all deployed Windows virtual machines, if WinRM service is not enabled by default, then it will be activated during the deployment process.
 
-    .. note:: For Windows images, it is recommended to make sure that there are no pending Microsoft updates when you scan the source system for deployment.
-
 	.. warning:: Terminating an OpenStack deployment may fail due to `a known issue in AMP <https://issues.apache.org/jira/browse/JCLOUDS-1318>`_. Click again on the delete (garbage) icon to work around the issue.
 
-    .. warning:: For Windows Server 2008R2, you need to upgrade WinRM to 3.0 on the source machine before scanning.
+	.. warning:: For Windows Server 2008R2, you need to upgrade WinRM to 3.0 on the source machine before scanning.
 
 .. _list-deployment:
 

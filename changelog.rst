@@ -20,6 +20,10 @@ Deprecated Features
 ~~~~~~~~~~~~~~~~~~~
 * Remove support of following formats: Abiquo, Eucalyptus, Flexiant, Nimbula
 
+Enhancements
+~~~~~~~~~~~~
+* The uforge-migrate binary displays now the progress of each phase.
+
 3.8.fp4
 -------
 

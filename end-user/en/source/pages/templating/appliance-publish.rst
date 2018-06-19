@@ -50,7 +50,7 @@ In order to publish a machine image to a cloud environment or container, you mus
 
 	.. note:: When you publish an image to VMware, the result will be a template and not a virtual machine.
 
-	.. note:: When you publish an image to OpenShift Online, you need to configure your image entrypoint in order to run it. Go to you OpenShift Online platform, Applications tab then Deployments. Select your deployment, and go to Actions -> Edit YAML. In the section ``spec - containers - image``, add the following lines:
+	.. note:: When you publish an image to OpenShift Online or OpenShift Origin, you need to configure your image entrypoint in order to run it. Go to you OpenShift platform, Applications tab then Deployments. Select your deployment, and go to Actions -> Edit YAML. In the section ``spec - containers - image``, add the following lines:
 
  		``command:``
 			``- sh``

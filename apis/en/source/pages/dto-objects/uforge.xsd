@@ -4516,6 +4516,11 @@
                             <xsd:documentation xml:lang="en">a boolean flag to enforce checking dependencies during the generation of this machine image</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
+                    <xs:element name="entrypoint" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the Entrypoint of a Docker machine image</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>

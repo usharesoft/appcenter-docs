@@ -48,13 +48,13 @@ To update the platform, use the "yum" command-line tool as follows:
 
 		.. code-block:: shell
 
-			$ service squid status
+			$ systemctl status squid
 
 
 		If squid is stopped, run the following command-line
 
 		.. code-block:: shell
 
-			$ service squid start
+			$ systemctl start squid
 
 .. note:: When you are upgrading from UForge 3.8.FP3 or an earlier version there is an additional step to be done manually if you are in a multi-node environment. You have to copy the file ``/etc/UShareSoft/vault/root_token`` from database node to web service node. This file will be used to configure access to the secret manager.

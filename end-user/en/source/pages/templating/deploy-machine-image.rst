@@ -37,7 +37,7 @@ For Amazon, only full accounts can be used, trial accounts are not supported for
 
 	8. In the deploy view, enter the name of the deployment. Click on ``deploy``. This will connect to cloud platform and launch your machine image instance. Once deployed, a green button will appear under the ``Status`` column.
 
-    For Linux images, you will need to input the ``Instance Name``, ``Minimal number of cores`` and ``Minumal RAM`` values
+    For Linux images, you will need to input the ``Instance Name``, ``Minimal number of cores`` and ``Minimal RAM`` values
 
 		.. image:: /images/machine-image-deploy-popup-linux.png
 
@@ -53,15 +53,15 @@ For Amazon, only full accounts can be used, trial accounts are not supported for
 
 	.. note:: If you click on the delete (garbage) icon, this will stop your deployed instance and remove it from your cloud.
 
-	.. note:: For Windows images, if you have customized firewall settings then the following TCP ports need to be opened: 3389 (RDP) and 5985 (WinRM).
-
-	.. note:: For Windows images, it is recommended to make sure that there are no pending Microsoft updates when you scan the source system for deployment.
+	.. note:: For Windows images, you should check that there are no pending Microsoft updates when you scan the source system for deployment.
 
 	.. note:: For all deployed Windows virtual machines, if WinRM service is not enabled by default, then it will be activated during the deployment process.
 
 	.. warning:: Terminating an OpenStack deployment may fail due to `a known issue in AMP <https://issues.apache.org/jira/browse/JCLOUDS-1318>`_. Click again on the delete (garbage) icon to work around the issue.
 
 	.. warning:: For Windows Server 2008R2, you need to upgrade WinRM to 3.0 on the source machine before scanning.
+
+	.. warning:: A Windows Image with "Run Sysprep" enabled in its template configuration is not supported for deployment. You should uncheck "Run Sysprep" option in Install Profile before publishing the image.
 
 .. _list-deployment:
 

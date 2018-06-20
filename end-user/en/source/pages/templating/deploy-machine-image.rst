@@ -37,17 +37,35 @@ For Amazon, only full accounts can be used, trial accounts are not supported for
 
 	8. In the deploy view, enter the name of the deployment. Click on ``deploy``. This will connect to cloud platform and launch your machine image instance. Once deployed, a green button will appear under the ``Status`` column.
 
-		.. image:: /images/machine-image-deploy-popup.png
+<<<<<<< HEAD
+    For Linux images, you will need to input the ``Instance Name``, ``Minimal number of cores`` and ``Minimal RAM`` values
+=======
+    For Linux images, you will need to input the ``Instance Name``, ``Minimal number of cores`` and ``Minumal RAM`` values
+>>>>>>> fa086ebf399b502ae1209c741f6726d8c5443c80
+
+		.. image:: /images/machine-image-deploy-popup-linux.png
+
+    For Windows images, you will need to supply an additional ``User name`` and ``User password`` for an administrator account to be used for ``WinRM``
+        
+		.. image:: /images/machine-image-deploy-popup-windows.png
 
 	9. From the ``Deployments`` page you can see the instances deployed and their status. If the status is green it is up and running. If it is red, there has been an issue during deployment and/or it is stopped.
 
 		.. image:: /images/machine-image-deploy-status.png
 
-	.. note:: All deployed virtual machines using this procedure will have ssh port (22) open in their security group.
+	.. note:: Using this procedure, all deployed Linux virtual machines will have ssh port (22) open in their security group. All deployed Windows virtual machines will have RDP port (3389) and WinRM ports (5985, 5986) open in their security group.
 
 	.. note:: If you click on the delete (garbage) icon, this will stop your deployed instance and remove it from your cloud.
 
+	.. note:: For Windows images, you should check that there are no pending Microsoft updates when you scan the source system for deployment.
+
+	.. note:: For all deployed Windows virtual machines, if WinRM service is not enabled by default, then it will be activated during the deployment process.
+
 	.. warning:: Terminating an OpenStack deployment may fail due to `a known issue in AMP <https://issues.apache.org/jira/browse/JCLOUDS-1318>`_. Click again on the delete (garbage) icon to work around the issue.
+
+	.. warning:: For Windows Server 2008R2, you need to upgrade WinRM to 3.0 on the source machine before scanning.
+
+	.. warning:: A Windows Image with "Run Sysprep" enabled in its template configuration is not supported for deployment. You should uncheck "Run Sysprep" option in Install Profile before publishing the image.
 
 .. _list-deployment:
 

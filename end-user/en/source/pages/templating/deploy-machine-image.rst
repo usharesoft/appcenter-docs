@@ -37,11 +37,7 @@ For Amazon, only full accounts can be used, trial accounts are not supported for
 
 	8. In the deploy view, enter the name of the deployment. Click on ``deploy``. This will connect to cloud platform and launch your machine image instance. Once deployed, a green button will appear under the ``Status`` column.
 
-<<<<<<< HEAD
     For Linux images, you will need to input the ``Instance Name``, ``Minimal number of cores`` and ``Minimal RAM`` values
-=======
-    For Linux images, you will need to input the ``Instance Name``, ``Minimal number of cores`` and ``Minumal RAM`` values
->>>>>>> fa086ebf399b502ae1209c741f6726d8c5443c80
 
 		.. image:: /images/machine-image-deploy-popup-linux.png
 

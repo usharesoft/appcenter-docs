@@ -14,6 +14,7 @@ New Features
 * API user can now publish to OpenShift Online from a Docker image (compatible with Hammr CLI)
 * BTRFS filesystem support
 * New customizable opt-in message in Sign Up page.
+* Support Entrypoint in Docker images
 * Users can deploy Windows instances from published machine images to AWS.
 
 Deprecated Features

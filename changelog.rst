@@ -13,10 +13,17 @@ New Features
 * Allow users to cancel running migrations
 * API users can now publish to OpenShift from a Docker image (compatible with Hammr CLI), tested on OpenShift Online and OpenShift Origin
 * BTRFS filesystem support
+* New customizable opt-in message in Sign Up page.
+* Support Entrypoint in Docker images
+* Users can deploy Windows instances from published machine images to AWS.
 
 Deprecated Features
 ~~~~~~~~~~~~~~~~~~~
 * Remove support of following formats: Abiquo, Eucalyptus, Flexiant, Nimbula
+
+Enhancements
+~~~~~~~~~~~~
+* The uforge-migrate binary displays now the progress of each phase.
 
 3.8.fp4
 -------

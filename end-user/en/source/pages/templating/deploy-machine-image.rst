@@ -61,7 +61,7 @@ For Amazon, only full accounts can be used, trial accounts are not supported for
 
 	.. warning:: For Windows Server 2008R2, you need to upgrade WinRM to 3.0 on the source machine before scanning.
 
-	.. warning:: A Windows image with "Run Sysprep" enabled in its template configuration is not supported for deployment. You should uncheck "Run Sysprep" option in Install Profile, when you generate the image to deploy.
+	.. warning:: A Windows image with "Run Sysprep" enabled in its template configuration is not supported for deployment. You should uncheck ``Run Sysprep`` option in Install Profile, when you generate the image to deploy.
 
 .. _list-deployment:
 

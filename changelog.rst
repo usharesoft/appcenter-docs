@@ -15,6 +15,7 @@ New Features
 * BTRFS filesystem support
 * New customizable opt-in message in Sign Up page.
 * Support Entrypoint in Docker images
+* Users can deploy Windows instances from published machine images to AWS.
 
 Deprecated Features
 ~~~~~~~~~~~~~~~~~~~

@@ -2042,8 +2042,6 @@
                             <xs:restriction base="xs:string">
                                 <xs:enumeration value="ec2KeyPairPrivateKey"/>
                                 <xs:enumeration value="ec2PrivateKey"/>
-                                <xs:enumeration value="eucCert"/>
-                                <xs:enumeration value="eucCert"/>
                                 <xs:enumeration value="googleCertificate"/>
                                 <xs:enumeration value="uForgeCertificate"/>
                                 <xs:enumeration value="x509"/>
@@ -2754,33 +2752,9 @@
                             <xsd:documentation xml:lang="en">the target platform (see :ref:`targetplatform-object`) this cloud account is for</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-
-
-    <xs:complexType name="CredAccountAbiquo">
-        <xsd:annotation>
-            <xsd:documentation xml:lang="en">Holds specific account information for the Abiquo cloud platform.
-            </xsd:documentation>
-        </xsd:annotation>
-        <xs:complexContent>
-            <xs:extension base="CredAccount">
-                <xs:sequence>
-                    <xs:element name="hostname" type="xs:string" minOccurs="0">
+                    <xs:element name="secretsMissing" type="xs:boolean" minOccurs="0">
                         <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the hostname of the abiquo platform</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="login" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the login name to use for this cloud platform</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="password" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the password to use for this cloud platform</xsd:documentation>
+                            <xsd:documentation xml:lang="en">a boolean flag to indicate that the secrets of this credAccount are missing and left empty in this object</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                 </xs:sequence>
@@ -2933,74 +2907,6 @@
         </xs:complexContent>
     </xs:complexType>
 
-    <xs:complexType name="CredAccountEuca">
-        <xsd:annotation>
-            <xsd:documentation xml:lang="en">
-                Holds specific account information for the Eucalyptus cloud platform.
-            </xsd:documentation>
-        </xsd:annotation>
-        <xs:complexContent>
-            <xs:extension base="CredAccountCert">
-                <xs:sequence>
-                    <xs:element name="queryId" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the query id (access id) to use</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="accountNumber" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the account number to use</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="secretAccessKeyId" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the secret access key id to use</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="serverUrl" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the walrus server URL to connect to</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-
-    <xs:complexType name="CredAccountFlexiant">
-        <xsd:annotation>
-            <xsd:documentation xml:lang="en">
-                Holds specific account information for the Flexiant cloud platform.
-            </xsd:documentation>
-        </xsd:annotation>
-        <xs:complexContent>
-            <xs:extension base="CredAccount">
-                <xs:sequence>
-                    <xs:element name="apiUsername" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the api username to use</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="password" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the password to use</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="userUuid" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the user's unique id to use</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="wsdlUrl" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the WSDL URL to use</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-
     <xs:complexType name="CredAccountGoogle">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
@@ -3018,35 +2924,6 @@
                     <xs:element name="certPassword" type="xs:string" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the account password to use</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-
-    <xs:complexType name="CredAccountNimbula">
-        <xsd:annotation>
-            <xsd:documentation xml:lang="en">
-                Holds specific account information for the Nimbula cloud platform.
-            </xsd:documentation>
-        </xsd:annotation>
-        <xs:complexContent>
-            <xs:extension base="CredAccount">
-                <xs:sequence>
-                    <xs:element name="endpointUrl" type="xs:anyURI" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the server URL endpoint to use</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="login" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the user login name to use</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="password" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the user password to use</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                 </xs:sequence>
@@ -4027,219 +3904,6 @@
         </xs:complexContent>
     </xs:complexType>
 
-    <xs:complexType name="FlexiantEntity" abstract="true">
-        <xs:complexContent>
-            <xs:extension base="CloudResources">
-                <xs:sequence>
-                    <xs:element name="uuid" type="xs:string" minOccurs="0"/>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-
-    <xs:complexType name="FlexiantResources">
-        <xs:complexContent>
-            <xs:extension base="CloudResources">
-                <xs:sequence>
-                    <xs:element name="clusters" minOccurs="0">
-                        <xs:complexType>
-                            <xs:sequence>
-                                <xs:element name="cluster" minOccurs="0" maxOccurs="unbounded">
-                                    <xs:complexType>
-                                        <xs:complexContent>
-                                            <xs:extension base="FlexiantEntity">
-                                                <xs:sequence>
-                                                    <xs:element name="containerSupport" type="xs:boolean" minOccurs="0"/>
-                                                    <xs:element name="vdcs" minOccurs="0">
-                                                        <xs:complexType>
-                                                            <xs:sequence>
-                                                                <xs:element name="vdc" minOccurs="0" maxOccurs="unbounded">
-                                                                    <xs:complexType>
-                                                                        <xs:complexContent>
-                                                                            <xs:extension base="FlexiantEntity">
-                                                                                <xs:sequence>
-                                                                                    <xs:element name="disks" minOccurs="0">
-                                                                                        <xs:complexType>
-                                                                                            <xs:sequence>
-                                                                                                <xs:element name="disk" minOccurs="0" maxOccurs="unbounded">
-                                                                                                    <xs:complexType>
-                                                                                                        <xs:complexContent>
-                                                                                                            <xs:extension base="FlexiantEntity">
-                                                                                                                <xs:sequence>
-                                                                                                                    <xs:element name="imageName" type="xs:string" minOccurs="0"/>
-                                                                                                                    <xs:element name="index" type="xs:int" minOccurs="0"/>
-                                                                                                                    <xs:element name="ownerName" type="xs:string" minOccurs="0"/>
-                                                                                                                    <xs:element name="serverName" type="xs:string" minOccurs="0"/>
-                                                                                                                </xs:sequence>
-                                                                                                            </xs:extension>
-                                                                                                        </xs:complexContent>
-                                                                                                    </xs:complexType>
-                                                                                                </xs:element>
-                                                                                            </xs:sequence>
-                                                                                        </xs:complexType>
-                                                                                    </xs:element>
-                                                                                    <xs:element name="images" minOccurs="0">
-                                                                                        <xs:complexType>
-                                                                                            <xs:sequence>
-                                                                                                <xs:element name="image" minOccurs="0" maxOccurs="unbounded">
-                                                                                                    <xs:complexType>
-                                                                                                        <xs:complexContent>
-                                                                                                            <xs:extension base="FlexiantEntity">
-                                                                                                                <xs:sequence>
-                                                                                                                    <xs:element name="containerSupport" type="xs:boolean" minOccurs="0"/>
-                                                                                                                    <xs:element name="defaultUser" type="xs:string" minOccurs="0"/>
-                                                                                                                    <xs:element name="vmSupport" type="xs:boolean" minOccurs="0"/>
-                                                                                                                </xs:sequence>
-                                                                                                            </xs:extension>
-                                                                                                        </xs:complexContent>
-                                                                                                    </xs:complexType>
-                                                                                                </xs:element>
-                                                                                            </xs:sequence>
-                                                                                        </xs:complexType>
-                                                                                    </xs:element>
-                                                                                    <xs:element name="networks" minOccurs="0">
-                                                                                        <xs:complexType>
-                                                                                            <xs:sequence>
-                                                                                                <xs:element name="network" minOccurs="0" maxOccurs="unbounded">
-                                                                                                    <xs:complexType>
-                                                                                                        <xs:complexContent>
-                                                                                                            <xs:extension base="FlexiantEntity">
-                                                                                                                <xs:sequence/>
-                                                                                                            </xs:extension>
-                                                                                                        </xs:complexContent>
-                                                                                                    </xs:complexType>
-                                                                                                </xs:element>
-                                                                                            </xs:sequence>
-                                                                                        </xs:complexType>
-                                                                                    </xs:element>
-                                                                                    <xs:element name="servers" minOccurs="0">
-                                                                                        <xs:complexType>
-                                                                                            <xs:sequence>
-                                                                                                <xs:element name="server" minOccurs="0" maxOccurs="unbounded">
-                                                                                                    <xs:complexType>
-                                                                                                        <xs:complexContent>
-                                                                                                            <xs:extension base="FlexiantEntity">
-                                                                                                                <xs:sequence>
-                                                                                                                    <xs:element name="disks" minOccurs="0">
-                                                                                                                        <xs:complexType>
-                                                                                                                            <xs:sequence>
-                                                                                                                                <xs:element name="disk" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-                                                                                                                            </xs:sequence>
-                                                                                                                        </xs:complexType>
-                                                                                                                    </xs:element>
-                                                                                                                    <xs:element name="imageName" type="xs:string" minOccurs="0"/>
-                                                                                                                    <xs:element name="key" type="xs:string" minOccurs="0"/>
-                                                                                                                    <xs:element name="nics" minOccurs="0">
-                                                                                                                        <xs:complexType>
-                                                                                                                            <xs:sequence>
-                                                                                                                                <xs:element name="nic" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-                                                                                                                            </xs:sequence>
-                                                                                                                        </xs:complexType>
-                                                                                                                    </xs:element>
-                                                                                                                    <xs:element name="password" type="xs:string" minOccurs="0"/>
-                                                                                                                    <xs:element name="productOfferName" type="xs:string" minOccurs="0"/>
-                                                                                                                    <xs:element name="sshKeys" minOccurs="0">
-                                                                                                                        <xs:complexType>
-                                                                                                                            <xs:sequence>
-                                                                                                                                <xs:element name="sshKey" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-                                                                                                                            </xs:sequence>
-                                                                                                                        </xs:complexType>
-                                                                                                                    </xs:element>
-                                                                                                                    <xs:element name="user" type="xs:string" minOccurs="0"/>
-                                                                                                                </xs:sequence>
-                                                                                                            </xs:extension>
-                                                                                                        </xs:complexContent>
-                                                                                                    </xs:complexType>
-                                                                                                </xs:element>
-                                                                                            </xs:sequence>
-                                                                                        </xs:complexType>
-                                                                                    </xs:element>
-                                                                                </xs:sequence>
-                                                                            </xs:extension>
-                                                                        </xs:complexContent>
-                                                                    </xs:complexType>
-                                                                </xs:element>
-                                                            </xs:sequence>
-                                                        </xs:complexType>
-                                                    </xs:element>
-                                                    <xs:element name="vmSupport" type="xs:boolean" minOccurs="0"/>
-                                                </xs:sequence>
-                                            </xs:extension>
-                                        </xs:complexContent>
-                                    </xs:complexType>
-                                </xs:element>
-                            </xs:sequence>
-                        </xs:complexType>
-                    </xs:element>
-                    <xs:element name="offers" minOccurs="0">
-                        <xs:complexType>
-                            <xs:complexContent>
-                                <xs:extension base="FlexiantEntity">
-                                    <xs:sequence>
-                                        <xs:element name="diskOffers" minOccurs="0">
-                                            <xs:complexType>
-                                                <xs:sequence>
-                                                    <xs:element name="diskOffer" minOccurs="0" maxOccurs="unbounded">
-                                                        <xs:complexType>
-                                                            <xs:complexContent>
-                                                                <xs:extension base="FlexiantEntity">
-                                                                    <xs:sequence>
-                                                                        <xs:element name="sizeGB" type="xs:string" minOccurs="0"/>
-                                                                    </xs:sequence>
-                                                                </xs:extension>
-                                                            </xs:complexContent>
-                                                        </xs:complexType>
-                                                    </xs:element>
-                                                </xs:sequence>
-                                            </xs:complexType>
-                                        </xs:element>
-                                        <xs:element name="extilityUnitsOffers" minOccurs="0">
-                                            <xs:complexType>
-                                                <xs:sequence>
-                                                    <xs:element name="extilityUnitsOffer" minOccurs="0" maxOccurs="unbounded">
-                                                        <xs:complexType>
-                                                            <xs:complexContent>
-                                                                <xs:extension base="FlexiantEntity">
-                                                                    <xs:sequence>
-                                                                        <xs:element name="amount" type="xs:string" minOccurs="0"/>
-                                                                        <xs:element name="charge" type="xs:string" minOccurs="0"/>
-                                                                    </xs:sequence>
-                                                                </xs:extension>
-                                                            </xs:complexContent>
-                                                        </xs:complexType>
-                                                    </xs:element>
-                                                </xs:sequence>
-                                            </xs:complexType>
-                                        </xs:element>
-                                        <xs:element name="hardwareOffers" minOccurs="0">
-                                            <xs:complexType>
-                                                <xs:sequence>
-                                                    <xs:element name="hardwareOffer" minOccurs="0" maxOccurs="unbounded">
-                                                        <xs:complexType>
-                                                            <xs:complexContent>
-                                                                <xs:extension base="FlexiantEntity">
-                                                                    <xs:sequence>
-                                                                        <xs:element name="nbCpuCores" type="xs:string" minOccurs="0"/>
-                                                                        <xs:element name="ramGB" type="xs:string" minOccurs="0"/>
-                                                                    </xs:sequence>
-                                                                </xs:extension>
-                                                            </xs:complexContent>
-                                                        </xs:complexType>
-                                                    </xs:element>
-                                                </xs:sequence>
-                                            </xs:complexType>
-                                        </xs:element>
-                                    </xs:sequence>
-                                </xs:extension>
-                            </xs:complexContent>
-                        </xs:complexType>
-                    </xs:element>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-
-
     <xs:complexType name="Galleries">
         <xs:complexContent>
             <xs:extension base="UForgeObjects">
@@ -4852,6 +4516,11 @@
                             <xsd:documentation xml:lang="en">a boolean flag to enforce checking dependencies during the generation of this machine image</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
+                    <xs:element name="entrypoint" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the Entrypoint of a Docker machine image</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -4884,7 +4553,6 @@
                         </xsd:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:enumeration value="abiquo"/>
                                 <xs:enumeration value="aws"/>
                                 <xs:enumeration value="azure"/>
                                 <xs:enumeration value="cloudburstvmware"/>
@@ -4894,12 +4562,7 @@
                                 <xs:enumeration value="cloudsigmaraw"/>
                                 <xs:enumeration value="cloudwatt"/>
                                 <xs:enumeration value="docker"/>
-                                <xs:enumeration value="emi-kvm"/>
-                                <xs:enumeration value="emi-xen"/>
                                 <xs:enumeration value="esx"/>
-                                <xs:enumeration value="flexiantkvm"/>
-                                <xs:enumeration value="flexiantova"/>
-                                <xs:enumeration value="flexiantraw"/>
                                 <xs:enumeration value="google"/>
                                 <xs:enumeration value="hyper-v"/>
                                 <xs:enumeration value="hyperv2012"/>
@@ -4908,8 +4571,6 @@
                                 <xs:enumeration value="kvm"/>
                                 <xs:enumeration value="k5vmdk"/>
                                 <xs:enumeration value="lxc"/>
-                                <xs:enumeration value="nimbulaesx"/>
-                                <xs:enumeration value="nimbulakvm"/>
                                 <xs:enumeration value="openstackqcow2"/>
                                 <xs:enumeration value="openstackvdi"/>
                                 <xs:enumeration value="openstackvhd"/>
@@ -8312,47 +7973,6 @@
         </xs:complexContent>
     </xs:complexType>
 
-
-    <xs:complexType name="PublishImageAbiquo">
-        <xsd:annotation>
-            <xsd:documentation xml:lang="en">
-                Holds the information on the registration of a machine image to the Abiquo environment.
-            </xsd:documentation>
-        </xsd:annotation>
-        <xs:complexContent>
-            <xs:extension base="PublishImage">
-                <xs:sequence>
-                    <xs:element name="category" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the category for this registered machine image</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="datacenterName" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the name of the datacenter where this machine image is registered</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="description" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the public description of this machine image</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="productName" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the product name where this machine image is registered</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="enterpriseName" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the enterprise name where this machine image is registered</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-
-
     <xs:complexType name="PublishImageAws">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
@@ -8470,102 +8090,6 @@
         </xs:complexContent>
     </xs:complexType>
 
-
-    <xs:complexType name="PublishImageEuca">
-        <xsd:annotation>
-            <xsd:documentation xml:lang="en">
-                Holds the information on the registration of a machine image to the Eucalyptus environment.
-            </xsd:documentation>
-        </xsd:annotation>
-        <xs:complexContent>
-            <xs:extension base="PublishImage">
-                <xs:sequence>
-                    <xs:element name="bucket" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the bucket where this machine image is registered</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="description" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the public description of the machine image</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="displayName" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the public name of the machine image</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="kernelAuto" type="xs:boolean" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">boolean to indicate whether Eucalyptus should assign automatically a kernel (for paravirtual mode)</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="kernelId" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the kernel id to use when booting an instance (for paravirtual mode)</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="tenant" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the tenant where this machine image is registered</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="ramdiskId" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the ramdisk id to use when booting an instance (for paravirtual mode)</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-
-
-    <xs:complexType name="PublishImageFlexiant">
-        <xsd:annotation>
-            <xsd:documentation xml:lang="en">
-                Holds the information on the registration of a machine image to the Flexiant environment.
-            </xsd:documentation>
-        </xsd:annotation>
-        <xs:complexContent>
-            <xs:extension base="PublishImage">
-                <xs:sequence>
-                    <xs:element name="diskOffering" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the disk offering to use for this machine image</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="virtualDatacenterName" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the datacenter name where this machine image is registered</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="machineImageName" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the public name for this machine image</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="prodUuid" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the product UUID for this machine image</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="vdcId" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the datacenter id where this machine image is registered</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="userUuid" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the user UUID used to publish this machine image</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-
-
     <xs:complexType name="PublishImageGoogle">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
@@ -8614,37 +8138,6 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-
-
-    <xs:complexType name="PublishImageNimbula">
-        <xsd:annotation>
-            <xsd:documentation xml:lang="en">
-                Holds the information on the registration of a machine image to the Nimbula environment.
-            </xsd:documentation>
-        </xsd:annotation>
-        <xs:complexContent>
-            <xs:extension base="PublishImage">
-                <xs:sequence>
-                    <xs:element name="description" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the public description of the machine image</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="imageVersion" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the version of this machine image used during the registration</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="machineImageListName" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the list name used during the registration</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-
 
     <xs:complexType name="PublishImageOpenStack">
         <xsd:annotation>
@@ -11229,12 +10722,8 @@
                                 <xs:enumeration value="aws"/>
                                 <xs:enumeration value="outscale"/>
                                 <xs:enumeration value="azure"/>
-                                <xs:enumeration value="euca"/>
                                 <xs:enumeration value="google"/>
-                                <xs:enumeration value="abiquo"/>
                                 <xs:enumeration value="cloudstack"/>
-                                <xs:enumeration value="flexiant"/>
-                                <xs:enumeration value="nimbula"/>
                                 <xs:enumeration value="openstack"/>
                                 <xs:enumeration value="vclouddirector"/>
                                 <xs:enumeration value="vsphere"/>
@@ -11345,12 +10834,8 @@
                                 <xs:enumeration value="aws"/>
                                 <xs:enumeration value="outscale"/>
                                 <xs:enumeration value="azure"/>
-                                <xs:enumeration value="euca"/>
                                 <xs:enumeration value="google"/>
-                                <xs:enumeration value="abiquo"/>
                                 <xs:enumeration value="cloudstack"/>
-                                <xs:enumeration value="flexiant"/>
-                                <xs:enumeration value="nimbula"/>
                                 <xs:enumeration value="openstack"/>
                                 <xs:enumeration value="vclouddirector"/>
                                 <xs:enumeration value="vsphere"/>

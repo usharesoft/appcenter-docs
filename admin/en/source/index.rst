@@ -26,6 +26,7 @@ Contents:
    pages/tools/overview
    pages/rebranding/overview
    pages/licensing
+   pages/gdpr/overview
    pages/changelog
 
 .. _trademarks:

@@ -22,8 +22,17 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`appliancesummary-object`
 	* :ref:`artifactcredaccount-object`
 	* :ref:`artifactcredaccounts-object`
+	* :ref:`blueprint-object`
+	* :ref:`blueprintdeployment-object`
+	* :ref:`blueprintdeploymentaws-object`
+	* :ref:`blueprintservice-object`
+	* :ref:`blueprintsummary-object`
 	* :ref:`bootscript-object`
 	* :ref:`bootscripts-object`
+	* :ref:`btrfsstoragepool-object`
+	* :ref:`btrfsstoragepools-object`
+	* :ref:`btrfssubvolume-object`
+	* :ref:`btrfssubvolumes-object`
 	* :ref:`bundlerestriction-object`
 	* :ref:`bundlerestrictions-object`
 	* :ref:`categories-object`
@@ -35,15 +44,11 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`companies-object`
 	* :ref:`company-object`
 	* :ref:`credaccount-object`
-	* :ref:`credaccountabiquo-object`
 	* :ref:`credaccountaws-object`
 	* :ref:`credaccountazure-object`
 	* :ref:`credaccountcert-object`
 	* :ref:`credaccountcloudstack-object`
-	* :ref:`credaccounteuca-object`
-	* :ref:`credaccountflexiant-object`
 	* :ref:`credaccountgoogle-object`
-	* :ref:`credaccountnimbula-object`
 	* :ref:`credaccountopenstack-object`
 	* :ref:`credaccountoutscale-object`
 	* :ref:`credaccounts-object`
@@ -52,6 +57,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`credaccountvsphere-object`
 	* :ref:`credaccountk5-object`
 	* :ref:`credaccountdocker-object`
+	* :ref:`credaccountopenshift-object`
 	* :ref:`credaccountoracle-object`
 	* :ref:`deployment-object`
 	* :ref:`deployments-object`
@@ -125,14 +131,10 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`projects-object`
 	* :ref:`publicationstage-object`
 	* :ref:`publishimage-object`
-	* :ref:`publishimageabiquo-object`
 	* :ref:`publishimageaws-object`
 	* :ref:`publishimageazure-object`
 	* :ref:`publishimagecloudstack-object`
-	* :ref:`publishimageeuca-object`
-	* :ref:`publishimageflexiant-object`
 	* :ref:`publishimagegoogle-object`
-	* :ref:`publishimagenimbula-object`
 	* :ref:`publishimageopenstack-object`
 	* :ref:`publishimageoutscale-object`
 	* :ref:`publishimagesusecloud-object`
@@ -140,6 +142,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`publishimagevsphere-object`
 	* :ref:`publishimagek5-object`
 	* :ref:`publishimagedocker-object`
+	* :ref:`publishimageopenshift-object`
 	* :ref:`publishimageoracle-object`
 	* :ref:`publishimages-object`
 	* :ref:`quota-object`
@@ -188,6 +191,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`stattickets-object`
 	* :ref:`subscriptionprofile-object`
 	* :ref:`subscriptionprofiles-object`
+	* :ref:`sourcesummary-object`
 	* :ref:`tag-object`
 	* :ref:`targetformat-object`
 	* :ref:`targetformats-object`
@@ -236,8 +240,17 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     ApplianceSummary
     ArtifactCredAccount
     ArtifactCredAccounts
+    Blueprint
+    BlueprintDeployment
+    BlueprintDeploymentAws
+    BlueprintService
+    BlueprintSummary
     BootScript
     BootScripts
+    BtrfsStoragePool
+    BtrfsStoragePools
+    BtrfsSubvolume
+    BtrfsSubvolumes
     BundleRestriction
     BundleRestrictions
     Categories
@@ -249,15 +262,11 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     Companies
     Company
     CredAccount
-    CredAccountAbiquo
     CredAccountAws
     CredAccountAzure
     CredAccountCert
     CredAccountCloudStack
-    CredAccountEuca
-    CredAccountFlexiant
     CredAccountGoogle
-    CredAccountNimbula
     CredAccountOpenStack
     CredAccountOutscale
     CredAccounts
@@ -266,6 +275,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     CredAccountVSphere
     CredAccountK5
     CredAccountDocker
+    CredAccountOpenShift
     CredAccountOracle
     Deployment
     Deployments
@@ -339,14 +349,10 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     Projects
     PublicationStage
     PublishImage
-    PublishImageAbiquo
     PublishImageAws
     PublishImageAzure
     PublishImageCloudStack
-    PublishImageEuca
-    PublishImageFlexiant
     PublishImageGoogle
-    PublishImageNimbula
     PublishImageOpenStack
     PublishImageOutscale
     PublishImageSuseCloud
@@ -354,6 +360,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     PublishImageVSphere
     PublishImageK5
     PublishImageDocker
+    PublishImageOpenShift
     PublishImageOracle
     PublishImages
     Quota
@@ -402,6 +409,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     StatTickets
     SubscriptionProfile
     SubscriptionProfiles
+    SourceSummary
     Tag
     TargetFormat
     TargetFormats

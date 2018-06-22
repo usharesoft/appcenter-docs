@@ -162,7 +162,7 @@ The following is a concrete example to begin the population of CentOS 6.5 64bit:
 
 				Success: Created repository with url [http://vault.centos.org/6.5/os/x86_64/] to default organization
 
-		The ``--name`` specified here is the “tagname” that will be shown in the UI when creating an appliance.
+		The ``--name`` specified does not need to be an official name. It is the repository name that will be shown in the UI when pinning an appliance.
 		The ``--repoUrl`` can be either ``http://`` or ``file://``.
 
 		.. warning:: You must use the ``--officiallySupported`` flag for all the default repositories of officially supported OSes (for a list of supported OSes, refer to :ref: `uforge-supported-os-formats`). Do not use ``--officiallySupported`` for repositories that are not part of the core distribution, such as epel or VMware tools. When generating a machine image, packages tagged as ``--officiallySupported`` are installed first, before other packages. 

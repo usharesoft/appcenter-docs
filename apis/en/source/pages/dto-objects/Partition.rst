@@ -12,6 +12,7 @@ Attributes
 
 The list of attributes for ``partition`` are:
 
+	* ``defaultSubvolume`` (boolean): boolean indicating whether this partition is default subvolume
 	* ``dumpLocation`` (string): the location of the partition's dump file
 	* ``fstype``: the filesystem type of the partition
 	* ``growable`` (boolean): boolean indicating whether this partition is growable

@@ -78,9 +78,7 @@ In order to add an OS to an organization you must do the following:
 
 This must be done for each version of an OS. For example CentOS 6.5 i386. It is not possible to do this for all CentOS versions at once.
 
-For example, to add CentOS 6.5 i386 to the default org:
-
-In order to add the OS to a specific distribution, you will need to specify ``--org <value>`` for each of the commands in the steps below.
+For example, to add CentOS 6.5 i386:
 
 	1. Add the distribution to the organization, using the official name and version.
 
@@ -102,7 +100,7 @@ In order to add the OS to a specific distribution, you will need to specify ``--
 		+------+----------------+------------+---------------------------------------------+-------+
 		|  355 |                | CentOSplus | http://vault.centos.org/6.5/centosplus/i386 | RPM   |               
 
-	3. Attach the repository to the distribution
+	3. Attach the repository to the distribution.
 
 	.. code-block :: shell
 

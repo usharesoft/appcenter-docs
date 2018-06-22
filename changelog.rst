@@ -3,6 +3,27 @@
 Changelog
 =========
 
+3.8.fp5
+-------
+
+Release Date: 2018-07-09
+
+New Features
+~~~~~~~~~~~~
+* Allow users to cancel running migrations
+* API user can now publish to OpenShift Online from a Docker image (compatible with Hammr CLI)
+* BTRFS filesystem support
+* New customizable opt-in message in Sign Up page.
+* Support Entrypoint in Docker images
+
+Deprecated Features
+~~~~~~~~~~~~~~~~~~~
+* Remove support of following formats: Abiquo, Eucalyptus, Flexiant, Nimbula
+
+Enhancements
+~~~~~~~~~~~~
+* The uforge-migrate binary displays now the progress of each phase.
+
 3.8.fp4
 -------
 

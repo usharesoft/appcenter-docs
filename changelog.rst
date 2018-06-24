@@ -24,6 +24,7 @@ Deprecated Features
 Enhancements
 ~~~~~~~~~~~~
 * The uforge-migrate binary displays now the progress of each phase.
+* Users can specify how much network bandwidth to transfer data can be used while scanning a Windows system.
 
 3.8.fp4
 -------

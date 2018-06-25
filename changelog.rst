@@ -23,7 +23,7 @@ Deprecated Features
 Enhancements
 ~~~~~~~~~~~~
 * The uforge-migrate binary displays now the progress of each phase.
-* Better display for error details of failed migrations
+* Better display of error details for failed migrations
 
 3.8.fp4
 -------

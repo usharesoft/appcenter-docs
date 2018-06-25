@@ -3,6 +3,15 @@
 Changelog
 =========
 
+3.8.fp6
+-------
+
+Release Date: 2018-08-20
+
+Enhancements
+~~~~~~~~~~~~
+* Improve display of error details for failed migrations
+
 3.8.fp5
 -------
 

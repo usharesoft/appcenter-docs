@@ -11,6 +11,7 @@ Release Date: 2018-08-20
 Enhancements
 ~~~~~~~~~~~~
 * Improve display of error details for failed migrations
+* Enhance Clone Appliance view to display the version and revision of the current appliance to be cloned
 
 3.8.fp5
 -------

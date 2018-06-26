@@ -3,6 +3,15 @@
 Changelog
 =========
 
+3.8.fp6
+-------
+
+Release Date: 2018-08-20
+
+Enhancements
+~~~~~~~~~~~~
+* Improve display of error details for failed migrations
+
 3.8.fp5
 -------
 
@@ -24,6 +33,7 @@ Deprecated Features
 Enhancements
 ~~~~~~~~~~~~
 * The uforge-migrate binary displays now the progress of each phase.
+* User can specify the network bandwidth allowed for data transfer when scanning a Windows system.
 
 3.8.fp4
 -------

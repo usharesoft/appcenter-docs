@@ -12,7 +12,7 @@ Enhancements
 ~~~~~~~~~~~~
 * Improve display of error details for failed migrations
 * Enhance Clone Appliance view to display the version and revision of the current appliance to be cloned
-* New option to use automated migration without transfering any overlay information (allowing a light-weight migration of the instance)
+* New option to migrate (Lift & Shift) an instance without transferring any overlay information (only keep the operating system information, remove software application and users data)
 
 3.8.fp5
 -------

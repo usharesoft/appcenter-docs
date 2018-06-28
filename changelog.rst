@@ -8,6 +8,10 @@ Changelog
 
 Release Date: 2018-08-20
 
+New Features
+~~~~~~~~~~~~
+* Using uforge-sync binary, users can now synchronize the target environment with scans (without overlay) of Ubuntu 16.04 systems.
+
 Enhancements
 ~~~~~~~~~~~~
 * Improve display of error details for failed migrations

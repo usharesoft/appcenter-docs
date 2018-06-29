@@ -37,7 +37,9 @@ In order to run a migration:
 	5. Click ``next``.
 	6. Follow the instructions on the UForge AppCenter pop-up window. 
 
-	.. image:: /images/migration-popup-e.png
+	.. image:: /images/migration-popup-o.png
+
+		.. note:: Use the ``-o`` option if you want to include the overlay. The overlay is all the things that are missing compared to a known state (a previous scan of a machine or the operating system native packages). This overlay is a standard tar archive. 
 
 	7. Download binary locally by clicking ``Download``.
 	8. Copy the binary on the target environment you want to migrate.

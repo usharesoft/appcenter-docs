@@ -39,14 +39,12 @@ In order to run a migration:
 
 	.. image:: /images/migration-popup-o.png
 
-		.. note:: Use the ``-o`` option if you want to include the overlay. The overlay is all the things that are missing compared to a known state (a previous scan of a machine or the operating system native packages). This overlay is a standard tar archive. 
-
 	7. Download binary locally by clicking ``Download``.
 	8. Copy the binary on the target environment you want to migrate.
 	9. Open a terminal window and login to the target environment.
 	10. Launch the migrate command on the running target environment to start the migration.
 
-		.. note:: For Linux migration, you can exclude non-native files and directories using ``-e`` parameter. This is not supported for Windows.
+		.. note:: For Linux migration, you can exclude non-native files and directories using ``-e`` parameter. Use the ``-o`` option if you want to include the overlay. The overlay is all the things that are missing compared to a known state (a previous scan of a machine or the operating system native packages). This overlay is a standard tar archive.  This is not supported for Windows.
 
 	11. Click ``next`` to view the migration status.
 	12. You can return to the ``Lift & Shift`` page to view the status of your migrations.

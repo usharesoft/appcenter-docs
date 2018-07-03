@@ -102,6 +102,12 @@ A separate set of scripts and associated README.txt file is available on the `US
 			rm /tmp/USER_DATA/db_backup_3.7.sql
 			rm /tmp/USER_DATA/uforge-export.ldif
 
+	#. If you have Windows Golden images created manually in 3.7, run the following command:
+
+		.. code-block:: shell
+
+			rsync  -avl -H -F --progress /tmp/DISTROS/Windows/ root@<target_db>:/tmp/DISTROS/Windows/
+
 	#. On <target_ui> if you have customized the UI you will need to follow these additional steps before migration to 3.8. This step applies to all the customization files in ``/var/opt/UShareSoft/uforge-client/gwt/uforge/templates`` (as decribed in), as well as ``config.xml``, ``forge-config.xml``, and css directory (in case of css customisation). Do the following on <target_ui>:
 
 		a) rsync the customised files from the UI node of the source UForge AppCenter to the UI node of the target AppCenter.

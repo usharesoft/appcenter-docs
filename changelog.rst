@@ -17,7 +17,7 @@ Enhancements
 ~~~~~~~~~~~~
 * Improve display of error details for failed migrations
 * Enhance Clone Appliance view to display the version and revision of the current appliance to be cloned
-* Enhance MySoftware Appliance view to ease the addition and deletion of MySoftware
+* Improve usability of the add and delete actions on MySoftware page
 
 3.8.fp5
 -------

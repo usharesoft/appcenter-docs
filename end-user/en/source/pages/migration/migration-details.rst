@@ -5,7 +5,7 @@
 Migration Using Re-platform
 ----------------------------
 
-The entire migration process using ``Re-platform`` (previously referred to as ''scan'') has 5 main steps.  These are:
+The entire migration process using ``Re-platform`` (previously referred to as ``scan``) has 5 main steps:
 
 	1. Scan the source machine.
 	2. Report the scan results to UForge AppCenter, where the platform analyzes the report. The scan differentiates between known packages and extra files. 
@@ -13,27 +13,19 @@ The entire migration process using ``Re-platform`` (previously referred to as ''
 	4. The archive is uncompressed, and the information is stored in the database as a ``Scan``.
 	5. The scan can be used to generate machine images (also known as black box migration) or imported to create a new appliance template (also known as whitebox migration). The generated machine image can then be published to the target environment and instances can be provisioned.
 
-.. _migration-prereq:
-
-Migration Pre-requisites
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-In order to migrate a system, it must meet the following conditions:
-
-	* The operating system must be in one of the supported formats (refer to :ref:`uforge-supported-os-formats`). 
-
-	.. note:: Your scan will take longer if not all minor versions of a distribution are install in your UForge AppCenter. For example, if you scan a CentOS 6.8 machine, but your AppCenter has only been populated with packages up to CentOS 6.7, then the AppCenter will use the machine's yum repo to download the missing packages. As a result, the scan will take longer to complete.
-
-	* The image formats must be in supported formats (refer to :ref:`supported-image-formats`)
-	* For Windows, the partition format must be NTFS
-	* For Windows, GPT is not supported.  Scanned Windows machine has to have MBR.
 
 .. _migration-process-scan-source:
 
 Scanning the Source Machine
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-On the scan target, the ``uforge-scan`` binary is copied and launched as root to analyze the entire system.  The scan carries out the following phases:
+On the scan target, the ``uforge-scan`` binary is copied and launched as root to analyze the entire system.  
+
+You can select two types of scan: ``scan`` or ``scan with overlay``. A ``scan`` will scan the target environment, but will only return the system packages and configuration known to UForge. A ``scan with overlay`` will include an overlay report which details all the extra files, packages or specific configuration. 
+
+.. note:: Scan with overlay is only supported for Linux-based machines.
+
+The scan carries out the following phases:
 
 	1. ``uforge-scan`` tests the connection to UForge server with the information provided by the user in the command line.
 	2. ``uforge-scan`` checks the basic information of the machine (Operating System, architecture) and the installation parameters (partitioning, timezone, keyboard, etc.).

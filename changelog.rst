@@ -8,6 +8,10 @@ Changelog
 
 Release Date: 2018-08-20
 
+New Features
+~~~~~~~~~~~~
+* New option to migrate (Lift & Shift) an instance without transferring any overlay information (only keep the operating system information, remove software application and users data)
+
 Enhancements
 ~~~~~~~~~~~~
 * Improve display of error details for failed migrations

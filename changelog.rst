@@ -3,15 +3,6 @@
 Changelog
 =========
 
-3.8.fp6
--------
-
-Release Date: 2018-08-20
-
-Enhancements
-~~~~~~~~~~~~
-* Improve display of error details for failed migrations
-
 3.8.fp5
 -------
 
@@ -34,6 +25,32 @@ Enhancements
 ~~~~~~~~~~~~
 * The uforge-migrate binary displays now the progress of each phase.
 * User can specify the network bandwidth allowed for data transfer when scanning a Windows system.
+
+Bug Fixes
+~~~~~~~~~
+* 10251 VirtualBox image of UFIAB fails to boot with initrd root filesystem dependency failure
+* 10331 Generation stucked at 55% and nothing work anymore after it
+* 10335 Failed to import OVA image into vCenter
+* 10430 Publish to all regions of Outscale does not work in UForge (unsupported regions, ami id out of date, wrong user for connection)
+* 10555 On AppCenter with many users, appliance GET for one user has performance issues
+* 7617 In the publish views, some select lists are randomly sorted
+* 8638 License cannot be changed in the clone Software
+* 9847 [Documentation] File size of /boot/grub2/i386-pc/core.img is changed during blackbox/whitebox migration
+* 10217 Floating point exception occurs on uforge-scan.bin
+* 10325 OAR jobs logs show WELD "Exception in thread"
+* 10397 Opened comboboxes are cut at the bottom in publish views
+* 1415 Portal - Language selection menu truncated in firefox
+* 9672 SLES 11 scan sticks during creating report
+* 9676 When adding a certificate for the creation of a google compute engine, the spinner never stops
+* 9782 Windows black box migration failed at publication with classCastException
+* 9836 [Documentation] configuration to connect to AMP is incorrect for multinodes environnement
+* 9956 Overlapping text when generate an K5 image from a Linux scan
+* 9961 Migration is stuck in progress
+* 10103 Import a bundle first as first action will block subsequent template imports
+* 10105 Scrollbar is not well displayed on deployments and blueprints views
+* 10588 Windows on Azure generated from UForge-published image for Whitebox migration does not start correctly.
+* 10657 You cannot save a Windows template imported from a scan with an error.
+* 10795 Generation of a Debian 8 Server OS profile image fails with server install profile
 
 3.8.fp4
 -------

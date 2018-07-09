@@ -12,7 +12,6 @@ At the end of the migration process, you can synchronize the running migrated in
   * CentOS 6, 7
   * Red Hat Enterprise Linux 6, 7
   * Debian 7, 8
-  * Ubuntu 16.04
 
 From the scan detail view, you can get the instructions to synchronize your data by clicking the ``Synchronize`` button.
 

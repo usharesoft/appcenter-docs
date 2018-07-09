@@ -122,7 +122,8 @@ To add custom software components to an appliance:
 
 		.. image:: /images/mysoftware.png
 
-	15. Select the software components you want to add.
+	15. Select the software components you want to add and click the down arrow button.
+	16. Click ``save`` to add this software component to your appliance template.
 
 .. _restriction-rules:
 

@@ -3,22 +3,6 @@
 Changelog
 =========
 
-3.8.fp6
--------
-
-Release Date: 2018-08-20
-
-New Features
-~~~~~~~~~~~~
-* New option to migrate (Lift & Shift) an instance without transferring any overlay information (only keep the operating system information, remove software application and users data)
-* Using uforge-sync binary, users can now synchronize the target environment with scans (without overlay) of Ubuntu 16.04 systems.
-
-Enhancements
-~~~~~~~~~~~~
-* Improve display of error details for failed migrations
-* Enhance Clone Appliance view to display the version and revision of the current appliance to be cloned
-* Improve usability of the add and delete actions on MySoftware page
-
 3.8.fp5
 -------
 
@@ -54,7 +38,6 @@ Bug Fixes
 * 9847 [Documentation] File size of /boot/grub2/i386-pc/core.img is changed during blackbox/whitebox migration
 * 10217 Floating point exception occurs on uforge-scan.bin
 * 10325 OAR jobs logs show WELD "Exception in thread"
-* 10397 Opened comboboxes are cut at the bottom in publish views
 * 1415 Portal - Language selection menu truncated in firefox
 * 9672 SLES 11 scan sticks during creating report
 * 9676 When adding a certificate for the creation of a google compute engine, the spinner never stops

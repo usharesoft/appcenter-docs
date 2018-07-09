@@ -62,12 +62,6 @@ A separate set of scripts and associated README.txt file is available on the `US
 			/opt/OpenDJ/bin/export-ldif -l uforge-export.ldif -n userRoot
 			rsync  -avl -H -F --progress /tmp/USER_DATA/ root@<target_db>:/tmp/USER_DATA/
 
-	#. If you have Windows Golden images created manually in 3.7, run the following command:
-
-		.. code-block:: shell 
-
-			rsync  -avl -H -F --progress /tmp/DISTROS/Windows/ root@<target_db>:/tmp/DISTROS/Windows/
-
 	#. Once the previous rsync command has finished oar-server and opendj services have to be stopped. On <target_db > run the following commands:
 
 		.. code-block:: shell

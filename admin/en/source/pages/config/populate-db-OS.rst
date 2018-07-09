@@ -232,7 +232,7 @@ The following is a concrete example to begin the population of Red Hat Enterpris
 
 		$ uforge org os add --name "RedHat Enterprise Linux" --arch x86_64 --version 7 -u $ADMIN -p $PASS
 
-	4. Enable the new operating system for the organization. The following command enables CentOS 6.5 in the default organization::
+	4. Enable the new operating system for the organization. The following command enables Red Hat Enterprise Linux version 7 in the default organization::
 
 		$ uforge org os enable --name "RedHat Enterprise Linux" --arch x86_64 --version 7 -u $ADMIN -p $PASS
 

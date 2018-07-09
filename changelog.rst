@@ -54,7 +54,6 @@ Bug Fixes
 * 9847 [Documentation] File size of /boot/grub2/i386-pc/core.img is changed during blackbox/whitebox migration
 * 10217 Floating point exception occurs on uforge-scan.bin
 * 10325 OAR jobs logs show WELD "Exception in thread"
-* 10397 Opened comboboxes are cut at the bottom in publish views
 * 1415 Portal - Language selection menu truncated in firefox
 * 9672 SLES 11 scan sticks during creating report
 * 9676 When adding a certificate for the creation of a google compute engine, the spinner never stops

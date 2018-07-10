@@ -5,7 +5,16 @@
 Updating the Install Profile
 ----------------------------
 
-The ``Install Profile`` on the ``Stack`` page allows you to customize the questions asked when the image is booted for the very first time (or during installation for a physical image format). The install profile is mandatory. However, the options you set will differ depending on if you appliance in Linux-based or Windows-based. Please refer to the appropriate section below.
+The ``Install Profile`` on the ``Stack`` page allows you to customize the questions asked when the image is booted for the very first time (or during installation for a physical image format). The install profile is mandatory. However, the options you set will differ depending on if your appliance in Linux-based or Windows-based. Please refer to the appropriate section below.
+
+You can also refer to the following sub-sections:
+
+.. toctree::
+   :titlesonly:
+
+   appliance-user-groups
+   appliance-multinic
+   appliance-advanced-partition
 
 Updating a Linux-based Install Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -28,46 +37,6 @@ You can define the following as part of a Linux-based appliance install profile:
 
 .. note:: For basic partitioning disk size, you must ensure that the disk is large enough to store all the binaries and files for the appliance template.  For windows based operating systems, it is advised to have a disk size of at least ``14GB`` for core versions, and at least ``20GB`` for full versions.
 
-.. _appliance-install-profile-users-groups:
-
-Adding Users and Groups
-~~~~~~~~~~~~~~~~~~~~~~~
-
-You can add operating system users and groups to a Linux-based appliance Install Profile. These will be integrated to the appliance template.
-
-.. warning:: The users and groups created in UForge are not linked. If you create a user and list it as part of a specific group, you must then also create the group; otherwise the image generation will fail. 
-
-To add a user to an appliance:
-
-	1. Select the appliance template you want to modify.
-	2. From the ``Stack`` page, click on ``Install Profile`` in the toolbox.
-	3. Select ``Users and Groups``.
-	4. Click the plus symbol next to the ``Users`` table. The ``Create User`` page will be displayed.
-
-		.. image :: /images/install-profile-create-user-fp2.png
-
-	5. Enter a user name.
-	6. If you want to manually enter the user ID, deselect ``set the user id automatically`` and enter the ID number.
-	7. If you want to manually create the primary group the user is part of, deselect ``automatically create primary group for user`` and enter the group name. 
-	8. Click ``create``.
-
-.. warning:: If you create a user and list it as part of a specific group, you must then also create the group; otherwise the image generation will fail. 
-
-
-To add a group to a Linux-based appliance install profile:
-
-	1. Select the appliance template you want to modify.
-	2. From the ``Stack`` page, click on ``Install Profile`` in the toolbox.
-	3. Select ``Users and Groups``.
-	4. Click the plus symbol next to the ``Groups`` table. The ``Create Group`` page will be displayed.
-
-		.. image:: /images/install-profile-create-group-fp2.png
-
-	5. Enter a group name.
-	6. Check if you want this group to be a system group.
-	7. If you want to manually enter the group ID, deselect ``Set the group id automatically`` and enter the group ID number.
-	8. Click ``create``.
-
 .. _windows-install-profile:
 
 Updating a Windows-based Install Profile
@@ -79,7 +48,7 @@ You can define the following as part of a Windows-based appliance install profil
 * ``Activation Key``: You can set the Windows Activation Key. If it is not entered in the Install Profile, the default key will be used for a 30-day trial period once the appliance is booted.
 * ``Administrator``: To set the administrator password. Can be one of ``Ask during installation``, ``None`` or ``Set automatically``. Note that this option is visible only if you have selected to run sysprep under ``Sysprep`` option.
 * ``Network``: You can set the internet settings. The default is ``set automatically``. See :ref:`appliance-multinic`
-* ``Partitioning``: You can modify the disk and swap size for the automatic set up, select ``ask during install``, or set up ``Advanced Partitioning`` (for several disks). For more information see :ref:`appliance-install-profile-partitioning`.
+* ``Partitioning``: You can modify the disk and swap size for the automatic set up, select ``ask during install``, or set up ``Advanced Partitioning`` (for several disks). For more information see :ref:`appliance-install-profile-partitioning-windows`.
 * ``Time Zone``: default is ``set automatically to London``.
 * ``Welcome Message``: You can enter a welcome message.
 

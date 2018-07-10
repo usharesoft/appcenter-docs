@@ -27,7 +27,7 @@ The toolbox allows you to define the five key elements of an appliance, namely:
 .. _appliance-logo:
 
 Adding a Logo
--------------
+~~~~~~~~~~~~~
 
 You can add or modify the appliance logo as follows:
 

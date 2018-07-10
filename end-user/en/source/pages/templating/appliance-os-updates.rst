@@ -37,14 +37,14 @@ To update the OS packages:
 
 .. _windows-update:
 
-Modifying a Windows-based Appliance
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Windows-based Appliance Updates
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For Windows-based appliances UForge will indicate the number of updates available, however you cannot use this procedure to update the packages for an existing Windows appliance.
 
 In order to benefit from a newer version of Windows, you will have to:
 
-	1. Create or retrieve a new Golden Image. See your administrator.
+	1. Create a new Golden Image, either from scan or manually. See your administrator.
 	2. Create a new appliance.
 	3. You can re-use the MySoftware components contained in the current appliance.
 	4. You can download from the current template the boot scripts and save them on your local hard drive. You can then upload them to the new appliance.

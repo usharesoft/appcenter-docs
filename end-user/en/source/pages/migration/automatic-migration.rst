@@ -37,19 +37,21 @@ In order to run a migration:
 	5. Click ``next``.
 	6. Follow the instructions on the UForge AppCenter pop-up window. 
 
-	.. image:: /images/migration-popup-e.png
+	.. image:: /images/migration-popup-o.png
 
 	7. Download binary locally by clicking ``Download``.
 	8. Copy the binary on the target environment you want to migrate.
 	9. Open a terminal window and login to the target environment.
 	10. Launch the migrate command on the running target environment to start the migration.
 
-		.. note:: For Linux migration, you can exclude non-native files and directories using ``-e`` parameter. This is not supported for Windows.
+		.. note:: For Linux migration, you can exclude non-native files and directories using ``-e`` parameter. The ``-o`` parameter will include the overlay (this option is used by default). The overlay is all the things that are missing compared to a known state (a previous scan of a machine or the operating system native packages). This overlay is a standard tar archive.
 
 	11. Click ``next`` to view the migration status.
 	12. You can return to the ``Lift & Shift`` page to view the status of your migrations.
 
-	.. image:: /images/migration-status.png
+	.. image:: /images/migration-status2.png
+
+	.. note:: You should note that if you cancel a migration, this will stop the process of migration at the step currently being done. Therefore, for example, if the image generation is complete, it will be visible on your platform. Also, if publication has started, this may incur costs. You should check your cloud account. For more details on the constraints of publishing an image, refer to :ref:`appliance-publish-machine-image`.
 
 	From the status page you can view more detailed information about the appliance scanned. Refer to :ref:`migration-details`.
 

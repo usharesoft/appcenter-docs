@@ -44,5 +44,6 @@ Example Request
 .. seealso::
 
 	 * :ref:`migration-object`
+	 * :ref:`migration-cancel`
 	 * :ref:`migration-deleteAll`
 	 * :ref:`migrationstage-object`

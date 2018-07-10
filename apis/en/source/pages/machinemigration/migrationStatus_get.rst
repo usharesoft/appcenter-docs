@@ -44,6 +44,7 @@ Example Request
 .. seealso::
 
 	 * :ref:`migration-object`
+	 * :ref:`migration-cancel`
 	 * :ref:`migration-create`
 	 * :ref:`migration-get`
 	 * :ref:`status-object`

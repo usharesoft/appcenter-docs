@@ -1,24 +1,20 @@
 .. Copyright 2018 FUJITSU LIMITED
 
-.. _publishimageeuca-object:
+.. _publishimageopenshift-object:
 
-PublishImageEuca
-================
+PublishImageOpenShift
+=====================
 
-Holds the information on the registration of a machine image to the Eucalyptus environment.
+Holds the information on the registration of a machine image to OpenShift Registry.
 
 Attributes
 ~~~~~~~~~~
 
-The list of attributes for ``PublishImageEuca`` are:
+The list of attributes for ``PublishImageOpenShift`` are:
 
-	* ``bucket`` (string): the bucket where this machine image is registered
-	* ``description`` (string): the public description of the machine image
-	* ``displayName`` (string): the public name of the machine image
-	* ``kernelAuto`` (boolean): boolean to indicate whether Eucalyptus should assign automatically a kernel (for paravirtual mode)
-	* ``kernelId`` (string): the kernel id to use when booting an instance (for paravirtual mode)
-	* ``tenant`` (string): the tenant where this machine image is registered
-	* ``ramdiskId`` (string): the ramdisk id to use when booting an instance (for paravirtual mode)
+	* ``namespace`` (string): the namespace to use when registering the machine image
+	* ``repositoryName`` (string): the name to use when registering the machine image
+	* ``tagName`` (string): the tag name to use when registering the machine image
 	* ``cloudId`` (string): the unique id for the machine image registered on the cloud environment
 	* ``imageUri`` (anyURI): the uri resource of the machine image
 	* ``publishLocation`` (string): the location of the registered machine image (e.g. region)
@@ -54,6 +50,7 @@ The list of attributes for ``PublishImageEuca`` are:
 	* ``vmDiskSize`` (long): the recommended disk size (in bytes) to use when provisioning an instance from this machine image
 	* ``vmMemorySize`` (int): the recommended memory size (in bytes) to use when provisioning an instance from this machine image
 	* ``forceCheckingDeps`` (boolean): a boolean flag to enforce checking dependencies during the generation of this machine image
+	* ``entrypoint`` (string): the Entrypoint of a Docker machine image
 	* ``md5sum`` (string): the md5sum of the uploaded object
 	* ``mimeType`` (string): the mime type of the file uploaded
 	* ``sha256sum`` (string): the sha256 value of the uploaded object

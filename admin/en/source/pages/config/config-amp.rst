@@ -21,13 +21,19 @@ To configure AMP:
 
         .. note:: If you want to connect to your AMP server with HTTPS instead of HTTP, you can follow `Cloudosft AMP documentation  <https://docs.cloudsoft.io/operations/configuration/https.html>`_ to configure it. In this case your AMP_API_ENDPOINT should use the secure URL eg: https://amp-instance.com:8443/v1.
 
-	2. Run the following command on the UI node:
+	2. Run the following command on the webservice node:
+
+		.. code-block:: shell
+
+			$ service tomcat restart
+
+	3. Run the following command on the UI node:
 
 		.. code-block:: shell
 
 			$ /opt/UShareSoft/uforge-client/bin/uforge_ui_update.sh
 
-	3. At this point the deployment feature should be available for the root user. In order to allow other users to use this feature, give them the entitlement ``deployments_access``. For more information on entitlements refer to :ref:`create-roles`.
+	4. At this point the deployment feature should be available for the root user. In order to allow other users to use this feature, give them the entitlement ``deployments_access``. For more information on entitlements refer to :ref:`create-roles`.
 
 		.. code-block:: shell
 

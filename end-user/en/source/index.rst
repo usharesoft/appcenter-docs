@@ -1,4 +1,3 @@
-.. Copyright 2018 FUJITSU LIMITED
 
 .. _endUserDoc-index:
 
@@ -16,6 +15,9 @@ Contents:
    pages/myaccount/overview
    pages/credentials/overview
    pages/templating/overview
+   pages/generating/overview
+   pages/deploying/overview
+   pages/blueprint/overview
    pages/migration/overview
    pages/collaboration/overview
    

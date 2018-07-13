@@ -54,7 +54,7 @@ To create a Windows Appliance:
 
 	7. Set the Install profile and click ``Save``. For more information, refer to :ref:`windows-install-profile`.
 
-		.. note:: Unlike Linux, the following cannot be set for Windows appliances: Keyboard, Root user, User & Groups, Kernel Parameters and Firewall.  
+		.. note:: Unlike Linux, the following cannot be set for Windows appliances: Root User, Users and Groups, Security, Kernel, Keyboards, Licences.  
 
 		.. image :: /images/windows-installfp4.png
 

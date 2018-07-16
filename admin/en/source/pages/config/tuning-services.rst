@@ -9,6 +9,8 @@ You can set the priority of tasks on the UForge platform in the file ``services_
 
 You can run COMMAND with an adjusted value for the nice value, which affects process scheduling. This allows you to fine tune the order in which services are treated by the platform and allows you to improve performances. 
 
+.. note:: If the event controller profile in ``services_conf.json`` is modified, you must restart the eventcontroller service in order for the modification to be taken into account.
+
 Modifying a Configuration Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

@@ -18,6 +18,8 @@ Enhancements
 * Improve display of error details for failed migrations
 * Enhance Clone Appliance view to display the version and revision of the current appliance to be cloned
 * Improve usability of the add and delete actions on MySoftware page
+* Clicking on "UForge AppCenter" (top-left corner) now redirects the user to the dashboard
+* Clicking on an Appliance now redirects to the Stack tab
 
 3.8.fp5
 -------

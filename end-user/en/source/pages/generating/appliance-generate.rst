@@ -65,4 +65,19 @@ To generate a machine image:
 
 		.. image:: /images/docker-image-publish.png
 
+.. _appliance-openshift-image:
+
+Generating an Openshift Image
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note:: You cannot generate an Openshift image from a Windows template or a Windows scan.
+
+To generate a machine image:
+	1. Go to the ``Apps`` tab.
+	2. Select the appliance from the ``Appliance Library``. 
+	3. Click on the ``generate`` button at the top right to display all possible image formats which can be generated. 
+	4. Choose ``Cloud``, then ``Openshift`` image format. 
+	5. Fill the entrypoint in exec form. For example ``["/usr/sbin/httpd", "-DFOREGROUND"]``.
+	6. Click the ``generate`` button to launch a generation in UForge for this appliance template. 
+	7. Once the generation is complete, the Openshift image will be listed in your library under ``Machine Images``.
 

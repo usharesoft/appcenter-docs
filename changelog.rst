@@ -11,7 +11,7 @@ Release Date: 2018-07-20
 Enhancements
 ~~~~~~~~~~~~
 * UForge Amazon AWS images are now compatible with the system logs in AWS EC2 portal
-* Ability to use publish Windows 2016 appliances on Fujitsu K5 cloud
+* Ability to publish Windows 2016 appliances on Fujitsu K5 cloud
 
 Bug Fixes
 ~~~~~~~~~

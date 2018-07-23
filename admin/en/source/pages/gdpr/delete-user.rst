@@ -16,7 +16,7 @@ Use ``appliance_delete`` to delete the specified appliance, the following API ca
 
 In order to get the appliance ID {aid} for each appliance created by the user to be erased, use ``appliance_getAll`` API call has to be used:
 
-Example of how to get the list of IDs of all the appliance linked to a specific user named 'johndoe' :
+Example of how to get the list of IDs of all the appliances linked to a specific user named 'johndoe' :
 
 .. code-block:: shell
 

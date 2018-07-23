@@ -59,16 +59,18 @@ Normally the first step is to get the user information of the account being used
 	# Import the Uforge python API
 	from uforge.application import Api
 
-	login='username'
-	passwd='password'
+	login='root'
+	passwd='uforgedemo'
 
 	# Create the API object
-	api = Api(url = 'https://uforge.example.com/api',
+	api = Api(url = 'https://mylittleuforge.usharesoft.com/api',
 		username = login, password = passwd,
 		disable_ssl_certificate_validation = True)
 
 	# Send a request (getting the user object)
 	user = api.Users(login).Get()
+	if user is not None:
+	print user.loginName + ' - ' + user.email
 
 
 .. note:: All UForge Python objects are in the file ``objects.py``, contained in the Python SDK. You can find all attribute names for each object type.
@@ -90,19 +92,23 @@ The following code provides an example for constructing an appliance template. Y
 	from uforge.application import Api
 	from uforge.objects.uforge import *
 
-	login='username'
-	passwd='password'
+	login='root'
+	passwd='uforgedemo'
 
 	# Create the API object
-	api = Api(url = 'https://uforge.example.com/api',
+	api = Api(url = 'https://mylittleuforge.usharesoft.com/api',
 	    username = login, password = passwd,
 	    disable_ssl_certificate_validation = True)
 
 	# all Orgs
 	newOrg = api.Users(login).Orgs().Getall()
+	#for i in newOrg.orgs.org:
+	#    print i.uri + " - " + i.name
 
 	# all Distributions
 	newDistribution = api.Users(login).Distros.Getall()
+	#for i in newDistribution.distributions.distribution:
+	#    print i.uri + " - " + i.name + " " + i.version + " " + i.arch
 
 	newAppliance = appliance()
 	newAppliance.name = "app1testpythonsdk"
@@ -136,6 +142,8 @@ The following code shows how to create a new OS profile from a standard OS profi
 	# List available osprofiles for this distribution to apply on appliance
 	newProfile = api.Distributions(newDistribution.distributions.distribution[0].dbId).Profiles.Getall()
 	newProfile = newProfile.distribProfileTemplates.distribProfileTemplate
+	#for profile in newProfile:
+	#    print profile.name
 	print "Will set profile: " + newProfile[0].name + " - " + newProfile[0].uri
 
 	newApplianceOSProfile = distribProfile()
@@ -161,6 +169,7 @@ Once you are happy with the contents of an appliance template, you can then gene
 	# all target formats, search for VirtualBox
 	newTargetFormat = api.Users(login).Targetformats.Getall()
 	for i in newTargetFormat.targetFormats.targetFormat:
+	#    print i.uri + " - " + i.name
 	    if i.name == "VirtualBox":
 	        print "VirtualBox target format found for user " + login + "."
 	        break
@@ -201,11 +210,11 @@ In addition to projects and OSes, you can add your own personal software to an a
 
 	import os
 
-	login='username'
-	passwd='password'
+	login='root'
+	passwd='uforgedemo'
 
 	# Create the API object
-	api = Api(url = 'https://uforge.example.com/api',
+	api = Api(url = 'https://mylittleuforge.usharesoft.com/api',
 		username = login, password = passwd,
 		disable_ssl_certificate_validation = True)
 
@@ -297,17 +306,19 @@ You can also add third-party software to an appliance using projects. The catalo
 	from uforge.application import Api
 	from uforge.objects.uforge import *
 
-	login='username'
-	passwd='password'
+	login='root'
+	passwd='uforgedemo'
 
 	# Create the API object
-	api = Api(url = 'https://uforge.example.com/api',
+	api = Api(url = 'https://mylittleuforge.usharesoft.com/api',
 		username = login, password = passwd,
 		disable_ssl_certificate_validation = True)
 
 	# all Distributions
 	newDistribution = api.Users(login).Distros.Getall()
-	
+	#for i in newDistribution.distributions.distribution:
+	#	print i.uri + " - " + i.name + " " + i.version + " " + i.arch
+
 	# all Organisations
 	newOrg = api.Users(login).Orgs().Getall()
 
@@ -320,7 +331,7 @@ You can also add third-party software to an appliance using projects. The catalo
 	newMyProject.shortTag = "INTERNAL"
 	newMyProject.description = "test new project description"
 	newMyProject.company = company()
-	newMyProject.company.name = "MyCompany"
+	newMyProject.company.name = "UShareSoft"
 	newMyProject.license = license()
 	newMyProject.license.type = "Custom"
 	newMyProject.distributionUri = newDistribution.distributions.distribution[0].uri
@@ -361,11 +372,11 @@ Listing Target Formats and Target Platforms
 	from uforge.application import Api
 	from uforge.objects.uforge import *
 
-	login='username'
-	passwd='password'
+	login='root'
+	passwd='uforgedemo'
 
 	# Create the API object
-	api = Api(url = 'https://uforge.example.com/api',
+	api = Api(url = 'https://mylittleuforge.usharesoft.com/api',
 		username = login, password = passwd,
 		disable_ssl_certificate_validation = True)
 

@@ -3,6 +3,34 @@
 Changelog
 =========
 
+3.8-5
+-----
+
+Release Date: 2018-07-20
+
+Enhancements
+~~~~~~~~~~~~
+* UForge Amazon AWS images are now compatible with the system logs in AWS EC2 portal
+* Ability to publish Windows 2016 appliances on Fujitsu K5 cloud
+
+Bug Fixes
+~~~~~~~~~
+* UFORGE-10630 OS type attribute of CentOS is not correctly set on OVA/OVF base image generation
+* UFORGE-10590 Update Outscale connector to test ssh connection instead of reading log outputs
+* UFORGE-10432 Update Outscale regions in uforge portal and OMIs according to new Oustcale configuration
+* UFORGE-10655 C:fakepath is displayed when selecting an appliance archive to import
+* UFORGE-10705 Import a bundle first as first action will block subsequent template imports
+* UFORGE-10661 Instance may not start when running CentOS 6.5 to Hyper-V
+* UFORGE-10585 Publishing to Google Compute fails with "This Google certificate isnt correctly uploaded"
+* UFORGE-10511 login prompt is not shown in SLES 12 black box migration from ISO
+* UFORGE-10400 Failed to import OVA image into vCenter
+* UFORGE-10424 deploying multi-node UForge from 3.7.fp3 template instanciates multiple rabbitmq-servers
+* UFORGE-10332 Generation stucked at 55% and nothing work anymore after it
+* UFORGE-10550 OAR jobs logs show WELD "Exception in thread"
+* UFORGE-10441 Floating point exception occurs on uforge-scan.bin
+* UFORGE-10147 uforge-scan.bin stops by Segmentation fault on SLES 12
+
+
 3.8-4
 -----
 

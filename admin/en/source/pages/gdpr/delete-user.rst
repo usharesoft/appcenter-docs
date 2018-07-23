@@ -16,22 +16,22 @@ Use ``appliance_delete`` to delete the specified appliance, the following API ca
 
 In order to get the appliance ID {aid} for each appliance created by the user to be erased, use ``appliance_getAll`` API call has to be used:
 
-Example of how to get the list of IDs of all the appliance linked to a specific User:
+Example of how to get the list of IDs of all the appliance linked to a specific user named 'johndoe' :
 
 .. code-block:: shell
 
-	[jorge@jorge ~]$ curl "http://10.1.2.41/api/users/jorge2/appliances" -X GET -u jorge2:can.bin.hog -H "Accept: application/json" | json_pp  | grep applianceUri
+	[user@localhost ~]$ curl "http://uforge.example.com/api/users/{uid}/appliances" -X GET -u username:password -H "Accept: application/json" | json_pp  | grep applianceUri
 	  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
 	                                 Dload  Upload   Total   Spent    Left  Speed
 	100 30284    0 30284    0     0   166k      0 --:--:-- --:--:-- --:--:--  167k
-	                  "applianceUri" : "users/jorge2/appliances/201",
-	                  "applianceUri" : "users/jorge2/appliances/201",
-	                  "applianceUri" : "users/jorge2/appliances/203",
-	                  "applianceUri" : "users/jorge2/appliances/203",
-	                  "applianceUri" : "users/jorge2/appliances/204",
-	                  "applianceUri" : "users/jorge2/appliances/204"
-	                  "applianceUri" : "users/jorge2/appliances/301"
-	                  "applianceUri" : "users/jorge2/appliances/301",
+	                  "applianceUri" : "users/johndoe/appliances/201",
+	                  "applianceUri" : "users/johndoe/appliances/201",
+	                  "applianceUri" : "users/johndoe/appliances/203",
+	                  "applianceUri" : "users/johndoe/appliances/203",
+	                  "applianceUri" : "users/johndoe/appliances/204",
+	                  "applianceUri" : "users/johndoe/appliances/204"
+	                  "applianceUri" : "users/johndoe/appliances/301"
+	                  "applianceUri" : "users/johndoe/appliances/301",
 
 Note the IDs of all the appliances in order to use them as the `{aid}` parameter in ``appliance_delete``.
 
@@ -41,7 +41,7 @@ Note the IDs of all the appliances in order to use them as the `{aid}` parameter
 .. code-block:: shell
 
 	curl "https://uforge.example.com/api/users/{uid}/appliances/{aid}" -X DELETE \
-	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
+	-u username:password -H "Accept: application/xml"
 
 Deleting Imported Appliances
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -109,14 +109,14 @@ The following is an example of what needs to be deleted (some of these may be em
 
 .. code-block:: shell
 
-	DELETE FROM addr USING usharedb.AddressesAuth AS addr INNER JOIN usharedb.Customers as cu WHERE cu.db_id = addr.db_id and cu.db_id = '102';
-	DELETE FROM comp USING usharedb.CompaniesAuth AS comp INNER JOIN usharedb.Customers as cu WHERE cu.db_id = comp.db_id and cu.db_id = '102';
-	DELETE FROM lo 	 USING usharedb.LogosAuth     AS lo   INNER JOIN usharedb.Customers as cu WHERE cu.db_id = lo.db_id   and cu.db_id = '102';
-	DELETE FROM cu USING usharedb.Customers AS cu WHERE cu.db_id = '102';
+	DELETE FROM addr USING usharedb.AddressesAuth  AS addr INNER JOIN usharedb.Customers as cu WHERE cu.db_id = addr.db_id and cu.db_id = '102';
+	DELETE FROM comp USING usharedb.CompaniesAuth  AS comp INNER JOIN usharedb.Customers as cu WHERE cu.db_id = comp.db_id and cu.db_id = '102';
+	DELETE FROM lo   USING usharedb.LogosAuth      AS lo   INNER JOIN usharedb.Customers as cu WHERE cu.db_id = lo.db_id   and cu.db_id = '102';
+	DELETE FROM cu   USING usharedb.Customers      AS cu   WHERE cu.db_id = '102';
 	DELETE FROM uo   USING uauthdb.lt_user_orgs    AS uo   INNER JOIN uauthdb.Customers  as cu   WHERE cu.db_id = uo.user_id   and cu.db_id = '102';
-	DELETE FROM uapi USING uauthdb.lt_user_apikeys AS uapi INNER JOIN uauthdb.Customers as cu   WHERE cu.db_id = uapi.user_id and cu.db_id = '102';
-	DELETE FROM addr USING uauthdb.Addresses       AS addr INNER JOIN uauthdb.Customers as cu   WHERE cu.db_id = addr.db_id   and cu.db_id = '102';
-	DELETE FROM comp USING uauthdb.Companies       AS comp INNER JOIN uauthdb.Customers as cu   WHERE cu.db_id = comp.db_id   and cu.db_id = '102';
-	DELETE FROM lo 	 USING uauthdb.Logos           AS lo   INNER JOIN uauthdb.Customers  as cu   WHERE cu.db_id = lo.db_id     and cu.db_id = '102';
-	DELETE FROM cu   USING uauthdb.Customers 	   AS cu   INNER JOIN usharedb.Customers as uscu WHERE cu.db_id = uscu.db_id   and cu.db_id = '102';
+	DELETE FROM uapi USING uauthdb.lt_user_apikeys AS uapi INNER JOIN uauthdb.Customers  as cu   WHERE cu.db_id = uapi.user_id and cu.db_id = '102';
+	DELETE FROM addr USING uauthdb.Addresses       AS addr INNER JOIN uauthdb.Customers  as cu   WHERE cu.db_id = addr.db_id   and cu.db_id = '102';
+	DELETE FROM comp USING uauthdb.Companies       AS comp INNER JOIN uauthdb.Customers  as cu   WHERE cu.db_id = comp.db_id   and cu.db_id = '102';
+	DELETE FROM lo   USING uauthdb.Logos           AS lo   INNER JOIN uauthdb.Customers  as cu   WHERE cu.db_id = lo.db_id     and cu.db_id = '102';
+	DELETE FROM cu   USING uauthdb.Customers       AS cu   INNER JOIN usharedb.Customers as uscu WHERE cu.db_id = uscu.db_id   and cu.db_id = '102';
 

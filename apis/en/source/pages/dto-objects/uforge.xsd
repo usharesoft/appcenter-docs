@@ -4354,9 +4354,9 @@
         <xs:complexContent>
             <xs:extension base="UForgeUploadObject">
                 <xs:sequence>
-                    <xs:element name="applianceUri" type="xs:anyURI" minOccurs="0">
+                    <xs:element name="parentUri" type="xs:anyURI" minOccurs="0">
                         <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the uri resource of the appliance template this machine image was generated from</xsd:documentation>
+                            <xsd:documentation xml:lang="en">the uri resource of the parent object this machine image was generated from</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                     <xs:element name="basePublishImagesUri" type="xs:anyURI" minOccurs="0">
@@ -4571,6 +4571,7 @@
                                 <xs:enumeration value="kvm"/>
                                 <xs:enumeration value="k5vmdk"/>
                                 <xs:enumeration value="lxc"/>
+                                <xs:enumeration value="openshift"/>
                                 <xs:enumeration value="openstackqcow2"/>
                                 <xs:enumeration value="openstackvdi"/>
                                 <xs:enumeration value="openstackvhd"/>
@@ -8372,7 +8373,24 @@
             </xsd:documentation>
         </xsd:annotation>
         <xs:complexContent>
-            <xs:extension base="PublishImageDocker">
+            <xs:extension base="PublishImage">
+                <xs:sequence>
+                    <xs:element name="namespace" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the namespace to use when registering the machine image</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="repositoryName" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the name to use when registering the machine image</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="tagName" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the tag name to use when registering the machine image</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                </xs:sequence>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
@@ -10725,6 +10743,7 @@
                                 <xs:enumeration value="google"/>
                                 <xs:enumeration value="cloudstack"/>
                                 <xs:enumeration value="openstack"/>
+                                <xs:enumeration value="openshift"/>
                                 <xs:enumeration value="vclouddirector"/>
                                 <xs:enumeration value="vsphere"/>
                                 <xs:enumeration value="k5"/>

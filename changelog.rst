@@ -22,6 +22,10 @@ Enhancements
 * Clicking on "UForge AppCenter" (top-left corner) now redirects the user to the dashboard
 * Clicking on an Appliance now redirects to the Stack tab
 
+API changes
+~~~~~~~~~~~
+* Update the Image DTO model: rename field applianceUri to parentUri.
+
 3.8.fp5
 -------
 

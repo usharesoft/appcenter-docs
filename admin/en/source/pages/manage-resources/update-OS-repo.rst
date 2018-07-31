@@ -7,7 +7,7 @@ Updating an OS Repository
 
 This procedure assumes that you have already populated an OS repository as described in :ref:`populate-db-os`.
 
-The following section give an example for updating CentOS. They can be adjusted for your particular version, and are applicable to OpenSUSE, RedHat Enterprise Linux and Scientific Linux.
+The following section gives an example for updating CentOS. They can be adjusted for your particular version, and are applicable to OpenSUSE, RedHat Enterprise Linux and Scientific Linux.
 
 
 1. Create the distribution repository. 

@@ -10,8 +10,11 @@ The following sections cover information regarding managing the UForge resources
 .. toctree::
    :titlesonly:
 
+   populate-db-OS
    manage-os
+   update-OS-repo
    create-custom-os
+   populate-db-example
    manage-formats
    windows
    scan-to-golden

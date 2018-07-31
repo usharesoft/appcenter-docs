@@ -2,12 +2,14 @@
 
 .. _manage-os:
 
-Viewing the Installed OSes
+Listing the Installed OSes
 --------------------------
 
 All the open source operating system versions are delivered as part of the UForge repository. Proprietary operating systems are not.
 
-To get the complete list of the currently supported operating systems on the UForge platform use the command ``uforge os list``.
+From the UI you can see the installed OSes by going to the ``Administration`` page and going to the ``Distributions`` tab.
+
+To get the complete list of the currently supported operating systems on the UForge platform using the CLI run the command ``uforge os list``.
 
 Log in to one of the UForge instances:
 
@@ -37,10 +39,10 @@ All the open source operating system versions are delivered as part of the UForg
 
 .. _os-list:
 
-Viewing the Enabled OSes
-------------------------
+Listing the Enabled OSes with CLI
+---------------------------------
 
-To get a list of the operating systems that are currently enabled on your UForge platform use the command ``uforge org os list``.
+To get a list of the operating systems that are currently enabled on your UForge platform using the CLI run the command ``uforge org os list``.
 
 Login to one of the UForge instances:
 
@@ -63,18 +65,46 @@ Login to one of the UForge instances:
 Adding an OS to an Organization
 -------------------------------
 
+You can add a supported OS using the UI or using the CLI.
+
 Older operating system versions (that for example have been EOL'd) or proprietary operating systems such as Red Hat Enterprise Linux are not automatically populated at the installation phase. Population of such operating system versions must be done manually after the initial installation of UForge is complete.
 
 .. note:: You can only add an operating system version that is officially supported by the UForge platform and has been certified by Fujitsu. 
 
 Before adding an OS to the organization you must retrieve data from the Fujitsu repository. For more information refer to :ref:`populate-db-os`.
 
+Adding an OS Using the UI
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In order to add an OS to an organisation you manage:
+
+	#. From the ``Administration`` page, go to the ``Distributions`` tab.
+	#. Click on ``add`` in the top left.
+	#. Select the distribution, version and architecture from the list.
+	#. Click ``add``.
+	#. You must add repositories to this distribution from the list of ``Available repositories`` by clicking on ``add``.
+
+		.. image:: /images/add-repo.png
+
+	#. You must populate the repositories. To do so, click on ``populate`` at the top right and follow the instructions in the pop-up window.
+
+		.. image:: /images/populate-popup.png
+
+	#. To add an OS profile (opional), go to the ``OS Profiles`` tab. You can create one by clicking on ``add os profile`` in the top right. Refer to :ref:`create-custom-os`.
+
+When adding CentOS, Debian and Red Hat, the major versions are automatically marked as Milestones when the distribution is added to the platform. For more information on Milestones, refer to :ref:`manage-milestone`.
+
+
+Adding an OS Using the CLI
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 In order to add an OS to an organization you must do the following:
 
-	1. Add the distribution to the organization. 
-	2. Create the repositories.
-	3. Attach the repository to the distribution.
-	4. Launch Spider to fill the repositories. 
+	#. Connect to one of your UForge platform instances.
+	#. Create the distribution in the organization. 
+	#. Create the repositories. This includes the official repository (see :ref:`populate-official-repo`) as well as the specific UForge tool repository (see :ref:`populate-tool-repo`). This is covered in steps 6 and 7 in the section :ref:`populate-centos`.
+	#. Attach the repository to the distribution.
+	#. Launch Spider to fill the repositories with the packages. 
 
 This must be done for each version of an OS. For example CentOS 6.5 i386. It is not possible to do this for all CentOS versions at once.
 
@@ -112,10 +142,27 @@ For example, to add CentOS 6.5 i386:
 
 When adding CentOS, Debian and Red Hat, the major versions are automatically marked as Milestones when the distribution is added to the platform. For more information on Milestones, refer to :ref:`manage-milestone`.
 
+
+.. _creating-repo:
+
+Creating a Repository Using UI
+-------------------------------
+
+You can manage existing repositories and create new ones from the UForge UI, from the ``Administration`` page.
+
+	#. Go to the ``Repositories`` tab. The existing repositories will be listed.
+	#. To create a new repo, click on ``add repository`` in the top right.
+	#. Enter the name and URL.
+
+		.. image:: /images/create-repo.png
+
+	.. note:: Check ``core repositories`` for all the default repositories of officially supported OSes (for a list of supported OSes, refer to :ref: uforge-supported-os-formats). Do not check this box for repositories that are not part of the core distribution, such as epel or VMware tools. When generating a machine image, packages tagged as ``core`` are installed first, before other packages.
+
+
 .. _updating-repo:
 
-Updating a Repository
----------------------
+Updating a Repository Using CLI
+-------------------------------
 
 You can manually launch an update of a specific repository using ``uforge org repo refresh``. To do this, you must have the ``repoId``, which you can find using ``uforge org repo list``. For example, to launch the update:
 
@@ -137,7 +184,7 @@ To view a list of all the updates launched, use: ``uforge org repo refresh list`
 Removing OSes and Distributions
 -------------------------------
 
-You cannot remove an OS from an organization once added. You can only disable it, in which case it can no longer be used. To disable a distribution, for example CentOS for all users of an organization you can specify only the OS name, in which case all the versions will be removed::
+You cannot remove an OS from an organization once added. You can only disable it, in which case it can no longer be used. To disable a distribution, for example CentOS, for all users of an organization specify only the OS name, in which case all the versions will be disabled::
 
 	$ uforge org os disable --name CentOS -u $ADMIN -p $PASS
 

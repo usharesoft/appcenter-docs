@@ -12,7 +12,7 @@ Attributes
 
 The list of attributes for ``image`` are:
 
-	* ``applianceUri`` (anyURI): the uri resource of the appliance template this machine image was generated from
+	* ``parentUri`` (anyURI): the uri resource of the parent object this machine image was generated from
 	* ``basePublishImagesUri`` (anyURI): the uri resource to retrieve all the published machine images information (see :ref:`publishimage-object`)
 	* ``completeInstalledSize`` (long): estimated disk size to install the machine image (in bytes)
 	* ``completeSize`` (long): the size (in bytes) of the machine image

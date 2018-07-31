@@ -58,6 +58,7 @@ function copy-uforge-api() {
         cp -v $UFORGE_DIR/UForgeAPI/target/xslt/dto/*.rst $BASEDIR/apis/en/source/pages/dto-objects
         # careful with the space in "uForge API" directory, need the double quote
         cp -v "$(find $UFORGE_DIR/uForgeRest/target/xslt/ -name index.rst)" $BASEDIR/apis/en/source/
+        cp -v -r "$(find $UFORGE_DIR/uForgeRest/target/xslt/ -type d -name pages)" $BASEDIR/apis/en/source/
         cp -v $UFORGE_DIR/uForgeRest/target/wadl/application.wadl $BASEDIR/apis/en/source/pages
         cp -v $UFORGE_DIR/uForgeRest/target/wadl/uforge.xsd $BASEDIR/apis/en/source/pages/dto-objects
 

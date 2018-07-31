@@ -16,6 +16,7 @@ New Features
 
 Enhancements
 ~~~~~~~~~~~~
+* UForge Microsoft Azure images now use the Azure agent version 2.2.18 for CentOS
 * Improve display of error details for failed migrations
 * Enhance Clone Appliance view to display the version and revision of the current appliance to be cloned
 * Improve usability of the add and delete actions on MySoftware page

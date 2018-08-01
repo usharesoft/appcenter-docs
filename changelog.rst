@@ -11,7 +11,7 @@ Release Date: 2018-08-20
 New Features
 ~~~~~~~~~~~~
 * New option to migrate (Lift & Shift) an instance without transferring any overlay information (only keep the operating system information, remove software application and users data)
-* Using uforge-sync binary, users can now synchronize the target environment with scans (without overlay) of Ubuntu 16.04, 14.04 systems.
+* Using uforge-sync binary, users can now synchronize the target environment with scans (without overlay) of Ubuntu 16.04, 14.04, 12.04 systems.
 * Support generation and publication of Linux machine images for OpenShift. However, it is no longer possible to publish from a Docker image to OpenShift.
 
 Enhancements

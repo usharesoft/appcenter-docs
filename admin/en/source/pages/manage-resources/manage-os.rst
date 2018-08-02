@@ -163,16 +163,6 @@ You can manage existing repositories and create new ones from the UForge UI, fro
 
 .. _updating-repo:
 
-Updating a Repository Using UI
--------------------------------
-
-You can modify or update a repository from the UI, from the ``Administration`` page.
-
-	#. Go to the ``Repositories`` tab. The existing repositories will be listed.
-	#. Click on the pencil icon on the right of the repository you want to update.
-	#. Modify the information and click ``update``.
-
-		.. image:: /images/update-repo.png
 
 Updating a Repository Using CLI
 -------------------------------

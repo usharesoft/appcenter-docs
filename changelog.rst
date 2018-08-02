@@ -22,6 +22,7 @@ Enhancements
 * Improve usability of the add and delete actions on MySoftware page
 * Clicking on "UForge AppCenter" (top-left corner) now redirects the user to the dashboard
 * Clicking on an Appliance now redirects to the Stack tab
+* Ability to publish Windows 2016 appliances on Fujitsu K5 cloud
 
 API changes
 ~~~~~~~~~~~

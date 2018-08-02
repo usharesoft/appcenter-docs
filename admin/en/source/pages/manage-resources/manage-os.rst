@@ -170,7 +170,7 @@ You can modify or update a repository from the UI, from the ``Administration`` p
 
 	#. Go to the ``Repositories`` tab. The existing repositories will be listed.
 	#. Click on the pencil icon on the right of the repository you want to update.
-	#. In the pop-up window, modify the information and click ``update``.
+	#. Modify the information and click ``update``.
 
 		.. image:: /images/update-repo.png
 

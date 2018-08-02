@@ -1,39 +1,5 @@
 .. Copyright 2018 FUJITSU LIMITED
 
-.. _populate-db-os:
-
-Populating Database with OS Packages
-====================================
-
-Open source operating system versions are taken from the official repository mirror or the UForge repository cache. Proprietary operating systems such as Red Hat Enterprise Linux are not; therefore it is the responsibility of the end customer (or reseller if they have correct agreements in place to re-distribute an operating system) to have the original ISO images of the operating system in questions. Refer to :ref:`proprietary-pkg`.
-
-To enable UForge to generate images based on the operating system it needs all the meta-data of the packages comprising the operating system. This meta-data includes the location in the storage of the package as well as dependency information that is used during generation. Furthermore, certain specific UForge packages must be populated for this operating system.
-
-.. note:: Custom repositories are supported in UForge. They are treated like other OS packages.
-
-.. warning:: When using UForge, you have to comply with the license agreement of OSes and software which UForge handles, in particular:
-	
-	* Publishing OS image of RHEL (Red Hat Enterprise Linux) subscription to public cloud
-		Cloud provider has to be CCSP (Certified Cloud & Service Provider) and you must register to Red Hat Cloud Access. For more details, please confirm with cloud provider.
-	
-	* Scanning server
-		You have to check whether the licenses of OS and software which the source machine contains allow you to use them on the destination server which you are migrating to. If the source machine contains rpm packages which Red Hat provides, you must register repository with these rpm packages to UForge. Unless you register repository, UForge automatically regenerates rpm packages which the source machine contains, and regenerated packages are NOT supported by Red Hat.
-
-	* Handling Microsoft Windows
-		Refer to :ref:`windows-uforge`.
-
-.. note:: When installing a major version, all minor versions will be included. If you want to restrict to only a few minor versions, you will have to follow this procedure for each minor version you want to install. You should note however, that a scan will take longer if not all minor versions of a distribution are install in your UForge AppCenter. For example, if you scan a CentOS 6.8 machine, but your AppCenter has only been populated with packages up to CentOS 6.7, then the AppCenter will use the machine's yum repo to download the missing packages. As a result, the scan will take longer before completing. 
-
-.. warning:: If you are going to use the migration feature for RHEL or CentOS, you must add the major OS version to UForge AppCenter and attach to this major OS version all the repositories of the OS minor versions.
-
-In order to add an operating system in your UForge AppCenter you must:
-
-	1. Connect to one of your UForge platform instances
-	2. Create the OS in the organization.
-	3. Create the repository. This includes the official repository (see :ref:`populate-official-repo`) as well as the specific UForge tool repository (see :ref:`populate-tool-repo`). This is covered in steps 6 and 7 in the section :ref:`populate-centos`.
-	4. Link the distribution to the repository.
-	5. Launch spider to fill the repository with the packages.
-
 .. _populate-official-repo:
 
 Official UForge Tool Repositories
@@ -115,17 +81,20 @@ The following is a list of specific UForge tool repositories that can be added. 
 
 		* http://distros-repository.usharesoft.com/usharesoft/ubuntu/ trusty main
 
-Adding RPM Type OSes
---------------------
 
-The following sections give examples for adding CentOS and RedHat Enterprise Linux. They can be adjusted for your particular version, and are applicable to OpenSUSE and Scientific Linux.
+.. _populate-db-example:
+
+Adding RPM Type OSes Using CLI
+------------------------------
+
+The following sections give examples for adding CentOS and RedHat Enterprise Linux using the CLI. They can be adjusted for your particular version, and are applicable to OpenSUSE and Scientific Linux.
 
 .. _populate-centos:
 
 Example for Adding CentOS
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The following is a concrete example to begin the population of CentOS 6.5 64bit:
+The following is a concrete CLI example to begin the population of CentOS 6.5 64bit:
 
 	1. Connect to UForge:
 
@@ -287,10 +256,10 @@ The following is a concrete example to begin the population of Red Hat Enterpris
 
 		$ /opt/UShareSoft/uforge/bin/distro_sorter.sh -d RedHat -v 7 -a x86_64
 
-Adding DEB Type OSes
---------------------
+Adding DEB Type OSes Using CLI
+------------------------------
 
-The following section give an example for adding Ubuntu. It is also applicable for Debian.
+The following section give a CLI example for adding Ubuntu. It is also applicable for Debian.
 
 .. _populate-ubuntu:
 

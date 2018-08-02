@@ -25,8 +25,6 @@ This section assumes that you have completed the installation of your UForge pla
    modify-ip
    authentication-sso
    self-signed-cert
-   populate-db-OS
-   update-OS-repo
    proprietary-pkg
    populate-iso
    config-amp

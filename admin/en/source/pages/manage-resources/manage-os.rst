@@ -82,13 +82,15 @@ In order to add an OS to an organisation you manage:
 	#. Click on ``add`` in the top left.
 	#. Select the distribution, version and architecture from the list.
 	#. Click ``add``.
-	#. You must add repositories to this distribution from the list of ``Available repositories`` by clicking on ``add``.
+	#. You must add repositories to this distribution from the list of ``Available repositories`` on the ``Repositories`` tab. The repositories that you can add are listed in the bottom list. The top list is the list of repositories that have been added.
 
 		.. image:: /images/add-repo.png
 
 	#. You must populate the repositories. To do so, click on ``populate`` at the top right and follow the instructions in the pop-up window.
 
 		.. image:: /images/populate-popup.png
+
+	.. note:: The populate process will provide the base OS profiles.
 
 	#. To add an OS profile (opional), go to the ``OS Profiles`` tab. You can create one by clicking on ``add os profile`` in the top right. Refer to :ref:`create-custom-os`.
 
@@ -161,6 +163,17 @@ You can manage existing repositories and create new ones from the UForge UI, fro
 
 .. _updating-repo:
 
+Updating a Repository Using UI
+-------------------------------
+
+You can modify or update a repository from the UI, from the ``Administration`` page.
+
+	#. Go to the ``Repositories`` tab. The existing repositories will be listed.
+	#. Click on the pencil icon on the right of the repository you want to update.
+	#. In the pop-up window, modify the information and click ``update``.
+
+		.. image:: /images/update-repo.png
+
 Updating a Repository Using CLI
 -------------------------------
 
@@ -184,7 +197,9 @@ To view a list of all the updates launched, use: ``uforge org repo refresh list`
 Removing OSes and Distributions
 -------------------------------
 
-You cannot remove an OS from an organization once added. You can only disable it, in which case it can no longer be used. To disable a distribution, for example CentOS, for all users of an organization specify only the OS name, in which case all the versions will be disabled::
+You cannot remove an OS from an organization once added. You can only disable it, in which case it can no longer be used. 
+
+To disable a distribution, for example CentOS, for all users of an organization specify only the OS name, in which case all the versions will be disabled::
 
 	$ uforge org os disable --name CentOS -u $ADMIN -p $PASS
 

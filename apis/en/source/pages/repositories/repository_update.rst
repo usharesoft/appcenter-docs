@@ -51,7 +51,7 @@ Example of representation.xml content (the request body):
 		<name>Example Repository - Updated</name>
 		<url>http://example.com/newrepoUrl</url>
 		<packagingType>RPM</packagingType>
-		<officiallySupported>true</officiallySupported>
+		<coreRepository>true</coreRepository>
 	</ns0:repository>
 
 

@@ -50,7 +50,7 @@ Example of representation.xml content (the request body):
 		<name>Example Repository</name>
 		<url>http://example.com/repoUrl</url>
 		<packagingType>RPM</packagingType>
-		<officiallySupported>true</officiallySupported>
+		<coreRepository>true</coreRepository>
 	</ns0:repository>
 
 

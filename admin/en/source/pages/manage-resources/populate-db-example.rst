@@ -127,14 +127,14 @@ The following is a concrete CLI example to begin the population of CentOS 6.5 64
 
 			.. code-block:: shell
 
-				$ uforge org repo create --name "CentOS 6.5 os" --repoUrl http://vault.centos.org/6.5/os/x86_64/ --type RPM --officiallySupported -u $ADMIN -p $PASS
+				$ uforge org repo create --name "CentOS 6.5 os" --repoUrl http://vault.centos.org/6.5/os/x86_64/ --type RPM --coreRepository -u $ADMIN -p $PASS
 
 				Success: Created repository with url [http://vault.centos.org/6.5/os/x86_64/] to default organization
 
 		The ``--name`` specified does not need to be an official name. It is the repository name that will be shown in the UI when pinning an appliance.
 		The ``--repoUrl`` can be either ``http://`` or ``file://``.
 
-		.. warning:: You must use the ``--officiallySupported`` flag for all the default repositories of officially supported OSes (for a list of supported OSes, refer to :ref: `uforge-supported-os-formats`). Do not use ``--officiallySupported`` for repositories that are not part of the core distribution, such as epel or VMware tools. When generating a machine image, packages tagged as ``--officiallySupported`` are installed first, before other packages. 
+		.. warning:: You must use the ``--coreRepository`` flag for all the default repositories of officially supported OSes (for a list of supported OSes, refer to :ref: `uforge-supported-os-formats`). Do not use ``--coreRepository`` for repositories that are not part of the core distribution, such as epel or VMware tools. When generating a machine image, packages tagged as ``--coreRepository`` are installed first, before other packages. 
 
 		`http://distros-repository.usharesoft.com/ <http://distros-repository.usharesoft.com/>`_ is an official public repository that users can use to populate the distributions. Official repositories such as Ubuntu and Debian periodically delete some package versions. In the http://distros-repository.usharesoft.com/ repository, package versions are never deleted. This can facilitate investigations on older systems.
 
@@ -213,12 +213,12 @@ The following is a concrete example to begin the population of Red Hat Enterpris
 
 		.. code-block:: shell
 
-			$ uforge org repo create --name "RedHat 7" --repoUrl http://<your-repo> --type RPM --officiallySupported -u $ADMIN -p $PASS
+			$ uforge org repo create --name "RedHat 7" --repoUrl http://<your-repo> --type RPM --coreRepository -u $ADMIN -p $PASS
 
 		The ``--name`` specified here is the “tagname” that will be shown in the UI when creating an appliance.
 		The ``--repoUrl`` can be either ``http://`` or ``file://``.
 
-		.. warning:: You must use the ``--officiallySupported`` flag for all officially supported OSes. If you do not include this argument the packages will not appear in the install profile of appliances built with the corresponding operating system. Do not use ``--officiallySupported`` for distributions that are part of the core distribution. For example, epel or vmwatools are not officially part of the distribution, therefore you should not use ``--officiallySupported`` when adding such repositories.
+		.. warning:: You must use the ``--coreRepository`` flag for all officially supported OSes. If you do not include this argument the packages will not appear in the install profile of appliances built with the corresponding operating system. Do not use ``--coreRepository`` for distributions that are part of the core distribution. For example, epel or vmwatools are not officially part of the distribution, therefore you should not use ``--coreRepository`` when adding such repositories.
 
 	7. You must then add the specific UForge tool repository. The repository to attach for RedHat Enterprise Linux version 7 arch x86_64 is the following:
 
@@ -297,18 +297,18 @@ The following is a concrete example to begin the population of Ubuntu 10.04 64bi
 
 		.. code-block:: shell
 
-			$ uforge org repo create --name "Ubuntu x86_64 lucid-main" --repoUrl "[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/lucid-security/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid multiverse restricted universe main" --type DEB --officiallySupported -u $ADMIN -p $PASS
+			$ uforge org repo create --name "Ubuntu x86_64 lucid-main" --repoUrl "[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/lucid-security/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid multiverse restricted universe main" --type DEB --coreRepository -u $ADMIN -p $PASS
 
-			$ uforge org repo create --name "Ubuntu x86_64 lucid-security" --repoUrl "[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/lucid-security/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-security multiverse restricted universe main" --type DEB --officiallySupported -u $ADMIN -p $PASS
+			$ uforge org repo create --name "Ubuntu x86_64 lucid-security" --repoUrl "[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/lucid-security/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-security multiverse restricted universe main" --type DEB --coreRepository -u $ADMIN -p $PASS
 
-			$ uforge org repo create --name "Ubuntu x86_64 lucid-backports" --repoUrl "[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/lucid-backports/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-backports multiverse restricted universe main" --type DEB --officiallySupported -u $ADMIN -p $PASS
+			$ uforge org repo create --name "Ubuntu x86_64 lucid-backports" --repoUrl "[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/lucid-backports/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-backports multiverse restricted universe main" --type DEB --coreRepository -u $ADMIN -p $PASS
 
-			$ uforge org repo create --name "Ubuntu x86_64 lucid-updates" --repoUrl "[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/lucid-updates/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-updates multiverse restricted universe main" --type DEB --officiallySupported -u $ADMIN -p $PASS
+			$ uforge org repo create --name "Ubuntu x86_64 lucid-updates" --repoUrl "[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/lucid-updates/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-updates multiverse restricted universe main" --type DEB --coreRepository -u $ADMIN -p $PASS
 
 		The ``--name`` specified here is the “tagname” that will be shown in the UI when creating an appliance.
 		The ``--repoUrl`` can be either ``http://`` or ``file://``.
 
-		.. warning:: You must use the ``--officiallySupported`` flag for all officially supported OSes. If you do not include this argument the packages will not appear in the install profile of appliances built with the corresponding operating system. Do not use ``--officiallySupported`` for distributions that are part of the core distribution. For example, epel or vmwatools are not officially part of the distribution, therefore you should not use ``--officiallySupported`` when adding such repositories.
+		.. warning:: You must use the ``--coreRepository`` flag for all officially supported OSes. If you do not include this argument the packages will not appear in the install profile of appliances built with the corresponding operating system. Do not use ``--coreRepository`` for distributions that are part of the core distribution. For example, epel or vmwatools are not officially part of the distribution, therefore you should not use ``--coreRepository`` when adding such repositories.
 
 		The syntax of the repoURL for Debian based OSes follows that of the sources.list file.
 

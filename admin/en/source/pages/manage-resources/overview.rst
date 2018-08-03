@@ -5,17 +5,18 @@
 Managing Resources
 ==================
 
-The following sections cover information regarding managing the UForge resources.
+The following sections cover information regarding managing the UForge resources. All of these elements can be managed by the UForge Administrator from the page ``Administration``.
 
 .. toctree::
    :titlesonly:
 
+   manage-project-catalog
+   manage-formats
+   manage-credentials
    manage-os
    create-custom-os
-   manage-formats
    windows
    scan-to-golden
    golden-create
-   manage-project-catalog
    manage-categories
    manage-milestone

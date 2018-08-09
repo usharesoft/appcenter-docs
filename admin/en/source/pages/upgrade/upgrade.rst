@@ -57,9 +57,10 @@ To update the platform, use the "yum" command-line tool as follows:
 
 			$ systemctl start squid
 
-.. note:: When you are upgrading from UForge 3.8.FP3 or an earlier version there is an additional step to be done manually if you are in a multi-node environment. You have to copy the file ``/etc/UShareSoft/vault/root_token`` from database node to web service node and compute node(s). This file will be used to configure access to the secret manager.
+.. note:: If you are in a multi-node environment, there will be extra steps to do manually, depending on the version you are upgrading from. 
 
-.. note:: When you are upgrading from UForge 3.8.FP5 or an earlier version there is an additional step to be done manually if you are in a multi-node environment. You have to run the following commands on each nodes using the shared storage to update NFS mount options:
+	- For UForge 3.8.FP3 and earlier versions, copy the file ``/etc/UShareSoft/vault/root_token`` from database node to web service node and compute node(s). This file will be used to configure access to the secret manager. Then you will also need to follow the instructions for upgrading from FP5.
+	- For UForge 3.8.FP5 and earlier versions run the following commands on each nodes using the shared storage to update NFS mount options:
 
 	.. code-block:: shell
 

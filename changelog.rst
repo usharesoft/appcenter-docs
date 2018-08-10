@@ -3,6 +3,24 @@
 Changelog
 =========
 
+3.8.fp7
+-------
+
+Release Date: 2018-10-01
+
+New Features
+~~~~~~~~~~~~
+UForge adminstrator can manage distributions and repositories from the user interface
+
+API changes
+~~~~~~~~~~~
+* Update the Repository DTO model: rename field officiallySupported to coreRepository
+
+Deprecated Features
+~~~~~~~~~~~~~~~~~~~
+uforge CLI command option ``--officialySupported`` for command ``org repo create`` is deprecated. Use ``--coreRepository`` instead
+
+
 3.8.fp6
 -------
 

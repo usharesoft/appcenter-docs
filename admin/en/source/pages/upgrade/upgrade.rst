@@ -59,7 +59,7 @@ To update the platform, use the "yum" command-line tool as follows:
 
 .. note:: If you are in a multi-node environment, there will be extra steps to do manually, depending on the version you are upgrading from. 
 
-	- For UForge 3.8.FP3 and earlier versions, copy the file ``/etc/UShareSoft/vault/root_token`` from database node to web service node and compute node(s). This file will be used to configure access to the secret manager. Then you will also need to follow the instructions for upgrading from 3.8.FP5.
+	- For UForge 3.8.FP3 and earlier versions, copy the file ``/etc/UShareSoft/vault/root_token`` from database node to web service node and launch ``service tomcat restart`` on the web service node. This file will be used to configure access to the secret manager. Then you will also need to follow the instructions for upgrading from 3.8.FP5.
 	- For UForge 3.8.FP5 and earlier versions run the following commands on each node using the shared storage to update NFS mount options:
 
 	.. code-block:: shell

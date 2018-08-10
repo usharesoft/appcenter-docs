@@ -39,7 +39,7 @@ When you generate a machine image from the scan, all the information included in
 .. note:: If you plan to migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/solutions/cloud/k5/>`_, please note the following: 
 
 	- You must uninstall CloudBase-Init (if installed) before scanning.
-	- If you are migrating Windows to K5, the Administrator password will be changed randomly in K5. You will need to call K5 APIs to retrieve the password.
+	- After migration, the Administrator password will be changed randomly in K5. You will need to call K5 APIs to retrieve the password.
 
 	For more detailed information, refer to `FUJITSU Cloud Service K5 IaaS Features Handbook <https://k5-doc.jp-east-1.paas.cloud.global.fujitsu.com/doc/en/iaas/document/k5-iaas-features-handbook.pdf>`_.
 

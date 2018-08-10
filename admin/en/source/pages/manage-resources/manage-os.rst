@@ -86,11 +86,13 @@ In order to add an OS to an organisation you manage:
 
 		.. image:: /images/add-repo.png
 
+		You can also create new repositories by clicking on ``new``. You will be redirected to the page to create new repositories. For more information, refer to :ref:`creating-repo`.
+
 	#. You must populate the repositories. To do so, click on ``populate`` at the top right and follow the instructions in the pop-up window.
 
 		.. image:: /images/populate-popup.png
 
-	.. note:: The populate process will provide the base OS profiles.
+		.. note:: The populate process will provide the base OS profiles.
 
 	#. To add an OS profile (opional), go to the ``OS Profiles`` tab. You can create one by clicking on ``add os profile`` in the top right. Refer to :ref:`create-custom-os`.
 

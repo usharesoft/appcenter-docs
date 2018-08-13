@@ -41,8 +41,10 @@ Bug Fixes
 * 10811 Deployment of Linux images to Microsoft Azure does not take ssh key into account
 * 10478 Deleting a publication raises errors
 * 11045 Deleting two publications errors
+* 11059 Migration does not launch generation in a multi-node UForge environment
 * 11170 Impossible to delete a PublishImage that comes from a migration
 * 11171 Deleting an Image from a Scan does not work
+* 11318 Some dependencies of platform tools are not injected when generating from a scan
 
 3.8.fp5
 -------

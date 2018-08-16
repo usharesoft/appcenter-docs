@@ -45,6 +45,7 @@ Bug Fixes
 * 11170 Impossible to delete a PublishImage that comes from a migration
 * 11171 Deleting an Image from a Scan does not work
 * 11318 Some dependencies of platform tools are not injected when generating from a scan
+* 11343 uforge-install-config does not execute correctly for Ubuntu 14.04
 
 3.8.fp5
 -------

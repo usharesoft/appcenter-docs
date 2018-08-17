@@ -36,6 +36,10 @@ When you generate a machine image from the scan, all the information included in
 
 .. warning:: Currently, UForge is not able to migrate the Yum repository GPG keys. This means that the user will have to accept the repository GPG key when the user installs or updates a package. The user will have to do this only once per repository.
 
+.. note:: If you plan to migrate a CentOS 6 instance onto AWS with SELinux enabled, you must setup the SELinux context of the public key on the migrated instance.
+
+	For more detailed information, refer to `CentOS 6 Release Note <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS6.0/>`_.
+
 .. note:: If you plan to migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/solutions/cloud/k5/>`_, you must also uninstall CloudBase-Init (if installed) before scanning.
 
 	For more detailed information, refer to `official Fujitsu K5 IaaS Documentation <http://www.fujitsu.com/uk/Images/k5-iaas-features-handbook.pdf>`_.

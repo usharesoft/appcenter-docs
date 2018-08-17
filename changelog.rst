@@ -36,11 +36,11 @@ Bug Fixes
 * 8439 UForge version displayed in the portal is incorrect
 * 8724 The file name of a cloned software is incorrect
 * 9475 /etc/UShareSoft/uforge-install-config-CheckRootLogin.sh not found after CentOS blackbox migration to AWS
-* 10246 CLI timeout following subscription profile os add with many users
-* 10653 CLI command "template info --all" always displays 0
+* 10246 CLI timeout following `subscription os add` with many users
+* 10653 CLI command `template info --all` always displays 0
 * 10811 Deployment of Linux images to Microsoft Azure does not take ssh key into account
 * 10478 Deleting a publication raises errors
-* 11045 Deleting two publications errors
+* 11045 Deleting two publications raises errors
 * 11059 Migration does not launch generation in a multi-node UForge environment
 * 11170 Impossible to delete a PublishImage that comes from a migration
 * 11171 Deleting an Image from a Scan does not work

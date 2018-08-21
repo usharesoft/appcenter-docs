@@ -2,7 +2,7 @@
 
 .. _migration-process-blackbox:
 
-Black box Migration Process
+Black Box Migration Process
 ---------------------------
 
 The goal of black box migration (either using ``Re-platform`` or ``Lift & Shift``) is to reproduce a near identical copy of the currently running workload.  However, there will always be small differences between the two workloads after migration is complete, notably some services are disabled or enabled depending on the target machine image being created (refer to :ref:`service-state`). For more information on the differences after migration, refer to :ref:`source-target-diffs`. 
@@ -36,13 +36,20 @@ When you generate a machine image from the scan, all the information included in
 
 .. warning:: Currently, UForge is not able to migrate the Yum repository GPG keys. This means that the user will have to accept the repository GPG key when the user installs or updates a package. The user will have to do this only once per repository.
 
-.. note:: If you plan to migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/solutions/cloud/k5/>`_, you must also uninstall CloudBase-Init (if installed) before scanning.
+.. note:: If you plan to migrate a CentOS 6 instance onto AWS with SELinux enabled, you must setup the SELinux context of the public key on the migrated instance.
 
-	For more detailed information, refer to `official Fujitsu K5 IaaS Documentation <http://www.fujitsu.com/uk/Images/k5-iaas-features-handbook.pdf>`_.
+	For more detailed information, refer to `CentOS 6 Release Note <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS6.0/>`_.
+
+.. note:: If you plan to migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/solutions/cloud/k5/>`_, please note the following: 
+
+	- You must uninstall CloudBase-Init (if installed) before scanning.
+	- After migration, the Administrator password will be changed randomly in K5. You will need to call K5 APIs to retrieve the password.
+
+	For more detailed information, refer to `FUJITSU Cloud Service K5 IaaS Features Handbook <https://k5-doc.jp-east-1.paas.cloud.global.fujitsu.com/doc/en/iaas/document/k5-iaas-features-handbook.pdf>`_.
 
 .. note:: Currently, to publish to Microsoft Azure platform `<https://azure.microsoft.com/en-us/>`_ you must do the following before scanning:
 
-	1. Uninstall NetworkManager, which is not compatible with Azure (if installed).
+	1. Unless you are migrating from CentOS7+, uninstall network manager, which is not compatible with Azure, ie NetworkManager and network-manager packages (if installed).
 	2. Uninstall the Microsoft Azure agent, i.e. WALinuxAgent and waagent packages (if installed).
 
 .. warning:: Ubuntu 14.04 migration for Microsoft Azure target platform is not supported by UForge.

@@ -41,3 +41,5 @@ The following are mandatory parameters:
     * ``-d``: the migrated instance address
 
 .. note:: The usage of an SSH key pair is strongly recommended to connect to the migrated instance. You must specify the private key path using the ``-i`` parameter, and have the public key in the migrated instance's ``~/.ssh/authorized_keys`` file.
+
+If you encounter an error message indicating the SSL certificate subject name does not match the target host name, you can add the ``-k`` option to your command line to prevent ``uforge-sync.bin`` from strictly checking the SSL certificate.

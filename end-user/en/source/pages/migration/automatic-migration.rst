@@ -2,12 +2,12 @@
 
 .. _migration-automatic:
 
-Migrating Using Automatic Process
----------------------------------
+Migrating Using Lift & Shift
+----------------------------
 
-You can use the ``Lift & Shift`` tab on the ``Migrations`` page to complete a migration automatically. When you run an automatic migration, you cannot modify any of the elements of the system (this is also referred to as "black box migration").
+You can use the ``Lift & Shift`` tab on the ``Migrations`` page to complete a migration automatically. When you run an automatic migration, you cannot modify any of the elements of the system.
 
-.. note:: White box migration using the ``Lift & Shift`` tab is not currently possible. Refer to :ref:`migration-scan` if you want to run a white box migration. 
+.. note:: Refer to :ref:`migration-replatform` if you want to modify the machine before migration. 
 
 The automatic migration process includes the following steps:
 
@@ -20,7 +20,7 @@ The automatic migration process includes the following steps:
 Launching an Automatic Migration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-All pre-requisites listed for migration using a scan are also applicable to ``Lift & Shift`` (refer to :ref:`migration-prereq`).
+All pre-requisites listed in the section :ref:`migration-prereq` are also applicable to ``Lift & Shift`` migration.
 
 In order to run a migration:
 
@@ -53,7 +53,7 @@ In order to run a migration:
 
 	.. note:: You should note that if you cancel a migration, this will stop the process of migration at the step currently being done. Therefore, for example, if the image generation is complete, it will be visible on your platform. Also, if publication has started, this may incur costs. You should check your cloud account. For more details on the constraints of publishing an image, refer to :ref:`appliance-publish-machine-image`.
 
-	From the status page you can view more detailed information about the appliance scanned. Refer to :ref:`migration-details`.
+	From the status page you can view more detailed information about the scanned instance. Refer to :ref:`migration-details`.
 
 .. _migration-details:
 

@@ -20,7 +20,7 @@ The UForge Portal has the following pages, accessible from the left-hand sidebar
 	* ``Apps``: This is where your appliances are created and listed. You also go to this page to add custom software, update packages in appliances, and create images, among other things.
 	* ``Blueprints``: This page allows you to create and deploy multi-node applications.
 	* ``Deployments``: This area lists published images that have at least one instance running on Amazon, OpenStack, Cloudstack and Microsoft Azure. This menu is only visible if you have the correct entitlements. Contact your UForge administrator for more information.
-	* ``Collaboration``: This is a private area where you can share appliances with other users who are part of your workspace. These users must be invited and join your workspace. They can be part of your organization or part or another organization.
+	* ``Collaboration``: This is a private area where you can share appliances with other users who are part of your workspace. These users must be invited and join your workspace. They can be part of your organization or part of another organization.
 	* ``Migrations``: This is where you can launch a migration or scan.
 	* ``Credentials``: This is where you manage your cloud account information, SSH keys and API keys.
 	* ``Profile``: This is your UForge account information.

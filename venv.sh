@@ -55,12 +55,11 @@ function copy-uforge-api() {
 
     if [[ $REPLY =~ ^[Yy]$ ]]; then
         echo "Copying generated API files into apis/en/source/ ..."
+        cp -v $UFORGE_DIR/uForgeRest/target/wadl/uforge.xsd $BASEDIR/apis/en/source/pages/dto-objects/
+        cp -v $UFORGE_DIR/uForgeRest/target/wadl/application.wadl $BASEDIR/apis/en/source/pages/
+        UFORGE_API_DIR=$(find $UFORGE_DIR/uForgeRest/target/xslt -type d -name 'uForge API')
+        cp -r $UFORGE_API_DIR/index.rst $UFORGE_API_DIR/pages $BASEDIR/apis/en/source/
         cp -v $UFORGE_DIR/UForgeAPI/target/xslt/dto/*.rst $BASEDIR/apis/en/source/pages/dto-objects
-        # careful with the space in "uForge API" directory, need the double quote
-        cp -v "$(find $UFORGE_DIR/uForgeRest/target/xslt/ -name index.rst)" $BASEDIR/apis/en/source/
-        cp -v -r "$(find $UFORGE_DIR/uForgeRest/target/xslt/ -type d -name pages)" $BASEDIR/apis/en/source/
-        cp -v $UFORGE_DIR/uForgeRest/target/wadl/application.wadl $BASEDIR/apis/en/source/pages
-        cp -v $UFORGE_DIR/uForgeRest/target/wadl/uforge.xsd $BASEDIR/apis/en/source/pages/dto-objects
 
         echo "Fixing the generated index.rst to add the missing label for end-user doc if needed..."
         # the silent grep makes sure we don't do it if the label already exists

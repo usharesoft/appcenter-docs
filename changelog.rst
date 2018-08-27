@@ -3,6 +3,15 @@
 Changelog
 =========
 
+3.8.fp7
+-------
+
+Release Date: 2018-10-01
+
+Enhancements
+~~~~~~~~~~~~
+* UForge Microsoft Azure images now use the Azure agent version 2.2.21 for Ubuntu 14.04 and 16.04
+
 3.8.fp6
 -------
 

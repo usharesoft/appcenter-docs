@@ -59,6 +59,18 @@ The UForge UI is accessible in different languages. You can select the language 
 .. note:: The language choice is saved at the level of the browser and not of the user account. 
 
 
+.. _uforge-keyboard-actions:
+
+Keyboard Actions
+----------------
+
+.. _uforge-escape-key:
+Escape Key
+~~~~~~~~~~
+
+The UForge UI has enabled the hotkey Escape (ESC) which means the action of cancel or close the popup form without saving or executing anything.
+
+
 .. _uforge-basic-concepts:
 
 Basic Concepts

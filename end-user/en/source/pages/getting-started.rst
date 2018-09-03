@@ -65,6 +65,7 @@ Keyboard Actions
 ----------------
 
 .. _uforge-escape-key:
+
 Escape Key
 ~~~~~~~~~~
 

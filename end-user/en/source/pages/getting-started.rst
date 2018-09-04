@@ -69,7 +69,7 @@ Keyboard Actions
 Escape Key
 ~~~~~~~~~~
 
-The UForge UI has enabled the hotkey Escape (ESC) which means the action of cancel or close the popup form without saving or executing anything. It also refers to redirect the page whenever the behavior it's already implemented by the cancel/close button.
+The UForge UI uses the Escape (ESC) key as a hotkey to cancel or close a popup window without saving or executing any actions. However, in some cases, using the hotkey ESC will redirect you to a different page from the one from which the popup was opened.
 
 
 .. _uforge-basic-concepts:

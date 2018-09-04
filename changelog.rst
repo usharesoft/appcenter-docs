@@ -8,6 +8,10 @@ Changelog
 
 Release Date: 2018-10-01
 
+New Features
+~~~~~~~~~~~~
+* Support of hotkey Escape (ESC) to cancel/close a popup window.
+
 Enhancements
 ~~~~~~~~~~~~
 * UForge Microsoft Azure images now use the Azure agent version 2.2.21 for Ubuntu 14.04 and 16.04

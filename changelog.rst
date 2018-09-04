@@ -12,6 +12,10 @@ New Features
 ~~~~~~~~~~~~
 UForge adminstrator can manage distributions and repositories from the user interface
 
+Enhancements
+~~~~~~~~~~~~
+* UForge Microsoft Azure images now use the Azure agent version 2.2.21 for Ubuntu 14.04 and 16.04
+
 API changes
 ~~~~~~~~~~~
 * Update the Repository DTO model: rename field officiallySupported to coreRepository
@@ -19,7 +23,6 @@ API changes
 Deprecated Features
 ~~~~~~~~~~~~~~~~~~~
 uforge CLI command option ``--officialySupported`` for command ``org repo create`` is deprecated. Use ``--coreRepository`` instead
-
 
 3.8.fp6
 -------

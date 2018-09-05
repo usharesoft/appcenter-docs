@@ -49,10 +49,8 @@ When you generate a machine image from the scan, all the information included in
 
 .. note:: Currently, to publish to Microsoft Azure platform `<https://azure.microsoft.com/en-us/>`_ you must do the following before scanning:
 
-	1. Unless you are migrating from CentOS7+, uninstall network manager, which is not compatible with Azure, ie NetworkManager and network-manager packages (if installed).
+	1. Unless you are migrating from CentOS7+, uninstall network manager (if installed).
 	2. Uninstall the Microsoft Azure agent, i.e. WALinuxAgent and waagent packages (if installed).
-
-.. warning:: Ubuntu 14.04 migration for Microsoft Azure target platform is not supported by UForge.
 
 When you generate a machine image directly from a scan, the following steps are carried out:
 

@@ -2,8 +2,8 @@
 
 .. _create-custom-os:
 
-Creating Custom OS Profiles
----------------------------
+Creating Custom OS Profiles with UI
+-----------------------------------
 
 UForge provides a set of OS profiles. If you want to create another OS profile, you can create one using UForge's graphical user interface. 
 
@@ -11,26 +11,25 @@ UForge provides a set of OS profiles. If you want to create another OS profile, 
 
 To create a new OS profile:
 
-	#. Under the ``Administration`` tab, click ``OS Profiles``.
-	#. Click on the operating system you want to administer.  This will provide the current list of profiles this operating system has.
+	#. Under the ``Administration`` tab go to the ``Distributions`` tab.
+	#. Click on the operating system.  This will provide the current list of profiles this operating system has.
 
 		.. image:: /images/create-os-profile.png
 
-	#. Click on ``add os profile``.  
+	#. Go to the ``OS Profiles`` tab.
+	#. Click on ``add os profile`` in the top right.  
 
 		.. image:: /images/create-os-profile-button.png
 
 	#. Select the profile which will serve as the base for your custom OS profile.
 	#. Enter your profile name and click ``create``.
-	#. Enter a description (mandatory) and click ``save``.
-	#. Opionally, from the ``OS Packages`` tab you can select the package(s) you want to add to your OS profile and click ``save``. You can search for the package you want to add. The packages that you can add are listed in the top list. The bottom list is the list of packages that are currently part of the profile.
+	#. Search for the packages you want to add. Select the package(s) you want to add to your OS profile. The packages that you can add are listed in the top list. The bottom list is the list of packages that are currently part of the profile.
 
 		.. image:: /images/add-os-packages.png
 
-	#. Click ``Save``.
 
-Editing Custom OS Profiles
---------------------------
+Editing Custom OS Profiles Using UI
+-----------------------------------
 
 If you have created a custom OS profile, you can edit it at any time. 
 
@@ -40,14 +39,17 @@ If you have created a custom OS profile, you can edit it at any time.
 
 To edit your OS profile:
 
-	1. Under the ``Administration`` tab, click ``OS Profiles``.
-	2. Click on the operating system you want to administer.  This will provide the current list of profiles this operating system has.  
-	3. Click on the profile you want to edit.
+	#. Under the ``Administration`` tab, go to ``Distributions``.
+	#. Click on the operating system the OS profile is associated with.  
+	#. Go to the ``OS Profiles`` tab you will see a list of the current profiles this operating system has.  
+	#. To modify the name or description, click on the pencil icon on the right hand side. A pop-up with appear. Modify and click ``ok``.
+
+		.. image:: /images/edit-os-profile-name.png
+
+	#. To modify the packages, click on the OS profile in the list.
 
 		.. image:: /images/edit-os-profile.png
 
 		On this view, for Windows, you can see the distribution your OS profile is based on, its size, the date you created the OS profile in UForge (next to the OS profile name) as well as the last time it was edited.	
+	#. Search for the packages you want to add. Select the package(s) you want to add to your OS profile. The packages that you can add are listed in the top list. The bottom list is the list of packages that are currently part of the profile. 
 
-	4. You can edit the name and description from the Overview page.
-	5. To modify the packages included in your profile, click OS Packages. The packages that you can add are listed in the top list. The bottom list is the list of packages that are currently part of the profile. Select the package(s) you want to add or remove to your OS profile and click ``save``. You can search for the package you want to add. 
-	6. Click ``Save``.

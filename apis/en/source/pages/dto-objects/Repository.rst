@@ -19,7 +19,8 @@ The list of attributes for ``repository`` are:
 	* ``url`` (string): the URL endpoint of this repository
 	* ``packagingType``: the package type ths repository holds
 	* ``lastUpdated`` (dateTime): the date this repository last received a package update
-	* ``officiallySupported`` (boolean): boolean indicating whether this repository is officially supported
+	* ``coreRepository`` (boolean): boolean indicating when the repository is mandatory for a distribution to function properly.
+	* ``officiallySupported`` (boolean): DEPRECATED, will be removed in a future release. Use "coreRepository" instead.
 	* ``distributionsUriList`` (:ref:`UriList-object`): the list of uri resources for each operating system contained in this repository
 	* ``created`` (dateTime): the date the appliance template is created
 	* ``dbId`` (long): the database id of the object

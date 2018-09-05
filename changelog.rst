@@ -11,7 +11,7 @@ Release Date: 2018-10-01
 Enhancements
 ~~~~~~~~~~~~
 * UForge Microsoft Azure images now use the Azure agent version 2.2.21 for Ubuntu 14.04 and 16.04
-* UForge Microsoft Azure images now use the Azure agent version 2.2.18 for RHEL 6 and 7
+* UForge Microsoft Azure images now use the Azure agent version 2.2.18 for Red Hat Enterprise Linux 6 and 7
 
 3.8.fp6
 -------

@@ -64,7 +64,6 @@ To update the platform, use the "yum" command-line tool as follows:
 
 	.. code-block:: shell
 
-		$ umount /tmp/DISTROS
-		$ umount /tmp/USER_DATA
-		$ mount 192.20.777.205:/volume1/DISTROS/ /tmp/DISTROS -o defaults,noatime,nodiratime,vers=3,lookupcache=positive
-		$ mount 192.20.777.205:/volume1/USER_DATA/ /tmp/USER_DATA -o defaults,noatime,nodiratime,vers=3,lookupcache=positive
+		$ sed -i "s@vers=3@vers=3,lookupcache=positive@g" /etc/init.d/mountisos
+		$ service mountisos restart
+		$ systemctl daemon-reload

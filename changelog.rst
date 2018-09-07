@@ -15,6 +15,7 @@ UForge adminstrator can manage distributions and repositories from the user inte
 Enhancements
 ~~~~~~~~~~~~
 * UForge Microsoft Azure images now use the Azure agent version 2.2.21 for Ubuntu 14.04 and 16.04
+* UForge Microsoft Azure images now use the Azure agent version 2.2.18 for Red Hat Enterprise Linux 6 and 7
 
 API changes
 ~~~~~~~~~~~

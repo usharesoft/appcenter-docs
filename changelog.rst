@@ -14,6 +14,7 @@ UForge adminstrator can manage distributions and repositories from the user inte
 
 Enhancements
 ~~~~~~~~~~~~
+* Using uforge-sync binary, users can now synchronize the target environment with scans (without overlay) of Debian 6 systems.
 * UForge Microsoft Azure images now use the Azure agent version 2.2.21 for Ubuntu 14.04 and 16.04
 * UForge Microsoft Azure images now use the Azure agent version 2.2.18 for Red Hat Enterprise Linux 6 and 7
 

@@ -13,6 +13,8 @@ The five main steps of migration are as follows:
    4. The machine image is uploaded and registered to the target environment.
    5. The registered machine image (also known as a template in cloud terminology) can be used to provision one or more instances.  These instances have near identical content to the original live system.
 
+   ``Lift and Shift`` automatically executes steps 1, 2, 3 and 4. With ``Re-platform``, each of these steps are done manually, allowing the user to make the necessary changes after step 2.
+
    .. image:: /images/migration-process.jpg
 
 

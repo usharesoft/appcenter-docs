@@ -18,7 +18,7 @@ In order to migrate a system, it must meet the following conditions:
 	* The image formats must be in supported formats (refer to :ref:`supported-image-formats`)
 	* Any pre-install or post-install scripts on the system you are about to scan should only use ascii characters. Otherwise UForge AppCenter will return a scan error: ``DB Error – invalid characters``.
 	* Custom packages on the live system to be scanned should not contain references to package dependencies as relative path. They should be expressed as absolute paths.
-	* If custom packages are installed using ``--nodeps`` flag, the scan process will not detect these packages. When running ``RE-platform``, UForge AppCenter will check for these dependencies. If they are custom packages that are not on the live system, the generation will fail. Therefore, it is recommended to provide a custom repository with all the necessary custom packages. Otherwise, they can be added after the scan to the appliance template in ``My software``.
+	* If custom packages are installed using ``--nodeps`` flag, the scan process will not detect these packages. When running ``Re-platform``, UForge AppCenter will check for these dependencies. If they are custom packages that are not on the live system, the generation will fail. Therefore, it is recommended to provide a custom repository with all the necessary custom packages. Otherwise, they can be added after the scan to the appliance template in ``My software``.
 	* For Windows, the partition format must be NTFS
 	* For Windows, GPT is not supported.  Scanned Windows machine has to have MBR.
 

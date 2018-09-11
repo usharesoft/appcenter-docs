@@ -1,6 +1,6 @@
 .. Copyright 2018 FUJITSU LIMITED
 
-.. _migration-process-details:
+.. _migration-replatform:
 
 Migrating Using Re-platform
 ----------------------------

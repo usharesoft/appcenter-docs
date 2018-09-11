@@ -25,15 +25,25 @@ In order to migrate a system, it must meet the following conditions:
 
 .. warning:: Currently, UForge is not able to migrate the Yum repository GPG keys. This means that the user will have to accept the repository GPG key when the user installs or updates a package. The user will have to do this only once per repository.
 
-.. note:: If you plan to migrate a CentOS 6 instance onto AWS with SELinux enabled, you must setup the SELinux context of the public key on the migrated instance. For more detailed information, refer to `CentOS 6 Release Note <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS6.0>`_.
 
-.. note:: If you plan to migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/solutions/cloud/k5/>`_, you must also uninstall CloudBase-Init (if installed) before scanning.
+Migrating CentOS 6 to AWS
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you plan to migrate a CentOS 6 instance onto AWS with SELinux enabled, you must setup the SELinux context of the public key on the migrated instance. For more detailed information, refer to `CentOS 6 Release Note <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS6.0>`_.
+
+Migrating Windows to K5
+~~~~~~~~~~~~~~~~~~~~~~~
+
+If you plan to migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/solutions/cloud/k5/>`_, you must also uninstall CloudBase-Init (if installed) before scanning.
 
 	For more detailed information, refer to `official Fujitsu K5 IaaS Documentation <http://www.fujitsu.com/uk/Images/k5-iaas-features-handbook.pdf>`_.
 
-.. note:: Currently, to publish to Microsoft Azure platform `<https://azure.microsoft.com/en-us/>`_ you must do the following before scanning:
+Migrating to Microsoft Azure
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note:: Ubuntu 14.04 migration for Microsoft Azure target platform is not supported by UForge.
+
+Currently, to publish to Microsoft Azure platform `<https://azure.microsoft.com/en-us/>`_ you must do the following before scanning:
 
 	1. Uninstall NetworkManager, which is not compatible with Azure (if installed).
 	2. Uninstall the Microsoft Azure agent, i.e. WALinuxAgent and waagent packages (if installed).
-
-.. warning:: Ubuntu 14.04 migration for Microsoft Azure target platform is not supported by UForge.

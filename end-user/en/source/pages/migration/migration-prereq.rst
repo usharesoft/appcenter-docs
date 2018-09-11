@@ -41,9 +41,7 @@ If you plan to migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://
 Migrating to Microsoft Azure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. note:: Ubuntu 14.04 migration for Microsoft Azure target platform is not supported by UForge.
-
 Currently, to publish to Microsoft Azure platform `<https://azure.microsoft.com/en-us/>`_ you must do the following before scanning:
 
-	1. Uninstall NetworkManager, which is not compatible with Azure (if installed).
+	1. Unless you are migrating from CentOS7+ or Red Hat Enterprise Linux 7+, uninstall NetworkManager (if installed).
 	2. Uninstall the Microsoft Azure agent, i.e. WALinuxAgent and waagent packages (if installed).

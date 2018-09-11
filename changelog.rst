@@ -10,11 +10,21 @@ Release Date: 2018-10-01
 
 New Features
 ~~~~~~~~~~~~
-* Support of hotkey Escape (ESC) to cancel/close a popup window.
+* Support of hotkey Escape (ESC) to cancel/close a popup window
+* UForge adminstrator can manage distributions and repositories from the user interface
 
 Enhancements
 ~~~~~~~~~~~~
 * UForge Microsoft Azure images now use the Azure agent version 2.2.21 for Ubuntu 14.04 and 16.04
+* UForge Microsoft Azure images now use the Azure agent version 2.2.18 for Red Hat Enterprise Linux 6 and 7
+
+API changes
+~~~~~~~~~~~
+* Update the Repository DTO model: rename field officiallySupported to coreRepository
+
+Deprecated Features
+~~~~~~~~~~~~~~~~~~~
+uforge CLI command option ``--officialySupported`` for command ``org repo create`` is deprecated. Use ``--coreRepository`` instead
 
 3.8.fp6
 -------

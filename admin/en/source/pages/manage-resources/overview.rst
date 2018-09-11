@@ -13,8 +13,11 @@ The following sections cover information regarding managing the UForge resources
    manage-project-catalog
    manage-formats
    manage-credentials
+   populate-db-OS
    manage-os
+   update-OS-repo
    create-custom-os
+   populate-db-example
    windows
    scan-to-golden
    golden-create

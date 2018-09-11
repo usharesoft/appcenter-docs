@@ -8679,9 +8679,18 @@
                             <xsd:documentation xml:lang="en">the date this repository last received a package update</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
+                    <xs:element name="coreRepository" type="xs:boolean" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">
+                                boolean indicating when the repository is mandatory for a distribution to function properly.
+                            </xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
                     <xs:element name="officiallySupported" type="xs:boolean" minOccurs="0">
                         <xsd:annotation>
-                            <xsd:documentation xml:lang="en">boolean indicating whether this repository is officially supported</xsd:documentation>
+                            <xsd:documentation xml:lang="en">
+                                DEPRECATED, will be removed in a future release. Use "coreRepository" instead.
+                            </xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                     <xs:element name="distributionsUriList" type="UriList" minOccurs="0">

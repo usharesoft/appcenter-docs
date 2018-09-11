@@ -40,7 +40,7 @@ To add a new project:
 			* Category
 			* Maintainer
 
-		.. image:: /images/create-project2.png
+		.. image:: /images/create-project3.png
 
 	4. Click ``create``.
 

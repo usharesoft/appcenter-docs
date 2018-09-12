@@ -53,6 +53,8 @@ For Amazon, only full accounts can be used, trial accounts are not supported for
 
 	.. note:: Using this procedure, all deployed Linux virtual machines will have ssh port (22) open in their security group. All deployed Windows virtual machines will have RDP port (3389) and WinRM ports (5985, 5986) open in their security group.
 
+	.. note:: It may take a long time for a Windows virtual machine deployed to Azure to be provisioned.
+
 	.. note:: If you click on the delete (garbage) icon, this will stop your deployed instance and remove it from your cloud.
 
 	.. note:: For Windows images, you should check that there are no pending Microsoft updates when you scan the source system for deployment.

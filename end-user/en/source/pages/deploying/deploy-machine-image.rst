@@ -5,7 +5,7 @@
 Deploying a Machine Image
 --------------------------
 
-.. note:: Currently, Linux machine images published on Amazon, OpenStack, Cloudstack and Microsoft Azure can be deployed from UForge. You can deploy a Windows based appliance only to Amazon.
+.. note:: Currently, Linux machine images published on Amazon, OpenStack, Cloudstack and Microsoft Azure can be deployed from UForge. You can deploy a Windows based appliance only to Amazon and Azure.
 
 You can only deploy a machine image if you have AMP installed. For more information on installing AMP, refer to the official `Cloudsoft AMP documentation <https://docs.cloudsoft.io/>`_
 
@@ -37,13 +37,15 @@ For Amazon, only full accounts can be used, trial accounts are not supported for
 
 	8. In the deploy view, enter the name of the deployment. Click on ``deploy``. This will connect to cloud platform and launch your machine image instance. Once deployed, a green button will appear under the ``Status`` column.
 
-    For Linux images, you will need to input the ``Instance Name``, ``Minimal number of cores`` and ``Minimal RAM`` values
+    For Linux images, you will need to input the ``Instance Name``, ``Minimal number of cores`` and ``Minimal RAM`` values.
 
 		.. image:: /images/machine-image-deploy-popup-linux.png
 
-    For Windows images, you will need to supply an additional ``User name`` and ``User password`` for an administrator account to be used for ``WinRM``
+    For Windows images, you will need to supply an additional ``User name`` and ``User password`` for an administrator account to be used for ``WinRM``.
         
 		.. image:: /images/machine-image-deploy-popup-windows.png
+
+	.. note:: When deploying a Windows machine image to Azure, you cannot use ``Administrator`` or ``Guest`` as the ``User name``.
 
 	9. From the ``Deployments`` page you can see the instances deployed and their status. If the status is green it is up and running. If it is red, there has been an issue during deployment and/or it is stopped.
 
@@ -61,7 +63,25 @@ For Amazon, only full accounts can be used, trial accounts are not supported for
 
 	.. warning:: For Windows Server 2008R2, you need to upgrade WinRM to 3.0 on the source machine before scanning.
 
-	.. warning:: A Windows image with "Run Sysprep" enabled in its template configuration is not supported for deployment. You should uncheck ``Run Sysprep`` option in Install Profile, when you generate the image to deploy.
+	.. warning:: For Windows deployments to Azure, you need to perform the following operations on the source machine before scanning:
+
+		* Edit Windows Firewall rules as follows:
+
+			#. Enable the ``Windows Remote Management (HTTP-In)`` rule.
+			#. Define ``local address`` as "Any".
+
+		* Launch command prompt as administrator and run the following WinRM commands:
+
+		.. code-block:: shell
+
+			winrm qc
+			winrm set winrm/config/service/auth @{Basic="true"}
+			winrm set winrm/config/service @{AllowUnencrypted="true"}
+
+
+	.. warning:: For Amazon, a Windows image with ``Run Sysprep`` enabled in its template configuration is not supported for deployment. You should uncheck ``Run Sysprep`` option in Install Profile, when you generate the image to deploy.
+
+	.. warning:: For Azure, a Windows image with ``Run Sysprep`` disabled in its template configuration is not supported for deployment. You should check ``Run Sysprep`` option in Install Profile, when you generate the image to deploy.
 
 .. _list-deployment:
 

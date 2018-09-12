@@ -10,7 +10,8 @@ Release Date: 2018-10-01
 
 New Features
 ~~~~~~~~~~~~
-UForge adminstrator can manage distributions and repositories from the user interface
+* Support of hotkey Escape (ESC) to cancel/close a popup window
+* UForge administrator can manage distributions and repositories from the user interface
 
 Enhancements
 ~~~~~~~~~~~~

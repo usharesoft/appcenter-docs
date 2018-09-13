@@ -3,6 +3,31 @@
 Changelog
 =========
 
+3.8.fp7
+-------
+
+Release Date: 2018-10-01
+
+New Features
+~~~~~~~~~~~~
+* Support of hotkey Escape (ESC) to cancel/close a popup window
+* UForge administrator can manage distributions and repositories from the user interface
+* Users can deploy Windows instances from published machine images to Azure
+
+Enhancements
+~~~~~~~~~~~~
+* Using uforge-sync binary, users can now synchronize the target environment with scans (without overlay) of Debian 6 systems.
+* UForge Microsoft Azure images now use the Azure agent version 2.2.21 for Ubuntu 14.04 and 16.04
+* UForge Microsoft Azure images now use the Azure agent version 2.2.18 for Red Hat Enterprise Linux 6 and 7
+
+API changes
+~~~~~~~~~~~
+* Update the Repository DTO model: rename field officiallySupported to coreRepository
+
+Deprecated Features
+~~~~~~~~~~~~~~~~~~~
+uforge CLI command option ``--officialySupported`` for command ``org repo create`` is deprecated. Use ``--coreRepository`` instead
+
 3.8.fp6
 -------
 
@@ -11,20 +36,41 @@ Release Date: 2018-08-20
 New Features
 ~~~~~~~~~~~~
 * New option to migrate (Lift & Shift) an instance without transferring any overlay information (only keep the operating system information, remove software application and users data)
-* Using uforge-sync binary, users can now synchronize the target environment with scans (without overlay) of Ubuntu 16.04 systems.
+* Using uforge-sync binary, users can now synchronize the target environment with scans (without overlay) of Ubuntu 16.04, 14.04, 12.04 systems.
 * Support generation and publication of Linux machine images for OpenShift. However, it is no longer possible to publish from a Docker image to OpenShift.
 
 Enhancements
 ~~~~~~~~~~~~
+* UForge Microsoft Azure images now use the Azure agent version 2.2.18 for CentOS
 * Improve display of error details for failed migrations
 * Enhance Clone Appliance view to display the version and revision of the current appliance to be cloned
 * Improve usability of the add and delete actions on MySoftware page
 * Clicking on "UForge AppCenter" (top-left corner) now redirects the user to the dashboard
 * Clicking on an Appliance now redirects to the Stack tab
+* Ability to publish Windows 2016 appliances on Fujitsu K5 cloud
 
 API changes
 ~~~~~~~~~~~
 * Update the Image DTO model: rename field applianceUri to parentUri.
+
+Bug Fixes
+~~~~~~~~~
+* 5175 UI returns 500 call failed when portal has changed and requires clearing cache and reloading
+* 7195 /etc/sysconfig/system-config-firewall file created after migration though it is not supported in RHEL 5.2
+* 8050 CentOS 5 scan fails with duplicate GPG Pubkey package installed without explicit message
+* 8439 UForge version displayed in the portal is incorrect
+* 8724 The file name of a cloned software is incorrect
+* 9475 /etc/UShareSoft/uforge-install-config-CheckRootLogin.sh not found after CentOS blackbox migration to AWS
+* 10246 CLI timeout following `subscription os add` with many users
+* 10653 CLI command `template info --all` always displays 0
+* 10811 Deployment of Linux images to Microsoft Azure does not take ssh key into account
+* 10478 Deleting a publication raises errors
+* 11045 Deleting two publications raises errors
+* 11059 Migration does not launch generation in a multi-node UForge environment
+* 11170 Impossible to delete a PublishImage that comes from a migration
+* 11171 Deleting an Image from a Scan does not work
+* 11318 Some dependencies of platform tools are not injected when generating from a scan
+* 11343 uforge-install-config does not execute correctly for Ubuntu 14.04
 
 3.8.fp5
 -------

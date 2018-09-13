@@ -7,7 +7,7 @@ Updating an OS Repository
 
 This procedure assumes that you have already populated an OS repository as described in :ref:`populate-db-os`.
 
-The following section give an example for updating CentOS. They can be adjusted for your particular version, and are applicable to OpenSUSE, RedHat Enterprise Linux and Scientific Linux.
+The following section gives an example for updating CentOS. They can be adjusted for your particular version, and are applicable to OpenSUSE, RedHat Enterprise Linux and Scientific Linux.
 
 
 1. Create the distribution repository. 
@@ -16,14 +16,14 @@ The following section give an example for updating CentOS. They can be adjusted 
 
 		.. code-block:: shell
 
-			$ uforge org repo create --name "CentOS 6.5 os" --repoUrl http://vault.centos.org/6.5/os/x86_64/ --type RPM --officiallySupported -u $ADMIN -p $PASS
+			$ uforge org repo create --name "CentOS 6.5 os" --repoUrl http://vault.centos.org/6.5/os/x86_64/ --type RPM --coreRepository -u $ADMIN -p $PASS
 
 			Success: Created repository with url [http://vault.centos.org/6.5/os/x86_64/] to default organization
 
 		The ``--name`` specified here is the “tagname” that will be shown in the UI when creating an appliance.
 		The ``--repoUrl`` can be either ``http://`` or ``file://``.
 
-		.. warning:: You must use the ``--officiallySupported`` flag for all the default repositories of officially supported OSes. For a list of supported OSes, refer to the User Guide. Do not use ``--officiallySupported`` for repositories that are not part of the core distribution, such as epel or VMware tools. When generating a machine image, packages tagged as ``--officiallySupported`` are installed first, before other packages.
+		.. warning:: You must use the ``--coreRepository`` flag for all the default repositories of officially supported OSes. For a list of supported OSes, refer to the User Guide. Do not use ``--coreRepository`` for repositories that are not part of the core distribution, such as epel or VMware tools. When generating a machine image, packages tagged as ``--coreRepository`` are installed first, before other packages.
 
 2. Attach repository to the distribution as follows for each repository (your own repository and the UShareSoft tool repository)::
 

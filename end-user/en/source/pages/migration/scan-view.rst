@@ -2,8 +2,8 @@
 
 .. _migration-view-scan:
 
-Viewing a Scan
---------------
+Viewing and Using a Scan
+------------------------
 
 Once you have run a scan, you can view the scan details. 
 
@@ -11,7 +11,7 @@ To view the scans, go to the ``Re-platform`` tab on the ``Migrations`` page.  Al
 
 .. image:: /images/scanned-nodes.png
 
-From this page you can:
+From this page you can use the scans to do the following:
 
 .. toctree::
    :titlesonly:

@@ -66,6 +66,8 @@ You can create your own image formats from the UForge GUI. To do so:
 	1. Create a target platform.
 	2. Create a target format.
 
+.. _target-platform-create:
+
 `Create a Target Platform`
 
 To create a target platform:
@@ -75,14 +77,19 @@ To create a target platform:
 
 	.. image:: /images/target-platform-button.png
 
+	The following window will appear:
+
+	.. image:: /images/target-platform-create2.png
+
 	3. Enter the name of the target platform.
 	4. Select the type from the drop-down menu.
 	5. Optionally you can click on the plus (+) to add a logo.
 	6. If you do not want the target platform to be visible immediately, click on the check box next to ``Enable`` to deselect.
-	7. Click ``create`` in the top right to complete the creation.
+	7. You can add available target formats by selecting and clicking on the up arrow. The top list shows the formats that have been added to the target platform. To create new target formats, refer to the following section.
+	8. Click ``create`` in the top right to complete the creation.
 
-	.. image:: /images/target-platform-create.png
 
+.. _target-format-create:
 
 `Create a Target Format`
 

@@ -12,6 +12,7 @@ New Features
 ~~~~~~~~~~~~
 * Support of hotkey Escape (ESC) to cancel/close a popup window
 * UForge administrator can manage distributions and repositories from the user interface
+* Users can deploy Windows instances from published machine images to Azure
 
 Enhancements
 ~~~~~~~~~~~~

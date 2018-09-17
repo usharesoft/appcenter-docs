@@ -11,7 +11,7 @@ At the end of the migration process, you can synchronize the running migrated in
 
   * CentOS 6, 7
   * Red Hat Enterprise Linux 6, 7
-  * Debian 7, 8
+  * Debian 6, 7, 8
   * Ubuntu 16.04, 14.04, 12.04
   * openSUSE 42
 

@@ -3,6 +3,15 @@
 Changelog
 =========
 
+3.8.fp8
+-------
+
+Release Date: 2018-10-29
+
+Enhancements
+~~~~~~~~~~~~
+* Using uforge-sync binary, users can now synchronize the target environment with scans (without overlay) of openSUSE 42 systems.
+
 3.8.fp7
 -------
 
@@ -12,10 +21,11 @@ New Features
 ~~~~~~~~~~~~
 * Support of hotkey Escape (ESC) to cancel/close a popup window
 * UForge administrator can manage distributions and repositories from the user interface
+* Users can deploy Windows instances from published machine images to Azure
 
 Enhancements
 ~~~~~~~~~~~~
-* Using uforge-sync binary, users can now synchronize the target environment with scans (without overlay) of openSUSE 42 systems.
+* Using uforge-sync binary, users can now synchronize the target environment with scans (without overlay) of Debian 6 systems.
 * UForge Microsoft Azure images now use the Azure agent version 2.2.21 for Ubuntu 14.04 and 16.04
 * UForge Microsoft Azure images now use the Azure agent version 2.2.18 for Red Hat Enterprise Linux 6 and 7
 

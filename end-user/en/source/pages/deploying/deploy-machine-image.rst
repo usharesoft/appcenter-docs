@@ -12,6 +12,40 @@ You can only deploy a machine image if you have AMP installed. For more informat
 The credentials to deploy a machine image are those used to publish it.
 For Amazon, only full accounts can be used, trial accounts are not supported for publishing images from UForge.
 
+Pre-requisites
+~~~~~~~~~~~~~~~
+
+Check the following before starting your deployment.
+
+	For Windows:
+
+	* Check that there are no pending Microsoft updates when you scan the source system for deployment.
+	* For Windows Server 2008R2, you need to upgrade WinRM to 3.0 on the source machine before scanning.
+	* For Windows deployments to Azure, do the following on the source machine before scanning:
+
+		* Edit Windows Firewall rules as follows:
+
+			#. Enable the ``Windows Remote Management (HTTP-In)`` rule.
+			#. Define ``local address`` as "Any".
+
+		* Launch command prompt as administrator and run the following WinRM commands:
+
+		.. code-block:: shell
+
+			winrm qc
+			winrm set winrm/config/service/auth @{Basic="true"}
+			winrm set winrm/config/service @{AllowUnencrypted="true"}
+
+
+	* For Amazon, a Windows image with ``Run Sysprep`` enabled in its template configuration is not supported for deployment. You should uncheck ``Run Sysprep`` option in Install Profile, when you generate the image to deploy.
+	* For Azure, a Windows image with ``Run Sysprep`` disabled in its template configuration is not supported for deployment. You should check ``Run Sysprep`` option in Install Profile, when you generate the image to deploy.
+
+	.. note:: For all deployed Windows virtual machines, if WinRM service is not enabled by default, then it will be activated during the deployment process.
+
+
+Deployment Procedure
+~~~~~~~~~~~~~~~~~~~~
+
 	1. If not already done, create an account for the target environment.  For more information, see :ref:`account-cloud-accounts`.
 	2. Go to the appliance and click the ``Machine Images`` page. If you have not generated a machine image, you will need to do so as described in :ref:`appliance-generate-machine-image`.
 
@@ -55,35 +89,10 @@ For Amazon, only full accounts can be used, trial accounts are not supported for
 
 	.. note:: It may take a long time for a Windows virtual machine deployed to Azure to be provisioned.
 
-	.. note:: If you click on the delete (garbage) icon, this will stop your deployed instance and remove it from your cloud.
-
-	.. note:: For Windows images, you should check that there are no pending Microsoft updates when you scan the source system for deployment.
-
-	.. note:: For all deployed Windows virtual machines, if WinRM service is not enabled by default, then it will be activated during the deployment process.
+	10. To stop a deployed instance, click on the delete (garbage) icon. This will remove it from your cloud.
 
 	.. warning:: Terminating an OpenStack deployment may fail due to `a known issue in AMP <https://issues.apache.org/jira/browse/JCLOUDS-1318>`_. Click again on the delete (garbage) icon to work around the issue.
 
-	.. warning:: For Windows Server 2008R2, you need to upgrade WinRM to 3.0 on the source machine before scanning.
-
-	.. warning:: For Windows deployments to Azure, you need to perform the following operations on the source machine before scanning:
-
-		* Edit Windows Firewall rules as follows:
-
-			#. Enable the ``Windows Remote Management (HTTP-In)`` rule.
-			#. Define ``local address`` as "Any".
-
-		* Launch command prompt as administrator and run the following WinRM commands:
-
-		.. code-block:: shell
-
-			winrm qc
-			winrm set winrm/config/service/auth @{Basic="true"}
-			winrm set winrm/config/service @{AllowUnencrypted="true"}
-
-
-	.. warning:: For Amazon, a Windows image with ``Run Sysprep`` enabled in its template configuration is not supported for deployment. You should uncheck ``Run Sysprep`` option in Install Profile, when you generate the image to deploy.
-
-	.. warning:: For Azure, a Windows image with ``Run Sysprep`` disabled in its template configuration is not supported for deployment. You should check ``Run Sysprep`` option in Install Profile, when you generate the image to deploy.
 
 .. _list-deployment:
 

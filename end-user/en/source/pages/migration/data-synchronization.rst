@@ -17,6 +17,8 @@ At the end of the migration process, you can synchronize the running migrated in
 
 From the scan detail view, you can get the instructions to synchronize your data by clicking the ``Synchronize`` button.
 
+.. note:: ``uforge-sync`` is based on ``rsync``, which does not handle BTRFS subvolume synchronization well. If you plan you synchronize ``snapshots`` directories from a BTRFS partition, it is better to exclude these directories from the scan and use another tool to handle synchronization, based on `btrfs send` and `btrfs receive`. 
+
 Download the uforge-sync Tool
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

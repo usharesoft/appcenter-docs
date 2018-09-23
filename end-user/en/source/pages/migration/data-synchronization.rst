@@ -13,6 +13,7 @@ At the end of the migration process, you can synchronize the running migrated in
   * Red Hat Enterprise Linux 6, 7
   * Debian 6, 7, 8
   * Ubuntu 16.04, 14.04, 12.04
+  * openSUSE 42
 
 From the scan detail view, you can get the instructions to synchronize your data by clicking the ``Synchronize`` button.
 

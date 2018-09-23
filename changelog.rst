@@ -3,6 +3,15 @@
 Changelog
 =========
 
+3.8.fp8
+-------
+
+Release Date: 2018-10-29
+
+Enhancements
+~~~~~~~~~~~~
+* Using uforge-sync binary, users can now synchronize the target environment with scans (without overlay) of openSUSE 42 systems.
+
 3.8.fp7
 -------
 

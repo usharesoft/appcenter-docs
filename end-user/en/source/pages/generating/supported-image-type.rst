@@ -83,7 +83,8 @@ With UForge you can create machine images in the following formats.
 |                                     | CloudStack Citrix Xen (VHD)                           |
 |                                     | CloudStack KVM (QCOW2)                                |
 +-------------------------------------+-------------------------------------------------------+
-| Fujitsu K5                          | 32 bit OSes are not supported                         |
+| Fujitsu K5                          | 32 bit OSes are not supported.                        |
+|                                     | For Windows, Evaluation Editions are not supported    |
 +-------------------------------------+-------------------------------------------------------+
 | Google Compute Engine               | none                                                  |
 +-------------------------------------+-------------------------------------------------------+

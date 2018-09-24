@@ -19,6 +19,7 @@ Check the following before starting your deployment.
 
 	For Windows:
 
+	* Windows Evaluation Editions are not supported
 	* Check that there are no pending Microsoft updates when you scan the source system for deployment.
 	* For Windows Server 2008R2, you need to upgrade WinRM to 3.0 on the source machine before scanning.
 	* For Windows deployments to Azure, do the following on the source machine before scanning:

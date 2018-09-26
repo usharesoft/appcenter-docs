@@ -6,11 +6,12 @@ Changelog
 3.8.fp8
 -------
 
-Release Date: 2018-10-29
+Release Date: 2018-11-12
 
 Enhancements
 ~~~~~~~~~~~~
 * Using uforge-sync binary, users can now synchronize the target environment with scans (without overlay) of openSUSE 42 systems.
+* Blueprint deploy view has been improved. Appliances used in the blueprint, with their readiness status, are now displayed.
 
 3.8.fp7
 -------

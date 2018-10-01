@@ -7,7 +7,8 @@ Creating a Golden Image Manually
 
 .. note:: A good knowledge of Microsoft Windows is required to create your own Golden Images manually. This method is more complex than creating a Golden Image by scanning a Windows machine and importing the scan as Golden Image. We strongly recommend you create your golden from scan. Please refer to :ref:`scan-to-golden`.
 
-.. warning:: Support services do not provide support for golden images created manually.
+.. warning:: It is the responsibility of the UForge administrator to ensure that golden images are created by following the steps below.  Not following the procedure could result in dysfunctional machine images.
+
 
 Generating all the profiles available (in one language) takes roughly 4 to 7 hours depending on the machine/network performance. The Golden Image includes all updates at the moment when generated and therefore you will not need to run package updates later. 
 

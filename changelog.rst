@@ -11,6 +11,7 @@ Release Date: 2018-10-29
 Enhancements
 ~~~~~~~~~~~~
 * Using uforge-sync binary, users can now synchronize the target environment with scans (without overlay) of openSUSE 42 systems.
+* Improve usability of the add and delete actions on Projects page
 
 3.8.fp7
 -------

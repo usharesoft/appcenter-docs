@@ -17,9 +17,10 @@ To deploy a blueprint:
 	#. Select the cloud account you want to use to deploy the blueprint. Currently only AWS is supported.
 
 	#. From the drop-down menu, select the ``Region`` in which the blueprint should be deployed. This should be the same region used to publish the appliances that are included in the blueprint.
-    #. On the bottom of the page, there is a list of the appliances used by your blueprint. For each of these appliances, you can see their current status. All the appliances need to be ready.
+	#. On the bottom of the page, there is a list of the appliances used by your blueprint. For each of these appliances, you can see their current status. All the appliances need to be ready.
 	#. Click on ``deploy`` in the top right. Once you launch the deployment, you will be redirected to the ``Deployments`` page. From here you can see the status of the deployment.
 
 		.. image:: /images/blueprint-deploy-status.png
 
 	You can delete your deployment by clicking on the garbage icon next to the deployment name. This will stop and delete the deployment not only from UForge but also from your cloud account.
+

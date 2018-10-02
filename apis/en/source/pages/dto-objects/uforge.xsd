@@ -418,6 +418,8 @@
 
     <xs:element name="workspaces" type="Workspaces"/>
 
+    <xs:element name="blueprintPredeploy" type="BlueprintPredeploy"/>
+
     <xs:complexType name="AbstractWinApplication" abstract="true">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
@@ -1446,6 +1448,11 @@
                             </xs:sequence>
                         </xs:complexType>
                     </xs:element>
+                    <xs:element name="predeployUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the endpoint resource to retrieve BlueprintPredeploy</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -1508,6 +1515,36 @@
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="BlueprintPredeploy">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Provides the information required to know the status of the appliances related to a blueprint.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:sequence>
+            <xs:element name="readyAppliances">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">the list of appliances that are ready</xsd:documentation>
+                </xsd:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="readyAppliances" type="Appliance" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="nonPublishedAppliances">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">the list of appliances that are not published</xsd:documentation>
+                </xsd:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nonPublishedAppliances" type="Appliance" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="BlueprintService">
@@ -3331,7 +3368,7 @@
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en">the deployment source (Blueprint, Appliance or Scan)</xsd:documentation>
                 </xsd:annotation>
-           </xs:element>
+            </xs:element>
             <xs:sequence>
                 <xs:element name="instances" minOccurs="0">
                     <xsd:annotation>
@@ -9983,7 +10020,7 @@
                     <xs:element name="currency" type="xs:string" minOccurs="0"/>
                     <xs:element name="date" type="xs:dateTime" minOccurs="0"/>
                     <xs:element name="description" type="xs:string" minOccurs="0"/>
-                    <xs:element name="diskSize" type="xs:float" minOccurs="0"/>
+                    <xs:element name="diskSize" type="xs:long" minOccurs="0"/>
                     <xs:element name="distributionId" type="xs:long" minOccurs="0"/>
                     <xs:element name="distributionName" type="xs:string" minOccurs="0"/>
                     <xs:element name="formatId" type="xs:long" minOccurs="0"/>
@@ -11266,7 +11303,6 @@
         </xs:complexContent>
     </xs:complexType>
 
-
     <xs:complexType name="VoteStat">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
@@ -11667,5 +11703,4 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-
 </xs:schema>

@@ -19,7 +19,7 @@ Release Date: 2018-10-01
 
 New Features
 ~~~~~~~~~~~~
-* UForge adminstrator can now register and manage software repositories and operating systems from the user interface
+* UForge administrator can now register and manage software repositories and operating systems from the user interface
 * Users can deploy Windows instances from published machine images to Azure
 
 Enhancements
@@ -44,12 +44,12 @@ Bug Fixes
 * 8936 Fixed validation tooltips where backslashes are actually not supported
 * 8940 Fixed unclear error message when editing a software component bootscript used in an ongoing generation
 * 10708 Fixed issue when generating an ISO image from a scan of a live system with CentOS installed
-* 10822	Fixed issue generating Ubuntu 10.04 with the latest ``debootstrap`` package
-* 11096	Fixed the unpinning of a package from failing in the UI
+* 10822 Fixed issue generating Ubuntu 10.04 with the latest ``debootstrap`` package
+* 11096 Fixed the unpinning of a package from failing in the UI
 * 11201 Fixed arrow buttons from expanding in Distribution > OS Profile view in the UI
 * 11226 Cannot log in to a CentOS AWS instance with SSH key pair set by AWS
 * 11292 Replaced ``vssadmin.exe`` with ``diskshadow.exe`` to properly flush Windows registry during migration process
-* 11349 Fix to display tenant name in the details of a published image
+* 11349 Fix to display tenant name in the details of a published image for OpenStack
 * 11375 Fixed refresh issue for the top navigation menu to display its children when the window is resized horizontally
 * 11376 Fixed refresh issue for the main navigation menu to display its items when the window is resized vertically
 * 11492 Fixed misaligment in the Updates notification information in the UI

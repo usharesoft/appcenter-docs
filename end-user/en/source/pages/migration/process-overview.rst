@@ -9,7 +9,7 @@ The five main steps of migration are as follows:
 
    1. The live system is "deep scanned", detecting all the files and configuration information.
    2. The scan report and overlay is sent to UForge AppCenter.
-   3. A machine image is generated from the scan.  With ``Re-Platform`` you can import the scan prior to machine image generation to change the content.
+   3. A machine image is generated from the scan.  With ``Re-platform`` you can import the scan prior to machine image generation to change the content.
    4. The machine image is uploaded and registered to the target environment.
    5. The registered machine image (also known as a template in cloud terminology) can be used to provision one or more instances.  These instances have near identical content to the original live system.
 
@@ -29,7 +29,7 @@ For both migration using ``Lift & Shift`` and ``Re-platform``, UForge will scan 
 	* filesystem layout (partitioning)
 	* SELinux settings are added to the ``Install Profile`` for CentOS, Red Hat and Scientific Linux only. Note the following:
 		- if SELinux is not activated on the scanned machine, it will not be activated on a VM generated from this scan.
-		- if SELinux is activated, it will be activated with the same rules, and the file system will be relabeled on the first boot because of``/.autorelabe`` file (and this file is deleted by SELinux once the relabel is done). Parameters from the ``/etc/selinux/config`` file other than the SELinux mode are lost during the appliance import. If you want to modify some of these parameters you will need to add a MySoftware overlay with a ``/etc/selinux/config`` file after the scan. Refer to :ref:`appliance-mysoftware`.
+		- if SELinux is activated, it will be activated with the same rules, and the file system will be relabeled on the first boot because of ``/.autorelabe`` file (and this file is deleted by SELinux once the relabel is done). Parameters from the ``/etc/selinux/config`` file other than the SELinux mode are lost during the appliance import. If you want to modify some of these parameters you will need to add a MySoftware overlay with a ``/etc/selinux/config`` file after the scan. Refer to :ref:`appliance-mysoftware`.
 
 .. warning:: All other information found in the scan is not used (reset) and the ``Install Profile`` default information is used.  This includes:
 

@@ -33,7 +33,7 @@ The list of attributes for ``installProfile`` are:
 	* ``runSysprep`` (boolean): boolean to determine if sysprep will be executed for Windows operating system
 	* ``skipLicenses`` (boolean): a boolean to determine whether to display and enforce the user to accept licensing information during the provisioning of an instance. if ``true`` no licensing information is displayed
 	* ``swapSize`` (long): the swap size (in bytes). .. note:: this is only used for ``basic partitioning`` with one disk
-	* ``timezone``: the timezone to set. Only used if ``timezoneAuto == true``
+	* ``timezone`` (string): the timezone to set. Only used if ``timezoneAuto == true``
 	* ``timezoneAuto`` (boolean): boolean to determine whether the timezone settings are automatically set, if false this question is asked to the user interactively when provisioning an instance
 	* ``timezoneCity`` (string): the city name of the timezone that is set (only considered if ``timezoneAuto == true``
 	* ``updateTools`` (boolean): boolean to determine whether to allow automatic update of AWS libraries and tools in the cloud environment. .. note:: only used for AWS

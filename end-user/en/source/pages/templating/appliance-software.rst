@@ -7,9 +7,8 @@ Adding Custom Software Components
 
 There are two ways to add 3rd party software components or your own software to an appliance template.
 
-The first way is through the ``Project Catalog``.  This catalog is public to all the users on UForge and is maintained by the privileged users and administrators.
-
-If the catalog does not contain the software component you are looking for, then you can upload the software into the ``My Software`` library.  This is your own private software library, allowing you to upload any software into UForge and be able to add it to any of your appliance templates.
+	* Using the ``Project Catalog``.  This catalog is public to all the users on UForge and is maintained by the privileged users and administrators.  
+	* If the catalog does not contain the software component you are looking for, you can upload the software into the ``My Software`` library.  This is your own private software library, allowing you to upload any software into UForge and be able to add it to any of your appliance templates.
 
 .. _appliance-projects:
 
@@ -130,7 +129,7 @@ Restricting Software Components for OSes and Formats
 
 Under ``My Software`` you can restrict the usage of a software bundle based on a distribution name, family, architecture or for a specific machine image format.
 
-* To set restriction rules:
+To set restriction rules:
 
 	1. Under the ``Apps`` go to the ``Software Library`` page.
 	2. Select the sofware you want to modify.
@@ -154,7 +153,7 @@ Once you have set a restriction rule, you will see a cube next to the software c
 
 	.. image:: /images/mysoftware-removed.png
 
-* Restriction rule values:
+**Restriction Rule Values**
 
 By using the command-line tool `hammr <http://hammr.io>`_, you are able to retrieve available distributions:
 

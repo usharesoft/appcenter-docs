@@ -10020,7 +10020,7 @@
                     <xs:element name="currency" type="xs:string" minOccurs="0"/>
                     <xs:element name="date" type="xs:dateTime" minOccurs="0"/>
                     <xs:element name="description" type="xs:string" minOccurs="0"/>
-                    <xs:element name="diskSize" type="xs:float" minOccurs="0"/>
+                    <xs:element name="diskSize" type="xs:long" minOccurs="0"/>
                     <xs:element name="distributionId" type="xs:long" minOccurs="0"/>
                     <xs:element name="distributionName" type="xs:string" minOccurs="0"/>
                     <xs:element name="formatId" type="xs:long" minOccurs="0"/>

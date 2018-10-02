@@ -81,6 +81,8 @@ Deployment Procedure
 
 	.. note:: When deploying a Windows machine image to Azure, you cannot use ``Administrator`` or ``Guest`` as the ``User name``.
 
+	.. warning:: Windows Evaluation Editions are not supported
+
 	9. From the ``Deployments`` page you can see the instances deployed and their status. If the status is green it is up and running. If it is red, there has been an issue during deployment and/or it is stopped.
 
 		.. image:: /images/machine-image-deploy-status.png

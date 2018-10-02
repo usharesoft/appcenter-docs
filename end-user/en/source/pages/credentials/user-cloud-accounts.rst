@@ -48,7 +48,7 @@ Setting up an AWS Account to Publish Windows Images
 
 .. note:: Before publishing a Windows image to AWS, ``vmimport`` role must be properly assigned to an AWS account. An access right to S3 bucket is also required for an account. Refer to the procedure in `VM Import Service Role section of the AWS documentation <https://docs.aws.amazon.com/vm-import/latest/userguide/vmimport-image-import.html>`_. Because the name of a S3 bucket changes for each image publish, you should give access to any buckets using a wildcard `*`.
 
-The following is an example example of ``role-policy.json``:
+The following is an example of ``role-policy.json``:
 
 	.. code-block:: json
 

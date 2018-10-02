@@ -27,7 +27,7 @@ URI Parameters
 
 * ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``ipid`` (required): the id of the :ref:`installprofile-object`
-* ``nid`` (optional): 
+* ``nid`` (required): the id of the :ref:`nic-object` to delete
 * ``aid`` (required): the id of the :ref:`appliance-object`
 
 HTTP Request Body Parameters

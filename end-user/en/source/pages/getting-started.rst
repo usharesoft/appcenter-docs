@@ -41,6 +41,7 @@ The following browser versions are officially supported when using the user inte
 	* Safari v9 or later
 	* Internet Explorer 11 or later
 	* Opera v15 or later
+	* Edge v42 or later
 
 .. note:: Javascript is required when using the UI. The following error will appear if you have disabled Javascript (check your browser configuration, plugins or security settings). 
 

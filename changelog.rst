@@ -6,12 +6,13 @@ Changelog
 3.8.fp8
 -------
 
-Release Date: 2018-10-29
+Release Date: 2018-11-12
 
 Enhancements
 ~~~~~~~~~~~~
 * Using uforge-sync binary, users can now synchronize the target environment with scans (without overlay) of openSUSE 42 systems.
 * Improve usability of the add and delete actions on Projects page.
+* Blueprint deploy view has been improved. Appliances used in the blueprint, with their status, are now displayed.
 
 3.8.fp7
 -------
@@ -20,22 +21,41 @@ Release Date: 2018-10-01
 
 New Features
 ~~~~~~~~~~~~
-* UForge administrator can manage distributions and repositories from the user interface
+* UForge administrator can now register and manage software repositories and operating systems from the user interface
 * Users can deploy Windows instances from published machine images to Azure
 
 Enhancements
 ~~~~~~~~~~~~
-* Using uforge-sync binary, users can now synchronize the target environment with scans (without overlay) of Debian 6 systems.
 * UForge Microsoft Azure images now use the Azure agent version 2.2.21 for Ubuntu 14.04 and 16.04
 * UForge Microsoft Azure images now use the Azure agent version 2.2.18 for Red Hat Enterprise Linux 6 and 7
+* Using ``uforge-sync`` binary, users can now synchronize the target environment with scans (without overlay) of Debian 6 systems
+* New icon in the UI for blueprints
 
 API changes
 ~~~~~~~~~~~
-* Update the Repository DTO model: rename field officiallySupported to coreRepository
+* Update the Repository DTO model: rename field ``officiallySupported`` to ``coreRepository``
 
 Deprecated Features
 ~~~~~~~~~~~~~~~~~~~
-uforge CLI command option ``--officialySupported`` for command ``org repo create`` is deprecated. Use ``--coreRepository`` instead
+* UForge command line tool option ``--officialySupported`` for command ``org repo create`` is deprecated. Please Use ``--coreRepository`` instead
+
+Bug Fixes
+~~~~~~~~~
+* 8341 Fixed issue allowing japanese characters to be used in the description field for an OS Profile
+* 8934 Fixed issue to allow a user to correctly delete a pinned package in the OS profile of a template
+* 8936 Fixed validation tooltips where backslashes are actually not supported
+* 8940 Fixed unclear error message when editing a software component bootscript used in an ongoing generation
+* 10708 Fixed issue when generating an ISO image from a scan of a live system with CentOS installed
+* 10822 Fixed issue generating Ubuntu 10.04 with the latest ``debootstrap`` package
+* 11096 Fixed the unpinning of a package from failing in the UI
+* 11201 Fixed arrow buttons from expanding in Distribution > OS Profile view in the UI
+* 11226 Cannot log in to a CentOS AWS instance with SSH key pair set by AWS
+* 11292 Replaced ``vssadmin.exe`` with ``diskshadow.exe`` to properly flush Windows registry during migration process
+* 11349 Fix to display tenant name in the details of a published image for OpenStack
+* 11375 Fixed refresh issue for the top navigation menu to display its children when the window is resized horizontally
+* 11376 Fixed refresh issue for the main navigation menu to display its items when the window is resized vertically
+* 11492 Fixed misaligment in the Updates notification information in the UI
+* 11504 Fixed issue with the blueprint view filter being cut during loading
 
 3.8.fp6
 -------

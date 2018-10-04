@@ -25,9 +25,9 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the user name (login name) of the User
+* ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``itid`` (required): the id of the :ref:`image-object`
-* ``aid`` (required): the id of the Appliance
+* ``aid`` (required): the id of the :ref:`appliance-object`
 * ``pitid`` (required): the id of the :ref:`publishimage-object`
 
 HTTP Request Body Parameters

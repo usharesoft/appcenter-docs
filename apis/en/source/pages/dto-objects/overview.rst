@@ -124,7 +124,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`partition-object`
 	* :ref:`partitions-object`
 	* :ref:`partitiontable-object`
-	* :ref:`pipeline-object`
+	* :ref:`abstractpipeline-object`
 	* :ref:`package-object`
 	* :ref:`pkggroup-object`
 	* :ref:`packages-object`
@@ -343,7 +343,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     Partition
     Partitions
     PartitionTable
-    Pipeline
+    AbstractPipeline
     Pkg
     PkgGroup
     PkgList

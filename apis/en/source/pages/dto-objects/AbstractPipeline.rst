@@ -1,16 +1,16 @@
 .. Copyright 2018 FUJITSU LIMITED
 
-.. _pipeline-object:
+.. _abstractpipeline-object:
 
-pipeline
-========
+abstractPipeline
+================
 
 Holds all the meta-data of a pipeline. Contains the list of stages to perform a pipeline.
 
 Attributes
 ~~~~~~~~~~
 
-The list of attributes for ``pipeline`` are:
+The list of attributes for ``abstractPipeline`` are:
 
 	* ``tag`` (string): the tag information
 	* ``name`` (string): the pipeline name

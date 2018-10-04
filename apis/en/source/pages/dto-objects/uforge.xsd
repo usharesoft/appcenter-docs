@@ -244,7 +244,7 @@
 
     <xs:element name="partitionTable" type="PartitionTable"/>
 
-    <xs:element name="pipeline" type="Pipeline"/>
+    <xs:element name="abstractPipeline" type="AbstractPipeline"/>
 
     <xs:element name="pkgGroup" type="PkgGroup"/>
 
@@ -5696,7 +5696,7 @@
             </xsd:documentation>
         </xsd:annotation>
         <xs:complexContent>
-            <xs:extension base="Pipeline">
+            <xs:extension base="AbstractPipeline">
                 <xs:sequence>
                     <xs:element name="stages" minOccurs="0">
                         <xsd:annotation>
@@ -7122,7 +7122,7 @@
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="Pipeline">
+    <xs:complexType name="AbstractPipeline">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
                 Holds all the meta-data of a pipeline. Contains the list of stages to perform a pipeline.

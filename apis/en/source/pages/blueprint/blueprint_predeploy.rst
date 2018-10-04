@@ -14,7 +14,7 @@ blueprint_predeploy
 	* Response Formats: ``application/xml`` ``application/json``
 	* Since: ``UForge 3.8.fp4``
 
-Returns the status of the appliances used for a blueprint.
+Returns the status of the appliances used for a blueprint
 
 Security Summary
 ~~~~~~~~~~~~~~~~

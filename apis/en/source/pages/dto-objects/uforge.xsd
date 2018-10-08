@@ -6917,7 +6917,7 @@
                                 <xs:enumeration value="linux-swap"/>
                                 <xs:enumeration value="lvm2"/>
                                 <xs:enumeration value="ntfs"/>
-                                <xs:enumeration value="unformated"/>
+                                <xs:enumeration value="unformatted"/>
                                 <xs:enumeration value="xfs"/>
                                 <xs:enumeration value="reserved"/>
                             </xs:restriction>

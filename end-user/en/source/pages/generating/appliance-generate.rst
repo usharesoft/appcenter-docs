@@ -72,9 +72,9 @@ To generate a machine image from an appliance:
 Generating a Docker Image from Software Components
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. note:: You cannot generate a Docker image from a Windows template or a Windows scan.
+.. note:: You cannot generate a Docker image if any of the restriction rules that have been set for the software exclude Docker publication or generation.
 
-To generate a machine image from an appliance:
+To generate a machine image from a software component:
 	#. Go to the ``Apps`` tab.
 	#. Select the software from the ``Software Library``. 
 	#. Click on the ``generate`` button at the top right. 

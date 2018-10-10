@@ -44,6 +44,8 @@
 
     <xs:element name="blueprintDeployment" type="BlueprintDeployment"/>
 
+    <xs:element name="blueprintPredeploy" type="BlueprintPredeploy"/>
+
     <xs:element name="blueprintSummary" type="BlueprintSummary"/>
 
     <xs:element name="blueprintsSummaries" type="BlueprintsSummaries"/>
@@ -418,7 +420,6 @@
 
     <xs:element name="workspaces" type="Workspaces"/>
 
-    <xs:element name="blueprintPredeploy" type="BlueprintPredeploy"/>
 
     <xs:complexType name="AbstractWinApplication" abstract="true">
         <xsd:annotation>
@@ -1534,6 +1535,16 @@
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
+            <xs:element name="publicationOngoingAppliances">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">the list of appliances having a publication ongoing</xsd:documentation>
+                </xsd:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="publicationOngoingAppliances" type="Appliance" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
             <xs:element name="nonPublishedAppliances">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en">the list of appliances that are not published</xsd:documentation>
@@ -1541,6 +1552,36 @@
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element name="nonPublishedAppliances" type="Appliance" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="generatedImagesUris">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">the list of image uris for images that are generated but not published</xsd:documentation>
+                </xsd:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="generatedImagesUris" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="nonGeneratedAppliances">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">the list of appliances that are not generated</xsd:documentation>
+                </xsd:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nonGeneratedAppliances" type="Appliance" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="generationOngoingAppliances">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">the list of appliances having an image generation ongoing</xsd:documentation>
+                </xsd:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="generationOngoingAppliances" type="Appliance" minOccurs="0" maxOccurs="unbounded"/>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>

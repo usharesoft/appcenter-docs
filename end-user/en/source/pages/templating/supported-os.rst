@@ -59,14 +59,11 @@ When using UForge, you have to comply with the license agreement of OSes and sof
 	* Scanning server
 		You have to check whether the licenses of OS and software which the source machine contains allow you to use them on the destination server which you are migrating to.
 		
-		If the source machine contains rpm packages which Red Hat provides, please ask the administrator whether UForge repository contains these packages, 
-		because UForge automatically regenerates rpm packages which the repository doesn't contain and regenerated packages are NOT supported by Red Hat.
+		If the source machine contains rpm packages which Red Hat provides, check with the administrator whether UForge repository contains these packages, because UForge automatically regenerates rpm packages not contained in the repository, and regenerated packages are NOT supported by Red Hat.
 		
 		On UForge Portal, you can see the list of rpm packages which the source machine contains 
-		and header ``In Repo`` tells you whether or not the package comes from the repository (Refer to :ref:`migration-view-scan`).
-		Once migration is done, you can see where the package comes from by rpm command on the destination server.
-		If regenerated, ``Build Host`` is overwritten as ``uforge``.
+		and header ``In Repo`` indicates whether or not the package comes from the repository (refer to :ref:`migration-view-scan`). Once migration is done, you can see where the package comes from by rpm command on the destination server. If regenerated, ``Build Host`` is overwritten as ``uforge``.
 
 
 	* Handling Microsoft Windows
-		UForge user must acquire Windows license in order to handle Windows OSes in UForge. When publishing Windows OS image or scanning Windows server, you have to confirm usage conditions of cloud provider and virtualization software which you publish to or scan.
+		UForge users must acquire Windows license in order to handle Windows OSes in UForge. When publishing Windows OS image or scanning Windows server, you have to confirm usage conditions of cloud provider and virtualization software which you publish to or scan.

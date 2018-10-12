@@ -25,6 +25,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`blueprint-object`
 	* :ref:`blueprintdeployment-object`
 	* :ref:`blueprintdeploymentaws-object`
+	* :ref:`blueprintpredeploy-object`
 	* :ref:`blueprintservice-object`
 	* :ref:`blueprintsummary-object`
 	* :ref:`bootscript-object`
@@ -243,6 +244,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     Blueprint
     BlueprintDeployment
     BlueprintDeploymentAws
+    BlueprintPredeploy
     BlueprintService
     BlueprintSummary
     BootScript

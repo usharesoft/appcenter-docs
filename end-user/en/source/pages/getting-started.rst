@@ -42,6 +42,7 @@ The following browser versions are officially supported when using the user inte
 	* Safari v9 or later
 	* Internet Explorer 11 or later
 	* Opera v15 or later
+	* Edge v42 or later
 
 .. note:: Javascript is required when using the UI. The following error will appear if you have disabled Javascript (check your browser configuration, plugins or security settings). 
 
@@ -57,19 +58,6 @@ The UForge UI is accessible in different languages. You can select the language 
 .. image:: /images/uforge-ui-language2.png
 
 .. note:: The language choice is saved at the level of the browser and not of the user account. 
-
-
-.. _uforge-keyboard-actions:
-
-Keyboard Actions
-----------------
-
-.. _uforge-escape-key:
-
-Escape Key
-~~~~~~~~~~
-
-The UForge UI uses the Escape (ESC) key as a hotkey to cancel or close a popup window without saving or executing any actions. However, in some cases, using the hotkey ESC will redirect you to a different page from the one from which the popup was opened.
 
 
 .. _uforge-basic-concepts:

@@ -88,6 +88,8 @@ With UForge you can create machine images in the following formats.
 +-------------------------------------+-------------------------------------------------------+
 | Google Compute Engine               | none                                                  |
 +-------------------------------------+-------------------------------------------------------+
+| OpenShift                           | not supported for a Windows-based appliance           |
++-------------------------------------+-------------------------------------------------------+
 | OpenStack                           | Target formats:                                       |
 |                                     | OpenStack QCOW2                                       |
 |                                     | OpenStack VMDK                                        |

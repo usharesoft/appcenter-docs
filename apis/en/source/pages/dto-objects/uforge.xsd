@@ -8,6 +8,8 @@
            targetNamespace="http://www.usharesoft.com/uforge"
            jaxb:version="2.0">
 
+    <xs:element name="abstractPipeline" type="AbstractPipeline"/>
+
     <xs:element name="abstractWinApplication" type="AbstractWinApplication"/>
 
     <xs:element name="abstractWinApplications" type="AbstractWinApplications"/>
@@ -246,8 +248,6 @@
 
     <xs:element name="partitionTable" type="PartitionTable"/>
 
-    <xs:element name="pipeline" type="Pipeline"/>
-
     <xs:element name="pkgGroup" type="PkgGroup"/>
 
     <xs:element name="pkgUpdateInfoList" type="PkgUpdateInfoList"/>
@@ -420,6 +420,40 @@
 
     <xs:element name="workspaces" type="Workspaces"/>
 
+
+    <xs:complexType name="AbstractPipeline">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Holds all the meta-data of a pipeline. Contains the list of stages to perform a pipeline.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObject">
+                <xs:sequence>
+                    <xs:element name="tag" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the tag information</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="name" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the pipeline name</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="status" type="OpStatus" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the status of the pipeline</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="uri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri of the pipeline</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
 
     <xs:complexType name="AbstractWinApplication" abstract="true">
         <xsd:annotation>
@@ -5737,7 +5771,7 @@
             </xsd:documentation>
         </xsd:annotation>
         <xs:complexContent>
-            <xs:extension base="Pipeline">
+            <xs:extension base="AbstractPipeline">
                 <xs:sequence>
                     <xs:element name="stages" minOccurs="0">
                         <xsd:annotation>
@@ -6924,7 +6958,7 @@
                                 <xs:enumeration value="linux-swap"/>
                                 <xs:enumeration value="lvm2"/>
                                 <xs:enumeration value="ntfs"/>
-                                <xs:enumeration value="unformated"/>
+                                <xs:enumeration value="unformatted"/>
                                 <xs:enumeration value="xfs"/>
                                 <xs:enumeration value="reserved"/>
                             </xs:restriction>
@@ -7162,41 +7196,6 @@
             <xs:element name="usage" type="xs:string" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
-
-    <xs:complexType name="Pipeline">
-        <xsd:annotation>
-            <xsd:documentation xml:lang="en">
-                Holds all the meta-data of a pipeline. Contains the list of stages to perform a pipeline.
-            </xsd:documentation>
-        </xsd:annotation>
-        <xs:complexContent>
-            <xs:extension base="UForgeObject">
-                <xs:sequence>
-                    <xs:element name="tag" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the tag information</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="name" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the pipeline name</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="status" type="OpStatus" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the status of the pipeline</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="uri" type="xs:anyURI" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the uri of the pipeline</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-
 
     <xs:complexType name="Pkg">
         <xsd:annotation>

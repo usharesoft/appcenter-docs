@@ -8,6 +8,10 @@ Changelog
 
 Release Date: 2018-11-12
 
+New Features
+~~~~~~~~~~~~
+* Ubuntu 18.04 supported, except for synchronization feature in migration workflow.
+
 Enhancements
 ~~~~~~~~~~~~
 * Using uforge-sync binary, users can now synchronize the target environment with scans (without overlay) of openSUSE 42 systems.

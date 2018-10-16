@@ -24,6 +24,10 @@ API changes
 
        .. note:: Old Google Cloud Engine credential accounts will no longer be usable. You must replace them by new ones in the correct format.
 
+New Features
+~~~~~~~~~~~~
+* Ability to generate a software component to a Docker image. The user can select any compatible Linux operating system as the "Base OS".
+
 3.8.fp7
 -------
 

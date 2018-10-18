@@ -17,7 +17,10 @@ To deploy a blueprint:
 	#. Select the cloud account you want to use to deploy the blueprint. Currently only AWS is supported.
 
 	#. From the drop-down menu, select the ``Region`` in which the blueprint should be deployed. This should be the same region used to publish the appliances that are included in the blueprint.
-	#. On the bottom of the page, there is a list of the appliances used by your blueprint. For each of these appliances, you can see their current status. All the appliances need to be ready (an appliance is ready when its last version is published to the selected region).
+	#. On the bottom of the page, there is a list of the appliances used by your blueprint. For each of these appliances, you can see their current status. All the appliances need to be ready (an appliance is ready when its last version is published to the selected region). If an appliance is not in ``ready`` state, you can generate or publish it directly from this page.
+
+                .. image:: /images/blueprint-appliance-status.png
+
 	#. Click on ``deploy`` in the top right. Once you launch the deployment, you will be redirected to the ``Deployments`` page. From here you can see the status of the deployment.
 
 		.. image:: /images/blueprint-deploy-status.png

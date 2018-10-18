@@ -7,6 +7,7 @@ Data Transfer Objects
 
 This section provides a description of all UForge AppCenter REST Data Transfer objects.
 
+	* :ref:`abstractpipeline-object`
 	* :ref:`abstractwinapplication-object`
 	* :ref:`abstractwinapplications-object`
 	* :ref:`address-object`
@@ -25,6 +26,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`blueprint-object`
 	* :ref:`blueprintdeployment-object`
 	* :ref:`blueprintdeploymentaws-object`
+	* :ref:`blueprintpredeploy-object`
 	* :ref:`blueprintservice-object`
 	* :ref:`blueprintsummary-object`
 	* :ref:`bootscript-object`
@@ -123,7 +125,6 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`partition-object`
 	* :ref:`partitions-object`
 	* :ref:`partitiontable-object`
-	* :ref:`pipeline-object`
 	* :ref:`package-object`
 	* :ref:`pkggroup-object`
 	* :ref:`packages-object`
@@ -225,6 +226,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 .. toctree::
     :hidden:
 
+    AbstractPipeline
     AbstractWinApplication
     AbstractWinApplications
     Address
@@ -243,6 +245,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     Blueprint
     BlueprintDeployment
     BlueprintDeploymentAws
+    BlueprintPredeploy
     BlueprintService
     BlueprintSummary
     BootScript
@@ -341,7 +344,6 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     Partition
     Partitions
     PartitionTable
-    Pipeline
     Pkg
     PkgGroup
     PkgList

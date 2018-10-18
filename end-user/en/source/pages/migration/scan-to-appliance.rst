@@ -5,11 +5,9 @@
 Create an Appliance from a Scan
 -------------------------------
 
-You can create an appliance template from a scan. Once you create an appliance template packages and files that are known will be listed under ``OS profile``, while "unknown" packages and files will be listed under ``MySoftware``.
+You can create an appliance template from a scan. This allows you to change and modify the contents of the machine that has been scanned. Once you create an appliance template, all packages and files that are known will be listed under ``OS profile``, while "unknown" packages and files will be listed under ``MySoftware``.
 
-To create an appliance template from a scan:
-
-From the ``Re-platform`` tab on the ``Migrations`` page:
+To create an appliance template from a scan, from the ``Re-platform`` tab on the ``Migrations`` page:
 	1. Click on the scan from which you want to generate an image.
 	2. Select the ``import`` button (downward arrow) at the top right to create an appliance template from the scan. The following example is for Linux, but you can also import a Windows scan.
 
@@ -20,7 +18,7 @@ From the ``Re-platform`` tab on the ``Migrations`` page:
 	3. Enter the appliance name and version.
 	4. Click ``import``. The progress will be shown under the ``Imports`` tab. Once complete you can find the appliance also under the ``Apps`` tab, under ``Imported Appliances``.
 
-You can now generate a machine image and share it, as you would any other appliance template.
+You can now generate a machine image and share it, as you would any other appliance template. It is also possible to push it to a remote environment. The image is then ready to be launched in the new environment and the migration is finished.
 
 .. note:: When you create a Windows appliance from scan, the applications and services will be visible under ``OS Profile`` on the ``Stack`` page.
 

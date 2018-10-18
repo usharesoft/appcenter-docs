@@ -11,10 +11,13 @@ At the end of the migration process, you can synchronize the running migrated in
 
   * CentOS 6, 7
   * Red Hat Enterprise Linux 6, 7
-  * Debian 7, 8
+  * Debian 6, 7, 8
   * Ubuntu 16.04, 14.04, 12.04
+  * openSUSE 42
 
 From the scan detail view, you can get the instructions to synchronize your data by clicking the ``Synchronize`` button.
+
+.. note:: ``uforge-sync`` is based on ``rsync``, which does not handle BTRFS subvolume synchronization well. If you plan you synchronize ``snapshots`` directories from a BTRFS partition, it is better to exclude these directories from the scan and use another tool to handle synchronization, based on `btrfs send` and `btrfs receive`. 
 
 Download the uforge-sync Tool
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -44,3 +47,5 @@ The following are mandatory parameters:
 .. note:: The usage of an SSH key pair is strongly recommended to connect to the migrated instance. You must specify the private key path using the ``-i`` parameter, and have the public key in the migrated instance's ``~/.ssh/authorized_keys`` file.
 
 If you encounter an error message indicating the SSL certificate subject name does not match the target host name, you can add the ``-k`` option to your command line to prevent ``uforge-sync.bin`` from strictly checking the SSL certificate.
+
+.. note:: The uforge-sync tool may overwrite existing configuration files of running services. Please restart services to load new configuration, if necessary.

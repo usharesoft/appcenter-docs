@@ -32,7 +32,7 @@ New Libraries Added
 
 Depending on the source and target environments, some packages or libraries are added to ensure that the system boots correctly on the target environment:
 
-	* For all white box migrations (see :ref:`migration-process-whitebox`): UForge injects ``uforge-install-config`` and ``uforge-install-profile`` packages.  These packages provides features provided by templating to prompt users for some additional information during the initial booting of the system (root password, keyboard, timezone etc based on the Install Profile settings) and the execution of any boot scripts saved as part of the appliance template.
+	* For migrations using ``Re-platform`` (see :ref:`migration-replatform`): UForge injects ``uforge-install-config`` and ``uforge-install-profile`` packages.  These packages provides features provided by templating to prompt users for some additional information during the initial booting of the system (root password, keyboard, timezone etc based on the Install Profile settings) and the execution of any boot scripts saved as part of the appliance template.
 
 	* Para-virtualized Source -> Full Virtualized Target (Linux): UForge injects the ``kernel`` package and its dependent libraries to boot the system.
 

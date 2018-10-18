@@ -47,3 +47,5 @@ To view the details of a scanned Windows-based instance:
 	4. To view the Windows services, go to the ``Services`` tab.
 
 	.. image:: /images/scan-windows-services.png
+
+	5. From this page you can now import as appliance (:ref:`migration-scan-import`) or generate an image (:ref:`migration-scan-generate`).

@@ -18,6 +18,7 @@ The list of attributes for ``blueprint`` are:
 	* ``uri`` (anyURI): the uri resource to retrieve the blueprint
 	* ``description`` (string): the description of the blueprint
 	* ``deployUri`` (anyURI): the uri resource to deploy the blueprint
+	* ``predeployUri`` (anyURI): the endpoint resource to retrieve BlueprintPredeploy
 	* ``created`` (dateTime): the date the appliance template is created
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)

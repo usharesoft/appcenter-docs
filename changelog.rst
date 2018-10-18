@@ -11,6 +11,7 @@ Release Date: 2018-11-12
 New Features
 ~~~~~~~~~~~~
 * Ubuntu 18.04 supported, except for synchronization feature in migration workflow.
+* Support of hotkey Escape (ESC) to cancel/close a popup window
 
 Enhancements
 ~~~~~~~~~~~~

@@ -26,7 +26,7 @@ API changes
 
 New Features
 ~~~~~~~~~~~~
-* Ability to generate a software component to a Docker image. The user can select any compatible Linux operating system as the "Base OS".
+* Ability to generate a software component to a Docker image. The user can select any version of CentOS or Debian as a "Base OS".
 
 3.8.fp7
 -------

@@ -83,7 +83,7 @@ To generate a machine image from a software component:
 
 	#. Select the distribution and click ``generate``.
 
-		.. note:: Currently, only CentOS 7 is supported.
+		.. note:: Currently, only CentOS and Debian are supported.
 
 	#. Enter the Docker entrypoint in exec form. For example ``["/usr/sbin/httpd", "-DFOREGROUND"]``.
 	#. Click the ``generate`` button to launch a generation in UForge for this appliance template. 

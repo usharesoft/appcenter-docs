@@ -12,8 +12,6 @@ Attributes
 
 The list of attributes for ``CredAccountGoogle`` are:
 
-	* ``login`` (string): the user login name to use
-	* ``certPassword`` (string): the account password to use
 	* ``baseCertificatesUri`` (anyURI): the uri resource to get all the certificates for this cloud account
 	* ``certificates``: a list of certificate files (see :ref:`certificate-object`)
 	* ``certificateUris`` (:ref:`UriList-object`): a list of uri resources for the :ref:`certificate-object` objects

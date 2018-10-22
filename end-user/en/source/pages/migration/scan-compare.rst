@@ -36,3 +36,12 @@ In the example below, there are a total of 65 added files in the /etc folder, wi
 If you click on any of the squares, you will see the details of the file that differs from the base scan.
 
 	.. image:: /images/scan-compare-details.png
+
+Searching for Files in a Scan
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The ``delta`` tab of the ``Re-platform`` page allows you to search and filter the scan compare results.
+
+If you click on one of the categories of scan results (``Added``, ``Modified`` or ``Deleted``), this will help you sort the results.
+
+If you are looking for a particular file name or type, then you can enter this in the search field and click on the search button to view the results.

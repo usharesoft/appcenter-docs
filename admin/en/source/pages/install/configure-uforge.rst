@@ -85,7 +85,7 @@ For incoming:
 	* 80 and 443
 	* 22
 
-All other ports not in this list should be blocked by the firewall to protect internal services from outside access. In addition, communication ports between UForge and the cloud platform to which you will publish the images have to be open and depend entirely on your cloud platform configuration, see :ref:`cloud-platform-default-ports` for more information.
+In addition, communication ports between UForge and the cloud platform to which you will publish the images have to be open and depend entirely on your cloud platform configuration, see :ref:`cloud-platform-default-ports` for more information. All other ports not in this list should be blocked by the firewall to protect internal services from outside access.
 
 Configuring NTP
 ~~~~~~~~~~~~~~~

@@ -3026,20 +3026,7 @@
             </xsd:documentation>
         </xsd:annotation>
         <xs:complexContent>
-            <xs:extension base="CredAccountCert">
-                <xs:sequence>
-                    <xs:element name="login" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the user login name to use</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="certPassword" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the account password to use</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                </xs:sequence>
-            </xs:extension>
+            <xs:extension base="CredAccountCert"/>
         </xs:complexContent>
     </xs:complexType>
 

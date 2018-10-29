@@ -20,7 +20,7 @@ This script is meant to be usable on a single-node UForge and on multi-node UFor
 Usage
 ~~~~~
 
-machine_infos.sh [-h] [-n|-i] [-o|-a] [<customstring>]
+machine_infos.sh [-h] [-n|-i] [-o|-a] [-u] [<customstring>]
 
 The arguments are:
 
@@ -32,6 +32,7 @@ The arguments are:
 
   * ``-o`` : *only* collects scan reports and OAR job logs.
   * ``-a`` : same as above (``-o``) *plus* the normal (default) behaviour.
+  * ``-u`` : uses UTC timezone instead of local timezone.
 
 If the script is launched with an optional custom string on the command line, that custom string will be inserted in the name of the archive created by the script to group all generated files.
   

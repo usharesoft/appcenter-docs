@@ -57,4 +57,6 @@ To carry out a scan, go to the ``Re-platform`` tab on the ``Migrations`` page:
 
 	#. To view the details of a scan, click on the scan and refer to :ref:`migration-view-scan`.
 
+		.. note:: The log files of uforge-scan.exe on the source Microsoft Windows machine are stored under the following directory: ``%SystemRoot%\System32\LogFiles\UForge``.
+
 	#. To complete your migration, you will need to generate a machine image and publish it. Refer to :ref:`migration-scan-generate`.

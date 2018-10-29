@@ -3,6 +3,16 @@
 Changelog
 =========
 
+3.8.fp9
+-------
+
+Release Date: 2018-12-24
+
+New Features
+~~~~~~~~~~~~
+* Ability to generate a software component to a Docker image. The user can select any version of CentOS or Debian as a "Base OS".
+
+
 3.8.fp8
 -------
 
@@ -23,10 +33,6 @@ API changes
 * Google Cloud Engine authentication method has been updated to support the new format used to authenticate to the platform. As a result, credentials accounts have changed. The certificate is no longer a ``.p12`` file but a ``.json`` file.
 
        .. note:: Old Google Cloud Engine credential accounts will no longer be usable. You must replace them by new ones in the correct format.
-
-New Features
-~~~~~~~~~~~~
-* Ability to generate a software component to a Docker image. The user can select any version of CentOS or Debian as a "Base OS".
 
 3.8.fp7
 -------

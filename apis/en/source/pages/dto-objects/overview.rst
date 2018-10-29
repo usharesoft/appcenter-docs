@@ -45,6 +45,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`comments-object`
 	* :ref:`companies-object`
 	* :ref:`company-object`
+	* :ref:`containertemplate-object`
 	* :ref:`credaccount-object`
 	* :ref:`credaccountaws-object`
 	* :ref:`credaccountazure-object`
@@ -264,6 +265,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     Comments
     Companies
     Company
+    ContainerTemplate
     CredAccount
     CredAccountAws
     CredAccountAzure

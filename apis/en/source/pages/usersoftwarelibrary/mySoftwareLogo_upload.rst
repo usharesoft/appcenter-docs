@@ -69,6 +69,7 @@ Example Request
 	 * :ref:`mySoftwareLogo-download`
 	 * :ref:`mySoftwareLogo-downloadFile`
 	 * :ref:`mySoftwareRestrictionOS-evaluate`
+	 * :ref:`mySoftwareRestrictionOS-getAll`
 	 * :ref:`mySoftwareRestriction-update`
 	 * :ref:`mySoftwareUsage-getAll`
 	 * :ref:`mySoftware-availableForImage`

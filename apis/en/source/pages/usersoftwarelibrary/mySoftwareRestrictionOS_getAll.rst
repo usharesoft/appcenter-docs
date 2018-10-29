@@ -1,20 +1,24 @@
 .. Copyright 2018 FUJITSU LIMITED
 
-.. _softwareBundleImportStatus-get:
+.. _mySoftwareRestrictionOS-getAll:
 
-softwareBundleImportStatus_get
+mySoftwareRestrictionOS_getAll
 ------------------------------
 
-.. function:: GET /users/{uid}/bundleimports/{sbid}/status
+.. function:: GET /users/{uid}/mysoftware/{msid}/restriction/{brid}/distributions
 
 .. sidebar:: Summary
 
 	* Method: ``GET``
 	* Response Code: ``200 / 304``
 	* Response Formats: ``application/xml`` ``application/json``
-	* Since: ``UForge 3.6``
+	* Since: ``UForge 3.8.8``
 
-Retrieve the current status of importing a software bundle archive.
+Retrieves all distributions compatible with the software component. 
+
+Retrieves all distributions available for the user and evaluates the restriction rule in order to list only the distributions that are compatible with the software component. 
+
+A list of :ref:`distribution-object` objects are returned.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -25,8 +29,9 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the user name (login name) of the :ref:`user-object`
-* ``sbid`` (required): the id of the :ref:`softwarebundleimport-object` ticket
+* ``uid`` (required): the id of the :ref:`user-object`
+* ``msid`` (required): the id of the :ref:`mySoftware-object`
+* ``brid`` (required): the id of the :ref:`bundlerestriction-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -38,7 +43,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/users/{uid}/bundleimports/{sbid}/status" -X GET \
+	curl "https://uforge.example.com/api/users/{uid}/mysoftware/{msid}/restriction/{brid}/distributions" -X GET \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::
@@ -53,7 +58,6 @@ Example Request
 	 * :ref:`mySoftwareArtifact-download`
 	 * :ref:`mySoftwareArtifact-downloadFile`
 	 * :ref:`mySoftwareArtifact-get`
-	 * :ref:`mySoftwareArtifact-getAll`
 	 * :ref:`mySoftwareArtifact-update`
 	 * :ref:`mySoftwareArtifact-updateAll`
 	 * :ref:`mySoftwareArtifact-upload`
@@ -69,7 +73,6 @@ Example Request
 	 * :ref:`mySoftwareLogo-downloadFile`
 	 * :ref:`mySoftwareLogo-upload`
 	 * :ref:`mySoftwareRestrictionOS-evaluate`
-	 * :ref:`mySoftwareRestrictionOS-getAll`
 	 * :ref:`mySoftwareRestriction-update`
 	 * :ref:`mySoftwareUsage-getAll`
 	 * :ref:`mySoftware-availableForImage`
@@ -81,8 +84,7 @@ Example Request
 	 * :ref:`mySoftware-getAll`
 	 * :ref:`mySoftware-update`
 	 * :ref:`softwareBundleImport-get`
-	 * :ref:`softwareBundleImport-upload`
-	 * :ref:`softwareBundle-import`
-	 * :ref:`softwarebundle-object`
-	 * :ref:`softwarebundleexport-object`
-	 * :ref:`softwarebundleimport-object`
+	 * :ref:`softwareartifact-object`
+	 * :ref:`softwarebundleImportStatus-get`
+	 * :ref:`softwarebundleImport-upload`
+	 * :ref:`softwarebundle-import`

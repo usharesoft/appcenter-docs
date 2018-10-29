@@ -1,10 +1,10 @@
 .. Copyright 2018 FUJITSU LIMITED
 
 
-Monitoring Overview
-===================
+Retrieving Logs and Troubleshooting
+===================================
 
-The following sections cover some elements to monitor and troubleshoot your UForge Platform.
+The following sections cover some elements to retrieve logs and help troubleshoot your UForge platform.
 
 .. toctree::
    :titlesonly:

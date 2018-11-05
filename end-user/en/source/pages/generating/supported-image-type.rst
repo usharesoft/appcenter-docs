@@ -67,7 +67,6 @@ With UForge you can create machine images in the following formats.
 | Container                           | Additional information                                |
 +=====================================+=======================================================+
 | Docker                              | not supported for a Windows-based appliance           |
-|                                     | possible from MySoftware for CentOS and Debian        |
 +-------------------------------------+-------------------------------------------------------+
 | LXC                                 | not supported for a Windows-based appliance           |
 +-------------------------------------+-------------------------------------------------------+

@@ -35,11 +35,11 @@ Bug Fixes
 * 11532 OpenShift installation is incomplete when upgrading to 3.8.fp6 with many users
 * 11499 Vault in proxy environment does not work
 * 11390 User email address should not be exposed to the other user
-* 11354 Partitioning Table Volumes subtitle miss a white space
+* 11354 Partitioning Table Volumes subtitle misses a white space
 * 10870 Publishing to Google Compute creates unnecessary disks and images
 * 10697 Cannot publish to GCE when AppCenter is behind a Proxy Server
 * 10503 Mislabelled UForge on Update tab when creating a Windows appliance
-* 10444 When user quota limit of appliance is set, "Quota used" increases 2 when importing from scan
+* 10444 When user quota limit of appliance is set, "Quota used" increases by 2 when importing from scan
 * 10443 Cannot create Azure VM from published VHD from AWS Ubuntu template - No NIC detected
 * 8989 Some French translations are not accurate or missing
 * 8897 Spelling mistakes in English i18n constants

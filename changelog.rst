@@ -24,6 +24,28 @@ API changes
 
        .. note:: Old Google Cloud Engine credential accounts will no longer be usable. You must replace them by new ones in the correct format.
 
+Bug Fixes
+~~~~~~~~~
+* 11941 Get requests to vault fail in proxy environment 
+* 11863 Cannot login to migrated CentOS6 image on AWS with SSH key
+* 11799 Outscale images built by UForge do not boot on Outscale
+* 11637 Empty directories are not synchronized to the target machine with uforge-sync.bin
+* 11608 Credentials secret keys are visible in clear for Outscale, Amazon and CloudStack
+* 11548 "500 call failed" is shown on non-english summary tab when a new Windows template is created
+* 11532 OpenShift installation is incomplete when upgrading to 3.8.fp6 with many users
+* 11499 Vault in proxy environment does not work
+* 11390 User email address should not be exposed to the other user
+* 11354 Partitioning Table Volumes subtitle misses a white space
+* 10870 Publishing to Google Compute creates unnecessary disks and images
+* 10697 Cannot publish to GCE when AppCenter is behind a Proxy Server
+* 10503 Mislabelled UForge on Update tab when creating a Windows appliance
+* 10444 When user quota limit of appliance is set, "Quota used" increases by 2 when importing from scan
+* 10443 Cannot create Azure VM from published VHD from AWS Ubuntu template - No NIC detected
+* 8989 Some French translations are not accurate or missing
+* 8897 Spelling mistakes in English i18n constants
+* 5224 Typo: "Unformated" in Install Profile -> Partitioning
+* 1351 "Internal server error." displayed when publishing a Google Compute Engine with wrong credentials
+
 3.8.fp7
 -------
 

@@ -11,7 +11,7 @@ Release Date: 2018-12-24
 New Features
 ~~~~~~~~~~~~
 * Ability to generate a software component to a Docker image. The user can select any Linux distribution as a "Base OS".
-
+* Support of hotkey Escape (ESC) to cancel/close a popup window.
 
 3.8.fp8
 -------

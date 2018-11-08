@@ -3,6 +3,16 @@
 Changelog
 =========
 
+3.8.fp9
+-------
+
+Release Date: 2018-12-24
+
+New Features
+~~~~~~~~~~~~
+* Ability to generate a software component to a Docker image. The user can select any Linux distribution as a "Base OS".
+
+
 3.8.fp8
 -------
 
@@ -18,6 +28,12 @@ Enhancements
 * Using uforge-sync binary, users can now synchronize the target environment with scans (without overlay) of openSUSE 42 systems.
 * Improve usability of the add and delete actions on Projects page.
 * Blueprint deploy view has been improved. Appliances used in the blueprint, with their status, are now displayed.
+
+API changes
+~~~~~~~~~~~
+* Google Cloud Engine authentication method has been updated to support the new format used to authenticate to the platform. As a result, credentials accounts have changed. The certificate is no longer a ``.p12`` file but a ``.json`` file.
+
+       .. note:: Old Google Cloud Engine credential accounts will no longer be usable. You must replace them by new ones in the correct format.
 
 3.8.fp7
 -------

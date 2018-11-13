@@ -48,14 +48,14 @@ However, it is preferable to leave this file.
 
 .. _appliance-docker-image:
 
-Generating a Docker Image from an Appliance
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Generating a Docker Image
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. note:: You cannot generate a Docker image from a Windows template or a Windows scan.
 
 .. note:: If you generate a Docker image from an appliance that does not have an install profile set as automatic, then you will not be able to launch the Docker image.
 
-To generate a machine image from an appliance:
+To generate a machine image:
 	1. Go to the ``Apps`` tab.
 	2. Select the appliance from the ``Appliance Library``. 
 	3. Click on the ``generate`` button at the top right to display all possible image formats which can be generated. 
@@ -66,29 +66,6 @@ To generate a machine image from an appliance:
 	8. The following pop-up will be displayed if you click on the download icon.
 
 		.. image:: /images/docker-image-publish.png
-
-.. _gen-docker-image:
-
-Generating a Docker Image from Software Components
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. note:: You cannot generate a Docker image if any of the restriction rules that have been set for the software exclude Docker publication or generation.
-
-To generate a machine image from a software component:
-	#. Go to the ``Apps`` tab.
-	#. Select the software from the ``Software Library``. 
-	#. Click on the ``generate`` button at the top right. 
-
-		.. image:: /images/docker-sw-generate.png
-
-	#. Select the distribution and click ``generate``.
-
-		.. note:: Currently, only CentOS and Debian are supported.
-
-	#. Enter the Docker entrypoint in exec form. For example ``["/usr/sbin/httpd", "-DFOREGROUND"]``.
-	#. Click the ``generate`` button to launch a generation in UForge for this appliance template. 
-	#. Once the generation is complete, the Docker image will be listed on the ``Dashboard`` under ``Generations``. You can now publish or download your image.
-
 
 .. _appliance-openshift-image:
 

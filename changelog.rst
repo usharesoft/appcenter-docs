@@ -3,16 +3,6 @@
 Changelog
 =========
 
-3.8.fp9
--------
-
-Release Date: 2018-12-24
-
-New Features
-~~~~~~~~~~~~
-* Ability to generate a software component to a Docker image. The user can select any version of CentOS or Debian as a "Base OS".
-
-
 3.8.fp8
 -------
 

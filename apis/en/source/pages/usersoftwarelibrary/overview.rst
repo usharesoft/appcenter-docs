@@ -30,7 +30,6 @@ User Software Library API Resources
 	* :ref:`mySoftwareLogo-downloadFile`: Downloads the logo file for the specified mysoftware
 	* :ref:`mySoftwareLogo-upload`: Uploads a logo file for the specified software component
 	* :ref:`mySoftwareRestrictionOS-evaluate`: Evaluate the restriction rule to retrieve all distributions for which the software component is designed for
-	* :ref:`mySoftwareRestrictionOS-getAll`: Retrieves all distributions compatible with the software component
 	* :ref:`mySoftwareRestriction-update`: Updates the bundle restriction for a mySoftware
 	* :ref:`mySoftwareUsage-getAll`: Retrieves all the appliance templates where a software component is includes
 	* :ref:`mySoftware-availableForImage`: Gets the software component if it's available for the image that will be generated
@@ -75,7 +74,6 @@ User Software Library API Resources
     mySoftwareLogo_downloadFile
     mySoftwareLogo_upload
     mySoftwareRestrictionOS_evaluate
-    mySoftwareRestrictionOS_getAll
     mySoftwareRestriction_update
     mySoftwareUsage_getAll
     mySoftware_availableForImage

@@ -98,8 +98,6 @@
 
     <xs:element name="confMgmtPlatforms" type="ConfMgmtPlatforms"/>
 
-    <xs:element name="containerTemplate" type="ContainerTemplate"/>
-
     <xs:element name="credAccount" type="CredAccount"/>
 
     <xs:element name="credAccountResource" type="CredAccountResource"/>
@@ -2830,50 +2828,6 @@
                                 <xs:element name="confMgmtPlatforms" type="ConfMgmtPlatform" minOccurs="0" maxOccurs="unbounded"/>
                             </xs:sequence>
                         </xs:complexType>
-                    </xs:element>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-
-    <xs:complexType name="ContainerTemplate">
-        <xsd:annotation>
-            <xsd:documentation xml:lang="en">
-                Holds all the meta-data of a containerTemplate.
-            </xsd:documentation>
-        </xsd:annotation>
-        <xs:complexContent>
-            <xs:extension base="UForgeObject">
-                <xs:sequence>
-                    <xs:element name="uri" type="xs:anyURI" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the uri of this container template</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="softwareBundle" type="SoftwareBundle" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the software bundle from which the container template has been created</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="distribution" type="Distribution" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the distribution on which the container template is based</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="images" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the list of images generated from the container template</xsd:documentation>
-                        </xsd:annotation>
-                        <xs:complexType>
-                            <xs:sequence>
-                                <xs:element name="image" type="Image" minOccurs="0" maxOccurs="unbounded"/>
-                            </xs:sequence>
-                        </xs:complexType>
-                    </xs:element>
-                    <xs:element name="imagesUri" type="xs:anyURI" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the uri to retrieve images generated from the container template</xsd:documentation>
-                        </xsd:annotation>
                     </xs:element>
                 </xs:sequence>
             </xs:extension>
@@ -9700,11 +9654,6 @@
                     <xs:element name="formatDependent" type="xs:boolean" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">a boolean highlighting if the Software bundle is restricted on target format</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="containerTemplatesUri" type="xs:anyURI" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the uri to retrieve container templates created from the software bundle</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                 </xs:sequence>

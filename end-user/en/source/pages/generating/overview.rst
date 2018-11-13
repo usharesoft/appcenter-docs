@@ -9,6 +9,6 @@ You can generate a machine image from an existing appliance template in your lib
    :titlesonly:
 
    supported-image-type
-   image-generate
+   appliance-generate
    appliance-publish
 

@@ -3,21 +3,6 @@
 Changelog
 =========
 
-3.8.fp9
--------
-
-Release Date: 2018-12-24
-
-New Features
-~~~~~~~~~~~~
-* Ability to generate a software component to a Docker image. The user can select any Linux distribution as a "Base OS".
-* Support of hotkey Escape (ESC) to cancel/close a popup window.
-
-Enhancements
-~~~~~~~~~~~~
-* UForge Microsoft Azure images now use the Azure agent version 2.2.14-1 for Debian 8 (Jessie)
-* UForge Microsoft Azure images now use the Azure agent version 2.2.18-3 for Debian 9 (Stretch)
-
 3.8.fp8
 -------
 

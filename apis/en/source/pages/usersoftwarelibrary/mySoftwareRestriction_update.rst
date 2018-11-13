@@ -79,7 +79,6 @@ Example of representation.xml content (the request body):
 	 * :ref:`mySoftwareLogo-downloadFile`
 	 * :ref:`mySoftwareLogo-upload`
 	 * :ref:`mySoftwareRestrictionOS-evaluate`
-	 * :ref:`mySoftwareRestrictionOS-getAll`
 	 * :ref:`mySoftwareUsage-getAll`
 	 * :ref:`mySoftware-availableForImage`
 	 * :ref:`mySoftware-clone`

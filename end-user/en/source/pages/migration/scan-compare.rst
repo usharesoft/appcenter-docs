@@ -15,13 +15,13 @@ There are two methods to compare scans:
 
 		.. image:: /images/replatform-compare-icon.png
 
-	* selecting a specific scan. By default the selected scan will be compared to a base machine. You can then modify the scan to compare to from the ``Compared to`` selection.
+	* selecting a specific scan. By default the selected scan will be compared to a base machine. You can then modify the scan to compare to from the ``Compared to`` section, on the bottom left hand of the page.
 
 		.. image:: /images/replatform-delta-tab.png
 
 .. warning:: The source and target scan must be of the same type. For example, if the source scan is a scan with overlay, then it must be compared to a scan with overlay. Similarly, a scan without overlay can only be compared to a scan without overlay.
 
-UForge lists all the differences between the two systems on the ``delta`` tab. The changes are color coded:
+UForge lists all the differences between the two systems on the ``Delta`` tab. The changes are color coded:
 
 	* blue for added
 	* red for deleted
@@ -42,6 +42,8 @@ Searching for Files in a Scan
 
 The ``delta`` tab of the ``Re-platform`` page allows you to search and filter the scan compare results.
 
-If you click on one of the categories of scan results (``Added``, ``Modified`` or ``Deleted``), this will help you sort the results.
+If you click on one of the categories of scan results (``Added``, ``Modified`` or ``Deleted``), this will help you sort the results. In the example below, the ``Modified`` and ``Deleted`` categories have been clicked on to deselect, allowing you to see more quickly where the added files are.
+
+	.. image:: /images/scan-compare-filter.png
 
 If you are looking for a particular file name or type, then you can enter this in the search field and click on the search button to view the results.

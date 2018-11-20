@@ -11,11 +11,11 @@ As scans are meta-data, you can compare two scans to determine their differences
 
 There are two methods to compare scans:
 
-	* clicking the ``compare`` button (balance icon) at the top right hand side of the ``Re-platform`` page, then selecting the scans.
+	* clicking the ``compare`` button (balance icon) at the top right hand side of the ``Re-platform`` page, then selecting the scans and clicking ``compare``.
 
 		.. image:: /images/replatform-compare-icon.png
 
-	* selecting a specific scan. By default the selected scan will be compared to a base machine. You can then modify the scan to compare to from the ``Compared to`` section, on the bottom left hand of the page.
+	* selecting a specific scan and going to the ``Delta`` tab. By default the selected scan will be compared to a base machine. You can then modify the scan to compare to from the ``Compared to`` section, on the bottom left hand of the page.
 
 		.. image:: /images/replatform-delta-tab.png
 

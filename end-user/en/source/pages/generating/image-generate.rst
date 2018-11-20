@@ -82,8 +82,9 @@ To generate a machine image from a software component:
 		.. image:: /images/docker-sw-generate.png
 
 	#. Select the distribution and click ``generate``.
+	#. The possible image formats which can be generated are displayed. Select the format you want to use.
 	#. Enter the Docker entrypoint in exec form. For example ``["/usr/sbin/httpd", "-DFOREGROUND"]``.
-	#. Click the ``generate`` button to launch a generation in UForge for this appliance template. 
+	#. Click the ``generate`` button to launch a generation in UForge for this software component. 
 	#. Once the generation is complete, the Docker image will be listed on the ``Dashboard`` under ``Generations``. You can now publish or download your image.
 
 

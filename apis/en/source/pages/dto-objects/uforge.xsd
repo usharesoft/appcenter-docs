@@ -100,6 +100,8 @@
 
     <xs:element name="containerTemplate" type="ContainerTemplate"/>
 
+    <xs:element name="containerTemplates" type="ContainerTemplates"/>
+
     <xs:element name="credAccount" type="CredAccount"/>
 
     <xs:element name="credAccountResource" type="CredAccountResource"/>
@@ -2874,6 +2876,30 @@
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the uri to retrieve images generated from the container template</xsd:documentation>
                         </xsd:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ContainerTemplates">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Provides a list of :ref:`ContainerTemplate-object` objects.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObjects">
+                <xs:sequence>
+                    <xs:element name="containerTemplates" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of :ref:`ContainerTemplate-object` objects</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="containerTemplate" type="ContainerTemplate" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
                     </xs:element>
                 </xs:sequence>
             </xs:extension>

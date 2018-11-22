@@ -67,6 +67,7 @@ Example Request
 	 * :ref:`containerTemplate-create`
 	 * :ref:`containerTemplate-generate`
 	 * :ref:`containerTemplate-get`
+	 * :ref:`containerTemplate-getAll`
 	 * :ref:`containertemplate-object`
 	 * :ref:`image-object`
 	 * :ref:`imagepkgs-object`

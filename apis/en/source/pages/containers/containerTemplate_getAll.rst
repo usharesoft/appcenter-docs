@@ -1,22 +1,24 @@
 .. Copyright 2018 FUJITSU LIMITED
 
-.. _containerTemplate-create:
+.. _containerTemplate-getAll:
 
-containerTemplate_create
+containerTemplate_getAll
 ------------------------
 
-.. function:: POST /users/{uid}/mysoftware/{msid}/templates
+.. function:: GET /users/{uid}/mysoftware/{msid}/templates
 
 .. sidebar:: Summary
 
-	* Method: ``POST``
-	* Response Code: ``201``
+	* Method: ``GET``
+	* Response Code: ``200 / 304``
 	* Response Formats: ``application/xml`` ``application/json``
-	* Since: ``UForge 3.8.8``
+	* Since: ``UForge 3.8.9``
 
-Creates a container template. 
+Retrieves all container templates available for a software component. 
 
-A ``container template`` is an object representing a software bundle to containerize.
+A list of :ref:`ContainerTemplate-object` objects are returned. 
+
+A search criteria can be used to retrieve a subset of these container templates.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -33,21 +35,15 @@ URI Parameters
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A :ref:`containerTemplate-object` object
+None
 
 Example Request
 ~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/users/{uid}/mysoftware/{msid}/templates" -X POST \
-	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"-H "Content-type: application/xml" --data-binary "@representation.xml"
-
-Example of representation.xml content (the request body):
-
-.. code-block:: xml
-
-
+	curl "https://uforge.example.com/api/users/{uid}/mysoftware/{msid}/templates" -X GET \
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::
 
@@ -62,8 +58,8 @@ Example of representation.xml content (the request body):
 	 * :ref:`containerTemplateImage-downloadFile`
 	 * :ref:`containerTemplateImage-get`
 	 * :ref:`containerTemplateImage-publish`
+	 * :ref:`containerTemplate-create`
 	 * :ref:`containerTemplate-generate`
 	 * :ref:`containerTemplate-get`
-	 * :ref:`containerTemplate-getAll`
 	 * :ref:`containertemplate-object`
 	 * :ref:`mySoftware-object`

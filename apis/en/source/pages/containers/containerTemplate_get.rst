@@ -59,5 +59,6 @@ Example Request
 	 * :ref:`containerTemplateImage-publish`
 	 * :ref:`containerTemplate-create`
 	 * :ref:`containerTemplate-generate`
+	 * :ref:`containerTemplate-getAll`
 	 * :ref:`containertemplate-object`
 	 * :ref:`mySoftware-object`

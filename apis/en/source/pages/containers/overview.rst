@@ -19,6 +19,7 @@ Containers API Resources
 	* :ref:`containerTemplate-create`: Creates a container template
 	* :ref:`containerTemplate-generate`: Request to generate a machine image from a container template
 	* :ref:`containerTemplate-get`: Gets the information for a container template
+	* :ref:`containerTemplate-getAll`: Retrieves all container templates available for a software component
 
 
 .. toctree::
@@ -38,3 +39,4 @@ Containers API Resources
     containerTemplate_create
     containerTemplate_generate
     containerTemplate_get
+    containerTemplate_getAll

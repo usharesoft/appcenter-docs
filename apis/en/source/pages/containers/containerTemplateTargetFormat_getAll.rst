@@ -1,22 +1,24 @@
 .. Copyright 2018 FUJITSU LIMITED
 
-.. _containerTemplate-create:
+.. _containerTemplateTargetFormat-getAll:
 
-containerTemplate_create
-------------------------
+containerTemplateTargetFormat_getAll
+------------------------------------
 
-.. function:: POST /users/{uid}/mysoftware/{msid}/templates
+.. function:: GET /users/{uid}/mysoftware/{msid}/templates/{tid}/formats
 
 .. sidebar:: Summary
 
-	* Method: ``POST``
-	* Response Code: ``201``
+	* Method: ``GET``
+	* Response Code: ``200 / 304``
 	* Response Formats: ``application/xml`` ``application/json``
-	* Since: ``UForge 3.8.8``
+	* Since: ``UForge 3.8.9``
 
-Creates a container template. 
+Retrieves all target formats compatible with the container template. 
 
-A ``container template`` is an object representing a software bundle to containerize.
+Retrieves all target formats available for the user and evaluates the restriction rule in order to list only the target formats that are compatible with the container template. 
+
+A list of :ref:`targetformat-object` objects are returned.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -29,25 +31,20 @@ URI Parameters
 
 * ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``msid`` (required): the id of the :ref:`mySoftware-object`
+* ``tid`` (required): the id of the :ref:`containertemplate-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A :ref:`containerTemplate-object` object
+None
 
 Example Request
 ~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/users/{uid}/mysoftware/{msid}/templates" -X POST \
-	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"-H "Content-type: application/xml" --data-binary "@representation.xml"
-
-Example of representation.xml content (the request body):
-
-.. code-block:: xml
-
-
+	curl "https://uforge.example.com/api/users/{uid}/mysoftware/{msid}/templates/{tid}/formats" -X GET \
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::
 
@@ -62,9 +59,7 @@ Example of representation.xml content (the request body):
 	 * :ref:`containerTemplateImage-downloadFile`
 	 * :ref:`containerTemplateImage-get`
 	 * :ref:`containerTemplateImage-publish`
-	 * :ref:`containerTemplateTargetFormat-getAll`
+	 * :ref:`containerTemplate-create`
 	 * :ref:`containerTemplate-generate`
-	 * :ref:`containerTemplate-get`
-	 * :ref:`containerTemplate-getAll`
 	 * :ref:`containertemplate-object`
 	 * :ref:`mySoftware-object`

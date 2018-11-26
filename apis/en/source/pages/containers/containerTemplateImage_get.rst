@@ -55,6 +55,7 @@ Example Request
 	 * :ref:`containerTemplateImage-download`
 	 * :ref:`containerTemplateImage-downloadFile`
 	 * :ref:`containerTemplateImage-publish`
+	 * :ref:`containerTemplateTargetFormat-getAll`
 	 * :ref:`containerTemplate-create`
 	 * :ref:`containerTemplate-generate`
 	 * :ref:`containerTemplate-get`

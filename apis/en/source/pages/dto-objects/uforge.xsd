@@ -2877,6 +2877,11 @@
                             <xsd:documentation xml:lang="en">the uri to retrieve images generated from the container template</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
+                    <xs:element name="formatsUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource to retrieve all the target formats compatible with this container template</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>

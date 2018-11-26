@@ -65,6 +65,7 @@ Example of representation.xml content (the request body):
 	 * :ref:`containerTemplateImage-publish`
 	 * :ref:`containerTemplate-create`
 	 * :ref:`containerTemplate-get`
+	 * :ref:`containerTemplate-getAll`
 	 * :ref:`containertemplate-object`
 	 * :ref:`image-object`
 	 * :ref:`mySoftware-object`

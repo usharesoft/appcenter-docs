@@ -40,9 +40,9 @@ If you plan to migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://
 
 Migrating Linux to VCenter
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-If you plan to migrate a Linux instance from platform using cloud-init (such as OpenStack) to VCenter you must following one of the next proposals:
-	- Uninstall cloud-init (if installed) before scanning
-	- Using ``Re-platform``. When the appliance is imported and before generate, remove cloud-init package.
+If you plan to migrate a Linux instance from a platform using cloud-init (such as OpenStack) to VCenter you must following one of the next proposals:
+	- Uninstall ``cloud-init`` (if installed) before scanning
+	- Use ``Re-platform``. Once the appliance is imported, remove ``cloud-init`` package before generating.
 
 Migrating to Microsoft Azure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

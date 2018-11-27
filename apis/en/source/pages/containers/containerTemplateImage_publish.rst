@@ -64,6 +64,7 @@ Example of representation.xml content (the request body):
 	 * :ref:`containerTemplateImage-downloadFile`
 	 * :ref:`containerTemplateImage-get`
 	 * :ref:`containerTemplate-create`
+	 * :ref:`containerTemplate-delete`
 	 * :ref:`containerTemplate-generate`
 	 * :ref:`containerTemplate-get`
 	 * :ref:`containerTemplate-getAll`

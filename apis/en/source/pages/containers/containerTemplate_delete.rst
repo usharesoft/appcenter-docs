@@ -1,22 +1,22 @@
 .. Copyright 2018 FUJITSU LIMITED
 
-.. _containerTemplate-create:
+.. _containerTemplate-delete:
 
-containerTemplate_create
+containerTemplate_delete
 ------------------------
 
-.. function:: POST /users/{uid}/mysoftware/{msid}/templates
+.. function:: DELETE /users/{uid}/mysoftware/{msid}/templates/{tid}
 
 .. sidebar:: Summary
 
-	* Method: ``POST``
-	* Response Code: ``201``
-	* Response Formats: ``application/xml`` ``application/json``
-	* Since: ``UForge 3.8.8``
+	* Method: ``DELETE``
+	* Response Code: ``204 / 200``
+	* Response Formats: 
+	* Since: ``UForge 3.8.9``
 
-Creates a container template. 
+Deletes a container template. 
 
-A ``container template`` is an object representing a software bundle to containerize.
+.. warning:: this also deletes all associated machine images that have been generated from this container template
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -29,25 +29,20 @@ URI Parameters
 
 * ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``msid`` (required): the id of the :ref:`mySoftware-object`
+* ``tid`` (required): the id of the :ref:`containertemplate-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A :ref:`containerTemplate-object` object
+None
 
 Example Request
 ~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/users/{uid}/mysoftware/{msid}/templates" -X POST \
-	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"-H "Content-type: application/xml" --data-binary "@representation.xml"
-
-Example of representation.xml content (the request body):
-
-.. code-block:: xml
-
-
+	curl "https://uforge.example.com/api/users/{uid}/mysoftware/{msid}/templates/{tid}" -X DELETE \
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::
 
@@ -62,10 +57,8 @@ Example of representation.xml content (the request body):
 	 * :ref:`containerTemplateImage-downloadFile`
 	 * :ref:`containerTemplateImage-get`
 	 * :ref:`containerTemplateImage-publish`
-	 * :ref:`containerTemplateTargetFormat-getAll`
-	 * :ref:`containerTemplate-delete`
+	 * :ref:`containerTemplate-create`
 	 * :ref:`containerTemplate-generate`
-	 * :ref:`containerTemplate-get`
 	 * :ref:`containerTemplate-getAll`
 	 * :ref:`containertemplate-object`
 	 * :ref:`mySoftware-object`

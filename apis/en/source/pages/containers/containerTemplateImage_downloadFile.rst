@@ -65,6 +65,7 @@ Example Request
 	 * :ref:`containerTemplateImage-get`
 	 * :ref:`containerTemplateImage-publish`
 	 * :ref:`containerTemplate-create`
+	 * :ref:`containerTemplate-delete`
 	 * :ref:`containerTemplate-generate`
 	 * :ref:`containerTemplate-get`
 	 * :ref:`containerTemplate-getAll`

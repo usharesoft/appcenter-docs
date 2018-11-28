@@ -59,6 +59,7 @@ Example Request
 	 * :ref:`containerTemplateImage-publish`
 	 * :ref:`containerTemplateTargetFormat-getAll`
 	 * :ref:`containerTemplate-create`
+	 * :ref:`containerTemplate-delete`
 	 * :ref:`containerTemplate-generate`
 	 * :ref:`containerTemplate-getAll`
 	 * :ref:`containertemplate-object`

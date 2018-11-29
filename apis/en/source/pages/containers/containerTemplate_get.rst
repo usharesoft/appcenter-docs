@@ -12,7 +12,7 @@ containerTemplate_get
 	* Method: ``GET``
 	* Response Code: ``200 / 304``
 	* Response Formats: ``application/xml`` ``application/json``
-	* Since: ``UForge 3.8.8``
+	* Since: ``UForge 3.8.9``
 
 Gets the information for a container template. 
 

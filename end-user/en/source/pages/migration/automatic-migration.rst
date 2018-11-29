@@ -46,8 +46,7 @@ In order to run a migration:
 
 		.. note:: For Linux migration, you can exclude non-native files and directories using ``-e`` parameter. The ``-o`` parameter will include the overlay (this option is used by default). The overlay is all the things that are missing compared to a known state (a previous scan of a machine or the operating system native packages). This overlay is a standard tar archive.
 
-		.. note:: The uforge migrate is a tool that self extracts in ``/tmp`` directory before execution. If the machine is configured with ``noexec`` option on ``/tmp`` partition
-			a ``Permission denied`` error will occur. In that case, you can use the environnement variable ``TMPDIR`` to use a different directory.
+		.. note:: The uforge migrate is a tool that self extracts in ``/tmp`` directory before execution. If the machine is configured with ``noexec`` option on ``/tmp`` partition a ``Permission denied`` error will occur. In that case, you can use the environment variable ``TMPDIR`` to use a different directory.
 			For example::
 
 				TMPDIR=/root/ ./uforge-migrate.[bin/exe] -U http://ip:port/ufws -u <username> -n "Test_migration" -o

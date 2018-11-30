@@ -18,8 +18,8 @@ Enhancements
 * UForge Microsoft Azure images now use the Azure agent version 2.2.14-1 for Debian 8 (Jessie)
 * UForge Microsoft Azure images now use the Azure agent version 2.2.18-3 for Debian 9 (Stretch)
 * Improved Outscale publish connector robustness
+* Blueprint deploy view has been improved. The user can now see which blueprint appliances are not ready to be deployed.
 * Blueprint deploy view has been improved. Required actions for deploying the blueprint can now be triggered from this view.
-* Blueprint deploy view has been improved. The user can now see which blueprint appliances are not deployable (Requires additional user interactions at startup).
 
 3.8.fp8
 -------

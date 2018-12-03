@@ -104,7 +104,7 @@ When publishing a Windows machine image to Azure, depending on the generation me
 		* performing a blackbox migration of a Windows machine;
 		* performing a whitebox migration of a Windows machine with the appliance configured as to not run sysprep automatically on its first boot.
 
-		.. note:: In cases these cases, the Azure Virtual Machine Agent should be installed manually before the migration process.
+		.. note:: In these cases, the Azure Virtual Machine Agent should be installed manually before the migration process.
 
 	#. The published image will be listed under ``Images`` when:
 

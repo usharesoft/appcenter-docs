@@ -25,10 +25,10 @@ else
 fi
 
 function validate-param() {
-    if [[ "$1" == "admin" || "$1" == "apis" || "$1" == "end-user" ]]; then
+    if [[ "$1" == "admin" || "$1" == "end-user" ]]; then
        return 0
    else
-       echo "Required parameter: 'end-user', 'admin', or 'apis'"
+       echo "Required parameter: 'end-user', 'admin'"
        return 1
    fi
 }
@@ -72,12 +72,10 @@ function copy-uforge-api() {
 
 echo -e
 echo -e "\e[1mmake-doc\e[0m can be used to generate the doc html:"
-echo -e "  make-doc apis"
 echo -e "  make-doc admin"
 echo -e "  make-doc end-user"
 echo -e
 echo -e "\e[1mserve-doc\e[0m can be used to serve the generated html for local consultation:"
-echo -e "  serve-doc apis"
 echo -e "  serve-doc admin"
 echo -e "  serve-doc end-user"
 echo -e
@@ -86,7 +84,7 @@ echo -e "  copy-uforge-api ../uforge"
 echo -e "  \e[2m# the above is the default value\e[0m"
 echo -e "  copy-uforge-api"
 echo -e
-echo -e "The recommended order of generation is \e[1mapis\e[0m -> \e[1madmin\e[0m -> \e[1mend-user\e[0m"
+echo -e "The recommended order of generation is \e[1madmin\e[0m -> \e[1mend-user\e[0m"
 echo -e
 echo -e "To exit the virtual environment, execute 'deactivate'"
 echo -e "To remove the virtual environment, delete the directory '.venv'"

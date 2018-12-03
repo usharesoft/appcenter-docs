@@ -10,6 +10,7 @@ Release Date: 2018-12-24
 
 New Features
 ~~~~~~~~~~~~
+* Added a new visual way to compare the difference two scan results (from one or more live instances).  This allows users to visualize which files have been added, modified or deleted.  Users can browse the filesystem, search and filter the results.  This feature does not provide differences in the packages added, modified or deleted between the two scans at this time.
 * Ability to generate a software component to a Docker image. The user can select any Linux distribution as a "Base OS".
 * Support of hotkey Escape (ESC) to cancel/close a popup window.
 
@@ -19,6 +20,10 @@ Enhancements
 * UForge Microsoft Azure images now use the Azure agent version 2.2.18-3 for Debian 9 (Stretch)
 * Improved Outscale publish connector robustness
 * Blueprint deploy view has been improved. Required actions for deploying the blueprint can now be triggered from this view.
+
+Known Issues
+~~~~~~~~~~~~
+* Package file deletions are not detected when comparing scans
 
 3.8.fp8
 -------

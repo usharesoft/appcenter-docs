@@ -23,19 +23,23 @@ There are two methods to compare scans:
 
 UForge lists all the differences between the two systems on the ``Delta`` tab. The changes are color coded:
 
-	* blue for added
-	* red for deleted
+	* green for added
 	* orange for modified
+	* red for deleted
 
 The number shown corresponds to the number of files that are different between the two scans. When you drill down into a folder (as shown below), you can see the number of files modified depicted as clickable squares, while the number of files modified in sub-folders are indicated by a number next to the colored dot.
 
-In the example below, there are a total of 65 added files in the /etc folder, with 56 of these new files being added to sub-folders of /etc.
+In the example below, there are a total of 64 added files in the /etc folder, with 55 of these new files being added to sub-folders of /etc.
 
 	.. image:: /images/scan-compare-example.png
 
 If you click on any of the squares, you will see the details of the file that differs from the base scan.
 
 	.. image:: /images/scan-compare-details.png
+
+You can also see the changes as a list.
+
+	.. image:: /images/scan-compare-list.png
 
 Searching for Files in a Scan
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

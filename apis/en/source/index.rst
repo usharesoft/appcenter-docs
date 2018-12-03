@@ -64,8 +64,6 @@ This documentation provides a description of UForge AppCenter RESTful interface.
     pages/workspacemembers/overview
     pages/workspacetemplate/overview
     pages/workspacetemplatecomments/overview
-    pages/licensing
-    pages/changelog
 
 .. _trademarks:
 

@@ -305,7 +305,7 @@ pdf_stylesheets = ['sphinx', 'kerning', 'a4', 'ja']
 pdf_language = "ja"
 
 # Refer to the APIs documentation.
-intersphinx_mapping = {'apis' : ('../../../../../apis/en/build/html/', '../../../apis/en/build/html/objects.inv')}
+intersphinx_mapping = {'apis' : ('http://docs.usharesoft.com/projects/appcenter-api-guide/en/latest/', 'http://docs.usharesoft.com/projects/appcenter-api-guide/en/latest//objects.inv')}
 
 # Documents to append as an appendix to all manuals.
 #texinfo_appendices = []

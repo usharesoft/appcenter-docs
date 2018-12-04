@@ -312,7 +312,7 @@ pdf_documents = [
 #texinfo_no_detailmenu = False
 
 # Refer to the APIs documentation.
-intersphinx_mapping = {'apis' : ('../../../../../apis/en/build/html/', '../../../apis/en/build/html/objects.inv')}
+intersphinx_mapping = {'apis' : ('http://docs.usharesoft.com/projects/appcenter-api-guide/en/latest/', 'http://docs.usharesoft.com/projects/appcenter-api-guide/en/latest//objects.inv')}
 
 # A comma-separated list of custom stylesheets.
 pdf_stylesheets = ['sphinx', 'kerning', 'a4', 'ja']

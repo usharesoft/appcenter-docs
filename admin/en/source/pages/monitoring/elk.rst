@@ -9,6 +9,8 @@ It is possible to visualize UForge logs in a dedicated tool: an ELK server (Elas
 
 UForge logs retrieval can be configured as follows:
 
+		.. note:: The following steps need to be done on each node of your platform.
+
   #. Edit the file ``/etc/UShareSoft/uforge/uforge.conf``. Change the value of ``FILEBEAT_SERVICE_ENABLED`` to ``true``.
 
   #. Edit the file ``/tmpl/filebeat.yml.tmpl`` and put the IP and port of your ELK server in the section:

@@ -35,13 +35,11 @@ Launch the [venv.sh](blob/master/venv.sh) script to prepare the virtualenv or to
     
 Compile the docs with the `make-doc` function:
 
-    $ make-doc apis
     $ make-doc end-user
     $ make-doc admin
 
 Launch a local web server to view the compiled doc with the `serve-doc` function:
 
-    $ serve-doc apis
     $ serve-doc end-user
     $ serve-doc admin
 

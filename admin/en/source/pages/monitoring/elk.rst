@@ -13,7 +13,7 @@ UForge logs retrieval can be configured as follows:
 
   #. Edit the file ``/etc/UShareSoft/uforge/uforge.conf``. Change the value of ``FILEBEAT_SERVICE_ENABLED`` to ``true``.
 
-  #. Edit the file ``/tmpl/filebeat.yml`` and put the IP and port of your ELK server in the section:
+  #. Edit the file ``/etc/filebeat/filebeat.yml`` and put the IP and port of your ELK server in the section:
 
       .. code-block:: shell
 

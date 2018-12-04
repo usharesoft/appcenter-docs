@@ -43,12 +43,14 @@ Then you will need to fill in your credential information in UForge. To do so:
 
 .. _windows-aws-s3:
 
-Setting up an AWS Account to Publish Windows Images
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Setting up an AWS Account to Publish Images
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. note:: Before publishing a Windows image to AWS, ``vmimport`` role must be properly assigned to an AWS account. An access right to S3 bucket is also required for an account. Refer to the procedure in `VM Import Service Role section of the AWS documentation <https://docs.aws.amazon.com/vm-import/latest/userguide/vmimport-image-import.html>`_. Because the name of a S3 bucket changes for each image publish, you should give access to any buckets using a wildcard `*`.
+**Setting up VM Import Service Role**
 
-The following is an example of ``role-policy.json``:
+.. note:: Before publishing a Windows image to AWS, you must create a role named ``vmimport`` in your account. Refer to the procedure in `VM Import Service Role section of the AWS documentation <https://docs.aws.amazon.com/vm-import/latest/userguide/vmimport-image-import.html>`_. Because the name of a S3 bucket changes for each image publish, you should give access to any buckets using a wildcard `*`.
+
+Use the following ``role-policy.json`` instead of the one in the AWS documentation above:
 
 	.. code-block:: json
 
@@ -79,4 +81,151 @@ The following is an example of ``role-policy.json``:
 		   ]
 		}
 
+**Setting up an AWS Account**
 
+The permissions for EC2 and S3 services must be properly assigned to an AWS account which you use to publish images.
+Please refer to `Access Management section of the AWS documentation <https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html>`_ for further information about the AWS permissions.
+
+The following is an example of the policy for publishing Linux images:
+
+	.. code-block:: json
+
+		{
+		    "Version": "2012-10-17",
+		    "Statement": [
+		        {
+		            "Effect": "Allow",
+		            "Action": [
+		                "s3:GetBucketLocation",
+		                "s3:GetObject",
+		                "s3:ListBucket",
+		                "s3:ListAllMyBuckets"
+		            ],
+		            "Resource": [
+		                "arn:aws:s3:::*"
+		            ]
+		        },
+		        {
+		            "Effect": "Allow",
+		            "Action": [
+		                "ec2:AttachVolume",
+		                "ec2:AuthorizeSecurityGroupIngress",
+		                "ec2:CreateImage",
+		                "ec2:CreateKeyPair",
+		                "ec2:CreateSecurityGroup",
+		                "ec2:CreateTags",
+		                "ec2:CreateVolume",
+		                "ec2:CreateVpc",
+		                "ec2:DeleteKeyPair",
+		                "ec2:DeleteSecurityGroup",
+		                "ec2:DeleteVolume",
+		                "ec2:DeleteVpc",
+		                "ec2:DeregisterImage",
+		                "ec2:Describe*",
+		                "ec2:DetachVolume",
+		                "ec2:GetConsoleOutput",
+		                "ec2:ModifyInstanceAttribute",
+		                "ec2:RevokeSecurityGroupIngress",
+		                "ec2:RunInstances",
+		                "ec2:StartInstances",
+		                "ec2:StopInstances",
+		                "ec2:TerminateInstances"
+		            ],
+		            "Resource": "*"
+		        }
+		    ]
+		}
+
+
+The following is an example of the policy for publishing Windows images:
+
+	.. code-block:: json
+
+		{
+		    "Version": "2012-10-17",
+		    "Statement": [
+		        {
+		            "Sid": "VisualEditor0",
+		            "Effect": "Allow",
+		            "Action": [
+		                "s3:GetObject",
+		                "s3:ListBucket",
+		                "s3:GetBucketLocation",
+		                "s3:ListAllMyBuckets",
+		                "s3:CreateBucket",
+		                "s3:PutObject",
+		                "s3:DeleteObject",
+		                "s3:DeleteBucket"
+		            ],
+		            "Resource": "arn:aws:s3:::*"
+		        },
+		        {
+		            "Sid": "VisualEditor1",
+		            "Effect": "Allow",
+		            "Action": [
+		                "ec2:ImportImage",
+		                "ec2:DescribeImportImageTasks",
+		                "ec2:CancelImportTask",
+		                "ec2:CreateTags"
+		            ],
+		            "Resource": "*"
+		        }
+		    ]
+		}
+
+
+The following is an example of the policy for publishing both Linux and Windows images:
+
+	.. code-block:: json
+
+		{
+		    "Version": "2012-10-17",
+		    "Statement": [
+		        {
+		            "Effect": "Allow",
+		            "Action": [
+		                "s3:GetBucketLocation",
+		                "s3:GetObject",
+		                "s3:ListBucket",
+		                "s3:ListAllMyBuckets",
+		                "s3:CreateBucket",
+		                "s3:PutObject",
+		                "s3:DeleteObject",
+		                "s3:DeleteBucket"
+		            ],
+		            "Resource": [
+		                "arn:aws:s3:::*"
+		            ]
+		        },
+		        {
+		            "Effect": "Allow",
+		            "Action": [
+		                "ec2:AttachVolume",
+		                "ec2:AuthorizeSecurityGroupIngress",
+		                "ec2:CreateImage",
+		                "ec2:CreateKeyPair",
+		                "ec2:CreateSecurityGroup",
+		                "ec2:CreateTags",
+		                "ec2:CreateVolume",
+		                "ec2:CreateVpc",
+		                "ec2:DeleteKeyPair",
+		                "ec2:DeleteSecurityGroup",
+		                "ec2:DeleteVolume",
+		                "ec2:DeleteVpc",
+		                "ec2:DeregisterImage",
+		                "ec2:Describe*",
+		                "ec2:DetachVolume",
+		                "ec2:GetConsoleOutput",
+		                "ec2:ModifyInstanceAttribute",
+		                "ec2:RevokeSecurityGroupIngress",
+		                "ec2:RunInstances",
+		                "ec2:StartInstances",
+		                "ec2:StopInstances",
+		                "ec2:TerminateInstances",
+		                "ec2:ImportImage",
+		                "ec2:CancelImportTask"
+		            ],
+		            "Resource": "*"
+		        }
+		    ]
+		}

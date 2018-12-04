@@ -40,10 +40,11 @@ To carry out a scan, go to ``Re-platform`` tab on the ``Migrations`` page:
 
 		.. note:: The ``-n`` option to indicate the scan name is mandatory. If a scan with this name already exists, the scan will be grouped under this name.
 
-		.. note:: The uforge scan is a tool that self extracts in ``/tmp`` directory before execution. If the machine is configured with ``noexec`` option on ``/tmp`` partition a ``Permission denied`` error will occur. In that case, you can use the environment variable ``TMPDIR`` to use a different directory.
+		.. note:: The uforge scan tool self extracts in ``/tmp`` directory before execution. If the machine is configured with ``noexec`` option on ``/tmp`` partition a ``Permission denied`` error will occur. In that case, you can specify the environment variable ``TMPDIR`` to use a different directory.
 			For example::
 
-				TMPDIR=/root/ ./uforge-scan.[bin/exe] -u <username> -a <public-key> -s <secret-key> -U http://ip:port/ufws -n 'Test_scan'
+				TMPDIR=/root/ ./uforge-scan.bin -u <username> -a <public-key> -s <secret-key> \
+					-U https://<uforge-ip>/api -n 'Test_scan'
 
 	11. A report is sent to UForge AppCenter which can be used for migration. To view the progress, go back to the ``Re-platform`` page.
 

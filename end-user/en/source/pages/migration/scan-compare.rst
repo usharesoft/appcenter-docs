@@ -15,7 +15,7 @@ There are two methods to compare scans:
 
 		.. image:: /images/replatform-compare-icon.png
 
-	* selecting a specific scan and going to the ``Delta`` tab. By default the selected scan will be compared to a base machine. You can then modify the scan to compare to from the ``Compared to`` section, on the bottom left hand of the page.
+	* selecting a specific scan and going to the ``Delta`` tab. By default the selected scan will be compared to a base machine. You can then modify the scan to compare to, from the ``Compared to`` section, at the top of the page.
 
 		.. image:: /images/replatform-delta-tab.png
 
@@ -37,7 +37,7 @@ If you click on any of the squares, you will see the details of the file that di
 
 	.. image:: /images/scan-compare-details.png
 
-You can also see the changes as a list.
+You can also see the delta as a list.
 
 	.. image:: /images/scan-compare-list.png
 

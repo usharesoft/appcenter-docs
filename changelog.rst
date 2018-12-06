@@ -12,6 +12,7 @@ New Features
 ~~~~~~~~~~~~
 * Ability to generate a software component to a Docker image. The user can select any Linux distribution as a "Base OS".
 * Support of hotkey Escape (ESC) to cancel/close a popup window.
+* UForge logs can now be pushed to an ELK instance.
 
 Enhancements
 ~~~~~~~~~~~~

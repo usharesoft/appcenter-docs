@@ -12,7 +12,7 @@ containerTemplateImage_downloadFile
 	* Method: ``GET``
 	* Response Code: ``200 / 304``
 	* Response Formats: ``*/*``
-	* Since: ``UForge 3.8.8``
+	* Since: ``UForge 3.8.9``
 
 Downloads a generated machine image. 
 
@@ -65,6 +65,7 @@ Example Request
 	 * :ref:`containerTemplateImage-get`
 	 * :ref:`containerTemplateImage-publish`
 	 * :ref:`containerTemplate-create`
+	 * :ref:`containerTemplate-delete`
 	 * :ref:`containerTemplate-generate`
 	 * :ref:`containerTemplate-get`
 	 * :ref:`containerTemplate-getAll`

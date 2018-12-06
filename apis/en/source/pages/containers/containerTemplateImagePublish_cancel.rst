@@ -12,7 +12,7 @@ containerTemplateImagePublish_cancel
 	* Method: ``DELETE``
 	* Response Code: ``204 / 200``
 	* Response Formats: ``application/xml`` ``application/json``
-	* Since: ``UForge 3.8.8``
+	* Since: ``UForge 3.8.9``
 
 Cancels a running publish of a machine image generated from a container template.
 

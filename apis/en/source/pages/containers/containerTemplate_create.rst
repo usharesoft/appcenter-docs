@@ -12,7 +12,7 @@ containerTemplate_create
 	* Method: ``POST``
 	* Response Code: ``201``
 	* Response Formats: ``application/xml`` ``application/json``
-	* Since: ``UForge 3.8.8``
+	* Since: ``UForge 3.8.9``
 
 Creates a container template. 
 
@@ -63,6 +63,7 @@ Example of representation.xml content (the request body):
 	 * :ref:`containerTemplateImage-get`
 	 * :ref:`containerTemplateImage-publish`
 	 * :ref:`containerTemplateTargetFormat-getAll`
+	 * :ref:`containerTemplate-delete`
 	 * :ref:`containerTemplate-generate`
 	 * :ref:`containerTemplate-get`
 	 * :ref:`containerTemplate-getAll`

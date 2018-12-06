@@ -12,7 +12,7 @@ containerTemplateImagePublished_delete
 	* Method: ``DELETE``
 	* Response Code: ``204 / 200``
 	* Response Formats: 
-	* Since: ``UForge 3.8.8``
+	* Since: ``UForge 3.8.9``
 
 Deletes a published machine image for a container template.
 

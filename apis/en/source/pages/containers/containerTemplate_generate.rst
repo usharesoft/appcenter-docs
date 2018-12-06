@@ -12,7 +12,7 @@ containerTemplate_generate
 	* Method: ``POST``
 	* Response Code: ``201``
 	* Response Formats: ``application/xml`` ``application/json``
-	* Since: ``UForge 3.8.8``
+	* Since: ``UForge 3.8.9``
 
 Request to generate a machine image from a container template. 
 
@@ -65,6 +65,7 @@ Example of representation.xml content (the request body):
 	 * :ref:`containerTemplateImage-publish`
 	 * :ref:`containerTemplateTargetFormat-getAll`
 	 * :ref:`containerTemplate-create`
+	 * :ref:`containerTemplate-delete`
 	 * :ref:`containerTemplate-get`
 	 * :ref:`containerTemplate-getAll`
 	 * :ref:`containertemplate-object`

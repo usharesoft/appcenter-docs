@@ -6,7 +6,7 @@ Changelog
 3.8.fp9
 -------
 
-Release Date: 2018-12-24
+Release Date: 2018-12-21
 
 New Features
 ~~~~~~~~~~~~

@@ -22,6 +22,19 @@ Enhancements
 * Blueprint deploy view has been improved. The user can now see which blueprint appliances are not ready to be deployed.
 * Blueprint deploy view has been improved. Required actions for deploying the blueprint can now be triggered from this view.
 
+Bug Fixes
+~~~~~~~~~
+* 6596 Unknown server error when editing incremental scan after deleting the base scan
+* 9171 Publication to Fujitsu K5 timeout with slow network
+* 9419 The forgotten password email contains both the username and the password
+* 11191 Firewall is not configured on an image generated from an appliance with firewall activated
+* 11812 Google certificate is in clear in log when uploaded
+* 11933 uforge-scan.bin fails to execute when /tmp has noexec mode
+* 11970 Deleting pinned package looks ok in UI but package is not deleted
+* 12193 Cannot publish to Outscale us-west-1
+* 12349 uforge-scan.bin cannot be downloaded from the UForge UI
+* 12352 SELinux configuration is not supported for Oracle Linux
+
 3.8.fp8
 -------
 

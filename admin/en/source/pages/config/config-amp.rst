@@ -11,7 +11,27 @@ Once your UForge platform deployment is complete you can configure `Cloudsoft AM
 	* a configured user in AMP server that will be used by UForge to connect
 
 
-To configure AMP:
+To configure AMP to be compatible with UForge:
+
+	1. On AMP server instance, run as root:
+
+		.. code-block:: shell
+
+			$ echo "brooklyn.jclouds.authorizePublicKey.extraSshPublicKeyData=true" >> /etc/amp/system.properties
+			$ systemctl restart amp
+
+	2. Download the uforge-brooklyn-plugin from the URL:
+
+		https://maven.usharesoft.com/nexus/content/repositories/official/com/usharesoft/brooklyn/uforge-brooklyn-plugin/3.8.9/uforge-brooklyn-plugin-3.8.9.jar
+
+	3. Install the uforge-brooklyn-plugin into AMP:
+
+		* Log inside AMP Portal: https://[amp-instance-host]/brooklyn-ui-catalog/#!/
+		* On the catalog page, click on the ``Upload to catalog`` button
+		* Select and upload the uforge-brooklyn-plugin
+
+
+To configure UForge to use the AMP instance:
 
 	1. On each UForge webservice node and the UI node, in ``/etc/UShareSoft/uforge/uforge.conf`` uncomment and complete the following lines:
 

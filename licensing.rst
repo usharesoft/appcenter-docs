@@ -22,7 +22,7 @@ UNIX is a registered trademark of the Open Group in the United States and in oth
 
 Other company names and product names are trademarks or registered trademarks of their respective owners.
 
-Copyright FUJITSU LIMITED 2017
+Copyright FUJITSU LIMITED 2018
 ------------------------------
 
 All rights reserved, including those of translation into other languages. No part of this manual may be reproduced
@@ -58,6 +58,7 @@ in any form whatsoever without the written permission of FUJITSU LIMITED
 * EclipseLink: http://www.eclipse.org/eclipselink/
 * expat: http://www.libexpat.org/
 
+* Filebeat: https://www.elastic.co/products/beats/filebeat
 * fontconfig: http://fontconfig.org
 
 * glibc: http://www.gnu.org/software/libc/

@@ -22,7 +22,7 @@ To configure AMP to be compatible with UForge:
 
 	2. Download the uforge-brooklyn-plugin from the URL:
 
-		https://maven.usharesoft.com/nexus/content/repositories/official/com/usharesoft/brooklyn/uforge-brooklyn-plugin/3.8.9/uforge-brooklyn-plugin-3.8.9.jar
+		https://maven.usharesoft.com/nexus/content/repositories/official/com/usharesoft/brooklyn/uforge-brooklyn-plugin/3.8.10/uforge-brooklyn-plugin-3.8.10.jar
 
 	3. Install the uforge-brooklyn-plugin into AMP:
 

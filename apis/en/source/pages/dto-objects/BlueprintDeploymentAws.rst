@@ -5,7 +5,7 @@
 BlueprintDeploymentAws
 ======================
 
-Provides the information required to deploy a blueprint template to the Amazon Web Services (AWS) environment.
+Provides the information required to deploy a blueprint to the Amazon Web Services (AWS) environment.
 
 Attributes
 ~~~~~~~~~~

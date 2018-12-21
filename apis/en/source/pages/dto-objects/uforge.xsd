@@ -659,6 +659,12 @@
         <xs:complexContent>
             <xs:extension base="UForgeObject">
                 <xs:sequence>
+                    <xs:element name="uuid" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uuid of the object</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+
                     <xs:element name="applianceExports" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">a list of :ref:`applianceexport-object` objects holding meta-data information for each time
@@ -1442,8 +1448,8 @@
     <xs:complexType name="Blueprint">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
-                Describes a blueprint template.
-                A blueprint template modelizes a set of :ref:`blueprintService-object` and the information required to deploy these services
+                Describes a blueprint.
+                A blueprint modelizes a set of :ref:`blueprintService-object` and the information required to deploy these services
                 on different nodes in a container or cloud environment.
             </xsd:documentation>
         </xsd:annotation>
@@ -1473,6 +1479,11 @@
                     <xs:element name="description" type="xs:string" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the description of the blueprint</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="yaml" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the blueprint yaml content</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                     <xs:element name="deployUri" type="xs:anyURI" minOccurs="0">
@@ -1516,7 +1527,7 @@
     <xs:complexType name="BlueprintDeployment">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
-                Provides the information required to deploy a blueprint template.
+                Provides the information required to deploy a blueprint.
             </xsd:documentation>
         </xsd:annotation>
         <xs:complexContent>
@@ -1540,7 +1551,7 @@
     <xs:complexType name="BlueprintDeploymentAws">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
-                Provides the information required to deploy a blueprint template to the Amazon Web Services (AWS) environment.
+                Provides the information required to deploy a blueprint to the Amazon Web Services (AWS) environment.
             </xsd:documentation>
         </xsd:annotation>
         <xs:complexContent>
@@ -1623,6 +1634,16 @@
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
+            <xs:element name="interactiveProfileAppliances">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">the list of appliances having an interactive profile</xsd:documentation>
+                </xsd:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="interactiveProfileAppliances" type="Appliance" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
         </xs:sequence>
     </xs:complexType>
 
@@ -1636,21 +1657,6 @@
             <xs:element name="serviceId" type="xs:string">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en">the id of this blueprint service. It can be used in ochestrator configuration, see blueprints example provided in UForge user guide documentation for details.</xsd:documentation>
-                </xsd:annotation>
-            </xs:element>
-            <xs:element name="minMemory" type="xs:integer" minOccurs="0">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en">the minimal memory required for this blueprint service</xsd:documentation>
-                </xsd:annotation>
-            </xs:element>
-            <xs:element name="minCores" type="xs:integer" minOccurs="0">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en">the minimal number of cores required for this blueprint service</xsd:documentation>
-                </xsd:annotation>
-            </xs:element>
-            <xs:element name="config" type="xs:string" minOccurs="0">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en">the extra configuration for this blueprint service</xsd:documentation>
                 </xsd:annotation>
             </xs:element>
             <xs:element name="applianceSummary" type="ApplianceSummary">
@@ -10828,7 +10834,7 @@
                     </xs:element>
                     <xs:element name="baseBlueprintsUri" type="xs:anyURI" minOccurs="0">
                         <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the uri resource to retrieve the user's blueprint templates</xsd:documentation>
+                            <xsd:documentation xml:lang="en">the uri resource to retrieve the user's blueprint</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                     <xs:element name="baseCredAccountsUri" type="xs:anyURI" minOccurs="0">

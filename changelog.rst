@@ -3,6 +3,19 @@
 Changelog
 =========
 
+3.8.fp10
+--------
+
+Release Date: 2019-02-04
+
+New Features
+~~~~~~~~~~~~
+* Added a new ``Delta`` tab in Migrations section to visually compare the difference two scan results (from one or more live instances).  This allows users to visualize which files have been added, modified or deleted.  Users can browse the filesystem, search and filter the results.  This feature does not provide differences in the packages added, modified or deleted between the two scans at this time.
+
+Known Issues
+~~~~~~~~~~~~
+* Package file deletions are not detected when comparing scans
+
 3.8.fp9
 -------
 

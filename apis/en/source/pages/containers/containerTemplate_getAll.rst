@@ -1,11 +1,11 @@
 .. Copyright 2018 FUJITSU LIMITED
 
-.. _containerTemplateImagePublish-get:
+.. _containerTemplate-getAll:
 
-containerTemplateImagePublish_get
----------------------------------
+containerTemplate_getAll
+------------------------
 
-.. function:: GET /users/{uid}/mysoftware/{msid}/templates/{tid}/images/{tiid}/pimages/{ptiid}/status
+.. function:: GET /users/{uid}/mysoftware/{msid}/templates
 
 .. sidebar:: Summary
 
@@ -14,22 +14,23 @@ containerTemplateImagePublish_get
 	* Response Formats: ``application/xml`` ``application/json``
 	* Since: ``UForge 3.8.9``
 
-Retrieves the publish status of a machine image generated from a container template.
+Retrieves all container templates available for a software component. 
+
+A list of :ref:`ContainerTemplate-object` objects are returned. 
+
+A search criteria can be used to retrieve a subset of these container templates.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
 
 * Requires Authentication: ``true``
-* Entitlements Required: ``image_publish``
+* Entitlements Required: ``appliance_create``
 
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``ptiid`` (required): the id of the :ref:`publishimage-object`
 * ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``msid`` (required): the id of the :ref:`mySoftware-object`
-* ``tiid`` (required): the id of the :ref:`image-object`
-* ``tid`` (required): the id of the :ref:`containertemplate-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -41,7 +42,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/users/{uid}/mysoftware/{msid}/templates/{tid}/images/{tiid}/pimages/{ptiid}/status" -X GET \
+	curl "https://uforge.example.com/api/users/{uid}/mysoftware/{msid}/templates" -X GET \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::
@@ -49,6 +50,7 @@ Example Request
 	 * :ref:`containerTemplateImageGeneration-cancel`
 	 * :ref:`containerTemplateImageGeneration-get`
 	 * :ref:`containerTemplateImagePublish-cancel`
+	 * :ref:`containerTemplateImagePublish-get`
 	 * :ref:`containerTemplateImagePublished-delete`
 	 * :ref:`containerTemplateImagePublished-get`
 	 * :ref:`containerTemplateImage-delete`
@@ -57,9 +59,8 @@ Example Request
 	 * :ref:`containerTemplateImage-get`
 	 * :ref:`containerTemplateImage-publish`
 	 * :ref:`containerTemplate-create`
+	 * :ref:`containerTemplate-delete`
 	 * :ref:`containerTemplate-generate`
 	 * :ref:`containerTemplate-get`
-	 * :ref:`containerTemplate-getAll`
 	 * :ref:`containertemplate-object`
 	 * :ref:`mySoftware-object`
-	 * :ref:`status-object`

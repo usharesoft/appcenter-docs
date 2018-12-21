@@ -16,9 +16,12 @@ Containers API Resources
 	* :ref:`containerTemplateImage-downloadFile`: Downloads a generated machine image
 	* :ref:`containerTemplateImage-get`: Retrieves the meta-data of a machine image from a container template
 	* :ref:`containerTemplateImage-publish`: Publishes a generated machine image to a target cloud environment
+	* :ref:`containerTemplateTargetFormat-getAll`: Retrieves all target formats compatible with the container template
 	* :ref:`containerTemplate-create`: Creates a container template
+	* :ref:`containerTemplate-delete`: Deletes a container template
 	* :ref:`containerTemplate-generate`: Request to generate a machine image from a container template
 	* :ref:`containerTemplate-get`: Gets the information for a container template
+	* :ref:`containerTemplate-getAll`: Retrieves all container templates available for a software component
 
 
 .. toctree::
@@ -35,6 +38,9 @@ Containers API Resources
     containerTemplateImage_downloadFile
     containerTemplateImage_get
     containerTemplateImage_publish
+    containerTemplateTargetFormat_getAll
     containerTemplate_create
+    containerTemplate_delete
     containerTemplate_generate
     containerTemplate_get
+    containerTemplate_getAll

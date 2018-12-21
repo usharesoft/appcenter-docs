@@ -12,7 +12,7 @@ containerTemplateImage_delete
 	* Method: ``DELETE``
 	* Response Code: ``204 / 200``
 	* Response Formats: 
-	* Since: ``UForge 3.8.8``
+	* Since: ``UForge 3.8.9``
 
 Deletes a machine image generated from a container template.
 
@@ -55,9 +55,11 @@ Example Request
 	 * :ref:`containerTemplateImage-downloadFile`
 	 * :ref:`containerTemplateImage-get`
 	 * :ref:`containerTemplateImage-publish`
+	 * :ref:`containerTemplateTargetFormat-getAll`
 	 * :ref:`containerTemplate-create`
 	 * :ref:`containerTemplate-generate`
 	 * :ref:`containerTemplate-get`
+	 * :ref:`containerTemplate-getAll`
 	 * :ref:`containertemplate-object`
 	 * :ref:`image-object`
 	 * :ref:`mySoftware-object`

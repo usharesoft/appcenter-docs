@@ -12,7 +12,7 @@ containerTemplateImageGeneration_get
 	* Method: ``GET``
 	* Response Code: ``200 / 304``
 	* Response Formats: ``application/xml`` ``application/json``
-	* Since: ``UForge 3.8.8``
+	* Since: ``UForge 3.8.9``
 
 Retrieves the generation status of a machine image generated from a container template.
 
@@ -55,9 +55,11 @@ Example Request
 	 * :ref:`containerTemplateImage-downloadFile`
 	 * :ref:`containerTemplateImage-get`
 	 * :ref:`containerTemplateImage-publish`
+	 * :ref:`containerTemplateTargetFormat-getAll`
 	 * :ref:`containerTemplate-create`
 	 * :ref:`containerTemplate-generate`
 	 * :ref:`containerTemplate-get`
+	 * :ref:`containerTemplate-getAll`
 	 * :ref:`containertemplate-object`
 	 * :ref:`image-object`
 	 * :ref:`mySoftware-object`

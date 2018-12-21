@@ -17,6 +17,7 @@ The list of attributes for ``containerTemplate`` are:
 	* ``distribution`` (:ref:`distribution-object`): the distribution on which the container template is based
 	* ``images``: the list of images generated from the container template
 	* ``imagesUri`` (anyURI): the uri to retrieve images generated from the container template
+	* ``formatsUri`` (anyURI): the uri resource to retrieve all the target formats compatible with this container template
 	* ``created`` (dateTime): the date the appliance template is created
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)

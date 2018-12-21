@@ -3,16 +3,29 @@
 Changelog
 =========
 
-3.8.fp9
+3.8.fp10
 -------
 
-Release Date: 2018-12-24
+Release Date: 2019-02-04
 
 New Features
 ~~~~~~~~~~~~
 * Added a new ``Delta`` tab in Migrations section to visually compare the difference two scan results (from one or more live instances).  This allows users to visualize which files have been added, modified or deleted.  Users can browse the filesystem, search and filter the results.  This feature does not provide differences in the packages added, modified or deleted between the two scans at this time.
+
+Known Issues
+~~~~~~~~~~~~
+* Package file deletions are not detected when comparing scans
+
+3.8.fp9
+-------
+
+Release Date: 2018-12-21
+
+New Features
+~~~~~~~~~~~~
 * Ability to generate a software component to a Docker image. The user can select any Linux distribution as a "Base OS".
 * Support of hotkey Escape (ESC) to cancel/close a popup window.
+* UForge logs can now be pushed to an ELK instance.
 
 Enhancements
 ~~~~~~~~~~~~
@@ -22,9 +35,18 @@ Enhancements
 * Blueprint deploy view has been improved. The user can now see which blueprint appliances are not ready to be deployed.
 * Blueprint deploy view has been improved. Required actions for deploying the blueprint can now be triggered from this view.
 
-Known Issues
-~~~~~~~~~~~~
-* Package file deletions are not detected when comparing scans
+Bug Fixes
+~~~~~~~~~
+* 6596 Unknown server error when editing incremental scan after deleting the base scan
+* 9171 Publication to Fujitsu K5 timeout with slow network
+* 9419 The forgotten password email contains both the username and the password
+* 11191 Firewall is not configured on an image generated from an appliance with firewall activated
+* 11812 Google certificate is in clear in log when uploaded
+* 11933 uforge-scan.bin fails to execute when /tmp has noexec mode
+* 11970 Deleting pinned package looks ok in UI but package is not deleted
+* 12193 Cannot publish to Outscale us-west-1
+* 12349 uforge-scan.bin cannot be downloaded from the UForge UI
+* 12352 SELinux configuration is not supported for Oracle Linux
 
 3.8.fp8
 -------

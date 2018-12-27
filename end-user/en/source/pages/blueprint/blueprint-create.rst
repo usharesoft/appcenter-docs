@@ -17,23 +17,47 @@ To create a new blueprint:
 
 		.. image:: /images/blueprint-create.png
 
-	4. Click the ``create`` button. 
+	4. Click the ``create`` button. The following window will be displayed. 
 
-	5. Click on the appliances you want to add to the blueprint. If you add the same appliance twice, it will be saved with the same name with ``_n+1`` added at the end. You can edit the name of the appliances in the ``Service configuration`` section.
+		.. image:: /images/
 
-	6. You should now see a window similar to the following.
+	You can choose to create and configure your blueprint either from:
 
-		.. image:: /images/blueprint-services.png
+		* Graphical Designer, as described in this example
+		* YAML Editor
 
-		.. note:: If you click on the appliance name in the ``Services`` section, you will be redirected to the appliance details under ``Apps``.
+	By default, the blueprint does not have a name. To modify the name, select ``New application`` and in the right-hand configuration panel, enter the name. You can also enter an ID number.
 
-	7. You can modify the information under ``Service configuration``. Any extra configuration information should be entered using YAML. 
+	5. Select the appliances you want to add to the blueprint and drag them into the tree view. Your first element should be dragged onto the ``New application`` element. If you add an appliance while one is selected, it will be added as a child element of that appliance. You can drag and drop the elements as you wish. 
 
-	.. note:: If you make any modifications to the service configuration, remember to save.
+	You can modify the name and configuration info of all the appliances in the right-hand configuration panel.
 
-	The section must be written with YAML blueprinting language. This language is defined by the open-source Cloudsoft AMP project. The ``service id`` attribute can be used in the YAML Extra configuration to retrieve some information, like IP adresses, hostname, etc. For example you can set "myService" as a service ID and then use it in the Extra configuration by using the AMP command ``$brooklyn:component("myService")``. In the ``customize.command`` attribute you can execute commands using the shell language. A customized command is not stored in the UForge appliance nor UForge images in cloud catalog. These commands will be executed with the user ``uforge`` during the deployment in the deployed instances; therefore, you will be allowed to update your scripts without regenerating UForge images. If you need root access for your commands, please use the `sudo`. Also, ensure that packages `sudo` is included inside your appliances OS profile. You can use your own variables by declaring them in the ``shell.env`` attribute. Then you can use them with this syntax: ``${MY_VARIABLE}``.
-
-	8. Once you have created your blueprint, it will be automatically saved under the ``Blueprint Library``.
+	6. Once you have created your blueprint, it will be automatically saved under the ``Blueprint Library``.
 
 	.. note:: If you update any of the appliances used in the blueprint once the blueprint is created, this will be updated in the blueprint also. However, if your blueprint is already deployed, the changes will not be in the deployed blueprint.
+
+
+
+Using the YAML Editor to Create or Modify a Blueprint
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you choose to create or edit a blueprint with the YAML editor, you should note the following
+
+	* The section must be written with YAML blueprinting language. This language is defined by the open-source Cloudsoft AMP project. 
+	* The ``service id`` attribute can be used in the YAML Extra configuration to retrieve some information, like IP adresses, hostname, etc. For example you can set "myService" as a service ID and then use it in the Extra configuration by using the AMP command ``$brooklyn:component("myService")``. 
+	* In the ``customize.command`` attribute you can execute commands using the shell language. A customized command is not stored in the UForge appliance nor UForge images in cloud catalog. These commands will be executed with the user ``uforge`` during the deployment in the deployed instances; therefore, you will be allowed to update your scripts without regenerating UForge images. 
+	* If you need root access for your commands, use the `sudo`. Also, ensure that packages `sudo` is included inside your appliance's OS profile. 
+	* You can use your own variables by declaring them in the ``shell.env`` attribute. Then you can use them with this syntax: ``${MY_VARIABLE}``.
+
+
+
+Modifying the Blueprint Configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To modify the blueprint configuration, you can select any of the elements of the blueprint and modify the configuration elements in the right-hand panel.
+
+You can either create a new custom configuration or use a standard one from the list.
+
+.. note:: If you update any of the appliances used in the blueprint once the blueprint is created, this will be updated in the blueprint also. However, if your blueprint is already deployed, the changes will not be in the deployed blueprint.
+
 

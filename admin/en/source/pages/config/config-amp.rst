@@ -20,15 +20,13 @@ To configure AMP to be compatible with UForge:
 			$ echo "brooklyn.jclouds.authorizePublicKey.extraSshPublicKeyData=true" >> /etc/amp/system.properties
 			$ systemctl restart amp
 
-	2. Download the uforge-brooklyn-plugin from the URL:
+	2. Download the UForge Brooklyn plugin from the `UShareSoft maven repository <https://maven.usharesoft.com/nexus/content/repositories/official/com/usharesoft/brooklyn/uforge-brooklyn-plugin/3.8.10/uforge-brooklyn-plugin-3.8.10.jar>`_.
 
-		https://maven.usharesoft.com/nexus/content/repositories/official/com/usharesoft/brooklyn/uforge-brooklyn-plugin/3.8.10/uforge-brooklyn-plugin-3.8.10.jar
+	3. Install the UForge Brooklyn plugin into AMP:
 
-	3. Install the uforge-brooklyn-plugin into AMP:
-
-		* Log inside AMP Portal: https://[amp-instance-host]/brooklyn-ui-catalog/#!/
-		* On the catalog page, click on the ``Upload to catalog`` button
-		* Select and upload the uforge-brooklyn-plugin
+		* Log in to the AMP Portal: https://[amp-instance-host]/brooklyn-ui-catalog/#!/
+		* On the catalog page, click ``Upload to catalog``
+		* Select and upload the UForge Brooklyn plugin file
 
 
 To configure UForge to use the AMP instance:

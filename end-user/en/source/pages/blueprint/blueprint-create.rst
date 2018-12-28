@@ -37,17 +37,34 @@ To create a new blueprint:
 	.. note:: If you update any of the appliances used in the blueprint once the blueprint is created, this will be updated in the blueprint also. However, if your blueprint is already deployed, the changes will not be in the deployed blueprint.
 
 
-
 Using the YAML Editor to Create or Modify a Blueprint
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you choose to create or edit a blueprint with the YAML editor, you should note the following
+If you choose to create or edit a blueprint with the YAML editor, you should note the following:
 
-	* The section must be written with YAML blueprinting language. This language is defined by the open-source Cloudsoft AMP project. 
-	* The ``service id`` attribute can be used in the YAML Extra configuration to retrieve some information, like IP adresses, hostname, etc. For example you can set "myService" as a service ID and then use it in the Extra configuration by using the AMP command ``$brooklyn:component("myService")``. 
-	* In the ``customize.command`` attribute you can execute commands using the shell language. A customized command is not stored in the UForge appliance nor UForge images in cloud catalog. These commands will be executed with the user ``uforge`` during the deployment in the deployed instances; therefore, you will be allowed to update your scripts without regenerating UForge images. 
-	* If you need root access for your commands, use the `sudo`. Also, ensure that packages `sudo` is included inside your appliance's OS profile. 
-	* You can use your own variables by declaring them in the ``shell.env`` attribute. Then you can use them with this syntax: ``${MY_VARIABLE}``.
+The section must be written with YAML blueprinting language. This language is defined by the open-source Apache Brooklyn project. For more information, you can refer to `Apache Brooklyn documentation <https://brooklyn.apache.org/v/latest/blueprints/index.html>`_.
+
+The ``id`` attribute can be used in the YAML configuration to retrieve information from an item in the services list. For example you can set ``myService`` as a service ID and then use it in the ``shell.env`` configuration of another service using the following Brooklyn command:
+
+	.. code-block: shell
+
+		services:
+			- type: linux-appliance
+			    id: myService
+			    brooklyn.config:
+			      applianceUUID: dd3d4a97-0505-11e9-8436-0050568818b3
+			- type: linux-appliance
+			    brooklyn.config:
+			      applianceUUID: c6a74128-0505-11e9-8436-0050568818b3
+			      shell.env:
+			        MY_SERVICE_IP: '$brooklyn:component("myService").attributeWhenReady("host.address")'
+			      customize.command: sudo /opt/myApp/configMyServiceIp.sh "$MY_SERVICE_IP"
+
+In the ``customize.command`` attribute you can execute commands using the shell language. A customized command is not stored in the UForge appliance nor UForge images in cloud catalog. These commands will be executed with the user ``uforge`` during the deployment in the deployed instances; therefore, you will be allowed to update your scripts without regenerating UForge images. 
+
+If you need root access for your commands, use the `sudo`. Also, ensure that packages `sudo` is included inside your appliance's OS profile. 
+
+You can use your own variables by declaring them in the ``shell.env`` attribute. Then you can use them with this syntax: ``${MY_VARIABLE}``.
 
 
 

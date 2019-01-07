@@ -3,6 +3,47 @@
 Changelog
 =========
 
+3.8-6
+-----
+
+Release Date: 2019-01-07
+
+Enhancements
+~~~~~~~~~~~~
+* Improve machine_info script.
+
+Bug Fixes
+~~~~~~~~~
+* UFORGE-12108 Avoid sending password and login in same email
+* UFORGE-12101 Google certificate is in clear in log when uploaded
+* UFORGE-12027 Deploy of a scan SLES 11 on Amazon AWS does not work: impossible to connect
+* UFORGE-11944 Create a DHCP NIC on blackbox when no NIC is detected
+* UFORGE-11934 User email address should not be exposed to the other user
+* UFORGE-11921 Use diskshadow.exe instead of vssadmin.exe to flush Windows registry
+* UFORGE-11894 Cannot login to migrated CentOS6 image on AWS with SSH key
+* UFORGE-11864 Linux distro without wget package, migrated to AWS, can not be logged via ssh keypair set when creating instance
+* UFORGE-11824 Publication to Fujitsu K5 timeout with slow network
+* UFORGE-11789 "500 call failed error" shown when uploading a file to Software Library
+* UFORGE-11783 Empty directories are not synchronized to the target machine with uforge-sync.bin
+* UFORGE-11620 Credentials secret keys are visible in clear for Outscale, Amazon and CloudStack
+* UFORGE-11604 Disk usage increases when uploading twice the same file for unlimited quota user
+* UFORGE-11602 Disk usage on Dashboard is incorrect after deleting a scan
+* UFORGE-11352 Unpinning a pinned package fails intermittently
+* UFORGE-11348 Kernel parameters of UForge server can be changed illegally when generating a image
+* UFORGE-11048 CentOS 5 scan fails with duplicate GPG Pubkey package installed without explicit message
+* UFORGE-10989 ``/etc/UShareSoft/uforge-install-config-CheckRootLogin.sh`` not found after CentOS blackbox migration to AWS
+* UFORGE-10954 In Uforge CLI, the packages number of "template info --all" is always 0
+* UFORGE-10929 ``/etc/sysconfig/system-config-firewall`` file created after migration though it is not supported in RHEL 5.2
+* UFORGE-10850 CLI timeout following subscription profile os add with many users
+* UFORGE-10823 Cannot generate Ubuntu 10.04 with a newer debootstrap
+* UFORGE-10800 Windows instance on Azure generated from UForge-published image for whitebox migration does not start correctly
+* UFORGE-10709 Unable to generate a valid ISO image when blackbox migrating a CentOS server
+* UFORGE-10707 When user quota limit of appliance is set, "Quota used" increases 2 when importing from scan
+* UFORGE-10659 The file name of a cloned software is incorrect
+* UFORGE-10627 Version displayed in the portal is incorrect
+* UFORGE-10253 AWS's Instance proxy instance exists even if you cancel a AWS publish
+
+
 3.8-5
 -----
 

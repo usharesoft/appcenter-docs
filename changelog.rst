@@ -14,7 +14,7 @@ New Features
 * Introduce the new user interface Blueprint Composer which allows users to create and deploy multi-node applications. Please note the following restrictions:
     • This release currently supports Linux and Amazon AWS only.
     • For the deployment of the blueprint, UForge must be associated with the new AMP version 5.3
-    • You need to install the Brooklyn Plugin Uforge after the installation of AMP server by following the procedure described: set property and install Uforge Brooklyn Plugin
+    • You need to install the Brooklyn Plugin Uforge after the installation of AMP server by following the procedure described in Admin Guide->Further AppCenter Configuration->Configuring Cloudsoft AMP
     • The Browsers that support the Blueprint Composer are the latest public releases of Firefox and Chrome.
     • Only the English version of the Blueprint Composer view is available.
 

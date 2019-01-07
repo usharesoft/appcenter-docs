@@ -11,11 +11,11 @@ Release Date: 2019-02-04
 New Features
 ~~~~~~~~~~~~
 * Added a new ``Delta`` tab in Migrations section to visually compare the difference two scan results (from one or more live instances).  This allows users to visualize which files have been added, modified or deleted.  Users can browse the filesystem, search and filter the results.  This feature does not provide differences in the packages added, modified or deleted between the two scans at this time.
-* Introduce the new user interface Blueprint Composer which allows users to create and deploy multi-node applications. For this release,  to use the Blueprint Composer, you have to take into consideration the following points :
+* Introduce the new user interface Blueprint Composer which allows users to create and deploy multi-node applications. Please note the following restrictions:
     • This release currently supports Linux and Amazon AWS only.
     • For the deployment of the blueprint, UForge must be associated with the new AMP version 5.3
     • You need to install the Brooklyn Plugin Uforge after the installation of AMP server by following the procedure described: set property and install Uforge Brooklyn Plugin
-    • The Browsers supporting the user interface Blueprint Composer are currently Firefox and Chrome. For both of them with the latest public release.
+    • The Browsers that support the Blueprint Composer are the latest public releases of Firefox and Chrome.
     • Only the English version of the Blueprint Composer view is available.
 
 Known Issues

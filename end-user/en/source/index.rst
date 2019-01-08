@@ -50,7 +50,7 @@ Red Hat Enterprise Linux is a trademark of Red Hat.
 
 Other company names and product names are trademarks or registered trademarks of their respective owners.
 
-Copyright FUJITSU LIMITED 2017
+Copyright FUJITSU LIMITED 2019
 ==============================
 
 All rights reserved, including those of translation into other languages. No part of this manual may be reproduced

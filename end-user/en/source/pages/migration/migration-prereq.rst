@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2019 FUJITSU LIMITED
 
 .. _migration-prereq:
 
@@ -34,9 +34,15 @@ If you plan to migrate a CentOS 6 instance onto AWS with SELinux enabled, you mu
 Migrating Windows to K5
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-If you plan to migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/solutions/cloud/k5/>`_, you must also uninstall CloudBase-Init (if installed) before scanning.
+If you plan to migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/solutions/cloud/k5/>`_, you must uninstall CloudBase-Init (if installed) before scanning.
 
 	For more detailed information, refer to `official Fujitsu K5 IaaS Documentation <https://doc.cloud.global.fujitsu.com/lib/iaas/en/k5-iaas-features-handbook.pdf>`_.
+
+Migrating Windows
+~~~~~~~~~~~~~~~~~
+
+If you plan to migrate a Windows machine to any cloud, you need to ensure that you have the following RDP update: KB4103723.
+
 
 Migrating Linux to VCenter
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,4 +1,4 @@
-.. Copyright 2017 FUJITSU LIMITED
+.. Copyright 2019 FUJITSU LIMITED
 
 .. _manage-resources:
 

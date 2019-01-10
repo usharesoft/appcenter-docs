@@ -19,22 +19,28 @@ To create a new blueprint:
 
 	4. Click the ``create`` button. The following window will be displayed. 
 
-		.. image:: /images/
+		.. image:: /images/blueprint-composer-blank.png
 
 	You can choose to create and configure your blueprint either from:
 
 		* Graphical Designer, as described in this example
 		* YAML Editor
 
-	By default, the blueprint does not have a name. To modify the name, select ``New application`` and in the right-hand configuration panel, enter the name. You can also enter an ID number.
+	By default, the application does not have a name. To modify the name, select ``New application`` and in the right-hand configuration panel, enter the name. You can also enter an ID number.
 
-	5. Select the appliances you want to add to the blueprint and drag them into the tree view. Your first element should be dragged onto the ``New application`` element. If you add an appliance while one is selected, it will be added as a child element of that appliance. You can drag and drop the elements as you wish. 
+		.. note:: The blueprint application name and the name of the blueprint in UForge Blueprint Library can be different.
 
-	You can modify the name and configuration info of all the appliances in the right-hand configuration panel.
+	5. Select the appliances you want to add to the blueprint and drag them into the tree view. Your first element should be dragged onto the ``New application`` element. If you add an appliance while one is selected (red circle around appliance), it will be added as a child element of that appliance. You can drag and drop the elements as you wish. To add applications you can also click on an application from the left panel and click ``add to...``. 
 
-	6. Once you have created your blueprint, it will be automatically saved under the ``Blueprint Library``.
+	The following is a sample blueprint.
 
-	.. note:: If you update any of the appliances used in the blueprint once the blueprint is created, this will be updated in the blueprint also. However, if your blueprint is already deployed, the changes will not be in the deployed blueprint.
+		.. image:: /images/blueprint-composer.png
+
+	You can modify the name and configuration info of all the appliances in the right-hand configuration panel. To close this configuration panel, click X. To reopen the panel, click on the square in the top right.
+
+	6. Once you have created your blueprint, click on ``save``. It will now be visible in the ``Blueprint Library``.
+
+	.. note:: If you update any of the appliances used in the blueprint once the blueprint is created, this will be updated in the blueprint also. However, if your blueprint is already deployed, the changes will not be in the deployed blueprint. For more information about deploying blueprints, refer to :ref:`blueprint-deploy`.
 
 
 Using the YAML Editor to Create or Modify a Blueprint
@@ -72,6 +78,8 @@ Modifying the Blueprint Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To modify the blueprint configuration, you can select any of the elements of the blueprint and modify the configuration elements in the right-hand panel.
+
+	.. image:: /images/blueprint-configuration.png
 
 You can either create a new custom configuration or use a standard one from the list.
 

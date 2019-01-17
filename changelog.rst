@@ -17,6 +17,8 @@ New Features
     • You need to install the Brooklyn Plugin Uforge after the installation of AMP server by following the procedure described in Admin Guide->Further AppCenter Configuration->Configuring Cloudsoft AMP
     • The Browsers that support the Blueprint Composer are the latest public releases of Firefox and Chrome.
     • Only the English version of the Blueprint Composer view is available.
+    • Blueprints made with older version than 3.8.FP10 will be deleted
+    • Note that this new release results an API break for Blueprint DTO model.
 
 Known Issues
 ~~~~~~~~~~~~

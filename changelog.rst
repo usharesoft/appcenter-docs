@@ -3,6 +3,18 @@
 Changelog
 =========
 
+3.8.fp11
+--------
+
+Release Date: 2019-03-18
+
+New Features
+~~~~~~~~~~~~
+* Develop and test your software applications faster. Thanks to the new local docker registry installed with UForge, you can docker run your containers directly.
+
+       .. note:: Previously generated Docker based images will no longer be downloadable. You must regenerate them to use this feature.
+
+
 3.8.fp10
 --------
 

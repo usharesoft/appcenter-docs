@@ -21,11 +21,11 @@ To deploy a blueprint:
 
     			.. image:: /images/blueprint-prepare.png
 
-    		The appliances that were not in ``Ready`` state will go to state ``Generation ongoing`` then to ``Publication ongoing``.
+    		The appliances that were not in ``Ready`` state will go to state ``Generation ongoing`` then to ``Publish ongoing``.
 
     		.. note:: Using the prepare button will automate the generation and publication of all the appliances that are not in ready state. However, you could also generate and publish each appliance seperately.
 
-	#. Once all the appliances are ready, click on ``deploy`` in the top right. Once you launch the deployment, you will be redirected to the ``Deployments`` page. From here you can see the status of the deployment.
+	#. Once all the appliances are ready, click on ``deploy`` in the top right. Once you launch the deployment, you will be redirected to the ``Deployments`` page. From here you can see the status of the blueprint.
 
 		.. image:: /images/blueprint-deploy-status.png
 

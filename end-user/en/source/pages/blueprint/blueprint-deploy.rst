@@ -17,11 +17,15 @@ To deploy a blueprint:
 	#. Select the cloud account you want to use to deploy the blueprint. Currently only AWS is supported.
 
 	#. From the drop-down menu, select the ``Region`` in which the blueprint should be deployed. This should be the same region used to publish the appliances that are included in the blueprint.
-	#. On the bottom of the page, there is a list of the appliances used by your blueprint. For each of these appliances, you can see their current status. All the appliances need to be ready (an appliance is ready when its last version is published to the selected region). If an appliance is not in ``ready`` state, you can generate or publish it directly from this page.
+	#. On the bottom of the page, there is a list of the appliances used by your blueprint. For each of these appliances, you can see their current status. All the appliances need to be ready (an appliance is ready when its last version is published to the selected region). If an appliance is not in ``ready`` state, you will not be able to publish. You can prepare it for deployment it directly from this page by clicking ``prepare``.
 
-                .. image:: /images/blueprint-appliance-status.png
+    		.. image:: /images/blueprint-prepare.png
 
-	#. Click on ``deploy`` in the top right. Once you launch the deployment, you will be redirected to the ``Deployments`` page. From here you can see the status of the deployment.
+    	The appliances that were not in ``ready`` state will go to state ``Generation ongoing`` then to ``Publication ongoing``.
+
+    	.. note:: Using the prepare button will automate the generation and publication of all the appliances that are not in ready state. However, you could also generate and publish each appliance seperately.
+
+	#. Once all the appliances are ready, click on ``deploy`` in the top right. Once you launch the deployment, you will be redirected to the ``Deployments`` page. From here you can see the status of the deployment.
 
 		.. image:: /images/blueprint-deploy-status.png
 

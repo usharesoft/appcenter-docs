@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2019 FUJITSU LIMITED
 
 .. _appliance-custom-software:
 
@@ -66,7 +66,7 @@ To add custom software components to an appliance:
 	4. The software ``Overview`` page will now open. You can modify the name and version, and add a description.
 	5. To upload the files, go to the ``Files`` page.
 
-		.. image:: /images/adding-mysoftware-MSO2.png
+		.. image:: /images/adding-mysoftware-generate.png
 
 	.. note:: If you want to group a set of files, you can create a folder by clicking ``create folder``. Then enter a folder name and click ``create folder``. Now if you want to put files in this folder, click on the upload icon next to the folder name.
 
@@ -121,6 +121,8 @@ To add custom software components to an appliance:
 		.. image:: /images/mysoftware.png
 
 	15. Select the software components you want to add.
+
+.. note:: You can create a Docker image directly from a software using the UForge UI. Refer to :ref:`gen-docker-image`.
 
 .. _restriction-rules:
 
@@ -177,3 +179,5 @@ By using the command-line tool `hammr <http://hammr.io>`_, you are able to retri
 Where ``TargetFormat`` fields possible values are:
 	* ``name``: the value listed in the `Builder Type` column
 	* ``type``: can be one of the following ``cloud``, ``container``, ``physical`` or ``virtual``
+
+

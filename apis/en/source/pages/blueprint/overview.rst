@@ -1,11 +1,11 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2019 FUJITSU LIMITED
 
 .. _blueprint-api-resources:
 
 Blueprint API Resources
 =======================
 
-	* :ref:`blueprint-create`: Creates a blueprint template in a user's ``Blueprint Library``
+	* :ref:`blueprint-create`: Creates a blueprint in a user's ``Blueprint Library``
 	* :ref:`blueprint-delete`: Removes a blueprint from a user's ``Blueprint Library``
 	* :ref:`blueprint-deploy`: Deploys a blueprint
 	* :ref:`blueprint-get`: Retrieves a blueprint from a user's ``Blueprint Library``

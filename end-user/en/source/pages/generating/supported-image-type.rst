@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2019 FUJITSU LIMITED
 
 
 .. _supported-image-formats:
@@ -87,6 +87,8 @@ With UForge you can create machine images in the following formats.
 |                                     | For Windows, Evaluation Editions are not supported    |
 +-------------------------------------+-------------------------------------------------------+
 | Google Compute Engine               | none                                                  |
++-------------------------------------+-------------------------------------------------------+
+| OpenShift                           | not supported for a Windows-based appliance           |
 +-------------------------------------+-------------------------------------------------------+
 | OpenStack                           | Target formats:                                       |
 |                                     | OpenStack QCOW2                                       |

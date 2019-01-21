@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2019 FUJITSU LIMITED
 
 .. _mySoftwareRestrictionOS-evaluate:
 
@@ -78,6 +78,7 @@ Example of representation.xml content (the request body):
 	 * :ref:`mySoftwareLogo-download`
 	 * :ref:`mySoftwareLogo-downloadFile`
 	 * :ref:`mySoftwareLogo-upload`
+	 * :ref:`mySoftwareRestrictionOS-getAll`
 	 * :ref:`mySoftwareRestriction-update`
 	 * :ref:`mySoftwareUsage-getAll`
 	 * :ref:`mySoftware-availableForImage`

@@ -1,28 +1,53 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2019 FUJITSU LIMITED
 
 .. _migration-scan-compare:
 
 Comparing Scans
 ---------------
 
-As scans are just meta-data, you can compare two scans to determine their differences.  This can be used to detect the differences between two live machines (for example between staging and production) or to detect changes of the live machine over time.
+As scans are meta-data, you can compare two scans to determine their differences.  This can be used to detect the differences between two live machines (for example between staging and production) or to detect changes of the live machine over time.
 
 .. warning:: This is only supported for Linux based source instances.
 
-From the ``Re-platform`` tab on the ``Migrations`` page:
+There are two methods to compare scans:
 
-	1. Click on the ``compare`` button (balance icon) at the top right hand side of the ``Re-platform`` page.
+	* clicking the ``compare`` button (balance icon) at the top right hand side of the ``Re-platform`` page, then selecting the scans and clicking ``compare``.
 
-	.. image:: /images/replatform-compare-icon.png
+		.. image:: /images/replatform-compare-icon.png
 
-	2. Select the source and target scan. 
+	* selecting a specific scan and going to the ``Delta`` tab. By default the selected scan will be compared to a base machine. You can then modify the scan to compare to, from the ``Compared to`` section, at the top of the page.
 
-		.. warning:: The source and target scan must be of the same type. For example, if the source scan is a scan with overlay, then it must be compared to a scan with overlay. Similarly, a scan without overlay can only be compared to a scan without overlay.
+		.. image:: /images/replatform-delta-tab.png
 
-	.. image:: /images/replatform-compare.png
+.. warning:: The source and target scan must be of the same type. For example, if the source scan is a scan with overlay, then it must be compared to a scan with overlay. Similarly, a scan without overlay can only be compared to a scan without overlay.
 
-	3. Click ``compare``.
+UForge lists all the differences between the two systems on the ``Delta`` tab. The changes are color coded:
 
-UForge lists all the differences between the two systems. The results show the changes you would need to make manually to get your source scan to the state of the target scan.
+	* green for added
+	* orange for modified
+	* red for deleted
 
-For example, if you have source scan A and target scan B, in the list, any items that are listed mean they are in scan B but not in scan A. Items that are in strikethrough mean that they were in your source scan A but not in scan B.
+The number shown corresponds to the number of files that are different between the two scans. When you drill down into a folder (as shown below), you can see the number of files modified depicted as clickable squares, while the number of files modified in sub-folders are indicated by a number next to the colored dot.
+
+In the example below, there are a total of 64 added files in the /etc folder, with 55 of these new files being added to sub-folders of /etc.
+
+	.. image:: /images/scan-compare-example.png
+
+If you click on any of the squares, you will see the details of the file that differs from the base scan.
+
+	.. image:: /images/scan-compare-details.png
+
+You can also see the delta as a list.
+
+	.. image:: /images/scan-compare-list.png
+
+Searching for Files in a Scan
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The ``delta`` tab of the ``Re-platform`` page allows you to search and filter the scan compare results.
+
+If you click on one of the categories of scan results (``Added``, ``Modified`` or ``Deleted``), this will help you sort the results. In the example below, the ``Modified`` and ``Deleted`` categories have been clicked on to deselect, allowing you to see more quickly where the added files are.
+
+	.. image:: /images/scan-compare-filter.png
+
+If you are looking for a particular file name or type, then you can enter this in the search field and click on the search button to view the results.

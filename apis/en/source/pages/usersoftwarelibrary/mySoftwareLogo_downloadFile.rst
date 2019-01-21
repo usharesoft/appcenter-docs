@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2019 FUJITSU LIMITED
 
 .. _mySoftwareLogo-downloadFile:
 
@@ -69,6 +69,7 @@ Example Request
 	 * :ref:`mySoftwareLogo-download`
 	 * :ref:`mySoftwareLogo-upload`
 	 * :ref:`mySoftwareRestrictionOS-evaluate`
+	 * :ref:`mySoftwareRestrictionOS-getAll`
 	 * :ref:`mySoftwareRestriction-update`
 	 * :ref:`mySoftwareUsage-getAll`
 	 * :ref:`mySoftware-availableForImage`

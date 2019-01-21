@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2019 FUJITSU LIMITED
 
 .. _migration-prereq:
 
@@ -34,9 +34,21 @@ If you plan to migrate a CentOS 6 instance onto AWS with SELinux enabled, you mu
 Migrating Windows to K5
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-If you plan to migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/solutions/cloud/k5/>`_, you must also uninstall CloudBase-Init (if installed) before scanning.
+If you plan to migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/solutions/cloud/k5/>`_, you must uninstall CloudBase-Init (if installed) before scanning.
 
-	For more detailed information, refer to `official Fujitsu K5 IaaS Documentation <http://www.fujitsu.com/uk/Images/k5-iaas-features-handbook.pdf>`_.
+	For more detailed information, refer to `official Fujitsu K5 IaaS Documentation <https://doc.cloud.global.fujitsu.com/lib/iaas/en/k5-iaas-features-handbook.pdf>`_.
+
+Migrating Windows
+~~~~~~~~~~~~~~~~~
+
+If you plan to migrate a Windows machine to any cloud, you need to ensure that you have the following RDP update: KB4103723.
+
+
+Migrating Linux to VCenter
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+If you plan to migrate a Linux instance from a platform using cloud-init (such as OpenStack) to VCenter you must following one of the next proposals:
+	- Uninstall ``cloud-init`` (if installed) before scanning
+	- Use ``Re-platform``. Once the appliance is imported, remove ``cloud-init`` package before generating.
 
 Migrating to Microsoft Azure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,3 +57,4 @@ Currently, to publish to Microsoft Azure platform `<https://azure.microsoft.com/
 
 	1. Unless you are migrating from CentOS7+ or Red Hat Enterprise Linux 7+, uninstall NetworkManager (if installed).
 	2. Uninstall the Microsoft Azure agent, i.e. WALinuxAgent and waagent packages (if installed).
+

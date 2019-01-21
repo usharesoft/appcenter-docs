@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2019 FUJITSU LIMITED
 
 .. _blueprint-create:
 
@@ -14,7 +14,7 @@ blueprint_create
 	* Response Formats: ``application/xml`` ``application/json``
 	* Since: ``UForge 3.8.fp4``
 
-Creates a blueprint template in a user's ``Blueprint Library``. 
+Creates a blueprint in a user's ``Blueprint Library``. 
 
 Please refer to :ref:`blueprint-object` for a complete list of all the attributes.
 

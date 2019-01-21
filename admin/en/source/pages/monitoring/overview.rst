@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2019 FUJITSU LIMITED
 
 
 Monitoring Overview
@@ -11,6 +11,7 @@ The following sections cover some elements to monitor and troubleshoot your UFor
 
    webservice-logs
    scheduler-jobs
+   elk
    supervisor-mode
    support
 

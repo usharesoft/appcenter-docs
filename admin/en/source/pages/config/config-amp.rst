@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2019 FUJITSU LIMITED
 
 .. _config-amp:
 
@@ -7,11 +7,29 @@ Configuring Cloudsoft AMP
 
 Once your UForge platform deployment is complete you can configure `Cloudsoft AMP <https://www.cloudsoft.io/amp/>`_ in order to allow users to deploy published machine images directly to Amazon or OpenStack, without having to connect to their cloud account. Before you start the configuration, ensure that you have:
 
-	* a running AMP server (version AMP-5.0, Brooklyn 0.12.0) with groovy script enabled, see `Cloudsoft AMP documentation <https://docs.cloudsoft.io/operations/production-installation.html>`_ for installation
+	* a running AMP server (version AMP-5.3, Brooklyn 1.0.0) with groovy script enabled, see `Cloudsoft AMP documentation <https://docs.cloudsoft.io/operations/production-installation.html>`_ for installation
 	* a configured user in AMP server that will be used by UForge to connect
 
 
-To configure AMP:
+To configure AMP to be compatible with UForge:
+
+	1. On AMP server instance, run as root:
+
+		.. code-block:: shell
+
+			$ echo "brooklyn.jclouds.authorizePublicKey.extraSshPublicKeyData=true" >> /etc/amp/system.properties
+			$ systemctl restart amp
+
+	2. Download the UForge Brooklyn plugin from the `UShareSoft maven repository <https://maven.usharesoft.com/nexus/content/repositories/official/com/usharesoft/brooklyn/uforge-brooklyn-plugin/3.8.10/uforge-brooklyn-plugin-3.8.10.jar>`_.
+
+	3. Install the UForge Brooklyn plugin into AMP:
+
+		* Log in to the AMP Portal: https://[amp-instance-host]/brooklyn-ui-catalog/#!/
+		* On the catalog page, click ``Upload to catalog``
+		* Select and upload the UForge Brooklyn plugin file
+
+
+To configure UForge to use the AMP instance:
 
 	1. On each UForge webservice node and the UI node, in ``/etc/UShareSoft/uforge/uforge.conf`` uncomment and complete the following lines:
 

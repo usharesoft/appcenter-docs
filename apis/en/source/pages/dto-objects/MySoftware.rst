@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2019 FUJITSU LIMITED
 
 .. _mysoftware-object:
 
@@ -39,6 +39,7 @@ The list of attributes for ``mySoftware`` are:
 	* ``website`` (anyURI): the website URL of the maintainer
 	* ``softwareArtifactUris`` (:ref:`UriList-object`): the list of uri resources for each software artifacts in the software bundle
 	* ``formatDependent`` (boolean): a boolean highlighting if the Software bundle is restricted on target format
+	* ``containerTemplatesUri`` (anyURI): the uri to retrieve container templates created from the software bundle
 	* ``created`` (dateTime): the date the appliance template is created
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)

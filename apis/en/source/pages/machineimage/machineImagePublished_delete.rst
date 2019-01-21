@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2019 FUJITSU LIMITED
 
 .. _machineImagePublished-delete:
 
@@ -25,9 +25,9 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the user name (login name) of the :ref:`user-object`
+* ``uid`` (required): the user name (login name) of the User
 * ``itid`` (required): the id of the :ref:`image-object`
-* ``aid`` (required): the id of the :ref:`appliance-object`
+* ``aid`` (required): the id of the Appliance
 * ``pitid`` (required): the id of the :ref:`publishimage-object`
 
 HTTP Request Body Parameters

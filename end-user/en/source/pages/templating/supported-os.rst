@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2019 FUJITSU LIMITED
 
 .. _uforge-supported-os-formats:
 
@@ -34,7 +34,8 @@ The following is a list of supported OSes that users can use as the guest operat
 | Scientific Linux | 5.2+, 6 (32bit and 64bit), 7 (64bit)     | 5.2+, 6 (32bit and 64bit), 7 (64bit)     |
 +------------------+------------------------------------------+------------------------------------------+
 | Ubuntu LTS       | 10.04 (Lucid), 12.04 (Precise),          | 10.04 (Lucid), 12.04 (Precise),          |
-|                  | 14.04 (Trusty), 16.04 (32bit and 64bit)  | 14.04 (Trusty), 16.04 (32bit and 64bit)  |
+|                  | 14.04 (Trusty), 16.04 (Xenial),          | 14.04 (Trusty), 16.04 (Xenial),          |
+|                  | 18.04 (Bionic) (32bit and 64bit)         | 18.04 (Bionic) (32bit and 64bit)         |
 +------------------+------------------------------------------+------------------------------------------+
 | Microsoft        | 2008R2, 2012, 2012R2, 2016               | 2008R2, 2012, 2012R2, 2016               |
 | Windows Server   |                                          |                                          |

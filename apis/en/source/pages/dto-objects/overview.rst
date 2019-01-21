@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2019 FUJITSU LIMITED
 
 .. _dto-objects:
 
@@ -7,6 +7,7 @@ Data Transfer Objects
 
 This section provides a description of all UForge AppCenter REST Data Transfer objects.
 
+	* :ref:`abstractpipeline-object`
 	* :ref:`abstractwinapplication-object`
 	* :ref:`abstractwinapplications-object`
 	* :ref:`address-object`
@@ -44,6 +45,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`comments-object`
 	* :ref:`companies-object`
 	* :ref:`company-object`
+	* :ref:`containertemplate-object`
+	* :ref:`containertemplates-object`
 	* :ref:`credaccount-object`
 	* :ref:`credaccountaws-object`
 	* :ref:`credaccountazure-object`
@@ -124,7 +127,6 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`partition-object`
 	* :ref:`partitions-object`
 	* :ref:`partitiontable-object`
-	* :ref:`pipeline-object`
 	* :ref:`package-object`
 	* :ref:`pkggroup-object`
 	* :ref:`packages-object`
@@ -226,6 +228,7 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 .. toctree::
     :hidden:
 
+    AbstractPipeline
     AbstractWinApplication
     AbstractWinApplications
     Address
@@ -263,6 +266,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     Comments
     Companies
     Company
+    ContainerTemplate
+    ContainerTemplates
     CredAccount
     CredAccountAws
     CredAccountAzure
@@ -343,7 +348,6 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     Partition
     Partitions
     PartitionTable
-    Pipeline
     Pkg
     PkgGroup
     PkgList

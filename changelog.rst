@@ -18,7 +18,7 @@ New Features
     • The Browsers that support the Blueprint Composer are the latest public releases of Firefox and Chrome.
     • Only the English version of the Blueprint Composer view is available.
     • Blueprints created with a version of UForge older than 3.8.FP10 will be deleted
-    • Note that this new release results an API break for Blueprint DTO model.
+    • Note that this new release brings an API break for Blueprint DTO model.
 
 Known Issues
 ~~~~~~~~~~~~

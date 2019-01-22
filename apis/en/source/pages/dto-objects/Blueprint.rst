@@ -1,11 +1,11 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2019 FUJITSU LIMITED
 
 .. _blueprint-object:
 
 blueprint
 =========
 
-Describes a blueprint template. A blueprint template modelizes a set of :ref:`blueprintService-object` and the information required to deploy these services on different nodes in a container or cloud environment.
+Describes a blueprint. A blueprint modelizes a set of :ref:`blueprintService-object` and the information required to deploy these services on different nodes in a container or cloud environment.
 
 Attributes
 ~~~~~~~~~~
@@ -17,6 +17,7 @@ The list of attributes for ``blueprint`` are:
 	* ``revision`` (string): the revision of the blueprint
 	* ``uri`` (anyURI): the uri resource to retrieve the blueprint
 	* ``description`` (string): the description of the blueprint
+	* ``yaml`` (string): the blueprint yaml content
 	* ``deployUri`` (anyURI): the uri resource to deploy the blueprint
 	* ``predeployUri`` (anyURI): the endpoint resource to retrieve BlueprintPredeploy
 	* ``created`` (dateTime): the date the appliance template is created

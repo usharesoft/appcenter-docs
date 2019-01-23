@@ -1,4 +1,4 @@
-.. Copyright 2019 FUJITSU LIMITED
+.. Copyright FUJITSU LIMITED 2019
 
 .. _mysoftware-object:
 
@@ -16,6 +16,7 @@ The list of attributes for ``mySoftware`` are:
 	* ``applianceUris`` (:ref:`UriList-object`): the list of uri resources of each appliance template using this software component
 	* ``cloneUri`` (anyURI): uri resource used to clone this MySoftware
 	* ``imported`` (boolean): a boolean highlighting if the MySoftware has been imported (from a scan, an appliance import or a workspace)
+	* ``generationEnabled`` (boolean): a boolean highlighting if the Software component is able to be generated or not
 	* ``tag`` (string): the tag information
 	* ``shortTag`` (string): the short tag information (mySoftware or project)
 	* ``name`` (string): the name of this software bundle

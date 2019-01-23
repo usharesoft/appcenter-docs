@@ -1,4 +1,4 @@
-.. Copyright 2019 FUJITSU LIMITED
+.. Copyright FUJITSU LIMITED 2019
 
 .. _appliance-delete:
 
@@ -29,7 +29,7 @@ Security Summary
 URI Parameters
 ~~~~~~~~~~~~~~
 
-* ``uid`` (required): the user name (login name) of the :ref:`user-object` that has created the appliance
+* ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``aid`` (required): the id of the :ref:`appliance-object`
 
 HTTP Request Body Parameters

@@ -114,6 +114,8 @@
 
     <xs:element name="deployments" type="Deployments"/>
 
+    <xs:element name="directoryStructure" type="DirectoryStructure"/>
+
     <xs:element name="disk" type="Disk"/>
 
     <xs:element name="disks" type="Disks"/>
@@ -295,6 +297,8 @@
     <xs:element name="scan" type="Scan"/>
 
     <xs:element name="scanCompare" type="ScanCompare"/>
+
+    <xs:element name="scannedDirectory" type="ScannedDirectory"/>
 
     <xs:element name="scanImport" type="ScanImport"/>
 
@@ -5994,6 +5998,11 @@
                             <xsd:documentation xml:lang="en">a boolean highlighting if the MySoftware has been imported (from a scan, an appliance import or a workspace)</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
+                    <xs:element name="generationEnabled" type="xs:boolean" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">a boolean highlighting if the Software component is able to be generated or not</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -8798,7 +8807,6 @@
         </xs:complexContent>
     </xs:complexType>
 
-
     <xs:complexType name="ScannedFile">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
@@ -8828,6 +8836,18 @@
                             <xsd:documentation xml:lang="en">a boolean indicating if this file has been received as part of the overlay upload</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
+                    <xs:element name="changeType" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the change type of the file</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="added"/>
+                                <xs:enumeration value="deleted"/>
+                                <xs:enumeration value="modified"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -8852,6 +8872,111 @@
                             </xs:sequence>
                         </xs:complexType>
                     </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="DirectoryStructure">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Holds the meta-data of a directory on the file system.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObject">
+                <xs:sequence>
+                    <xs:element name="id" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the id of the directory</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="path" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the path of the directory</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="subDirectories" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of sub directories</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="subDirectory" type="DirectoryStructure" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ScannedDirectory">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Holds the meta-data of a directory discovered on the file system after a scan process.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="DirectoryStructure">
+                <xs:sequence>
+                    <xs:element name="changeType" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the change type of the directory</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="ADD"/>
+                                <xs:enumeration value="DELETE"/>
+                                <xs:enumeration value="CHANGE"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="owner" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the owner of the directory</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+
+                    <xs:element name="group" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the group of the directory</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+
+                    <xs:element name="permissions" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the permissions of the directory</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+
+                    <xs:element name="sumAdded" type="xs:long" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the sum of added files in the directory</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+
+                    <xs:element name="sumChanged" type="xs:long" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the sum of changed files in the directory</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="sumDeleted" type="xs:long" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the sum of deleted files in the directory</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="files" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of scanned files in the directorie</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="file" type="ScannedFile" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>

@@ -1,4 +1,4 @@
-.. Copyright 2019 FUJITSU LIMITED
+.. Copyright FUJITSU LIMITED 2019
 
 .. _dto-objects:
 
@@ -165,6 +165,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`scanimports-object`
 	* :ref:`scannedfile-object`
 	* :ref:`scannedfiles-object`
+	* :ref:`directorystructure-object`
+	* :ref:`scanneddirectory-object`
 	* :ref:`scansync-object`
 	* :ref:`scanfilestosynchronize-object`
 	* :ref:`scannedinstance-object`
@@ -386,6 +388,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     ScanImports
     ScannedFile
     ScannedFiles
+    DirectoryStructure
+    ScannedDirectory
     ScanSync
     ScanFilesToSynchronize
     ScannedInstance

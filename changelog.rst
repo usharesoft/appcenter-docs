@@ -24,6 +24,29 @@ Known Issues
 ~~~~~~~~~~~~
 * Package file deletions are not detected when comparing scans
 
+Enhancements
+~~~~~~~~~~~~
+* Disable Software Bundle generation page if no base OS available
+* Inject firewall configuration package when "ask during installation" is selected on Centos 7
+* Disable unsupported "ask during installation" firewall option on Debian an Ubuntu
+
+Bug Fixes
+~~~~~~~~~
+* 8626 After scanning windows 2016, one service,CDPUserSvc_XXXXX, is missing on the list of scan result
+* 8871 Changing partitioning from Advanced to Basic in a template imported from a Windows scan leads to generation error
+* 10519 ISO image created by UForge does not respect UTC
+* 11777 Password is displayed in clear text on Summary for an application
+* 12265 When publishing an appliance from blueprint UI, the row is moved to the bottom of the table
+* 12280 CentOS 5 scan fails without explicit message when duplicated GPG Pubkey packages are installed
+* 12293 Updates counter on appliance view is placed too far to the right
+* 12334 Wrong message in portal when a disabled user try to log in
+* 12337 Copyright customized through config.xml are not shown
+* 12433 User password displayed in clear when deploying Windows image on AWS
+* 12474 Reset the password after an attempt of sign-in with a wrong password fails
+* 12480 Root password is displayed in clear inside the generated machine image
+* 12483 A previously assigned mountpoint can't be reused in the UI after a file system type change
+* 12619 Password is displayed in clear text on Summary for a workspace
+
 3.8.fp9
 -------
 

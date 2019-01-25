@@ -25,7 +25,7 @@ The html files are in the build directory for each sub-project, for example, the
 
     $ open uforge-appcenter/build/html/index.html
 
-You can also build each guide individually, note though the end user guide and admin guide depend on the API guide.
+You can also build each guide individually.
 
 ### Building in a separate virtualenv
 

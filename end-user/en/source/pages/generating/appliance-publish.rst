@@ -59,7 +59,7 @@ In order to publish a machine image to a cloud environment or container, you mus
 Publishing a Windows Image to KVM on Red Hat Linux
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you want to publish a Windows image to KVM on Red Hat Linux you need to inject specific VirtIO drivers. 
+If you want to publish a Windows image to KVM on Red Hat Linux you need to inject specific VirtIO drivers. To boot up a Windows image on KVM, you should specify 'VirtIO' as  a disk bus type. You should not specify 'IDE' or other types.
 
 #. In order to add the specific drivers, the Red Hat VirtIO drivers can be either added to AppCenter as a Project if it has been added to your AppCenter by the administrator, or using MySoftware. 
 

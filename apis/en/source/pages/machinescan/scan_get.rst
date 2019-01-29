@@ -1,4 +1,4 @@
-.. Copyright 2019 FUJITSU LIMITED
+.. Copyright FUJITSU LIMITED 2019
 
 .. _scan-get:
 
@@ -60,7 +60,6 @@ Example Request
 	 * :ref:`scanSync-get`
 	 * :ref:`scanSync-getFiles`
 	 * :ref:`scan-cancel`
-	 * :ref:`scan-compare`
 	 * :ref:`scan-create`
 	 * :ref:`scan-delete`
 	 * :ref:`scan-multipartCreate`

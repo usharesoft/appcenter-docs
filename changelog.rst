@@ -10,7 +10,7 @@ Release Date: 2019-03-18
 
 Enhancements
 ~~~~~~~~~~~~
-* Blueprint deploy view has been improved. The user can now generate and publish all images of the blueprint appliances in a single action.
+* Blueprint deployment has been improved. The user can now generate and publish all images of the blueprint appliances by clicking on the new ``prepare`` button.
 
 
 

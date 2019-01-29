@@ -51,4 +51,4 @@ Example of representation.xml content (the request body):
 .. seealso::
 
 	 * :ref:`migration-object`
-	 * :ref:`migrationstage-object`
+	 * :ref:`stage-object`

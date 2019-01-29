@@ -50,5 +50,5 @@ Example Request
 	 * :ref:`migration-cancel`
 	 * :ref:`migration-create`
 	 * :ref:`migration-get`
-	 * :ref:`migrationstage-object`
+	 * :ref:`stage-object`
 	 * :ref:`user-object`

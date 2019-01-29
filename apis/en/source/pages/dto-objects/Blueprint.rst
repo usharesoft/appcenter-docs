@@ -19,7 +19,9 @@ The list of attributes for ``blueprint`` are:
 	* ``description`` (string): the description of the blueprint
 	* ``yaml`` (string): the blueprint yaml content
 	* ``deployUri`` (anyURI): the uri resource to deploy the blueprint
-	* ``predeployUri`` (anyURI): the endpoint resource to retrieve BlueprintPredeploy
+	* ``predeployUri`` (anyURI): the uri resource to retrieve BlueprintPredeploy
+	* ``prepareUri`` (anyURI): the uri resource to launch a pipeline based on this blueprint
+	* ``pipelines``: the list of Pipelines used to prepare this blueprint
 	* ``created`` (dateTime): the date the appliance template is created
 	* ``dbId`` (long): the database id of the object
 	* ``digest`` (string): the digest value (used for etag)

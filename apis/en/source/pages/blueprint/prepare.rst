@@ -1,11 +1,11 @@
 .. Copyright FUJITSU LIMITED 2019
 
-.. _blueprint-predeploy:
+.. _prepare:
 
-blueprint_predeploy
--------------------
+prepare
+-------
 
-.. function:: POST /users/{uid}/blueprints/{bpid}/predeploy
+.. function:: POST /users/{uid}/blueprints/{bpid}/preparations
 
 .. sidebar:: Summary
 
@@ -14,7 +14,7 @@ blueprint_predeploy
 	* Response Formats: ``application/xml`` ``application/json``
 	* Since: ``UForge 3.8``
 
-Returns the status of the appliances used for a blueprint.
+Prepares a blueprint for deployment.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -39,7 +39,7 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/users/{uid}/blueprints/{bpid}/predeploy" -X POST \
+	curl "https://uforge.example.com/api/users/{uid}/blueprints/{bpid}/preparations" -X POST \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"-H "Content-type: application/xml" --data-binary "@representation.xml"
 
 Example of representation.xml content (the request body):

@@ -1,34 +1,33 @@
 .. Copyright FUJITSU LIMITED 2019
 
-.. _migration-get:
+.. _pipeline-get:
 
-migration_get
--------------
+pipeline_get
+------------
 
-.. function:: GET /users/{uid}/migrations/{mid}
+.. function:: GET /users/{uid}/blueprints/{bpid}/preparations/{plid}
 
 .. sidebar:: Summary
 
 	* Method: ``GET``
 	* Response Code: ``200 / 304``
 	* Response Formats: ``application/xml`` ``application/json``
-	* Since: ``UForge 3.8.2``
+	* Since: ``UForge 3.8``
 
-Gets a migration. 
-
-A ``migration`` is an object representing all stages to migrate a live running instance (physical machine, VM, container).
+Retrieves a preparation from a blueprint
 
 Security Summary
 ~~~~~~~~~~~~~~~~
 
 * Requires Authentication: ``true``
-* Entitlements Required: ``migration_access``
+* Entitlements Required: ``deployments_access``
 
 URI Parameters
 ~~~~~~~~~~~~~~
 
 * ``uid`` (required): the user name (login name) of the :ref:`user-object`
-* ``mid`` (required): the id of the :ref:`migration-object`
+* ``plid`` (required): the id of the :ref:`pipeline-object`
+* ``bpid`` (required): the id of the :ref:`blueprint-object`
 
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -40,10 +39,9 @@ Example Request
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/users/{uid}/migrations/{mid}" -X GET \
+	curl "https://uforge.example.com/api/users/{uid}/blueprints/{bpid}/preparations/{plid}" -X GET \
 	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::
 
-	 * :ref:`migration-object`
-	 * :ref:`stage-object`
+	 * :ref:`blueprintDeployment-object`

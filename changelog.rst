@@ -1,4 +1,4 @@
-.. Copyright 2019 FUJITSU LIMITED
+.. Copyright 2017-2019 FUJITSU LIMITED
 
 Changelog
 =========

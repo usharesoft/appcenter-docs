@@ -6,19 +6,20 @@
 Scanning a Microsoft Windows Machine
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. warning:: When scanning a Microsoft Windows machine, you must acquire Windows licenses in order to handle Windows OS in UForge and confirm usage conditions of cloud provider and virtualization software which you scan and migrate to.
+.. note:: When scanning a Microsoft Windows machine, you must acquire Windows licenses in order to handle Windows OS in UForge and confirm usage conditions of cloud provider and virtualization software which you scan and migrate to.
 
-.. note:: It is not possible to scan a Windows "Core" system for all versions: 2008R2, 2012, 2012R2 and 2016.
+**Restrictions**
 
-.. warning:: Windows Evaluation Editions are not supported for scanning.
+	* It is not possible to scan a Windows "Core" system for all versions: 2008R2, 2012, 2012R2 and 2016.
+	* Windows Evaluation Editions are not supported for scanning.
 
 .. warning:: If the target filesystem is NTFS, the scan is optimized by extracting only "used space" from target disks on the source system. Some applications might hold their data on "free space," which is not used by the operating system. If the source system of the scan has such applications installed, these applications may not work correctly on a machine image generated from the scan. With the other filesystems, such as FAT, ReFS and so on, all the space including "free space" on target disks will be copied by the scan.
 
-.. warning:: For Windows Server 2008R2, you will need to run a command in ``PowerShell`` on the source machine before scanning ``winrm set winrm/config/service '@{AllowUnencrypted="true"}'``. This command will disable WinRM encryption over HTTP which is not supported by AMP. More information can be found on the Cloudsoft AMP documentation, in section `WinRM Connectivity Diagnostics <https://docs.cloudsoft.io/blueprints/base-blueprints/winrm/client.html#winrm-connectivity-diagnostics>`_.
+**Pre-requisites**
 
-.. note:: If you plan to migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/services/hybrid-cloud/k5/>`_, you must uninstall CloudBase-Init (if installed) before scanning.
+For Windows Server 2008R2, you will need to run a command in ``PowerShell`` on the source machine before scanning ``winrm set winrm/config/service '@{AllowUnencrypted="true"}'``. This command will disable WinRM encryption over HTTP which is not supported by AMP. More information can be found on the Cloudsoft AMP documentation, in section `WinRM Connectivity Diagnostics <https://docs.cloudsoft.io/blueprints/base-blueprints/winrm/client.html#winrm-connectivity-diagnostics>`_.
 
-	For more detailed information, please refer to `official Fujitsu K5 IaaS Documentation <http://www.fujitsu.com/uk/Images/k5-iaas-features-handbook.pdf>`_.
+If you plan to migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://www.fujitsu.com/global/services/hybrid-cloud/k5/>`_, you must uninstall CloudBase-Init (if installed) before scanning. For more detailed information, please refer to `official Fujitsu K5 IaaS Documentation <http://www.fujitsu.com/uk/Images/k5-iaas-features-handbook.pdf>`_.
 
 To carry out a scan, go to the ``Re-platform`` tab on the ``Migrations`` page:
 
@@ -54,6 +55,8 @@ To carry out a scan, go to the ``Re-platform`` tab on the ``Migrations`` page:
 	#. If you want to exclude certain partitions from the scan then check the boxes accordingly in the section ``Disks or Partitions to exclude``.
 
 	#. Click ``Scan`` to launch the scan. A report is sent to UForge AppCenter which can be used for migration. To view the progress, go back to the ``Scans`` page.
+
+		.. note:: ``uforge-scan.exe`` uses Microsoft Windows snapshot mechanism, which requires free disk space on each scanned partition. If not enough free disk space is available, this may lead to a scan failure.
 
 	#. To view the details of a scan, click on the scan and refer to :ref:`migration-view-scan`.
 

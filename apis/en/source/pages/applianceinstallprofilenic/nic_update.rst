@@ -1,4 +1,4 @@
-.. Copyright FUJITSU LIMITED 2019
+.. Copyright FUJITSU LIMITED 2016-2019
 
 .. _nic-update:
 
@@ -29,7 +29,7 @@ URI Parameters
 
 * ``uid`` (required): the user name (login name) of the :ref:`user-object`
 * ``ipid`` (required): the id of the :ref:`installprofile-object`
-* ``nid`` (required): the id of the :ref:`nic-object` to delete
+* ``nid`` (required): the id of the :ref:`nic-object`
 * ``aid`` (required): the id of the :ref:`appliance-object`
 
 HTTP Request Body Parameters

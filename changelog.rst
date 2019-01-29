@@ -3,6 +3,17 @@
 Changelog
 =========
 
+3.8.fp11
+--------
+
+Release Date: 2019-03-18
+
+Enhancements
+~~~~~~~~~~~~
+* Blueprint deploy view has been improved. The user can now generate and publish all images of the blueprint appliances in a single action.
+
+
+
 3.8.fp10
 --------
 

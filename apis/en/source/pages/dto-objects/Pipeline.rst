@@ -1,18 +1,17 @@
 .. Copyright FUJITSU LIMITED 2019
 
-.. _migration-object:
+.. _pipeline-object:
 
-migration
-=========
+pipeline
+========
 
-Holds all the meta-data of a migration. Contains the list of stages to perform a migration.
+Holds all the meta-data of a pipeline. Contains the list of stages to perform a pipeline.
 
 Attributes
 ~~~~~~~~~~
 
-The list of attributes for ``migration`` are:
+The list of attributes for ``pipeline`` are:
 
-	* ``cancellable`` (boolean): a boolean highlighting if the Migration is cancellable or not
 	* ``tag`` (string): the tag information
 	* ``name`` (string): the pipeline name
 	* ``status`` (:ref:`status-object`): the status of the pipeline

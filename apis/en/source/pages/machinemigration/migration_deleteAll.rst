@@ -47,4 +47,4 @@ Example Request
 	 * :ref:`migration-create`
 	 * :ref:`migration-delete`
 	 * :ref:`migration-get`
-	 * :ref:`migrationstage-object`
+	 * :ref:`stage-object`

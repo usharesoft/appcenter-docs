@@ -1,18 +1,20 @@
 .. Copyright FUJITSU LIMITED 2019
 
-.. _migration-object:
+.. _blueprintpipelineaws-object:
 
-migration
-=========
+BlueprintPipelineAws
+====================
 
-Holds all the meta-data of a migration. Contains the list of stages to perform a migration.
+Holds the information on the preparation of a blueprint to the Amazon Web Services (AWS) environment.
 
 Attributes
 ~~~~~~~~~~
 
-The list of attributes for ``migration`` are:
+The list of attributes for ``BlueprintPipelineAws`` are:
 
-	* ``cancellable`` (boolean): a boolean highlighting if the Migration is cancellable or not
+	* ``region`` (string): the region where the blueprint is prepared
+	* ``blueprintUri`` (anyURI): the blueprint uri related to this preparation
+	* ``credAccountUri`` (anyURI): the uri of the cloud account used by this preparation
 	* ``tag`` (string): the tag information
 	* ``name`` (string): the pipeline name
 	* ``status`` (:ref:`status-object`): the status of the pipeline

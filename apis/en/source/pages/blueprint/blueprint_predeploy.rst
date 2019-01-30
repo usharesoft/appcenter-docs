@@ -1,4 +1,4 @@
-.. Copyright 2019 FUJITSU LIMITED
+.. Copyright FUJITSU LIMITED 2019
 
 .. _blueprint-predeploy:
 
@@ -12,7 +12,7 @@ blueprint_predeploy
 	* Method: ``POST``
 	* Response Code: ``201``
 	* Response Formats: ``application/xml`` ``application/json``
-	* Since: ``UForge 3.8.fp4``
+	* Since: ``UForge 3.8``
 
 Returns the status of the appliances used for a blueprint.
 

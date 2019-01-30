@@ -1,4 +1,4 @@
-.. Copyright 2019 FUJITSU LIMITED
+.. Copyright FUJITSU LIMITED 2019
 
 .. _migration-get:
 
@@ -46,4 +46,4 @@ Example Request
 .. seealso::
 
 	 * :ref:`migration-object`
-	 * :ref:`migrationstage-object`
+	 * :ref:`stage-object`

@@ -14,6 +14,10 @@ New Features
 
        .. note:: Previously generated Docker based images will no longer be downloadable. You must regenerate them to use this feature.
 
+Enhancements
+~~~~~~~~~~~~
+* Blueprint deployment has been improved. The user can now generate and publish all images of the blueprint appliances by clicking on the new ``prepare`` button.
+
 
 3.8.fp10
 --------

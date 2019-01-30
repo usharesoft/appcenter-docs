@@ -1,4 +1,4 @@
-.. Copyright 2019 FUJITSU LIMITED
+.. Copyright FUJITSU LIMITED 2019
 
 .. _userAvatar-downloadFile:
 
@@ -28,7 +28,7 @@ URI Parameters
 ~~~~~~~~~~~~~~
 
 * ``uid`` (required): the user name (login name) of the :ref:`user-object`
-* ``fileName`` (required): the file name of the photo to upload
+* ``fileName`` (required): the file name of the photo to download
 * ``photoId`` (required): the id of the :ref:`logo-object`
 
 HTTP Request Body Parameters

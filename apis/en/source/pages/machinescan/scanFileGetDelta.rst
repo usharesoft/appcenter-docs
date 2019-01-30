@@ -1,20 +1,24 @@
-.. Copyright 2019 FUJITSU LIMITED
+.. Copyright FUJITSU LIMITED 2019
 
-.. _scan-compare:
+.. _scanFileGetDelta:
 
-scan_compare
-------------
+scanFileGetDelta
+----------------
 
-.. function:: POST /users/{uid}/scannedinstances/{siid}/scans/{sid}
+.. function:: GET /users/{uid}/scannedinstances/{siid}/scans/{sid}/files//delta
 
 .. sidebar:: Summary
 
-	* Method: ``POST``
-	* Response Code: ``201``
-	* Response Formats: ``application/xml`` ``application/json``
-	* Since: ``UForge 3.4``
+	* Method: ``GET``
+	* Response Code: ``200 / 304``
+	* Response Formats: ``application/xml`` ``application/json`` ``text/plain``
+	* Since: ``UForge 3.8.9``
 
-Provides the differences between two scans.
+Retrieves all the files added and modified on file system after scanning a live system. 
+
+A list of :ref:`scannedfile-object` objects are returned. 
+
+A set of query parameters can be used to retrieve a subset of these files.
 
 Security Summary
 ~~~~~~~~~~~~~~~~
@@ -32,21 +36,15 @@ URI Parameters
 HTTP Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A :ref:`scanCompare-object` object
+None
 
 Example Request
 ~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
-	curl "https://uforge.example.com/api/users/{uid}/scannedinstances/{siid}/scans/{sid}" -X POST \
-	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"-H "Content-type: application/xml" --data-binary "@representation.xml"
-
-Example of representation.xml content (the request body):
-
-.. code-block:: xml
-
-
+	curl "https://uforge.example.com/api/users/{uid}/scannedinstances/{siid}/scans/{sid}/files//delta" -X GET \
+	-u USER_LOGIN:PASSWORD -H "Accept: application/xml"
 
 .. seealso::
 
@@ -58,17 +56,14 @@ Example of representation.xml content (the request body):
 	 * :ref:`scanOverlay-download`
 	 * :ref:`scanOverlay-upload`
 	 * :ref:`scanOverlay-uploadChunk`
-	 * :ref:`scanPackageBinary-getAll`
-	 * :ref:`scanPackageFile-get`
 	 * :ref:`scanPackage-getAll`
 	 * :ref:`scanPartition-upload`
-	 * :ref:`scan-cancel`
 	 * :ref:`scan-create`
 	 * :ref:`scan-delete`
 	 * :ref:`scan-get`
 	 * :ref:`scan-multipartCreate`
-	 * :ref:`scancompare-object`
 	 * :ref:`scannedInstanceScan-deleteAll`
 	 * :ref:`scannedInstanceScan-getAll`
+	 * :ref:`scannedfiles-object`
 	 * :ref:`scannedinstance-object`
-	 * :ref:`userScan-getAll`
+	 * :ref:`scannedpackage-object`

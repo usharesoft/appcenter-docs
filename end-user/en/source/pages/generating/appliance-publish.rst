@@ -17,6 +17,8 @@ In order to publish a machine image to a cloud environment or container, you mus
 
 		.. note:: If you want to publish a Windows image to KVM on Red Hat Linux you need to inject specific VirtIO drivers. See the specific procedure documented in :ref:`publish-win-to-rh`.
 
+		.. note:: To boot up a Windows image on KVM, you should specify 'VirtIO' as a disk bus type. You should not specify 'IDE' or other types.
+
 		.. note:: Before publishing a Windows image to AWS, ``vmimport`` role must be properly assigned to an AWS account. An access right to S3 bucket is also required for an account. Refer to the procedure in `VM Import Service Role section of the AWS documentation <https://docs.aws.amazon.com/vm-import/latest/userguide/vmimport-image-import.html>`_. Because the name of a S3 bucket changes for each image publish, you should give access to any buckets using a wildcard `*`. For an example, refer to :ref: `windows-aws-s3`.
 
 	1. If not already done, create an account for the target environment.  For more information, see :ref:`account-cloud-accounts`. 
@@ -59,7 +61,7 @@ In order to publish a machine image to a cloud environment or container, you mus
 Publishing a Windows Image to KVM on Red Hat Linux
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you want to publish a Windows image to KVM on Red Hat Linux you need to inject specific VirtIO drivers. 
+If you want to publish a Windows image to KVM on Red Hat Linux you need to inject specific VirtIO drivers.
 
 #. In order to add the specific drivers, the Red Hat VirtIO drivers can be either added to AppCenter as a Project if it has been added to your AppCenter by the administrator, or using MySoftware. 
 

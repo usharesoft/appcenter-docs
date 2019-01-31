@@ -39,7 +39,6 @@ Bug Fixes
 * 12265 When publishing an appliance from blueprint UI, the row is moved to the bottom of the table
 * 12280 CentOS 5 scan fails without explicit message when duplicated GPG Pubkey packages are installed
 * 12293 Updates counter on appliance view is placed too far to the right
-* 12334 Wrong message in portal when a disabled user tries to log in
 * 12337 Copyright customized through config.xml is not shown
 * 12433 User password displayed in clear when deploying Windows image on AWS
 * 12474 Reset the password after an attempt of sign-in with a wrong password fails

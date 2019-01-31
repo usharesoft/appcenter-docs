@@ -1,4 +1,4 @@
-.. Copyright 2019 FUJITSU LIMITED
+.. Copyright 2018-2019 FUJITSU LIMITED
 
 Deploying a Machine Image
 =========================

@@ -40,6 +40,9 @@ In order to run a migration:
 	.. image:: /images/migration-popup-o.png
 
 	7. Download binary locally by clicking ``Download``.
+
+		.. note:: Older versions of curl command may not support a secure connection with UForge server. If you encounter a `SSL connect error`, you can use a web browser to download the binary or download the binary on another machine and copy it to the scanned machine.
+
 	8. Copy the binary on the source environment you want to migrate.
 	9. Open a terminal window and login to the source environment.
 	10. Launch the migrate command on the running source environment to start the migration.

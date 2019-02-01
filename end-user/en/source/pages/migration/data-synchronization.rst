@@ -28,6 +28,9 @@ You need the ``uforge-sync`` binary in the source machine, available at ``/resou
 
     $ curl --insecure -O https://10.1.2.206/resources/uforge-sync.bin
 
+
+.. note:: Older versions of curl command may not support a secure connection with UForge server. If you encounter a `SSL connect error`, you can use a web browser to download the binary or download the binary on another machine and copy it to your machine.
+
 Launch the uforge-sync Tool
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

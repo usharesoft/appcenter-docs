@@ -17,8 +17,6 @@ A set of default roles are provided by UForge. To view these default roles, use 
 	| admin                    | Provides organization administration rights.  Includes managing the organizations project catalog; os profiles and |
 	|                          | user accounts.                                                                   |
 	+ Entitlements ------------------+----------------------------------------------------------------------------+
-	| marketplace_access       | used to determine whether to allow a user to interact with the marketplace (note, will be able to retrieve  |
-	|                          | templates + template info, but voting, adding a comment, import, follow etc forbidden)  |
 	| org_administrate         | Access to manage the entitlements list available for an organization.            |
 	| org_formats_administrate | Access to manage the generation formats available for an organization.           |
 	| org_members_administrate | Access to manage user accounts for an organization.                              |

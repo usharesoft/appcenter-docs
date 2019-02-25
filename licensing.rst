@@ -1,4 +1,4 @@
-.. Copyright 2019 FUJITSU LIMITED
+.. Copyright 2017-2019 FUJITSU LIMITED
 
 3rd Party Components
 ====================
@@ -53,6 +53,7 @@ in any form whatsoever without the written permission of FUJITSU LIMITED
 * device-mapper-libs: http://sources.redhat.com/lvm2
 * dnf: http://dnf.baseurl.org/
 * Dozer: http://dozer.sourceforge.net/
+* docker-distribution: https://github.com/docker/distribution
 * D3: http://d3js.org/
 
 * EclipseLink: http://www.eclipse.org/eclipselink/

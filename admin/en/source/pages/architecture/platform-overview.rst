@@ -38,7 +38,7 @@ This IDM Service can be extended to provide a wider identity and access manageme
 
 **LDAP.**  This service is an industry standard powerful AuthN ldap (v3) pure java server, based on the open source ForgeRock's OpenDJ offering. This can be run in single instance mode or multi-master replication mode for robustness.
 
-**Registry.** UForge includes a Registry to store Docker containers.
+**Registry.** UForge includes a Registry to store Docker images.
 
 **SQL Store.** This is a relational database holding all the meta-data of UForge.  Meta-data includes such items as:
 

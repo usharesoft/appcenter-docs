@@ -1,4 +1,4 @@
-.. Copyright 2019 FUJITSU LIMITED
+.. Copyright 2017-2019 FUJITSU LIMITED
 
 .. _config-amp:
 
@@ -7,7 +7,7 @@ Configuring Cloudsoft AMP
 
 Once your UForge platform deployment is complete you can configure `Cloudsoft AMP <https://www.cloudsoft.io/amp/>`_ in order to allow users to deploy published machine images directly to Amazon or OpenStack, without having to connect to their cloud account. Before you start the configuration, ensure that you have:
 
-	* a running AMP server (version AMP-5.3, Brooklyn 1.0.0) with groovy script enabled, see `Cloudsoft AMP documentation <https://docs.cloudsoft.io/operations/production-installation.html>`_ for installation
+	* a running AMP server (version AMP-5.3 or Brooklyn 1.0.0-M1), see `Cloudsoft AMP documentation <https://docs.cloudsoft.io/operations/production-installation.html>`_ for installation
 	* a configured user in AMP server that will be used by UForge to connect
 
 

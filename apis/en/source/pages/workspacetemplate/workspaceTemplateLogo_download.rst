@@ -1,4 +1,4 @@
-.. Copyright FUJITSU LIMITED 2019
+.. Copyright FUJITSU LIMITED 2016-2019
 
 .. _workspaceTemplateLogo-download:
 

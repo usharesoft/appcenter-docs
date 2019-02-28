@@ -8,10 +8,15 @@ Changelog
 
 Release Date: 2019-03-18
 
+New Features
+~~~~~~~~~~~~
+* Develop and test your software applications faster. Thanks to the new local docker registry installed with UForge, you can docker run your containers directly.
+
+       .. note:: Previously generated Docker based images will no longer be downloadable. You must regenerate them to use this feature.
+
 Enhancements
 ~~~~~~~~~~~~
 * Blueprint deployment has been improved. The user can now generate and publish all images of the blueprint appliances by clicking on the new ``prepare`` button.
-
 
 
 3.8.fp10

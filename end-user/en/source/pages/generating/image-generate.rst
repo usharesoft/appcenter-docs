@@ -35,7 +35,9 @@ The generation will take a few minutes to complete (depending on the number of p
 
 Once the generation is complete, you can download the image locally, or for certain cloud formats register the machine image directly to the target environment using your cloud credentials.
 
-.. note:: For PXE, you cannot download the image but can launch it through an iPXE shell. For more information, refer to :ref:`PXE-image`.
+	* For PXE, you cannot download the image but can launch it through an iPXE shell. For more information, refer to :ref:`PXE-image`.
+	* For KVM, launch.sh script is included in the archive and you can use it to start the instance. However, before using it you need to modify it according to your environment.
+
 
 You will note that a package ``uforge-install-config`` is injected in the generated image. This file is responsible for: 
 

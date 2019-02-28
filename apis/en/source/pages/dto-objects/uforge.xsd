@@ -4745,6 +4745,11 @@
                             <xsd:documentation xml:lang="en">the Entrypoint of a Docker machine image</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
+                    <xs:element name="registeringName" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the name of the image registered in the registry</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>

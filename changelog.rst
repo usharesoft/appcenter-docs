@@ -12,6 +12,9 @@ Enhancements
 ~~~~~~~~~~~~
 * Blueprint deployment has been improved. The user can now generate and publish all images of the blueprint appliances by clicking on the new ``prepare`` button.
 
+Known Issues
+~~~~~~~~~~~~
+* When listing the details of an appliance, the created and modified dates are listed in local time. To modify this to UTC, refer to ``Setting the Application Date and Time`` in the Admin Guide.
 
 
 3.8.fp10

@@ -29,3 +29,4 @@ This section assumes that you have completed the installation of your UForge pla
    populate-iso
    config-amp
    config-secretmanager
+   set-utc

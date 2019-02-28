@@ -1,4 +1,4 @@
-.. Copyright 2016-2019 FUJITSU LIMITED
+.. Copyright 2019 FUJITSU LIMITED
 
 .. _migration-scan-linux:
 
@@ -26,9 +26,6 @@ To carry out a scan, go to ``Re-platform`` tab on the ``Migrations`` page:
 		.. image:: /images/migration-code.png
 
 	7. Download binary locally by clicking ``Download``.
-
-		.. note:: Older versions of curl command may not support a secure connection with UForge server. If you encounter a `SSL connect error`, you can use a web browser to download the binary or download the binary on another machine and copy it to the scanned machine.
-
 	8. Copy the binary on the target environment you want to migrate.
 	9. Open a terminal window and login to the target environment.
 	10. Run the scan command on the running target environment to start a scan of the system you want to migrate. Note the ``-o`` option in the scan command indicates that you will launch a scan with overlay. The binary identifies the packages, files and custom files on the system.

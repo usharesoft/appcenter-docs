@@ -1,4 +1,4 @@
-.. Copyright 2016-2019 FUJITSU LIMITED
+.. Copyright 2019 FUJITSU LIMITED
 
 .. _config-webservice:
 

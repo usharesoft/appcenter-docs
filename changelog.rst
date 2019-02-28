@@ -11,7 +11,7 @@ Release Date: 2019-03-18
 Enhancements
 ~~~~~~~~~~~~
 * Blueprint deployment has been improved. The user can now generate and publish all images of the blueprint appliances by clicking on the new ``prepare`` button.
-* Blueprint Composer now raises a warning if one of the appliance compoment configuration requires user interaction at first boot
+* Blueprint Composer now raises a warning if one of the appliance component configuration requires user interaction at first boot
 
 
 3.8.fp10

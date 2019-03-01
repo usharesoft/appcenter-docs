@@ -10,7 +10,7 @@ Release Date: 2019-03
 
 Known Issues
 ~~~~~~~~~~~~
-* When listing the details of an appliance, the created and modified dates are listed in local time. To modify this to UTC, refer to ``Setting the Creation Date and Time`` in the Admin Guide.
+* When listing the details of an object, the date and time of creation is listed in local time. To modify this to UTC, refer to ``Setting the Creation Date and Time`` in the Admin Guide.
 
 3.8-6
 -----

@@ -3,6 +3,15 @@
 Changelog
 =========
 
+3.8-7
+-----
+
+Release Date: 2019-03
+
+Known Issues
+~~~~~~~~~~~~
+* When listing the details of an object, the date and time of creation is listed in local time. To modify this to UTC, refer to ``Setting the Creation Date and Time`` in the Admin Guide.
+
 3.8-6
 -----
 
@@ -10,7 +19,9 @@ Release Date: 2019-01-07
 
 Enhancements
 ~~~~~~~~~~~~
+
 * Improve machine_info script.
+
 
 Bug Fixes
 ~~~~~~~~~

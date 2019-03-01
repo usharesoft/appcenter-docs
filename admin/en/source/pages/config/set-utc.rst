@@ -2,10 +2,10 @@
 
 .. _set-utc:
 
-Setting the Application Date and Time
+Setting the Creation Date and Time
 --------------------------------------
 
-By default, the application's creation and modification date and time will be set to local time. In order to set the default timezone to UTC, you should:
+By default, the creation date and time for all objects will be set to local time. In order to set the default timezone to UTC, you should:
 
 	1. Open the file ``/etc/my.cnf``
 	2. Under the ``mysqld`` section add the following line::

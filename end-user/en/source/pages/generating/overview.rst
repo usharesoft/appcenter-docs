@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2018-2019 FUJITSU LIMITED
 
 Generating and Publishing Machine Images
 ========================================
@@ -9,6 +9,6 @@ You can generate a machine image from an existing appliance template in your lib
    :titlesonly:
 
    supported-image-type
-   appliance-generate
+   image-generate
    appliance-publish
 

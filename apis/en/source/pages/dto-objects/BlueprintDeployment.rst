@@ -1,11 +1,11 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright FUJITSU LIMITED 2016-2019
 
 .. _blueprintdeployment-object:
 
 blueprintDeployment
 ===================
 
-Provides the information required to deploy a blueprint template.
+Provides the information required to deploy a blueprint.
 
 Attributes
 ~~~~~~~~~~

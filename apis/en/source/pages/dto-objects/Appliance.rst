@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright FUJITSU LIMITED 2016-2019
 
 .. _appliance-object:
 
@@ -24,6 +24,7 @@ Attributes
 
 The list of attributes for ``appliance`` are:
 
+	* ``uuid`` (string): the uuid of the object
 	* ``applianceExports``: a list of :ref:`applianceexport-object` objects holding meta-data information for each time the appliance has been exported.
 	* ``archName`` (string): the operating system architecture this appliance is based on
 	* ``baseCloneUri`` (anyURI): uri resource used to clone this appliance

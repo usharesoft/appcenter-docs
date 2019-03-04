@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2017-2019 FUJITSU LIMITED
 
 .. _data-synchronization:
 
@@ -28,6 +28,9 @@ You need the ``uforge-sync`` binary in the source machine, available at ``/resou
 
     $ curl --insecure -O https://10.1.2.206/resources/uforge-sync.bin
 
+
+.. note:: Older versions of curl command may not support a secure connection with UForge server. If you encounter a `SSL connect error`, you can use a web browser to download the binary or download the binary on another machine and copy it to your machine.
+
 Launch the uforge-sync Tool
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -49,3 +52,10 @@ The following are mandatory parameters:
 If you encounter an error message indicating the SSL certificate subject name does not match the target host name, you can add the ``-k`` option to your command line to prevent ``uforge-sync.bin`` from strictly checking the SSL certificate.
 
 .. note:: The uforge-sync tool may overwrite existing configuration files of running services. Please restart services to load new configuration, if necessary.
+
+.. note:: The uforge-sync tool self extracts in ``/tmp`` directory before execution. If the machine source or destination is configured with ``noexec`` option on ``/tmp`` partition a ``Permission denied`` error will occur. In that case, you can specify the environment variable ``TMPDIR`` on the source machine to use a different directory.
+	For example::
+
+		TMPDIR=/root/ ./uforge-sync.bin -U https://<uforge-ip>/api -u <username> \
+			-n users/guest/scannedinstances/1/scans/1 -d <target-ip> -i ~/.ssh/id_rsa
+

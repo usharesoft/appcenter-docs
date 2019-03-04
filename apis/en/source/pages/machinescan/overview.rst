@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright FUJITSU LIMITED 2016-2019
 
 .. _machinescan-api-resources:
 
@@ -6,6 +6,7 @@ Machine Scan API Resources
 ==========================
 
 	* :ref:`scanFileArchive-download`: Downloads an archive containing all the files found on file system after scanning a live system
+	* :ref:`scanFileGetDelta`: Retrieves all the files added and modified on file system after scanning a live system
 	* :ref:`scanFile-getAll`: Retrieves all the files found on file system after scanning a live system
 	* :ref:`scanInstallProfile-get`: Retrieves the meta-data of the install profile from a scan
 	* :ref:`scanOverlay-download`: Downloads the overlay archive
@@ -19,7 +20,6 @@ Machine Scan API Resources
 	* :ref:`scanSync-get`: Returns the meta-data of the scanSync object
 	* :ref:`scanSync-getFiles`: Returns all full paths of files to be synchronized from a source to a target instance
 	* :ref:`scan-cancel`: Cancels the current processing of the scan report
-	* :ref:`scan-compare`: Provides the differences between two scans
 	* :ref:`scan-create`: Creates a new scan to a parent ``scanned instance``
 	* :ref:`scan-delete`: Removes a scan from a parent ``scanned instance``
 	* :ref:`scan-get`: Retrieves the meta-data of a scan
@@ -35,6 +35,7 @@ Machine Scan API Resources
     :hidden:
 
     scanFileArchive_download
+    scanFileGetDelta
     scanFile_getAll
     scanInstallProfile_get
     scanOverlay_download
@@ -48,7 +49,6 @@ Machine Scan API Resources
     scanSync_get
     scanSync_getFiles
     scan_cancel
-    scan_compare
     scan_create
     scan_delete
     scan_get

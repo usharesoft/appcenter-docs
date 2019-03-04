@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2018-2019 FUJITSU LIMITED
 
 .. _appliance-generate-machine-image:
 
@@ -35,7 +35,9 @@ The generation will take a few minutes to complete (depending on the number of p
 
 Once the generation is complete, you can download the image locally, or for certain cloud formats register the machine image directly to the target environment using your cloud credentials.
 
-.. note:: For PXE, you cannot download the image but can launch it through an iPXE shell. For more information, refer to :ref:`PXE-image`.
+	* For PXE, you cannot download the image but can launch it through an iPXE shell. For more information, refer to :ref:`PXE-image`.
+	* For KVM, launch.sh script is included in the archive and you can use it to start the instance. However, before using it you need to modify it according to your environment.
+
 
 You will note that a package ``uforge-install-config`` is injected in the generated image. This file is responsible for: 
 
@@ -48,14 +50,14 @@ However, it is preferable to leave this file.
 
 .. _appliance-docker-image:
 
-Generating a Docker Image
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Generating a Docker Image from an Appliance
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. note:: You cannot generate a Docker image from a Windows template or a Windows scan.
 
 .. note:: If you generate a Docker image from an appliance that does not have an install profile set as automatic, then you will not be able to launch the Docker image.
 
-To generate a machine image:
+To generate a machine image from an appliance:
 	1. Go to the ``Apps`` tab.
 	2. Select the appliance from the ``Appliance Library``. 
 	3. Click on the ``generate`` button at the top right to display all possible image formats which can be generated. 
@@ -63,9 +65,30 @@ To generate a machine image:
 	5. Enter the Docker entrypoint in exec form. For example ``["/usr/sbin/httpd", "-DFOREGROUND"]``.
 	6. Click the ``generate`` button to launch a generation in UForge for this appliance template. 
 	7. Once the generation is complete, the Docker image will be listed in your library under ``Machine Images``.
-	8. The following pop-up will be displayed if you click on the download icon.
+	8. You can (optionally) click on ``download``. A pop-up similar to the following will be displayed. If you copy and run the command in the pop-up, this will download, import and run the Docker image from your Docker client.
 
-		.. image:: /images/docker-image-publish.png
+		.. image:: /images/docker-image-publish2.png
+
+.. _gen-docker-image:
+
+Generating a Docker Image from Software Components
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note:: You cannot generate a Docker image if any of the restriction rules that have been set for the software exclude Docker publication or generation.
+
+To generate a machine image from a software component:
+	#. Go to the ``Apps`` tab.
+	#. Select the software from the ``Software Library``. 
+	#. Click on the ``generate`` button at the top right. 
+
+		.. image:: /images/docker-sw-generate.png
+
+	#. Select the distribution and click ``generate``.
+	#. The possible image formats which can be generated are displayed. Select the format you want to use.
+	#. Enter the Docker entrypoint in exec form. For example ``["/usr/sbin/httpd", "-DFOREGROUND"]``.
+	#. Click the ``generate`` button to launch a generation in UForge for this software component. 
+	#. Once the generation is complete, the Docker image will be listed on the ``Dashboard`` under ``Generations``. You can now publish or download your image.
+
 
 .. _appliance-openshift-image:
 

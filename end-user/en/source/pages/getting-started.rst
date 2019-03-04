@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2016-2019 FUJITSU LIMITED
 
 .. _uforge-appcenter-getting-started:
 
@@ -58,6 +58,19 @@ The UForge UI is accessible in different languages. You can select the language 
 .. image:: /images/uforge-ui-language2.png
 
 .. note:: The language choice is saved at the level of the browser and not of the user account. 
+
+
+.. _uforge-keyboard-actions:
+
+Keyboard Actions
+----------------
+
+.. _uforge-escape-key:
+
+Escape Key
+~~~~~~~~~~
+
+The UForge UI uses the Escape (ESC) key as a hotkey to cancel or close a popup window without saving or executing any actions. However, in some cases, using the hotkey ESC will redirect you to a different page from the one from which the popup was opened.
 
 
 .. _uforge-basic-concepts:

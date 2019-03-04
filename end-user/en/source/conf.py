@@ -66,7 +66,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'UForge AppCenter User Documentation'
-copyright = u'2018 FUJITSU LIMITED'
+copyright = u'2019 FUJITSU LIMITED'
 author = u'FUJITSU'
 
 # The version info for the project you're documenting, acts as replacement for

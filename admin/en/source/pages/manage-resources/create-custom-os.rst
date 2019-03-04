@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2016-2019 FUJITSU LIMITED
 
 .. _create-custom-os:
 
@@ -14,18 +14,18 @@ To create a new OS profile:
 	#. Under the ``Administration`` tab go to the ``Distributions`` tab.
 	#. Click on the operating system.  This will provide the current list of profiles this operating system has.
 
-		.. image:: /images/create-os-profile.png
+		.. image:: /images/create-os-profile2.png
 
 	#. Go to the ``OS Profiles`` tab.
-	#. Click on ``add os profile`` in the top right.  
+	#. Click on ``new`` in the middle right.  
 
-		.. image:: /images/create-os-profile-button.png
+		.. image:: /images/create-os-profile-button2.png
 
 	#. Select the profile which will serve as the base for your custom OS profile.
 	#. Enter your profile name and click ``create``.
-	#. Search for the packages you want to add. Select the package(s) you want to add to your OS profile. The packages that you can add are listed in the top list. The bottom list is the list of packages that are currently part of the profile.
+	#. The packages that are listed in the bottom table are packages that are currently part of the profile. You can search for the packages you want to add. Select the package(s) you want to add to your OS profile and click on the down arrow. Once added they will appear in the bottom table.
 
-		.. image:: /images/add-os-packages.png
+		.. image:: /images/add-os-packages2.png
 
 
 Editing Custom OS Profiles Using UI

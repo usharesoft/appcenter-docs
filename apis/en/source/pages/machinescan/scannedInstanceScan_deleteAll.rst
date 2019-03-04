@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright FUJITSU LIMITED 2016-2019
 
 .. _scannedInstanceScan-deleteAll:
 
@@ -59,7 +59,6 @@ Example Request
 	 * :ref:`scanSync-get`
 	 * :ref:`scanSync-getFiles`
 	 * :ref:`scan-cancel`
-	 * :ref:`scan-compare`
 	 * :ref:`scan-create`
 	 * :ref:`scan-delete`
 	 * :ref:`scan-get`

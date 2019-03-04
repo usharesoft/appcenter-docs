@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2016-2019 FUJITSU LIMITED
 
 .. _migration-scan-linux:
 
@@ -26,6 +26,9 @@ To carry out a scan, go to ``Re-platform`` tab on the ``Migrations`` page:
 		.. image:: /images/migration-code.png
 
 	7. Download binary locally by clicking ``Download``.
+
+		.. note:: Older versions of curl command may not support a secure connection with UForge server. If you encounter a `SSL connect error`, you can use a web browser to download the binary or download the binary on another machine and copy it to the scanned machine.
+
 	8. Copy the binary on the target environment you want to migrate.
 	9. Open a terminal window and login to the target environment.
 	10. Run the scan command on the running target environment to start a scan of the system you want to migrate. Note the ``-o`` option in the scan command indicates that you will launch a scan with overlay. The binary identifies the packages, files and custom files on the system.
@@ -39,6 +42,12 @@ To carry out a scan, go to ``Re-platform`` tab on the ``Migrations`` page:
 		./uforge-scan.[bin/exe] -u <username> -a <public-key> -s <secret-key> -U http://ip:port/ufws -n 'Test_scan'
 
 		.. note:: The ``-n`` option to indicate the scan name is mandatory. If a scan with this name already exists, the scan will be grouped under this name.
+
+		.. note:: The uforge scan tool self extracts in ``/tmp`` directory before execution. If the machine is configured with ``noexec`` option on ``/tmp`` partition a ``Permission denied`` error will occur. In that case, you can specify the environment variable ``TMPDIR`` to use a different directory.
+			For example::
+
+				TMPDIR=/root/ ./uforge-scan.bin -u <username> -a <public-key> -s <secret-key> \
+					-U https://<uforge-ip>/api -n 'Test_scan'
 
 	11. A report is sent to UForge AppCenter which can be used for migration. To view the progress, go back to the ``Re-platform`` page.
 

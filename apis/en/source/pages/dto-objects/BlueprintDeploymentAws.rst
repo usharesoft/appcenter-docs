@@ -1,11 +1,11 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright FUJITSU LIMITED 2016-2019
 
 .. _blueprintdeploymentaws-object:
 
 BlueprintDeploymentAws
 ======================
 
-Provides the information required to deploy a blueprint template to the Amazon Web Services (AWS) environment.
+Provides the information required to deploy a blueprint to the Amazon Web Services (AWS) environment.
 
 Attributes
 ~~~~~~~~~~

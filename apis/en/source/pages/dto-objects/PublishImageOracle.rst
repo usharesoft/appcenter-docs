@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright FUJITSU LIMITED 2016-2019
 
 .. _publishimageoracle-object:
 
@@ -50,6 +50,7 @@ The list of attributes for ``PublishImageOracle`` are:
 	* ``vmMemorySize`` (int): the recommended memory size (in bytes) to use when provisioning an instance from this machine image
 	* ``forceCheckingDeps`` (boolean): a boolean flag to enforce checking dependencies during the generation of this machine image
 	* ``entrypoint`` (string): the Entrypoint of a Docker machine image
+	* ``registeringName`` (string): the name of the image registered in the registry
 	* ``md5sum`` (string): the md5sum of the uploaded object
 	* ``mimeType`` (string): the mime type of the file uploaded
 	* ``sha256sum`` (string): the sha256 value of the uploaded object

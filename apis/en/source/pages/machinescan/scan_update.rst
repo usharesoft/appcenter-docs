@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright FUJITSU LIMITED 2016-2019
 
 .. _scan-update:
 
@@ -66,7 +66,6 @@ Example of representation.xml content (the request body):
 	 * :ref:`scanSync-get`
 	 * :ref:`scanSync-getFiles`
 	 * :ref:`scan-cancel`
-	 * :ref:`scan-compare`
 	 * :ref:`scan-create`
 	 * :ref:`scan-delete`
 	 * :ref:`scan-get`

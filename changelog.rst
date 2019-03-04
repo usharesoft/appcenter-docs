@@ -1,7 +1,98 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2017-2019 FUJITSU LIMITED
 
 Changelog
 =========
+
+3.8.fp11
+--------
+
+Release Date: 2019-03-18
+
+New Features
+~~~~~~~~~~~~
+* Develop and test your software applications faster. Thanks to the new local docker registry installed with UForge, you can docker run your containers directly.
+
+       .. note:: Previously generated Docker based images will no longer be downloadable. You must regenerate them to use this feature.
+
+Enhancements
+~~~~~~~~~~~~
+* Blueprint deployment has been improved. The user can now generate and publish all images of the blueprint appliances by clicking on the new ``prepare`` button.
+* Blueprint Composer now raises a warning if one of the appliance component configuration requires user interaction at first boot
+
+3.8.fp10
+--------
+
+Release Date: 2019-02-04
+
+New Features
+~~~~~~~~~~~~
+* Added a new ``Delta`` tab in Migrations section to visually compare the difference two scan results (from one or more live instances).  This allows users to visualize which files have been added, modified or deleted.  Users can browse the filesystem, search and filter the results.  This feature does not provide differences in the packages added, modified or deleted between the two scans at this time.
+* Introduce the new user interface Blueprint Composer which allows users to create and deploy multi-node applications. Please note the following restrictions:
+    • This release currently supports Linux and Amazon AWS only.
+    • For the deployment of the blueprint, UForge must be associated with the new AMP version 5.3
+    • You need to install the Brooklyn Plugin Uforge after the installation of AMP server by following the procedure described in Admin Guide->Further AppCenter Configuration->Configuring Cloudsoft AMP
+    • The Browsers that support the Blueprint Composer are the latest public releases of Firefox and Chrome.
+    • Only the English version of the Blueprint Composer view is available.
+    • Blueprints created with a version of UForge older than 3.8.FP10 will be deleted
+    • Note that this new release brings an API break for Blueprint DTO model.
+
+Known Issues
+~~~~~~~~~~~~
+* Package file deletions are not detected when comparing scans
+
+Enhancements
+~~~~~~~~~~~~
+* Disable Software Bundle generation page if no base OS available
+* Inject firewall configuration package when "ask during installation" is selected on Centos 7
+* Disable unsupported "ask during installation" firewall option on Debian and Ubuntu
+
+Bug Fixes
+~~~~~~~~~
+* 8626 After scanning Windows 2016, one service, CDPUserSvc_XXXXX, is missing on the list of scan results
+* 8871 Changing partitioning from Advanced to Basic in a template imported from a Windows scan leads to generation error
+* 10519 ISO image created by UForge does not respect UTC
+* 11777 Password is displayed in clear text on Summary for an application
+* 12265 When publishing an appliance from blueprint UI, the row is moved to the bottom of the table
+* 12280 CentOS 5 scan fails without explicit message when duplicated GPG Pubkey packages are installed
+* 12293 Updates counter on appliance view is placed too far to the right
+* 12337 Copyright customized through config.xml is not shown
+* 12433 User password displayed in clear when deploying Windows image on AWS
+* 12474 Reset the password after an attempt of sign-in with a wrong password fails
+* 12480 Root password is displayed in clear inside the generated machine image
+* 12483 A previously assigned mountpoint can't be reused in the UI after a file system type change
+* 12619 Password is displayed in clear text on Summary for a workspace
+
+3.8.fp9
+-------
+
+Release Date: 2018-12-21
+
+New Features
+~~~~~~~~~~~~
+* Ability to generate a software component to a Docker image. The user can select any Linux distribution as a "Base OS".
+* Support of hotkey Escape (ESC) to cancel/close a popup window.
+* UForge logs can now be pushed to an ELK instance.
+
+Enhancements
+~~~~~~~~~~~~
+* UForge Microsoft Azure images now use the Azure agent version 2.2.14-1 for Debian 8 (Jessie)
+* UForge Microsoft Azure images now use the Azure agent version 2.2.18-3 for Debian 9 (Stretch)
+* Improved Outscale publish connector robustness
+* Blueprint deploy view has been improved. The user can now see which blueprint appliances are not ready to be deployed.
+* Blueprint deploy view has been improved. Required actions for deploying the blueprint can now be triggered from this view.
+
+Bug Fixes
+~~~~~~~~~
+* 6596 Unknown server error when editing incremental scan after deleting the base scan
+* 9171 Publication to Fujitsu K5 timeout with slow network
+* 9419 The forgotten password email contains both the username and the password
+* 11191 Firewall is not configured on an image generated from an appliance with firewall activated
+* 11812 Google certificate is in clear in log when uploaded
+* 11933 uforge-scan.bin fails to execute when /tmp has noexec mode
+* 11970 Deleting pinned package looks ok in UI but package is not deleted
+* 12193 Cannot publish to Outscale us-west-1
+* 12349 uforge-scan.bin cannot be downloaded from the UForge UI
+* 12352 SELinux configuration is not supported for Oracle Linux
 
 3.8.fp8
 -------
@@ -23,6 +114,28 @@ API changes
 * Google Cloud Engine authentication method has been updated to support the new format used to authenticate to the platform. As a result, credentials accounts have changed. The certificate is no longer a ``.p12`` file but a ``.json`` file.
 
        .. note:: Old Google Cloud Engine credential accounts will no longer be usable. You must replace them by new ones in the correct format.
+
+Bug Fixes
+~~~~~~~~~
+* 11941 Get requests to vault fail in proxy environment 
+* 11863 Cannot login to migrated CentOS6 image on AWS with SSH key
+* 11799 Outscale images built by UForge do not boot on Outscale
+* 11637 Empty directories are not synchronized to the target machine with uforge-sync.bin
+* 11608 Credentials secret keys are visible in clear for Outscale, Amazon and CloudStack
+* 11548 "500 call failed" is shown on non-english summary tab when a new Windows template is created
+* 11532 OpenShift installation is incomplete when upgrading to 3.8.fp6 with many users
+* 11499 Vault in proxy environment does not work
+* 11390 User email address should not be exposed to the other user
+* 11354 Partitioning Table Volumes subtitle misses a white space
+* 10870 Publishing to Google Compute creates unnecessary disks and images
+* 10697 Cannot publish to GCE when AppCenter is behind a Proxy Server
+* 10503 Mislabelled UForge on Update tab when creating a Windows appliance
+* 10444 When user quota limit of appliance is set, "Quota used" increases by 2 when importing from scan
+* 10443 Cannot create Azure VM from published VHD from AWS Ubuntu template - No NIC detected
+* 8989 Some French translations are not accurate or missing
+* 8897 Spelling mistakes in English i18n constants
+* 5224 Typo: "Unformated" in Install Profile -> Partitioning
+* 1351 "Internal server error." displayed when publishing a Google Compute Engine with wrong credentials
 
 3.8.fp7
 -------

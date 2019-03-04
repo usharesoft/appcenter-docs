@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright FUJITSU LIMITED 2016-2019
 
 .. _migration-create:
 
@@ -51,4 +51,4 @@ Example of representation.xml content (the request body):
 .. seealso::
 
 	 * :ref:`migration-object`
-	 * :ref:`migrationstage-object`
+	 * :ref:`stage-object`

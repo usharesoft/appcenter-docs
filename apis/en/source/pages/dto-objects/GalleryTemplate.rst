@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright FUJITSU LIMITED 2016-2019
 
 .. _gallerytemplate-object:
 
@@ -36,6 +36,7 @@ The list of attributes for ``galleryTemplate`` are:
 	* ``watching`` (boolean): boolean flag to determine if the user requesting information on this shared appliance template is currently watching (requesting to be notified on an update) of this shared appliance template
 	* ``workspaceName`` (string): the name of the workspace where this appliance template is being shared
 	* ``workspaceUri`` (anyURI): the uri resource of the workspace where this appliance template is being shared
+	* ``uuid`` (string): the uuid of the object
 	* ``applianceExports``: a list of :ref:`applianceexport-object` objects holding meta-data information for each time the appliance has been exported.
 	* ``archName`` (string): the operating system architecture this appliance is based on
 	* ``baseCloneUri`` (anyURI): uri resource used to clone this appliance

@@ -1,4 +1,4 @@
-.. Copyright 2017 FUJITSU LIMITED
+.. Copyright 2017-2019 FUJITSU LIMITED
 
 User Data in UForge
 -------------------
@@ -152,9 +152,6 @@ The following is an example of a ``user_get API`` curl call:
 	                        "description" : "Access to upload (or publish) generated images to cloud environments.",
 	                        "name" : "image_publish"
 	                     },
-	                     {"description" : "used to determine whether to allow a user to interact with the marketplace (note, will be able to retrieve templates + template info, but voting, adding a comment, import, follow etc forbidden)",
-	                        "name" : "marketplace_access"
-	                     },
 	                     {
 	                        "name" : "software_upload",
 	                        "description" : "Access to upload and manage your own custom software library.  These software components can be added to your own appliance templates."
@@ -171,9 +168,6 @@ The following is an example of a ``user_get API`` curl call:
 	                     },
 	                     {  "name" : "cloud_account_access",
 	                        "description" : "Access to just listing cloud accounts."
-	                     },
-	                     {"description" : "[Deprecated UForge 3.6] Access to import public templates from the marketplace into your private appliance template library.",
-	                        "name" : "marketplace_import"
 	                     }
 	                  ]
 	               },

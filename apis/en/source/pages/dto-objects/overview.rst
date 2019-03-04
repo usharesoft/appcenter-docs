@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright FUJITSU LIMITED 2016-2019
 
 .. _dto-objects:
 
@@ -7,7 +7,6 @@ Data Transfer Objects
 
 This section provides a description of all UForge AppCenter REST Data Transfer objects.
 
-	* :ref:`abstractpipeline-object`
 	* :ref:`abstractwinapplication-object`
 	* :ref:`abstractwinapplications-object`
 	* :ref:`address-object`
@@ -26,6 +25,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`blueprint-object`
 	* :ref:`blueprintdeployment-object`
 	* :ref:`blueprintdeploymentaws-object`
+	* :ref:`blueprintpipeline-object`
+	* :ref:`blueprintpipelineaws-object`
 	* :ref:`blueprintpredeploy-object`
 	* :ref:`blueprintservice-object`
 	* :ref:`blueprintsummary-object`
@@ -45,6 +46,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`comments-object`
 	* :ref:`companies-object`
 	* :ref:`company-object`
+	* :ref:`containertemplate-object`
+	* :ref:`containertemplates-object`
 	* :ref:`credaccount-object`
 	* :ref:`credaccountaws-object`
 	* :ref:`credaccountazure-object`
@@ -101,7 +104,6 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`memberships-object`
 	* :ref:`migration-object`
 	* :ref:`migrations-object`
-	* :ref:`migrationstage-object`
 	* :ref:`milestone-object`
 	* :ref:`milestones-object`
 	* :ref:`mysoftware-object`
@@ -125,6 +127,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`partition-object`
 	* :ref:`partitions-object`
 	* :ref:`partitiontable-object`
+	* :ref:`pipeline-object`
+	* :ref:`pipelines-object`
 	* :ref:`package-object`
 	* :ref:`pkggroup-object`
 	* :ref:`packages-object`
@@ -163,6 +167,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 	* :ref:`scanimports-object`
 	* :ref:`scannedfile-object`
 	* :ref:`scannedfiles-object`
+	* :ref:`directorystructure-object`
+	* :ref:`scanneddirectory-object`
 	* :ref:`scansync-object`
 	* :ref:`scanfilestosynchronize-object`
 	* :ref:`scannedinstance-object`
@@ -226,7 +232,6 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
 .. toctree::
     :hidden:
 
-    AbstractPipeline
     AbstractWinApplication
     AbstractWinApplications
     Address
@@ -245,6 +250,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     Blueprint
     BlueprintDeployment
     BlueprintDeploymentAws
+    BlueprintPipeline
+    BlueprintPipelineAws
     BlueprintPredeploy
     BlueprintService
     BlueprintSummary
@@ -264,6 +271,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     Comments
     Companies
     Company
+    ContainerTemplate
+    ContainerTemplates
     CredAccount
     CredAccountAws
     CredAccountAzure
@@ -320,7 +329,6 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     Memberships
     Migration
     Migrations
-    MigrationStage
     Milestone
     Milestones
     MySoftware
@@ -344,6 +352,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     Partition
     Partitions
     PartitionTable
+    Pipeline
+    Pipelines
     Pkg
     PkgGroup
     PkgList
@@ -382,6 +392,8 @@ This section provides a description of all UForge AppCenter REST Data Transfer o
     ScanImports
     ScannedFile
     ScannedFiles
+    DirectoryStructure
+    ScannedDirectory
     ScanSync
     ScanFilesToSynchronize
     ScannedInstance

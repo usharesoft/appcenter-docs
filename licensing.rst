@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2017-2019 FUJITSU LIMITED
 
 3rd Party Components
 ====================
@@ -22,7 +22,7 @@ UNIX is a registered trademark of the Open Group in the United States and in oth
 
 Other company names and product names are trademarks or registered trademarks of their respective owners.
 
-Copyright FUJITSU LIMITED 2017
+Copyright FUJITSU LIMITED 2019
 ------------------------------
 
 All rights reserved, including those of translation into other languages. No part of this manual may be reproduced
@@ -52,12 +52,14 @@ in any form whatsoever without the written permission of FUJITSU LIMITED
 * device-mapper-event-libs: http://sources.redhat.com/lvm2
 * device-mapper-libs: http://sources.redhat.com/lvm2
 * dnf: http://dnf.baseurl.org/
+* docker-distribution: https://github.com/docker/distribution
 * Dozer: http://dozer.sourceforge.net/
 * D3: http://d3js.org/
 
 * EclipseLink: http://www.eclipse.org/eclipselink/
 * expat: http://www.libexpat.org/
 
+* Filebeat: https://www.elastic.co/products/beats/filebeat
 * fontconfig: http://fontconfig.org
 
 * glibc: http://www.gnu.org/software/libc/

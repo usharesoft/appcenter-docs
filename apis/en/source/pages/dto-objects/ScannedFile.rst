@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright FUJITSU LIMITED 2016-2019
 
 .. _scannedfile-object:
 
@@ -16,6 +16,7 @@ The list of attributes for ``scannedFile`` are:
 	* ``inherited`` (boolean): a boolean indicating if this file has already been found, with the same metadata and content, in an other scan of the same scanned instance
 	* ``selected`` (boolean): a boolean indicating if this file has been selected to be imported as part of the overlay
 	* ``uploaded`` (boolean): a boolean indicating if this file has been received as part of the overlay upload
+	* ``changeType``: the change type of the file
 	* ``checksum`` (string): the sha256 checksum value of the file
 	* ``directory`` (boolean): boolean flag determining if this file is a directory
 	* ``fullPath`` (string): the full canonical pathname of the file

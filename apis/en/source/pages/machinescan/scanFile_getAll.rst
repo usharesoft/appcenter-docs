@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright FUJITSU LIMITED 2016-2019
 
 .. _scanFile-getAll:
 
@@ -18,9 +18,7 @@ Retrieves all the files found on file system after scanning a live system.
 
 A list of :ref:`scannedfile-object` objects are returned. 
 
-A set of query parameters can be used to retrieve a subset of these files. 
-
-The ``compareWith`` query parameter can be used to compare all the files of another scan report
+A set of query parameters can be used to retrieve a subset of these files.
 
 Security Summary
 ~~~~~~~~~~~~~~~~

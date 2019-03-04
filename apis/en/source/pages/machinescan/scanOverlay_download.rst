@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright FUJITSU LIMITED 2016-2019
 
 .. _scanOverlay-download:
 
@@ -56,7 +56,6 @@ Example Request
 	 * :ref:`scanPackage-getAll`
 	 * :ref:`scanPartition-upload`
 	 * :ref:`scan-cancel`
-	 * :ref:`scan-compare`
 	 * :ref:`scan-create`
 	 * :ref:`scan-delete`
 	 * :ref:`scan-get`

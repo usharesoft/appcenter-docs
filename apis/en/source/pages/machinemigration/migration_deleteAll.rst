@@ -1,4 +1,4 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright FUJITSU LIMITED 2016-2019
 
 .. _migration-deleteAll:
 
@@ -47,4 +47,4 @@ Example Request
 	 * :ref:`migration-create`
 	 * :ref:`migration-delete`
 	 * :ref:`migration-get`
-	 * :ref:`migrationstage-object`
+	 * :ref:`stage-object`

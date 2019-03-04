@@ -8,8 +8,6 @@
            targetNamespace="http://www.usharesoft.com/uforge"
            jaxb:version="2.0">
 
-    <xs:element name="abstractPipeline" type="AbstractPipeline"/>
-
     <xs:element name="abstractWinApplication" type="AbstractWinApplication"/>
 
     <xs:element name="abstractWinApplications" type="AbstractWinApplications"/>
@@ -45,6 +43,10 @@
     <xs:element name="blueprints" type="Blueprints"/>
 
     <xs:element name="blueprintDeployment" type="BlueprintDeployment"/>
+
+    <xs:element name="blueprintPipeline" type="BlueprintPipeline"/>
+
+    <xs:element name="blueprintPipelines" type="BlueprintPipelines"/>
 
     <xs:element name="blueprintPredeploy" type="BlueprintPredeploy"/>
 
@@ -98,6 +100,10 @@
 
     <xs:element name="confMgmtPlatforms" type="ConfMgmtPlatforms"/>
 
+    <xs:element name="containerTemplate" type="ContainerTemplate"/>
+
+    <xs:element name="containerTemplates" type="ContainerTemplates"/>
+
     <xs:element name="credAccount" type="CredAccount"/>
 
     <xs:element name="credAccountResource" type="CredAccountResource"/>
@@ -109,6 +115,8 @@
     <xs:element name="deployment" type="Deployment"/>
 
     <xs:element name="deployments" type="Deployments"/>
+
+    <xs:element name="directoryStructure" type="DirectoryStructure"/>
 
     <xs:element name="disk" type="Disk"/>
 
@@ -196,8 +204,6 @@
 
     <xs:element name="migrations" type="Migrations"/>
 
-    <xs:element name="migrationStage" type="MigrationStage"/>
-
     <xs:element name="milestone" type="Milestone"/>
 
     <xs:element name="milestones" type="Milestones"/>
@@ -248,6 +254,10 @@
 
     <xs:element name="partitionTable" type="PartitionTable"/>
 
+    <xs:element name="pipeline" type="Pipeline"/>
+
+    <xs:element name="pipelines" type="Pipelines"/>
+
     <xs:element name="pkgGroup" type="PkgGroup"/>
 
     <xs:element name="pkgUpdateInfoList" type="PkgUpdateInfoList"/>
@@ -291,6 +301,8 @@
     <xs:element name="scan" type="Scan"/>
 
     <xs:element name="scanCompare" type="ScanCompare"/>
+
+    <xs:element name="scannedDirectory" type="ScannedDirectory"/>
 
     <xs:element name="scanImport" type="ScanImport"/>
 
@@ -419,41 +431,6 @@
     <xs:element name="workspace" type="Workspace"/>
 
     <xs:element name="workspaces" type="Workspaces"/>
-
-
-    <xs:complexType name="AbstractPipeline">
-        <xsd:annotation>
-            <xsd:documentation xml:lang="en">
-                Holds all the meta-data of a pipeline. Contains the list of stages to perform a pipeline.
-            </xsd:documentation>
-        </xsd:annotation>
-        <xs:complexContent>
-            <xs:extension base="UForgeObject">
-                <xs:sequence>
-                    <xs:element name="tag" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the tag information</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="name" type="xs:string" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the pipeline name</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="status" type="OpStatus" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the status of the pipeline</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                    <xs:element name="uri" type="xs:anyURI" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the uri of the pipeline</xsd:documentation>
-                        </xsd:annotation>
-                    </xs:element>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
 
     <xs:complexType name="AbstractWinApplication" abstract="true">
         <xsd:annotation>
@@ -655,6 +632,12 @@
         <xs:complexContent>
             <xs:extension base="UForgeObject">
                 <xs:sequence>
+                    <xs:element name="uuid" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uuid of the object</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+
                     <xs:element name="applianceExports" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">a list of :ref:`applianceexport-object` objects holding meta-data information for each time
@@ -1438,8 +1421,8 @@
     <xs:complexType name="Blueprint">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
-                Describes a blueprint template.
-                A blueprint template modelizes a set of :ref:`blueprintService-object` and the information required to deploy these services
+                Describes a blueprint.
+                A blueprint modelizes a set of :ref:`blueprintService-object` and the information required to deploy these services
                 on different nodes in a container or cloud environment.
             </xsd:documentation>
         </xsd:annotation>
@@ -1471,6 +1454,11 @@
                             <xsd:documentation xml:lang="en">the description of the blueprint</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
+                    <xs:element name="yaml" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the blueprint yaml content</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
                     <xs:element name="deployUri" type="xs:anyURI" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the uri resource to deploy the blueprint</xsd:documentation>
@@ -1485,8 +1473,23 @@
                     </xs:element>
                     <xs:element name="predeployUri" type="xs:anyURI" minOccurs="0">
                         <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the endpoint resource to retrieve BlueprintPredeploy</xsd:documentation>
+                            <xsd:documentation xml:lang="en">the uri resource to retrieve BlueprintPredeploy</xsd:documentation>
                         </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="prepareUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource to launch a pipeline based on this blueprint</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="pipelines">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of Pipelines used to prepare this blueprint</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="pipeline" type="Pipeline" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
                     </xs:element>
                 </xs:sequence>
             </xs:extension>
@@ -1512,7 +1515,7 @@
     <xs:complexType name="BlueprintDeployment">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
-                Provides the information required to deploy a blueprint template.
+                Provides the information required to deploy a blueprint.
             </xsd:documentation>
         </xsd:annotation>
         <xs:complexContent>
@@ -1536,7 +1539,7 @@
     <xs:complexType name="BlueprintDeploymentAws">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
-                Provides the information required to deploy a blueprint template to the Amazon Web Services (AWS) environment.
+                Provides the information required to deploy a blueprint to the Amazon Web Services (AWS) environment.
             </xsd:documentation>
         </xsd:annotation>
         <xs:complexContent>
@@ -1546,6 +1549,65 @@
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the region where this machine image is registered</xsd:documentation>
                         </xsd:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="BlueprintPipeline" abstract="true">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Holds the general information on the preparation of a blueprint to a target cloud environment.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="Pipeline">
+                <xs:sequence>
+                    <xs:element name="blueprintUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the blueprint uri related to this preparation</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="credAccountUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri of the cloud account used by this preparation</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="BlueprintPipelineAws">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Holds the information on the preparation of a blueprint to the Amazon Web Services (AWS) environment.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="BlueprintPipeline">
+                <xs:sequence>
+                    <xs:element name="region" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the region where the blueprint is prepared</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="BlueprintPipelines">
+        <xs:complexContent>
+            <xs:extension base="UForgeObjects">
+                <xs:sequence>
+                    <xs:element name="blueprintPipelines" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="blueprintPipeline" type="BlueprintPipeline" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
                     </xs:element>
                 </xs:sequence>
             </xs:extension>
@@ -1589,16 +1651,6 @@
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="generatedImagesUris">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en">the list of image uris for images that are generated but not published</xsd:documentation>
-                </xsd:annotation>
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="generatedImagesUris" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
             <xs:element name="nonGeneratedAppliances">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en">the list of appliances that are not generated</xsd:documentation>
@@ -1619,6 +1671,16 @@
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
+            <xs:element name="interactiveProfileAppliances">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">the list of appliances having an interactive profile</xsd:documentation>
+                </xsd:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="interactiveProfileAppliances" type="Appliance" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
         </xs:sequence>
     </xs:complexType>
 
@@ -1632,21 +1694,6 @@
             <xs:element name="serviceId" type="xs:string">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en">the id of this blueprint service. It can be used in ochestrator configuration, see blueprints example provided in UForge user guide documentation for details.</xsd:documentation>
-                </xsd:annotation>
-            </xs:element>
-            <xs:element name="minMemory" type="xs:integer" minOccurs="0">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en">the minimal memory required for this blueprint service</xsd:documentation>
-                </xsd:annotation>
-            </xs:element>
-            <xs:element name="minCores" type="xs:integer" minOccurs="0">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en">the minimal number of cores required for this blueprint service</xsd:documentation>
-                </xsd:annotation>
-            </xs:element>
-            <xs:element name="config" type="xs:string" minOccurs="0">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en">the extra configuration for this blueprint service</xsd:documentation>
                 </xsd:annotation>
             </xs:element>
             <xs:element name="applianceSummary" type="ApplianceSummary">
@@ -2826,6 +2873,79 @@
                         <xs:complexType>
                             <xs:sequence>
                                 <xs:element name="confMgmtPlatforms" type="ConfMgmtPlatform" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ContainerTemplate">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Holds all the meta-data of a containerTemplate.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObject">
+                <xs:sequence>
+                    <xs:element name="uri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri of this container template</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="softwareBundle" type="SoftwareBundle" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the software bundle from which the container template has been created</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="distribution" type="Distribution" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the distribution on which the container template is based</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="images" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of images generated from the container template</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="image" type="Image" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="imagesUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri to retrieve images generated from the container template</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="formatsUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri resource to retrieve all the target formats compatible with this container template</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ContainerTemplates">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Provides a list of :ref:`ContainerTemplate-object` objects.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObjects">
+                <xs:sequence>
+                    <xs:element name="containerTemplates" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of :ref:`ContainerTemplate-object` objects</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="containerTemplate" type="ContainerTemplate" minOccurs="0" maxOccurs="unbounded"/>
                             </xs:sequence>
                         </xs:complexType>
                     </xs:element>
@@ -4426,7 +4546,7 @@
             </xsd:documentation>
         </xsd:annotation>
         <xs:complexContent>
-            <xs:extension base="MigrationStage">
+            <xs:extension base="Stage">
                 <xs:sequence>
                     <xs:element name="image" type="Image" minOccurs="0">
                         <xsd:annotation>
@@ -4436,6 +4556,11 @@
                     <xs:element name="imageUri" type="xs:anyURI" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the uri resource of the image generated</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="sourceTemplateId" type="xs:long" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the id of the source template if there is one</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                 </xs:sequence>
@@ -4618,6 +4743,11 @@
                     <xs:element name="entrypoint" type="xs:string" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the Entrypoint of a Docker machine image</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="registeringName" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the name of the image registered in the registry</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                 </xs:sequence>
@@ -5758,18 +5888,8 @@
             </xsd:documentation>
         </xsd:annotation>
         <xs:complexContent>
-            <xs:extension base="AbstractPipeline">
+            <xs:extension base="Pipeline">
                 <xs:sequence>
-                    <xs:element name="stages" minOccurs="0">
-                        <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the list of stages to perform the pipeline (see :ref:`stage-object`)</xsd:documentation>
-                        </xsd:annotation>
-                        <xs:complexType>
-                            <xs:sequence>
-                                <xs:element name="stage" type="MigrationStage" minOccurs="0" maxOccurs="unbounded"/>
-                            </xs:sequence>
-                        </xs:complexType>
-                    </xs:element>
                     <xs:element name="cancellable" type="xs:boolean" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">a boolean highlighting if the Migration is cancellable or not</xsd:documentation>
@@ -5800,18 +5920,6 @@
                         </xs:complexType>
                     </xs:element>
                 </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-
-    <xs:complexType name="MigrationStage">
-        <xsd:annotation>
-            <xsd:documentation xml:lang="en">
-                Holds all the meta-data of a stage to perform a migration.
-            </xsd:documentation>
-        </xsd:annotation>
-        <xs:complexContent>
-            <xs:extension base="Stage">
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
@@ -5909,6 +6017,11 @@
                     <xs:element name="imported" type="xs:boolean" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">a boolean highlighting if the MySoftware has been imported (from a scan, an appliance import or a workspace)</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="generationEnabled" type="xs:boolean" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">a boolean highlighting if the Software component is able to be generated or not</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                 </xs:sequence>
@@ -7184,6 +7297,74 @@
         </xs:sequence>
     </xs:complexType>
 
+    <xs:complexType name="Pipeline">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Holds all the meta-data of a pipeline. Contains the list of stages to perform a pipeline.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObject">
+                <xs:sequence>
+                    <xs:element name="tag" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the tag information</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="name" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the pipeline name</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="status" type="OpStatus" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the status of the pipeline</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="uri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri of the pipeline</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="stages" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of stages to perform the pipeline (see :ref:`stage-object`)</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="stage" type="Stage" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Pipelines">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Provides a list of :ref:`pipeline-object` objects.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObjects">
+                <xs:sequence>
+                    <xs:element name="pipelines" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of :ref:`pipeline-object` objects</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="pipeline" type="Pipeline" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
     <xs:complexType name="Pkg">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
@@ -7538,7 +7719,7 @@
             </xsd:documentation>
         </xsd:annotation>
         <xs:complexContent>
-            <xs:extension base="MigrationStage">
+            <xs:extension base="Stage">
                 <xs:sequence>
                     <xs:element name="publishImage" type="PublishImage" minOccurs="0">
                         <xsd:annotation>
@@ -7548,6 +7729,11 @@
                     <xs:element name="publishImageUri" type="xs:anyURI" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">the uri resource of the published image</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="sourceImageId" type="xs:long" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the id of the source image if there is one</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                 </xs:sequence>
@@ -8715,7 +8901,6 @@
         </xs:complexContent>
     </xs:complexType>
 
-
     <xs:complexType name="ScannedFile">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
@@ -8745,6 +8930,18 @@
                             <xsd:documentation xml:lang="en">a boolean indicating if this file has been received as part of the overlay upload</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
+                    <xs:element name="changeType" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the change type of the file</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="added"/>
+                                <xs:enumeration value="deleted"/>
+                                <xs:enumeration value="modified"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -8769,6 +8966,111 @@
                             </xs:sequence>
                         </xs:complexType>
                     </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="DirectoryStructure">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Holds the meta-data of a directory on the file system.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="UForgeObject">
+                <xs:sequence>
+                    <xs:element name="id" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the id of the directory</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="path" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the path of the directory</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="subDirectories" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of sub directories</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="subDirectory" type="DirectoryStructure" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ScannedDirectory">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Holds the meta-data of a directory discovered on the file system after a scan process.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xs:complexContent>
+            <xs:extension base="DirectoryStructure">
+                <xs:sequence>
+                    <xs:element name="changeType" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the change type of the directory</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="ADD"/>
+                                <xs:enumeration value="DELETE"/>
+                                <xs:enumeration value="CHANGE"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="owner" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the owner of the directory</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+
+                    <xs:element name="group" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the group of the directory</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+
+                    <xs:element name="permissions" type="xs:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the permissions of the directory</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+
+                    <xs:element name="sumAdded" type="xs:long" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the sum of added files in the directory</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+
+                    <xs:element name="sumChanged" type="xs:long" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the sum of changed files in the directory</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="sumDeleted" type="xs:long" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the sum of deleted files in the directory</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="files" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the list of scanned files in the directorie</xsd:documentation>
+                        </xsd:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="file" type="ScannedFile" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -9058,7 +9360,7 @@
             </xsd:documentation>
         </xsd:annotation>
         <xs:complexContent>
-            <xs:extension base="MigrationStage">
+            <xs:extension base="Stage">
                 <xs:sequence>
                     <xs:element name="family" minOccurs="0">
                         <xsd:annotation>
@@ -9654,6 +9956,11 @@
                     <xs:element name="formatDependent" type="xs:boolean" minOccurs="0">
                         <xsd:annotation>
                             <xsd:documentation xml:lang="en">a boolean highlighting if the Software bundle is restricted on target format</xsd:documentation>
+                        </xsd:annotation>
+                    </xs:element>
+                    <xs:element name="containerTemplatesUri" type="xs:anyURI" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">the uri to retrieve container templates created from the software bundle</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                 </xs:sequence>
@@ -10746,7 +11053,7 @@
                     </xs:element>
                     <xs:element name="baseBlueprintsUri" type="xs:anyURI" minOccurs="0">
                         <xsd:annotation>
-                            <xsd:documentation xml:lang="en">the uri resource to retrieve the user's blueprint templates</xsd:documentation>
+                            <xsd:documentation xml:lang="en">the uri resource to retrieve the user's blueprint</xsd:documentation>
                         </xsd:annotation>
                     </xs:element>
                     <xs:element name="baseCredAccountsUri" type="xs:anyURI" minOccurs="0">

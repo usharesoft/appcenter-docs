@@ -25,5 +25,5 @@ The UForge Repository must be setup properly prior to completing the final confi
 
 You can set up the UForge Repository either:
 
-	* on a shared storage. Refer to :ref:`repository-shared-storage`.
-	* on a local storage. Refer to :ref:`repository-local-storage`.
+	* on a shared storage. Refer to :ref:`repository-shared-storage`. This option is mandatory if you are installing UForge as a multi-node environment.
+	* on a local storage. Refer to :ref:`repository-local-storage`. This option can only be used if you are installing UForge as a single node environment.

@@ -9,30 +9,6 @@ All the open source operating system versions are delivered as part of the UForg
 
 From the UI you can see the installed OSes by going to the ``Administration`` page and going to the ``Distributions`` tab.
 
-To get the complete list of the currently supported operating systems on the UForge platform using the CLI run the command ``uforge os list``.
-
-Log in to one of the UForge instances:
-
-.. code-block :: shell
-
-	$ uforge os list -u $ADMIN -p $PASS
-	Getting operating systems ...
-	Success: Found the following operating systems
-	+----------------+-----------------+--------------+--------+---------+---------+------------------+
-	| Distribution   | Version         | Architecture | Access | Visible | Default | Release Date     |
-	+----------------+-----------------+--------------+--------+---------+---------+------------------+
-	| CentOS         | 5               | i386         |   X    |    X    |         | NK               |
-	| CentOS         | 5.3             | i386         |   X    |    X    |         | 2009-03-17       |
-	| CentOS         | 5.3             | x86_64       |   X    |    X    |         | 2009-03-18       |
-	| CentOS         | 5.4             | i386         |   X    |    X    |         | 2009-10-01       |
-	| CentOS         | 5.4             | x86_64       |   X    |    X    |         | 2009-10-01       |
-	| CentOS         | 5.5             | i386         |   X    |    X    |         | 2010-04-27       |
-	| CentOS         | 5.5             | x86_64       |   X    |    X    |         | 2010-04-27       |
-	| CentOS         | 5.6             | i386         |   X    |    X    |         | 2011-03-07       |
-	| CentOS         | 5.6             | x86_64       |   X    |    X    |         | 2011-03-22       |
-	| CentOS         | 5.7             | i386         |   X    |    X    |    X    | 2011-08-29       |
-	.... rest omitted for clarity
-
 All the open source operating system versions are delivered as part of the UForge repository. Proprietary operating systems such as Red Hat Enterprise Linux or older operating system versions (that have been EOL'd) are not; therefore it is the responsibility of the end customer (or reseller if they have correct agreements in place to re-distribute an operating system) to have the original ISO images of the operating system in questions.
 
 .. note:: You can only add an operating system version that is officially supported by the UForge AppCenter and has been certified by Fujitsu.  
@@ -42,7 +18,7 @@ All the open source operating system versions are delivered as part of the UForg
 Listing the Enabled OSes with CLI
 ---------------------------------
 
-To get a list of the operating systems that are currently enabled on your UForge platform using the CLI run the command ``uforge org os list``.
+To get a list of the operating systems that are currently enabled on your UForge platform, run the CLI run the command ``uforge org os list``.
 
 Login to one of the UForge instances:
 
@@ -84,9 +60,11 @@ In order to add an OS to an organisation you manage:
 	#. Click ``add``.
 	#. You must add repositories to this distribution from the list of ``Available repositories`` on the ``Repositories`` tab. The repositories that you can add are listed in the bottom list. The top list is the list of repositories that have been added.
 
+	To add a repository, check it from the bottom table and click ``add selected``. It will now appear in the top table.
+
 		.. image:: /images/add-repo.png
 
-		You can also create new repositories by clicking on ``new``. You will be redirected to the page to create new repositories. For more information, refer to :ref:`creating-repo`.
+		.. note:: You can also create new repositories by clicking on ``new``. You will be redirected to the page to create new repositories. For more information, refer to :ref:`creating-repo`.
 
 	#. You must populate the repositories. To do so, click on ``populate`` at the top right and follow the instructions in the pop-up window.
 
@@ -160,7 +138,7 @@ You can manage existing repositories and create new ones from the UForge UI, fro
 
 		.. image:: /images/create-repo.png
 
-	.. note:: Check ``core repositories`` for all the default repositories of officially supported OSes (for a list of supported OSes, refer to :ref: uforge-supported-os-formats). Do not check this box for repositories that are not part of the core distribution, such as epel or VMware tools. When generating a machine image, packages tagged as ``core`` are installed first, before other packages.
+	.. note:: Check ``core repositories`` for all the default repositories of officially supported OSes (for a list of supported OSes, refer to the section ``Supported Operating Systems`` in the User Guide). Do not check this box for repositories that are not part of the core distribution, such as epel or VMware tools. When generating a machine image, packages tagged as ``core`` are installed first, before other packages.
 
 
 .. _updating-repo:

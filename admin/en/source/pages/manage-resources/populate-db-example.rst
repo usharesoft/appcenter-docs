@@ -1,4 +1,4 @@
-.. Copyright 2019 FUJITSU LIMITED
+.. Copyright 2018-2019 FUJITSU LIMITED
 
 .. _populate-official-repo:
 
@@ -297,7 +297,7 @@ The following is a concrete example to begin the population of Ubuntu 10.04 64bi
 
 		.. code-block:: shell
 
-			$ uforge org repo create --name "Ubuntu x86_64 lucid-main" --repoUrl "[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/lucid-security/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid multiverse restricted universe main" --type DEB --coreRepository -u $ADMIN -p $PASS
+			$ uforge org repo create --name "Ubuntu x86_64 lucid-main" --repoUrl "[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/lucid/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid multiverse restricted universe main" --type DEB --coreRepository -u $ADMIN -p $PASS
 
 			$ uforge org repo create --name "Ubuntu x86_64 lucid-security" --repoUrl "[arch=amd64] http://distros-repository.usharesoft.com/ubuntu/lucid-security/mirror/bouyguestelecom.ubuntu.lafibre.info/ubuntu/ lucid-security multiverse restricted universe main" --type DEB --coreRepository -u $ADMIN -p $PASS
 
@@ -325,7 +325,7 @@ The following is a concrete example to begin the population of Ubuntu 10.04 64bi
 
 		`http://distros-repository.usharesoft.com/ <http://distros-repository.usharesoft.com/>`_ is an official public repository that users can use to populate the distributions. Official repositories such as Ubuntu and Debian periodically delete some package versions. In the http://distros-repository.usharesoft.com/ repository, package versions are never deleted. This can facilitate investigations on older systems.
 
-	7. You must then add the specific UForge tool repository. The repository to attach for ``CentOS`` (example version 6, arch x86_64) is the following:
+	7. You must then add the specific UForge tool repository. The repository to attach for ``Ubuntu`` (example version 6, arch x86_64) is the following:
 
 			* http://distros-repository.usharesoft.com/usharesoft/ubuntu/
 

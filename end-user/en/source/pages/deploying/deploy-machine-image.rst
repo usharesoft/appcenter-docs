@@ -1,4 +1,4 @@
-.. Copyright 2019 FUJITSU LIMITED
+.. Copyright 2018-2019 FUJITSU LIMITED
 
 .. _deploy-machine-image:
 
@@ -90,6 +90,8 @@ Deployment Procedure
 	.. note:: Using this procedure, all deployed Linux virtual machines will have ssh port (22) open in their security group. All deployed Windows virtual machines will have RDP port (3389) and WinRM ports (5985, 5986) open in their security group.
 
 	.. note:: It may take a long time for a Windows virtual machine deployed to Azure to be provisioned.
+
+	.. note:: Currently, deployment of a Windows virtual machine from a published ``Disk`` is not supported. For more information on publishing of Windows machine images, see :ref:`publish-win-to-azure`. 
 
 	10. To stop a deployed instance, click on the delete (garbage) icon. This will remove it from your cloud.
 

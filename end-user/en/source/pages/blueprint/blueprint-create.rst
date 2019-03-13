@@ -1,4 +1,4 @@
-.. Copyright 2019 FUJITSU LIMITED
+.. Copyright 2018-2019 FUJITSU LIMITED
 
 .. _blueprint-create:
 
@@ -41,6 +41,8 @@ To create a new blueprint:
 	6. Once you have created your blueprint, click on ``save``. It will now be visible in the ``Blueprint Library``.
 
 	.. note:: If you update any of the appliances used in the blueprint once the blueprint is created, this will be updated in the blueprint also. However, if your blueprint is already deployed, the changes will not be in the deployed blueprint. For more information about deploying blueprints, refer to :ref:`blueprint-deploy`.
+
+	.. note:: If any of your appliances has a warning sign next to it in the graphical designer, this indicates the appliance is not ready to be used in a blueprint. Click the warning icon to get information on what actions are needed to make it ready.
 
 
 Using the YAML Editor to Create or Modify a Blueprint

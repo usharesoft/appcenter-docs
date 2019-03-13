@@ -1,4 +1,4 @@
-.. Copyright 2019 FUJITSU LIMITED
+.. Copyright 2018-2019 FUJITSU LIMITED
 
 .. _appliance-publish-machine-image:
 
@@ -16,6 +16,8 @@ Publishing a Machine Image
 In order to publish a machine image to a cloud environment or container, you must already have credentials to access that environment. 
 
 		.. note:: If you want to publish a Windows image to KVM on Red Hat Linux you need to inject specific VirtIO drivers. See the specific procedure documented in :ref:`publish-win-to-rh`.
+
+		.. note:: To boot up a Windows image on KVM, you should specify 'VirtIO' as a disk bus type. You should not specify 'IDE' or other types.
 
 		.. note:: Before publishing a Windows image to AWS, ``vmimport`` role must be properly assigned to an AWS account. An access right to S3 bucket is also required for an account. Refer to the procedure in `VM Import Service Role section of the AWS documentation <https://docs.aws.amazon.com/vm-import/latest/userguide/vmimport-image-import.html>`_. Because the name of a S3 bucket changes for each image publish, you should give access to any buckets using a wildcard `*`. For an example, refer to :ref: `windows-aws-s3`.
 
@@ -59,7 +61,7 @@ In order to publish a machine image to a cloud environment or container, you mus
 Publishing a Windows Image to KVM on Red Hat Linux
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you want to publish a Windows image to KVM on Red Hat Linux you need to inject specific VirtIO drivers. 
+If you want to publish a Windows image to KVM on Red Hat Linux you need to inject specific VirtIO drivers.
 
 #. In order to add the specific drivers, the Red Hat VirtIO drivers can be either added to AppCenter as a Project if it has been added to your AppCenter by the administrator, or using MySoftware. 
 
@@ -82,3 +84,41 @@ The following files should be included in your software bundle:
 #. Generate the machine image.
 
 #. Publish the machine image.
+
+.. _publish-win-to-azure:
+
+Publishing a Windows Image to Azure Using Migration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	.. note:: In order to install Azure Virtual Machine Agent, .NET Framework 4.0 or later is required and should be installed in the source machine or in the golden image in advance.
+
+When publishing a machine image to Azure through the migration workflow, there are some prior steps to be performed. Please refer to Microsoft's guide on `How to prepare a VHD image for upload <https://docs.microsoft.com/en-us/azure/virtual-machines/windows/prepare-for-upload-vhd-image>`_, more specifically the following sections:
+
+	* Set Windows configurations for Azure
+	* Check the Windows services
+	* Update Remote Desktop registry settings
+	* Configure Windows Firewall rules 
+	* Verify VM is healthy, secure, and accessible with RDP 
+	* Install Windows Updates
+
+When publishing a Windows machine image to Azure, depending on the generation method of the machine image, the published image can be listed on Azure portal under either ``Images`` or ``Disks``, according to the cases listed below:
+
+	#. The published image will be listed under ``Disks`` when:
+
+		* performing a blackbox migration of a Windows machine;
+		* performing a whitebox migration of a Windows machine with the appliance configured as to not run sysprep automatically on its first boot.
+
+		.. note:: In these cases, the Azure Virtual Machine Agent should be installed manually before the migration process.
+
+	#. The published image will be listed under ``Images`` when:
+
+		* performing a whitebox migration of a Windows machine with the appliance configured to run sysprep automatically on its first boot;
+
+			.. note:: If ``Run Sysprep`` is enabled in the appliance configuration, any password settings defined under the ``Administrator`` section of the appliance will not be reflected in the published image. Password settings should be configured on the Azure portal instead.
+
+		* the Windows machine image was generated using a manually created Golden Image.
+
+			.. warning:: When publishing to Azure an image generated using a manually created Golden Image, the ``Install Profile`` default settings of the appliance should not be modified. If you need to change the disk size, you can change it on the image generation page.
+
+		.. note:: In these cases, the Azure Virtual Machine Agent will be installed automatically as part of Azure's internal processing to register the machine image.
+

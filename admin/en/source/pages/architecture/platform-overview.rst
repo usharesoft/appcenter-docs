@@ -1,4 +1,4 @@
-.. Copyright 2019 FUJITSU LIMITED
+.. Copyright 2016-2019 FUJITSU LIMITED
 
 .. _platform-overview:
 
@@ -11,6 +11,7 @@ UForge is a scalable multi-tenant platform.  UForge can be split into the follow
 	* Meta-data SQL Store – A database holding all the configuration information and data of the platform.
 	* Secret Manager - A dedicated service to store user's confidential information, such as password, login ... in a secure way.
 	* LDAP Service – LDAP holding user authentication and access information
+	* Registry - Docker
 	* IDM Service – Authentication and authorization module
 	* Generation Cluster – A grid engine for scheduling and executing image generations
 	* Event-bus – Rabbit MQ
@@ -18,7 +19,7 @@ UForge is a scalable multi-tenant platform.  UForge can be split into the follow
 
 The UForge platform can be deployed on physical machines or in a virtualized or cloud environment.
 
-.. image:: /images/arch-uforge-vault.png
+.. image:: /images/arch-uforge.png
 
 **UForge Server.** The UForge Server is a RESTful (Representational State Transfer) web service built on top of Java and using the JSR-311 reference implementation (project Jersey).  UForge Server is based on the design principles of REST and Resource Oriented Architecture (ROA).  Resources are references with a unique global identifier (URI).  UForge Server uses the semantics of the HTTP protocol to manipulate these resources. The HTTP response codes are used to determine whether a user's request was treated successfully or not.
 
@@ -36,6 +37,8 @@ The UForge Server is deployed inside a web/application server container.  UForge
 This IDM Service can be extended to provide a wider identity and access management (IAM) integration to an existing enterprise or corporate IAM system or to a brand new standards compliant IAM system(s) by using open source industry standard resource connectors.
 
 **LDAP.**  This service is an industry standard powerful AuthN ldap (v3) pure java server, based on the open source ForgeRock's OpenDJ offering. This can be run in single instance mode or multi-master replication mode for robustness.
+
+**Registry.** UForge includes a Registry to store Docker images.
 
 **SQL Store.** This is a relational database holding all the meta-data of UForge.  Meta-data includes such items as:
 

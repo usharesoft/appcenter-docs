@@ -1,4 +1,4 @@
-.. Copyright 2019 FUJITSU LIMITED
+.. Copyright 2016-2019 FUJITSU LIMITED
 
 .. _configure-uforge:
 
@@ -38,12 +38,14 @@ Fill in the wizard, note that all the fields are mandatory.
 
 	10. Enter the Web Server IP address, external hostname and the database IP address.
 
-		.. note:: The external hostname is used to construct two external URL endpoints.  The first as the external URL endpoint of the user interface, and the other for REST API calls and command-line usage.  The external hostname should normally be a fully qualified hostname.  For example, if the external hostname is ``uf.example.com``, then the following URL endpoints are created:
+		The external hostname is used to construct two external URL endpoints.  The first as the external URL endpoint of the user interface, and the other for REST API calls and command-line usage.  The external hostname should normally be a fully qualified hostname.  For example, if the external hostname is ``uf.example.com``, then the following URL endpoints are created:
 
 			* User interface URL endpoint: https://uf.example.com/uforge
 			* Command-line URL endpoint: https://uf.example.com/apis
 
-			These external URL endpoints can be changed after the initial configuration is complete, refer to :ref:`modify-external-endpoints` for more information.
+		These external URL endpoints can be changed after the initial configuration is complete, refer to :ref:`modify-external-endpoints` for more information.
+
+		.. note:: In order to avoid potential errors due to length limits, it is recommended that the external host name of UForge be limited to 170 characters. 
 
 
 	11. Select if OS and image storage should be local or remote. OS storage will be used for distributions, which image storage will include user data such as images, projects, mysoftware and other user data created with UForge.

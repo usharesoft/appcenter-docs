@@ -11,25 +11,21 @@ Once your UForge platform deployment is complete you can configure `Cloudsoft AM
 	* a configured user in AMP server that will be used by UForge to connect
 
 
-To configure AMP to be compatible with UForge:
+Configure AMP server with required option
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	1. On AMP server instance, run as root:
+	On the AMP server instance, run as root:
 
 		.. code-block:: shell
 
-			$ echo "brooklyn.jclouds.authorizePublicKey.extraSshPublicKeyData=true" >> /etc/amp/system.properties
+			$ grep -q "extraSshPublicKeyData=true" /etc/amp/system.properties || (echo "brooklyn.jclouds.authorizePublicKey.extraSshPublicKeyData=true" >> /etc/amp/system.properties)
 			$ systemctl restart amp
 
-	2. Download the UForge Brooklyn plugin from the `UShareSoft maven repository <https://maven.usharesoft.com/nexus/content/repositories/official/com/usharesoft/brooklyn/uforge-brooklyn-plugin/3.8.10/uforge-brooklyn-plugin-3.8.10.jar>`_.
-
-	3. Install the UForge Brooklyn plugin into AMP:
-
-		* Log in to the AMP Portal: https://[amp-instance-host]/brooklyn-ui-catalog/#!/
-		* On the catalog page, click ``Upload to catalog``
-		* Select and upload the UForge Brooklyn plugin file
+        .. note:: On a Brooklyn server, replace ``amp`` by ``brooklyn`` in the two commands.
 
 
-To configure UForge to use the AMP instance:
+Configure AMP access in UForge
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 	1. On each UForge webservice node and the UI node, in ``/etc/UShareSoft/uforge/uforge.conf`` uncomment and complete the following lines:
 
@@ -51,11 +47,31 @@ To configure UForge to use the AMP instance:
 
 			$ /opt/UShareSoft/uforge-client/bin/uforge_ui_update.sh
 
-	4. At this point the deployment feature should be available for the root user. In order to allow other users to use this feature, give them the entitlement ``deployments_access``. For more information on entitlements refer to :ref:`create-roles`.
+
+Install UForge Brooklyn Plugin into AMP catalog
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    1. Run the following command on the UForge UI node:
+
+		.. code-block:: shell
+
+			$ /opt/UShareSoft/uforge/tools/update_scripts/deploy_brooklyn_plugin/deploy_brooklyn_plugin.sh
+
+    2. If the script output contains ``please restart the Brooklyn/AMP server``, then on the AMP server instance, run as root:
+
+		.. code-block:: shell
+
+			$ systemctl restart amp
+
+        .. note:: On a Brooklyn server, replace ``amp`` by ``brooklyn`` in the command.
+
+
+Configure UForge users access rights
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	At this point the deployment feature should be available for the root user. In order to allow other users to use this feature, give them the entitlement ``deployments_access``. For more information on entitlements refer to :ref:`create-roles`.
 
 		.. code-block:: shell
 
 			role create --name launcher --entitlement deployments_access
 			user role add --roles launcher --account someUser
-
-

@@ -1108,4 +1108,4 @@ Bug Fixes
 * 5549 The error of Keystone version is displayed in Keystone Server URL
 * 5403 Scan fails when trying to rebuild a non repo package
 
-.. _apidoc: http://docs.usharesoft.com/projects/appcenter-api-guide/en/latest/
+.. _apidoc: http://docs.usharesoft.com/projects/appcenter-api-reference/en/latest/

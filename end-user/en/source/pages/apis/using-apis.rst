@@ -22,7 +22,7 @@ API methods that require a particular HTTP method will return an error if you do
 
 For a complete list of all the REST interface, refer to the `REST APIs Reference documentation <apidoc_>`_.
 
-.. _apidoc: http://docs.usharesoft.com/projects/appcenter-api-guide/en/latest/
+.. _apidoc: http://docs.usharesoft.com/projects/appcenter-api-reference/en/latest/
 
 
 Response & Error Codes

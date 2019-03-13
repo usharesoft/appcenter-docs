@@ -31,6 +31,23 @@ To create a new appliance in your private workspace:
 
 .. note:: When you create an appliance, the packages are stored locally in the UForge cache repository. This ensures that the packages will always be available.
 
+.. _nss-softokn-missing:
+
+.. note:: Due to a `known missing dependency issue <https://bugzilla.redhat.com/show_bug.cgi?id=1182337>`_ with packages *nss-softokn* and *nss-softokn-freebl* for CentOS and Red Hat Enterprise Linux versions 6.5 and 6.6, if your OS profile includes one of these packages you have to:
+
+        * Either add the missing dependency manually
+
+          * Go to Stack > OS Profile
+          * Add *nss-softokn-freebl* or *nss-soft-tokn* 3.14.3 (you should have both packages at the end)
+
+        * Or update your OS to version 6.7 (or upper)
+
+          * Go to Updates tab
+          * Click on 6.7 milestone (or upper)
+          * Click "simulate" then "update"
+
+    Otherwise, image generation will fail with a dependency checking error.
+
 .. _appliance-create-windows:
 
 Creating a Windows-based Appliance

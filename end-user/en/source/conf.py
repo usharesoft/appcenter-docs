@@ -36,12 +36,10 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
 # ones.
 if on_rtd:
     extensions = [
-        'sphinx.ext.intersphinx',
         'sphinx.ext.todo',
     ]
 else:
     extensions = [
-        'sphinx.ext.intersphinx',
         'sphinx.ext.todo',
         'rst2pdf.pdfbuilder',
     ]
@@ -303,9 +301,6 @@ pdf_stylesheets = ['sphinx', 'kerning', 'a4', 'ja']
 
 # Language to be used for hyphenation support
 pdf_language = "ja"
-
-# Refer to the APIs documentation.
-intersphinx_mapping = {'apis' : ('../../../../../apis/en/build/html/', '../../../apis/en/build/html/objects.inv')}
 
 # Documents to append as an appendix to all manuals.
 #texinfo_appendices = []

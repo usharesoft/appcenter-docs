@@ -40,11 +40,11 @@ To create a new appliance in your private workspace:
           * Go to Stack > OS Profile
           * Add *nss-softokn-freebl* or *nss-soft-tokn* 3.14.3 (you should have both packages at the end)
 
-        * Or update your OS to version 6.7 (or upper)
+        * Or update your OS to version 6.7 (or above)
 
           * Go to Updates tab
-          * Click on 6.7 milestone (or upper)
-          * Click "simulate" then "update"
+          * Click on 6.7 milestone (or above)
+          * Click ``simulate`` then ``update``
 
     Otherwise, image generation will fail with a dependency checking error.
 

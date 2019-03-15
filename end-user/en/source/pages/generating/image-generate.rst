@@ -9,7 +9,7 @@ Once an appliance template has been created, you can generate a machine image th
 
 .. note:: If you want to generate a K5 image or an OpenStack image, the appliance partition should contain only 1 disk.
 
-.. note:: If generating CentOS 6.5/6.6 image, please consider :ref:`this note<nss-softokn-missing>`. 
+.. note:: If generating CentOS 6.5/6.6 image, refer to :ref:`the following note<nss-softokn-missing>` if your OS profile includes either of the following packages: *nss-softokn* or *nss-softokn-freebl*. 
 
 To generate a machine image:
 	1. Go to the ``Apps`` tab.

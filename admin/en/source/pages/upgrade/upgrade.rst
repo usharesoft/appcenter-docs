@@ -17,7 +17,7 @@ In order to interact with the official package repository, you must already have
 	UFORGE_PRODUCT_ACCESS_USER=username
 	UFORGE_PRODUCT_ACCESS_PASSWORD=password
 
-.. warning:: You should never update the following file: ``/etc/yum.repo.d/uforge-ee-repo``
+.. warning:: You should never update the following file: ``/etc/yum.repos.d/uforge-ee-repo``
 
 The request to update uses these credentials via HTTPS to Fujitsu who then determines whether you have the access rights to update the platform.
 

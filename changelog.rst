@@ -888,22 +888,22 @@ Migrating to UForge 3.7-2 will have the following compatibility issues:
 
 The following API interface and calls have been modified:
 
-* The object ``DistribProfile`` is now an abstract object and is implemented by either :ref:`linuxProfile-object` or :ref:`windowsProfile-object` (which are new object types).
-* The deprecated object ``DistribProfileTemplate`` has now been deleted.  The object :ref:`distribProfile-object` is now used.  The attribute ``standardProfileUri`` is now deprecated and been set to ``null``.
+* The object ``DistribProfile`` is now an abstract object and is implemented by either `linuxProfile-object <apidoc_>`_ or `windowsProfile-object <apidoc_>`_ (which are new object types).
+* The deprecated object ``DistribProfileTemplate`` has now been deleted.  The object `distribProfile-object <apidoc_>`_ is now used.  The attribute ``standardProfileUri`` is now deprecated and been set to ``null``.
 
 Due to the above object changes, the following API calls have been modified:
 
-	* :ref:`orgOSWindows-add`
-	* :ref:`orgOSWindows-delete`
-	* :ref:`osTemplate-getAll`
-	* :ref:`osTemplate-get`
-	* :ref:`orgOSWindows-getAll`
+	* `orgOSWindows-add <apidoc_>`_
+	* `orgOSWindows-delete <apidoc_>`_
+	* `osTemplate-getAll <apidoc_>`_
+	* `osTemplate-get <apidoc_>`_
+	* `orgOSWindows-getAll <apidoc_>`_
 
 The following API calls have been added to enhance scanned Windows-based workloads:
 
-	* :ref:`workspaceTemplateOSApplications-get`
-	* :ref:`workspaceTemplateOSServices-get`
-	* :ref:`workspaceTemplateOSPartitionTable-get`
+	* `workspaceTemplateOSApplications-get <apidoc_>`_
+	* `workspaceTemplateOSServices-get <apidoc_>`_
+	* `workspaceTemplateOSPartitionTable-get <apidoc_>`_
 
 
 Bug Fixes
@@ -1134,3 +1134,5 @@ Bug Fixes
 * 5551 Spelling mistake in UI when publishing to Flexiant
 * 5549 The error of Keystone version is displayed in Keystone Server URL
 * 5403 Scan fails when trying to rebuild a non repo package
+
+.. _apidoc: http://docs.usharesoft.com/projects/appcenter-api-reference/en/latest/

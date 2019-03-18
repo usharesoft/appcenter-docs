@@ -38,7 +38,7 @@ Bug Fixes
 * 6316 Windows scan fails if second disk is full
 * 12856 uforge-sync.bin overwrites PID file and makes a service behave strangely
 * 12605 Files & Folders scan tab displays wrong information
-* 10096 There are inconsistences in the French traduction
+* 10096 There are inconsistencies in the French translation 
 * 12806 Downloading an OpenShift image directly retrieves the archive without explanation
 * 12588 Cannot delete multiple users in Workspace Members page
 * 12734 Publishing to Azure ARM, K5 and VCenter terminate with error when it takes more than 8 hours

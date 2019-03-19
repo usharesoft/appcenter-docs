@@ -38,7 +38,7 @@ To create a new appliance in your private workspace:
         * Either add the missing dependency manually
 
           * Go to Stack > OS Profile
-          * Add *nss-softokn-freebl* or *nss-soft-tokn* 3.14.3 (you should have both packages at the end)
+          * Make sure that you have both *nss-softokn-freebl* and *nss-softokn* 3.14.3. If one of the packages is missing, you must add it to the OS profile.
 
         * Or update your OS to version 6.7 (or above)
 

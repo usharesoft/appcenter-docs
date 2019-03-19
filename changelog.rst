@@ -18,6 +18,33 @@ Enhancements
 ~~~~~~~~~~~~
 * Blueprint deployment has been improved. The user can now generate and publish all images of the blueprint appliances by clicking on the new ``prepare`` button.
 * Blueprint Composer now raises a warning if one of the appliance component configuration requires user interaction at first boot
+* UForge provides a PowerShell command to download uforge-scan.exe from a Windows Server
+
+Bug Fixes
+~~~~~~~~~
+* 13028 Imported appliances from workspace break the blueprint appliance list
+* 10553 Windows generation for some formats fails due to some registry keys
+* 10854 'uforge template list' shows created time in local time while modified time in UTC
+* 13077 Creating an Oracle-based target format using the CLI raises an error
+* 13080 Can't connect to a CentOS 6.7 AWS instance with SSH from a "whitebox" migration
+* 12854 'uforge pimages list' fails with AttributeError
+* 9637 Creating a migration with unauthorized characters in name succeed through the API
+* 6495 Highlighted element does not handle overflow correctly
+* 12759 ImageDTO returned from API has always CentOS 7 as distributionName when image generated from software
+* 12284 Windows on Azure generated from UForge-published image for Blackbox migration does not start correctly
+* 12909 Mandatory fields are not highlighted in account summary of user
+* 12116 Command to launch distribution population is wrong in administration part
+* 11942 Sourced network interfaces are not detected by the scan agent
+* 6316 Windows scan fails if second disk is full
+* 12856 uforge-sync.bin overwrites PID file and makes a service behave strangely
+* 12605 Files & Folders scan tab displays wrong information
+* 10096 There are inconsistencies in the French translation 
+* 12806 Downloading an OpenShift image directly retrieves the archive without explanation
+* 12588 Cannot delete multiple users in Workspace Members page
+* 12734 Publishing to Azure ARM, K5 and VCenter terminate with error when it takes more than 8 hours
+* 10068 Error generating Windows Server 2012r2 Standard Full English for Amazon AWS (VirtIO drivers issue)
+* 9404 Error while generating an Azure image from a Windows Server 2012-R2 appliance
+* 9247 Unable to generate Windows Server 2012R2
 
 3.8.fp10
 --------

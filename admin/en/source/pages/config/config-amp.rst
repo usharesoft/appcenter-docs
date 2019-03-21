@@ -11,10 +11,10 @@ Once your UForge platform deployment is complete you can configure `Cloudsoft AM
 	* a configured user in AMP server that will be used by UForge to connect
 
 
-Configure AMP server with required option
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Configuring AMP Server with Required Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	On the AMP server instance, run as root:
+	On the AMP server instance, run the following command as root:
 
 		.. code-block:: shell
 
@@ -24,8 +24,8 @@ Configure AMP server with required option
         .. note:: On a Brooklyn server, replace ``amp`` by ``brooklyn`` in the two commands.
 
 
-Configure AMP access in UForge
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Configuring AMP Access in UForge
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 	1. On each UForge webservice node and the UI node, in ``/etc/UShareSoft/uforge/uforge.conf`` uncomment and complete the following lines:
 
@@ -48,8 +48,8 @@ Configure AMP access in UForge
 			$ /opt/UShareSoft/uforge-client/bin/uforge_ui_update.sh
 
 
-Install UForge Brooklyn Plugin into AMP catalog
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Installing UForge Brooklyn Plugin into AMP Catalog
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     1. Run the following command on the UForge UI node:
 
@@ -57,7 +57,7 @@ Install UForge Brooklyn Plugin into AMP catalog
 
 			$ /opt/UShareSoft/uforge/tools/update_scripts/deploy_brooklyn_plugin/deploy_brooklyn_plugin.sh
 
-    2. If the script output contains ``please restart the Brooklyn/AMP server``, then on the AMP server instance, run as root:
+    2. If the script output contains ``please restart the Brooklyn/AMP server``, then on the AMP server instance, run the following command as root:
 
 		.. code-block:: shell
 
@@ -66,8 +66,8 @@ Install UForge Brooklyn Plugin into AMP catalog
         .. note:: On a Brooklyn server, replace ``amp`` by ``brooklyn`` in the command.
 
 
-Configure UForge users access rights
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Configuring UForge Users Access Rights
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 	At this point the deployment feature should be available for the root user. In order to allow other users to use this feature, give them the entitlement ``deployments_access``. For more information on entitlements refer to :ref:`create-roles`.
 

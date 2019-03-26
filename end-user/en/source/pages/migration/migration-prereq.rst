@@ -26,11 +26,6 @@ In order to migrate a system, it must meet the following conditions:
 .. warning:: Currently, UForge is not able to migrate the Yum repository GPG keys except the ones located in the ``/etc/pki/rpm-gpg/`` directory. This means that the user will have to accept the repository GPG key when the user installs or updates a package. The user will have to do this only once per repository.
 
 
-Migrating CentOS 6 to AWS
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-If you plan to migrate a CentOS 6 instance onto AWS with SELinux enabled, you must setup the SELinux context of the public key on the migrated instance. For more detailed information, refer to `CentOS 6 Release Note <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS6.0>`_.
-
 Migrating Windows to K5
 ~~~~~~~~~~~~~~~~~~~~~~~
 

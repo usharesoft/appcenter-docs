@@ -25,7 +25,7 @@ The html files are in the build directory for each sub-project, for example, the
 
     $ open uforge-appcenter/build/html/index.html
 
-You can also build each guide individually, note though the end user guide and admin guide depend on the API guide.
+You can also build each guide individually.
 
 ### Building in a separate virtualenv
 
@@ -35,13 +35,11 @@ Launch the [venv.sh](blob/master/venv.sh) script to prepare the virtualenv or to
     
 Compile the docs with the `make-doc` function:
 
-    $ make-doc apis
     $ make-doc end-user
     $ make-doc admin
 
 Launch a local web server to view the compiled doc with the `serve-doc` function:
 
-    $ serve-doc apis
     $ serve-doc end-user
     $ serve-doc admin
 

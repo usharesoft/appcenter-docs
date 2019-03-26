@@ -7,6 +7,8 @@ UForge Repository on Shared Storage
 
 ``NFS`` (Network File System) is used to share the information between the various UForge nodes.  To setup the NAS or SAN for the UForge Repository you must create two shared directories, one for the operating system data and the other for all the user data (``My Software`` and images generated).
 
+.. note:: This option is mandatory if you are installing UForge as a multi-node environment.
+
 To setup the shared storage:
 
 	#. Log in to the machine where the ``NFS`` server is running

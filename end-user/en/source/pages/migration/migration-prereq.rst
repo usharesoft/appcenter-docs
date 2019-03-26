@@ -23,7 +23,7 @@ In order to migrate a system, it must meet the following conditions:
 	* For Windows, GPT is not supported.  Scanned Windows machine has to have MBR.
 
 
-.. warning:: Currently, UForge is not able to migrate the Yum repository GPG keys. This means that the user will have to accept the repository GPG key when the user installs or updates a package. The user will have to do this only once per repository.
+.. warning:: Currently, UForge is not able to migrate the Yum repository GPG keys except the ones located in the ``/etc/pki/rpm-gpg/`` directory. This means that the user will have to accept the repository GPG key when the user installs or updates a package. The user will have to do this only once per repository.
 
 
 Migrating Windows to K5

@@ -89,7 +89,7 @@ To generate a machine image from a software component:
 	#. The possible image formats which can be generated are displayed. Select the format you want to use.
 	#. Enter the Docker entrypoint in exec form. For example ``["/usr/sbin/httpd", "-DFOREGROUND"]``.
 	#. Click the ``generate`` button to launch a generation in UForge for this software component. 
-	#. Once the generation is complete, the Docker image will be listed on the ``Dashboard`` under ``Generations``. You can now publish or download your image.
+	#. Once the generation is complete, the Docker image will be listed on the ``Dashboard`` under ``Generations``. You can now view the packages, publish or download your image.
 
 
 .. _appliance-openshift-image:

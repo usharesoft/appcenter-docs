@@ -11,6 +11,7 @@ Release Date: 2019-04-29
 Enhancements
 ~~~~~~~~~~~~
 * Ability to view the list of packages for images generated from a software component.
+* Ability to generate a Docker image from a Linux appliance without the kernel.
 
 3.8.fp11
 --------

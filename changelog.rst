@@ -3,6 +3,15 @@
 Changelog
 =========
 
+3.8.fp12
+--------
+
+Release Date: 2019-04-29
+
+Enhancements
+~~~~~~~~~~~~
+* Ability to view the list of packages for images generated from a software component.
+
 3.8.fp11
 --------
 

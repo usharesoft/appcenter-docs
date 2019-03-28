@@ -20,7 +20,7 @@ To configure AMP to be compatible with UForge:
 			$ echo "brooklyn.jclouds.authorizePublicKey.extraSshPublicKeyData=true" >> /etc/amp/system.properties
 			$ systemctl restart amp
 
-	2. Download the UForge Brooklyn plugin from the `UShareSoft maven repository <https://maven.usharesoft.com/nexus/content/repositories/official/com/usharesoft/brooklyn/uforge-brooklyn-plugin/3.8.10/uforge-brooklyn-plugin-3.8.10.jar>`_.
+	2. Download the UForge Brooklyn plugin from the `UShareSoft maven repository <https://maven.usharesoft.com/repository/official/com/usharesoft/brooklyn/uforge-brooklyn-plugin/3.8.10/uforge-brooklyn-plugin-3.8.10.jar>`_.
 
 	3. Install the UForge Brooklyn plugin into AMP:
 

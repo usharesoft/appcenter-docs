@@ -20,7 +20,7 @@ UForge logs retrieval can be configured as follows:
 			output.logstash:
 			  hosts: ["#LOGSTASH_HOST_MARKER:#LOGSTASH_PORT_MARKER"]
 
-		By default, the Logstash port is 5504 (which may be different in your Logstash installation).       
+		By default, the Logstash port is 5044 (which may be different in your Logstash installation).       
 
 	#. Launch the following script on every node:: 
 

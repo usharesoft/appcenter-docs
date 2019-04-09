@@ -8,6 +8,12 @@ Changelog
 
 Release Date: 2019-04-29
 
+New Features
+~~~~~~~~~~~~
+* Lightweight container images. Docker images built by UForge AppCenter for Software Bundles used to have unnecessary packages such as kernel. They now include a reduced set of packages, included in a base image, that allow users to build images on top of it. Only CentOS 7 is supported for now.
+
+       .. warning:: `Container` is now an OS Profile provided by UForge for all Linux distributions. Existing OS Profiles with this name must be renamed before the update.
+
 Enhancements
 ~~~~~~~~~~~~
 * Ability to view the list of packages for images generated from a software component.

@@ -43,6 +43,8 @@ To change the email address:
 
 		$ /opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh
 
+	4.  Update the ``MAILFROM`` and/or ``MAILTO`` variables in the crontab.
+
 
 Customizing the Email Templates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

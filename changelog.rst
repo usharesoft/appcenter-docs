@@ -3,6 +3,16 @@
 Changelog
 =========
 
+3.8.fp12
+--------
+
+Release Date: 2019-04-29
+
+Enhancements
+~~~~~~~~~~~~
+* Ability to view the list of packages for images generated from a software component.
+* Ability to generate a Docker image from a Linux appliance without the kernel.
+
 3.8.fp11
 --------
 
@@ -17,7 +27,34 @@ New Features
 Enhancements
 ~~~~~~~~~~~~
 * Blueprint deployment has been improved. The user can now generate and publish all images of the blueprint appliances by clicking on the new ``prepare`` button.
+* Blueprint Composer now raises a warning if one of the appliance component configuration requires user interaction at first boot
+* UForge provides a PowerShell command to download uforge-scan.exe from a Windows Server
 
+Bug Fixes
+~~~~~~~~~
+* 13028 Imported appliances from workspace break the blueprint appliance list
+* 10553 Windows generation for some formats fails due to some registry keys
+* 10854 'uforge template list' shows created time in local time while modified time in UTC
+* 13077 Creating an Oracle-based target format using the CLI raises an error
+* 13080 Can't connect to a CentOS 6.7 AWS instance with SSH from a "whitebox" migration
+* 12854 'uforge pimages list' fails with AttributeError
+* 9637 Creating a migration with unauthorized characters in name succeed through the API
+* 6495 Highlighted element does not handle overflow correctly
+* 12759 ImageDTO returned from API has always CentOS 7 as distributionName when image generated from software
+* 12284 Windows on Azure generated from UForge-published image for Blackbox migration does not start correctly
+* 12909 Mandatory fields are not highlighted in account summary of user
+* 12116 Command to launch distribution population is wrong in administration part
+* 11942 Sourced network interfaces are not detected by the scan agent
+* 6316 Windows scan fails if second disk is full
+* 12856 uforge-sync.bin overwrites PID file and makes a service behave strangely
+* 12605 Files & Folders scan tab displays wrong information
+* 10096 There are inconsistencies in the French translation 
+* 12806 Downloading an OpenShift image directly retrieves the archive without explanation
+* 12588 Cannot delete multiple users in Workspace Members page
+* 12734 Publishing to Azure ARM, K5 and VCenter terminate with error when it takes more than 8 hours
+* 10068 Error generating Windows Server 2012r2 Standard Full English for Amazon AWS (VirtIO drivers issue)
+* 9404 Error while generating an Azure image from a Windows Server 2012-R2 appliance
+* 9247 Unable to generate Windows Server 2012R2
 
 3.8.fp10
 --------
@@ -861,22 +898,22 @@ Migrating to UForge 3.7-2 will have the following compatibility issues:
 
 The following API interface and calls have been modified:
 
-* The object ``DistribProfile`` is now an abstract object and is implemented by either :ref:`linuxProfile-object` or :ref:`windowsProfile-object` (which are new object types).
-* The deprecated object ``DistribProfileTemplate`` has now been deleted.  The object :ref:`distribProfile-object` is now used.  The attribute ``standardProfileUri`` is now deprecated and been set to ``null``.
+* The object ``DistribProfile`` is now an abstract object and is implemented by either `linuxProfile-object <apidoc_>`_ or `windowsProfile-object <apidoc_>`_ (which are new object types).
+* The deprecated object ``DistribProfileTemplate`` has now been deleted.  The object `distribProfile-object <apidoc_>`_ is now used.  The attribute ``standardProfileUri`` is now deprecated and been set to ``null``.
 
 Due to the above object changes, the following API calls have been modified:
 
-	* :ref:`orgOSWindows-add`
-	* :ref:`orgOSWindows-delete`
-	* :ref:`osTemplate-getAll`
-	* :ref:`osTemplate-get`
-	* :ref:`orgOSWindows-getAll`
+	* `orgOSWindows-add <apidoc_>`_
+	* `orgOSWindows-delete <apidoc_>`_
+	* `osTemplate-getAll <apidoc_>`_
+	* `osTemplate-get <apidoc_>`_
+	* `orgOSWindows-getAll <apidoc_>`_
 
 The following API calls have been added to enhance scanned Windows-based workloads:
 
-	* :ref:`workspaceTemplateOSApplications-get`
-	* :ref:`workspaceTemplateOSServices-get`
-	* :ref:`workspaceTemplateOSPartitionTable-get`
+	* `workspaceTemplateOSApplications-get <apidoc_>`_
+	* `workspaceTemplateOSServices-get <apidoc_>`_
+	* `workspaceTemplateOSPartitionTable-get <apidoc_>`_
 
 
 Bug Fixes
@@ -1107,3 +1144,5 @@ Bug Fixes
 * 5551 Spelling mistake in UI when publishing to Flexiant
 * 5549 The error of Keystone version is displayed in Keystone Server URL
 * 5403 Scan fails when trying to rebuild a non repo package
+
+.. _apidoc: http://docs.usharesoft.com/projects/appcenter-api-reference/en/latest/

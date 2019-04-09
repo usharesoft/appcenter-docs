@@ -20,7 +20,10 @@ Communication with UForge is done via HTTP(S). For security reasons it is recomm
 
 API methods that require a particular HTTP method will return an error if you do not make your request with the correct one. All HTTP methods return codified response codes.
 
-For a complete list of all the REST interface, refer to the :ref:`REST APIs Reference documentation <apis:apis-index>`.
+For a complete list of all the REST interface, refer to the `REST APIs Reference documentation <apidoc_>`_.
+
+.. _apidoc: http://docs.usharesoft.com/projects/appcenter-api-reference/en/latest/
+
 
 Response & Error Codes
 ----------------------
@@ -182,7 +185,7 @@ Example::
 
 References: 
 
-	* API reference: :ref:`user_get <apis:user-get>`
+	* API reference: `user_get <apidoc_>`_
 
 
 .. _apis-rest-add-cloud-account:
@@ -224,8 +227,8 @@ The ``representation.xml`` content (the request body):
 
 References: 
 
-	* API reference: :ref:`cloudAccount_create <apis:cloudAccount-create>`
-	* :ref:`CredAccount object <apis:credAccount-object>`
+	* API reference: `cloudAccount_create <apidoc_>`_
+	* `CredAccount object <apidoc_>`_
 
 .. _apis-rest-get-appliances:
 
@@ -244,7 +247,7 @@ Example::
 
 References: 
 
-	* API resource: :ref:`appliance_getAll <apis:appliance-getAll>`
+	* API resource: `appliance_getAll <apidoc_>`_
 
 .. _apis-rest-create-appliance:
 
@@ -280,8 +283,8 @@ The ``representation.xml`` content (the request body):
 
 References: 
 
-	* API resource: :ref:`appliance_create <apis:appliance-create>`
-	* :ref:`Appliance object <apis:appliance-object>`
+	* API resource: `appliance_create <apidoc_>`_
+	* `Appliance object <apidoc_>`_
 
 .. _apis-rest-get-os-profiles:
 
@@ -301,8 +304,8 @@ Example::
 
 References: 
 
-	* API resource :ref:`osTemplate_getAll <apis:osTemplate-getAll>`
-	* :ref:`OS Profile object <apis:distribProfile-object>`
+	* API resource `osTemplate_getAll <apidoc_>`_
+	* `OS Profile object <apidoc_>`_
 
 .. _apis-rest-add-os-profile:
 
@@ -348,10 +351,10 @@ The ``distribprofile.xml`` content (the request body):
 
 References: 
 
-	* API resource :ref:`applianceOSProfile_create <apis:applianceOSProfile-create>`
-	* :ref:`Appliance object <apis:appliance-object>`
-	* :ref:`Linux OS Profile object <apis:linuxProfile-object>`
-	* :ref:`Windows OS Profile object <apis:windowsProfile-object>`
+	* API resource `applianceOSProfile_create <apidoc_>`_
+	* `Appliance object <apidoc_>`_
+	* `Linux OS Profile object <apidoc_>`_
+	* `Windows OS Profile object <apidoc_>`_
 
 .. _apis-rest-add-os-pkg-search:
 
@@ -374,8 +377,8 @@ Example (retrieving all packages with the name ``nginx``)::
 
 References: 
 
-	* API resource :ref:`osPkg_getAll <apis:osPkg-getAll>`
-	* :ref:`Package object <apis:package-object>`
+	* API resource `osPkg_getAll <apidoc_>`_
+	* `Package object <apidoc_>`_
 
 
 .. _apis-rest-add-os-pkg:
@@ -419,8 +422,8 @@ Removing the same package, the ``pkg.xml`` content would be (the request body):
 
 References: 
 
-	* API resource :ref:`applianceOSProfilePkg_updateAll <apis:applianceOSProfilePkg-updateAll>`
-	* :ref:`Package object <apis:package-object>`
+	* API resource `applianceOSProfilePkg_updateAll <apidoc_>`_
+	* `Package object <apidoc_>`_
 
 Adding Custom Software to an Appliance Template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -530,13 +533,13 @@ The ``appliancesoftware.xml`` content (the request body):
 
 References: 
 
-	* Create software component resource :ref:`mySoftware_create <apis:mySoftware-create>`
-	* Create software artifact resource :ref:`mySoftwareArtifact_add <apis:mySoftwareArtifact-add>`
-	* Upload a binary file :ref:`mySoftwareArtifact_upload <apis:mySoftwareArtifact-upload>`
-	* Add software component to an appliance template :ref:`appliance_update <apis:appliance-update>`
-	* :ref:`Software Component object <apis:mysoftware-object>`
-	* :ref:`Software Artifact object <apis:softwareartifact-object>`
-	* :ref:`Appliance object <apis:appliance-object>`
+	* Create software component resource `mySoftware_create <apidoc_>`_
+	* Create software artifact resource `mySoftwareArtifact_add <apidoc_>`_
+	* Upload a binary file `mySoftwareArtifact_upload <apidoc_>`_
+	* Add software component to an appliance template `appliance_update <apidoc_>`_
+	* `Software Component object <apidoc_>`_
+	* `Software Artifact object <apidoc_>`_
+	* `Appliance object <apidoc_>`_
 
 Generate a Machine Image
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -569,8 +572,8 @@ The ``generateimage.xml`` content (the request body):
 
 References: 
 
-	* Generate a machine image :ref:`machineImage_generate <apis:machineImage-generate>`
-	* :ref:`Machine Image object <apis:image-object>`
+	* Generate a machine image `machineImage_generate <apidoc_>`_
+	* `Machine Image object <apidoc_>`_
 
 
 Publish/Register a Machine Image to a Cloud Environment
@@ -617,6 +620,6 @@ The ``publishimage.xml`` content (the request body):
 
 References: 
 
-	* Publish a machine image :ref:`machineImage_publish <apis:applianceImage-publish>`
-	* :ref:`Machine Image object <apis:image-object>`
-	* :ref:`Publish Machine Image object <apis:publishimage-object>`
+	* Publish a machine image `machineImage_publish <apidoc_>`_
+	* `Machine Image object <apidoc_>`_
+	* `Publish Machine Image object <apidoc_>`_

@@ -91,6 +91,8 @@ Deployment Procedure
 
 	.. note:: It may take a long time for a Windows virtual machine deployed to Azure to be provisioned.
 
+	.. note:: Currently, deployment of a Windows virtual machine from a published ``Disk`` is not supported. For more information on publishing of Windows machine images, see :ref:`publish-win-to-azure`. 
+
 	10. To stop a deployed instance, click on the delete (garbage) icon. This will remove it from your cloud.
 
 	.. warning:: Terminating an OpenStack deployment may fail due to `a known issue in AMP <https://issues.apache.org/jira/browse/JCLOUDS-1318>`_. Click again on the delete (garbage) icon to work around the issue.

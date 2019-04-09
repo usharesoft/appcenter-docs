@@ -11,7 +11,7 @@ The following sections cover some elements to monitor and troubleshoot your UFor
 
    webservice-logs
    scheduler-jobs
-   elk
+   elastic-stack
    supervisor-mode
    support
 

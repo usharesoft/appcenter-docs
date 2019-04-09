@@ -9,6 +9,8 @@ Once an appliance template has been created, you can generate a machine image th
 
 .. note:: If you want to generate a K5 image or an OpenStack image, the appliance partition should contain only 1 disk.
 
+.. note:: If generating CentOS 6.5/6.6 image, refer to :ref:`the following note<nss-softokn-missing>` if your OS profile includes either of the following packages: *nss-softokn* or *nss-softokn-freebl*. 
+
 To generate a machine image:
 	1. Go to the ``Apps`` tab.
 	2. Select the appliance from the ``Appliance Library``. 
@@ -87,7 +89,7 @@ To generate a machine image from a software component:
 	#. The possible image formats which can be generated are displayed. Select the format you want to use.
 	#. Enter the Docker entrypoint in exec form. For example ``["/usr/sbin/httpd", "-DFOREGROUND"]``.
 	#. Click the ``generate`` button to launch a generation in UForge for this software component. 
-	#. Once the generation is complete, the Docker image will be listed on the ``Dashboard`` under ``Generations``. You can now publish or download your image.
+	#. Once the generation is complete, the Docker image will be listed on the ``Dashboard`` under ``Generations``. You can now view the packages, publish or download your image.
 
 
 .. _appliance-openshift-image:

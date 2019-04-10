@@ -33,6 +33,8 @@ If you want to publish images to Microsoft Azure, you must first set up the corr
 	4. Retrieve the tenant ID which you will need to enter in UForge credentials (as described in `official Microsoft Azure documentation related to tenant ID retrieval <https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-tenant-id>`_). 
 	5. Assign the ``contributor`` role to the application (as described in `official Microsoft Azure documentation related to application role assignation <https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal#assign-application-to-role>`_).
 
+	.. note:: The above steps are also required when setting up a Microsoft Azure account for Azure Stack.
+
 Then you will need to fill in your credential information in UForge. To do so:
 
 	1. Go to the ``Credentials`` tab in the left-hand sidebar.
@@ -40,6 +42,8 @@ Then you will need to fill in your credential information in UForge. To do so:
 	3. Select ``Microsoft Azure`` from the ``Add account`` drop-down menu at the top right.
 
 	.. image:: /images/cloud-account-azure.png
+
+.. note:: When creating a cloud account for Azure Stack, it is also necessary to turn on ``Use private endpoint``, and in ``Endpoint URL`` input the Azure Stack's Resource Manager Endpoint. For example: ``https://management.local.azurestack.external``.
 
 .. _windows-aws-s3:
 

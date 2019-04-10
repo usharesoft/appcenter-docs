@@ -16,25 +16,27 @@ If you want to create ISO images with UForge then you must copy the ISO skeleton
 
 	.. code-block:: shell
 
-		cd /space/DISTROS ; wget https://repository.usharesoft.com/downloads/uforge-centos-debian-ubuntu-iso-installers-latest.iso
+		$ cd /space/DISTROS ; wget https://repository.usharesoft.com/downloads/uforge-centos-debian-ubuntu-iso-installers-latest.iso
 
 	or
 
 	.. code-block:: shell
 
-		cd /space/DISTROS ; wget https://repository.usharesoft.com/downloads/uforge-opensuse-scientific-iso-installers-latest.iso
+		$ cd /space/DISTROS ; wget https://repository.usharesoft.com/downloads/uforge-opensuse-scientific-iso-installers-latest.iso
 
-#. Mount the distribution by running::
+#. Mount the distribution by running:
 
-	# mount -o loop /space/DISTROS/uforge-centos-debian-ubuntu-iso-installers-latest.iso /mnt
+	.. code-block:: shell
+
+		$ mount -o loop /space/DISTROS/uforge-centos-debian-ubuntu-iso-installers-latest.iso /mnt
 
 	.. note:: The example above will mount Centos, Debian and Ubuntu, but the same could be done for other open source distributions by modifying the path.
 
 
 #. Copy the content of the ISO::
 
-	# rsync -a --progress /mnt/USS /space/DISTROS/
+	$ rsync -a --progress /mnt/USS /space/DISTROS/
 
 #. Umount the volume::
 
-	# umount /mnt
+	$ umount /mnt

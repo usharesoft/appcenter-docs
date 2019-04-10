@@ -8,6 +8,11 @@ Changelog
 
 Release Date: 2019-04-29
 
+New Features
+~~~~~~~~~~~~
+
+* Users can publish Windows machine images to Azure Stack.
+
 Enhancements
 ~~~~~~~~~~~~
 * Ability to view the list of packages for images generated from a software component.

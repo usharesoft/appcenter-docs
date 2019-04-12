@@ -9,7 +9,7 @@ Open source operating system versions are taken from the official repository mir
 
 To enable UForge to generate images based on the operating system it needs all the meta-data of the packages comprising the operating system. This meta-data includes the location in the storage of the package as well as dependency information that is used during generation. Furthermore, certain specific UForge packages must be populated for this operating system.
 
-.. note:: Custom repositories are supported in UForge. They are treated like other OS packages. ``Directory listings`` configuration for the repository has to be enabled on the server.
+.. note:: Custom repositories are supported in UForge, only if ``Directory listings`` configuration is enabled. They are treated like other OS packages.
 
 .. warning:: When using UForge, you have to comply with the license agreement of OSes and software which UForge handles, in particular:
 	

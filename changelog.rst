@@ -3,6 +3,16 @@
 Changelog
 =========
 
+3.8.fp13
+--------
+
+Release Date: 2019-06-10
+
+Enhancements
+~~~~~~~~~~~~
+* root ssh access is allowed for UForge Azure images
+
+
 3.8.fp12
 --------
 

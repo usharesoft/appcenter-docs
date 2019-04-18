@@ -45,11 +45,15 @@ If you plan to migrate a Linux instance from a platform using cloud-init (such a
 	- Uninstall ``cloud-init`` (if installed) before scanning
 	- Use ``Re-platform``. Once the appliance is imported, remove ``cloud-init`` package before generating.
 
-Migrating to Microsoft Azure
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Migrating Linux to Microsoft Azure
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Currently, to publish to Microsoft Azure platform `<https://azure.microsoft.com/en-us/>`_ you must do the following before scanning:
 
 	1. Unless you are migrating from CentOS7+ or Red Hat Enterprise Linux 7+, uninstall NetworkManager (if installed).
 	2. Uninstall the Microsoft Azure agent, i.e. WALinuxAgent and waagent packages (if installed).
 
+Migrating Windows to Microsoft Azure
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You must install the Azure Virtual Machine Agent on the source machine before scanning if you plan to migrate using ``Lift & Shift`` or using ``Re-platform`` and the appliance is configured as to not run sysprep automatically on its first boot.

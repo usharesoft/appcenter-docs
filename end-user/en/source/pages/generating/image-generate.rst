@@ -78,7 +78,7 @@ Generating a Docker Image from Software Components
 
 .. note:: You cannot generate a Docker image if any of the restriction rules that have been set for the software exclude Docker publication or generation.
 
-.. note:: When generating a CentOS 7 or Red Hat Enterprise Linux 7 Docker image from software components, a reduced set of packages will be included. For example, the kernel will not be included. This will result in a lighter-weight image.
+.. note:: When generating a CentOS 7, Red Hat Enterprise Linux 7, or Debian 9 Docker image from software components, a reduced set of packages will be included. For example, the kernel will not be included. This will result in a lighter-weight image.
 
 To generate a machine image from a software component:
 	#. Go to the ``Apps`` tab.

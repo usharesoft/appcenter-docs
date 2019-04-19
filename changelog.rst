@@ -6,7 +6,26 @@ Changelog
 3.8-7
 -----
 
-Release Date: 2019-03
+Release Date: 2019-04-19
+
+Bug Fixes
+~~~~~~~~~
+* UFORGE-12108 Avoid sending password and login in same email
+* UFORGE-13081 As a user, I can't connect to a CentOS 6.7 AWS instance with SSH from a "whitebox" migration
+* UFORGE-12912 user password displayed in clear when deploying to Microsoft Azure
+* UFORGE-12857 uforge-sync.bin overwrites PID file and makes a service behave strangely
+* UFORGE-12846 Cannot delete multiple users in Workspace Members page
+* UFORGE-12733 Publishing to Azure RM, K5 and VCenter terminate with error when it takes more than 8 hours
+* UFORGE-12732 Changing partitioning from Advanced to Basic in a template imported from a Windows scan leads to generation error
+* UFORGE-12630 Password is displayed in clear text on Summary for a workspace
+* UFORGE-12628 Password is displayed in clear text on Summary for an application
+* UFORGE-12617 Root password is displayed in clear inside the generated machine image
+* UFORGE-12431 user password displayed in clear when deploying to Microsoft Azure
+* UFORGE-12408 SELinux configuration is not supported for Oracle Linux
+* UFORGE-12227 Publishing to Azure RM, K5 and VCenter terminate with error when it takes more than 8 hours
+* UFORGE-11945 Publishing to AWS stops at 39% when image size is large
+* UFORGE-11940 One volume remains after AWS publish cancelled
+* UFORGE-8871  Changing partitioning from Advanced to Basic in a template imported from a Windows scan leads to generation error
 
 Known Issues
 ~~~~~~~~~~~~

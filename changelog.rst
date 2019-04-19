@@ -11,7 +11,7 @@ Release Date: 2019-06-10
 New Features
 ~~~~~~~~~~~~
 
-* Lightweight container images support for RedHat Enterprise Linux 7. Docker images built by UForge AppCenter for Software Bundles now include a reduced set of packages for this distribution.
+* Lightweight container images. Docker images built by UForge AppCenter from Software Bundles now include a reduced set of packages for RedHat Enterprise Linux 7.
 
 3.8.fp12
 --------

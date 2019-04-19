@@ -18,6 +18,8 @@ The entire migration process using ``Re-platform`` (previously referred to as ``
 
 .. note:: When generating a machine image from an appliance template, package dependencies are calculated using the list of packages in the OS Profile. Any missing packages from the OS Profile are added prior to generating the machine image.  
 
+.. warning:: There may be cases where packages that are present on the scanned server have been removed or replaced in the newer version of the OS. Such packages will obviously not be present in UForge AppCenter's package repositories, and will therefore be added to a ``My Software`` component, instead of being added to the ``OS Profile``. Therefore, if you update the OS version when performing a migration using ``re-platform``, and if there are such packages, you should first manually remove or replace them in the template, as instructed by the distribution vendor, before generating the machine image.
+
 
 For detailed procedures on migration using ``Re-platform`` refer to the following sections:
 

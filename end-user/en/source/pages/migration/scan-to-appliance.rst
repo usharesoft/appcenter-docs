@@ -33,7 +33,7 @@ More importantly you can now change the contents of the original scanned system.
 Changing a Configuration with "No-Console" Features
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This is typically the case when migrating to Azure.  Azure does not have any console facility today during first boot of the instance.  When you migrate a workload in black box, no install type questions are asked on first boot.  This is due to:
+This is typically the case when migrating to Azure.  Azure does not have any console facility today during first boot of the instance.  When you migrate a workload using ``Lift & Shift``, no install type questions are asked on first boot.  This is due to:
 
 	* root password is copied
 	* SSH keys are copied
@@ -43,7 +43,7 @@ This is typically the case when migrating to Azure.  Azure does not have any con
 
 Access to the machine would typically be done via SSH.
 
-White box migration provides more flexibility.  As soon as you import a scan, which effectively creates an appliance template, you will have access to the Install Profile.  This allows you to reset and change many of the "installation"/first boot parameters including prompting the end user to provide the information (for example: ask the end user to set the root password).  Any prompt to the end user is normally displayed in the console.  However if the user logs into the machine for the first time via SSH, these prompts are displayed in the SSH terminal and not the console.
+ Migration using ``Re-platform`` provides more flexibility.  As soon as you import a scan, which effectively creates an appliance template, you will have access to the Install Profile.  This allows you to reset and change many of the "installation"/first boot parameters including prompting the end user to provide the information (for example: ask the end user to set the root password).  Any prompt to the end user is normally displayed in the console.  However if the user logs into the machine for the first time via SSH, these prompts are displayed in the SSH terminal and not the console.
 
 .. warning:: If you decide to prompt the user for the root password, then an SSH key mechanism must already be determined (private key owned by the user and public key set in the Install Profile).  Otherwise the user will be locked out of the system with no way to SSH into the machine as no password has been set yet.
 

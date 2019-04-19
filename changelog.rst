@@ -3,6 +3,16 @@
 Changelog
 =========
 
+3.8.fp13
+--------
+
+Release Date: 2019-06-10
+
+New Features
+~~~~~~~~~~~~
+
+* Lightweight container images. Docker images built by UForge AppCenter from Software Bundles now include a reduced set of packages for RedHat Enterprise Linux 7.
+
 3.8.fp12
 --------
 
@@ -56,7 +66,7 @@ Bug Fixes
 * 6316 Windows scan fails if second disk is full
 * 12856 uforge-sync.bin overwrites PID file and makes a service behave strangely
 * 12605 Files & Folders scan tab displays wrong information
-* 10096 There are inconsistencies in the French translation 
+* 10096 There are inconsistencies in the French translation
 * 12806 Downloading an OpenShift image directly retrieves the archive without explanation
 * 12588 Cannot delete multiple users in Workspace Members page
 * 12734 Publishing to Azure ARM, K5 and VCenter terminate with error when it takes more than 8 hours
@@ -162,7 +172,7 @@ API changes
 
 Bug Fixes
 ~~~~~~~~~
-* 11941 Get requests to vault fail in proxy environment 
+* 11941 Get requests to vault fail in proxy environment
 * 11863 Cannot login to migrated CentOS6 image on AWS with SSH key
 * 11799 Outscale images built by UForge do not boot on Outscale
 * 11637 Empty directories are not synchronized to the target machine with uforge-sync.bin

@@ -1,4 +1,4 @@
-.. Copyright 2017 FUJITSU LIMITED
+.. Copyright 2019 FUJITSU LIMITED
 
 .. _endUserDoc-index:
 
@@ -50,7 +50,7 @@ MySQL and the MySQL logo are the servicemarks, trademarks, or registered tradema
 
 Other company names and product names are trademarks or registered trademarks of their respective owners.
 
-Copyright FUJITSU LIMITED 2017
+Copyright FUJITSU LIMITED 2019
 ==============================
 
 All rights reserved, including those of translation into other languages. No part of this manual may be reproduced

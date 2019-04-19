@@ -1,4 +1,4 @@
-.. Copyright 2017 FUJITSU LIMITED
+.. Copyright 2019 FUJITSU LIMITED
 
 .. _uforge-appcenter-getting-started:
 
@@ -19,7 +19,7 @@ The UForge Portal has the following pages, accessible from the left-hand sidebar
 	* ``Dashboard``: It shows statistics on your UForge usage.
 	* ``Apps``: This is where your appliances are created and listed. You also go to this page to add custom software, update packages in appliances, and create images, among other things.
 	* ``Deployments``: This area lists published images that have at least one instance running on Amazon or OpenStack. This menu is only visible if you have the correct entitlements. Contact your UForge administrator for more information.
-	* ``Collaboration``: This is a private area where you can share appliances with other users who are part of your workspace. These users must be invited and join your workspace. They can be part of your organization or part or another organization.
+	* ``Collaboration``: This is a private area where you can share appliances with other users who are part of your workspace. These users must be invited and join your workspace. They can be part of your organization or part of another organization.
 	* ``Migration``: This is where you can launch a scan of a live system, view the results, or compare scans.
 	* ``Credentials``: This is where you manage your cloud account information, SSH keys and API keys.
 	* ``Profile``: This is your UForge account information.
@@ -41,6 +41,7 @@ The following browser versions are officially supported when using the user inte
 	* Safari v9 or later
 	* Internet Explorer 11 or later
 	* Opera v15 or later
+	* Edge v42 or later
 
 .. note:: Javascript is required when using the UI. The following error will appear if you have disabled Javascript (check your browser configuration, plugins or security settings). 
 

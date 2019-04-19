@@ -1,7 +1,87 @@
-.. Copyright 2018 FUJITSU LIMITED
+.. Copyright 2019 FUJITSU LIMITED
 
 Changelog
 =========
+
+3.8-7
+-----
+
+Release Date: 2019-03
+
+Known Issues
+~~~~~~~~~~~~
+* When listing the details of an object, the date and time of creation is listed in local time. To modify this to UTC, refer to ``Setting the Creation Date and Time`` in the Admin Guide.
+
+3.8-6
+-----
+
+Release Date: 2019-01-07
+
+Enhancements
+~~~~~~~~~~~~
+
+* Improve machine_info script.
+
+
+Bug Fixes
+~~~~~~~~~
+* UFORGE-12108 Avoid sending password and login in same email
+* UFORGE-12101 Google certificate is in clear in log when uploaded
+* UFORGE-12027 Deploy of a scan SLES 11 on Amazon AWS does not work: impossible to connect
+* UFORGE-11944 Create a DHCP NIC on blackbox when no NIC is detected
+* UFORGE-11934 User email address should not be exposed to the other user
+* UFORGE-11921 Use diskshadow.exe instead of vssadmin.exe to flush Windows registry
+* UFORGE-11894 Cannot login to migrated CentOS6 image on AWS with SSH key
+* UFORGE-11864 Linux distro without wget package, migrated to AWS, can not be logged via ssh keypair set when creating instance
+* UFORGE-11824 Publication to Fujitsu K5 timeout with slow network
+* UFORGE-11789 "500 call failed error" shown when uploading a file to Software Library
+* UFORGE-11783 Empty directories are not synchronized to the target machine with uforge-sync.bin
+* UFORGE-11620 Credentials secret keys are visible in clear for Outscale, Amazon and CloudStack
+* UFORGE-11604 Disk usage increases when uploading twice the same file for unlimited quota user
+* UFORGE-11602 Disk usage on Dashboard is incorrect after deleting a scan
+* UFORGE-11352 Unpinning a pinned package fails intermittently
+* UFORGE-11348 Kernel parameters of UForge server can be changed illegally when generating a image
+* UFORGE-11048 CentOS 5 scan fails with duplicate GPG Pubkey package installed without explicit message
+* UFORGE-10989 ``/etc/UShareSoft/uforge-install-config-CheckRootLogin.sh`` not found after CentOS blackbox migration to AWS
+* UFORGE-10954 In Uforge CLI, the packages number of "template info --all" is always 0
+* UFORGE-10929 ``/etc/sysconfig/system-config-firewall`` file created after migration though it is not supported in RHEL 5.2
+* UFORGE-10850 CLI timeout following subscription profile os add with many users
+* UFORGE-10823 Cannot generate Ubuntu 10.04 with a newer debootstrap
+* UFORGE-10800 Windows instance on Azure generated from UForge-published image for whitebox migration does not start correctly
+* UFORGE-10709 Unable to generate a valid ISO image when blackbox migrating a CentOS server
+* UFORGE-10707 When user quota limit of appliance is set, "Quota used" increases 2 when importing from scan
+* UFORGE-10659 The file name of a cloned software is incorrect
+* UFORGE-10627 Version displayed in the portal is incorrect
+* UFORGE-10253 AWS's Instance proxy instance exists even if you cancel a AWS publish
+
+
+3.8-5
+-----
+
+Release Date: 2018-07-20
+
+Enhancements
+~~~~~~~~~~~~
+* UForge Amazon AWS images are now compatible with the system logs in AWS EC2 portal
+* Ability to publish Windows 2016 appliances on Fujitsu K5 cloud
+
+Bug Fixes
+~~~~~~~~~
+* UFORGE-10630 OS type attribute of CentOS is not correctly set on OVA/OVF base image generation
+* UFORGE-10590 Update Outscale connector to test ssh connection instead of reading log outputs
+* UFORGE-10432 Update Outscale regions in uforge portal and OMIs according to new Oustcale configuration
+* UFORGE-10655 C:fakepath is displayed when selecting an appliance archive to import
+* UFORGE-10705 Import a bundle first as first action will block subsequent template imports
+* UFORGE-10661 Instance may not start when running CentOS 6.5 to Hyper-V
+* UFORGE-10585 Publishing to Google Compute fails with "This Google certificate isnt correctly uploaded"
+* UFORGE-10511 login prompt is not shown in SLES 12 black box migration from ISO
+* UFORGE-10400 Failed to import OVA image into vCenter
+* UFORGE-10424 deploying multi-node UForge from 3.7.fp3 template instanciates multiple rabbitmq-servers
+* UFORGE-10332 Generation stucked at 55% and nothing work anymore after it
+* UFORGE-10550 OAR jobs logs show WELD "Exception in thread"
+* UFORGE-10441 Floating point exception occurs on uforge-scan.bin
+* UFORGE-10147 uforge-scan.bin stops by Segmentation fault on SLES 12
+
 
 3.8-4
 -----

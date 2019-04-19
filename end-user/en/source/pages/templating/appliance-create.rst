@@ -1,4 +1,4 @@
-.. Copyright 2017 FUJITSU LIMITED
+.. Copyright 2019 FUJITSU LIMITED
 
 .. _appliance-create:
 
@@ -54,13 +54,13 @@ To create a Windows Appliance:
 
 	7. Set the Install profile and click ``Save``. For more information, refer to :ref:`windows-install-profile`.
 
-		.. note:: Unlike Linux, the following cannot be set for Windows appliances: Keyboard, Root user, User & Groups, Kernel Parameters and Firewall.  
+		.. note:: Unlike Linux, the following cannot be set for Windows appliances: Root User, Users and Groups, Security, Kernel, Keyboards, Licences.  
 
 		.. image :: /images/windows-installfp4.png
 
 	8. Optionally you can add partitions.
 		a. Click on ``Partitioning`` and select ``Advanced Partitioning``.
-		b. Click on the green + sign at the top.
+		b. Click on the + sign at the top right.
 		c. You can modify the name and partition type
 		d. Select the filesystem to ``ntfs`` and mount point to ``D:`` (for example).
 		e. Enter the size. The install disk should be 12 Gb for core versions and not less than 32Gb for the full version.

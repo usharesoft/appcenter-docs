@@ -1,4 +1,4 @@
-.. Copyright 2017 FUJITSU LIMITED
+.. Copyright 2019 FUJITSU LIMITED
 
 .. _further-config-overview:
 
@@ -30,3 +30,4 @@ This section assumes that you have completed the installation of your UForge pla
    proprietary-pkg
    populate-iso
    config-amp
+   set-utc

@@ -1,4 +1,4 @@
-.. Copyright 2017 FUJITSU LIMITED
+.. Copyright 2019 FUJITSU LIMITED
 
 .. _apis-index:
 
@@ -80,7 +80,7 @@ UNIX is a registered trademark of the Open Group in the United States and in oth
 
 Other company names and product names are trademarks or registered trademarks of their respective owners.
 
-Copyright FUJITSU LIMITED 2017
+Copyright FUJITSU LIMITED 2019
 ==============================
 
 All rights reserved, including those of translation into other languages. No part of this manual may be reproduced

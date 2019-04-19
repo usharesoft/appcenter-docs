@@ -1,4 +1,4 @@
-.. Copyright 2017 FUJITSU LIMITED
+.. Copyright 2019 FUJITSU LIMITED
 
 .. _upgrade-yum:
 
@@ -35,94 +35,27 @@ The (optional) parameter <uforge install type> can take the values ``uforge-ee``
 
 To update the platform, use the "yum" command-line tool as follows:
 
-.. note:: Running ``yum update`` may also update OS packages from CentOS official repository. You should accept all the updates because UForge is qualified based on the latest packages.
+	1. Run ``yum update uforge-common``.
+	2. Run ``yum update uforge uforge-cli uforge-client uforge-gen``.
 
-.. code-block:: shell
+	The RPM packages will be replaced and the services will be reconfigured to correctly update the platform.  If you have a multi-node UForge platform, then this command must be run on all the nodes. The updates should be run in the following order:
 
-	$ yum update 
+		1. database node
+		2. compute node(s)
+		3. web service and Portal nodes
 
-	Loaded plugins: presto
-	UForge-ee-uforge                                               |  951 B     00:00     
-	UForge-ee-uforge/primary                                       | 1.9 kB     00:00     
-	UForge-ee-uforge                                                                                           
-	                                                                                   4/4
-	UForge-ee-uforge-client                                        |  951 B     00:00     
-	UForge-ee-uforge-client/primary                                | 1.0 kB     00:00     
-	UForge-ee-uforge-client                                                                                       
-	                                                                                   4/4
-	fedora/metalink                                                     | 2.6 kB     00:00     
-	fedora                                                              | 4.3 kB     00:00     
-	fedora/primary_db                                                   |  13 MB     00:36     
-	updates/metalink                                                    | 1.9 kB     00:00     
-	updates                                                             | 4.7 kB     00:00     
-	updates/primary_db                                                  | 6.4 MB     00:21     
-	Setting up Update Process
-	Resolving Dependencies
-	--> Running transaction check
-	---> Package MySQL-client.x86_64 0:5.5.23-1.linux2.6 set to be installed
-	---> Package MySQL-server.x86_64 0:5.5.23-1.linux2.6 set to be installed
-	---> Package MySQL-shared.x86_64 0:5.5.23-1.linux2.6 set to be installed
-	---> Package glassfish.noarch 0:3.1-2 set to be updated
-	---> Package perl-Compress-Raw-Zlib.x86_64 0:2.030-1.fc13 set to be updated
-	---> Package perl-Test-Simple.noarch 0:0.94-1.fc13 set to be updated
-	---> Package perl-parent.noarch 1:0.223-3.fc13 set to be updated
-	---> Package perl-threads.x86_64 0:1.81-1.fc13 set to be updated
-	---> Package uforge.noarch 0:3.2.5-0 set to be updated
-	---> Package uforge-client.noarch 0:3.2.5-0 set to be updated
-	--> Finished Dependency Resolution
+	3. Run the following CLI command in order to know if Squid is running:
 
-	Dependencies Resolved
-	=================================================================================================
-	 Package                        Arch           Version              Repository             Size
-	=================================================================================================
-	Installing:
-	 MySQL-client                   x86_64         5.5.23-1.linux2.6    UForge-ee-mysql        14 M
-	     replacing  MySQL-client.x86_64 5.5.17-1.linux2.6
-	 MySQL-server                   x86_64         5.5.23-1.linux2.6    UForge-ee-mysql        40 M
-	     replacing  MySQL-server.x86_64 5.5.17-1.linux2.6
-	 MySQL-shared                   x86_64         5.5.23-1.linux2.6    UForge-ee-mysql        1.7 M
-	     replacing  MySQL-shared.x86_64 5.5.17-1.linux2.6
-	Updating:
-	 glassfish                      noarch         3.1-2                UForge-ee-glassfish    85 M
-	 perl-Compress-Raw-Zlib         x86_64         2.030-1.fc13         updates                57 k
-	 perl-Test-Simple               noarch         0.94-1.fc13          updates                116 k
-	 perl-parent                    noarch         1:0.223-3.fc13       fedora                 13 k
-	 perl-threads                   x86_64         1.81-1.fc13          updates                47 k
-	 uforge                    noarch         3.2.5-0              UForge-ee-uforge  38 M
+		.. code-block:: shell
 
-	Transaction Summary
-	=================================================================================================
-	Install       3 Package(s)
-	Upgrade       7 Package(s)
+			$ systemctl status squid
 
-	Total download size: 204 M
-	Is this ok [y/N]: y
 
-	<traces removed for readability>
+		If squid is stopped, run the following command-line
 
-	....
+		.. code-block:: shell
 
-	Complete!
-
-The RPM packages will be replaced and the services will be reconfigured to correctly update the platform.  If you have a multi-node UForge platform, then this command must be run on all the nodes. The updates should be run in the following order:
-
-	1. database node
-	2. compute node(s)
-	3. web service and Portal nodes
-
-Run the following CLI command in order to know if Squid is running:
-
-	.. code-block:: shell
-
-		$ service squid status
-		
-	
-	If squid is stopped, run the following command-line
-	
-	.. code-block:: shell
-
-		$ service squid start	
-
+			$ systemctl start squid	
 
 
 

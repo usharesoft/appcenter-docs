@@ -1,4 +1,4 @@
-.. Copyright 2017 FUJITSU LIMITED
+.. Copyright 2019 FUJITSU LIMITED
 
 .. _create-golden-image:
 
@@ -113,6 +113,8 @@ To create a new Golden Image, you will need to:
 		.. warning:: This will shutdown the machine. Do not boot the machine again!
 
 		.. note:: If the ``unattend.xml`` is not properly configured, the setup initiated by sysprep may suspend or stop during processing. In this case, you need to connect to the system through a console, not by Remote Desktop Service, in order to read setup instructions. 
+		
+		.. note:: The command argument ``/unattend:c:\path-to-sysprep\Unattend.xml`` should not be specified when creating a Golden Image that will be used to generate Windows machine images to be published to Azure. This is because the unattend file created by Azure will be used instead.
 
 	10. You can now compress the golden images by running:
 

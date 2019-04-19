@@ -1,4 +1,4 @@
-.. Copyright 2017 FUJITSU LIMITED
+.. Copyright 2019 FUJITSU LIMITED
 
 .. _email-notification:
 
@@ -62,35 +62,18 @@ Error emails:
 	* ``ImageGenerationErrorMessage.tmpl`` – email sent to administrator when an image generation failure occurs
 	* ``WebServiceErrorsMessage.tmpl`` (not used today)
 
-Marketplace notification emails:
-
-		.. note:: These are only applicable if your Uforge AppCenter is connected to a Marketplace. Otherwise, disregard. 
-
-	* ``AppStoreNotificationNewComment.tmpl`` – email sent to the user watching the template where a new comment is added
-	* ``AppStoreNotificationTemplateNew.tmpl`` – email sent to the user watching the template where a new version of the current template is available
-	* ``AppStoreNotificationTemplateUpdate.tmpl`` – email sent to the user watching the template where  the template is updated by the publisher
-	* ``AppStoreTemplateReportAbuse.tmpl`` – email sent to the administrator when a user reports an abuse for a comment in a template
-	* ``AppStoreTemplateReportAbuseConfirm.tmpl`` – confirmation email sent to the user reporting an abuse
 
 The following keywords are reserved for substituting information into the emails:
 
 	* ``#USER#`` - The user name of the person carrying out the request
 	* ``#EMAIL#`` - The email of the user carrying out the request
 	* ``#PASSWD#`` - The password of the new user account created or during a “forgotten password” request
+	* ``#WORKSPACE#`` - The name of the workspace in the Collaboration Tab
+	* ``#REFERRER_NAME#`` - The name of the user who invited a guest to join a workspace
+	* ``#MESSAGE#`` - The content of the message the referrer sent to the guest
 
-Specific keywords for Marketplace (App Store) email notifications:
-	* ``#COMMENT#`` - The comment added to a template in the Marketplace
-	* ``#REPORTER#`` - The user name of the person carrying out the request (used for adding a comment or reporting an abuse)
-	* ``#REPORTEREMAIL#`` - The user name of the person carrying out the request (used for adding a comment or reporting an abuse)
-	* ``#NBREPORTEDABUSE#`` - The total number of times this comment has been flagged as abusive
-	* ``#CMDACCEPTABUSE#`` - The command to use to remove the comment from the Template in the  Marketplace
-	* ``#TEMPLATENAME#`` - The name of the template in the Marketplace
-	* ``#PUBLISHDATE#`` - The date the template was published in the Marketplace
-	* ``#TEMPLATEVERSION#`` - The version of the template published in the Marketplace
-	* ``#ORGNAME#`` - The organization name where the Marketplace resides
-	* ``#PUBLISHEREMAIL#`` - The email address of the publisher (to the Marketplace)
 
-UForge uses the directory /var/opt/UShareSoft for custom files.  If this directory exists, as part of the upgrade process and custom files will be restored.
+UForge uses the directory ``/var/opt/UShareSoft`` for custom files.  If this directory exists, as part of the upgrade process and custom files will be restored.
 
 .. warning:: When UForge is upgraded all the templates in the default directory will be overwritten.  To ensure that any custom templates are restored during an update, a copy must be made of the custom template. 
 

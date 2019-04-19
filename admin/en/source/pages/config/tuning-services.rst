@@ -1,4 +1,4 @@
-.. Copyright 2017 FUJITSU LIMITED
+.. Copyright 2019 FUJITSU LIMITED
 
 .. _tuning-services:
 
@@ -8,6 +8,8 @@ Tuning the Services
 You can set the priority of tasks on the UForge platform in the file ``services_conf.json``.
 
 You can run COMMAND with an adjusted value for the nice value, which affects process scheduling. This allows you to fine tune the order in which services are treated by the platform and allows you to improve performances. 
+
+.. note:: If the event controller profile in ``services_conf.json`` is modified, you must restart the eventcontroller service in order for the modification to be taken into account.
 
 Modifying a Configuration Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -37,8 +39,8 @@ The following is a basic example of a configuration profile, named ``profile1``.
     "options": [
       "-Xmx2048m",
       "-Xms768m",
-      "-XX:PermSize=256m",
-      "-XX:MaxPermSize=1024m"
+      "-XX:MetaspaceSize=256m",
+      "-XX:MaxMetaspaceSize=1024m"
     ],
     "sys-properties": {
       "jna.library.path": "/opt/UShareSoft/uforge/lib"
@@ -89,6 +91,8 @@ When migrating Linux-based systems, UForge scans the filesystem.  In certain cas
 
 .. note:: On multi-node UForge platforms, this modification must be done on the compute nodes.
 
+.. note:: If you modify the amount of memory dedicated to the Java Virtual Machine in the ``webserver_uforge_services`` section of the ``services_conf.json`` file, you must restart Tomcat webserver in order for the modification to be effective.
+
 .. code-block:: javascript
 
     "create_vm": {
@@ -100,7 +104,7 @@ When migrating Linux-based systems, UForge scans the filesystem.  In certain cas
         },
         "jvm": {
             "options": [
-                "-XX:MaxPermSize=512m",
+                "-XX:MaxMetaspaceSize=512m",
                 "-Xmx3096m",
                 "-Xms512m"
             ],
@@ -123,7 +127,7 @@ When migrating Linux-based systems, UForge scans the filesystem.  In certain cas
         },
         "jvm": {
             "options": [
-                "-XX:MaxPermSize=512m",
+                "-XX:MaxMetaspaceSize=512m",
                 "-Xmx3096m",
                 "-Xms512m"
             ],
@@ -146,7 +150,7 @@ When migrating Linux-based systems, UForge scans the filesystem.  In certain cas
         },
         "jvm": {
             "options": [
-                "-XX:MaxPermSize=512m",
+                "-XX:MaxMetaspaceSize=512m",
                 "-Xmx3096m",
                 "-Xms512m"
             ],
@@ -170,8 +174,8 @@ When migrating Linux-based systems, UForge scans the filesystem.  In certain cas
                 "-Xmx3096m",
                 "-XX:NewSize=256m",
                 "-XX:MaxNewSize=1024m",
-                "-XX:PermSize=64m",
-                "-XX:MaxPermSize=4096m"
+                "-XX:MetaspaceSize=64m",
+                "-XX:MaxMetaspaceSize=4096m"
             ],
             "sys-properties": {
                 "jna.library.path": "/opt/UShareSoft/uforge/lib"

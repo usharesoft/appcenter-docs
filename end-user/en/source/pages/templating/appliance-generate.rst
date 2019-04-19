@@ -1,4 +1,4 @@
-.. Copyright 2017 FUJITSU LIMITED
+.. Copyright 2019 FUJITSU LIMITED
 
 .. _appliance-generate-machine-image:
 
@@ -6,6 +6,8 @@ Generating a Machine Image
 --------------------------
 
 Once an appliance template has been created, you can generate a machine image that packages the stack to run on a particular virtual, cloud, container or physical environment. For a complete list of supported machine image formats, refer to :ref:`supported-image-formats`.
+
+.. note:: If you want to generate a K5 image or an OpenStack image, the appliance partition should contain only 1 disk.
 
 To generate a machine image:
 	1. Go to the ``Apps`` tab.
@@ -50,6 +52,8 @@ Generating a Docker Image
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. note:: You cannot generate a Docker image from a Windows template or a Windows scan.
+
+.. note:: If you generate a Docker image from an appliance that does not have an install profile set as automatic, then you will not be able to launch the Docker image.
 
 To generate a machine image:
 	1. Go to the ``Apps`` tab.

@@ -25,7 +25,7 @@ Bug Fixes
 ~~~~~~~~~
 * 13489 Fix incompatible version error when generating Oracle 7 img
 * 13551 Make all azure agent packages sticky
-* 13350 UForge system update: `yum update docker` breaks docker command
+* 13350 UForge system update: ``yum update docker`` breaks docker command
 * 10912 Empty folders in MySoftware doesn't exist in generated machine
 * 12518 Fix ssh connection for openstack
 * 13291 Slash in MySoftware files not well handled

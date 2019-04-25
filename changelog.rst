@@ -13,6 +13,10 @@ New Features
 
 * Lightweight container images. Docker images built by UForge AppCenter from Software Bundles now include a reduced set of packages for RedHat Enterprise Linux 7.
 
+Enhancements
+~~~~~~~~~~~~
+* root ssh access is allowed for UForge Azure images
+
 3.8.fp12
 --------
 

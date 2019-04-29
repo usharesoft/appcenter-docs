@@ -83,6 +83,7 @@ Generating a Docker Image from Software Components
 	* CentOS 7
 	* Red Hat Enterprise Linux 7
 	* Debian 9
+	* SUSE Enterprise Linux Server 12.3
 
 To generate a machine image from a software component:
 	#. Go to the ``Apps`` tab.

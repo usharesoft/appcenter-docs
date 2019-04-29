@@ -44,6 +44,8 @@ In order to publish a machine image to a cloud environment or container, you mus
 
 	.. note:: Currently, publications to Docker are only supported for Docker Registry v2.
 
+	.. note:: Currently, publishing a Windows Server 2008 R2 machine image to Azure Stack is not supported.
+
 	6. The publication will take a few minutes to complete (depending on the size of the image and the network connectivity between UForge and the target environment). The publication progress is shown. At the end of the publication, the machine image has been published by UForge to your target environment. The published image can be found in the target cloud environment or container.
 
 	.. note:: If your publication to AWS or Outscale fails with a message ``Unable to connect to proxy``, this may be due to your security settings on your AWS or Outscale account. Your default security group in your AWS or Outscale account must allow SSH from UForge AppCenter compute nodes. You may need to contact your administrator to obtain the IP addresses of the compute nodes in the case of a multi-node deployment of AppCenter.

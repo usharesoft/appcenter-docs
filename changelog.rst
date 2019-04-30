@@ -38,6 +38,22 @@ Enhancements
 * Ability to view the list of packages for images generated from a software component.
 * Ability to generate a Docker image from a Linux appliance without the kernel.
 
+Bug Fixes
+~~~~~~~~~
+* 13489 Fix incompatible version error when generating Oracle 7 image
+* 13551 Make all Azure agent packages sticky
+* 13350 UForge system update: ``yum update docker`` breaks docker command
+* 10912 Empty folders in MySoftware are not present in generated machine
+* 12518 Fix ssh connection for openstack
+* 13291 Slash in MySoftware files not well handled
+* 13302 Some appliances with an interactive profile do not have the warning icon when composing a blueprint
+* 11945 Publishing to AWS stops at 39% when image size is large
+* 12893 Only the bottom part of the appliance logo can be clicked
+* 12472 Icon overlap in "Advanced Partitioning" and "Welcome Message" views
+* 12877 Icons overlap after leaving edit network card without using ok or cancel
+* 12239 Status of some 'services' like ufw is not detected by scan agent
+* 11940 One volume remains after AWS publish cancelled
+
 3.8.fp11
 --------
 

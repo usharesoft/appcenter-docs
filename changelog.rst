@@ -14,6 +14,7 @@ New Features
 * Lightweight container images. Docker images built by UForge AppCenter from Software Bundles now include a reduced set of packages for:
     • RedHat Enterprise Linux 7
     • Debian 9
+    • Ubuntu 18.04
     • SUSE Enterprise Linux Server 12.3
 
 Enhancements

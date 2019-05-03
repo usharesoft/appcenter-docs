@@ -15,6 +15,7 @@ New Features
     • RedHat Enterprise Linux 7
     • Debian 9
     • Ubuntu 18.04
+    • openSUSE 42.3
 
 Enhancements
 ~~~~~~~~~~~~

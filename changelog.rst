@@ -15,7 +15,7 @@ New Features
     • RedHat Enterprise Linux 7
     • Debian 9
     • Ubuntu 18.04
-    • SUSE Enterprise Linux Server 12.3
+    • SUSE Enterprise Linux Server 12
 
 Enhancements
 ~~~~~~~~~~~~

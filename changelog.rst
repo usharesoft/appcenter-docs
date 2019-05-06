@@ -16,6 +16,7 @@ New Features
     • Debian 9
     • Ubuntu 18.04
     • SUSE Enterprise Linux Server 12
+    • openSUSE 42
 
 Enhancements
 ~~~~~~~~~~~~

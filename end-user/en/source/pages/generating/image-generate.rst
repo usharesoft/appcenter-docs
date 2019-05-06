@@ -84,7 +84,7 @@ Generating a Docker Image from Software Components
 	* Red Hat Enterprise Linux 7
 	* Debian 9
 	* Ubuntu 18.04
-  * SUSE Enterprise Linux Server 12
+        * SUSE Enterprise Linux Server 12
 	* openSUSE 42
 
 To generate a machine image from a software component:

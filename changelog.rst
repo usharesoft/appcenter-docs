@@ -11,7 +11,7 @@ Release Date: 2019-06-10
 New Features
 ~~~~~~~~~~~~
 
-* Docker images now include entrypoint. Old images have to be regenerated to include it.
+* Docker images now include entrypoint. Previously generated Docker based images have to be regenerated to include it.
 * Lightweight container images. Docker images built by UForge AppCenter from Software Bundles now include a reduced set of packages for:
     • RedHat Enterprise Linux 7
     • Debian 9

@@ -51,15 +51,26 @@ For Linux systems, the ``/etc/adjtime`` might be different between source and ta
 Contents of /etc/fstab File
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Some differences may arise between the scanned server and the generated template in the contents of the ``/etc/fstab`` file. In particular, lines pertaining to NFS (Network FileSystem) mounts are not kept during a migration, because the machine images resulting from the migration would have to be instanciated on the same network as the source machine, with similar network parameters, which cannot always be the case. This also avoids the situations where the inability to mount an NFS share would prevent the (generated) server from booting.
-
-File System Table (/etc/fstab)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-UForge regenerates the /etc/fstab file during machine image generation.  Hardware and device mappings may differ between source and target environments.  For example, ``/dev/xvda`` could be translated to ``/dev/sda``.
+UForge regenerates the ``/etc/fstab`` file during machine image generation.  Hardware and device mappings may differ between source and target environments.  For example, ``/dev/xvda`` could be translated to ``/dev/sda``.
 
 File system options (general, dump and check options) are not supported by UForge.  Consequently during a migration these values will be reset to their system defaults.
 
 Furthermore, a ``cdrom`` mount point is added by UForge to permit some cloud platform tools to work correctly.
+
+Some differences may arise between the scanned server and the generated template in the contents of the ``/etc/fstab`` file. In particular, lines pertaining to NFS (Network FileSystem) mounts are not kept during a migration, because the machine images resulting from the migration would have to be instanciated on the same network as the source machine, with similar network parameters, which cannot always be the case. This also avoids the situations where the inability to mount an NFS share would prevent the (generated) server from booting.
+
+Contents of /etc/shadow File
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In Linux, the ``/etc/shadow`` file is used to store user passwords (along with other related information) in an encrypted format, in a place that is only accessible to root and privileged users, for an enhanced level of security compared to the previously used ``/etc/passwd`` file.
+
+UForge regenerates the ``/etc/shadow`` file during machine image generation. Differences may occur in the ``/etc/shadow ``file, between the source machine and the generated template, especially regarding the 3rd to 7th fields of each line. For complete transparency, here is the role of these fields. Such differences, should they occur, do not incur any security risk.
+
+	* 3rd field: number of days since Jan 1, 1970 when password was last changed.
+	* 4th field: the minimum number of days required between password changes.
+	* 5th field: the maximum number of days the password is valid (after which users are forced to change their password).
+	* 6th field: the number of days before password is to expire that users are warned that their password must be changed.
+	* 7th field: the number of days after password expires that account is disabled.
 
 .. _service-state:
 

@@ -37,7 +37,7 @@ To deploy a blueprint:
 
 	If there is an issue or error on one of the appliances, it will appear in red and the error will be shown with a warning symbol, as shown below.
 
-		.. image:: /image/blueprint-error.png
+		.. image:: /images/blueprint-error.png
 
 	You can delete your deployment by clicking on ``terminate`` in the top right. This will stop and delete the deployment not only from UForge but also from your cloud account.
 

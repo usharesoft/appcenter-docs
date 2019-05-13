@@ -97,12 +97,12 @@ in any form whatsoever without the written permission of FUJITSU LIMITED
 * libcom_err: http://e2fsprogs.sourceforge.net/
 * libcurl: http://curl.haxx.se/
 * libgcc: http://gcc.gnu.org/
-* libgcrypt
+* libgcrypt: http://www.gnupg.org/
 * libgpg-error: ftp://ftp.gnupg.org/gcrypt/libgpg-error/
 * libICE: http://www.x.org
 * libidn: http://www.gnu.org/software/libidn/
-* liblvm2cmd.so.2.02
-* liblvm2app.so.2.2
+* liblvm2cmd.so.2.02: http://sources.redhat.com/lvm2
+* liblvm2app.so.2.2: http://sources.redhat.com/lvm2
 * libmagic: http://www.darwinsys.com/file/
 * libmount: http://en.wikipedia.org/wiki/Util-linux
 * libpcre: http://www.pcre.org/

@@ -69,7 +69,7 @@ To generate a machine image from an appliance:
 	7. Once the generation is complete, the Docker image will be listed in your library under ``Machine Images``.
 	8. You can (optionally) click on ``download``. A pop-up similar to the following will be displayed. If you copy and run the command in the pop-up, this will download, import and run the Docker image from your Docker client.
 
-		.. image:: /images/docker-image-publish2.png
+		.. image:: /images/docker-image-publish3.png
 
 .. _gen-docker-image:
 

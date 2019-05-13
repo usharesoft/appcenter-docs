@@ -44,6 +44,8 @@ In order to publish a machine image to a cloud environment or container, you mus
 
 	.. note:: Currently, publications to Docker are only supported for Docker Registry v2.
 
+	.. note:: Currently, publishing a Windows Server 2008 R2 machine image to Azure Stack is not supported.
+
 	6. The publication will take a few minutes to complete (depending on the size of the image and the network connectivity between UForge and the target environment). The publication progress is shown. At the end of the publication, the machine image has been published by UForge to your target environment. The published image can be found in the target cloud environment or container.
 
 	.. note:: If your publication to AWS or Outscale fails with a message ``Unable to connect to proxy``, this may be due to your security settings on your AWS or Outscale account. Your default security group in your AWS or Outscale account must allow SSH from UForge AppCenter compute nodes. You may need to contact your administrator to obtain the IP addresses of the compute nodes in the case of a multi-node deployment of AppCenter.
@@ -53,6 +55,8 @@ In order to publish a machine image to a cloud environment or container, you mus
 	.. note:: When you publish an image to Amazon or OpenStack, and you have the correct UForge entitlements, you will be able to launch your machine image directly from UForge using the ``Deploy`` option, without having to connect to your cloud platform. Refer to :ref:`deploy-machine-image`.
 
 	.. note:: When you publish an image to VMware, the result will be a template and not a virtual machine.
+
+	.. note:: When you publish an image to Azure Stack, the result will be a VHD file on the specified BLOB. Virtual Machines can then be created from these VHD files either manually or by using scripts.
 
 	.. warning:: If your Fujitsu K5 publish failed, there may be data published to cloud, incurring costs, even if not visible on your cloud account. You should run a cleanup manually. Refer to Chapter 2.7 Object storage of the `FUJITSU Cloud Service K5 IaaS API Reference (Foundation Service) guide <https://k5-doc.jp-east-1.paas.cloud.global.fujitsu.com/doc/en/iaas/document/k5-iaas-api-reference-foundation-service.pdf>`_
 

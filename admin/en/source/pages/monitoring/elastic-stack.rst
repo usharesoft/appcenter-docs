@@ -9,20 +9,22 @@ It is possible to visualize UForge logs in a dedicated tool: an Elastic Stack se
 
 UForge logs retrieval can be configured as follows:
 
-		.. note:: The following steps need to be done on each node of your platform.
+	.. note:: The following steps need to be done on each node of your platform.
 
-  #. Edit the file ``/etc/UShareSoft/uforge/uforge.conf``. Change the value of ``FILEBEAT_SERVICE_ENABLED`` to ``true``.
+	#. Edit the file ``/etc/UShareSoft/uforge/uforge.conf``. Change the value of ``FILEBEAT_SERVICE_ENABLED`` to ``true``.
 
-  #. Edit the file ``/etc/filebeat/filebeat.yml`` and put the IP and port of your Elastic Stack server in the section:
+	#. Edit the file ``/etc/filebeat/filebeat.yml`` and put the IP and port of your Elastic Stack server in the section:
 
-      .. code-block:: shell
+		.. code-block:: shell
 
-        output.logstash:
-          hosts: ["#LOGSTASH_HOST_MARKER:#LOGSTASH_PORT_MARKER"]
+			output.logstash:
+			  hosts: ["#LOGSTASH_HOST_MARKER:#LOGSTASH_PORT_MARKER"]
 
-  #. Launch the following script on every node:: 
+		By default, the Logstash port is 5044 (which may be different in your Logstash installation).       
 
-      /opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh
+	#. Launch the following script on every node:: 
+
+		/opt/UShareSoft/uforge/tools/update_scripts/uforge_update.sh
 
 Your UForge will now automatically send logs to your Elastic Stack server.
 

@@ -78,6 +78,15 @@ Generating a Docker Image from Software Components
 
 .. note:: You cannot generate a Docker image if any of the restriction rules that have been set for the software exclude Docker publication or generation.
 
+.. note:: When generating a Docker image from software components, a reduced set of packages will be included. For example, the kernel will not be included. This will result in a lighter-weight image for the following OSes: 
+
+	* CentOS 7
+	* Red Hat Enterprise Linux 7
+	* Debian 9
+	* Ubuntu 18.04
+        * SUSE Enterprise Linux Server 12
+	* openSUSE 42
+
 To generate a machine image from a software component:
 	#. Go to the ``Apps`` tab.
 	#. Select the software from the ``Software Library``. 

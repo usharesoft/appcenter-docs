@@ -5,7 +5,7 @@
 Create an Appliance from a Scan
 -------------------------------
 
-You can create an appliance template from a scan. This allows you to change and modify the contents of the machine that has been scanned. Once you create an appliance template, all packages and files that are known will be listed under ``OS profile``, while "unknown" packages and files will be listed under ``MySoftware``.
+You can create an appliance template from a scan, using ``import``. This allows you to change and modify the contents of the machine that has been scanned. Once you create an appliance template, all packages and files that are known will be listed under ``OS profile``, while "unknown" packages and files will be listed under ``MySoftware``. When you import a scan as an appliance template, the import process basically transforms the meta-data of the scan report to an appliance template. 
 
 To create an appliance template from a scan, from the ``Re-platform`` tab on the ``Migrations`` page:
 	1. Click on the scan from which you want to generate an image.
@@ -33,7 +33,7 @@ More importantly you can now change the contents of the original scanned system.
 Changing a Configuration with "No-Console" Features
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This is typically the case when migrating to Azure.  Azure does not have any console facility today during first boot of the instance.  When you migrate a workload in black box, no install type questions are asked on first boot.  This is due to:
+This is typically the case when migrating to Azure.  Azure does not have any console facility today during first boot of the instance.  When you migrate a workload using ``Lift & Shift``, no install type questions are asked on first boot.  This is due to:
 
 	* root password is copied
 	* SSH keys are copied
@@ -43,7 +43,7 @@ This is typically the case when migrating to Azure.  Azure does not have any con
 
 Access to the machine would typically be done via SSH.
 
-White box migration provides more flexibility.  As soon as you import a scan, which effectively creates an appliance template, you will have access to the Install Profile.  This allows you to reset and change many of the "installation"/first boot parameters including prompting the end user to provide the information (for example: ask the end user to set the root password).  Any prompt to the end user is normally displayed in the console.  However if the user logs into the machine for the first time via SSH, these prompts are displayed in the SSH terminal and not the console.
+ Migration using ``Re-platform`` provides more flexibility.  As soon as you import a scan, which effectively creates an appliance template, you will have access to the Install Profile.  This allows you to reset and change many of the "installation"/first boot parameters including prompting the end user to provide the information (for example: ask the end user to set the root password).  Any prompt to the end user is normally displayed in the console.  However if the user logs into the machine for the first time via SSH, these prompts are displayed in the SSH terminal and not the console.
 
 .. warning:: If you decide to prompt the user for the root password, then an SSH key mechanism must already be determined (private key owned by the user and public key set in the Install Profile).  Otherwise the user will be locked out of the system with no way to SSH into the machine as no password has been set yet.
 

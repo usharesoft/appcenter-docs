@@ -3,15 +3,58 @@
 Changelog
 =========
 
+3.8.fp13
+--------
+
+Release Date: 2019-06-10
+
+New Features
+~~~~~~~~~~~~
+
+* Lightweight container images. Docker images built by UForge AppCenter from Software Bundles now include a reduced set of packages for:
+    • RedHat Enterprise Linux 7
+    • Debian 9
+    • Ubuntu 18.04
+    • SUSE Enterprise Linux Server 12
+    • openSUSE 42
+
+Enhancements
+~~~~~~~~~~~~
+* root ssh access is allowed for UForge Azure images
+
 3.8.fp12
 --------
 
 Release Date: 2019-04-29
 
+New Features
+~~~~~~~~~~~~
+
+* Users can publish Windows machine images to Azure Stack.
+* Lightweight container images. Docker images built by UForge AppCenter for Software Bundles used to have unnecessary packages such as kernel. They now include a reduced set of packages, included in a base image, that allow users to build images on top of it. Only CentOS 7 is supported for now.
+
+       .. warning:: `Container` is now an OS Profile provided by UForge for all Linux distributions. Existing OS Profiles with this name must be renamed before the update.
+
 Enhancements
 ~~~~~~~~~~~~
 * Ability to view the list of packages for images generated from a software component.
 * Ability to generate a Docker image from a Linux appliance without the kernel.
+
+Bug Fixes
+~~~~~~~~~
+* 13489 Fix incompatible version error when generating Oracle 7 image
+* 13551 Make all Azure agent packages sticky
+* 13350 UForge system update: ``yum update docker`` breaks docker command
+* 10912 Empty folders in MySoftware are not present in generated machine
+* 12518 Fix ssh connection for openstack
+* 13291 Slash in MySoftware files not well handled
+* 13302 Some appliances with an interactive profile do not have the warning icon when composing a blueprint
+* 11945 Publishing to AWS stops at 39% when image size is large
+* 12893 Only the bottom part of the appliance logo can be clicked
+* 12472 Icon overlap in "Advanced Partitioning" and "Welcome Message" views
+* 12877 Icons overlap after leaving edit network card without using ok or cancel
+* 12239 Status of some 'services' like ufw is not detected by scan agent
+* 11940 One volume remains after AWS publish cancelled
 
 3.8.fp11
 --------
@@ -48,7 +91,7 @@ Bug Fixes
 * 6316 Windows scan fails if second disk is full
 * 12856 uforge-sync.bin overwrites PID file and makes a service behave strangely
 * 12605 Files & Folders scan tab displays wrong information
-* 10096 There are inconsistencies in the French translation 
+* 10096 There are inconsistencies in the French translation
 * 12806 Downloading an OpenShift image directly retrieves the archive without explanation
 * 12588 Cannot delete multiple users in Workspace Members page
 * 12734 Publishing to Azure ARM, K5 and VCenter terminate with error when it takes more than 8 hours
@@ -154,7 +197,7 @@ API changes
 
 Bug Fixes
 ~~~~~~~~~
-* 11941 Get requests to vault fail in proxy environment 
+* 11941 Get requests to vault fail in proxy environment
 * 11863 Cannot login to migrated CentOS6 image on AWS with SSH key
 * 11799 Outscale images built by UForge do not boot on Outscale
 * 11637 Empty directories are not synchronized to the target machine with uforge-sync.bin

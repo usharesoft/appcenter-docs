@@ -43,11 +43,12 @@ in any form whatsoever without the written permission of FUJITSU LIMITED
 * AWS SDK: http://aws.amazon.com/sdk-for-java/
 * Azure SDK: https://github.com/Azure/azure-sdk-for-java
 
+* base64.c: https://www.openbsd.org/
 * bzip2-libs: http://www.bzip.org
 
 * CentOS: https://www.centos.org/
 * cmd2: https://pypi.python.org/pypi/cmd2/
-* cyrus-sasl-lib: http://asg.web.cmu.edu/sasl/sasl-library.html
+* cyrus-sasl-lib: https://www.cyrusimap.org/sasl/
 
 * device-mapper-event-libs: http://sources.redhat.com/lvm2
 * device-mapper-libs: http://sources.redhat.com/lvm2
@@ -73,6 +74,7 @@ in any form whatsoever without the written permission of FUJITSU LIMITED
 * Hibernate: http://hibernate.org/
 * Hibernate c3p0: http://www.mchange.com/projects/c3p0/
 * hivex: http://libguestfs.org/
+* HMAC-SHA1: http://www.aarongifford.com/computers/sha.html
 * HtmlCompressor: http://code.google.com/p/htmlcompressor/
 * httplib2: https://pypi.python.org/pypi/httplib2/
 * hurry.filesize: https://pypi.python.org/pypi/hurry.filesize/
@@ -80,11 +82,10 @@ in any form whatsoever without the written permission of FUJITSU LIMITED
 * ImageMagic: http://www.imagemagick.org/
 
 * Jackson: https://github.com/FasterXML/jackson
-* Java MariaDb Client Library (JDBC): https://mariadb.com/products/connectors-plugins
+* java-getopt: http://www.urbanophile.com/arenn/hacking/download.html
 * Jawr: https://jawr.java.net/
 * jclouds: https://jclouds.apache.org/
 * Jersey: https://jersey.github.io/
-* Jersey server: https://jersey.java.net/
 * Jiruka RSQL: https://github.com/jirutka/rsql-parser
 * junit-xml: https://pypi.python.org/pypi/junit-xml/
 
@@ -102,7 +103,8 @@ in any form whatsoever without the written permission of FUJITSU LIMITED
 * libidn: http://www.gnu.org/software/libidn/
 * liblvm2cmd.so.2.02
 * liblvm2app.so.2.2
-* libmount lib: http://en.wikipedia.org/wiki/Util-linux
+* libmagic: http://www.darwinsys.com/file/
+* libmount: http://en.wikipedia.org/wiki/Util-linux
 * libpcre: http://www.pcre.org/
 * libpng: http://www.libpng.org/pub/png/
 * libselinux: http://oss.tresys.com/git/selinux.git
@@ -111,30 +113,34 @@ in any form whatsoever without the written permission of FUJITSU LIMITED
 * libssh2: http://www.libssh2.org/
 * libtar: http://www.feep.net/libtar/
 * libtool-ltdl: http://www.gnu.org/software/libtool/
-* libxcb: http://xcb.freedesktop.org/
-* libXau: http://www.x.org
 * libuuid: ftp://ftp.kernel.org/pub/linux/utils/
-* libXext: http://www.x.org
-* libXt: http://www.x.org
 * libX11: http://www.x.org
-* lib magic	1.0.0
-* lvm2-devel
+* libXau: http://www.x.org
+* libxcb: http://xcb.freedesktop.org/
+* libXext: http://www.x.org
+* libxml2: http://xmlsoft.org/downloads.html
+* libXt: http://www.x.org
 * log4j: http://logging.apache.org/log4j/1.2/
+* lvm2-devel: http://www.sourceware.org/lvm2/
+* lvm2-libs: http://www.sourceware.org/lvm2/
 
 * MariaDB: https://mariadb.org/
-* MariaDB J-Connector: https://mariadb.org/
+* MariaDB Connector/J: https://mariadb.org/
+* md5.c: http://www.fourmilab.ch/md5/
+* mkpasswd.c: http://www.ircd-hybrid.org/
 
 * ncurses-libs: http://invisible-island.net/ncurses/ncurses.html
 * nspr: http://www.mozilla.org/projects/nspr/
 * nss: http://www.mozilla.org/projects/security/pki/nss/
-* nss-util: http://www.mozilla.org/projects/security/pki/nss/
 * nss-softokn-freebl: http://www.mozilla.org/projects.security/pki/nss
+* nss-util: http://www.mozilla.org/projects/security/pki/nss/
 
 * OAR: https://oar.imag.fr/
 * OpenDJ: https://forgerock.github.io/opendj-community-edition/
 * openldap: http://www.openldap.org/
 * openssl-libs: http://www.openssl.org
 
+* pagedown: https://github.com/ujifgc/pagedown/
 * paramiko: https://pypi.python.org/pypi/paramiko/
 * progressbar: https://pypi.python.org/pypi/progressbar/
 * pyparsing: https://pypi.python.org/pypi/pyparsing/
@@ -142,12 +148,16 @@ in any form whatsoever without the written permission of FUJITSU LIMITED
 
 * RabbitMQ: https://www.rabbitmq.com/
 * RabbitMQ client: https://www.rabbitmq.com/clients.html
+* RandomAccessFileInputStream.java: http://www.icesoft.org/java/projects/ICEpdf/overview.jsf
 * Reflections: http://code.google.com/p/reflections/
+* repl_str: http://creativeandcritical.net/str-replace-c
 * Rhino: https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino
 * Rpm libraries: http://rpm.org/releases/
 
 * Saxon: http://saxon.sourceforge.net/
+* ScriptRunner.java: http://code.google.com/p/mybatis/
 * slf4j: http://www.slf4j.org/
+* Spring Framework: https://projects.spring.io/spring-framework/
 * Squid: http://www.squid-cache.org/
 * systemd-libs: http://www.freedesktop.org/wiki/Software/systemd
 
@@ -155,19 +165,22 @@ in any form whatsoever without the written permission of FUJITSU LIMITED
 * texttable: https://pypi.python.org/pypi/texttable/
 * Tika: http://tika.apache.org/
 * tinyxml: http://www.grinninglizard.com/tinyxml
+* treemodel.cpp: https://doc.qt.io/archives/2.3/index.html
 
 * uforge_python_sdk: https://pypi.python.org/pypi/uforge_python_sdk
 * URL Rewrite filter: http://tuckey.org/urlrewrite/
-* util-linux-ng
+* util-linux-ng: http://en.wikipedia.org/wiki/Util-linux
 
 * Vault: https://www.vaultproject.io/
-* VMware vijava: http://vijava.sourceforge.net/
+* VhdTool: http://code.msdn.microsoft.com/vhdtool
 * VMware SDK: https://developercenter.vmware.com/web/sdk/5.5.0/vcloud-java
+* VMware vijava: http://vijava.sourceforge.net/
 
 * Weld: http://weld.cdi-spec.org/
+* Windows Embedded Compact 2013 Tools: http://cecompacttools.codeplex.com/
 
-* xz-libs: http://tukaani.org/xz
 * Xz libraries: http://tukaani.org/xz/
+* xz-libs: http://tukaani.org/xz
 
 * zlib: http://www.gzip.org/zlib
 * zypper: https://en.opensuse.org/Portal:Libzypp

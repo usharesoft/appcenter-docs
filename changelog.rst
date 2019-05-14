@@ -22,6 +22,7 @@ New Features
 Enhancements
 ~~~~~~~~~~~~
 * root ssh access is allowed for UForge Azure images
+* When creating a blueprint, if an appliance is interactive, the "Deploy" button can’t be selected.  A "warning" icon will be positioned on the appliance. If the warning icon is selected, a popup will be open with a button “Configure Install Profile”. Selected the button will saved the blueprint and redirect the user to the appliance profile allowing him to modify it.
 
 3.8.fp12
 --------

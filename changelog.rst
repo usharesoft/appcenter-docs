@@ -22,7 +22,7 @@ New Features
 Enhancements
 ~~~~~~~~~~~~
 * root ssh access is allowed for UForge Azure images
-* New deployment view: the new UI allows you to manage and monitor the evolution of your blueprint for each appliance through, configuration information, sensors and monitor deployment activity. Please note UForge RPM installation will update the brooklyn plugin. If the AMP/Brooklyn endpoint is configured, the brooklyn server must be restarted after installing UForge RPM.
+* New deployment view: the new UI allows you to manage and monitor the evolution of your blueprint deployment. It provides clearly status for each instances deployed, indicating any errors as well as configuration and runtime information. Please note UForge RPM installation will update the Brooklyn plugin. If the AMP/Brooklyn endpoint is configured, the Brooklyn server must be restarted after installing UForge RPM.
 
 3.8.fp12
 --------

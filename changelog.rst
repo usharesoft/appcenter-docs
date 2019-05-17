@@ -3,6 +3,18 @@
 Changelog
 =========
 
+3.8.fp14
+--------
+
+Release Date: 2019-07-22
+
+New Features
+~~~~~~~~~~~~
+
+* Docker/OpenShift images that are generated and published share the same digest.
+
+       .. warning:: OpenShift based images generated before 3.8.fp13 will no longer be runnable. You must regenerate them to use this feature.
+
 3.8.fp13
 --------
 

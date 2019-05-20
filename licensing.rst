@@ -34,6 +34,10 @@ in any form whatsoever without the written permission of FUJITSU LIMITED
 
 * Ace: http://ace.c9.io/
 * Ace-gwt: https://github.com/daveho/AceGWT
+* Angular: https://angular.io/
+* Angular JS: https://angularjs.org/
+* Angular Resize Event: https://github.com/vdolek/angular-resize-event
+* Apache Brooklyn: https://brooklyn.apache.org/
 * Apache Commons: http://commons.apache.org/
 * Apache HttpComponents: http://hc.apache.org/
 * Apache Syncope: https://syncope.apache.org/
@@ -123,6 +127,7 @@ in any form whatsoever without the written permission of FUJITSU LIMITED
 
 * MariaDB: https://mariadb.org/
 * MariaDB J-Connector: https://mariadb.org/
+* Material Design Icon: https://material.io/tools/icons
 
 * ncurses-libs: http://invisible-island.net/ncurses/ncurses.html
 * nspr: http://www.mozilla.org/projects/nspr/

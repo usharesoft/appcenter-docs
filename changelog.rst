@@ -15,6 +15,10 @@ New Features
 
        .. warning:: OpenShift based images generated before 3.8.fp13 will no longer be runnable. You must regenerate them to use this feature.
 
+Enhancements
+~~~~~~~~~~~~
+* Optimization of Docker images local storage. Generated Docker images now take less space on the UForge AppCenter filesystem. This only impacts disk space. Disk usage quotas are not impacted.
+
 3.8.fp13
 --------
 

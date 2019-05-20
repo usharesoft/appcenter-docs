@@ -18,7 +18,7 @@ New Features
     • Ubuntu 18.04
     • SUSE Enterprise Linux Server 12
     • openSUSE 42
-* Blueprint deployment has been improved. Users can now deploy blueprint appliance on Microsoft Azure Plublic Cloud.
+* Blueprint deployment has been improved. Users can now deploy blueprint on Microsoft Azure Plublic Cloud.
 
 Enhancements
 ~~~~~~~~~~~~

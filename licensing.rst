@@ -80,6 +80,7 @@ in any form whatsoever without the written permission of FUJITSU LIMITED
 * ImageMagic: http://www.imagemagick.org/
 
 * Jackson: https://github.com/FasterXML/jackson
+* Jackson-dataformat-xml: https://github.com/FasterXML/jackson-dataformat-xml
 * Java MariaDb Client Library (JDBC): https://mariadb.com/products/connectors-plugins
 * Jawr: https://jawr.java.net/
 * jclouds: https://jclouds.apache.org/

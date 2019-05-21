@@ -11,16 +11,20 @@ Release Date: 2019-06-10
 New Features
 ~~~~~~~~~~~~
 
+* Docker images now include entrypoint. Previously generated Docker based images have to be regenerated to include it.
 * Lightweight container images. Docker images built by UForge AppCenter from Software Bundles now include a reduced set of packages for:
     • RedHat Enterprise Linux 7
     • Debian 9
     • Ubuntu 18.04
     • SUSE Enterprise Linux Server 12
     • openSUSE 42
+* Blueprint deployment has been improved. Users can now deploy blueprint on Microsoft Azure Plublic Cloud.
 
 Enhancements
 ~~~~~~~~~~~~
 * root ssh access is allowed for UForge Azure images
+* When creating a blueprint, if an appliance is interactive, the "Deploy" button cannot be selected.  A "warning" icon is positioned on the appliance. When the warning icon is selected, a popup opens with a button “Configure Install Profile”. Selecting the button saves the blueprint and redirects the user to the appliance profile allowing him to modify it.
+* New deployment view: the new UI allows you to manage and monitor the evolution of your blueprint deployment. It provides clearly status for each instances deployed, indicating any errors as well as configuration and runtime information. Please note UForge RPM installation will update the Brooklyn plugin. If the AMP/Brooklyn endpoint is configured, the Brooklyn server must be restarted after installing UForge RPM.
 
 3.8.fp12
 --------

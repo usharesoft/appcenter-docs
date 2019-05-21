@@ -64,7 +64,7 @@ Contents of /etc/shadow File
 
 In Linux, the ``/etc/shadow`` file is used to store user passwords (along with other related information) in an encrypted format, in a place that is only accessible to root and privileged users, for an enhanced level of security compared to the previously used ``/etc/passwd`` file.
 
-UForge regenerates the ``/etc/shadow`` file during machine image generation. Differences may occur in the ``/etc/shadow ``file, between the source machine and the generated template, especially regarding the 3rd to 7th fields of each line. For complete transparency, here is the role of these fields. Such differences, should they occur, do not incur any security risk.
+UForge regenerates the ``/etc/shadow`` file during machine image generation. Differences may occur in the ``/etc/shadow`` file, between the source machine and the generated template, especially regarding the 3rd to 7th fields of each line. For complete transparency, here is the role of these fields. Such differences, should they occur, do not incur any security risk.
 
 	* 3rd field: number of days since Jan 1, 1970 when password was last changed.
 	* 4th field: the minimum number of days required between password changes.

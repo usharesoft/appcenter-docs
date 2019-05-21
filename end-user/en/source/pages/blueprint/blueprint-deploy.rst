@@ -25,9 +25,19 @@ To deploy a blueprint:
 
     		.. note:: Using the prepare button will automate the generation and publication of all the appliances that are not in ready state. However, you could also generate and publish each appliance seperately.
 
-	#. Once all the appliances are ready, click on ``deploy`` in the top right. Once you launch the deployment, you will be redirected to the ``Deployments`` page. From here you can see the status of the blueprint.
+	#. Once all the appliances are ready, click on ``deploy`` in the top right. Once you launch the deployment, you will be redirected to the ``Deployments`` page. From here you can see the status of the blueprint. The elements will be flashing green throughout the deployment process. Then the status of each element is color coded:
 
-		.. image:: /images/blueprint-deploy-status.png
+		* green is ok
+		* orange is stopped
+		* red is error
 
-	You can delete your deployment by clicking on the garbage icon next to the deployment name. This will stop and delete the deployment not only from UForge but also from your cloud account.
+	The following is an example of a deployment.
+
+		.. image:: /images/blueprint-deploy.png
+
+	If there is an issue or error on one of the appliances, it will appear in red and the error will be shown with a warning symbol, as shown below.
+
+		.. image:: /images/blueprint-error.png
+
+	You can delete your deployment by clicking on ``terminate`` in the top right. This will stop and delete the deployment not only from UForge but also from your cloud account.
 

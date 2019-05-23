@@ -111,11 +111,7 @@ From this window you can see the cloud platform the published machine image was 
 
 	.. note:: If you click on the delete (garbage) icon, this will stop your deployed instance and remove it from your cloud.
 
-If you click on the application name you will see the details of the instance that has been deployed, including the name of the instance and the IP address of the machine.
+If you click on the application name you will see the details of the instance that has been deployed, including the name of the instance and the Hostname or IP address of the machine and the user name and the SSH key (if any). An example code will also be given to connect to your instance.
 
 .. image:: /images/deployment-info.png
-
-If you click on the ``i`` next to the hostname, a popup will appear indicating the IP address, the user name and the SSH key (if any). An example code will also be given to connect to your instance.
-
-.. image:: /images/deployment-info-popup.png
 

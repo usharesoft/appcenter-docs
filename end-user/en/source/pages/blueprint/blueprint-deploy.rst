@@ -30,15 +30,15 @@ To deploy a blueprint:
 		* orange is stopped
 		* red is error
 
-	The following is an example of a deployment.
+		The following is an example of a deployment.
 
 		.. image:: /images/blueprint-deploy.png
 
-	If there is an issue or error on one of the appliances, it will appear in red and the error will be shown with a warning symbol, as shown below.
+		If there is an issue or error on one of the appliances, it will appear in red and the error will be shown with a warning symbol, as shown below.
 
 		.. image:: /images/blueprint-error.png
 
-	You can delete your deployment by clicking on ``terminate`` in the top right. This will stop and delete the deployment not only from UForge but also from your cloud account.
+		You can delete your deployment by clicking on ``terminate`` in the top right. This will stop and delete the deployment not only from UForge but also from your cloud account.
 
 	#. If you click on an application name, you can view the details of the deployment. For more information please visit `https://brooklyn.apache.org/v/latest/start/managing.html <https://brooklyn.apache.org/v/latest/start/managing.html>`_
 

@@ -40,5 +40,5 @@ To deploy a blueprint:
 
 		You can delete your deployment by clicking on ``terminate`` in the top right. This will stop and delete the deployment not only from UForge but also from your cloud account.
 
-	#. If you click on an application name, you can view the details of the deployment. For more information please visit `https://brooklyn.apache.org/v/latest/start/managing.html <https://brooklyn.apache.org/v/latest/start/managing.html>`_
+	#. If you click on an application name, you can view the details of the deployment. For more information please visit `Apache Brooklyn Official Documentation <https://brooklyn.apache.org/v/latest/start/managing.html>`_
 

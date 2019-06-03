@@ -19,6 +19,7 @@ New Features
     • SUSE Enterprise Linux Server 12
     • openSUSE 42
 * Blueprint deployment has been improved. Users can now deploy blueprint on Microsoft Azure Plublic Cloud.
+    • Please note the following restriction: the browsers that support the Blueprint Runtime are the latest public releases of Firefox and Chrome.
 
 Enhancements
 ~~~~~~~~~~~~

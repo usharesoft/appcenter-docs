@@ -36,7 +36,15 @@ If you plan to migrate a Windows instance onto `K5 Fujitsu Public Cloud <http://
 Migrating Windows
 ~~~~~~~~~~~~~~~~~
 
-If you plan to migrate a Windows machine to any cloud, you need to ensure that you have the following RDP update: KB4103723.
+If you plan to migrate a Windows machine to any cloud, you need to ensure that you have the following RDP updates: KB4103723, KB4103715, KB4103725, KB4088876 and/or KB4088879 depending on your source platform.
+
+.. note:: Windows Update may not propose all of these updates, which may mislead users into thinking that their machines are up to date. Therefore, these updates may have to be downloaded and installed manually from official Microsoft Windows Support website: 
+
+	* `KB4103723 <http://support.microsoft.com/?kbid=4103723>`_
+	* `KB4103715 <http://support.microsoft.com/?kbid=4103715>`_
+	* `KB4103725 <http://support.microsoft.com/?kbid=4103725>`_
+	* `KB4088876 <http://support.microsoft.com/?kbid=4088876>`_
+	* `KB4088879 <http://support.microsoft.com/?kbid=4088879>`_
 
 
 Migrating Linux to VCenter

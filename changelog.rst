@@ -19,12 +19,25 @@ New Features
     • SUSE Enterprise Linux Server 12
     • openSUSE 42
 * Blueprint deployment has been improved. Users can now deploy blueprint on Microsoft Azure Plublic Cloud.
+    • Please note the following restriction: the browsers that support the Blueprint Runtime are the latest public releases of Firefox and Chrome.
 
 Enhancements
 ~~~~~~~~~~~~
 * root ssh access is allowed for UForge Azure images
 * When creating a blueprint, if an appliance is interactive, the "Deploy" button cannot be selected.  A "warning" icon is positioned on the appliance. When the warning icon is selected, a popup opens with a button “Configure Install Profile”. Selecting the button saves the blueprint and redirects the user to the appliance profile allowing him to modify it.
 * New deployment view: the new UI allows you to manage and monitor the evolution of your blueprint deployment. It provides clearly status for each instances deployed, indicating any errors as well as configuration and runtime information. Please note UForge RPM installation will update the Brooklyn plugin. If the AMP/Brooklyn endpoint is configured, the Brooklyn server must be restarted after installing UForge RPM.
+
+Bug Fixes
+~~~~~~~~~
+* 1343 Repository refresh fails for repositories where file listing is disabled
+* 12200 We can't download some binaries if the root context is "/"
+* 13203 Supervisor can not change supervised user
+* 13411 Need to login with root/sudo user to VM before being able to use it even if no interaction required at installation
+* 13538 Scan fails with API key authentication if user name includes '@'
+* 13583 Remove call to another unexistant supervision icon
+* 13654 Error when adding a new SSH key that ends with a blank line
+* 13867 No clear error given when deploying an image that is deleted from Azure/AWS
+* 13904 500 call failed in blueprint YAML editor
 
 3.8.fp12
 --------

@@ -9,6 +9,7 @@ Once your UForge platform deployment is complete you can configure `Cloudsoft AM
 
 	* a running AMP server (version AMP-5.3 or Brooklyn 1.0.0-M1), see `Cloudsoft AMP documentation <https://docs.cloudsoft.io/operations/production-installation.html>`_ for installation
 	* a configured user in AMP server that will be used by UForge to connect
+	* set the clock correctly on the machine running Cloudsoft AMP or Brooklyn. To set the time on Linux you can use the ntp client (e.g. sudo ntpdate pool.ntp.org). We advise running the ntp daemon so that the clock is kept continually in sync.
 
 
 Configuring AMP Server with Required Options

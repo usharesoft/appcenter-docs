@@ -5,18 +5,19 @@ Changelog
 3.8.fp14
 --------
 
-Release Date: 2019-07-21
+Release Date: 2019-07-22
 
 New Features
 ~~~~~~~~~~~~
 
+* Docker/OpenShift images that are generated and published share the same digest.
+
+       .. warning:: OpenShift based images generated before 3.8.fp13 will no longer be runnable. You must regenerate them to use this feature.
+
 Enhancements
 ~~~~~~~~~~~~
+* Optimization of Docker images local storage. Generated Docker images now take less space on the UForge AppCenter filesystem. This only impacts disk space. Disk usage quotas are not impacted.
 * Users can generate and publish machine images to Oracle Cloud Infrastructure. However Oracle Cloud Infrastructure Classic is no longer supported.
-
-Bug Fixes
-~~~~~~~~~
-
 
 3.8.fp13
 --------

@@ -2,6 +2,21 @@
 
 Changelog
 =========
+3.8.fp14
+--------
+
+Release Date: 2019-07-21
+
+New Features
+~~~~~~~~~~~~
+
+Enhancements
+~~~~~~~~~~~~
+* Users can generate and publish machine images to Oracle Cloud Infrastructure. However Oracle Cloud Infrastructure Classic is no longer supported.
+
+Bug Fixes
+~~~~~~~~~
+
 
 3.8.fp13
 --------

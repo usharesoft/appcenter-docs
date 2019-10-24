@@ -18,12 +18,12 @@ Install [read the docs theme](https://github.com/snide/sphinx_rtd_theme):
     
 Build the docs and open them in your browser:
 
-    $ cd uforge-appcenter
+    $ cd appcenter-docs
     $ make html
 
 The html files are in the build directory for each sub-project, for example, the end user guide:
 
-    $ open uforge-appcenter/build/html/index.html
+    $ xdg-open end-user/en/build/html/index.html
 
 You can also build each guide individually.
 

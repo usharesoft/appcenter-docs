@@ -53,3 +53,5 @@ You can define the following as part of a Windows-based appliance install profil
 * ``Welcome Message``: You can enter a welcome message.
 
 	.. image:: /images/install-profile-windowsfp3.png
+
+.. warning:: For now, please do not select to run sysprep, if the target cloud platform injects CloudBase-Init during its import process, for example, on K5. If you want to run sysprep, run sysprep after the import process has finished.
